@@ -37,6 +37,7 @@ def site_footer_html(prefix: str = "") -> str:
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
+          <li><a href="{p}services/branding.html">Branding &amp; Design</a></li>
           <li><a href="{p}services/web-design.html">Web Design</a></li>
           <li><a href="{p}services/seo.html">SEO Optimization</a></li>
           <li><a href="{p}services/google-ads.html">Google Ads</a></li>

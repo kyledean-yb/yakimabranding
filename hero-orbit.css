@@ -173,10 +173,16 @@
   opacity: var(--orbit-opacity, 1);
 }
 
-/* Service-page feature orbit (e.g. social media) — uniform accent */
+/* Service-page feature orbit — page feature icons, non-clickable */
+.hero-orbit--features {
+  --orbit-feat-wash: var(--wash-amber);
+  --orbit-feat-color: #c77f12;
+  --orbit-feat-glow: rgba(199, 127, 18, 0.22);
+}
+
 .hero-orbit--features .hero-orbit-pill-ic {
-  background: var(--wash-amber);
-  color: #c77f12;
+  background: var(--orbit-feat-wash);
+  color: var(--orbit-feat-color);
 }
 
 .hero-orbit--features .hero-orbit-icon {
@@ -185,8 +191,8 @@
 }
 
 .hero-orbit--features .hero-orbit-icon.is-front .hero-orbit-pill {
-  border-color: rgba(199, 127, 18, 0.35);
-  box-shadow: 0 6px 24px rgba(199, 127, 18, 0.22), var(--sh-md);
+  border-color: color-mix(in srgb, var(--orbit-feat-color) 35%, transparent);
+  box-shadow: 0 6px 24px var(--orbit-feat-glow), var(--sh-md);
 }
 
 .hero-orbit-icon.is-front {

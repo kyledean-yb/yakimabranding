@@ -3,6 +3,8 @@
    Load after page-specific <style> blocks.
    ============================================================ */
 
+@import url('hero-orbit.css');
+
 /* ─── Site header + nav layout (all pages using site.css) ───── */
 .header {
   position: sticky;

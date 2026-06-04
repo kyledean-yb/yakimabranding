@@ -1,0 +1,293 @@
+/* ─── Hero service orbit (home + service pages) ─────────────── */
+.hero-visual,
+.svc-hero-visual {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin-left: auto;
+  aspect-ratio: 4/3.4;
+}
+
+.hero-orbit {
+  --orbit-r: 182px;
+  --orbit-dur: 24s;
+  --orbit-icon: 60px;
+  --orbit-scale-min: 0.76;
+  --orbit-scale-max: 1.28;
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.hero-orbit-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-orbit-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.hero-orbit-ring--track {
+  width: calc(var(--orbit-r) * 2);
+  height: calc(var(--orbit-r) * 2);
+  border: 1.5px solid rgba(43, 196, 240, 0.16);
+  box-shadow: 0 0 20px rgba(43, 196, 240, 0.06);
+}
+
+.svc-hero .hero-orbit-ring--track {
+  border-color: rgba(43, 196, 240, 0.28);
+  box-shadow: 0 0 24px rgba(43, 196, 240, 0.12);
+}
+
+.hero-orbit-hub {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(44%, 200px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: var(--r-xl);
+  background: var(--grad-navy);
+  box-shadow: var(--sh-lg);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* Service pages — roomier orbit + original hero artwork in center */
+.svc-hero .hero-orbit {
+  --orbit-r: 200px;
+  --orbit-icon: 54px;
+}
+
+.svc-hero .hero-orbit-hub {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  width: 72%;
+  max-width: 300px;
+  aspect-ratio: auto;
+  overflow: visible;
+}
+
+.svc-hero .hero-orbit-hub-mesh {
+  display: none;
+}
+
+.svc-hero .hero-orbit-hub-art {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 4/3;
+  padding: 0;
+  background: transparent;
+  border-radius: var(--r-xl);
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.svc-hero .hero-orbit-hub-art img {
+  object-fit: contain;
+  object-position: center;
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.25));
+}
+
+.hero-orbit-hub-mesh {
+  position: absolute;
+  inset: 0;
+  background-image: var(--grad-mesh);
+  opacity: 0.85;
+}
+
+.hero-orbit-hub-logo {
+  position: relative;
+  width: 58%;
+  max-width: 120px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 28px rgba(43, 196, 240, 0.35));
+}
+
+.hero-orbit-hub-art {
+  position: relative;
+  z-index: 1;
+  width: 92%;
+  max-width: 188px;
+  aspect-ratio: 5/4;
+  border-radius: var(--r-lg);
+  background: #f6f8fc;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.hero-orbit-hub-art img,
+.hero-orbit-hub-art svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-orbit-spin {
+  position: absolute;
+  inset: 0;
+  animation: hero-orbit-spin var(--orbit-dur) linear infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero-orbit-node {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform: rotate(calc(var(--i) * 60deg));
+  pointer-events: none;
+}
+
+.hero-orbit-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--orbit-icon);
+  height: var(--orbit-icon);
+  margin: calc(var(--orbit-icon) / -2) 0 0 calc(var(--orbit-icon) / -2);
+  transform: translateY(calc(-1 * var(--orbit-r)));
+  display: block;
+  text-decoration: none;
+  z-index: calc(var(--orbit-z, 2));
+  pointer-events: auto;
+  opacity: var(--orbit-opacity, 1);
+}
+
+/* Service-page feature orbit (e.g. social media) — uniform accent */
+.hero-orbit--features .hero-orbit-pill-ic {
+  background: var(--wash-amber);
+  color: #c77f12;
+}
+
+.hero-orbit--features .hero-orbit-icon {
+  pointer-events: none;
+  cursor: default;
+}
+
+.hero-orbit--features .hero-orbit-icon.is-front .hero-orbit-pill {
+  border-color: rgba(199, 127, 18, 0.35);
+  box-shadow: 0 6px 24px rgba(199, 127, 18, 0.22), var(--sh-md);
+}
+
+.hero-orbit-icon.is-front {
+  z-index: 8;
+}
+
+.hero-orbit-icon.is-front .hero-orbit-pill {
+  box-shadow: 0 6px 24px rgba(43, 196, 240, 0.2), var(--sh-md);
+  border-color: rgba(43, 196, 240, 0.28);
+}
+
+.hero-orbit-pill {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--orbit-icon);
+  height: var(--orbit-icon);
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid rgba(63, 111, 214, 0.14);
+  box-shadow: var(--sh-md);
+  transition: box-shadow 0.25s var(--ease, ease);
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.hero-orbit-pill-ic {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.hero-orbit-pill-ic svg {
+  width: 28px;
+  height: 28px;
+  flex: none;
+}
+
+/* Home only: hover labels + pause */
+.hero-orbit--pause-hover .hero-orbit-pill-label {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 8px);
+  transform: translateX(-50%);
+  padding: 5px 11px;
+  border-radius: var(--r-pill);
+  background: var(--ink);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  box-shadow: var(--sh-md);
+}
+
+.hero-orbit--pause-hover.is-paused .hero-orbit-icon:hover .hero-orbit-pill,
+.hero-orbit--pause-hover.is-paused .hero-orbit-icon:focus-visible .hero-orbit-pill {
+  box-shadow: var(--sh-lg);
+}
+
+.hero-orbit--pause-hover.is-paused .hero-orbit-icon:hover .hero-orbit-pill-label,
+.hero-orbit--pause-hover.is-paused .hero-orbit-icon:focus-visible .hero-orbit-pill-label {
+  opacity: 1;
+}
+
+.hero-orbit--pause-hover .hero-orbit-icon:hover,
+.hero-orbit--pause-hover .hero-orbit-icon:focus-visible {
+  z-index: 9;
+}
+
+.hero-orbit--pause-hover .hero-orbit-icon:focus-visible {
+  outline: none;
+}
+
+.hero-orbit--pause-hover .hero-orbit-icon:focus-visible .hero-orbit-pill {
+  outline: 2px solid var(--yb-blue);
+  outline-offset: 3px;
+}
+
+.hero-orbit--pause-hover.is-paused .hero-orbit-spin {
+  animation-play-state: paused;
+}
+
+.hero-orbit.is-static .hero-orbit-spin {
+  animation: none;
+}
+
+@media (min-width: 801px) {
+  .hero {
+    overflow: visible;
+  }
+}
+
+@keyframes hero-orbit-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

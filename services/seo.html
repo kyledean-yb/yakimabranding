@@ -153,6 +153,8 @@ section{padding:88px 0}
 
 </style>
 <link rel="stylesheet" href="../site.css">
+<link rel="stylesheet" href="https://widget.advicelocal.com/bundle.css">
+<link rel="stylesheet" href="../visibility-widget.css">
 
 </head>
 <body>
@@ -258,6 +260,10 @@ section{padding:88px 0}
 <!-- HERO -->
 <section class="svc-hero">
   <div class="svc-hero-mesh"></div>
+  <div class="hero-logo-overlay hero-logo-overlay--left" aria-hidden="true">
+    <img src="../assets/yb-logo-white.png" alt="">
+  </div>
+
   <div class="container svc-hero-inner">
     <div class="svc-hero-text">
       <span class="eyebrow" style="color:#2BC4F0">SEO &amp; AI Optimization</span>
@@ -436,15 +442,16 @@ section{padding:88px 0}
 
 </div>
 <div class="wave-div" style="background:#1B2A4A"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,0 C360,70 1080,70 1440,0 L1440,70 L0,70 Z" fill="#F6F8FC"/></svg></div>
-<!-- FAQ SECTION -->
-<section style="background:#fff">
+<!-- FAQ + VISIBILITY SCORE -->
+<section class="faq-visibility-section" id="visibility-score" style="background:#fff">
   <div class="container">
     <div style="text-align:center;max-width:700px;margin:0 auto 48px">
       <span class="eyebrow" style="color:#2BC4F0">Common Questions</span>
       <h2 style="margin:14px 0 14px">Frequently Asked Questions</h2>
       <p style="color:var(--fg2);font-size:16px;line-height:1.75">Answers to the questions we hear most often about our SEO services.</p>
     </div>
-    <div style="max-width:780px;margin:0 auto;border-top:1px solid var(--line)">
+    <div class="faq-visibility-grid">
+    <div class="faq-visibility-faqs" style="border-top:1px solid var(--line)">
       <div class="faq-item" id="seo-faq-1">
         <button class="faq-q" onclick="toggleFaq('seo-faq-1', '#2BC4F0')">
           What is SEO?
@@ -501,6 +508,22 @@ section{padding:88px 0}
         </button>
         <div class="faq-a"><div class="faq-a-inner">SEO and Google Ads work differently. SEO builds long-term organic visibility, while Google Ads can generate faster paid traffic. Many businesses benefit from using both together.</div></div>
       </div>
+    </div>
+    <aside class="faq-visibility-widget">
+      <div class="visibility-widget-card">
+        <div class="visibility-widget-card__head">
+          <span class="eyebrow" style="color:#2BC4F0">Free SEO Tool</span>
+          <h3>Run Your Visibility Score</h3>
+          <p>See how your business shows up in local search. We&rsquo;ll email your results — no obligation.</p>
+        </div>
+        <div class="visibility-widget-card__body">
+          <div class="visibility-widget-wrap">
+            <p class="visibility-widget-loading" aria-hidden="true">Loading visibility tool&hellip;</p>
+            <widget-app style_key="wk_ea5bc5a588df89d69feae137"></widget-app>
+          </div>
+        </div>
+      </div>
+    </aside>
     </div>
   </div>
 </section>
@@ -691,6 +714,8 @@ document.getElementById('hamburger').addEventListener('click', () => {
   document.getElementById('mobileMenu').classList.toggle('open');
 });
 </script>
+<script src="https://widget.advicelocal.com/bundle.js" defer></script>
+<script src="../js/visibility-widget.js" defer></script>
 <script src="../js/site.js" defer></script>
 <script src="../js/blog-insights.js" defer></script>
 </body>

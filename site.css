@@ -549,6 +549,118 @@
   }
 }
 
+/* ─── Hero logo watermark (legacy site pattern) ───────────── */
+.hero-logo-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  /* Align fade with area just below sticky header (~72px) */
+  padding-top: 68px;
+}
+
+.hero-logo-overlay img {
+  width: min(380px, 50vw);
+  height: auto;
+  max-height: 72%;
+  object-fit: contain;
+  user-select: none;
+  opacity: 0.055;
+  filter: brightness(1.15);
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.2) 10%,
+    rgba(0, 0, 0, 0.75) 24%,
+    #000 40%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.2) 10%,
+    rgba(0, 0, 0, 0.75) 24%,
+    #000 40%
+  );
+}
+
+/* Split heroes — mark behind text column, fades in below nav */
+.hero-logo-overlay--left {
+  justify-content: flex-start;
+  padding-left: max(28px, 6vw);
+}
+
+.hero-logo-overlay--left img {
+  width: min(300px, 38vw);
+  max-height: 58%;
+  opacity: 0.06;
+}
+
+.hero-logo-overlay--right {
+  justify-content: flex-end;
+  padding-right: max(28px, 6vw);
+}
+
+.hero-logo-overlay--right img {
+  width: min(300px, 38vw);
+  max-height: 58%;
+  opacity: 0.06;
+}
+
+/* Centered heroes (insights, etc.) */
+.hero-logo-overlay--center {
+  justify-content: center;
+  align-items: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.hero-logo-overlay--center img {
+  width: min(300px, 38vw);
+  max-height: 58%;
+  opacity: 0.06;
+}
+
+@media (min-width: 1240px) {
+  .hero-logo-overlay--left {
+    padding-left: calc((100vw - var(--container)) / 2 + 28px);
+  }
+
+  .hero-logo-overlay--right {
+    padding-right: calc((100vw - var(--container)) / 2 + 28px);
+  }
+}
+
+/* Light heroes (home) */
+.hero .hero-logo-overlay--light img {
+  opacity: 0.045;
+}
+
+.hero-mesh,
+.about-hero-mesh,
+.blog-hero-mesh,
+.news-hero-mesh,
+.svc-hero-mesh,
+.team-hero-mesh {
+  z-index: 0;
+}
+
+:is(
+  .hero-inner,
+  .blog-hero-inner,
+  .news-hero-inner,
+  .svc-hero-inner,
+  .team-hero-grid,
+  .about-hero > .container,
+  .svc-hero-text
+) {
+  position: relative;
+  z-index: 2;
+}
+
 /* ─── Site footer (shared across pages) ───────────────────── */
 .footer {
   background: var(--grad-navy);

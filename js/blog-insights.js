@@ -76,8 +76,8 @@
     return base + 'blog/posts/' + slug + '.html';
   }
 
-  function renderHomeCard(post, index, base) {
-    var featured = index === 0;
+  function renderHomeCard(post, index, base, uniform) {
+    var featured = !uniform && index === 0;
     var theme = themeFor(post.topic);
     var href = postHref(base, post.slug);
     var thumbClass = featured ? 'blog-thumb blog-thumb-lg' : 'blog-thumb blog-thumb-sm';
@@ -172,6 +172,28 @@
     );
   }
 
+  function initScrollControls(el) {
+    var wrap = el.closest('[data-blog-scroll]');
+    if (!wrap) return;
+    var prev = wrap.querySelector('[data-blog-scroll-prev]');
+    var next = wrap.querySelector('[data-blog-scroll-next]');
+    if (!prev || !next) return;
+
+    function scrollStep() {
+      var card = el.querySelector('.blog-card');
+      if (!card) return 342;
+      var gap = 22;
+      return card.getBoundingClientRect().width + gap;
+    }
+
+    prev.addEventListener('click', function () {
+      el.scrollBy({ left: -scrollStep(), behavior: 'smooth' });
+    });
+    next.addEventListener('click', function () {
+      el.scrollBy({ left: scrollStep(), behavior: 'smooth' });
+    });
+  }
+
   function renderGrid(el, posts) {
     var base = el.getAttribute('data-base') || '';
     var topic = el.getAttribute('data-topic') || '';
@@ -179,6 +201,7 @@
     var count = parseInt(el.getAttribute('data-count') || '3', 10);
     var accent = el.getAttribute('data-accent') || '';
     var picked = pickPosts(posts, topic, count);
+    var isHomeScroll = variant === 'home-scroll';
 
     if (!picked.length) {
       el.innerHTML =
@@ -188,16 +211,28 @@
       return;
     }
 
+    if (isHomeScroll) {
+      el.classList.add('blog-grid--scroll');
+    } else {
+      el.classList.remove('blog-grid--scroll');
+    }
+
     el.innerHTML =
-      variant === 'home'
-        ? picked.map(function (p, i) {
-            return renderHomeCard(p, i, base);
-          }).join('')
+      variant === 'home' || isHomeScroll
+        ? picked
+            .map(function (p, i) {
+              return renderHomeCard(p, i, base, isHomeScroll);
+            })
+            .join('')
         : picked
             .map(function (p) {
               return renderRelatedCard(p, accent, base);
             })
             .join('');
+
+    if (isHomeScroll) {
+      initScrollControls(el);
+    }
 
     if (typeof window.ybRefreshScrollReveal === 'function') {
       window.ybRefreshScrollReveal();

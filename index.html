@@ -170,6 +170,19 @@ section{padding:88px 0}
 .blog-more{font-weight:700;font-size:13.5px;display:inline-flex;align-items:center;gap:5px}
 .blog-more svg{width:14px;height:14px;transition:transform var(--dur) var(--ease)}
 .blog-card:hover .blog-more svg{transform:translateX(3px)}
+.blog-scroll{position:relative}
+.blog-scroll-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--ink);box-shadow:var(--sh-md);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background var(--dur),border-color var(--dur),transform var(--dur)}
+.blog-scroll-btn:hover{background:var(--wash-blue);border-color:var(--yb-blue);color:var(--yb-blue)}
+.blog-scroll-btn--prev{left:-14px}
+.blog-scroll-btn--next{right:-14px}
+.blog-grid.blog-grid--scroll{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 4px 18px;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--line-strong) transparent}
+.blog-grid.blog-grid--scroll::-webkit-scrollbar{height:8px}
+.blog-grid.blog-grid--scroll::-webkit-scrollbar-thumb{background:var(--line-strong);border-radius:var(--r-pill)}
+.blog-grid.blog-grid--scroll .blog-card{flex:0 0 min(320px,calc(100vw - 120px));scroll-snap-align:start;height:auto}
+@media(max-width:640px){
+  .blog-scroll-btn{display:none}
+  .blog-grid.blog-grid--scroll .blog-card{flex-basis:min(280px,calc(100vw - 56px))}
+}
 /* ─── SERVICE IMAGE THUMBNAIL ─────────────────────────────────────────── */
 .svc-img{width:100%;height:130px;border-radius:var(--r-md);overflow:hidden;margin-bottom:16px;background:var(--bg-soft);display:flex;align-items:center;justify-content:center}
 .svc-img img{width:100%;height:100%;object-fit:contain;padding:10px}
@@ -235,7 +248,7 @@ section{padding:88px 0}
 /* ─── RESPONSIVE ─────────────────────────────────────────── */
 @media(max-width:1000px){
   .svc-grid,.contact-cards{grid-template-columns:1fr 1fr}
-  .blog-grid{grid-template-columns:1fr 1fr}
+  .blog-grid:not(.blog-grid--scroll){grid-template-columns:1fr 1fr}
   .why-grid{grid-template-columns:1fr}
   .why-photo{display:none}
   .footer-grid{grid-template-columns:1fr 1fr}
@@ -248,7 +261,7 @@ section{padding:88px 0}
 }
 @media(max-width:640px){
   section{padding:60px 0}
-  .svc-grid,.blog-grid,.contact-cards{grid-template-columns:1fr}
+  .svc-grid,.blog-grid:not(.blog-grid--scroll),.contact-cards{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
   .nav,.btn-hdr{display:none}
   .hamburger{display:flex}
@@ -415,6 +428,9 @@ section{padding:88px 0}
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="hero-mesh"></div>
+  <div class="hero-logo-overlay hero-logo-overlay--light hero-logo-overlay--left" aria-hidden="true">
+    <img src="assets/yb-logo-color.png" alt="">
+  </div>
   <div class="container hero-inner">
     <div>
       <div style="margin-bottom:18px">
@@ -1032,7 +1048,15 @@ section{padding:88px 0}
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
     </div>
-    <div class="blog-grid" data-blog-insights data-variant="home" data-base="" data-count="3"></div>
+    <div class="blog-scroll" data-blog-scroll>
+      <button type="button" class="blog-scroll-btn blog-scroll-btn--prev" data-blog-scroll-prev aria-label="Scroll insights left">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="blog-grid" data-blog-insights data-variant="home-scroll" data-base="" data-count="12"></div>
+      <button type="button" class="blog-scroll-btn blog-scroll-btn--next" data-blog-scroll-next aria-label="Scroll insights right">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
   </div>
 </section>
 

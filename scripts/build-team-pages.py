@@ -110,6 +110,9 @@ def hero_block(name, role, lead, photo, contacts):
     return f"""
 <section class="team-hero">
   <div class="team-hero-mesh"></div>
+  <div class="hero-logo-overlay hero-logo-overlay--right" aria-hidden="true">
+    <img src="{PREFIX}assets/yb-logo-white.png" alt="">
+  </div>
   <div class="container team-hero-grid">
     <div class="team-hero-photo"><img src="{PREFIX}{photo}" alt="{html.escape(name)}"></div>
     <div>
@@ -488,16 +491,16 @@ BUILDERS = [page_kevin, page_jacob, page_kristin, page_sophie, page_kayelyn, pag
 def update_about_links():
     path = ROOT / "about.html"
     text = path.read_text(encoding="utf-8")
-    profile_btn = '          <a href="{href}" class="team-link team-link-profile">View Profile</a>\n'
+    profile_btn = '          <a href="{href}" class="team-link team-link-profile">Meet {first}</a>\n'
     pairs = [
-        ("<!-- Kevin Dean -->", "about/kevin.html"),
-        ("<!-- Jacob Ross -->", "about/jacob.html"),
-        ("<!-- Kristin Sparling -->", "about/kristin.html"),
-        ("<!-- Sophie Mann -->", "about/sophie.html"),
-        ("<!-- Kayelyn Aggett -->", "about/kayelyn.html"),
-        ("<!-- Kirsten Gonzalez", "about/kirsten.html"),
+        ("<!-- Kevin Dean -->", "about/kevin.html", "Kevin"),
+        ("<!-- Jacob Ross -->", "about/jacob.html", "Jacob"),
+        ("<!-- Kristin Sparling -->", "about/kristin.html", "Kristin"),
+        ("<!-- Sophie Mann -->", "about/sophie.html", "Sophie"),
+        ("<!-- Kayelyn Aggett -->", "about/kayelyn.html", "Kayelyn"),
+        ("<!-- Kirsten Gonzalez", "about/kirsten.html", "Kirsten"),
     ]
-    for marker, href in pairs:
+    for marker, href, first in pairs:
         start = text.find(marker)
         if start == -1:
             continue
@@ -507,7 +510,7 @@ def update_about_links():
         block = text[start:end]
         if "team-link-profile" in block:
             continue
-        insert = profile_btn.format(href=href)
+        insert = profile_btn.format(href=href, first=first)
         block = block.replace("        </div>\n      </div>", f"{insert}        </div>\n      </div>", 1)
         text = text[:start] + block + text[end:]
     path.write_text(text, encoding="utf-8")

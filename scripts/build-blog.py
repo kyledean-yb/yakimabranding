@@ -468,6 +468,9 @@ def build():
         body = f"""
 <section class="blog-hero">
   <div class="blog-hero-mesh"></div>
+  <div class="hero-logo-overlay hero-logo-overlay--center" aria-hidden="true">
+    <img src="{POST_PREFIX}assets/yb-logo-white.png" alt="">
+  </div>
   <div class="container blog-hero-inner">
     <span class="eyebrow" style="color:var(--yb-cyan)">YB Marketing Insights</span>
     <h1 style="color:#fff;font-size:clamp(1.6rem,3vw,2.2rem)">{html.escape(title)}</h1>
@@ -540,6 +543,9 @@ def build():
     index_body = f"""
 <section class="blog-hero">
   <div class="blog-hero-mesh"></div>
+  <div class="hero-logo-overlay hero-logo-overlay--center" aria-hidden="true">
+    <img src="assets/yb-logo-white.png" alt="">
+  </div>
   <div class="container blog-hero-inner">
     <span class="eyebrow" style="color:var(--yb-cyan)">Insights &amp; Resources</span>
     <h1>Marketing Insights</h1>

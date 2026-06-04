@@ -1,0 +1,143 @@
+/* Washington State sales tax notice — matches site hero / article patterns */
+
+.news-page {
+  min-height: 60vh;
+}
+
+.news-hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--grad-navy);
+  padding: 64px 0 80px;
+}
+
+.news-hero-mesh {
+  position: absolute;
+  inset: 0;
+  background-image: var(--grad-mesh);
+  pointer-events: none;
+}
+
+.news-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.news-hero .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--yb-cyan);
+  margin-bottom: 14px;
+}
+
+.news-hero .eyebrow::before {
+  content: '';
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  flex: none;
+}
+
+.news-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #fff;
+  max-width: 720px;
+}
+
+.news-body {
+  background: #fff;
+  padding: 56px 0 96px;
+}
+
+.news-content {
+  max-width: 920px;
+}
+
+.news-block {
+  margin-bottom: 40px;
+}
+
+.news-block h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+
+.news-block p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--fg2);
+  max-width: 860px;
+}
+
+.news-divider {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 48px 0 40px;
+}
+
+.news-links {
+  list-style: none;
+  display: grid;
+  gap: 0;
+}
+
+.news-link-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px 32px;
+  align-items: center;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.news-link-row:first-child {
+  padding-top: 0;
+}
+
+.news-link-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--fg2);
+  margin: 0;
+}
+
+.news-link-row .btn {
+  flex-shrink: 0;
+  min-width: 148px;
+  justify-content: center;
+  padding: 13px 24px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--r-pill);
+}
+
+@media (max-width: 720px) {
+  .news-link-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .news-link-row .btn {
+    width: 100%;
+    max-width: 220px;
+  }
+}

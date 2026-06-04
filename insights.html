@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insights — YB Marketing</title>
+<meta name="description" content="Digital marketing insights from YB Marketing.">
+<link rel="stylesheet" href="colors_and_type.css">
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="blog.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-body);background:var(--bg);color:var(--fg1);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.container{width:100%;max-width:var(--container);margin:0 auto;padding:0 28px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--yb-blue)}
+.eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:currentColor}
+.header{position:sticky;top:0;z-index:50}
+.header.solid{background:rgba(255,255,255,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.header.top{background:rgba(255,255,255,.6);backdrop-filter:blur(12px)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:11px}
+.logo-text{font-family:var(--font-display);font-weight:800;font-size:22px}
+.logo-text span{color:var(--yb-blue)}
+.nav{display:flex;align-items:center;gap:2px}
+.nav-a{font-weight:600;font-size:15px;padding:8px 14px;border-radius:var(--r-sm)}
+.nav-services{position:relative}
+.nav-svc-btn{display:flex;align-items:center;gap:5px;font-weight:600;font-size:15px;padding:8px 14px;border-radius:var(--r-sm);background:none;border:none;cursor:pointer;font-family:var(--font-body)}
+.nav-dd{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);width:660px;background:#fff;border-radius:var(--r-xl);box-shadow:var(--sh-lg);padding:16px;opacity:0;pointer-events:none;z-index:200}
+.nav-services:hover .nav-dd,.nav-services.is-open .nav-dd{opacity:1;pointer-events:all}
+.nav-dd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.dd-card{display:flex;gap:11px;padding:12px;border-radius:var(--r-md)}
+.dd-card:hover{background:var(--bg-soft)}
+.dd-name{font-weight:700;font-size:13px;display:block}
+.dd-desc{font-size:11.5px;color:var(--fg3)}
+.btn{display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;font-family:var(--font-body);font-weight:700;font-size:15px;border-radius:var(--r-md);padding:13px 22px}
+.btn-grad{background:var(--grad-brand);color:#fff;box-shadow:var(--sh-blue)}
+.hamburger{display:none;background:none;border:none;cursor:pointer}
+.mobile-menu{display:none;border-top:1px solid var(--line);background:#fff;padding:12px 28px}
+.mobile-menu a{display:block;padding:14px 0;font-weight:600;border-bottom:1px solid var(--line)}
+.mobile-menu.open{display:block}
+@media(max-width:900px){.nav,.btn-hdr{display:none}.hamburger{display:flex}.nav-dd{display:none}}
+</style>
+
+</head>
+<body class="blog-page">
+
+<div class="header top" id="header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">
+      <img src="assets/yb-logo-color.png" alt="YB Marketing logo" style="width:44px;height:44px">
+      <span class="logo-text">YB <span>Marketing</span></span>
+    </a>
+    <nav class="nav">
+      <a href="index.html" class="nav-a">Home</a>
+      <div class="nav-about" id="navAbout">
+        <button class="nav-svc-btn" type="button">About
+          <svg class="nav-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dd nav-dd-about">
+          <div class="nav-dd-arrow"></div>
+          <div class="nav-dd-about-inner">
+            <div class="nav-dd-about-banner">
+              <span class="nav-dd-eyebrow">About YB Marketing</span>
+              <p class="nav-dd-banner-text">Pacific Northwest agency · Washington State</p>
+            </div>
+            <div class="nav-dd-about-grid">
+              <a href="about.html" class="dd-card">
+                <div class="dd-ic" style="background:var(--wash-blue);color:var(--yb-blue)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                <div><span class="dd-name">About Us</span><span class="dd-desc">Meet our team &amp; our story</span></div>
+              </a>
+              <a href="washington-state-sales-tax.html" class="dd-card">
+                <div class="dd-ic" style="background:#e8f5ee;color:#2d9a5a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+                <div><span class="dd-name">WA Sales Tax Notice</span><span class="dd-desc">Oct 2025 advertising &amp; software tax info</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-services" id="navServices">
+        <button class="nav-svc-btn" type="button">Services
+          <svg class="nav-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dd">
+          <div class="nav-dd-arrow"></div>
+          <div class="nav-dd-grid">
+            <a href="services/web-design.html" class="dd-card"><div class="dd-ic" style="background:var(--wash-mint);color:#159468"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div><div><span class="dd-name">Web Design</span><span class="dd-desc">WordPress, Wix &amp; custom sites</span></div></a>
+            <a href="services/social-media.html" class="dd-card"><div class="dd-ic" style="background:var(--wash-amber);color:#c77f12"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/></svg></div><div><span class="dd-name">Social Media</span><span class="dd-desc">Grow your following</span></div></a>
+            <a href="services/google-ads.html" class="dd-card"><div class="dd-ic" style="background:var(--wash-coral);color:var(--yb-coral)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></div><div><span class="dd-name">Google Ads</span><span class="dd-desc">PPC that converts</span></div></a>
+            <a href="services/seo.html" class="dd-card"><div class="dd-ic" style="background:var(--wash-cyan);color:var(--yb-cyan)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><div><span class="dd-name">SEO</span><span class="dd-desc">Rank higher on Google</span></div></a>
+            <a href="services/press-releases.html" class="dd-card"><div class="dd-ic" style="background:var(--wash-pink);color:var(--yb-pink)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/></svg></div><div><span class="dd-name">Press Releases</span><span class="dd-desc">Get published</span></div></a>
+            <a href="services/content-creation.html" class="dd-card"><div class="dd-ic" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div><span class="dd-name">Content &amp; Blogging</span><span class="dd-desc">Copy that converts</span></div></a>
+          </div>
+        </div>
+      </div>
+      <a href="insights.html" class="nav-a" style="color:var(--yb-blue)">Insights</a>
+      <a href="contact.html" class="nav-a">Contact</a>
+    </nav>
+    <div class="btn-hdr" style="display:flex;align-items:center;gap:8px">
+      <a href="tel:5099019735" class="btn" style="background:#fff;color:var(--yb-blue);border:1.5px solid var(--line-strong);padding:11px 16px;font-size:14px">509-901-9735</a>
+      <a href="contact.html" class="btn btn-grad">Get Started</a>
+    </div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="#" onclick="document.getElementById('mobileAboutList').classList.toggle('open');return false" style="display:flex;justify-content:space-between;align-items:center">About <span>▾</span></a>
+    <div class="mobile-svc-list" id="mobileAboutList">
+      <a href="about.html" class="mobile-about-row"><strong>About Us</strong><span>Meet our team &amp; our story</span></a>
+      <a href="washington-state-sales-tax.html" class="mobile-about-row"><strong>WA Sales Tax Notice</strong><span>Oct 2025 tax updates for WA businesses</span></a>
+    </div>
+    <a href="insights.html" style="color:var(--yb-blue)">Insights</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</div>
+
+<section class="blog-hero">
+  <div class="blog-hero-mesh"></div>
+  <div class="container blog-hero-inner">
+    <span class="eyebrow" style="color:var(--yb-cyan)">Insights &amp; Resources</span>
+    <h1>Marketing Insights</h1>
+    <p>Digital marketing tips, SEO guides, social media strategies, and business growth advice from our team.</p>
+  </div>
+</section>
+<div class="wave-div wave-from-navy wave-to-soft"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,0 C360,70 1080,70 1440,0 L1440,70 L0,70 Z"/></svg></div>
+<section class="blog-listing">
+  <div class="container">
+<div class="blog-filters-wrap">
+  <p class="blog-filters-label">Browse by topic</p>
+  <div class="blog-filters" role="group" aria-label="Filter articles by topic">
+    <button type="button" class="blog-filter is-active" data-filter="all" aria-pressed="true">All Posts</button><button type="button" class="blog-filter" data-filter="seo" aria-pressed="false">SEO</button><button type="button" class="blog-filter" data-filter="google-ads" aria-pressed="false">Google Ads</button><button type="button" class="blog-filter" data-filter="social-media" aria-pressed="false">Social Media</button><button type="button" class="blog-filter" data-filter="web-design" aria-pressed="false">Web Design</button><button type="button" class="blog-filter" data-filter="content" aria-pressed="false">Content</button><button type="button" class="blog-filter" data-filter="strategy" aria-pressed="false">Strategy</button><button type="button" class="blog-filter" data-filter="news" aria-pressed="false">News</button><button type="button" class="blog-filter" data-filter="general" aria-pressed="false">General</button>
+  </div>
+  <p class="blog-filter-status" id="blogFilterStatus" aria-live="polite">Showing all 38 articles</p>
+</div>
+    <div class="blog-layout">
+      <div class="blog-main">
+        <div class="blog-card-grid" id="blogCardGrid">
+        
+      <a href="blog/posts/yb-marketing-announces-strategic-acquisition-of-encite-branding-marketing-creative.html" class="blog-card" data-topic="news">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2025/02/45179560_1879335002162329_7195523191056367616_n.png" alt="YB Marketing Announces Strategic Acquisition of encite branding + marketing + creative" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--news">News</span>
+          <h2>YB Marketing Announces Strategic Acquisition of encite branding + marketing + creative</h2>
+          <p>SAN JOSE, CA, UNITED STATES, January 8, 2025 /EINPresswire.com/ — YB Marketing, a team of dedicated marketing professionals and providers of specialized services based in San Jose, California, today announced it has sign</p>
+          <div class="blog-card-meta"><span>February 12, 2025</span><span>1 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/why-local-businesses-need-seo-how-you-can-help-them.html" class="blog-card" data-topic="seo">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/08/pexels-pixabay-270637-scaled.jpg" alt="Why Local Businesses Need SEO &amp; How You Can Help Them" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--seo">SEO</span>
+          <h2>Why Local Businesses Need SEO &amp; How You Can Help Them</h2>
+          <p>Building a strong local presence online is only possible with a comprehensive and personalized SEO strategy. Through the integration of listing management services, customer reviews, on-page ranking signals and other fac</p>
+          <div class="blog-card-meta"><span>August 08, 2023</span><span>3 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/why-you-should-be-using-customer-satisfaction-surveys.html" class="blog-card" data-topic="strategy">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-andrea-piacquadio-789822-scaled.jpg" alt="Why You Should Be Using Customer Satisfaction Surveys" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--strategy">Strategy</span>
+          <h2>Why You Should Be Using Customer Satisfaction Surveys</h2>
+          <p>Customer satisfaction surveys are more popular among big box retailers, but there’s no reason why smaller businesses can’t use them. They are a great way to collect valuable data on the people who keep your business aliv</p>
+          <div class="blog-card-meta"><span>June 26, 2023</span><span>4 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/so-youre-thinking-about-social-media-management.html" class="blog-card" data-topic="social-media">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-andrea-piacquadio-3769021-scaled.jpg" alt="So, You’re Thinking about Social Media Management?" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--social-media">Social Media</span>
+          <h2>So, You’re Thinking about Social Media Management?</h2>
+          <p>I see you, the busy business owner, wearing multiple hats. You take care of the everyday tasks, you make the decisions, you are involved 24/7 and working hard! Social media is just another task on your plate. Maybe you h</p>
+          <div class="blog-card-meta"><span>June 26, 2023</span><span>3 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/5-paid-search-tactics-to-help-you-generate-leads.html" class="blog-card" data-topic="google-ads">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-pixabay-265087-scaled.jpg" alt="5 Paid Search Tactics to Help You Generate Leads" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--google-ads">Google Ads</span>
+          <h2>5 Paid Search Tactics to Help You Generate Leads</h2>
+          <p>Are you a business owner challenged with finding enough qualified leads for your business? Don’t worry, you are not alone! This is one of the top questions we get regularly. It’s the classic catch-22; you have a million </p>
+          <div class="blog-card-meta"><span>June 26, 2023</span><span>11 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/in-house-marketing-vs-agency-marketing.html" class="blog-card" data-topic="strategy">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/scaled_blog-post.png" alt="In-House Marketing vs Agency Marketing" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--strategy">Strategy</span>
+          <h2>In-House Marketing vs Agency Marketing</h2>
+          <p>Can’t decide between an in-house marketer or an advertising agency? We’re here to help you decide! Take a look at 10 key business factors when comparing in-house against outsourced marketing agencies.</p>
+          <div class="blog-card-meta"><span>June 26, 2023</span><span>12 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/everything-businesses-need-to-know-about-seo.html" class="blog-card" data-topic="seo">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-oleksandr-pidvalnyi-9822732-scaled.jpg" alt="Everything Businesses Need to Know About SEO" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--seo">SEO</span>
+          <h2>Everything Businesses Need to Know About SEO</h2>
+          <p>Search engine optimization (SEO) is as vast as it is misunderstood. It’s one of the most essential concepts driving digital marketing today and a must-know for marketers who want to see their business succeed online.</p>
+          <div class="blog-card-meta"><span>June 26, 2023</span><span>8 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/an-introverts-guide-to-using-social-media.html" class="blog-card" data-topic="social-media">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-andrea-piacquadio-914931-scaled.jpg" alt="An Introvert’s Guide to Using Social Media" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--social-media">Social Media</span>
+          <h2>An Introvert’s Guide to Using Social Media</h2>
+          <p>As a business owner or business professional, social media is a demanding place. You must put yourself out there, create content and stick to a predictable schedule. This can feel like a full-time job within itself!</p>
+          <div class="blog-card-meta"><span>June 26, 2023</span><span>6 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/digital-marketing-is-an-investment-not-an-expense.html" class="blog-card" data-topic="strategy">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-mikael-blomkvist-6476589-scaled.jpg" alt="Digital Marketing is An Investment, Not An Expense" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--strategy">Strategy</span>
+          <h2>Digital Marketing is An Investment, Not An Expense</h2>
+          <p>Marketing (including digital marketing) is the act of persuading people to buy a product or service. Often, businesses need to convince customers to buy their product or service instead of a similar one from another comp</p>
+          <div class="blog-card-meta"><span>June 26, 2023</span><span>11 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/how-to-create-content-for-every-stage-in-the-buyers-journey.html" class="blog-card" data-topic="content">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-andrea-piacquadio-826349-scaled.jpg" alt="How to Create Content for Every Stage in the Buyer’s Journey" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--content">Content</span>
+          <h2>How to Create Content for Every Stage in the Buyer’s Journey</h2>
+          <p>Have you ever bought something immediately after seeing it? Perhaps you have, but this isn’t the norm. Typically, it takes a person several stages before they become a customer. This is called the sales funnel and it can</p>
+          <div class="blog-card-meta"><span>June 26, 2023</span><span>4 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/how-often-should-you-run-content-audits-and-update-your-site.html" class="blog-card" data-topic="web-design">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-tranmautritam-69432-scaled.jpg" alt="How Often Should You Run Content Audits and Update Your Site?" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--web-design">Web Design</span>
+          <h2>How Often Should You Run Content Audits and Update Your Site?</h2>
+          <p>There is no set timeline for when websites should be updated. In general, experts recommend a redesign or revamp every two to four years to keep up with the latest changes in technology. But this doesn’t mean your websit</p>
+          <div class="blog-card-meta"><span>June 26, 2023</span><span>4 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/5-creative-ways-to-enhance-your-website-using-video.html" class="blog-card" data-topic="web-design">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-teono-no-88476-scaled.jpg" alt="5 Creative Ways to Enhance Your Website Using Video" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--web-design">Web Design</span>
+          <h2>5 Creative Ways to Enhance Your Website Using Video</h2>
+          <p>Video continues to dominate in the world of content marketing. Even though it’s nothing new, marketers are finding creative ways to fit more videos into their marketing campaigns. Plus, making high quality videos is easi</p>
+          <div class="blog-card-meta"><span>June 26, 2023</span><span>4 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/how-did-this-restaurants-pay-per-click-campaign-improve-so-drastically.html" class="blog-card" data-topic="google-ads">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-lex-photography-1109543-scaled.jpg" alt="We were able to help this restaurant’s pay-per-click (PPC) campaign improve immensely!" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--google-ads">Google Ads</span>
+          <h2>We were able to help this restaurant’s pay-per-click (PPC) campaign improve immensely!</h2>
+          <p>Case Study</p>
+          <div class="blog-card-meta"><span>June 26, 2023</span><span>1 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/what-is-a-landing-page-why-is-it-important.html" class="blog-card" data-topic="web-design">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-monoar-rahman-109371-scaled.jpg" alt="What is a Landing Page &amp; Why is it Important?" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--web-design">Web Design</span>
+          <h2>What is a Landing Page &amp; Why is it Important?</h2>
+          <p>As you dive into the world of digital marketing, SEO, and paid search advertising, you’ll likely encounter a whole new vocabulary and set of concepts. If you haven’t already, you’re bound to have questions about how land</p>
+          <div class="blog-card-meta"><span>June 26, 2023</span><span>4 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/how-to-create-a-portfolio-website-for-your-small-business.html" class="blog-card" data-topic="web-design">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-pixabay-39284-scaled.jpg" alt="How to Create a Portfolio Website for Your Small Business" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--web-design">Web Design</span>
+          <h2>How to Create a Portfolio Website for Your Small Business</h2>
+          <p>Let’s learn more about what a portfolio site is and how to create one for your freelance business.</p>
+          <div class="blog-card-meta"><span>June 26, 2023</span><span>4 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/social-media-platforms.html" class="blog-card" data-topic="social-media">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-cottonbro-studio-5053738-scaled.jpg" alt="Which Social Media Platform Should You Focus On?" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--social-media">Social Media</span>
+          <h2>Which Social Media Platform Should You Focus On?</h2>
+          <p>Focusing on the one or two social media platforms that align most with your business will not only help you attract your target audience but will be more authentic for your brand.</p>
+          <div class="blog-card-meta"><span>June 26, 2023</span><span>3 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/recap-common-social-media-mistakes-every-business-should-avoid.html" class="blog-card" data-topic="social-media">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-pixabay-248533-scaled.jpg" alt="Common Social Media Mistakes Every Business Should Avoid" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--social-media">Social Media</span>
+          <h2>Common Social Media Mistakes Every Business Should Avoid</h2>
+          <p>Today’s consumers use social media throughout the buying journey..</p>
+          <div class="blog-card-meta"><span>June 26, 2023</span><span>2 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/social-media-management-vs-growth.html" class="blog-card" data-topic="social-media">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-tracy-le-blanc-607812-scaled.jpg" alt="Grow Your Social Media vs. Managing It | Social Media Best Practices" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--social-media">Social Media</span>
+          <h2>Grow Your Social Media vs. Managing It | Social Media Best Practices</h2>
+          <p>What does each mean and where do they fit in your marketing strategy?</p>
+          <div class="blog-card-meta"><span>June 26, 2023</span><span>4 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/types-of-facebook-ads.html" class="blog-card" data-topic="google-ads">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-pixabay-267399-scaled.jpg" alt="Types of Facebook Ads" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--google-ads">Google Ads</span>
+          <h2>Types of Facebook Ads</h2>
+          <p>There isn’t a one size fits all approach to Facebook ads.</p>
+          <div class="blog-card-meta"><span>June 26, 2023</span><span>2 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/5-major-myths.html" class="blog-card" data-topic="social-media">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-magnus-mueller-2818118-scaled.jpg" alt="5 Major Myths about Social Media" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--social-media">Social Media</span>
+          <h2>5 Major Myths about Social Media</h2>
+          <p>Depending on your industry, and we will dig further into this in our next blog- there are specific platforms that will align better with your product or service…</p>
+          <div class="blog-card-meta"><span>June 26, 2023</span><span>4 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/what-you-should-consider-when-installing-a-concrete-patio.html" class="blog-card" data-topic="general">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/Fountain-Exposed-Aggregate-Patio.jpg" alt="Know What You Should Consider When Installing a Concrete Patio" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--general">General</span>
+          <h2>Know What You Should Consider When Installing a Concrete Patio</h2>
+          <p>A well-designed patio is an aesthetically pleasing space for relaxation and entertainment…</p>
+          <div class="blog-card-meta"><span>June 23, 2023</span><span>2 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/the-thermal-press-difference.html" class="blog-card" data-topic="general">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/LCD-Circuit-Board-Heat-Sealed.png" alt="The Thermal Press Difference" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--general">General</span>
+          <h2>The Thermal Press Difference</h2>
+          <p>Thermal Press is a leader in the plastic assembly industry. In fact, we defined the industry over 40 years ago…</p>
+          <div class="blog-card-meta"><span>June 23, 2023</span><span>3 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/best-business-entity-for-franchisees.html" class="blog-card" data-topic="strategy">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-sora-shimazaki-5669602-scaled.jpg" alt="How To Select The Best Business Entity As A Franchisee" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--strategy">Strategy</span>
+          <h2>How To Select The Best Business Entity As A Franchisee</h2>
+          <p>A person interested in starting a franchise business would be wise to research the legal options for formalizing their business entity.</p>
+          <div class="blog-card-meta"><span>June 23, 2023</span><span>2 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/why-should-you-send-your-child-to-camp-mowglis-give-them-a-chance-to-unplug.html" class="blog-card" data-topic="general">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/P6290067-800x600-1.jpg" alt="Why Should You Send Your Child to Camp Mowglis? Give Them a Chance to Unplug" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--general">General</span>
+          <h2>Why Should You Send Your Child to Camp Mowglis? Give Them a Chance to Unplug</h2>
+          <p>Why should you send your child to Camp Mowglis? Give them a chance to unplug!</p>
+          <div class="blog-card-meta"><span>June 23, 2023</span><span>3 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/signs-your-car-may-need-transmission-repair.html" class="blog-card" data-topic="general">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-raduz-91152-scaled.jpg" alt="5 Signs Your Car May Need Transmission Repair" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--general">General</span>
+          <h2>5 Signs Your Car May Need Transmission Repair</h2>
+          <p>Your transmission is an essential vehicle component, transferring power from the engine to the wheels to get you where you’re going.</p>
+          <div class="blog-card-meta"><span>June 23, 2023</span><span>2 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/what-to-look-for-in-a-moving-company.html" class="blog-card" data-topic="general">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-rdne-stock-project-7464708-scaled.jpg" alt="What to Look for in a Moving Company" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--general">General</span>
+          <h2>What to Look for in a Moving Company</h2>
+          <p>You have many options for moving services, but finding a reputable, affordable moving company that won’t take you for a ride can be tricky.</p>
+          <div class="blog-card-meta"><span>June 23, 2023</span><span>3 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/effects-of-rain-on-asphalt.html" class="blog-card" data-topic="general">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/Google-Lot-Logo-scaled-1.jpg" alt="Effects of Rain on Asphalt" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--general">General</span>
+          <h2>Effects of Rain on Asphalt</h2>
+          <p>How’s the current deluge of rain impacting your parking lot? Water is one of asphalt’s worst enemies.</p>
+          <div class="blog-card-meta"><span>June 23, 2023</span><span>3 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/five-social-media-post-ideas-for-when-youre-in-a-rut.html" class="blog-card" data-topic="social-media">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-pixabay-355952-popsn38kvpqy3bcb6u0ucwksjuqeebx5t8thrjjjig.jpg" alt="Five Social Media Post Ideas, For When You’re in a Rut" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--social-media">Social Media</span>
+          <h2>Five Social Media Post Ideas, For When You’re in a Rut</h2>
+          <p>Creating a high quality social media post that your followers want to engage with is a lot more difficult than it might seem.</p>
+          <div class="blog-card-meta"><span>June 23, 2023</span><span>2 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/what-is-a-hashtag.html" class="blog-card" data-topic="social-media">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-ds-stories-8099484-1-pnr9qci25rkhf7ks267xml20shvhmbe6zbws7x0oeg.jpg" alt="What is a Hashtag?" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--social-media">Social Media</span>
+          <h2>What is a Hashtag?</h2>
+          <p>You may be familiar with #hashtags, they are commonly used on social media to help announce target words and grab users’ attention.</p>
+          <div class="blog-card-meta"><span>June 23, 2023</span><span>3 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/ways-to-increase-followers.html" class="blog-card" data-topic="social-media">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-kerde-severin-1542252-pqzsumtn97n4h27qvu6x9jwy7g6cqn4o0cqlsvbp9c.jpg" alt="6 Ways to Increase your Social Media Followers" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--social-media">Social Media</span>
+          <h2>6 Ways to Increase your Social Media Followers</h2>
+          <p>Having a social media plan is one thing, but do you ever feel like you’re just speaking to the same people each time you post?</p>
+          <div class="blog-card-meta"><span>June 23, 2023</span><span>3 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/7-ways-to-convert-social-media-followers-into-paying-customers.html" class="blog-card" data-topic="social-media">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/Picture2.jpg" alt="7 Ways to Convert Social Media Followers into Paying Customers" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--social-media">Social Media</span>
+          <h2>7 Ways to Convert Social Media Followers into Paying Customers</h2>
+          <p>Social media is an excellent marketing tool that can help you gain visibility, build brand awareness and evolve into an industry leader.</p>
+          <div class="blog-card-meta"><span>June 23, 2023</span><span>5 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/evolution-social-media.html" class="blog-card" data-topic="social-media">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/Evolution-Digital-768x384-1.png" alt="The Evolution of Social Media" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--social-media">Social Media</span>
+          <h2>The Evolution of Social Media</h2>
+          <p>You wake up in the morning, yawn and stretch, grab your phone to turn off your alarm, and check your social media notifications. You’re not alone.</p>
+          <div class="blog-card-meta"><span>June 23, 2023</span><span>5 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/pcba-design-for-manufacturability.html" class="blog-card" data-topic="general">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-pixabay-159220-scaled.jpg" alt="PCBA – Design for Manufacturability" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--general">General</span>
+          <h2>PCBA – Design for Manufacturability</h2>
+          <p>Whenever you bring a new product to market, there are many considerations and iterations required to find the optimal design.</p>
+          <div class="blog-card-meta"><span>June 23, 2023</span><span>3 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/selecting-a-commercial-landscape-maintenance-company.html" class="blog-card" data-topic="general">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-michael-fischer-606505-scaled.jpg" alt="Selecting a Commercial Landscape Maintenance Company?" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--general">General</span>
+          <h2>Selecting a Commercial Landscape Maintenance Company?</h2>
+          <p>Often, landscaping services can seem like they are all the same…</p>
+          <div class="blog-card-meta"><span>June 23, 2023</span><span>3 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/what-drives-consumer-spending.html" class="blog-card" data-topic="strategy">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-karolina-grabowska-5650026-scaled.jpg" alt="What Drives Consumer Spending?" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--strategy">Strategy</span>
+          <h2>What Drives Consumer Spending?</h2>
+          <p>Imagine if you could tap into the consciousness of consumers and understand exactly what makes them buy?</p>
+          <div class="blog-card-meta"><span>June 23, 2023</span><span>2 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/resolving-employee-disputes-before-you-are-sued.html" class="blog-card" data-topic="strategy">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/pexels-sora-shimazaki-5668481-scaled.jpg" alt="Resolving Employee Disputes Before You are Sued" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--strategy">Strategy</span>
+          <h2>Resolving Employee Disputes Before You are Sued</h2>
+          <p>Preventing employee lawsuits and other legal claims is more challenging than you might think for a business…</p>
+          <div class="blog-card-meta"><span>June 23, 2023</span><span>3 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/why-choose-gasoline-box-trucks-vs-diesel.html" class="blog-card" data-topic="general">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/06/IMG_9057-1.jpg" alt="Why Choose Gasoline Box Trucks vs. Diesel?" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--general">General</span>
+          <h2>Why Choose Gasoline Box Trucks vs. Diesel?</h2>
+          <p>Commercial businesses and their drivers are going wild for Diamond Mitsubishi Fuso’s new gasoline-powered box trucks…</p>
+          <div class="blog-card-meta"><span>June 23, 2023</span><span>2 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="blog/posts/3-ways-to-close-more-internet-leads.html" class="blog-card" data-topic="strategy">
+        <div class="blog-card-thumb"><img src="https://www.yakimabranding.com/wp-content/uploads/2023/04/1-Copy.png" alt="3 Ways To Close More Internet Leads" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat blog-card-cat--strategy">Strategy</span>
+          <h2>3 Ways To Close More Internet Leads</h2>
+          <p>If you’re struggling to convert your website’s visitors into leads, check out these three tips…</p>
+          <div class="blog-card-meta"><span>April 12, 2023</span><span>1 min read</span></div>
+          <span class="blog-card-link">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      </div>
+      <p class="blog-filter-empty" id="blogFilterEmpty" hidden>No articles in this category yet. Try another filter.</p>
+    </div>
+    
+<aside class="blog-sidebar" aria-label="Related actions">
+  <div class="sidebar-card">
+    <h3>Ready to Grow?</h3>
+    <p>Talk with YB Marketing about a strategy built around your business goals.</p>
+    <a href="contact.html" class="btn btn-grad"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg> Get Started</a>
+  </div>
+  <div class="sidebar-card sidebar-card-ghost">
+    <h3>Explore Our Services</h3>
+    <p>SEO, Google Ads, web design, branding, social media, and content marketing under one strategy.</p>
+    <a href="index.html#services" class="btn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg> View Services</a>
+  </div>
+  <div class="sidebar-card sidebar-card-accent">
+    <h3>Need Better Google Ads?</h3>
+    <p>Learn how YB Marketing helps improve Google Ads results with a strategy-first approach.</p>
+    <a href="services/google-ads.html" class="btn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg> View Google Ads Services</a>
+  </div>
+</aside>
+    </div>
+  </div>
+</section>
+
+
+<div class="wave-div wave-to-footer wave-from-soft"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,50 C480,70 960,10 1440,30 L1440,70 L0,70 Z"/></svg></div>
+<footer class="footer">
+  <div class="footer-mesh"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:11px;margin-bottom:14px">
+          <img src="assets/yb-logo-white.png" alt="YB" style="width:44px;height:44px;filter:drop-shadow(0 0 3px rgba(255,255,255,.4))">
+          <span style="font-family:var(--font-display);font-weight:800;font-size:22px;color:#fff">YB <span style="color:var(--yb-cyan)">Marketing</span></span>
+        </div>
+        <p>Award-winning digital marketing agency helping businesses grow through strategic branding, SEO, and comprehensive digital solutions.</p>
+        <div style="display:grid;gap:9px;margin:16px 0">
+          <a href="tel:5099019735" style="color:var(--fg2-on-dark);font-size:14px;display:flex;align-items:center;gap:9px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(509) 901-9735</a>
+          <a href="mailto:info@yakimabranding.com" style="color:var(--fg2-on-dark);font-size:14px;display:flex;align-items:center;gap:9px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@yakimabranding.com</a>
+        </div>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/yakimabranding" class="social-btn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/yb.marketing_/" class="social-btn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="17" height="17"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a>
+          <a href="https://www.linkedin.com/company/18939370" class="social-btn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services/web-design.html">Web Design</a></li>
+          <li><a href="services/seo.html">SEO Optimization</a></li>
+          <li><a href="services/google-ads.html">Google Ads</a></li>
+          <li><a href="services/social-media.html">Social Media</a></li>
+          <li><a href="services/press-releases.html">Press Releases</a></li>
+          <li><a href="services/content-creation.html">Content Marketing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Reach</h4>
+        <p style="color:var(--fg2-on-dark);font-size:14px;line-height:1.7;margin-bottom:14px">Yakima Branding is centered in Central Washington, with deep roots in the Yakima community. From our home base in Yakima, we proudly serve businesses across the entire Pacific Northwest with strategic marketing, website design, SEO, advertising, and branding support.</p>
+        <div style="display:flex;align-items:center;gap:7px;font-size:13px;color:var(--yb-cyan);font-weight:600"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Yakima, WA &nbsp;·&nbsp; Pacific Northwest</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 YB Marketing. All rights reserved.</span>
+      <div style="display:flex;gap:18px"><a href="#">Privacy Policy</a><a href="#">Sitemap</a></div>
+    </div>
+  </div>
+</footer>
+<script src="js/site.js" defer></script>
+<script>
+document.getElementById('hamburger')?.addEventListener('click', function () {
+  document.getElementById('mobileMenu')?.classList.toggle('open');
+});
+</script>
+
+<script src="js/blog-filter.js" defer></script>
+</body>
+</html>

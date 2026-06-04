@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Washington State Sales Tax Notice — YB Marketing</title>
+<meta name="description" content="Important notice for Washington State business owners regarding new sales tax on advertising services and custom software effective October 1, 2025.">
+<link rel="stylesheet" href="colors_and_type.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--fg1);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--yb-blue);color:#fff}
+a{color:inherit;text-decoration:none}
+.container{width:100%;max-width:var(--container);margin:0 auto;padding:0 28px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.header{position:sticky;top:0;z-index:50;transition:all 240ms cubic-bezier(.4,0,.2,1)}
+.header.solid{background:rgba(255,255,255,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.header.top{background:rgba(255,255,255,.6);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:11px}
+.logo img{width:44px;height:44px}
+.logo-text{font-family:var(--font-display);font-weight:800;font-size:22px;letter-spacing:-.02em;color:var(--ink)}
+.logo-text span{color:var(--yb-blue)}
+.nav{display:flex;align-items:center;gap:2px}
+.nav>a,.nav .nav-svc-btn{font-weight:600;font-size:15px;color:var(--fg1);padding:8px 14px;border-radius:var(--r-sm);transition:all 240ms;display:inline-block}
+.nav>a:hover{background:var(--bg-soft);color:var(--yb-blue)}
+.nav-services,.nav-about{position:relative}
+.nav-svc-btn{display:flex;align-items:center;gap:5px;font-weight:600;font-size:15px;color:var(--fg1);padding:8px 14px;border-radius:var(--r-sm);transition:all 240ms;background:none;border:none;cursor:pointer;font-family:var(--font-body)}
+.nav-chevron{transition:transform 240ms cubic-bezier(.4,0,.2,1);flex:none}
+.nav-dd{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(-10px) scale(.97);opacity:0;pointer-events:none;transition:opacity 200ms ease 150ms,transform 220ms cubic-bezier(.16,1,.3,1) 150ms;background:#fff;border-radius:var(--r-xl);box-shadow:0 24px 64px -16px rgba(22,32,58,.22),0 0 0 1px rgba(22,32,58,.07);padding:16px;z-index:200}
+.nav-dd-arrow{position:absolute;top:-5px;left:50%;transform:translateX(-50%) rotate(45deg);width:10px;height:10px;background:#fff;border-top:1px solid rgba(22,32,58,.08);border-left:1px solid rgba(22,32,58,.08)}
+.nav-dd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;width:660px}
+.dd-card{display:flex;align-items:flex-start;gap:11px;padding:12px;border-radius:var(--r-md);transition:background 150ms ease}
+.dd-card:hover{background:var(--bg-soft)}
+.dd-name{font-weight:700;font-size:13px;color:var(--ink);margin-bottom:2px;display:block}
+.dd-desc{font-size:11.5px;color:var(--fg3);line-height:1.4}
+.btn{display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;font-family:var(--font-body);font-weight:700;font-size:15px;border-radius:var(--r-md);padding:13px 22px;transition:all 240ms;white-space:nowrap;line-height:1}
+.btn-grad{background:var(--grad-brand);color:#fff;box-shadow:0 14px 30px -10px rgba(63,111,214,.45)}
+.btn-grad:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px}
+.mobile-menu{display:none;border-top:1px solid var(--line);background:#fff;padding:12px 28px 20px}
+.mobile-menu a{display:block;padding:14px 0;border-bottom:1px solid var(--line);font-weight:600;font-size:17px;color:var(--ink)}
+.mobile-svc-list{display:none;padding:4px 0 4px 16px}
+.mobile-svc-list.open{display:block}
+.mobile-svc-list a{font-size:15px;padding:10px 0;color:var(--fg2);border-bottom:none}
+.footer{background:var(--grad-navy);color:#fff;position:relative;overflow:hidden;padding:64px 0 28px}
+.footer-mesh{position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.5;pointer-events:none}
+.footer-grid{position:relative;display:grid;grid-template-columns:1.7fr 1fr 1fr 1.4fr;gap:40px;margin-bottom:42px}
+.footer-col h4{font-family:var(--font-display);font-size:14px;font-weight:700;margin-bottom:14px}
+.footer-col ul{list-style:none;display:grid;gap:10px}
+.footer-col a{color:var(--fg2-on-dark);font-size:14px;transition:color 240ms}
+.footer-col a:hover{color:#fff}
+.footer-bottom{position:relative;border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--fg2-on-dark);font-size:13px}
+@media(max-width:900px){.nav-dd-grid{display:none}}
+@media(max-width:640px){.nav,.btn-hdr{display:none}.hamburger{display:flex}.mobile-menu.open{display:block}.footer-grid{grid-template-columns:1fr}}
+</style>
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="news-page.css">
+</head>
+<body>
+
+<div class="header top" id="header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">
+      <img src="assets/yb-logo-color.png" alt="YB Marketing logo">
+      <span class="logo-text">YB <span>Marketing</span></span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <div class="nav-about" id="navAbout">
+        <button class="nav-svc-btn" type="button" style="color:var(--yb-blue)">About
+          <svg class="nav-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+                <div class="nav-dd nav-dd-about">
+          <div class="nav-dd-arrow"></div>
+          <div class="nav-dd-about-inner">
+            <div class="nav-dd-about-banner">
+              <span class="nav-dd-eyebrow">About YB Marketing</span>
+              <p class="nav-dd-banner-text">Pacific Northwest agency · Washington State</p>
+            </div>
+            <div class="nav-dd-about-grid">
+              <a href="about.html" class="dd-card">
+                <div class="dd-ic" style="background:var(--wash-blue);color:var(--yb-blue)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                <div><span class="dd-name">About Us</span><span class="dd-desc">Meet our team &amp; our story</span></div>
+              </a>
+              <a href="washington-state-sales-tax.html" class="dd-card is-active">
+                <div class="dd-ic" style="background:#e8f5ee;color:#2d9a5a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+                <div><span class="dd-name">WA Sales Tax Notice</span><span class="dd-desc">Oct 2025 advertising &amp; software tax info</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-services" id="navServices">
+        <button class="nav-svc-btn" type="button">Services
+          <svg class="nav-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dd">
+          <div class="nav-dd-arrow"></div>
+          <div class="nav-dd-grid">
+            <a href="services/web-design.html" class="dd-card"><div><span class="dd-name">Web Design</span><span class="dd-desc">WordPress, Wix &amp; custom sites</span></div></a>
+            <a href="services/social-media.html" class="dd-card"><div><span class="dd-name">Social Media</span><span class="dd-desc">Grow your following</span></div></a>
+            <a href="services/google-ads.html" class="dd-card"><div><span class="dd-name">Google Ads</span><span class="dd-desc">PPC that converts</span></div></a>
+            <a href="services/seo.html" class="dd-card"><div><span class="dd-name">SEO</span><span class="dd-desc">Rank higher on Google</span></div></a>
+            <a href="services/press-releases.html" class="dd-card"><div><span class="dd-name">Press Releases</span><span class="dd-desc">Get published</span></div></a>
+            <a href="services/content-creation.html" class="dd-card"><div><span class="dd-name">Content &amp; Blogging</span><span class="dd-desc">Copy that converts</span></div></a>
+          </div>
+        </div>
+      </div>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="btn-hdr" style="display:flex;align-items:center;gap:8px">
+      <a href="tel:5099019735" class="btn" style="background:#fff;color:var(--yb-blue);border:1.5px solid var(--line-strong);padding:11px 16px;font-size:14px">509-901-9735</a>
+      <a href="contact.html" class="btn btn-grad">Get Started</a>
+    </div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="#" onclick="document.getElementById('mobileAboutList').classList.toggle('open');return false" style="display:flex;justify-content:space-between;align-items:center;color:var(--yb-blue)">About <span>▾</span></a>
+    <div class="mobile-svc-list open" id="mobileAboutList">
+      <a href="about.html">About Us</a>
+      <a href="washington-state-sales-tax.html" style="color:var(--yb-blue)">WA Sales Tax Notice</a>
+    </div>
+    <a href="#" onclick="document.getElementById('mobileSvcList').classList.toggle('open');return false" style="display:flex;justify-content:space-between;align-items:center">Services <span>▾</span></a>
+    <div class="mobile-svc-list" id="mobileSvcList">
+      <a href="services/web-design.html">Web Design</a>
+      <a href="services/social-media.html">Social Media</a>
+      <a href="services/google-ads.html">Google Ads</a>
+      <a href="services/seo.html">SEO</a>
+      <a href="services/press-releases.html">Press Releases</a>
+      <a href="services/content-creation.html">Content &amp; Blogging</a>
+    </div>
+    <a href="insights.html">Insights</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</div>
+
+<main class="news-page">
+  <header class="news-hero">
+    <div class="news-hero-mesh" aria-hidden="true"></div>
+    <div class="container news-hero-inner">
+      <span class="eyebrow">News</span>
+      <h1 class="news-title">Washington State<br>Business Owners</h1>
+    </div>
+  </header>
+
+  <div class="news-body">
+    <div class="container news-content">
+      <section class="news-block">
+        <h2>Advertising Services</h2>
+        <p>Beginning October 1, 2025, advertising services are subject to state and local sales tax under WAC 458-20-218. This includes creative design, campaign planning, media placement, digital marketing, and related services. You'll now see sales tax applied to invoices for advertising services in compliance with Washington State law.</p>
+      </section>
+
+      <section class="news-block">
+        <h2>Custom Software &amp; Website Development</h2>
+        <p>Under WAC 458-20-15502, charges for custom software development and website projects—including modifications, enhancements, and hosted applications—are subject to retail sales tax. This ensures consistent taxation across all types of software and digital products. Invoices will now reflect the required state and local sales tax.</p>
+      </section>
+
+      <hr class="news-divider">
+
+      <ul class="news-links">
+        <li class="news-link-row">
+          <p class="news-link-text">Link to new taxes under the Washington Department of Revenue effective October 1, 2025 | Washington Department of Revenue</p>
+          <a href="https://dor.wa.gov/taxes-rates/retail-sales-tax/services-newly-subject-retail-sales-tax" class="btn btn-grad" target="_blank" rel="noopener noreferrer">Click Here</a>
+        </li>
+        <li class="news-link-row">
+          <p class="news-link-text">Tax Rate Look-up Tool by Address</p>
+          <a href="https://webgis.dor.wa.gov/taxratelookup/SalesTax.aspx" class="btn btn-grad" target="_blank" rel="noopener noreferrer">Click Here</a>
+        </li>
+        <li class="news-link-row">
+          <p class="news-link-text">Get a binding tax rule from the State: Request a tax ruling | Washington Department of Revenue</p>
+          <a href="https://dor.wa.gov/contact/request-tax-ruling" class="btn btn-grad" target="_blank" rel="noopener noreferrer">Click Here</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-mesh"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <p style="color:var(--fg2-on-dark);font-size:14px;max-width:280px">Award-winning digital marketing agency rooted in Washington State, helping businesses grow through strategic branding, SEO, and digital solutions.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="washington-state-sales-tax.html">WA Sales Tax Notice</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services/web-design.html">Web Design</a></li>
+          <li><a href="services/seo.html">SEO</a></li>
+          <li><a href="services/google-ads.html">Google Ads</a></li>
+          <li><a href="services/social-media.html">Social Media</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:5099019735">509-901-9735</a></li>
+          <li><a href="contact.html">Get in Touch</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 YB Marketing. All rights reserved.</span>
+      <span>Washington State · Pacific Northwest</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/site.js"></script>
+<script>
+document.getElementById('hamburger')?.addEventListener('click', function () {
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+</script>
+</body>
+</html>

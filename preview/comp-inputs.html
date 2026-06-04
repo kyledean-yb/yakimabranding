@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0}
+  body{font-family:var(--font-body);background:var(--bg-soft);padding:26px 30px}
+  .field{max-width:340px;margin-bottom:14px}
+  label{display:block;font-size:12px;font-weight:700;color:var(--fg2);margin-bottom:6px}
+  input{width:100%;box-sizing:border-box;font-family:var(--font-body);font-size:15px;padding:13px 15px;border:1.5px solid var(--line-strong);border-radius:var(--r-md);background:#fff;color:var(--ink);transition:all var(--dur) var(--ease)}
+  input::placeholder{color:var(--fg3)}
+  .focus{border-color:var(--yb-blue);box-shadow:0 0 0 4px var(--wash-blue)}
+  .row{display:flex;gap:12px}
+  .row .field{flex:1;max-width:none}
+</style></head>
+<body>
+  <div class="row">
+    <div class="field"><label>Name *</label><input value="Kate McKenna" class="focus"></div>
+    <div class="field"><label>Email *</label><input placeholder="you@company.com"></div>
+  </div>
+  <div class="field"><label>Company Name or URL *</label><input placeholder="yourcompany.com"></div>
+</body></html>

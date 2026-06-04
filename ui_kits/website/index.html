@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YB Marketing — Website UI Kit</title>
+<link rel="stylesheet" href="../../colors_and_type.css">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { font-family: var(--font-body); background: var(--bg); color: var(--fg1); -webkit-font-smoothing: antialiased; }
+  html { scroll-behavior: smooth; }
+  ::selection { background: var(--yb-blue); color: #fff; }
+  .yb-nav-mobile { display: none !important; }
+
+  @media (max-width: 900px) {
+    .yb-nav-desktop { display: none !important; }
+    .yb-nav-mobile { display: flex !important; }
+    .yb-svc-grid { grid-template-columns: 1fr 1fr !important; }
+    .yb-blog-grid { grid-template-columns: 1fr 1fr !important; }
+    .yb-reviews-grid { column-count: 2 !important; }
+    .yb-hero-copy { grid-column: 1 / -1; }
+    section[id="top"] .yb-hero-visual { display: none; }
+    .yb-why-grid { grid-template-columns: 1fr !important; }
+    .yb-footer-grid { grid-template-columns: 1fr 1fr !important; }
+    .yb-stats-grid { grid-template-columns: 1fr 1fr !important; gap: 36px !important; }
+  }
+  @media (max-width: 600px) {
+    .yb-svc-grid, .yb-blog-grid { grid-template-columns: 1fr !important; }
+    .yb-reviews-grid { column-count: 1 !important; }
+    .yb-footer-grid { grid-template-columns: 1fr !important; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+
+<script type="text/babel" src="ui.jsx"></script>
+<script type="text/babel" src="Header.jsx"></script>
+<script type="text/babel" src="Hero.jsx"></script>
+<script type="text/babel" src="Services.jsx"></script>
+<script type="text/babel" src="Proof.jsx"></script>
+<script type="text/babel" src="Blog.jsx"></script>
+<script type="text/babel" src="CTAFooter.jsx"></script>
+
+<script type="text/babel">
+  function App() {
+    const [modal, setModal] = React.useState(false);
+    const nav = (id) => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+    React.useEffect(() => { if (window.lucide) window.lucide.createIcons(); });
+    return (
+      <React.Fragment>
+        <Header onGetStarted={() => setModal(true)} onNav={nav} />
+        <main>
+          <Hero onGetStarted={() => setModal(true)} />
+          <Services onGetStarted={() => setModal(true)} />
+          <WhyChoose />
+          <Reviews />
+          <Blog />
+          <Contact onGetStarted={() => setModal(true)} />
+        </main>
+        <Footer />
+        <ContactModal open={modal} onClose={() => setModal(false)} />
+      </React.Fragment>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

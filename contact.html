@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Us — YB Marketing</title>
+<link rel="stylesheet" href="colors_and_type.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--fg1);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--yb-blue);color:#fff}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.container{width:100%;max-width:var(--container);margin:0 auto;padding:0 28px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--yb-blue)}
+.eyebrow::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:currentColor;flex:none}
+.banner{background:var(--grad-navy);color:#fff;text-align:center;font-size:13px;font-weight:600;padding:8px 20px;position:relative;z-index:60}
+.banner a{color:var(--yb-cyan);text-decoration:underline}
+.header{position:sticky;top:0;z-index:50;transition:all 240ms cubic-bezier(.4,0,.2,1)}
+.header.solid{background:rgba(255,255,255,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.header.top{background:rgba(255,255,255,.6);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:11px}
+.logo img{width:44px;height:44px}
+.logo-text{font-family:var(--font-display);font-weight:800;font-size:22px;letter-spacing:-.02em;color:var(--ink)}
+.logo-text span{color:var(--yb-blue)}
+.nav{display:flex;align-items:center;gap:2px}
+.nav>a{font-weight:600;font-size:15px;color:var(--fg1);padding:8px 14px;border-radius:var(--r-sm);transition:all 240ms;display:inline-block}
+.nav>a:hover{background:var(--bg-soft);color:var(--yb-blue)}
+.nav-services{position:relative}
+.nav-svc-btn{display:flex;align-items:center;gap:5px;font-weight:600;font-size:15px;color:var(--fg1);padding:8px 14px;border-radius:var(--r-sm);transition:all 240ms;background:none;border:none;cursor:pointer;font-family:var(--font-body)}
+.nav-svc-btn:hover,.nav-services:hover .nav-svc-btn{background:var(--bg-soft);color:var(--yb-blue)}
+.nav-chevron{transition:transform 240ms cubic-bezier(.4,0,.2,1);flex:none}
+.nav-services:hover .nav-chevron{transform:rotate(180deg)}
+.nav-dd{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(-10px) scale(.97);opacity:0;pointer-events:none;transition:opacity 200ms ease 150ms,transform 220ms cubic-bezier(.16,1,.3,1) 150ms;width:660px;background:#fff;border-radius:var(--r-xl);box-shadow:0 24px 64px -16px rgba(22,32,58,.22),0 0 0 1px rgba(22,32,58,.07);padding:16px;z-index:200}
+.nav-services:hover .nav-dd{opacity:1;transform:translateX(-50%) translateY(0) scale(1);pointer-events:all;transition:opacity 150ms ease,transform 180ms cubic-bezier(.16,1,.3,1)}
+.nav-dd-arrow{position:absolute;top:-5px;left:50%;transform:translateX(-50%) rotate(45deg);width:10px;height:10px;background:#fff;border-top:1px solid rgba(22,32,58,.08);border-left:1px solid rgba(22,32,58,.08)}
+.nav-dd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.dd-card{display:flex;align-items:flex-start;gap:11px;padding:12px;border-radius:var(--r-md);transition:background 150ms ease}
+.dd-card:hover{background:var(--bg-soft)}
+.dd-ic{width:36px;height:36px;border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;flex:none}
+.dd-ic svg{width:18px;height:18px}
+.dd-name{font-weight:700;font-size:13px;color:var(--ink);margin-bottom:2px;display:block}
+.dd-desc{font-size:11.5px;color:var(--fg3);line-height:1.4}
+.btn{display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;font-family:var(--font-body);font-weight:700;font-size:15px;border-radius:var(--r-md);padding:13px 22px;transition:all 240ms;white-space:nowrap;line-height:1}
+.btn-grad{background:var(--grad-brand);color:#fff;box-shadow:0 14px 30px -10px rgba(63,111,214,.45)}
+.btn-grad:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.btn-ghost-white{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.28)}
+.btn-ghost-white:hover{background:rgba(255,255,255,.22);transform:translateY(-2px)}
+.btn-lg{padding:16px 28px;font-size:16px}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px;align-items:center;justify-content:center}
+.mobile-menu{display:none;border-top:1px solid var(--line);background:#fff;padding:12px 28px 20px}
+.mobile-menu a{display:block;padding:14px 0;border-bottom:1px solid var(--line);font-weight:600;font-size:17px;color:var(--ink)}
+.mobile-svc-list{display:none;padding:4px 0 4px 16px}
+.mobile-svc-list.open{display:block}
+.mobile-svc-list a{font-size:15px;padding:10px 0;color:var(--fg2)}
+/* Contact info cards */
+.contact-method{background:#fff;border-radius:var(--r-xl);padding:32px;text-align:center;box-shadow:var(--sh-sm);border:1px solid var(--line);transition:all 240ms;display:flex;flex-direction:column;align-items:center;gap:16px}
+.contact-method:hover{transform:translateY(-4px);box-shadow:var(--sh-md)}
+.contact-method-ic{width:64px;height:64px;border-radius:var(--r-lg);display:flex;align-items:center;justify-content:center}
+.contact-method-ic svg{width:28px;height:28px}
+.contact-method h3{font-size:19px;color:var(--ink);margin:0}
+.contact-method p{font-size:14px;color:var(--fg2);margin:0;line-height:1.6}
+.contact-method a.link{font-weight:700;font-size:16px;color:var(--yb-blue)}
+/* Form */
+.form-field label{display:block;font-size:12.5px;font-weight:700;color:var(--fg2);margin-bottom:6px}
+.form-field input,.form-field textarea,.form-field select{width:100%;font-family:var(--font-body);font-size:15px;padding:13px 15px;border:1.5px solid var(--line-strong);border-radius:var(--r-md);background:#fff;color:var(--ink);transition:border-color 200ms,box-shadow 200ms}
+.form-field input:focus,.form-field textarea:focus,.form-field select:focus{outline:none;border-color:var(--yb-blue);box-shadow:0 0 0 4px var(--wash-blue)}
+.form-field textarea{min-height:120px;resize:vertical}
+/* Wave */
+.wave-div{position:relative;overflow:hidden;line-height:0;font-size:0}
+.wave-div svg{display:block;width:100%;height:70px}
+/* Footer */
+.footer{background:var(--grad-navy);color:#fff;position:relative;overflow:hidden;padding:64px 0 28px}
+.footer-mesh{position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.5;pointer-events:none}
+.footer-grid{position:relative;display:grid;grid-template-columns:1.7fr 1fr 1fr 1.4fr;gap:40px;margin-bottom:42px}
+.footer-brand p{color:var(--fg2-on-dark);font-size:14px;max-width:280px;margin:14px 0 18px}
+.footer-col h4{font-family:var(--font-display);font-size:14px;font-weight:700;margin-bottom:14px;letter-spacing:.04em;color:#fff}
+.footer-col ul{list-style:none;display:grid;gap:10px}
+.footer-col a{color:var(--fg2-on-dark);font-size:14px;transition:color 240ms}
+.footer-col a:hover{color:#fff}
+.footer-bottom{position:relative;border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--fg2-on-dark);font-size:13px}
+.logo-text-ft{font-family:var(--font-display);font-weight:800;font-size:20px;letter-spacing:-.02em;color:#fff;display:inline-block;margin-bottom:10px}
+.logo-text-ft span{color:var(--yb-cyan)}
+.footer-socials{display:flex;gap:10px;margin-top:12px}
+.social-btn{width:38px;height:38px;border-radius:var(--r-sm);background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:#fff;transition:background 240ms}
+.social-btn:hover{background:var(--yb-blue)}
+.social-btn svg{width:17px;height:17px}
+@media(max-width:900px){.nav-dd{display:none}.contact-3col{grid-template-columns:1fr !important}.contact-2col{grid-template-columns:1fr !important}}
+@media(max-width:780px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.footer-grid{grid-template-columns:1fr}.nav,.btn-hdr{display:none}.hamburger{display:flex}.mobile-menu.open{display:block}}
+/* ─── LOCATIONS TICKER ──────────────────────────────────────────── */
+.locations-track{display:flex;width:max-content;animation:loc-scroll 35s linear infinite;gap:0}
+.locations-track:hover{animation-play-state:paused}
+.locations-set{display:flex;gap:12px;padding-right:12px}
+.loc-chip{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.85);font-size:13px;font-weight:600;letter-spacing:.02em;padding:8px 14px;border-radius:100px;white-space:nowrap}
+.loc-chip svg{opacity:.6;flex:none}
+@keyframes loc-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.locations-track{animation:none}}
+</style>
+</head>
+<body>
+
+
+
+<div class="header top" id="header">
+  <div class="container header-inner">
+    <a class="logo" href="Homepage.html">
+      <img src="assets/yb-logo-color.png" alt="YB Marketing logo">
+      <span class="logo-text">YB <span>Marketing</span></span>
+    </a>
+    <nav class="nav">
+      <a href="Homepage.html">Home</a>
+      <a href="about.html">About</a>
+      <div class="nav-services">
+        <button class="nav-svc-btn">Services
+          <svg class="nav-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dd">
+          <div class="nav-dd-arrow"></div>
+          <div class="nav-dd-grid">
+            <a href="services/web-design.html" class="dd-card"><div class="dd-ic" style="background:var(--wash-mint);color:#159468"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div><div><span class="dd-name">Web Design</span><span class="dd-desc">WordPress, Wix &amp; custom sites</span></div></a>
+            <a href="services/social-media.html" class="dd-card"><div class="dd-ic" style="background:var(--wash-amber);color:#c77f12"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div><div><span class="dd-name">Social Media</span><span class="dd-desc">Grow your following &amp; engagement</span></div></a>
+            <a href="services/google-ads.html" class="dd-card"><div class="dd-ic" style="background:var(--wash-coral);color:var(--yb-coral)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></div><div><span class="dd-name">Google Ads</span><span class="dd-desc">PPC campaigns that convert</span></div></a>
+            <a href="services/seo.html" class="dd-card"><div class="dd-ic" style="background:var(--wash-cyan);color:var(--yb-cyan)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><div><span class="dd-name">SEO</span><span class="dd-desc">Rank higher on Google &amp; AI</span></div></a>
+            <a href="services/press-releases.html" class="dd-card"><div class="dd-ic" style="background:var(--wash-pink);color:var(--yb-pink)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/><path d="M16 2v4a2 2 0 0 1-2 2H6"/></svg></div><div><span class="dd-name">Press Releases</span><span class="dd-desc">Get your story published</span></div></a>
+            <a href="services/content-creation.html" class="dd-card"><div class="dd-ic" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div><span class="dd-name">Content &amp; Blogging</span><span class="dd-desc">Compelling copy that converts</span></div></a>
+          </div>
+        </div>
+      </div>
+      <a href="Homepage.html#blog">Blog</a>
+      <a href="contact.html" style="color:var(--yb-blue)">Contact</a>
+    </nav>
+    <div class="btn-hdr" style="display:flex;align-items:center;gap:8px">
+      <a href="tel:5099019735" class="btn" style="background:#fff;color:var(--yb-blue);border:1.5px solid var(--line-strong);gap:7px;padding:11px 16px;font-size:14px">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        509-901-9735
+      </a>
+      <a href="#contact-form" class="btn btn-grad">Get Started</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="Homepage.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="#" onclick="document.getElementById('mobileSvcList').classList.toggle('open');return false">Services ▾</a>
+    <div class="mobile-svc-list" id="mobileSvcList">
+      <a href="services/web-design.html">Web Design</a>
+      <a href="services/social-media.html">Social Media</a>
+      <a href="services/google-ads.html">Google Ads</a>
+      <a href="services/seo.html">SEO</a>
+      <a href="services/press-releases.html">Press Releases</a>
+      <a href="services/content-creation.html">Content &amp; Blogging</a>
+    </div>
+    <a href="contact.html" style="color:var(--yb-blue)">Contact</a>
+    <a href="tel:5099019735" class="btn btn-grad" style="width:100%;justify-content:center;margin-top:16px;display:flex">Call 509-901-9735</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section style="position:relative;overflow:hidden;background:var(--grad-navy);padding:72px 0 100px">
+  <div style="position:absolute;inset:0;background-image:var(--grad-mesh);pointer-events:none"></div>
+  <div class="container" style="position:relative">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center">
+      <div>
+        <span class="eyebrow" style="color:var(--yb-cyan)">Get In Touch</span>
+        <h1 style="font-family:var(--font-display);font-weight:800;font-size:clamp(2.2rem,3.8vw,3.6rem);color:#fff;line-height:1.06;margin:18px 0 18px">Let's Start a Conversation</h1>
+        <p style="color:var(--fg2-on-dark);font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.65;margin:0 0 28px">We respond to every inquiry within four business hours. Fill out the form, book a call, or reach us directly — whatever works best for you.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <a href="#contact-form" class="btn btn-grad btn-lg">Send a Message
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="tel:5099019735" class="btn btn-ghost-white btn-lg">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            509-901-9735
+          </a>
+        </div>
+      </div>
+      <div style="border-radius:var(--r-xl);overflow:hidden;box-shadow:0 32px 80px -20px rgba(0,0,0,.5)">
+        <img src="assets/team-walking.webp" alt="YB Marketing team" style="width:100%;height:100%;object-fit:cover;display:block">
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:0;left:0;right:0;line-height:0;font-size:0;pointer-events:none"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px"><path d="M0,0 C360,60 1080,60 1440,0 L1440,60 L0,60 Z" fill="#ffffff"/></svg></div>
+</section>
+
+<!-- CONTACT METHODS -->
+<section style="padding:72px 0 0;background:#fff">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:900px;margin:0 auto" class="contact-3col">
+
+      <!-- Phone -->
+      <div class="contact-method">
+        <div class="contact-method-ic" style="background:var(--wash-blue)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--yb-blue)" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h3>Call Us</h3>
+        <p>We're available Monday–Friday during business hours. Leave a message any time.</p>
+        <a href="tel:5099019735" class="link">(509) 901-9735</a>
+        <a href="tel:5099019735" class="btn btn-grad" style="margin-top:4px">Call Now</a>
+      </div>
+
+      <!-- Calendly -->
+      <div class="contact-method">
+        <div class="contact-method-ic" style="background:var(--wash-mint)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#159468" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
+        </div>
+        <h3>Book a Meeting</h3>
+        <p>Schedule a free 30-minute introduction call with our sales team — no pressure, just a conversation.</p>
+        <span style="font-size:14px;color:var(--fg3)">30 min · Introduction Call</span>
+        <a href="https://calendly.com/yakimabranding" target="_blank" class="btn btn-grad" style="margin-top:4px;background:linear-gradient(135deg,#159468,#25C28A);box-shadow:0 14px 30px -10px rgba(21,148,104,.4)">Book a Time</a>
+      </div>
+
+      <!-- Email -->
+      <div class="contact-method">
+        <div class="contact-method-ic" style="background:var(--wash-violet)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--yb-violet)" stroke-width="2.2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <h3>Email Us</h3>
+        <p>Send us a message anytime. We'll respond within four business hours with a thoughtful answer.</p>
+        <a href="mailto:info@yakimabranding.com" class="link" style="font-size:14px">info@yakimabranding.com</a>
+        <a href="mailto:info@yakimabranding.com" class="btn btn-grad" style="margin-top:4px;background:linear-gradient(135deg,var(--yb-violet),#3F6FD6);box-shadow:0 14px 30px -10px rgba(123,91,230,.4)">Send Email</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FORM + CALENDLY -->
+<section style="padding:72px 0 88px;background:#fff" id="contact-form">
+  <div class="container">
+    <div style="text-align:center;max-width:600px;margin:0 auto 52px">
+      <span class="eyebrow">Ready to Grow?</span>
+      <h2 style="margin:14px 0 12px">Tell Us About Your Business</h2>
+      <p class="yb-lead">Whether you want to book a meeting or just send a quick message — we're here and we're listening.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:1040px;margin:0 auto" class="contact-2col">
+
+      <!-- Calendly embed card -->
+      <div style="background:var(--bg-soft);border-radius:var(--r-xl);padding:36px;border:1px solid var(--line)">
+        <div style="text-align:center;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:22px">
+          <div style="width:56px;height:56px;background:var(--grad-brand);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-family:var(--font-display);font-weight:800;font-size:22px;color:#fff">YB</div>
+          <div style="font-size:12px;font-weight:600;color:var(--fg3);margin-bottom:4px">YB Marketing Team</div>
+          <div style="font-weight:700;font-size:18px;color:var(--ink);margin-bottom:6px">Introduction Meeting</div>
+          <div style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--fg3);background:#fff;border-radius:var(--r-pill);padding:5px 12px;border:1px solid var(--line)">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            30 min · Free
+          </div>
+          <p style="font-size:13.5px;color:var(--fg2);margin-top:14px;line-height:1.6">An introduction meeting to learn more about your business, your goals, and how we can help you grow. No commitment required.</p>
+        </div>
+        <div style="display:grid;gap:12px">
+          <div style="background:#fff;border-radius:var(--r-md);padding:16px;border:1px solid var(--line);display:flex;align-items:center;gap:12px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--yb-blue)" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <div style="font-size:14px;color:var(--fg2)">Pick a date and time that works for you</div>
+          </div>
+          <div style="background:#fff;border-radius:var(--r-md);padding:16px;border:1px solid var(--line);display:flex;align-items:center;gap:12px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--yb-blue)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div style="font-size:14px;color:var(--fg2)">We'll send you a calendar invite right away</div>
+          </div>
+          <div style="background:#fff;border-radius:var(--r-md);padding:16px;border:1px solid var(--line);display:flex;align-items:center;gap:12px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--yb-blue)" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            <div style="font-size:14px;color:var(--fg2)">Meet directly with our sales team</div>
+          </div>
+        </div>
+        <!-- Replace with your actual Calendly inline embed -->
+        <!-- <div class="calendly-inline-widget" data-url="https://calendly.com/yakimabranding/introduction-meeting" style="min-width:320px;height:630px;"></div>
+             <script src="https://assets.calendly.com/assets/external/widget.js" async></script> -->
+        <a href="https://calendly.com/yakimabranding" target="_blank" class="btn btn-grad" style="width:100%;justify-content:center;margin-top:20px;padding:15px">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
+          Schedule on Calendly
+        </a>
+        <p style="text-align:center;font-size:11.5px;color:var(--fg3);margin-top:10px">Replace the button above with a Calendly inline embed when your link is ready.</p>
+      </div>
+
+      <!-- Contact form -->
+      <div style="background:#fff;border-radius:var(--r-xl);padding:36px;box-shadow:var(--sh-md);border:1px solid var(--line)">
+        <h3 style="font-size:22px;margin:0 0 24px;color:var(--ink)">Send Us a Message</h3>
+        <div style="display:grid;gap:16px">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+            <div class="form-field"><label>Name *</label><input type="text" placeholder="Your name"></div>
+            <div class="form-field"><label>Email *</label><input type="email" placeholder="your@email.com"></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+            <div class="form-field"><label>Company / URL *</label><input type="text" placeholder="yourcompany.com"></div>
+            <div class="form-field"><label>Phone *</label><input type="tel" placeholder="(509) 555-0100"></div>
+          </div>
+          <div class="form-field">
+            <label>What are you interested in?</label>
+            <select>
+              <option value="">Select a service...</option>
+              <option>Search Engine Optimization / AI Optimization</option>
+              <option>Google Ads / Geofencing</option>
+              <option>Social Media Management + Ads</option>
+              <option>Website Development / Assistance</option>
+              <option>Branding &amp; Logo Design</option>
+              <option>Press Releases</option>
+              <option>Content Creation &amp; Blogging</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-field"><label>Message</label><textarea placeholder="Tell us about your business and goals..."></textarea></div>
+          <div style="border:1px solid var(--line-strong);border-radius:var(--r-md);padding:14px 16px;display:flex;align-items:center;justify-content:space-between">
+            <div style="display:flex;align-items:center;gap:10px"><div style="width:22px;height:22px;border:2px solid var(--line-strong);border-radius:4px;flex:none"></div><span style="font-size:14px;color:var(--fg2)">I'm not a robot</span></div>
+            <div style="text-align:right;font-size:10px;color:var(--fg3)">reCAPTCHA<br><span>Privacy · Terms</span></div>
+          </div>
+          <button class="btn btn-grad" style="width:100%;justify-content:center;padding:15px;font-size:15px">
+            Send Message
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+          <p style="font-size:12.5px;color:var(--fg3);text-align:center">We respond within 4 business hours. Your information is never shared.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- LOCATIONS BAND -->
+<div style="background:var(--grad-navy);position:relative;overflow:hidden;padding:72px 0">
+  <div style="position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.6;pointer-events:none"></div>
+  <div class="container" style="position:relative">
+    <div style="text-align:center;margin-bottom:44px">
+      <span class="eyebrow" style="color:var(--yb-cyan)">Where We Work</span>
+      <h2 style="color:#fff;margin:14px 0 0;font-size:clamp(1.8rem,2.4vw,2.2rem)">Serving Businesses Across the West</h2>
+    </div>
+    <div style="overflow:hidden">
+      <div class="locations-track">
+        <div class="locations-set">
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Yakima, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Tri-Cities, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Ellensburg, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Spokane, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Seattle, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Scottsdale, AZ</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>San Jose, CA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Portland, OR</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Wenatchee, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Walla Walla, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Tacoma, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Boise, ID</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Eugene, OR</span>
+        </div>
+        <div class="locations-set" aria-hidden="true">
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Yakima, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Tri-Cities, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Ellensburg, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Spokane, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Seattle, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Scottsdale, AZ</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>San Jose, CA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Portland, OR</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Wenatchee, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Walla Walla, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Tacoma, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Boise, ID</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Eugene, OR</span>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px">
+      <a href="tel:5099019735" class="btn btn-ghost-white btn-lg">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (509) 901-9735 — Washington
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-mesh"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:11px;margin-bottom:14px">
+          <img src="assets/yb-logo-white.png" alt="YB" style="width:44px;height:44px;filter:drop-shadow(0 0 3px rgba(255,255,255,.4))">
+          <span style="font-family:var(--font-display);font-weight:800;font-size:22px;color:#fff">YB <span style="color:var(--yb-cyan)">Marketing</span></span>
+        </div>
+        <p>Award-winning digital marketing agency helping businesses grow through strategic branding, SEO, and comprehensive digital solutions.</p>
+        <div style="display:grid;gap:9px;margin:16px 0">
+          <a href="tel:5099019735" style="color:var(--fg2-on-dark);font-size:14px;display:flex;align-items:center;gap:9px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(509) 901-9735</a>
+          <a href="mailto:info@yakimabranding.com" style="color:var(--fg2-on-dark);font-size:14px;display:flex;align-items:center;gap:9px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@yakimabranding.com</a>
+        </div>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/yakimabranding" class="social-btn" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/yb.marketing_/" class="social-btn" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="17" height="17"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a>
+          <a href="https://www.linkedin.com/company/18939370" class="social-btn" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="Homepage.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="Homepage.html#services">Services</a></li>
+          <li><a href="Homepage.html#blog">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services/web-design.html">Web Design</a></li>
+          <li><a href="services/seo.html">SEO Optimization</a></li>
+          <li><a href="services/google-ads.html">Google Ads</a></li>
+          <li><a href="services/social-media.html">Social Media</a></li>
+          <li><a href="services/press-releases.html">Press Releases</a></li>
+          <li><a href="services/content-creation.html">Content Marketing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Reach</h4>
+        <p style="color:var(--fg2-on-dark);font-size:14px;line-height:1.7;margin-bottom:14px">Yakima Branding is centered in Central Washington, with deep roots in the Yakima community. From our home base in Yakima, we proudly serve businesses across the entire Pacific Northwest with strategic marketing, website design, SEO, advertising, and branding support.</p>
+        <div style="display:flex;align-items:center;gap:7px;font-size:13px;color:var(--yb-cyan);font-weight:600"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Yakima, WA &nbsp;·&nbsp; Pacific Northwest</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 YB Marketing. All rights reserved.</span>
+      <div style="display:flex;gap:18px"><a href="#">Privacy Policy</a><a href="#">Sitemap</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const hdr = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  hdr.classList.toggle('solid', window.scrollY > 20);
+  hdr.classList.toggle('top', window.scrollY <= 20);
+});
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+</script>
+</body>
+</html>

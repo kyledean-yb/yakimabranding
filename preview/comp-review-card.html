@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0}
+  body{font-family:var(--font-body);background:var(--bg-soft);padding:24px 30px;display:flex;gap:16px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:22px;box-shadow:var(--sh-sm);width:330px}
+  .stars{display:flex;gap:2px;color:var(--yb-amber);margin-bottom:11px}
+  .stars svg{width:17px;height:17px;fill:var(--yb-amber)}
+  .quote{font-size:15px;color:var(--ink);font-weight:600;line-height:1.5;margin:0 0 16px}
+  .who{display:flex;align-items:center;gap:11px}
+  .av{width:40px;height:40px;border-radius:50%;background:var(--grad-violet);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display)}
+  .nm{font-weight:700;font-size:14px;color:var(--ink)}
+  .role{font-size:12px;color:var(--fg3)}
+  .badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;color:var(--yb-blue);margin-top:13px}
+  .badge svg{width:13px;height:13px}
+</style></head>
+<body>
+  <div class="card">
+    <div class="stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+    <p class="quote">"The deliverables exceeded our expectations."</p>
+    <div class="who"><div class="av">KM</div><div><div class="nm">Kate McKenna</div><div class="role">Executive Director · Denver, CO</div></div></div>
+    <div class="badge"><i data-lucide="badge-check"></i> Verified by Clutch</div>
+  </div>
+  <script src="https://unpkg.com/lucide@latest"></script><script>lucide.createIcons();</script>
+</body></html>

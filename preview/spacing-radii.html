@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0}
+  body{font-family:var(--font-body);background:var(--bg);padding:24px 30px}
+  .grid{display:flex;gap:14px;align-items:flex-end}
+  .item{text-align:center}
+  .box{background:var(--wash-blue);border:1px solid var(--line)}
+  .b1{width:48px;height:48px;border-radius:var(--r-xs)}
+  .b2{width:62px;height:62px;border-radius:var(--r-sm)}
+  .b3{width:78px;height:78px;border-radius:var(--r-md)}
+  .b4{width:94px;height:94px;border-radius:var(--r-lg)}
+  .b5{width:110px;height:110px;border-radius:var(--r-xl)}
+  .pill{width:96px;height:46px;border-radius:var(--r-pill)}
+  .cap{font-size:11px;color:var(--fg3);margin-top:7px;font-weight:600}
+  .box{background:var(--yb-blue-100);border-color:var(--yb-blue-300)}
+</style></head>
+<body>
+  <div class="grid">
+    <div class="item"><div class="box b1"></div><div class="cap">xs · 6</div></div>
+    <div class="item"><div class="box b2"></div><div class="cap">sm · 10</div></div>
+    <div class="item"><div class="box b3"></div><div class="cap">md · 16</div></div>
+    <div class="item"><div class="box b4"></div><div class="cap">lg · 22</div></div>
+    <div class="item"><div class="box b5"></div><div class="cap">xl · 32</div></div>
+    <div class="item"><div class="box pill"></div><div class="cap">pill</div></div>
+  </div>
+</body></html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0}
+  body{font-family:var(--font-body);background:var(--bg);padding:24px 30px}
+  .grid{display:flex;gap:14px;flex-wrap:wrap}
+  .chip{width:54px;height:54px;border-radius:var(--r-md);display:flex;align-items:center;justify-content:center}
+  .chip svg{width:25px;height:25px;stroke-width:1.9}
+  .cap{font-size:11px;color:var(--fg3);font-weight:700;text-align:center;margin-top:6px}
+  .item{text-align:center}
+</style></head>
+<body>
+  <div class="grid">
+    <div class="item"><div class="chip" style="background:var(--wash-violet);color:var(--yb-violet)"><i data-lucide="palette"></i></div><div class="cap">Brand</div></div>
+    <div class="item"><div class="chip" style="background:var(--wash-cyan);color:var(--yb-cyan)"><i data-lucide="search"></i></div><div class="cap">SEO</div></div>
+    <div class="item"><div class="chip" style="background:var(--wash-coral);color:var(--yb-coral)"><i data-lucide="target"></i></div><div class="cap">Ads</div></div>
+    <div class="item"><div class="chip" style="background:var(--wash-amber);color:#c77f12"><i data-lucide="share-2"></i></div><div class="cap">Social</div></div>
+    <div class="item"><div class="chip" style="background:var(--wash-mint);color:#159468"><i data-lucide="layout"></i></div><div class="cap">Web</div></div>
+    <div class="item"><div class="chip" style="background:var(--wash-pink);color:var(--yb-pink)"><i data-lucide="pen-line"></i></div><div class="cap">Content</div></div>
+    <div class="item"><div class="chip" style="background:var(--grad-brand);color:#fff"><i data-lucide="sparkles"></i></div><div class="cap">Gradient</div></div>
+  </div>
+  <script src="https://unpkg.com/lucide@latest"></script><script>lucide.createIcons();</script>
+</body></html>

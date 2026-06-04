@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Us — YB Marketing</title>
+<link rel="stylesheet" href="colors_and_type.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--fg1);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--yb-blue);color:#fff}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.container{width:100%;max-width:var(--container);margin:0 auto;padding:0 28px}
+section{padding:88px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--yb-blue)}
+.eyebrow::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:currentColor;flex:none}
+.banner{background:var(--grad-navy);color:#fff;text-align:center;font-size:13px;font-weight:600;padding:8px 20px;position:relative;z-index:60}
+.banner a{color:var(--yb-cyan);text-decoration:underline}
+.header{position:sticky;top:0;z-index:50;transition:all 240ms cubic-bezier(.4,0,.2,1)}
+.header.solid{background:rgba(255,255,255,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.header.top{background:rgba(255,255,255,.6);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:11px}
+.logo img{width:44px;height:44px}
+.logo-text{font-family:var(--font-display);font-weight:800;font-size:22px;letter-spacing:-.02em;color:var(--ink)}
+.logo-text span{color:var(--yb-blue)}
+.nav{display:flex;align-items:center;gap:2px}
+.nav>a{font-weight:600;font-size:15px;color:var(--fg1);padding:8px 14px;border-radius:var(--r-sm);transition:all 240ms;display:inline-block}
+.nav>a:hover{background:var(--bg-soft);color:var(--yb-blue)}
+.nav-services{position:relative}
+.nav-svc-btn{display:flex;align-items:center;gap:5px;font-weight:600;font-size:15px;color:var(--fg1);padding:8px 14px;border-radius:var(--r-sm);transition:all 240ms;background:none;border:none;cursor:pointer;font-family:var(--font-body)}
+.nav-svc-btn:hover,.nav-services:hover .nav-svc-btn{background:var(--bg-soft);color:var(--yb-blue)}
+.nav-chevron{transition:transform 240ms cubic-bezier(.4,0,.2,1);flex:none}
+.nav-services:hover .nav-chevron{transform:rotate(180deg)}
+.nav-dd{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(-10px) scale(.97);opacity:0;pointer-events:none;transition:opacity 200ms ease 150ms,transform 220ms cubic-bezier(.16,1,.3,1) 150ms;width:660px;background:#fff;border-radius:var(--r-xl);box-shadow:0 24px 64px -16px rgba(22,32,58,.22),0 0 0 1px rgba(22,32,58,.07);padding:16px;z-index:200}
+.nav-services:hover .nav-dd{opacity:1;transform:translateX(-50%) translateY(0) scale(1);pointer-events:all;transition:opacity 150ms ease,transform 180ms cubic-bezier(.16,1,.3,1)}
+.nav-dd-arrow{position:absolute;top:-5px;left:50%;transform:translateX(-50%) rotate(45deg);width:10px;height:10px;background:#fff;border-top:1px solid rgba(22,32,58,.08);border-left:1px solid rgba(22,32,58,.08)}
+.nav-dd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.dd-card{display:flex;align-items:flex-start;gap:11px;padding:12px;border-radius:var(--r-md);transition:background 150ms ease}
+.dd-card:hover{background:var(--bg-soft)}
+.dd-ic{width:36px;height:36px;border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;flex:none}
+.dd-ic svg{width:18px;height:18px}
+.dd-name{font-weight:700;font-size:13px;color:var(--ink);margin-bottom:2px;display:block}
+.dd-desc{font-size:11.5px;color:var(--fg3);line-height:1.4}
+.btn{display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;font-family:var(--font-body);font-weight:700;font-size:15px;border-radius:var(--r-md);padding:13px 22px;transition:all 240ms;white-space:nowrap;line-height:1}
+.btn-grad{background:var(--grad-brand);color:#fff;box-shadow:0 14px 30px -10px rgba(63,111,214,.45)}
+.btn-grad:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.btn-ghost-white{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.28)}
+.btn-ghost-white:hover{background:rgba(255,255,255,.22);transform:translateY(-2px)}
+.btn-lg{padding:16px 28px;font-size:16px}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px;align-items:center;justify-content:center}
+.mobile-menu{display:none;border-top:1px solid var(--line);background:#fff;padding:12px 28px 20px}
+.mobile-menu a{display:block;padding:14px 0;border-bottom:1px solid var(--line);font-weight:600;font-size:17px;color:var(--ink)}
+.mobile-svc-list{display:none;padding:4px 0 4px 16px}
+.mobile-svc-list.open{display:block}
+.mobile-svc-list a{font-size:15px;padding:10px 0;color:var(--fg2)}
+/* Hero */
+.about-hero{position:relative;overflow:hidden;background:var(--grad-navy);padding:88px 0 110px}
+.about-hero-mesh{position:absolute;inset:0;background-image:var(--grad-mesh);pointer-events:none}
+/* Stats */
+.stats-band{background:transparent;padding:56px 0;position:relative;overflow:hidden}
+.stats-mesh{position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.7}
+.stats-grid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.stat-num{font-family:var(--font-display);font-weight:800;font-size:clamp(2.2rem,4vw,3.2rem);line-height:1;background:var(--grad-brand);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat-label{font-size:13px;font-weight:600;color:var(--fg2-on-dark);margin-top:10px;letter-spacing:.03em}
+/* Team */
+.team-card{background:#fff;border-radius:var(--r-xl);padding:32px 24px;text-align:center;box-shadow:var(--sh-sm);border:1px solid var(--line);transition:all 240ms cubic-bezier(.16,1,.3,1);position:relative;overflow:hidden}
+.team-card:hover{transform:translateY(-6px);box-shadow:var(--sh-md)}
+.team-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad-brand)}
+.team-photo{width:120px;height:120px;border-radius:50%;overflow:hidden;margin:0 auto 18px;border:3px solid var(--line);box-shadow:var(--sh-md)}
+.team-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:grayscale(1)}
+.team-card:hover .team-photo img{filter:grayscale(0)}
+.team-name{font-family:var(--font-display);font-weight:800;font-size:18px;color:var(--ink);margin-bottom:4px;letter-spacing:-.01em}
+.team-title{font-size:12px;font-weight:700;color:var(--yb-blue);letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}
+.team-bio{font-size:14px;color:var(--fg2);line-height:1.65;margin-bottom:18px}
+.team-links{display:flex;gap:10px;justify-content:center}
+.team-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--yb-blue);padding:7px 14px;border-radius:var(--r-pill);background:var(--bg-soft);transition:background 200ms}
+.team-link:hover{background:var(--wash-blue)}
+.team-link svg{width:14px;height:14px}
+/* Values */
+.value-card{display:flex;gap:16px;align-items:flex-start;padding:24px;background:#fff;border-radius:var(--r-lg);border:1px solid var(--line);box-shadow:var(--sh-sm)}
+.value-ic{width:48px;height:48px;border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;flex:none}
+.value-ic svg{width:22px;height:22px}
+/* Wave */
+.wave-div{position:relative;overflow:hidden;line-height:0;font-size:0}
+.wave-div svg{display:block;width:100%;height:70px}
+/* Modal */
+.modal-overlay{position:fixed;inset:0;z-index:100;background:rgba(22,32,58,.6);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+/* Footer */
+.footer{background:var(--grad-navy);color:#fff;position:relative;overflow:hidden;padding:64px 0 28px}
+.footer-mesh{position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.5;pointer-events:none}
+.footer-grid{position:relative;display:grid;grid-template-columns:1.7fr 1fr 1fr 1.4fr;gap:40px;margin-bottom:42px}
+.footer-brand p{color:var(--fg2-on-dark);font-size:14px;max-width:280px;margin:14px 0 18px}
+.footer-col h4{font-family:var(--font-display);font-size:14px;font-weight:700;margin-bottom:14px;letter-spacing:.04em;color:#fff}
+.footer-col ul{list-style:none;display:grid;gap:10px}
+.footer-col a{color:var(--fg2-on-dark);font-size:14px;transition:color 240ms}
+.footer-col a:hover{color:#fff}
+.footer-bottom{position:relative;border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--fg2-on-dark);font-size:13px}
+.logo-text-ft{font-family:var(--font-display);font-weight:800;font-size:20px;letter-spacing:-.02em;color:#fff;display:inline-block;margin-bottom:10px}
+.logo-text-ft span{color:var(--yb-cyan)}
+.footer-socials{display:flex;gap:10px;margin-top:12px}
+.social-btn{width:38px;height:38px;border-radius:var(--r-sm);background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:#fff;transition:background 240ms}
+.social-btn:hover{background:var(--yb-blue)}
+.social-btn svg{width:17px;height:17px}
+@media(max-width:960px){.stats-grid{grid-template-columns:1fr 1fr;gap:32px}}
+@media(max-width:900px){.nav-dd{display:none}}
+@media(max-width:780px){.why-2col{grid-template-columns:1fr !important}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){section{padding:60px 0}.footer-grid{grid-template-columns:1fr}.nav,.btn-hdr{display:none}.hamburger{display:flex}.mobile-menu.open{display:block}}
+/* Locations scroller */
+.locations-track{display:flex;width:max-content;animation:loc-scroll 35s linear infinite;gap:0}
+.locations-track:hover{animation-play-state:paused}
+.locations-set{display:flex;gap:12px;padding-right:12px}
+.loc-chip{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.85);font-size:13px;font-weight:600;letter-spacing:.01em;padding:8px 16px;border-radius:var(--r-pill);white-space:nowrap;cursor:default}
+.loc-chip svg{opacity:.6;flex:none}
+@keyframes loc-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.locations-track{animation:none}}
+</style>
+</head>
+<body>
+
+<!-- BANNER -->
+
+
+<!-- HEADER -->
+<div class="header top" id="header">
+  <div class="container header-inner">
+    <a class="logo" href="Homepage.html">
+      <img src="assets/yb-logo-color.png" alt="YB Marketing logo">
+      <span class="logo-text">YB <span>Marketing</span></span>
+    </a>
+    <nav class="nav">
+      <a href="Homepage.html">Home</a>
+      <a href="about.html" style="color:var(--yb-blue)">About</a>
+      <div class="nav-services" id="navServices">
+        <button class="nav-svc-btn">Services
+          <svg class="nav-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dd">
+          <div class="nav-dd-arrow"></div>
+          <div class="nav-dd-grid">
+            <a href="services/web-design.html" class="dd-card"><div class="dd-ic" style="background:var(--wash-mint);color:#159468"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div><div><span class="dd-name">Web Design</span><span class="dd-desc">WordPress, Wix &amp; custom sites</span></div></a>
+            <a href="services/social-media.html" class="dd-card"><div class="dd-ic" style="background:var(--wash-amber);color:#c77f12"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div><div><span class="dd-name">Social Media</span><span class="dd-desc">Grow your following &amp; engagement</span></div></a>
+            <a href="services/google-ads.html" class="dd-card"><div class="dd-ic" style="background:var(--wash-coral);color:var(--yb-coral)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></div><div><span class="dd-name">Google Ads</span><span class="dd-desc">PPC campaigns that convert</span></div></a>
+            <a href="services/seo.html" class="dd-card"><div class="dd-ic" style="background:var(--wash-cyan);color:var(--yb-cyan)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><div><span class="dd-name">SEO</span><span class="dd-desc">Rank higher on Google &amp; AI</span></div></a>
+            <a href="services/press-releases.html" class="dd-card"><div class="dd-ic" style="background:var(--wash-pink);color:var(--yb-pink)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/><path d="M16 2v4a2 2 0 0 1-2 2H6"/></svg></div><div><span class="dd-name">Press Releases</span><span class="dd-desc">Get your story published</span></div></a>
+            <a href="services/content-creation.html" class="dd-card"><div class="dd-ic" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div><span class="dd-name">Content &amp; Blogging</span><span class="dd-desc">Compelling copy that converts</span></div></a>
+          </div>
+        </div>
+      </div>
+      <a href="Homepage.html#blog">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="btn-hdr" style="display:flex;align-items:center;gap:8px">
+      <a href="tel:5099019735" class="btn" style="background:#fff;color:var(--yb-blue);border:1.5px solid var(--line-strong);gap:7px;padding:11px 16px;font-size:14px">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        509-901-9735
+      </a>
+      <button class="btn btn-grad" onclick="document.getElementById('ctaModal').classList.add('open')">Get Started</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="Homepage.html">Home</a>
+    <a href="about.html" style="color:var(--yb-blue)">About</a>
+    <a href="#" onclick="document.getElementById('mobileSvcList').classList.toggle('open');return false">Services ▾</a>
+    <div class="mobile-svc-list" id="mobileSvcList">
+      <a href="services/web-design.html">Web Design</a>
+      <a href="services/social-media.html">Social Media</a>
+      <a href="services/google-ads.html">Google Ads</a>
+      <a href="services/seo.html">SEO</a>
+      <a href="services/press-releases.html">Press Releases</a>
+      <a href="services/content-creation.html">Content &amp; Blogging</a>
+    </div>
+    <a href="contact.html">Contact</a>
+    <a href="tel:5099019735" class="btn btn-grad" style="width:100%;justify-content:center;margin-top:16px;display:flex">Call 509-901-9735</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="about-hero" id="top">
+  <div class="about-hero-mesh"></div>
+  <div class="container" style="position:relative">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center">
+      <div>
+        <span class="eyebrow" style="color:var(--yb-cyan)">Our Story</span>
+        <h1 style="font-family:var(--font-display);font-weight:800;font-size:clamp(2.4rem,4vw,3.8rem);color:#fff;line-height:1.06;margin:18px 0 22px">More Than a Marketing Agency —<br><span style="background:var(--grad-brand);-webkit-background-clip:text;background-clip:text;color:transparent">Your Dedicated Partner.</span></h1>
+        <p style="color:var(--fg2-on-dark);font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.65;max-width:500px;margin-bottom:32px">Rooted in Washington State. Trusted across the West Coast and beyond. We combine creativity with strategy to elevate your brand and drive measurable results.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <button class="btn btn-grad btn-lg" onclick="document.getElementById('ctaModal').classList.add('open')">Work With Us
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+          <a href="tel:5099019735" class="btn btn-ghost-white btn-lg">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            509-901-9735
+          </a>
+        </div>
+      </div>
+      <div style="position:relative">
+        <div style="border-radius:var(--r-xl);overflow:hidden;box-shadow:0 32px 80px -20px rgba(0,0,0,.5);aspect-ratio:4/3.8">
+          <img src="assets/team-photo.webp" alt="The YB Marketing team" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:48px;overflow:hidden">
+      <p style="color:rgba(255,255,255,.45);font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin:0 0 12px;text-align:center">Proudly Serving the Pacific Northwest</p>
+      <div class="locations-track">
+        <div class="locations-set">
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Yakima, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Ellensburg, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Tri-Cities, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Spokane, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Seattle, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Portland, OR</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Wenatchee, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Walla Walla, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Tacoma, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Olympia, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Bellingham, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Eugene, OR</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Boise, ID</span>
+        </div>
+        <div class="locations-set" aria-hidden="true">
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Yakima, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Ellensburg, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Tri-Cities, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Spokane, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Seattle, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Portland, OR</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Wenatchee, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Walla Walla, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Tacoma, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Olympia, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Bellingham, WA</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Eugene, OR</span>
+          <span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Boise, ID</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:0;left:0;right:0;line-height:0;font-size:0;pointer-events:none"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:60px"><path d="M0,0 C360,60 1080,60 1440,0 L1440,60 L0,60 Z" fill="#ffffff"/></svg></div>
+</section>
+
+<!-- WHO WE ARE -->
+<section style="padding:88px 0;background:#fff" id="about">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start" class="why-2col">
+      <div>
+        <span class="eyebrow">Who We Are</span>
+        <h2 style="margin:14px 0 22px;font-size:clamp(1.8rem,2.6vw,2.4rem)">22 Years of Expertise, Rooted in the Pacific Northwest</h2>
+        <p style="color:var(--fg2);font-size:15.5px;line-height:1.75;margin-bottom:16px">At Yakima Branding (aka YB Marketing), we are more than a marketing agency — we are your dedicated partner in business growth and brand success. Our team of marketing professionals combines creativity with strategy to deliver solutions that elevate your brand, strengthen your message, and drive measurable results.</p>
+        <p style="color:var(--fg2);font-size:15.5px;line-height:1.75;margin-bottom:16px">Our founder, <strong style="color:var(--ink)">Kevin Dean</strong>, started WSI Net Advantage in 2003, specializing as an early expert in SEO and online advertising. In 2020, Kevin acquired Yakima Branding to expand our client base and extend services across the West Coast and beyond.</p>
+        <p style="color:var(--fg2);font-size:15.5px;line-height:1.75;margin-bottom:28px">Since then, we've continued to grow as trusted partners for businesses seeking clarity in branding and excellence in marketing execution. With more than 20 years of experience, we've helped hundreds of businesses sharpen their brand identity and messaging, ensuring they stand out in competitive markets.</p>
+        <div style="background:var(--bg-soft);border-radius:var(--r-lg);padding:24px;border-left:4px solid var(--yb-blue)">
+          <p style="font-size:15px;color:var(--fg2);line-height:1.7;margin-bottom:0">What truly sets us apart is our commitment to <strong style="color:var(--ink)">exceptional customer service</strong>. We respond quickly — <em style="color:var(--yb-blue);font-style:normal;font-weight:700">within four business hours</em> — and provide thoughtful answers, clear insights, and actionable strategies. We believe an educated client is a successful client.</p>
+        </div>
+      </div>
+      <div>
+        <div style="background:var(--bg-soft);border-radius:var(--r-xl);padding:36px">
+          <h3 style="font-size:20px;margin-bottom:24px;color:var(--ink)">What We Do</h3>
+          <div style="display:grid;gap:14px">
+            <div class="value-card">
+              <div class="value-ic" style="background:var(--wash-cyan);color:var(--yb-cyan)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+              <div><strong style="display:block;font-size:15px;color:var(--ink);margin-bottom:4px">Organic &amp; AI-Powered SEO</strong><span style="font-size:14px;color:var(--fg2)">Increase visibility and long-term search performance using state-of-the-art strategies and best practices.</span></div>
+            </div>
+            <div class="value-card">
+              <div class="value-ic" style="background:var(--wash-coral);color:var(--yb-coral)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></div>
+              <div><strong style="display:block;font-size:15px;color:var(--ink);margin-bottom:4px">Google Ads Management</strong><span style="font-size:14px;color:var(--fg2)">Maximize ROI and capture the right audience at the right time, converting traffic into leads.</span></div>
+            </div>
+            <div class="value-card">
+              <div class="value-ic" style="background:var(--wash-amber);color:#c77f12"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div>
+              <div><strong style="display:block;font-size:15px;color:var(--ink);margin-bottom:4px">Social Media Management</strong><span style="font-size:14px;color:var(--fg2)">Build engagement, trust, and measurable results across Facebook, Instagram, and LinkedIn.</span></div>
+            </div>
+            <div class="value-card">
+              <div class="value-ic" style="background:var(--wash-mint);color:#159468"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div>
+              <div><strong style="display:block;font-size:15px;color:var(--ink);margin-bottom:4px">Custom Website Development</strong><span style="font-size:14px;color:var(--fg2)">Blends design, function, and storytelling for a seamless digital presence that converts.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="wave-div" style="background:#fff"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,50 C480,70 960,10 1440,30 L1440,70 L0,70 Z" fill="#1B2A4A"/></svg></div>
+<div style="background:#1B2A4A">
+  <div class="stats-band">
+    <div class="stats-mesh"></div>
+    <div class="container stats-grid">
+      <div><div class="stat-num">22</div><div class="stat-label">Years in Business</div></div>
+      <div><div class="stat-num">40+</div><div class="stat-label">Industries Served</div></div>
+      <div><div class="stat-num">250+</div><div class="stat-label">Active Clients</div></div>
+      <div><div class="stat-num">60+</div><div class="stat-label">Years of Cumulative Experience</div></div>
+    </div>
+  </div>
+</div>
+<div class="wave-div" style="background:#1B2A4A"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,0 C360,70 1080,70 1440,0 L1440,70 L0,70 Z" fill="#F6F8FC"/></svg></div>
+
+<!-- TEAM -->
+<section style="padding:88px 0;background:var(--bg-soft)" id="team">
+  <div class="container">
+    <div style="text-align:center;max-width:640px;margin:0 auto 56px">
+      <span class="eyebrow">The Team</span>
+      <h2 style="margin:14px 0 14px">Meet the People Behind the Brand</h2>
+      <p class="yb-lead">A dedicated team of marketing professionals committed to growing your business with creativity, strategy, and exceptional service.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+
+      <!-- Kevin Dean -->
+      <div class="team-card">
+        <div class="team-photo"><img src="assets/kevin-headshot.webp" alt="Kevin Dean"></div>
+        <div class="team-name">Kevin Dean</div>
+        <div class="team-title">Owner / President</div>
+        <p class="team-bio">Kevin has more than 20 years of digital marketing experience. Our owner and technical leader for SEO and Advertising, he finds the best marketing solutions for your business needs.</p>
+        <div class="team-links">
+          <a href="tel:5099019735" class="team-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call</a>
+          <a href="mailto:kevin@yakimabranding.com" class="team-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a>
+        </div>
+      </div>
+
+      <!-- Jacob Ross -->
+      <div class="team-card">
+        <div class="team-photo"><img src="assets/jacob-headshot.webp" alt="Jacob Ross"></div>
+        <div class="team-name">Jacob Ross</div>
+        <div class="team-title">Sales / Account Manager</div>
+        <p class="team-bio">Jacob has over 4 years of sales experience. He excels in customer satisfaction and is pleased to collaborate with any client. Jacob has evident care for his work production.</p>
+        <div class="team-links">
+          <a href="tel:5099019735" class="team-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call</a>
+          <a href="mailto:jacob@yakimabranding.com" class="team-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a>
+        </div>
+      </div>
+
+      <!-- Kristin Sparling -->
+      <div class="team-card">
+        <div class="team-photo"><img src="assets/kristin-headshot.webp" alt="Kristin Sparling"></div>
+        <div class="team-name">Kristin Sparling</div>
+        <div class="team-title">Sales / Account Manager</div>
+        <p class="team-bio">Kristin is a successful account manager with over 7 years of experience working in sales. She is a reliable and ethical professional who takes pride in helping businesses grow.</p>
+        <div class="team-links">
+          <a href="tel:5099019735" class="team-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call</a>
+          <a href="mailto:kristin@yakimabranding.com" class="team-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a>
+        </div>
+      </div>
+
+      <!-- Sophie Mann -->
+      <div class="team-card">
+        <div class="team-photo"><img src="assets/sophie-headshot.webp" alt="Sophie Mann"></div>
+        <div class="team-name">Sophie Mann</div>
+        <div class="team-title">Account Executive</div>
+        <p class="team-bio">With a background in content management, strategic direction and agency life in general, Sophie knows how to turn ideas into effective communication.</p>
+        <div class="team-links">
+          <a href="tel:5099019735" class="team-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call</a>
+          <a href="mailto:sophie@yakimabranding.com" class="team-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a>
+        </div>
+      </div>
+
+      <!-- Kyle Dean -->
+      <div class="team-card">
+        <div class="team-photo"><img src="assets/kyle-headshot.webp" alt="Kyle Dean"></div>
+        <div class="team-name">Kyle Dean</div>
+        <div class="team-title">Marketing Project Manager</div>
+        <p class="team-bio">Project coordination and support services all wrapped into one — Kyle handles many of our web development projects and social media services within our team.</p>
+        <div class="team-links">
+          <a href="tel:5099019735" class="team-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call</a>
+          <a href="mailto:kyle@yakimabranding.com" class="team-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a>
+        </div>
+      </div>
+
+      <!-- Kayelyn Aggett -->
+      <div class="team-card">
+        <div class="team-photo"><img src="assets/kayelyn-headshot.webp" alt="Kayelyn Aggett"></div>
+        <div class="team-name">Kayelyn Aggett</div>
+        <div class="team-title">Social Media Manager</div>
+        <p class="team-bio">Kayelyn brings valuable expertise to the table with over 5 years of experience in the fields of social media management and digital marketing.</p>
+        <div class="team-links">
+          <a href="tel:5099019735" class="team-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call</a>
+          <a href="mailto:kayelyn@yakimabranding.com" class="team-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a>
+        </div>
+      </div>
+
+      <!-- Kirsten Gonzalez - spans col 1-2 of last row centered -->
+      <div class="team-card" style="grid-column:2">
+        <div class="team-photo"><img src="assets/kirsten-headshot.webp" alt="Kirsten Gonzalez"></div>
+        <div class="team-name">Kirsten Gonzalez</div>
+        <div class="team-title">Marketing Administrator</div>
+        <p class="team-bio">Kirsten Gonzalez is a versatile marketing professional with 3+ years of experience, specializing in brand reputation and social media while supporting clients across numerous industries with strategic, creative, and solutions-focused execution.</p>
+        <div class="team-links">
+          <a href="mailto:kirsten@yakimabranding.com" class="team-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<div class="wave-div" style="background:var(--bg-soft)"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,50 C480,70 960,10 1440,30 L1440,70 L0,70 Z" fill="#1B2A4A"/></svg></div>
+<div style="background:var(--grad-navy);position:relative;overflow:hidden;padding:88px 0">
+  <div style="position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.6;pointer-events:none"></div>
+  <div class="container" style="position:relative">
+    <div style="text-align:center;max-width:640px;margin:0 auto 52px">
+      <span class="eyebrow" style="color:var(--yb-cyan)">Our Promise</span>
+      <h2 style="margin:14px 0 14px;color:#fff">What Sets Us Apart</h2>
+      <p style="color:var(--fg2-on-dark);font-size:16px;line-height:1.65">While others may offer similar services, our clients stay with us because we deliver not only great results — but also a trusted partnership.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
+      <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-xl);padding:32px">
+        <div style="width:52px;height:52px;background:var(--grad-brand);border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3 style="color:#fff;font-size:19px;margin-bottom:10px">4-Hour Response Promise</h3>
+        <p style="color:var(--fg2-on-dark);font-size:14.5px;line-height:1.65">We respond to every client inquiry within four business hours — because your time and questions matter. No runaround, no waiting days for answers.</p>
+      </div>
+      <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-xl);padding:32px">
+        <div style="width:52px;height:52px;background:var(--grad-brand);border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3 style="color:#fff;font-size:19px;margin-bottom:10px">A Dedicated Team</h3>
+        <p style="color:var(--fg2-on-dark);font-size:14.5px;line-height:1.65">You don't just get an agency — you get a dedicated team of specialists who know your business and care about your outcomes as much as you do.</p>
+      </div>
+      <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-xl);padding:32px">
+        <div style="width:52px;height:52px;background:var(--grad-brand);border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;margin-bottom:18px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+        <h3 style="color:#fff;font-size:19px;margin-bottom:10px">Measurable Results</h3>
+        <p style="color:var(--fg2-on-dark);font-size:14.5px;line-height:1.65">Every strategy we build is tied to real business outcomes. We track, report, and optimize — so you always know exactly what your marketing investment is doing.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="wave-div" style="background:#1B2A4A"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,0 C360,70 1080,70 1440,0 L1440,70 L0,70 Z" fill="#F6F8FC"/></svg></div>
+<section style="padding:80px 0;background:var(--bg-soft)">
+  <div class="container" style="text-align:center;max-width:660px;margin:0 auto">
+    <span class="eyebrow">Let's Connect</span>
+    <h2 style="margin:14px 0 16px">Ready to Work With a Team That Cares?</h2>
+    <p class="yb-lead" style="margin-bottom:32px">If you're seeking a marketing partner who can clarify your message, elevate your brand, and help you grow with confidence — you've found the right team.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <button class="btn btn-grad btn-lg" onclick="document.getElementById('ctaModal').classList.add('open')">Get Started Today</button>
+      <a href="tel:5099019735" class="btn btn-lg" style="background:#fff;color:var(--yb-blue);border:1.5px solid var(--line-strong)">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        509-901-9735
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-mesh"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:11px;margin-bottom:14px">
+          <img src="assets/yb-logo-white.png" alt="YB" style="width:44px;height:44px;filter:drop-shadow(0 0 3px rgba(255,255,255,.4))">
+          <span style="font-family:var(--font-display);font-weight:800;font-size:22px;color:#fff">YB <span style="color:var(--yb-cyan)">Marketing</span></span>
+        </div>
+        <p>Award-winning digital marketing agency helping businesses grow through strategic branding, SEO, and comprehensive digital solutions.</p>
+        <div style="display:grid;gap:9px;margin:16px 0">
+          <a href="tel:5099019735" style="color:var(--fg2-on-dark);font-size:14px;display:flex;align-items:center;gap:9px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(509) 901-9735</a>
+          <a href="mailto:info@yakimabranding.com" style="color:var(--fg2-on-dark);font-size:14px;display:flex;align-items:center;gap:9px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@yakimabranding.com</a>
+        </div>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/yakimabranding" class="social-btn" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/yb.marketing_/" class="social-btn" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="17" height="17"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a>
+          <a href="https://www.linkedin.com/company/18939370" class="social-btn" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="Homepage.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="Homepage.html#services">Services</a></li>
+          <li><a href="Homepage.html#blog">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services/web-design.html">Web Design</a></li>
+          <li><a href="services/seo.html">SEO Optimization</a></li>
+          <li><a href="services/google-ads.html">Google Ads</a></li>
+          <li><a href="services/social-media.html">Social Media</a></li>
+          <li><a href="services/press-releases.html">Press Releases</a></li>
+          <li><a href="services/content-creation.html">Content Marketing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Reach</h4>
+        <p style="color:var(--fg2-on-dark);font-size:14px;line-height:1.7;margin-bottom:14px">Yakima Branding is centered in Central Washington, with deep roots in the Yakima community. From our home base in Yakima, we proudly serve businesses across the entire Pacific Northwest with strategic marketing, website design, SEO, advertising, and branding support.</p>
+        <div style="display:flex;align-items:center;gap:7px;font-size:13px;color:var(--yb-cyan);font-weight:600"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Yakima, WA &nbsp;·&nbsp; Pacific Northwest</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 YB Marketing. All rights reserved.</span>
+      <div style="display:flex;gap:18px"><a href="#">Privacy Policy</a><a href="#">Sitemap</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="ctaModal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div style="background:#fff;border-radius:var(--r-xl);width:min(460px,100%);box-shadow:0 24px 56px -16px rgba(22,32,58,.22);overflow:hidden;max-height:92vh;overflow-y:auto">
+    <div style="background:var(--grad-navy);padding:26px 28px;position:relative">
+      <div style="position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.7"></div>
+      <div style="position:relative"><div style="font-family:var(--font-display);font-weight:700;font-size:24px;color:#fff">Let's Get Started</div><p style="color:var(--fg2-on-dark);font-size:14px;margin-top:6px">Tell us about your project and we'll be in touch within one business day.</p></div>
+      <button onclick="document.getElementById('ctaModal').classList.remove('open')" style="position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.15);border:none;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div style="padding:24px 28px 30px;display:grid;gap:14px">
+      <div><label style="display:block;font-size:12.5px;font-weight:700;color:var(--fg2);margin-bottom:6px">Full Name</label><input type="text" placeholder="Jane Smith" style="width:100%;font-family:var(--font-body);font-size:15px;padding:12px 14px;border:1.5px solid var(--line-strong);border-radius:var(--r-md);background:#fff;color:var(--ink)"></div>
+      <div><label style="display:block;font-size:12.5px;font-weight:700;color:var(--fg2);margin-bottom:6px">Email</label><input type="email" placeholder="jane@company.com" style="width:100%;font-family:var(--font-body);font-size:15px;padding:12px 14px;border:1.5px solid var(--line-strong);border-radius:var(--r-md);background:#fff;color:var(--ink)"></div>
+      <div><label style="display:block;font-size:12.5px;font-weight:700;color:var(--fg2);margin-bottom:6px">Phone</label><input type="tel" placeholder="(509) 555-0100" style="width:100%;font-family:var(--font-body);font-size:15px;padding:12px 14px;border:1.5px solid var(--line-strong);border-radius:var(--r-md);background:#fff;color:var(--ink)"></div>
+      <div><label style="display:block;font-size:12.5px;font-weight:700;color:var(--fg2);margin-bottom:6px">Message</label><textarea placeholder="Tell us about your project..." style="width:100%;font-family:var(--font-body);font-size:15px;padding:12px 14px;border:1.5px solid var(--line-strong);border-radius:var(--r-md);background:#fff;color:var(--ink);min-height:80px;resize:vertical"></textarea></div>
+      <button class="btn btn-grad" style="width:100%;justify-content:center;padding:15px">Send Message</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const hdr = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  hdr.classList.toggle('solid', window.scrollY > 20);
+  hdr.classList.toggle('top', window.scrollY <= 20);
+});
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+</script>
+</body>
+</html>

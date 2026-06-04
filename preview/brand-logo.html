@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0}
+  body{font-family:var(--font-body);display:flex;gap:0}
+  .panel{flex:1;padding:30px;display:flex;align-items:center;gap:16px}
+  .light{background:#fff}
+  .dark{background:var(--grad-navy)}
+  .lock{display:flex;align-items:center;gap:13px}
+  .lock img{width:56px;height:56px}
+  .wm{font-family:var(--font-display);font-weight:800;font-size:24px;letter-spacing:-.02em;line-height:1}
+  .wm small{display:block;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin-top:3px}
+</style></head>
+<body>
+  <div class="panel light">
+    <div class="lock"><img src="../assets/yb-logo-color.png" alt="YB">
+      <div class="wm" style="color:var(--ink)">YB <span style="color:var(--yb-blue)">Marketing</span><small style="color:var(--fg3)">Yakima Branding</small></div></div>
+  </div>
+  <div class="panel dark">
+    <div class="lock"><img src="../assets/yb-logo-white.png" alt="YB" style="filter:drop-shadow(0 0 1px rgba(255,255,255,.4))">
+      <div class="wm" style="color:#fff">YB <span style="color:var(--yb-cyan)">Marketing</span><small style="color:var(--fg2-on-dark)">Yakima Branding</small></div></div>
+  </div>
+</body></html>

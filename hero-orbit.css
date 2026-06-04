@@ -154,7 +154,7 @@
   left: 50%;
   width: 0;
   height: 0;
-  transform: rotate(calc(var(--i) * 60deg));
+  transform: rotate(calc(var(--i) * 360deg / var(--orbit-n, 6)));
   pointer-events: none;
 }
 

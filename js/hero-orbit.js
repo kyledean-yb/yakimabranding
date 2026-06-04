@@ -22,6 +22,10 @@
     var minScale = 0.76;
     var maxScale = 1.28;
     var focusAngle = 180;
+    var nodeCount = icons.length;
+    var stepDeg = 360 / nodeCount;
+
+    orbit.style.setProperty('--orbit-n', String(nodeCount));
     var rafId = 0;
     var running = true;
     var pauseOnHover = orbit.classList.contains('hero-orbit--pause-hover');
@@ -52,7 +56,7 @@
         var node = icon.closest('.hero-orbit-node');
         var pill = icon.querySelector('.hero-orbit-pill');
         var i = parseInt(node && node.style.getPropertyValue('--i'), 10) || 0;
-        var armDeg = (i * 60 + spinDeg) % 360;
+        var armDeg = (i * stepDeg + spinDeg) % 360;
         var delta = ((armDeg - focusAngle + 540) % 360) - 180;
         var t = (Math.cos((delta * Math.PI) / 180) + 1) / 2;
         var scale = minScale + t * (maxScale - minScale);
@@ -80,7 +84,7 @@
     function applyStaticOrbit() {
       icons.forEach(function (icon, idx) {
         var pill = icon.querySelector('.hero-orbit-pill');
-        var armDeg = (idx * 60) % 360;
+        var armDeg = (idx * stepDeg) % 360;
         var delta = ((armDeg - focusAngle + 540) % 360) - 180;
         var t = (Math.cos((delta * Math.PI) / 180) + 1) / 2;
         var scale = minScale + t * (maxScale - minScale);

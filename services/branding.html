@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../favicon.png">
+<title>Branding & Design — YB Marketing</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="../insights.css">
+<style>
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--fg1);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--yb-blue);color:#fff}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.container{width:100%;max-width:var(--container);margin:0 auto;padding:0 28px}
+section{padding:88px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--yb-blue)}
+.eyebrow::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:currentColor;flex:none}
+/* Banner */
+.banner{background:var(--grad-navy);color:#fff;text-align:center;font-size:13px;font-weight:600;padding:8px 20px;position:relative;z-index:60}
+.banner a{color:var(--yb-cyan);text-decoration:underline}
+/* Header */
+.header{position:sticky;top:0;z-index:50;transition:all 240ms cubic-bezier(.4,0,.2,1)}
+.header.solid{background:rgba(255,255,255,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.header.top{background:rgba(255,255,255,.6);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:11px}
+.logo img{width:44px;height:44px}
+.logo-text{font-family:var(--font-display);font-weight:800;font-size:22px;letter-spacing:-.02em;color:var(--ink)}
+.logo-text span{color:var(--yb-blue)}
+.nav{display:flex;align-items:center;gap:2px}
+.nav-a{font-weight:600;font-size:15px;color:var(--fg1);padding:8px 14px;border-radius:var(--r-sm);transition:all 240ms cubic-bezier(.4,0,.2,1);display:inline-block}
+.nav-a:hover{background:var(--bg-soft);color:var(--yb-blue)}
+/* Dropdown */
+.nav-services{position:relative}
+.nav-svc-btn{display:flex;align-items:center;gap:5px;font-weight:600;font-size:15px;color:var(--fg1);padding:8px 14px;border-radius:var(--r-sm);transition:all 240ms cubic-bezier(.4,0,.2,1);background:none;border:none;cursor:pointer;font-family:var(--font-body)}
+.nav-svc-btn:hover,.nav-services:hover .nav-svc-btn{background:var(--bg-soft);color:var(--yb-blue)}
+.nav-chevron{transition:transform 240ms cubic-bezier(.4,0,.2,1);flex:none;color:currentColor}
+.nav-services:hover .nav-chevron{transform:rotate(180deg)}
+.nav-dd{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(-10px) scale(.97);opacity:0;pointer-events:none;transition:opacity 200ms ease 150ms,transform 220ms cubic-bezier(.16,1,.3,1) 150ms;width:660px;background:#fff;border-radius:var(--r-xl);box-shadow:0 24px 64px -16px rgba(22,32,58,.22),0 0 0 1px rgba(22,32,58,.07);padding:16px;z-index:200}
+.nav-services:hover .nav-dd{opacity:1;transform:translateX(-50%) translateY(0) scale(1);pointer-events:all;transition:opacity 150ms ease,transform 180ms cubic-bezier(.16,1,.3,1)}
+.nav-dd-arrow{position:absolute;top:-5px;left:50%;transform:translateX(-50%) rotate(45deg);width:10px;height:10px;background:#fff;border-top:1px solid rgba(22,32,58,.08);border-left:1px solid rgba(22,32,58,.08)}
+.nav-dd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.dd-card{display:flex;align-items:flex-start;gap:11px;padding:12px;border-radius:var(--r-md);transition:background 150ms ease}
+.dd-card:hover{background:var(--bg-soft)}
+.dd-ic{width:36px;height:36px;border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;flex:none}
+.dd-ic svg{width:18px;height:18px}
+.dd-name{font-weight:700;font-size:13px;color:var(--ink);margin-bottom:2px;display:block}
+.dd-desc{font-size:11.5px;color:var(--fg3);line-height:1.4}
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;font-family:var(--font-body);font-weight:700;font-size:15px;border-radius:var(--r-md);padding:13px 22px;transition:all 240ms;white-space:nowrap;line-height:1}
+.btn-grad{background:var(--grad-brand);color:#fff;box-shadow:0 14px 30px -10px rgba(63,111,214,.45)}
+.btn-grad:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.btn-ghost-white{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.28)}
+.btn-ghost-white:hover{background:rgba(255,255,255,.22);transform:translateY(-2px)}
+.btn-lg{padding:16px 28px;font-size:16px}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px;align-items:center;justify-content:center}
+.mobile-menu{display:none;border-top:1px solid var(--line);background:#fff;padding:12px 28px 20px}
+.mobile-menu a,.mobile-menu button{display:block;padding:14px 0;border-bottom:1px solid var(--line);font-weight:600;font-size:17px;color:var(--ink);width:100%;text-align:left;background:none;border:none;font-family:var(--font-body);cursor:pointer}
+.mobile-menu button{border-bottom:1px solid var(--line)}
+.mobile-svc-list{display:none;padding:8px 0 8px 16px}
+.mobile-svc-list.open{display:block}
+.mobile-svc-list a{font-size:15px;padding:10px 0;color:var(--fg2)}
+/* Hero */
+.svc-hero{position:relative;overflow:hidden;background:var(--grad-navy);padding:80px 0 100px}
+.svc-hero-mesh{position:absolute;inset:0;background-image:var(--grad-mesh);pointer-events:none}
+.svc-hero-inner{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.svc-hero-text .eyebrow::before{background:currentColor}
+.svc-hero h1{margin:16px 0 20px;font-size:clamp(2.4rem,4.2vw,3.8rem);color:#fff;line-height:1.06}
+.hero-lead{margin:0 0 32px;color:var(--fg2-on-dark);max-width:540px;font-size:clamp(1rem,1.3vw,1.2rem);line-height:1.6}
+.svc-hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.svc-hero-visual{position:relative}
+.img-ph{background:var(--bg-mute);border-radius:var(--r-xl);overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;min-height:280px}
+.img-ph-label{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-size:11px;font-weight:600;color:var(--fg3);letter-spacing:.04em;font-family:monospace}
+/* Features grid */
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.feat-card{background:#fff;border-radius:var(--r-lg);padding:26px;border:1px solid var(--line);box-shadow:0 2px 8px rgba(22,32,58,.06);transition:all 240ms}
+.feat-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px -8px rgba(22,32,58,.14)}
+.feat-ic{width:48px;height:48px;border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.feat-ic svg{width:22px;height:22px}
+.feat-title{font-family:var(--font-display);font-weight:700;font-size:16px;color:var(--ink);margin-bottom:7px}
+.feat-desc{font-size:14px;color:var(--fg2);line-height:1.6}
+/* CTA */
+.svc-cta{background:var(--grad-navy);position:relative;overflow:hidden;padding:80px 0}
+.svc-cta-mesh{position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.7}
+.svc-cta-inner{position:relative;text-align:center;max-width:680px;margin:0 auto}
+.svc-cta h2{color:#fff;margin-bottom:14px}
+.svc-cta p{color:var(--fg2-on-dark);font-size:16px;margin-bottom:32px}
+.svc-cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+/* Wave dividers */
+.wave-div{position:relative;overflow:hidden;line-height:0;font-size:0}
+.wave-div svg{display:block;width:100%;height:70px}
+/* Footer */
+.footer{background:var(--grad-navy);color:#fff;position:relative;overflow:hidden;padding:64px 0 28px}
+.footer-mesh{position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.5;pointer-events:none}
+.footer-grid{position:relative;display:grid;grid-template-columns:1.7fr 1fr 1fr 1.4fr;gap:40px;margin-bottom:42px}
+.footer-brand p{color:var(--fg2-on-dark);font-size:14px;max-width:280px;margin:14px 0 18px}
+.footer-col h4{font-family:var(--font-display);font-size:14px;font-weight:700;margin-bottom:14px;letter-spacing:.04em;color:#fff}
+.footer-col ul{list-style:none;display:grid;gap:10px}
+.footer-col a{color:var(--fg2-on-dark);font-size:14px;transition:color 240ms}
+.footer-col a:hover{color:#fff}
+.footer-bottom{position:relative;border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--fg2-on-dark);font-size:13px}
+.logo-text-ft{font-family:var(--font-display);font-weight:800;font-size:20px;letter-spacing:-.02em;color:#fff;display:inline-block;margin-bottom:10px}
+.logo-text-ft span{color:var(--yb-cyan)}
+.social-btn{width:38px;height:38px;border-radius:var(--r-sm);background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:#fff;transition:background 240ms}
+.social-btn:hover{background:var(--yb-blue)}
+.social-btn svg{width:17px;height:17px}
+/* FAQ Accordion */
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:20px 0;cursor:pointer;font-weight:700;font-size:15.5px;color:var(--ink);gap:16px;background:none;border:none;width:100%;text-align:left;font-family:var(--font-body);transition:color 200ms}
+.faq-q:hover{color:var(--yb-blue)}
+.faq-q.active{color:var(--faq-ac,var(--yb-blue))}
+.faq-icon{width:28px;height:28px;border-radius:50%;background:var(--bg-mute);display:flex;align-items:center;justify-content:center;flex:none;transition:background 200ms,transform 200ms;color:var(--fg2)}
+.faq-q.active .faq-icon{background:var(--faq-ac,var(--yb-blue));color:#fff;transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 320ms cubic-bezier(.16,1,.3,1)}
+.faq-a-inner{padding-bottom:20px;font-size:15px;color:var(--fg2);line-height:1.75}
+
+.modal-overlay{position:fixed;inset:0;z-index:100;background:rgba(22,32,58,.6);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.footer-socials{display:flex;gap:10px;margin-top:12px}
+/* Responsive */
+@media(max-width:900px){
+  .blog-grid{grid-template-columns:1fr 1fr}
+  .svc-hero-inner{grid-template-columns:1fr}
+  .svc-hero-visual{display:none}
+  .feat-grid{grid-template-columns:1fr 1fr}
+.footer-grid{grid-template-columns:1fr 1fr}
+  .nav-dd{display:none}
+  .why-main-grid{grid-template-columns:1fr !important}
+  .why-tiles-grid{grid-template-columns:1fr 1fr !important}
+}
+@media(max-width:640px){
+  .blog-grid{grid-template-columns:1fr}
+  .feat-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .nav,.btn-hdr{display:none}
+  .hamburger{display:flex}
+  .mobile-menu.open{display:block}
+  section{padding:60px 0}
+}
+
+
+/* Why Choose + locations */
+.locations-track{display:flex;width:max-content;animation:loc-scroll 35s linear infinite;gap:0}
+.locations-track:hover{animation-play-state:paused}
+.locations-set{display:flex;gap:12px;padding-right:12px}
+.loc-chip{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.85);font-size:13px;font-weight:600;letter-spacing:.03em;padding:7px 16px;border-radius:var(--r-pill);white-space:nowrap;font-family:var(--font-display)}
+.loc-chip svg{opacity:.6;flex:none}
+@keyframes loc-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.locations-track{animation:none}}
+
+/* Brand stack — editorial layout unique to this page */
+.brand-services-section{padding:100px 0 112px;background:#fff}
+.brand-intro{text-align:center;max-width:760px;margin:0 auto;padding:0 0 72px}
+.brand-intro .eyebrow{margin-bottom:4px}
+.brand-intro h2{margin:20px 0 24px}
+.brand-intro p{color:var(--fg2);font-size:16px;line-height:1.8;margin:0}
+.brand-intro p + p{margin-top:20px}
+.brand-acc{display:flex;flex-direction:column;gap:10px;max-width:920px;margin:0 auto}
+.brand-acc-item{background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);overflow:hidden;box-shadow:0 2px 12px rgba(22,32,58,.05);scroll-margin-top:100px;transition:border-color 200ms,box-shadow 200ms}
+.brand-acc-item.is-open{border-color:rgba(123,91,230,.35);box-shadow:0 8px 28px rgba(123,91,230,.12)}
+.brand-acc-trigger{display:flex;align-items:center;gap:16px;width:100%;padding:20px 24px;background:transparent;border:none;cursor:pointer;text-align:left;font-family:var(--font-body)}
+.brand-acc-trigger:hover{background:rgba(123,91,230,.04)}
+.brand-acc-item.is-open .brand-acc-trigger{background:rgba(123,91,230,.06)}
+.brand-acc-heading{flex:1;min-width:0}
+.brand-acc-title{display:block;font-family:var(--font-display);font-weight:700;font-size:clamp(1rem,1.8vw,1.15rem);color:var(--ink);margin-top:5px;line-height:1.25}
+.brand-acc-icon{width:32px;height:32px;border-radius:50%;background:var(--bg-mute);display:flex;align-items:center;justify-content:center;flex:none;color:var(--fg2);transition:transform 280ms ease,background 200ms,color 200ms}
+.brand-acc-item.is-open .brand-acc-icon{background:var(--yb-violet);color:#fff;transform:rotate(45deg)}
+.brand-acc-panel{max-height:0;overflow:hidden;transition:max-height 380ms cubic-bezier(.16,1,.3,1)}
+.brand-acc-panel-inner{padding:0 24px 28px;border-top:1px solid var(--line)}
+.brand-acc-content{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;padding-top:24px}
+.brand-acc-content--text{grid-template-columns:1fr;padding-top:20px}
+.brand-stack{display:flex;flex-direction:column;gap:0}
+.brand-block{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:0;border:none}
+.brand-block--text-only{grid-template-columns:1fr;max-width:none;margin:0;padding:0}
+.brand-block--text-only .brand-block-body{padding:0}
+.brand-block-media{border-radius:var(--r-xl);overflow:hidden;background:var(--bg-soft);border:1px solid var(--line);box-shadow:0 8px 32px rgba(22,32,58,.08)}
+.brand-block-media img{width:100%;height:auto;display:block}
+.brand-block-body{padding:8px 0 0}
+.brand-block-label{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px}
+.brand-block-num{width:32px;height:32px;border-radius:var(--r-md);background:var(--wash-violet);color:var(--yb-violet);font-family:var(--font-display);font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;flex:none}
+.brand-block-tag{font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--yb-violet)}
+.brand-block-title{font-family:var(--font-display);font-weight:700;font-size:clamp(1.25rem,2vw,1.5rem);color:var(--ink);margin:0 0 16px;line-height:1.2}
+.brand-block-copy p{color:var(--fg2);font-size:15.5px;line-height:1.8;margin:0 0 18px}
+.brand-block-copy p:last-of-type{margin-bottom:24px}
+.brand-block-cta{display:inline-flex;align-items:center;gap:9px;margin-top:4px;padding:13px 24px;border-radius:var(--r-pill);font-weight:700;font-size:14px;letter-spacing:.02em;color:var(--yb-violet);background:#fff;border:1.5px solid rgba(123,91,230,.4);box-shadow:0 4px 16px rgba(123,91,230,.1);transition:all 220ms ease;text-decoration:none}
+.brand-block-cta svg{flex:none;transition:transform 220ms ease}
+.brand-block-cta:hover{background:linear-gradient(135deg,var(--yb-violet),#9b7cf0);color:#fff;border-color:transparent;transform:translateY(-2px);box-shadow:0 10px 28px rgba(123,91,230,.3);text-decoration:none}
+.brand-block-cta:hover svg{transform:translateX(3px)}
+.brand-block-cta--alt{color:#159468;border-color:rgba(21,148,104,.4);box-shadow:0 4px 16px rgba(21,148,104,.1)}
+.brand-block-cta--alt:hover{background:linear-gradient(135deg,#159468,#25C28A);box-shadow:0 10px 28px rgba(21,148,104,.28)}
+.brand-stack-cta{text-align:center;padding:56px 0 0;margin-top:40px;border-top:1px solid var(--line)}
+.brand-stack-cta p{color:var(--fg2);font-size:16px;line-height:1.75;margin:0 0 28px;max-width:520px;margin-left:auto;margin-right:auto}
+@media(max-width:900px){
+  .brand-services-section{padding:72px 0 88px}
+  .brand-intro{padding-bottom:40px}
+  .brand-acc-content{grid-template-columns:1fr;gap:24px}
+  .brand-acc-trigger{padding:18px 20px}
+  .brand-acc-panel-inner{padding:0 20px 24px}
+}
+
+</style>
+<link rel="stylesheet" href="../site.css">
+
+</head>
+<body>
+
+
+<div class="header top" id="header">
+  <div class="container header-inner">
+    <a class="logo" href="../index.html">
+      <img src="../assets/yb-logo-color.png" alt="YB Marketing logo" style="width:44px;height:44px">
+      <span class="logo-text">YB <span>Marketing</span></span>
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-a">Home</a>
+            <div class="nav-about" id="navAbout">
+        <button class="nav-svc-btn" type="button">About
+          <svg class="nav-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+                <div class="nav-dd nav-dd-about">
+          <div class="nav-dd-arrow"></div>
+          <div class="nav-dd-about-inner">
+            <div class="nav-dd-about-banner">
+              <span class="nav-dd-eyebrow">About YB Marketing</span>
+              <p class="nav-dd-banner-text">Pacific Northwest agency · Washington State</p>
+            </div>
+            <div class="nav-dd-about-grid">
+              <a href="../about.html" class="dd-card">
+                <div class="dd-ic" style="background:var(--wash-blue);color:var(--yb-blue)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                <div><span class="dd-name">About Us</span><span class="dd-desc">Meet our team &amp; our story</span></div>
+              </a>
+              <a href="../washington-state-sales-tax.html" class="dd-card">
+                <div class="dd-ic" style="background:#e8f5ee;color:#2d9a5a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+                <div><span class="dd-name">WA Sales Tax Notice</span><span class="dd-desc">Oct 2025 advertising &amp; software tax info</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-services" id="navServices">
+        <button class="nav-svc-btn" aria-expanded="false" id="svcBtn">Services
+          <svg class="nav-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dd" id="navDd">
+          <div class="nav-dd-arrow"></div>
+          <div class="nav-dd-grid">
+        <a href="branding.html" class="dd-card" style="background:var(--bg-soft)">
+          <div class="dd-ic" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="0.5" fill="currentColor"/><circle cx="17.5" cy="10.5" r="0.5" fill="currentColor"/><circle cx="8.5" cy="7.5" r="0.5" fill="currentColor"/><circle cx="6.5" cy="12.5" r="0.5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></div>
+          <div><span class="dd-name">Branding &amp; Design</span><span class="dd-desc">Logos, systems &amp; identity</span></div>
+        </a>
+        <a href="web-design.html" class="dd-card">
+          <div class="dd-ic" style="background:var(--wash-mint);color:#159468"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div>
+          <div><span class="dd-name">Web Design</span><span class="dd-desc">WordPress, Wix &amp; custom sites</span></div>
+        </a>
+        <a href="social-media.html" class="dd-card">
+          <div class="dd-ic" style="background:var(--wash-amber);color:#c77f12"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div>
+          <div><span class="dd-name">Social Media</span><span class="dd-desc">Grow your following &amp; engagement</span></div>
+        </a>
+        <a href="google-ads.html" class="dd-card">
+          <div class="dd-ic" style="background:var(--wash-coral);color:var(--yb-coral)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <div><span class="dd-name">Google Ads</span><span class="dd-desc">PPC campaigns that convert</span></div>
+        </a>
+        <a href="seo.html" class="dd-card">
+          <div class="dd-ic" style="background:var(--wash-cyan);color:var(--yb-cyan)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+          <div><span class="dd-name">SEO</span><span class="dd-desc">Rank higher on Google &amp; AI</span></div>
+        </a>
+        <a href="press-releases.html" class="dd-card">
+          <div class="dd-ic" style="background:var(--wash-pink);color:var(--yb-pink)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/><path d="M16 2v4a2 2 0 0 1-2 2H6"/></svg></div>
+          <div><span class="dd-name">Press Releases</span><span class="dd-desc">Get your story published</span></div>
+        </a>
+        <a href="content-creation.html" class="dd-card">
+          <div class="dd-ic" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <div><span class="dd-name">Content &amp; Blogging</span><span class="dd-desc">Compelling copy that converts</span></div>
+        </a>
+          </div>
+        </div>
+      </div>
+      <a href="../insights.html" class="nav-a">Insights</a>
+      <a href="../contact.html" class="nav-a">Contact</a>
+    </nav>
+    <div class="btn-hdr" style="display:flex;align-items:center;gap:8px">
+      <a href="tel:5099019735" class="btn" style="background:#fff;color:var(--yb-blue);border:1.5px solid var(--line-strong);gap:7px;padding:11px 16px;font-size:14px">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        509-901-9735
+      </a>
+      <a href="../contact.html" class="btn btn-grad">Get Started</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="../index.html">Home</a>
+    <button onclick="this.nextElementSibling.classList.toggle('open');this.style.color=this.nextElementSibling.classList.contains('open')?'var(--yb-blue)':''">Services ▾</button>
+    <div class="mobile-svc-list" id="mobileSvcList">
+      <a href="branding.html">Branding &amp; Design</a>
+      <a href="web-design.html">Web Design</a>
+          <a href="social-media.html">Social Media</a>
+          <a href="google-ads.html">Google Ads</a>
+          <a href="seo.html">SEO</a>
+          <a href="press-releases.html">Press Releases</a>
+          <a href="content-creation.html">Content &amp; Blogging</a>
+    </div>
+    <a href="../about.html">About</a>
+    <a href="../contact.html">Contact</a>
+    <a href="tel:5099019735" class="btn btn-grad" style="width:100%;justify-content:center;margin-top:16px;display:flex">Call 509-901-9735</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="svc-hero">
+  <div class="svc-hero-mesh"></div>
+  <div class="hero-logo-overlay hero-logo-overlay--left" aria-hidden="true">
+    <img src="../assets/yb-logo-white.png" alt="">
+  </div>
+  <div class="container svc-hero-inner">
+    <div class="svc-hero-text">
+      <span class="eyebrow" style="color:var(--yb-violet)">Branding &amp; Design</span>
+      <h1>Elevate Your<br><span style="background:linear-gradient(135deg,var(--yb-violet),#9b7cf0);-webkit-background-clip:text;background-clip:text;color:transparent">Brand Identity</span></h1>
+      <p class="hero-lead">Your brand is more than a logo — it's a complete visual language. We craft strategy, story, design systems, and deliverables that bring consistency, efficiency, and scalability to everything you put in front of customers.</p>
+      <div class="svc-hero-actions">
+        <a href="../contact.html" class="btn btn-grad btn-lg">Get Started Today
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="tel:5099019735" class="btn btn-ghost-white">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          509-901-9735
+        </a>
+      </div>
+    </div>
+    <div class="svc-hero-visual">
+      <div class="hero-orbit hero-orbit--svc hero-orbit--features" style="--orbit-feat-wash:var(--wash-violet);--orbit-feat-color:#7B5BE6;--orbit-feat-glow:rgba(123,91,230,0.22)">
+        <div class="hero-orbit-bg" aria-hidden="true">
+          <div class="hero-orbit-ring hero-orbit-ring--track"></div>
+          <div class="hero-orbit-hub">
+            <div class="hero-orbit-hub-art">
+              <img src="../assets/svc-hub-branding.webp" alt="Branding and Design">
+            </div>
+          </div>
+        </div>
+        <div class="hero-orbit-spin">
+          <div class="hero-orbit-node" style="--i:0">
+            <div class="hero-orbit-icon" aria-label="Brand Strategy">
+              <span class="hero-orbit-pill">
+                <span class="hero-orbit-pill-ic">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                </span>
+              </span>
+            </div>
+          </div>
+          <div class="hero-orbit-node" style="--i:1">
+            <div class="hero-orbit-icon" aria-label="Brand Story">
+              <span class="hero-orbit-pill">
+                <span class="hero-orbit-pill-ic">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                </span>
+              </span>
+            </div>
+          </div>
+          <div class="hero-orbit-node" style="--i:2">
+            <div class="hero-orbit-icon" aria-label="Brand Logo">
+              <span class="hero-orbit-pill">
+                <span class="hero-orbit-pill-ic">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="0.5" fill="currentColor"/><circle cx="17.5" cy="10.5" r="0.5" fill="currentColor"/><circle cx="8.5" cy="7.5" r="0.5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+                </span>
+              </span>
+            </div>
+          </div>
+          <div class="hero-orbit-node" style="--i:3">
+            <div class="hero-orbit-icon" aria-label="Design System">
+              <span class="hero-orbit-pill">
+                <span class="hero-orbit-pill-ic">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                </span>
+              </span>
+            </div>
+          </div>
+          <div class="hero-orbit-node" style="--i:4">
+            <div class="hero-orbit-icon" aria-label="Print Design">
+              <span class="hero-orbit-pill">
+                <span class="hero-orbit-pill-ic">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+                </span>
+              </span>
+            </div>
+          </div>
+          <div class="hero-orbit-node" style="--i:5">
+            <div class="hero-orbit-icon" aria-label="Graphic Standards">
+              <span class="hero-orbit-pill">
+                <span class="hero-orbit-pill-ic">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="wave-div" style="background:#1B2A4A"><svg viewBox="0 0 1440 80" preserveAspectRatio="none" style="height:80px"><path d="M0,0 C360,80 1080,80 1440,0 L1440,80 L0,80 Z" fill="#ffffff"/></svg></div>
+<!-- BRAND SERVICES — editorial stack -->
+<section class="brand-services-section" id="brand-services">
+  <div class="container">
+    <div class="brand-intro">
+      <span class="eyebrow" style="color:var(--yb-violet)">What We Build</span>
+      <h2>How to Elevate Your Brand Identity</h2>
+      <p>We believe great design starts with understanding your brand and your unique story. Our team takes the time to discuss with you — and even your clients — the journey, values, and differentiators that set your business apart.</p>
+      <p>With our expertise in brand strategy, user experience, and scalable design, we help businesses establish a seamless, professional presence across every platform. Consistency builds trust. Trust builds brands.</p>
+    </div>
+
+    <div class="brand-acc" id="brand-acc">
+
+      <div class="brand-acc-item is-open" id="brand-strategy">
+        <button type="button" class="brand-acc-trigger" aria-expanded="true" aria-controls="brand-strategy-panel">
+          <span class="brand-block-num">01</span>
+          <span class="brand-acc-heading"><span class="brand-block-tag">Brand Strategy</span><span class="brand-acc-title">Building Brands That Work</span></span>
+          <span class="brand-acc-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="brand-acc-panel" id="brand-strategy-panel">
+          <div class="brand-acc-panel-inner">
+            <div class="brand-acc-content">
+              <div class="brand-block-media"><img src="../assets/brand-strategy.png" alt="Brand strategy process diagram"></div>
+              <div class="brand-block-body">
+                <div class="brand-block-copy">
+                  <p>Our process moves from discovery through design and delivery — refining strategy, story, and visual language until every touchpoint feels cohesive.</p>
+                  <p>We combine brand visioning, research, journey mapping, and design system development so your spoken, written, and visual identity work together from day one.</p>
+                </div>
+                <a href="../contact.html" class="brand-block-cta">Let's map your brand strategy<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="brand-acc-item" id="brand-story">
+        <button type="button" class="brand-acc-trigger" aria-expanded="false" aria-controls="brand-story-panel">
+          <span class="brand-block-num">02</span>
+          <span class="brand-acc-heading"><span class="brand-block-tag">Brand Story</span><span class="brand-acc-title">Your Story Comes First</span></span>
+          <span class="brand-acc-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="brand-acc-panel" id="brand-story-panel">
+          <div class="brand-acc-panel-inner">
+            <div class="brand-acc-content">
+              <div class="brand-block-media"><img src="../assets/brand-story.png" alt="Brand storytelling illustration"></div>
+              <div class="brand-block-body">
+                <div class="brand-block-copy">
+                  <p>We believe that great design starts with understanding your story. Our team takes the time to discuss with you — and even your clients — the unique journey, values, and differentiators that set your business apart.</p>
+                  <p>By uncovering what makes your brand truly special, we ensure your design system authentically reflects your company's identity and resonates with your audience.</p>
+                </div>
+                <a href="../contact.html" class="brand-block-cta">Start with your story<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="brand-acc-item" id="brand-logo">
+        <button type="button" class="brand-acc-trigger" aria-expanded="false" aria-controls="brand-logo-panel">
+          <span class="brand-block-num">03</span>
+          <span class="brand-acc-heading"><span class="brand-block-tag">Brand Logo</span><span class="brand-acc-title">Unique Fingerprint</span></span>
+          <span class="brand-acc-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="brand-acc-panel" id="brand-logo-panel">
+          <div class="brand-acc-panel-inner">
+            <div class="brand-acc-content">
+              <div class="brand-block-media"><img src="../assets/brand-logo.png" alt="Logo design exploration and final marks"></div>
+              <div class="brand-block-body">
+                <div class="brand-block-copy">
+                  <p>A brand is more than just a logo, but the logo is the most identifiable component of a brand and its identity. It is very much like a fingerprint and needs to be as uniquely differentiating.</p>
+                  <p>When designed well, a logo tells your brand's story — conveying a message that helps establish an emotional connection with your target audience. It should grow out of your strategy, big idea, and story to complete your uniquely differentiating spoken, written, and visual language.</p>
+                </div>
+                <a href="../contact.html" class="brand-block-cta">Design your unique fingerprint<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="brand-acc-item" id="brand-system">
+        <button type="button" class="brand-acc-trigger" aria-expanded="false" aria-controls="brand-system-panel">
+          <span class="brand-block-num">04</span>
+          <span class="brand-acc-heading"><span class="brand-block-tag">Design System</span><span class="brand-acc-title">Brand Design System</span></span>
+          <span class="brand-acc-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="brand-acc-panel" id="brand-system-panel">
+          <div class="brand-acc-panel-inner">
+            <div class="brand-acc-content brand-acc-content--text">
+              <div class="brand-block-body">
+                <div class="brand-block-copy">
+                  <p>Our design systems include your brand story, typography, color, iconography, UI components, photography direction, and layout standards — all tailored to your unique business needs.</p>
+                  <p>By centralizing your visual and digital assets, we empower your team to create cohesive marketing materials, websites, and applications without guesswork or inconsistencies.</p>
+                </div>
+                <a href="../contact.html" class="brand-block-cta">Build your design system<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="brand-acc-item" id="brand-guide">
+        <button type="button" class="brand-acc-trigger" aria-expanded="false" aria-controls="brand-guide-panel">
+          <span class="brand-block-num">05</span>
+          <span class="brand-acc-heading"><span class="brand-block-tag">Logo Guide</span><span class="brand-acc-title">Brand Logo Guide</span></span>
+          <span class="brand-acc-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="brand-acc-panel" id="brand-guide-panel">
+          <div class="brand-acc-panel-inner">
+            <div class="brand-acc-content brand-acc-content--text">
+              <div class="brand-block-body">
+                <div class="brand-block-copy">
+                  <p>Your logo is the most visible manifestation of your company within a target audience — which is why consistent, cohesive, and congruent use is so important.</p>
+                  <p>Guidelines ensure that with each and every use of the logo, you are building upon your brand. Like a fingerprint, it should never be altered in ways that change your brand's identity or the perception you want your audience to hold.</p>
+                </div>
+                <a href="../contact.html" class="brand-block-cta">Create your logo guide<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="brand-acc-item" id="brand-standards">
+        <button type="button" class="brand-acc-trigger" aria-expanded="false" aria-controls="brand-standards-panel">
+          <span class="brand-block-num">06</span>
+          <span class="brand-acc-heading"><span class="brand-block-tag">Graphic Standards</span><span class="brand-acc-title">Graphic Standards</span></span>
+          <span class="brand-acc-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="brand-acc-panel" id="brand-standards-panel">
+          <div class="brand-acc-panel-inner">
+            <div class="brand-acc-content brand-acc-content--text">
+              <div class="brand-block-body">
+                <div class="brand-block-copy">
+                  <p>Graphic standards provide a sound, flexible structure for using logos, color, typography, and other brand language. Consistent brand application is essential — logos and brand elements must appear the same in every instance.</p>
+                  <p>They must use proper color selections, proportions, contexts, tone, style, and voice. The standards are often more important than the logo itself — because brands that aren't consistent can seem messy, untrustworthy, and unlikeable.</p>
+                </div>
+                <a href="../contact.html" class="brand-block-cta">Set your graphic standards<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="brand-acc-item" id="brand-print">
+        <button type="button" class="brand-acc-trigger" aria-expanded="false" aria-controls="brand-print-panel">
+          <span class="brand-block-num">07</span>
+          <span class="brand-acc-heading"><span class="brand-block-tag">Print Design</span><span class="brand-acc-title">Print Design</span></span>
+          <span class="brand-acc-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="brand-acc-panel" id="brand-print-panel">
+          <div class="brand-acc-panel-inner">
+            <div class="brand-acc-content brand-acc-content--text">
+              <div class="brand-block-body">
+                <div class="brand-block-copy">
+                  <p>Print creates visual consistency, conveying a brand's personality and building trust and credibility outside the digital platform. Business cards, brochures, promos, and more can use unique finishes, textures, die cuts, and color that jumps off the page.</p>
+                  <p>Print engages senses that digital content cannot simulate — making it the perfect complement to digital for a holistic branding and marketing campaign.</p>
+                </div>
+                <a href="../contact.html" class="brand-block-cta">Elevate your print materials<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="brand-acc-item" id="brand-packaging">
+        <button type="button" class="brand-acc-trigger" aria-expanded="false" aria-controls="brand-packaging-panel">
+          <span class="brand-block-num">08</span>
+          <span class="brand-acc-heading"><span class="brand-block-tag">Packaging</span><span class="brand-acc-title">Packaging Design</span></span>
+          <span class="brand-acc-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="brand-acc-panel" id="brand-packaging-panel">
+          <div class="brand-acc-panel-inner">
+            <div class="brand-acc-content brand-acc-content--text">
+              <div class="brand-block-body">
+                <div class="brand-block-copy">
+                  <p>Great packaging creates an immediate point-of-purchase emotional connection in today's fast-paced, fiercely competitive marketplace. Color, shape, and materials play a critical role in brand recognition and differentiation.</p>
+                  <p>Most products are known by the design of their packaging — like a hen's egg, a work of art, a masterpiece of design and simply brilliant packaging.</p>
+                </div>
+                <a href="../contact.html" class="brand-block-cta">Design packaging that stands out<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="brand-acc-item" id="brand-signage">
+        <button type="button" class="brand-acc-trigger" aria-expanded="false" aria-controls="brand-signage-panel">
+          <span class="brand-block-num">09</span>
+          <span class="brand-acc-heading"><span class="brand-block-tag">Signage</span><span class="brand-acc-title">Signs Do More Than Inform</span></span>
+          <span class="brand-acc-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="brand-acc-panel" id="brand-signage-panel">
+          <div class="brand-acc-panel-inner">
+            <div class="brand-acc-content brand-acc-content--text">
+              <div class="brand-block-body">
+                <div class="brand-block-copy">
+                  <p>Signs represent a brand's most visible form of communication. Outdoor and indoor signage along with window graphics can impact how a brick-and-mortar location is perceived in the non-digital world.</p>
+                  <p>Customers make assumptions about a business according to the quality and attractiveness of their signs — and that assumption carries over to how they perceive the quality of your products or services. All signs point to success.</p>
+                </div>
+                <a href="../contact.html" class="brand-block-cta">Make every sign count<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="brand-acc-item" id="brand-egd">
+        <button type="button" class="brand-acc-trigger" aria-expanded="false" aria-controls="brand-egd-panel">
+          <span class="brand-block-num">10</span>
+          <span class="brand-acc-heading"><span class="brand-block-tag">Environmental Graphics</span><span class="brand-acc-title">Environmental Graphic Design</span></span>
+          <span class="brand-acc-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="brand-acc-panel" id="brand-egd-panel">
+          <div class="brand-acc-panel-inner">
+            <div class="brand-acc-content brand-acc-content--text">
+              <div class="brand-block-body">
+                <div class="brand-block-copy">
+                  <p>Environmental Graphic Design (EGD) revolves around the strategic placement and design of visual elements to communicate information, evoke emotions, and guide behavior within interior and exterior spaces.</p>
+                  <p>EGD creates visually compelling, functional experiences using color, imagery, typography, sound, and integrated three-dimensional elements — a fascinating intersection of graphic design, architecture, lighting, and landscape.</p>
+                </div>
+                <a href="../contact.html" class="brand-block-cta">Shape your environment<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="brand-acc-item" id="brand-web">
+        <button type="button" class="brand-acc-trigger" aria-expanded="false" aria-controls="brand-web-panel">
+          <span class="brand-block-num">11</span>
+          <span class="brand-acc-heading"><span class="brand-block-tag">Web Design</span><span class="brand-acc-title">Web Design</span></span>
+          <span class="brand-acc-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="brand-acc-panel" id="brand-web-panel">
+          <div class="brand-acc-panel-inner">
+            <div class="brand-acc-content brand-acc-content--text">
+              <div class="brand-block-body">
+                <div class="brand-block-copy">
+                  <p>Good web design is essential to user interface and user experience — leading to longer site visits and improved engagement. Your website has become the primary platform for initial brand contact, so it must communicate your image consistently and cohesively.</p>
+                  <p>We extend your brand's family look and feel online so you continue to be seen as viable, credible, and trusted. This is where code meets creative thinking.</p>
+                </div>
+                <a href="web-design.html" class="brand-block-cta brand-block-cta--alt">Extend your brand online<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="brand-stack-cta">
+      <p>Ready to transform your brand's visual identity? Let's start building a design system that grows with you.</p>
+      <a href="../contact.html" class="btn btn-grad btn-lg">Get Started Today
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<div class="wave-div" style="background:#ffffff"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,50 C480,70 960,10 1440,30 L1440,70 L0,70 Z" fill="#1B2A4A"/></svg></div><div style="background:var(--grad-navy)">
+<section style="position:relative;overflow:hidden;padding:88px 0">
+  <div style="position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.6;pointer-events:none"></div>
+  <div class="container" style="position:relative">
+    <div style="display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:center" class="why-main-grid">
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-xl);padding:40px">
+        <span class="eyebrow" style="color:var(--yb-violet)">Why YB for Branding</span>
+        <h2 style="margin:14px 0 18px;color:#fff;font-size:clamp(1.8rem,2.6vw,2.4rem);line-height:1.12">Brands Built on Strategy, Story &amp; Design</h2>
+        <p style="color:var(--fg2-on-dark);font-size:15.5px;line-height:1.65;margin:0 0 32px">Consistency builds trust — and trust builds brands. YB helps you develop a uniquely differentiating spoken, written, and visual language that unifies your business across print, digital, signage, and every customer touchpoint.</p>
+        <a href="../contact.html" class="btn" style="background:var(--grad-brand);color:#fff;box-shadow:var(--sh-blue);font-size:16px;padding:15px 30px;border-radius:var(--r-pill)">Let's Talk
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px" class="why-tiles-grid">
+        <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:26px">
+          <div style="width:56px;height:56px;border-radius:var(--r-md);background:rgba(43,196,240,.18);display:flex;align-items:center;justify-content:center;margin-bottom:16px">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><polyline points="7 10 10 7 13 10 17 6"/></svg>
+          </div>
+          <h3 style="font-family:var(--font-display);font-weight:800;font-size:17px;color:#fff;margin:0 0 10px;letter-spacing:.01em;text-transform:uppercase">Discovery &amp; Brand Visioning</h3>
+          <p style="color:var(--fg2-on-dark);font-size:14px;line-height:1.6;margin:0">We learn your story, audience, and differentiators — through research, journey mapping, and conversations with you and your clients.</p>
+        </div>
+        <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:26px">
+          <div style="width:56px;height:56px;border-radius:var(--r-md);background:rgba(123,91,230,.2);display:flex;align-items:center;justify-content:center;margin-bottom:16px">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--yb-violet)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>
+          </div>
+          <h3 style="font-family:var(--font-display);font-weight:800;font-size:17px;color:#fff;margin:0 0 10px;letter-spacing:.01em;text-transform:uppercase">Strategy &amp; Design System</h3>
+          <p style="color:var(--fg2-on-dark);font-size:14px;line-height:1.6;margin:0">Together we define your brand story, logo, typography, color, and graphic standards — a flexible system your team can use with confidence.</p>
+        </div>
+        <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:26px;grid-column:1/-1;display:flex;gap:22px;align-items:center">
+          <div style="width:64px;height:64px;border-radius:var(--r-md);background:rgba(37,194,138,.18);display:flex;align-items:center;justify-content:center;flex:none">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="var(--yb-mint)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 1 18"/><polyline points="16 7 22 7 22 13"/></svg>
+          </div>
+          <div>
+            <h3 style="font-family:var(--font-display);font-weight:800;font-size:18px;color:#fff;margin:0 0 8px;letter-spacing:.01em;text-transform:uppercase">Launch a Cohesive Brand</h3>
+            <p style="color:var(--fg2-on-dark);font-size:14px;line-height:1.6;margin:0">From logo guides to print, packaging, signage, and web — we deliver assets that look and feel like family everywhere your brand appears.</p>
+          </div>
+        </div>
+        <div style="grid-column:1/-1;margin-top:8px;overflow:hidden;border-radius:var(--r-lg)">
+          <p style="color:rgba(255,255,255,.45);font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin:0 0 12px;text-align:center">Proudly Serving the Pacific Northwest</p>
+          <div class="locations-track">
+            <div class="locations-set"><span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Yakima, WA</span><span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Ellensburg, WA</span><span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Tri-Cities, WA</span><span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Spokane, WA</span><span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Seattle, WA</span><span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Portland, OR</span><span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Wenatchee, WA</span><span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Walla Walla, WA</span><span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Tacoma, WA</span><span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Olympia, WA</span><span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Bellingham, WA</span><span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Eugene, OR</span><span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Boise, ID</span></div>
+            <div class="locations-set" aria-hidden="true"><span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Yakima, WA</span><span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Ellensburg, WA</span><span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Tri-Cities, WA</span><span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Spokane, WA</span><span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Seattle, WA</span><span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Portland, OR</span><span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Wenatchee, WA</span><span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Walla Walla, WA</span><span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Tacoma, WA</span><span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Olympia, WA</span><span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Bellingham, WA</span><span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Eugene, OR</span><span class="loc-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Boise, ID</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+<div class="wave-div" style="background:#1B2A4A"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,0 C360,70 1080,70 1440,0 L1440,70 L0,70 Z" fill="#F6F8FC"/></svg></div>
+<!-- FAQ SECTION -->
+<section style="background:#fff">
+  <div class="container">
+    <div style="text-align:center;max-width:700px;margin:0 auto 48px">
+      <span class="eyebrow" style="color:var(--yb-violet)">Common Questions</span>
+      <h2 style="margin:14px 0 14px">Frequently Asked Questions</h2>
+      <p style="color:var(--fg2);font-size:16px;line-height:1.75">Answers to the questions we hear most often about our Branding &amp; Design services.</p>
+    </div>
+    <div style="max-width:780px;margin:0 auto;border-top:1px solid var(--line)">
+      <div class="faq-item" id="bd-faq-1">
+        <button class="faq-q" onclick="toggleFaq('bd-faq-1', '#7B5BE6')">
+          What is branding?
+          <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Branding is the way your business presents itself to customers, including your logo, colors, messaging, tone, visuals, and overall identity.</div></div>
+      </div>
+      <div class="faq-item" id="bd-faq-2">
+        <button class="faq-q" onclick="toggleFaq('bd-faq-2', '#7B5BE6')">
+          Why is branding important for my business?
+          <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Strong branding helps people recognize, remember, and trust your business. It also makes your marketing more consistent across your website, ads, social media, and printed materials.</div></div>
+      </div>
+      <div class="faq-item" id="bd-faq-3">
+        <button class="faq-q" onclick="toggleFaq('bd-faq-3', '#7B5BE6')">
+          What branding services do you offer?
+          <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">We can help with logo design, brand messaging, color palettes, typography, visual direction, brand guidelines, print materials, and digital brand assets.</div></div>
+      </div>
+      <div class="faq-item" id="bd-faq-4">
+        <button class="faq-q" onclick="toggleFaq('bd-faq-4', '#7B5BE6')">
+          Do I need a new logo or a full brand refresh?
+          <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">It depends on your current brand. Some businesses only need small updates, while others benefit from a full refresh if their logo, messaging, or visuals feel outdated or inconsistent.</div></div>
+      </div>
+      <div class="faq-item" id="bd-faq-5">
+        <button class="faq-q" onclick="toggleFaq('bd-faq-5', '#7B5BE6')">
+          What is included in a brand identity?
+          <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">A brand identity often includes your logo, colors, fonts, imagery style, messaging, tone of voice, and rules for how your brand should appear across different platforms.</div></div>
+      </div>
+      <div class="faq-item" id="bd-faq-6">
+        <button class="faq-q" onclick="toggleFaq('bd-faq-6', '#7B5BE6')">
+          Can you help make our brand more consistent?
+          <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Yes. We can review your current materials and create a more consistent look and message across your website, social media, ads, business cards, brochures, signage, and other marketing.</div></div>
+      </div>
+      <div class="faq-item" id="bd-faq-7">
+        <button class="faq-q" onclick="toggleFaq('bd-faq-7', '#7B5BE6')">
+          How does branding help with marketing?
+          <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Branding gives your marketing a clear foundation. When your visuals and messaging are consistent, your campaigns look more professional and are easier for customers to recognize.</div></div>
+      </div>
+      <div class="faq-item" id="bd-faq-8">
+        <button class="faq-q" onclick="toggleFaq('bd-faq-8', '#7B5BE6')">
+          When should a business consider rebranding?
+          <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">A rebrand may make sense if your business has changed, your audience has shifted, your visuals feel outdated, your messaging is unclear, or your current brand no longer reflects the quality of your work.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-div" style="background:#ffffff"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,35 C360,0 1080,70 1440,35 L1440,70 L0,70 Z" fill="#F6F8FC"/></svg></div>
+<!-- BLOG / RELATED ARTICLES -->
+<section style="background:var(--bg-soft)">
+  <div class="container">
+    <div style="text-align:center;max-width:640px;margin:0 auto 44px">
+      <span class="eyebrow" style="color:var(--yb-violet)">From Insights</span>
+      <h2 style="margin:14px 0 12px">Related Articles</h2>
+      <p style="color:var(--fg2);font-size:16px;line-height:1.7">Strategy and marketing insights to help you build a stronger brand.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px" class="blog-grid" data-blog-insights data-variant="related" data-base="../" data-topic="strategy" data-accent="#7B5BE6" data-count="3"></div>
+  </div>
+</section>
+
+<!-- CONTACT + CALENDLY -->
+<section style="background:var(--bg-soft);padding:80px 0" id="contact">
+  <div class="container">
+    <div style="text-align:center;max-width:640px;margin:0 auto 44px">
+      <span class="eyebrow" style="color:var(--yb-violet)">Get Started</span>
+      <h2 style="margin:14px 0 12px">Book a Meeting or Send Us a Message</h2>
+      <p class="yb-lead">Schedule a free 30-minute introduction call or fill out the form and we'll be in touch as soon as possible.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:980px;margin:0 auto" class="why-main-grid">
+      <div style="background:#fff;border-radius:var(--r-xl);padding:28px;box-shadow:var(--sh-sm);border:1px solid var(--line)">
+          <div style="text-align:center;padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:18px">
+            <div style="width:52px;height:52px;background:var(--grad-brand);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-family:var(--font-display);font-weight:800;font-size:20px;color:#fff">YB</div>
+            <div style="font-size:12px;font-weight:600;color:var(--fg3);margin-bottom:4px">YB Marketing Team</div>
+            <div style="font-weight:700;font-size:17px;color:var(--ink);margin-bottom:6px">Introduction Meeting / YB Marketing</div>
+            <div style="display:flex;align-items:center;gap:6px;justify-content:center;font-size:13px;color:var(--fg3)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 30 min</div>
+            <p style="font-size:13px;color:var(--fg2);margin-top:8px;line-height:1.5">Introduction meeting to learn more about your business and how we can help you grow.</p>
+          </div>
+          <!-- Calendly inline widget goes here -->
+          <!-- <div class="calendly-inline-widget" data-url="YOUR_CALENDLY_URL" style="min-width:320px;height:630px;"></div>
+               <script src="https://assets.calendly.com/assets/external/widget.js" async></script> -->
+          <a href="https://calendly.com/yakimabranding" target="_blank" class="btn btn-grad" style="width:100%;justify-content:center;margin-bottom:12px">Book a Meeting
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </a>
+          <div style="background:var(--bg-soft);border-radius:var(--r-md);padding:10px 14px;text-align:center;font-size:11.5px;color:var(--yb-blue)">Replace the button above with your Calendly inline embed when ready.</div>
+        </div>
+      <div style="background:#fff;border-radius:var(--r-xl);padding:28px;box-shadow:var(--sh-sm);border:1px solid var(--line)">
+          <h3 style="font-size:20px;margin:0 0 20px">Send Us a Message</h3>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+            <div><label style="display:block;font-size:12px;font-weight:700;color:var(--fg2);margin-bottom:6px">Name *</label><input type="text" placeholder="What's your name?" style="width:100%;font-family:var(--font-body);font-size:14px;padding:11px 13px;border:1.5px solid var(--line-strong);border-radius:var(--r-md);background:#fff;color:var(--ink)"></div>
+            <div><label style="display:block;font-size:12px;font-weight:700;color:var(--fg2);margin-bottom:6px">Email *</label><input type="email" placeholder="What's your email?" style="width:100%;font-family:var(--font-body);font-size:14px;padding:11px 13px;border:1.5px solid var(--line-strong);border-radius:var(--r-md);background:#fff;color:var(--ink)"></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+            <div><label style="display:block;font-size:12px;font-weight:700;color:var(--fg2);margin-bottom:6px">Company Name or URL *</label><input type="text" placeholder="What's your company?" style="width:100%;font-family:var(--font-body);font-size:14px;padding:11px 13px;border:1.5px solid var(--line-strong);border-radius:var(--r-md);background:#fff;color:var(--ink)"></div>
+            <div><label style="display:block;font-size:12px;font-weight:700;color:var(--fg2);margin-bottom:6px">Cell # *</label><input type="tel" placeholder="What's your cell #?" style="width:100%;font-family:var(--font-body);font-size:14px;padding:11px 13px;border:1.5px solid var(--line-strong);border-radius:var(--r-md);background:#fff;color:var(--ink)"></div>
+          </div>
+          <div style="margin-bottom:14px"><label style="display:block;font-size:12px;font-weight:700;color:var(--fg2);margin-bottom:6px">Message</label><textarea placeholder="What can we help you with?" style="width:100%;font-family:var(--font-body);font-size:14px;padding:11px 13px;border:1.5px solid var(--line-strong);border-radius:var(--r-md);background:#fff;color:var(--ink);min-height:110px;resize:vertical"></textarea></div>
+          <div style="border:1px solid var(--line-strong);border-radius:var(--r-md);padding:14px 16px;display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+            <div style="display:flex;align-items:center;gap:10px"><div style="width:22px;height:22px;border:2px solid var(--line-strong);border-radius:4px;flex:none"></div><span style="font-size:14px;color:var(--fg2)">I'm not a robot</span></div>
+            <div style="text-align:right;font-size:10px;color:var(--fg3)">reCAPTCHA<br><span style="font-size:9px">Privacy · Terms</span></div>
+          </div>
+          <button class="btn btn-grad" style="width:100%;justify-content:center;padding:15px;font-size:15px">Send Message
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-div" style="background:#F6F8FC"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,50 C480,70 960,10 1440,30 L1440,70 L0,70 Z" fill="#1B2A4A"/></svg></div>
+<div style="background:var(--grad-navy)">
+<!-- CTA -->
+<div class="svc-cta">
+  <div class="svc-cta-mesh"></div>
+  <div class="container svc-cta-inner">
+    <span class="eyebrow" style="color:var(--yb-violet)">Ready to Elevate Your Brand?</span>
+    <h2 style="margin:14px 0 14px;color:#fff;font-size:clamp(1.8rem,2.6vw,2.4rem)">Let's Build Your Brand Identity</h2>
+    <p style="color:var(--fg2-on-dark);font-size:16px;margin-bottom:32px">Schedule a free consultation and let's discuss strategy, story, and design for your business.</p>
+    <div class="svc-cta-btns">
+      <a href="../contact.html" class="btn btn-grad btn-lg">Get Started Today</a>
+      <a href="tel:5099019735" class="btn btn-ghost-white btn-lg">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        509-901-9735
+      </a>
+    </div>
+  </div>
+</div>
+</div><!-- /navy zone -->
+
+<footer class="footer">
+  <div class="footer-mesh"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:11px;margin-bottom:14px">
+          <img src="../assets/yb-logo-white.png" alt="YB" style="width:44px;height:44px;filter:drop-shadow(0 0 3px rgba(255,255,255,.4))">
+          <span style="font-family:var(--font-display);font-weight:800;font-size:22px;color:#fff">YB <span style="color:var(--yb-cyan)">Marketing</span></span>
+        </div>
+        <p>Award-winning digital marketing agency helping businesses grow through strategic branding, SEO, and comprehensive digital solutions.</p>
+        <div style="display:grid;gap:9px;margin:16px 0">
+          <a href="tel:5099019735" style="color:var(--fg2-on-dark);font-size:14px;display:flex;align-items:center;gap:9px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(509) 901-9735</a>
+          <a href="mailto:info@yakimabranding.com" style="color:var(--fg2-on-dark);font-size:14px;display:flex;align-items:center;gap:9px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@yakimabranding.com</a>
+        </div>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/yakimabranding" class="social-btn" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/yb.marketing_/" class="social-btn" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="17" height="17"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a>
+          <a href="https://www.linkedin.com/company/18939370" class="social-btn" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="../insights.html">Insights</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="branding.html">Branding &amp; Design</a></li>
+          <li><a href="web-design.html">Web Design</a></li>
+          <li><a href="seo.html">SEO Optimization</a></li>
+          <li><a href="google-ads.html">Google Ads</a></li>
+          <li><a href="social-media.html">Social Media</a></li>
+          <li><a href="press-releases.html">Press Releases</a></li>
+          <li><a href="content-creation.html">Content Marketing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Reach</h4>
+        <p style="color:var(--fg2-on-dark);font-size:14px;line-height:1.7;margin-bottom:14px">Yakima Branding is centered in Central Washington, with deep roots in the Yakima community. From our home base in Yakima, we proudly serve businesses across the entire Pacific Northwest with strategic marketing, website design, SEO, advertising, and branding support.</p>
+        <div style="display:flex;align-items:center;gap:7px;font-size:13px;color:var(--yb-cyan);font-weight:600"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Yakima, WA &nbsp;·&nbsp; Pacific Northwest</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 YB Marketing. All rights reserved.</span>
+      <div style="display:flex;gap:18px"><a href="#">Privacy Policy</a><a href="#">Sitemap</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="ctaModal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div style="background:#fff;border-radius:var(--r-xl);width:min(460px,100%);box-shadow:0 24px 56px -16px rgba(22,32,58,.22);overflow:hidden;max-height:92vh;overflow-y:auto">
+    <div style="background:var(--grad-navy);padding:26px 28px;position:relative">
+      <div style="position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.7"></div>
+      <div style="position:relative">
+        <div style="font-family:var(--font-display);font-weight:700;font-size:24px;color:#fff">Let's Get Started</div>
+        <p style="color:var(--fg2-on-dark);font-size:14px;margin-top:6px">Tell us about your project and we'll be in touch within one business day.</p>
+      </div>
+      <button onclick="document.getElementById('ctaModal').classList.remove('open')" style="position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.15);border:none;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div style="padding:24px 28px 30px;display:grid;gap:14px">
+      <div><label style="display:block;font-size:12.5px;font-weight:700;color:var(--fg2);margin-bottom:6px">Full Name</label><input type="text" placeholder="Jane Smith" style="width:100%;font-family:var(--font-body);font-size:15px;padding:12px 14px;border:1.5px solid var(--line-strong);border-radius:var(--r-md);background:#fff;color:var(--ink)"></div>
+      <div><label style="display:block;font-size:12.5px;font-weight:700;color:var(--fg2);margin-bottom:6px">Email</label><input type="email" placeholder="jane@company.com" style="width:100%;font-family:var(--font-body);font-size:15px;padding:12px 14px;border:1.5px solid var(--line-strong);border-radius:var(--r-md);background:#fff;color:var(--ink)"></div>
+      <div><label style="display:block;font-size:12.5px;font-weight:700;color:var(--fg2);margin-bottom:6px">Phone</label><input type="tel" placeholder="(509) 555-0100" style="width:100%;font-family:var(--font-body);font-size:15px;padding:12px 14px;border:1.5px solid var(--line-strong);border-radius:var(--r-md);background:#fff;color:var(--ink)"></div>
+      <div><label style="display:block;font-size:12.5px;font-weight:700;color:var(--fg2);margin-bottom:6px">Message</label><textarea placeholder="Tell us about your project..." style="width:100%;font-family:var(--font-body);font-size:15px;padding:12px 14px;border:1.5px solid var(--line-strong);border-radius:var(--r-md);background:#fff;color:var(--ink);min-height:80px;resize:vertical"></textarea></div>
+      <button class="btn btn-grad" style="width:100%;justify-content:center;padding:15px">Send Message</button>
+    </div>
+  </div>
+</div>
+<script>
+// Sticky header
+const hdr = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  hdr.classList.toggle('solid', window.scrollY > 20);
+  hdr.classList.toggle('top', window.scrollY <= 20);
+});
+// Mobile menu
+
+function toggleFaq(id, accent) {
+  const item = document.getElementById(id);
+  const btn = item.querySelector('.faq-q');
+  const ans = item.querySelector('.faq-a');
+  const isOpen = btn.classList.contains('active');
+  // Close all
+  document.querySelectorAll('.faq-q').forEach(b => {
+    b.classList.remove('active');
+    b.closest('.faq-item').querySelector('.faq-a').style.maxHeight = '0';
+  });
+  if (!isOpen) {
+    btn.classList.add('active');
+    btn.style.setProperty('--faq-ac', accent);
+    btn.closest('.faq-item').querySelector('.faq-a').style.maxHeight = ans.scrollHeight + 'px';
+  }
+}
+
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+</script>
+<script src="../js/hero-orbit.js" defer></script>
+<script src="../js/brand-accordion.js" defer></script>
+<script src="../js/site.js" defer></script>
+<script src="../js/blog-insights.js" defer></script>
+</body>
+</html>

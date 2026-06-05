@@ -108,7 +108,7 @@ def site_footer_html(prefix: str = "") -> str:
     </div>
     <div class="footer-bottom">
       <span>© 2026 YB Marketing. All rights reserved.</span>
-      <div style="display:flex;gap:18px"><a href="#">Privacy Policy</a><a href="{p}sitemap.html">Sitemap</a></div>
+      <div style="display:flex;gap:18px"><a href="{p}privacy-policy.html">Privacy Policy</a><a href="{p}sitemap.html">Sitemap</a></div>
     </div>
   </div>
 </footer>"""

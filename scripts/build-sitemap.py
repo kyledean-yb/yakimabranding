@@ -25,6 +25,7 @@ ROOT_PAGES = [
     ("insights.html", "Insights"),
     ("contact.html", "Contact"),
     ("washington-state-sales-tax.html", "Washington State Sales Tax Notice"),
+    ("privacy-policy.html", "Privacy Policy"),
     ("sitemap.html", "Sitemap"),
 ]
 

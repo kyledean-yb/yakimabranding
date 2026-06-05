@@ -540,6 +540,19 @@ def schemas_for_rel_path(rel: str) -> tuple[list[dict], str, str]:
         notes = "Canonical URL uses /washington-state-sales-tax-notice per spec; file is washington-state-sales-tax.html"
         return global_schemas() + page_schemas, "Organization, WebSite, WebPage", notes
 
+    if rel == "privacy-policy.html":
+        page_schemas.append(
+            webpage_schema(
+                "Privacy Policy | YB Marketing",
+                f"{SITE}/privacy-policy",
+                crumbs=[
+                    (1, "Home", SITE),
+                    (2, "Privacy Policy", f"{SITE}/privacy-policy"),
+                ],
+            )
+        )
+        return global_schemas() + page_schemas, "Organization, WebSite, WebPage", notes
+
     if rel == "thank-you.html":
         page_schemas.append(
             {

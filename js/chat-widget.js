@@ -60,33 +60,45 @@
     root.innerHTML =
       '<button type="button" class="yb-chat-widget__launcher" aria-label="Open chat" aria-expanded="false" aria-controls="yb-chat-panel">' +
       ICONS.chat +
-      '</button>' +
-      '<section id="yb-chat-panel" class="yb-chat-widget__panel" role="dialog" aria-modal="true" aria-labelledby="yb-chat-title" aria-hidden="true" hidden>' +
-      '  <header class="yb-chat-widget__head">' +
-      '    <div class="yb-chat-widget__brand">' +
-      '      <span class="yb-chat-widget__avatar" aria-hidden="true">' + ICONS.bot + '</span>' +
-      '      <div>' +
-      '        <div id="yb-chat-title" class="yb-chat-widget__title">YB Marketing</div>' +
-      '        <div class="yb-chat-widget__status"><span class="yb-chat-widget__status-dot" aria-hidden="true"></span>Online now</div>' +
-      '      </div>' +
+      '</button>';
+
+    var panel = document.createElement('section');
+    panel.id = 'yb-chat-panel';
+    panel.className = 'yb-chat-widget__panel';
+    panel.setAttribute('role', 'dialog');
+    panel.setAttribute('aria-modal', 'true');
+    panel.setAttribute('aria-labelledby', 'yb-chat-title');
+    panel.setAttribute('aria-hidden', 'true');
+    panel.hidden = true;
+    panel.innerHTML =
+      '<header class="yb-chat-widget__head">' +
+      '  <div class="yb-chat-widget__brand">' +
+      '    <span class="yb-chat-widget__avatar" aria-hidden="true">' + ICONS.bot + '</span>' +
+      '    <div>' +
+      '      <div id="yb-chat-title" class="yb-chat-widget__title">YB Marketing</div>' +
+      '      <div class="yb-chat-widget__status"><span class="yb-chat-widget__status-dot" aria-hidden="true"></span>Online now</div>' +
       '    </div>' +
-      '    <button type="button" class="yb-chat-widget__close" aria-label="Close chat">' + ICONS.close + '</button>' +
-      '  </header>' +
-      '  <div class="yb-chat-widget__messages" role="log" aria-live="polite" aria-relevant="additions"></div>' +
+      '  </div>' +
+      '  <button type="button" class="yb-chat-widget__close" aria-label="Close chat">' + ICONS.close + '</button>' +
+      '</header>' +
+      '<div class="yb-chat-widget__messages" role="log" aria-live="polite" aria-relevant="additions"></div>' +
+      '<form class="yb-chat-widget__composer" action="#" method="post">' +
+      '  <label class="yb-chat-widget__composer-label" for="yb-chat-input">Type your message</label>' +
+      '  <input id="yb-chat-input" class="yb-chat-widget__input" type="text" name="message" autocomplete="off" placeholder="Type your message..." maxlength="2000">' +
+      '  <button type="submit" class="yb-chat-widget__send" aria-label="Send message">' + ICONS.send + '</button>' +
+      '</form>' +
+      '<div class="yb-chat-widget__foot">' +
       '  <div class="yb-chat-widget__ctas">' +
       '    <a class="yb-chat-widget__cta yb-chat-widget__cta--call" href="tel:' + cfg.phone + '">' + ICONS.phone + '<span>Call Us</span></a>' +
       '    <a class="yb-chat-widget__cta yb-chat-widget__cta--email" href="mailto:' + cfg.email + '">' + ICONS.mail + '<span>Email Us</span></a>' +
       '    <a class="yb-chat-widget__cta yb-chat-widget__cta--schedule" href="' + cfg.scheduleUrl + '" target="_blank" rel="noopener noreferrer">' + ICONS.calendar + '<span>Schedule Call</span></a>' +
       '  </div>' +
-      '  <form class="yb-chat-widget__composer" action="#" method="post">' +
-      '    <label class="yb-chat-widget__composer-label" for="yb-chat-input">Type your message</label>' +
-      '    <input id="yb-chat-input" class="yb-chat-widget__input" type="text" name="message" autocomplete="off" placeholder="Type your message..." maxlength="2000">' +
-      '    <button type="submit" class="yb-chat-widget__send" aria-label="Send message">' + ICONS.send + '</button>' +
-      '  </form>' +
-      '</section>';
+      '</div>';
 
     document.body.appendChild(root);
-    return root;
+    document.body.appendChild(panel);
+
+    return { root: root, panel: panel };
   }
 
   function appendMessage(messagesEl, text, role) {
@@ -151,37 +163,37 @@
       });
   }
 
-  function openPanel(root) {
-    var panel = root.querySelector('.yb-chat-widget__panel');
-    var launcher = root.querySelector('.yb-chat-widget__launcher');
+  function openPanel(root, panel, launcher) {
     panel.hidden = false;
     panel.setAttribute('aria-hidden', 'false');
     launcher.setAttribute('aria-expanded', 'true');
     root.classList.add('is-open');
+    panel.classList.add('is-open');
     requestAnimationFrame(function () {
-      root.querySelector('#yb-chat-input').focus();
+      panel.querySelector('#yb-chat-input').focus();
     });
   }
 
-  function closePanel(root) {
-    var panel = root.querySelector('.yb-chat-widget__panel');
-    var launcher = root.querySelector('.yb-chat-widget__launcher');
+  function closePanel(root, panel, launcher) {
     panel.setAttribute('aria-hidden', 'true');
     launcher.setAttribute('aria-expanded', 'false');
     root.classList.remove('is-open');
+    panel.classList.remove('is-open');
     setTimeout(function () {
-      if (!root.classList.contains('is-open')) panel.hidden = true;
+      if (!panel.classList.contains('is-open')) panel.hidden = true;
     }, 280);
   }
 
   function init() {
     var cfg = getConfig();
-    var root = buildWidget(cfg);
+    var widgets = buildWidget(cfg);
+    var root = widgets.root;
+    var panel = widgets.panel;
     var launcher = root.querySelector('.yb-chat-widget__launcher');
-    var closeBtn = root.querySelector('.yb-chat-widget__close');
-    var form = root.querySelector('.yb-chat-widget__composer');
-    var input = root.querySelector('#yb-chat-input');
-    var messagesEl = root.querySelector('.yb-chat-widget__messages');
+    var closeBtn = panel.querySelector('.yb-chat-widget__close');
+    var form = panel.querySelector('.yb-chat-widget__composer');
+    var input = panel.querySelector('#yb-chat-input');
+    var messagesEl = panel.querySelector('.yb-chat-widget__messages');
     var welcomeShown = false;
 
     function ensureWelcome() {
@@ -191,21 +203,21 @@
     }
 
     launcher.addEventListener('click', function () {
-      if (root.classList.contains('is-open')) {
-        closePanel(root);
+      if (panel.classList.contains('is-open')) {
+        closePanel(root, panel, launcher);
       } else {
         ensureWelcome();
-        openPanel(root);
+        openPanel(root, panel, launcher);
       }
     });
 
     closeBtn.addEventListener('click', function () {
-      closePanel(root);
+      closePanel(root, panel, launcher);
     });
 
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && root.classList.contains('is-open')) {
-        closePanel(root);
+      if (e.key === 'Escape' && panel.classList.contains('is-open')) {
+        closePanel(root, panel, launcher);
       }
     });
 

@@ -86,20 +86,21 @@ def load_location_hubs() -> list[dict]:
 
 
 LOCAL_SERVICE_FOLDERS = [
-    ("seo", "SEO & AI Optimization"),
-    ("google-ads", "Google Ads Management"),
-    ("web-design", "Web Design & Development"),
-    ("social-media", "Social Media Management"),
-    ("branding", "Branding & Design"),
+    ("seo", "SEO"),
+    ("google-ads", "Google Ads"),
+    ("web-design", "Web Design"),
+    ("social-media", "Social Media"),
+    ("branding", "Branding"),
 ]
 
 
-def location_group_links(slug: str) -> list[tuple[str, str]]:
+def location_group_links(slug: str, city: str, state: str) -> list[tuple[str, str]]:
+    place = f"{city}, {state}"
     links = []
-    for folder, label in LOCAL_SERVICE_FOLDERS:
+    for folder, service in LOCAL_SERVICE_FOLDERS:
         if not (ROOT / folder / f"{slug}.html").exists():
             continue
-        links.append((f"{folder}/{slug}.html", label))
+        links.append((f"{folder}/{slug}.html", f"{service} in {place}"))
     return links
 
 
@@ -122,7 +123,7 @@ def collect_pages() -> tuple[
         slug = loc["slug"]
         group_title = f"Digital Marketing Agency in {city}, {state}"
         hub_href = f"locations/{slug}.html"
-        local_groups.append((group_title, hub_href, location_group_links(slug)))
+        local_groups.append((group_title, hub_href, location_group_links(slug, city, state)))
 
     for href, label in ROOT_PAGES:
         if href == "sitemap.html":
@@ -203,7 +204,7 @@ def render_local_section(groups: list[tuple[str, str, list[tuple[str, str]]]]) -
     body = "\n".join(subgroups)
     return f"""      <div class="sitemap-section sitemap-section--full">
         <h2>Locations</h2>
-        <p class="sitemap-locations-intro">Browse by city — each location includes a hub page plus local SEO, Google Ads, web design, social media, and branding pages.</p>
+        <p class="sitemap-locations-intro">Browse by city — each card links to the local hub page and localized service pages (for example, SEO in Boise, ID).</p>
         <div class="sitemap-local-grid">
 {body}
         </div>
@@ -268,18 +269,20 @@ a{{color:inherit;text-decoration:none}}
 .sitemap-section ul,.sitemap-col ul{{list-style:none;display:grid;gap:10px}}
 .sitemap-section a,.sitemap-col a{{color:var(--yb-blue);font-size:15px;font-weight:600;line-height:1.45;transition:color 200ms}}
 .sitemap-section a:hover,.sitemap-col a:hover{{color:var(--ink)}}
-.sitemap-local-grid{{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px 36px;margin-top:4px}}
+.sitemap-local-grid{{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 24px;margin-top:8px}}
 .sitemap-locations-intro{{color:var(--fg2);font-size:15px;line-height:1.65;margin:-4px 0 28px;max-width:820px}}
 .sitemap-locations-intro a{{color:var(--yb-blue);font-weight:700}}
-.sitemap-subgroup h3{{font-family:var(--font-display);font-size:.92rem;font-weight:700;color:var(--fg2);margin:0 0 12px;letter-spacing:.01em;line-height:1.35}}
+.sitemap-subgroup{{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--r-lg);padding:20px 22px}}
+.sitemap-subgroup ul{{gap:8px}}
+.sitemap-subgroup a{{font-size:14px}}
+.sitemap-subgroup h3{{font-family:var(--font-display);font-size:1rem;font-weight:800;color:var(--ink);margin:0 0 14px;letter-spacing:.01em;line-height:1.35}}
 .sitemap-subgroup h3 a{{color:inherit;text-decoration:none;transition:color 200ms}}
 .sitemap-subgroup h3 a:hover{{color:var(--yb-blue)}}
 .sitemap-insights-list{{display:block;columns:3;column-gap:48px}}
 .sitemap-insights-list li{{break-inside:avoid;margin-bottom:10px}}
 .sitemap-count{{margin-top:36px;padding:18px 22px;border-radius:var(--r-lg);background:var(--bg-soft);border:1px solid var(--line);color:var(--fg2);font-size:14px}}
-@media(max-width:1100px){{.sitemap-local-grid{{grid-template-columns:repeat(3,minmax(0,1fr))}}}}
-@media(max-width:900px){{.sitemap-compact{{grid-template-columns:1fr}}.sitemap-local-grid{{grid-template-columns:repeat(2,minmax(0,1fr))}}.sitemap-insights-list{{columns:2}}}}
-@media(max-width:640px){{.sitemap-local-grid{{grid-template-columns:1fr}}.sitemap-insights-list{{columns:1}}}}
+@media(max-width:900px){{.sitemap-compact{{grid-template-columns:1fr}}.sitemap-local-grid{{grid-template-columns:1fr}}.sitemap-insights-list{{columns:2}}}}
+@media(max-width:640px){{.sitemap-insights-list{{columns:1}}}}
 </style>
 <link rel="stylesheet" href="site.css">
 </head>

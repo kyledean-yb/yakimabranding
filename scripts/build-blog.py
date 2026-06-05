@@ -11,6 +11,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from about_nav_snippet import about_nav_shell
+from schema_markup import seo_head_html
+from site_accessibe_snippet import ACCESSIBE_BODY_SCRIPT
+from site_staging_seo_snippet import STAGING_ROBOTS_META
 from site_footer_snippet import site_footer_html
 
 def about_nav_block(prefix: str) -> str:
@@ -370,6 +373,7 @@ def page_shell(prefix, title, desc, body, active_blog=False, extra_head="", extr
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+{STAGING_ROBOTS_META}
 <title>{html.escape(title)}</title>
 <meta name="description" content="{html.escape(desc)}">
 <link rel="stylesheet" href="{prefix}colors_and_type.css">
@@ -411,10 +415,12 @@ a{{color:inherit;text-decoration:none}}
 {extra_head}
 </head>
 <body class="blog-page">
+{ACCESSIBE_BODY_SCRIPT}
 {header_nav(prefix, active_blog)}
 {body}
 {footer_wave}
 {site_footer_html(prefix)}
+<script src="{prefix}js/newsletter-popup.js" defer></script>
 <script src="{prefix}js/site.js" defer></script>
 <script>
 document.getElementById('hamburger')?.addEventListener('click', function () {{
@@ -503,6 +509,7 @@ def build():
             desc,
             body,
             footer_wave=WAVE_FOOTER_FROM_WHITE,
+            extra_head=seo_head_html(f"blog/posts/{slug}.html"),
         )
         out = POSTS_DIR / f"{slug}.html"
         out.write_text(page, encoding="utf-8")
@@ -535,7 +542,7 @@ def build():
           <span class="blog-card-cat blog-card-cat--{html.escape(topic)}">{html.escape(topic_label)}</span>
           <h2>{html.escape(e['title'])}</h2>
           <p>{html.escape(e['excerpt'])}</p>
-          <div class="blog-card-meta"><span>{html.escape(e['dateFormatted'])}</span><span>{e['readingTime']} min read</span></div>
+          <div class="blog-card-meta"><span>{e['readingTime']} min read</span></div>
           <span class="blog-card-link">Read Article {ARROW_MD}</span>
         </div>
       </a>""")
@@ -577,6 +584,7 @@ def build():
             "Digital marketing insights from YB Marketing.",
             index_body,
             active_blog=True,
+            extra_head=seo_head_html("insights.html"),
             extra_script=filter_script,
             footer_wave=WAVE_FOOTER_FROM_SOFT,
         ),

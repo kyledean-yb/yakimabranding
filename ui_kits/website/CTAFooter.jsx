@@ -87,7 +87,7 @@ function Footer() {
           color: 'var(--fg2-on-dark)', fontSize: 13 }}>
           <span>© 2026 YB Marketing. All rights reserved.</span>
           <span style={{ display: 'flex', gap: 20 }}><a href="#" onClick={e=>e.preventDefault()} style={{ color: 'var(--fg2-on-dark)', textDecoration: 'none' }}>Privacy Policy</a>
-            <a href="#" onClick={e=>e.preventDefault()} style={{ color: 'var(--fg2-on-dark)', textDecoration: 'none' }}>Sitemap</a></span>
+            <a href="/sitemap.html" style={{ color: 'var(--fg2-on-dark)', textDecoration: 'none' }}>Sitemap</a></span>
         </div>
       </Container>
     </footer>

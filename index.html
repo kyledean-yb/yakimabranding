@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="favicon.png">
 <title>YB Marketing — Full-Spectrum Branding &amp; Digital Marketing</title>
@@ -197,7 +198,7 @@ section{padding:88px 0}
 /* ─── FOOTER ─────────────────────────────────────────── */
 .footer{background:var(--grad-navy);color:#fff;position:relative;overflow:hidden;padding:64px 0 28px}
 .footer-mesh{position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.5;pointer-events:none}
-.footer-grid{position:relative;display:grid;grid-template-columns:1.7fr 1fr 1fr 1.4fr;gap:40px;margin-bottom:42px}
+.footer-grid{position:relative;display:grid;grid-template-columns:1.7fr 1fr 1fr 1.4fr;gap:40px;margin-bottom:32px}
 .footer-brand p{color:var(--fg2-on-dark);font-size:14px;max-width:280px;margin:14px 0 18px}
 .footer-socials{display:flex;gap:10px}
 .social-btn{width:38px;height:38px;border-radius:var(--r-sm);background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:#fff;transition:background var(--dur)}
@@ -228,6 +229,63 @@ section{padding:88px 0}
 .field input,.field textarea{width:100%;font-family:var(--font-body);font-size:15px;padding:12px 14px;border:1.5px solid var(--line-strong);border-radius:var(--r-md);background:#fff;color:var(--ink);transition:all var(--dur) var(--ease);resize:vertical}
 .field input:focus,.field textarea:focus{outline:none;border-color:var(--yb-blue);box-shadow:0 0 0 4px var(--wash-blue)}
 .field textarea{min-height:80px}
+
+/* ─── HUBSPOT HOME FORM ─────────────────────────────────────────── */
+.yb-hs-form-panel .yb-hs-form{min-height:280px}
+.yb-hs-form .hs-form-frame,.yb-hs-form iframe{width:100%!important;max-width:100%!important;display:block}
+.yb-hs-form-panel,
+.yb-hs-form,
+.yb-hs-form .hs-form-frame{
+  --hsf-global__font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
+  --hsf-global__font-size:15px;
+  --hsf-global__color:#16203A;
+  --hsf-global-error__color:#d93025;
+  --hsf-background__background-color:transparent;
+  --hsf-background__border-width:0;
+  --hsf-background__padding:0;
+  --hsf-row__vertical-spacing:16px;
+  --hsf-row__horizontal-spacing:14px;
+  --hsf-module__vertical-spacing:16px;
+  --hsf-field-label__font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
+  --hsf-field-label__font-size:12.5px;
+  --hsf-field-label__color:#4A5673;
+  --hsf-field-label-requiredindicator__color:#4A5673;
+  --hsf-field-input__font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
+  --hsf-field-input__font-size:15px;
+  --hsf-field-input__color:#16203A;
+  --hsf-field-input__background-color:#fff;
+  --hsf-field-input__placeholder-color:#7C879E;
+  --hsf-field-input__border-color:#CFD8E8;
+  --hsf-field-input__border-width:1.5px;
+  --hsf-field-input__border-style:solid;
+  --hsf-field-input__border-radius:16px;
+  --hsf-field-input__padding:12px 14px;
+  --hsf-field-textarea__font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
+  --hsf-field-textarea__font-size:15px;
+  --hsf-field-textarea__color:#16203A;
+  --hsf-field-textarea__background-color:#fff;
+  --hsf-field-textarea__placeholder-color:#7C879E;
+  --hsf-field-textarea__border-color:#CFD8E8;
+  --hsf-field-textarea__border-width:1.5px;
+  --hsf-field-textarea__border-style:solid;
+  --hsf-field-textarea__border-radius:16px;
+  --hsf-field-textarea__padding:12px 14px;
+  --hsf-button__font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
+  --hsf-button__font-size:15px;
+  --hsf-button__font-weight:700;
+  --hsf-button__color:#fff;
+  --hsf-button__background-color:#3F6FD6;
+  --hsf-button__background-image:linear-gradient(135deg,#3F6FD6 0%,#2BC4F0 100%);
+  --hsf-button__border-radius:16px;
+  --hsf-button__padding:15px 22px;
+  --hsf-button__box-shadow:0 14px 30px -10px rgba(63,111,214,.45);
+  --hsf-heading__font-family:'Sora',system-ui,-apple-system,sans-serif;
+  --hsf-heading__color:#16203A;
+  --hsf-richtext__font-size:13px;
+  --hsf-richtext__color:#7C879E;
+  --hsf-erroralert__font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
+  --hsf-erroralert__font-size:13px;
+}
 .modal-success{padding:48px 28px;text-align:center;display:none}
 .modal-success.show{display:block}
 .modal-form.hide{display:none}
@@ -302,8 +360,17 @@ section{padding:88px 0}
 </style>
 <link rel="stylesheet" href="site.css">
 
+<!-- yb-schema-start -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"YB Marketing","alternateName":"Yakima Branding","url":"https://yakimabranding.com","logo":"https://yakimabranding.com/assets/yb-logo-color.png","description":"Award-winning digital marketing agency helping businesses grow through strategic branding, SEO, and comprehensive digital solutions.","telephone":"+15099019735","email":"info@yakimabranding.com","foundingDate":"2004","address":{"@type":"PostalAddress","addressLocality":"Yakima","addressRegion":"WA","addressCountry":"US"},"areaServed":["Yakima, WA","Ellensburg, WA","Tri-Cities, WA","Spokane, WA","Boise, ID","Coeur d'Alene, ID","Tacoma, WA","Vancouver, WA","Wenatchee, WA","Walla Walla, WA","Pacific Northwest"],"sameAs":["https://www.facebook.com/yakimabranding","https://www.instagram.com/yakimabranding","https://www.linkedin.com/company/yakima-branding"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"43","bestRating":"5"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"YB Marketing","url":"https://yakimabranding.com","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://yakimabranding.com/insights?search={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"YB Marketing","image":"https://yakimabranding.com/assets/team-photo.webp","url":"https://yakimabranding.com","telephone":"+15099019735","email":"info@yakimabranding.com","priceRange":"$$","address":{"@type":"PostalAddress","addressLocality":"Yakima","addressRegion":"WA","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":46.6021,"longitude":-120.5059},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"17:00"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"43","bestRating":"5"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"YB Marketing — Digital Marketing Agency | Yakima, WA","url":"https://yakimabranding.com","description":"Award-winning digital marketing agency helping businesses grow through strategic branding, SEO, and comprehensive digital solutions. Rooted in Yakima, WA.","breadcrumb":{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://yakimabranding.com"}]}}</script>
+<!-- yb-schema-end -->
 </head>
 <body>
+<script>
+(function(){ var s = document.createElement('script'); var h = document.querySelector('head') || document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function(){ acsbJS.init({ statementLink : '', footerHtml : '', hideMobile : false, hideTrigger : false, disableBgProcess : false, language : 'en', position : 'left', leadColor : '#146FF8', triggerColor : '#146FF8', triggerRadius : '50%', triggerPositionX : 'left', triggerPositionY : 'bottom', triggerIcon : 'people', triggerSize : 'medium', triggerOffsetX : 20, triggerOffsetY : 20, mobile : { triggerSize : 'small', triggerPositionX : 'right', triggerPositionY : 'bottom', triggerOffsetX : 10, triggerOffsetY : 10, triggerRadius : '20' } }); }; h.appendChild(s); })();
+</script>
 
 <!-- ANNOUNCEMENT BANNER -->
 
@@ -1164,46 +1231,10 @@ section{padding:88px 0}
       </div>
 
       <!-- FORM PANEL -->
-      <div style="background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);padding:28px;box-shadow:var(--sh-sm)">
+      <div class="yb-hs-form-panel" style="background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);padding:28px;box-shadow:var(--sh-sm)">
         <h3 style="font-family:var(--font-display);font-weight:700;font-size:21px;color:var(--ink);margin:0 0 22px">Send Us a Message</h3>
-        <form id="contactForm" onsubmit="submitContactForm(event)" style="display:grid;gap:16px">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-            <div class="field"><label>Name *</label><input type="text" required placeholder="What's your name?"></div>
-            <div class="field"><label>Email *</label><input type="email" required placeholder="What's your email?"></div>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-            <div class="field"><label>Company Name or URL *</label><input type="text" required placeholder="What's your company?"></div>
-            <div class="field"><label>Cell # *</label><input type="tel" required placeholder="What's your cell #?"></div>
-          </div>
-          <div class="field">
-            <label>Message</label>
-            <textarea id="msgArea" placeholder="What can we help you with?" oninput="updateCount()" style="min-height:120px;resize:vertical"></textarea>
-            <div style="text-align:right;font-size:12px;color:var(--fg3);margin-top:4px"><span id="msgCount">0</span> / 180</div>
-          </div>
-          <!-- reCAPTCHA placeholder -->
-          <div style="border:1px solid var(--line);border-radius:var(--r-md);padding:14px 16px;display:flex;align-items:center;justify-content:space-between;background:var(--bg-soft)">
-            <div style="display:flex;align-items:center;gap:12px">
-              <div style="width:24px;height:24px;border:2px solid var(--line-strong);border-radius:4px;flex:none"></div>
-              <div>
-                <div style="font-size:14px;font-weight:600;color:var(--ink)">I'm not a robot</div>
-                <div style="font-size:10.5px;color:var(--fg3)">reCAPTCHA placeholder</div>
-              </div>
-            </div>
-            <div style="text-align:center">
-              <svg width="32" height="32" viewBox="0 0 64 64" style="opacity:.4"><path d="M32 4C16.536 4 4 16.536 4 32s12.536 28 28 28 28-12.536 28-28S47.464 4 32 4z" fill="#4A90D9"/><path d="M32 12c-11.046 0-20 8.954-20 20s8.954 20 20 20 20-8.954 20-20-8.954-20-20-20z" fill="#fff"/><path d="M32 18c-7.732 0-14 6.268-14 14s6.268 14 14 14 14-6.268 14-14-6.268-14-14-14z" fill="#4A90D9" opacity=".3"/></svg>
-              <div style="font-size:9px;color:var(--fg3);font-weight:700;line-height:1.2">reCAPTCHA<br>Privacy · Terms</div>
-            </div>
-          </div>
-          <button type="submit" class="btn btn-grad" style="justify-content:center;width:100%;padding:15px">Send Message
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-          </button>
-        </form>
-        <div id="formSuccess" style="display:none;text-align:center;padding:32px 0">
-          <div style="width:64px;height:64px;border-radius:50%;background:var(--wash-mint);color:var(--yb-mint);display:flex;align-items:center;justify-content:center;margin:0 auto 16px">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          </div>
-          <h3 class="yb-h3" style="margin:0 0 8px">Thanks — we'll be in touch!</h3>
-          <p style="font-size:15px;color:var(--fg2)">One of our experts will reach out within 2 business hours.</p>
+        <div class="yb-hs-form">
+          <div class="hs-form-frame" data-region="na2" data-form-id="c7a3c349-a4e9-4608-9771-9aa39c7f05e1" data-portal-id="243964841"></div>
         </div>
       </div>
 
@@ -1256,9 +1287,9 @@ section{padding:88px 0}
           <a href="mailto:info@yakimabranding.com" style="color:var(--fg2-on-dark);font-size:14px;display:flex;align-items:center;gap:9px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@yakimabranding.com</a>
         </div>
         <div class="footer-socials">
-          <a href="https://www.facebook.com/yakimabranding" class="social-btn" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-          <a href="https://www.instagram.com/yb.marketing_/" class="social-btn" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="17" height="17"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a>
-          <a href="https://www.linkedin.com/company/18939370" class="social-btn" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://www.facebook.com/yakimabranding" class="social-btn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/yb.marketing_/" class="social-btn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="17" height="17"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a>
+          <a href="https://www.linkedin.com/company/18939370" class="social-btn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
         </div>
       </div>
       <div class="footer-col">
@@ -1289,9 +1320,40 @@ section{padding:88px 0}
         <div style="display:flex;align-items:center;gap:7px;font-size:13px;color:var(--yb-cyan);font-weight:600"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Yakima, WA &nbsp;·&nbsp; Pacific Northwest</div>
       </div>
     </div>
+    <div class="footer-locations">
+      <h4>Locations</h4>
+      <div class="footer-locations-scroll">
+        <div class="footer-locations-track">
+          <div class="footer-locations-set">
+          <a href="locations/boise-id.html" class="footer-loc-btn">Boise, ID</a>
+          <a href="locations/coeur-dalene-id.html" class="footer-loc-btn">Coeur d&#x27;Alene, ID</a>
+          <a href="locations/ellensburg-wa.html" class="footer-loc-btn">Ellensburg, WA</a>
+          <a href="locations/spokane-wa.html" class="footer-loc-btn">Spokane, WA</a>
+          <a href="locations/tacoma-wa.html" class="footer-loc-btn">Tacoma, WA</a>
+          <a href="locations/tri-cities-wa.html" class="footer-loc-btn">Tri-Cities, WA</a>
+          <a href="locations/vancouver-wa.html" class="footer-loc-btn">Vancouver, WA</a>
+          <a href="locations/walla-walla-wa.html" class="footer-loc-btn">Walla Walla, WA</a>
+          <a href="locations/wenatchee-wa.html" class="footer-loc-btn">Wenatchee, WA</a>
+          <a href="locations/yakima-wa.html" class="footer-loc-btn">Yakima, WA</a>
+          </div>
+          <div class="footer-locations-set" aria-hidden="true">
+          <a href="locations/boise-id.html" class="footer-loc-btn">Boise, ID</a>
+          <a href="locations/coeur-dalene-id.html" class="footer-loc-btn">Coeur d&#x27;Alene, ID</a>
+          <a href="locations/ellensburg-wa.html" class="footer-loc-btn">Ellensburg, WA</a>
+          <a href="locations/spokane-wa.html" class="footer-loc-btn">Spokane, WA</a>
+          <a href="locations/tacoma-wa.html" class="footer-loc-btn">Tacoma, WA</a>
+          <a href="locations/tri-cities-wa.html" class="footer-loc-btn">Tri-Cities, WA</a>
+          <a href="locations/vancouver-wa.html" class="footer-loc-btn">Vancouver, WA</a>
+          <a href="locations/walla-walla-wa.html" class="footer-loc-btn">Walla Walla, WA</a>
+          <a href="locations/wenatchee-wa.html" class="footer-loc-btn">Wenatchee, WA</a>
+          <a href="locations/yakima-wa.html" class="footer-loc-btn">Yakima, WA</a>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="footer-bottom">
       <span>© 2026 YB Marketing. All rights reserved.</span>
-      <div style="display:flex;gap:18px"><a href="#">Privacy Policy</a><a href="#">Sitemap</a></div>
+      <div style="display:flex;gap:18px"><a href="#">Privacy Policy</a><a href="sitemap.html">Sitemap</a></div>
     </div>
   </div>
 </footer>
@@ -1309,15 +1371,15 @@ section{padding:88px 0}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
     </div>
-    <div class="modal-form" id="modalForm">
+    <form class="modal-form yb-contact-form" id="modalForm" action="#" method="post">
       <div class="field"><label>Name *</label><input type="text" required placeholder="Your name"></div>
       <div class="field"><label>Email *</label><input type="email" required placeholder="you@company.com"></div>
       <div class="field"><label>Company Name or URL *</label><input type="text" required placeholder="yourcompany.com"></div>
       <div class="field"><label>How can we help?</label><textarea placeholder="Tell us about your project…"></textarea></div>
-      <button class="btn btn-grad" style="justify-content:center;width:100%" onclick="submitForm()">Send Message
+      <button type="submit" class="btn btn-grad" style="justify-content:center;width:100%">Send Message
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </button>
-    </div>
+    </form>
     <div class="modal-success" id="modalSuccess">
       <div class="success-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
       <h3 class="yb-h3" style="margin:0 0 8px">Thanks — we'll be in touch!</h3>
@@ -1372,10 +1434,6 @@ function closeModalDirect() {
   overlay.classList.remove('open');
   document.body.style.overflow = '';
 }
-function submitForm() {
-  mForm.classList.add('hide');
-  mSuccess.classList.add('show');
-}
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
 </script>
 
@@ -1418,11 +1476,13 @@ function calSelect(btn, d) {
   btn.dataset.sel='1';btn.style.background='var(--yb-blue)';btn.style.color='#fff';
 }
 document.addEventListener('DOMContentLoaded', initCal);
-// ─── CONTACT FORM ─────────────────────────────────────────────────────
-function updateCount(){const a=document.getElementById('msgArea');if(a)document.getElementById('msgCount').textContent=Math.min(a.value.length,180);}
-function submitContactForm(e){e.preventDefault();document.getElementById('contactForm').style.display='none';document.getElementById('formSuccess').style.display='block';}
+
 </script>
+<script src="js/hubspot-home-form.js"></script>
+<script src="https://js-na2.hsforms.net/forms/embed/243964841.js" defer></script>
 <script src="js/hero-orbit.js" defer></script>
+<script src="js/contact-forms.js" defer></script>
+<script src="js/newsletter-popup.js" defer></script>
 <script src="js/site.js" defer></script>
 <script src="js/blog-insights.js" defer></script>
 </body>

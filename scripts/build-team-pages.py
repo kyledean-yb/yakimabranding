@@ -9,6 +9,8 @@ ROOT = Path(__file__).resolve().parent.parent
 ABOUT_DIR = ROOT / "about"
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from site_nav_snippet import site_header_html
+from site_accessibe_snippet import ACCESSIBE_BODY_SCRIPT
+from site_staging_seo_snippet import STAGING_ROBOTS_META
 from site_footer_snippet import site_footer_html
 
 PREFIX = "../"
@@ -39,6 +41,7 @@ def shell(title, desc, theme, body):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+{STAGING_ROBOTS_META}
 <title>{html.escape(title)}</title>
 <meta name="description" content="{html.escape(desc)}">
 <link rel="stylesheet" href="{PREFIX}colors_and_type.css">
@@ -55,9 +58,11 @@ a{{color:inherit;text-decoration:none}}
 </style>
 </head>
 <body class="team-profile-page team-{theme}">
+{ACCESSIBE_BODY_SCRIPT}
 {header_html()}
 {body}
 {footer_html()}
+<script src="{PREFIX}js/newsletter-popup.js" defer></script>
 <script src="{PREFIX}js/site.js" defer></script>
 <script>
 document.getElementById('hamburger')?.addEventListener('click', function () {{
@@ -155,7 +160,7 @@ def team_contact_form_html() -> str:
     <div class="team-aside-card team-aside-form">
       <h3>Send a message</h3>
       <p class="team-form-lead">Fill out the form and we&rsquo;ll be in touch as soon as possible.</p>
-      <form class="team-form" action="#" method="post" onsubmit="return false">
+      <form class="team-form yb-contact-form" action="#" method="post">
         <div class="team-form-row">
           <div class="team-form-field">
             <label for="team-name">Name *</label>

@@ -1,8 +1,58 @@
 """Site footer markup (matches index.html)."""
 
+import html
+import json
+import subprocess
+from functools import lru_cache
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+
+FOOTER_GRID_COLUMNS = "1.7fr 1fr 1fr 1.4fr"
+
+
+@lru_cache(maxsize=1)
+def load_footer_locations() -> list[dict]:
+    script = (
+        "import { locationHubs } from './locationHubs.js';"
+        "process.stdout.write(JSON.stringify(locationHubs));"
+    )
+    result = subprocess.run(
+        ["node", "--input-type=module", "-e", script],
+        cwd=ROOT / "data",
+        capture_output=True,
+        text=True,
+        check=True,
+    )
+    return json.loads(result.stdout)
+
+
+def footer_location_buttons(prefix: str) -> str:
+    buttons = []
+    for loc in sorted(load_footer_locations(), key=lambda item: (item["state"], item["city"])):
+        label = f"{loc['city']}, {loc['state']}"
+        href = f"{prefix}locations/{loc['slug']}.html"
+        buttons.append(f'<a href="{href}" class="footer-loc-btn">{html.escape(label)}</a>')
+    return "\n          ".join(buttons)
+
+
+def footer_locations_marquee(prefix: str) -> str:
+    buttons = footer_location_buttons(prefix)
+    return f"""      <div class="footer-locations-scroll">
+        <div class="footer-locations-track">
+          <div class="footer-locations-set">
+          {buttons}
+          </div>
+          <div class="footer-locations-set" aria-hidden="true">
+          {buttons}
+          </div>
+        </div>
+      </div>"""
+
 
 def site_footer_html(prefix: str = "") -> str:
     p = prefix
+    location_marquee = footer_locations_marquee(p)
     return f"""
 <footer class="footer">
   <div class="footer-mesh"></div>
@@ -52,9 +102,13 @@ def site_footer_html(prefix: str = "") -> str:
         <div style="display:flex;align-items:center;gap:7px;font-size:13px;color:var(--yb-cyan);font-weight:600"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Yakima, WA &nbsp;·&nbsp; Pacific Northwest</div>
       </div>
     </div>
+    <div class="footer-locations">
+      <h4>Locations</h4>
+{location_marquee}
+    </div>
     <div class="footer-bottom">
       <span>© 2026 YB Marketing. All rights reserved.</span>
-      <div style="display:flex;gap:18px"><a href="#">Privacy Policy</a><a href="#">Sitemap</a></div>
+      <div style="display:flex;gap:18px"><a href="#">Privacy Policy</a><a href="{p}sitemap.html">Sitemap</a></div>
     </div>
   </div>
 </footer>"""

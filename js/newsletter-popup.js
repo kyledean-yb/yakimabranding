@@ -1,5 +1,6 @@
 /**
- * YB Marketing — newsletter signup popup (non-intrusive, session-scoped)
+ * YB Marketing — newsletter signup popup (non-intrusive)
+ * Dismissal is stored in localStorage so close/submit persists across visits.
  */
 (function () {
   'use strict';
@@ -11,17 +12,17 @@
   function shouldSkip() {
     try {
       return (
-        sessionStorage.getItem(STORAGE_CLOSED) === '1' ||
-        sessionStorage.getItem(STORAGE_SUBMITTED) === '1'
+        localStorage.getItem(STORAGE_CLOSED) === '1' ||
+        localStorage.getItem(STORAGE_SUBMITTED) === '1'
       );
     } catch (e) {
       return false;
     }
   }
 
-  function setSession(key) {
+  function persistDismissal(key) {
     try {
-      sessionStorage.setItem(key, '1');
+      localStorage.setItem(key, '1');
     } catch (e) {
       /* ignore */
     }
@@ -73,9 +74,9 @@
   }
 
   function hidePopup(root, persist) {
+    if (persist) persistDismissal(STORAGE_CLOSED);
     root.classList.remove('is-visible');
     root.setAttribute('aria-hidden', 'true');
-    if (persist) setSession(STORAGE_CLOSED);
 
     function onEnd(e) {
       if (e.propertyName !== 'transform' && e.propertyName !== 'opacity') return;
@@ -95,7 +96,7 @@
     var success = root.querySelector('.yb-newsletter-popup__success');
     if (form) form.hidden = true;
     if (success) success.hidden = false;
-    setSession(STORAGE_SUBMITTED);
+    persistDismissal(STORAGE_SUBMITTED);
     setTimeout(function () {
       hidePopup(root, false);
     }, 2800);
@@ -112,12 +113,15 @@
 
     closeBtn.addEventListener('click', function () {
       clearTimeout(showTimer);
-      hidePopup(root, true);
+      persistDismissal(STORAGE_CLOSED);
+      hidePopup(root, false);
     });
 
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && root.classList.contains('is-visible')) {
-        hidePopup(root, true);
+        clearTimeout(showTimer);
+        persistDismissal(STORAGE_CLOSED);
+        hidePopup(root, false);
       }
     });
 

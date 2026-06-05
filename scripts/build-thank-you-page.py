@@ -243,6 +243,7 @@ if (typeof window !== 'undefined') {{
 // setTimeout(function() {{ window.location.href = '{PREFIX}index.html'; }}, 60000);
 </script>
 <script src="{PREFIX}js/newsletter-popup.js" defer></script>
+<script src="{PREFIX}js/chat-widget.js" defer></script>
 <script src="{PREFIX}js/site.js" defer></script>
 </body>
 </html>

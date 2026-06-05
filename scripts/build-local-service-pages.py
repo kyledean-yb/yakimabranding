@@ -486,6 +486,7 @@ section{{padding:88px 0}}
 
 <script src="{p}js/contact-forms.js" defer></script>
 <script src="{p}js/newsletter-popup.js" defer></script>
+<script src="{p}js/chat-widget.js" defer></script>
 <script src="{p}js/site.js"></script>
 <script>
 function toggleFaq(id, accent) {{

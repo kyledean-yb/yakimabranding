@@ -429,6 +429,7 @@ def page_shell(
 
 <script src="{prefix}js/contact-forms.js" defer></script>
 <script src="{prefix}js/newsletter-popup.js" defer></script>
+<script src="{prefix}js/chat-widget.js" defer></script>
 <script src="{prefix}js/site.js"></script>
 <script>{STAT_JS}</script>
 {extra_scripts}

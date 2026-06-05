@@ -421,6 +421,7 @@ a{{color:inherit;text-decoration:none}}
 {footer_wave}
 {site_footer_html(prefix)}
 <script src="{prefix}js/newsletter-popup.js" defer></script>
+<script src="{prefix}js/chat-widget.js" defer></script>
 <script src="{prefix}js/site.js" defer></script>
 <script>
 document.getElementById('hamburger')?.addEventListener('click', function () {{

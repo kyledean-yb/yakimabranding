@@ -136,6 +136,7 @@ a{{color:inherit;text-decoration:none}}
 {footer}
 
 <script src="{PREFIX}js/newsletter-popup.js" defer></script>
+<script src="{PREFIX}js/chat-widget.js" defer></script>
 <script src="{PREFIX}js/site.js" defer></script>
 </body>
 </html>

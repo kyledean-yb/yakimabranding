@@ -63,6 +63,7 @@ a{{color:inherit;text-decoration:none}}
 {body}
 {footer_html()}
 <script src="{PREFIX}js/newsletter-popup.js" defer></script>
+<script src="{PREFIX}js/chat-widget.js" defer></script>
 <script src="{PREFIX}js/site.js" defer></script>
 <script>
 document.getElementById('hamburger')?.addEventListener('click', function () {{

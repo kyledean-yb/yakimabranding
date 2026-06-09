@@ -432,7 +432,7 @@ def page_kristin():
     body = hero_block(
         "Kristin Sparling",
         "Account Executive",
-        "Strategy-first account executive helping Pacific Northwest businesses grow with tailored digital marketing plans.",
+        "A relationship-driven account executive who takes pride in understanding each client's goals and supporting their success.",
         "assets/kristin-headshot.webp",
         [
             ("Book a Meeting", calendly_url_for("Kristin Sparling"), PHONE_SVG),
@@ -446,9 +446,9 @@ def page_kristin():
 <section class="team-body" style="background:#fff">
   <div class="container team-layout-split">
     <div class="team-prose">
-      <p>Kristin comes from a family deeply rooted in coaching and leadership. This foundation of teamwork, leadership, and mentorship carries over into every aspect of her professional endeavors.</p>
-      <p>With over three years of experience in digital marketing, Kristin brings strategic insight and hands-on expertise to YB Marketing. She is committed to understanding each client's story, identifying their goals, and developing tailored marketing plans that drive measurable growth.</p>
-      <p>Internet Marketing does not mean using the same solutions for every business. YB Marketing works with you to build a custom strategy to drive relevant visitors and conversions based on your business, goals, and budget.</p>
+      <p>Kristin comes from a family grounded in coaching, leadership, and the Western equine world. This background shaped her belief in strong relationships, clear communication, and supporting others with consistency and purpose.</p>
+      <p>She brings a leadership-driven and relationship-centered approach to YB Marketing. She focuses on understanding each client's business, identifying strategic opportunities, and developing tailored marketing plans that support long-term growth.</p>
+      <p>Kristin believes effective marketing is built on partnership. She works closely with clients to create custom strategies that strengthen visibility, attract qualified audiences, and align with their goals and budget. Her leadership style reflects the values she grew up with — trust, collaboration, and a commitment to helping people succeed.</p>
       <h2>Where I spend my time</h2>
       <div class="team-chips">{chips}</div>
       <h2>Keep us in mind for</h2>

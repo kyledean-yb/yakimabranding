@@ -1,0 +1,41 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/services/branding.html", "destination": "/branding", "permanent": true },
+    { "source": "/services/branding", "destination": "/branding", "permanent": true },
+    { "source": "/services/seo.html", "destination": "/seo", "permanent": true },
+    { "source": "/services/seo", "destination": "/seo", "permanent": true },
+    { "source": "/services/google-ads.html", "destination": "/google-ads", "permanent": true },
+    { "source": "/services/google-ads", "destination": "/google-ads", "permanent": true },
+    { "source": "/services/web-design.html", "destination": "/web-design", "permanent": true },
+    { "source": "/services/web-design", "destination": "/web-design", "permanent": true },
+    { "source": "/services/social-media.html", "destination": "/social-media", "permanent": true },
+    { "source": "/services/social-media", "destination": "/social-media", "permanent": true },
+    { "source": "/services/press-releases.html", "destination": "/press-releases", "permanent": true },
+    { "source": "/services/press-releases", "destination": "/press-releases", "permanent": true },
+    { "source": "/services/content-creation.html", "destination": "/content-marketing", "permanent": true },
+    { "source": "/services/content-creation", "destination": "/content-marketing", "permanent": true },
+    { "source": "/washington-state-sales-tax.html", "destination": "/washington-state-sales-tax-notice", "permanent": true },
+    { "source": "/washington-state-sales-tax", "destination": "/washington-state-sales-tax-notice", "permanent": true },
+    { "source": "/blog.html", "destination": "/insights", "permanent": true },
+    { "source": "/blog", "destination": "/insights", "permanent": true },
+    { "source": "/blog/posts/:slug.html", "destination": "/insights/:slug", "permanent": true },
+    { "source": "/blog/posts/:slug", "destination": "/insights/:slug", "permanent": true },
+    { "source": "/posts/:slug.html", "destination": "/insights/:slug", "permanent": true },
+    { "source": "/posts/:slug", "destination": "/insights/:slug", "permanent": true },
+    { "source": "/:path*.html", "destination": "/:path*", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/branding", "destination": "/services/branding.html" },
+    { "source": "/seo", "destination": "/services/seo.html" },
+    { "source": "/google-ads", "destination": "/services/google-ads.html" },
+    { "source": "/web-design", "destination": "/services/web-design.html" },
+    { "source": "/social-media", "destination": "/services/social-media.html" },
+    { "source": "/press-releases", "destination": "/services/press-releases.html" },
+    { "source": "/content-marketing", "destination": "/services/content-creation.html" },
+    { "source": "/washington-state-sales-tax-notice", "destination": "/washington-state-sales-tax.html" },
+    { "source": "/insights/:slug", "destination": "/blog/posts/:slug.html" }
+  ]
+}

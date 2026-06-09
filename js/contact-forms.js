@@ -8,13 +8,24 @@
     if (form && form.dataset.thankYou) {
       return form.dataset.thankYou;
     }
-    var path = window.location.pathname || '';
+    var path = window.location.pathname || '/';
     var parts = path.split('/').filter(Boolean);
     if (parts.length && /\.html?$/i.test(parts[parts.length - 1])) {
       parts.pop();
     }
-    var prefix = parts.length ? '../'.repeat(parts.length) : '';
-    return prefix + 'thank-you.html';
+    if (parts.length === 0) {
+      return '/thank-you';
+    }
+    if (parts[0] === 'about' && parts.length >= 2) {
+      return '/about/thank-you-' + parts[1].replace(/\.html$/i, '');
+    }
+    if (parts[0] === 'locations' && parts.length >= 2) {
+      return '/locations/thank-you-' + parts[1].replace(/\.html$/i, '');
+    }
+    if (parts[0] === 'services') {
+      return '/services/thank-you';
+    }
+    return '/thank-you';
   }
 
   function redirectThankYou(form) {

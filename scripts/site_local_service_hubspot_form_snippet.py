@@ -12,13 +12,13 @@ LOCAL_HS_FORM_PLACEHOLDER = "__LOCAL_HS_FORM__"
 
 def location_thank_you_redirect(slug: str, *, from_locations_dir: bool = False) -> str:
     if from_locations_dir:
-        return f"thank-you-{slug}.html"
-    return f"../locations/thank-you-{slug}.html"
+        return f"/locations/thank-you-{slug}"
+    return f"/locations/thank-you-{slug}"
 
 
 def local_hubspot_form_html(
     source: str,
-    redirect: str = "../thank-you.html",
+    redirect: str = "/thank-you",
 ) -> str:
     return f"""          <div class="yb-hs-form" data-source="{html.escape(source)}" data-redirect="{html.escape(redirect)}">
             <div class="hs-form-frame" data-region="{HS_REGION}" data-form-id="{LOCAL_HS_FORM_ID}" data-portal-id="{HS_PORTAL_ID}"></div>

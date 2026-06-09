@@ -6,9 +6,9 @@ import subprocess
 from functools import lru_cache
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+from site_urls import page_href
 
-FOOTER_GRID_COLUMNS = "1.7fr 1fr 1fr 1.4fr"
+ROOT = Path(__file__).resolve().parents[1]
 
 
 @lru_cache(maxsize=1)
@@ -31,7 +31,7 @@ def footer_location_buttons(prefix: str) -> str:
     buttons = []
     for loc in sorted(load_footer_locations(), key=lambda item: (item["state"], item["city"])):
         label = f"{loc['city']}, {loc['state']}"
-        href = f"{prefix}locations/{loc['slug']}.html"
+        href = page_href(f"locations/{loc['slug']}.html")
         buttons.append(f'<a href="{href}" class="footer-loc-btn">{html.escape(label)}</a>')
     return "\n          ".join(buttons)
 
@@ -77,23 +77,23 @@ def site_footer_html(prefix: str = "") -> str:
       <div class="footer-col">
         <h4>Navigation</h4>
         <ul>
-          <li><a href="{p}index.html">Home</a></li>
-          <li><a href="{p}about.html">About</a></li>
-          <li><a href="{p}index.html#services">Services</a></li>
-          <li><a href="{p}insights.html">Insights</a></li>
-          <li><a href="{p}contact.html">Contact</a></li>
+          <li><a href="{page_href('index.html')}">Home</a></li>
+          <li><a href="{page_href('about.html')}">About</a></li>
+          <li><a href="{page_href('index.html', 'services')}">Services</a></li>
+          <li><a href="{page_href('insights.html')}">Insights</a></li>
+          <li><a href="{page_href('contact.html')}">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="{p}services/branding.html">Branding &amp; Design</a></li>
-          <li><a href="{p}services/web-design.html">Web Design</a></li>
-          <li><a href="{p}services/seo.html">SEO Optimization</a></li>
-          <li><a href="{p}services/google-ads.html">Google Ads</a></li>
-          <li><a href="{p}services/social-media.html">Social Media</a></li>
-          <li><a href="{p}services/press-releases.html">Press Releases</a></li>
-          <li><a href="{p}services/content-creation.html">Content Marketing</a></li>
+          <li><a href="{page_href('services/branding.html')}">Branding &amp; Design</a></li>
+          <li><a href="{page_href('services/web-design.html')}">Web Design</a></li>
+          <li><a href="{page_href('services/seo.html')}">SEO Optimization</a></li>
+          <li><a href="{page_href('services/google-ads.html')}">Google Ads</a></li>
+          <li><a href="{page_href('services/social-media.html')}">Social Media</a></li>
+          <li><a href="{page_href('services/press-releases.html')}">Press Releases</a></li>
+          <li><a href="{page_href('services/content-creation.html')}">Content Marketing</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -108,7 +108,7 @@ def site_footer_html(prefix: str = "") -> str:
     </div>
     <div class="footer-bottom">
       <span>© 2026 YB Marketing. All rights reserved.</span>
-      <div style="display:flex;gap:18px"><a href="{p}privacy-policy.html">Privacy Policy</a><a href="{p}sitemap.html">Sitemap</a></div>
+      <div style="display:flex;gap:18px"><a href="{page_href('privacy-policy.html')}">Privacy Policy</a><a href="{page_href('sitemap.html')}">Sitemap</a></div>
     </div>
   </div>
 </footer>"""

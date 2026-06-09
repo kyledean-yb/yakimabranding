@@ -874,31 +874,31 @@ export const locationHubsMaster = {
     "items": [
       {
         "label": "Branding & Design",
-        "href": "services/branding.html",
+        "href": "/branding",
         "accent": "var(--yb-violet)",
         "wash": "var(--wash-violet)"
       },
       {
         "label": "Search Engine Optimization",
-        "href": "services/seo.html",
+        "href": "/seo",
         "accent": "var(--yb-cyan)",
         "wash": "var(--wash-cyan)"
       },
       {
         "label": "Google Advertising",
-        "href": "services/google-ads.html",
+        "href": "/google-ads",
         "accent": "var(--yb-coral)",
         "wash": "var(--wash-coral)"
       },
       {
         "label": "Social Media Management",
-        "href": "services/social-media.html",
+        "href": "/social-media",
         "accent": "#c77f12",
         "wash": "var(--wash-amber)"
       },
       {
         "label": "Website Design & Graphics",
-        "href": "services/web-design.html",
+        "href": "/web-design",
         "accent": "#159468",
         "wash": "var(--wash-mint)"
       }

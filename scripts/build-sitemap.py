@@ -1,24 +1,30 @@
 #!/usr/bin/env python3
-"""Generate sitemap.html and link footer Sitemap entries site-wide."""
+"""Generate sitemap.html, XML sitemaps, and link footer Sitemap entries site-wide."""
 
 import json
 import re
 import subprocess
 import sys
+from datetime import date, datetime
 from html import escape, unescape
 from pathlib import Path
+from typing import Optional
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
+from schema_markup import SERVICE_PAGES, SITE
+from site_urls import page_href, clean_segment
 from site_nav_snippet import site_header_html
 from site_accessibe_snippet import ACCESSIBE_BODY_SCRIPT
 from site_staging_seo_snippet import STAGING_ROBOTS_META
 from site_footer_snippet import site_footer_html
 TITLE_RE = re.compile(r"<title>([^<]+)</title>", re.IGNORECASE)
+CANONICAL_RE = re.compile(r'<link rel="canonical" href="([^"]+)"', re.IGNORECASE)
 SITEMAP_LINK_RE = re.compile(r'<a href="#">Sitemap</a>')
-SITEMAP_LINKED_RE = re.compile(r'<a href="[^"]*sitemap\.html">Sitemap</a>')
+SITEMAP_LINKED_RE = re.compile(r'<a href="[^"]*sitemap(?:\.html)?">Sitemap</a>')
 
-EXCLUDE_DIRS = {"preview", "partials", "ui_kits", "posts", "scripts", "assets", "js", "node_modules"}
+EXCLUDE_DIRS = {"preview", "partials", "ui_kits", "posts", "scripts", "assets", "js", "node_modules", "blog"}
+POSTS_DATA = ROOT / "blog" / "data" / "posts.json"
 ROOT_PAGES = [
     ("index.html", "Home"),
     ("about.html", "About Us"),
@@ -101,7 +107,7 @@ def location_group_links(slug: str, city: str, state: str) -> list[tuple[str, st
     for folder, service in LOCAL_SERVICE_FOLDERS:
         if not (ROOT / folder / f"{slug}.html").exists():
             continue
-        links.append((f"{folder}/{slug}.html", f"{service} in {place}"))
+        links.append((page_href(f"{folder}/{slug}.html"), f"{service} in {place}"))
     return links
 
 
@@ -123,58 +129,212 @@ def collect_pages() -> tuple[
         state = loc["state"]
         slug = loc["slug"]
         group_title = f"Digital Marketing Agency in {city}, {state}"
-        hub_href = f"locations/{slug}.html"
+        hub_href = page_href(f"locations/{slug}.html")
         local_groups.append((group_title, hub_href, location_group_links(slug, city, state)))
 
     for href, label in ROOT_PAGES:
         if href == "sitemap.html":
             continue
-        compact["Main Pages"].append((href, label))
+        compact["Main Pages"].append((page_href(href), label))
 
     for path in sorted((ROOT / "services").glob("*.html")):
-        href = f"services/{path.name}"
+        if "thank-you" in path.name:
+            continue
+        href = page_href(f"services/{path.name}")
         label = SERVICE_LABELS.get(path.name, page_title(path))
         compact["Services"].append((href, label))
 
     for path in sorted((ROOT / "about").glob("*.html")):
-        href = f"about/{path.name}"
+        if "thank-you" in path.name:
+            continue
+        href = page_href(f"about/{path.name}")
         compact["Team"].append((href, page_title(path)))
 
     for path in sorted((ROOT / "blog" / "posts").glob("*.html")):
-        href = f"blog/posts/{path.name}"
+        href = page_href(f"blog/posts/{path.name}")
         insights.append((href, page_title(path)))
 
     return compact, local_groups, insights
 
 
-def build_sitemap_xml() -> str:
-    urls = []
-    if (ROOT / "locations").exists():
-        for loc in sorted(load_location_hubs(), key=lambda item: item["slug"]):
-            slug = loc["slug"]
-            urls.append(
-                f"""  <url>
-    <loc>https://yakimabranding.com/locations/{slug}</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>"""
+def is_sitemap_page(path: Path) -> bool:
+    if not is_public_page(path):
+        return False
+    rel = path.relative_to(ROOT).as_posix()
+    if "thank-you" in rel:
+        return False
+    if rel == "blog.html":
+        return False
+    return True
+
+
+def normalize_canonical(href: str) -> str:
+    href = href.strip()
+    if href.startswith("http"):
+        return href.rstrip("/") if not href.endswith(".com/") else href
+    if href.startswith("/"):
+        return f"{SITE}{href.rstrip('/')}"
+    return f"{SITE}/{href.rstrip('/')}"
+
+
+def public_url_for_page(path: Path) -> str:
+    rel = path.relative_to(ROOT).as_posix()
+    text = path.read_text(encoding="utf-8")
+    match = CANONICAL_RE.search(text)
+    if match:
+        return normalize_canonical(match.group(1))
+
+    if rel == "index.html":
+        return f"{SITE}/"
+    if rel in SERVICE_PAGES:
+        return f"{SITE}/{SERVICE_PAGES[rel]['slug']}"
+    if rel == "washington-state-sales-tax.html":
+        return f"{SITE}/washington-state-sales-tax-notice"
+
+    return f"{SITE}/{rel.replace('.html', '')}"
+
+
+def page_sitemap_meta(rel: str) -> tuple[str, str]:
+    if rel == "index.html":
+        return "weekly", "1.0"
+    if rel in {"about.html", "contact.html", "insights.html"}:
+        return "monthly", "0.9"
+    if rel.startswith("services/"):
+        return "monthly", "0.9"
+    if rel.startswith("locations/") or rel.split("/")[0] in {
+        "seo",
+        "google-ads",
+        "web-design",
+        "social-media",
+        "branding",
+    }:
+        return "monthly", "0.8"
+    if rel.startswith("about/"):
+        return "monthly", "0.6"
+    if rel in {"privacy-policy.html", "washington-state-sales-tax.html"}:
+        return "yearly", "0.3"
+    if rel == "sitemap.html":
+        return "monthly", "0.2"
+    return "monthly", "0.7"
+
+
+def collect_page_urls() -> list[tuple[str, str, str, Optional[str]]]:
+    entries: list[tuple[str, str, str, str | None]] = []
+    seen: set[str] = set()
+
+    for path in sorted(ROOT.rglob("*.html")):
+        if not is_sitemap_page(path):
+            continue
+        rel = path.relative_to(ROOT).as_posix()
+        url = public_url_for_page(path)
+        if url in seen:
+            continue
+        seen.add(url)
+        changefreq, priority = page_sitemap_meta(rel)
+        entries.append((url, changefreq, priority, None))
+
+    entries.sort(key=lambda item: item[0])
+    return entries
+
+
+def load_posts_data() -> list[dict]:
+    if not POSTS_DATA.exists():
+        return []
+    return json.loads(POSTS_DATA.read_text(encoding="utf-8"))
+
+
+def post_lastmod(post: dict) -> str:
+    raw = post.get("date", "")
+    if not raw:
+        return date.today().isoformat()
+    try:
+        return datetime.fromisoformat(raw.replace("Z", "+00:00")).date().isoformat()
+    except ValueError:
+        return raw[:10]
+
+
+def collect_post_urls() -> list[tuple[str, str, str, str]]:
+    entries = []
+    for post in sorted(load_posts_data(), key=lambda item: item.get("date", ""), reverse=True):
+        slug = post["slug"]
+        entries.append(
+            (
+                f"{SITE}/insights/{slug}",
+                "monthly",
+                "0.6",
+                post_lastmod(post),
             )
-            for folder, _ in LOCAL_SERVICE_FOLDERS:
-                if not (ROOT / folder / f"{slug}.html").exists():
-                    continue
-                urls.append(
-                    f"""  <url>
-    <loc>https://yakimabranding.com/{folder}/{slug}</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+        )
+    return entries
+
+
+def render_url_entry(
+    url: str,
+    changefreq: str,
+    priority: str,
+    lastmod: Optional[str] = None,
+) -> str:
+    lastmod_line = f"\n    <lastmod>{lastmod}</lastmod>" if lastmod else ""
+    return f"""  <url>
+    <loc>{escape(url)}</loc>{lastmod_line}
+    <changefreq>{changefreq}</changefreq>
+    <priority>{priority}</priority>
   </url>"""
-                )
-    body = "\n".join(urls)
+
+
+def build_urlset_xml(entries: list[tuple[str, str, str, Optional[str]]]) -> str:
+    body = "\n".join(
+        render_url_entry(url, changefreq, priority, lastmod)
+        for url, changefreq, priority, lastmod in entries
+    )
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {body}
 </urlset>
 """
+
+
+def build_sitemap_index(lastmods: dict[str, str]) -> str:
+    sitemaps = "\n".join(
+        f"""  <sitemap>
+    <loc>{escape(f"{SITE}/{name}")}</loc>
+    <lastmod>{lastmod}</lastmod>
+  </sitemap>"""
+        for name, lastmod in sorted(lastmods.items())
+    )
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{sitemaps}
+</sitemapindex>
+"""
+
+
+def write_xml_sitemaps() -> None:
+    page_entries = collect_page_urls()
+    post_entries = collect_post_urls()
+
+    pages_path = ROOT / "sitemap-pages.xml"
+    posts_path = ROOT / "sitemap-posts.xml"
+    index_path = ROOT / "sitemap.xml"
+
+    pages_path.write_text(build_urlset_xml(page_entries), encoding="utf-8")
+    posts_path.write_text(build_urlset_xml(post_entries), encoding="utf-8")
+
+    today = date.today().isoformat()
+    post_lastmods = [entry[3] for entry in post_entries if entry[3]]
+    index_path.write_text(
+        build_sitemap_index(
+            {
+                "sitemap-pages.xml": today,
+                "sitemap-posts.xml": max(post_lastmods) if post_lastmods else today,
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    print(f"wrote {pages_path.relative_to(ROOT)} ({len(page_entries)} URLs)")
+    print(f"wrote {posts_path.relative_to(ROOT)} ({len(post_entries)} URLs)")
+    print(f"wrote {index_path.relative_to(ROOT)} (index)")
 
 
 def render_link_list(links: list[tuple[str, str]], list_class: str = "") -> str:
@@ -205,7 +365,6 @@ def render_local_section(groups: list[tuple[str, str, list[tuple[str, str]]]]) -
     body = "\n".join(subgroups)
     return f"""      <div class="sitemap-section sitemap-section--full">
         <h2>Locations</h2>
-        <p class="sitemap-locations-intro">Browse by city — each card links to the local hub page and localized service pages (for example, SEO in Boise, ID).</p>
         <div class="sitemap-local-grid">
 {body}
         </div>
@@ -330,7 +489,7 @@ a{{color:inherit;text-decoration:none}}
 def patch_footer_sitemap_link(path: Path) -> bool:
     text = path.read_text(encoding="utf-8")
     prefix = sitemap_prefix_for(path)
-    replacement = f'<a href="{prefix}sitemap.html">Sitemap</a>'
+    replacement = f'<a href="{page_href("sitemap.html")}">Sitemap</a>'
 
     if SITEMAP_LINKED_RE.search(text):
         updated, n = SITEMAP_LINKED_RE.subn(replacement, text, count=1)
@@ -348,9 +507,11 @@ def patch_footer_sitemap_link(path: Path) -> bool:
 def patch_snippet() -> None:
     snippet_path = ROOT / "scripts" / "site_footer_snippet.py"
     text = snippet_path.read_text(encoding="utf-8")
+    if '<a href="/sitemap">Sitemap</a>' in text:
+        return
     updated = text.replace(
-        '<a href="#">Sitemap</a>',
         '<a href="{p}sitemap.html">Sitemap</a>',
+        '<a href="/sitemap">Sitemap</a>',
     )
     snippet_path.write_text(updated, encoding="utf-8")
 
@@ -362,7 +523,7 @@ def patch_cta_footer() -> None:
     text = path.read_text(encoding="utf-8")
     updated = text.replace(
         '<a href="#" onClick={e=>e.preventDefault()} style={{ color: \'var(--fg2-on-dark)\', textDecoration: \'none\' }}>Sitemap</a>',
-        '<a href="/sitemap.html" style={{ color: \'var(--fg2-on-dark)\', textDecoration: \'none\' }}>Sitemap</a>',
+        '<a href="/sitemap" style={{ color: \'var(--fg2-on-dark)\', textDecoration: \'none\' }}>Sitemap</a>',
     )
     path.write_text(updated, encoding="utf-8")
 
@@ -380,13 +541,7 @@ def main() -> None:
     )
     print(f"wrote {sitemap_path.relative_to(ROOT)}")
 
-    xml_path = ROOT / "sitemap.xml"
-    if any(
-        (ROOT / folder).exists()
-        for folder in ("seo", "web-design", "google-ads", "social-media", "branding", "locations")
-    ):
-        xml_path.write_text(build_sitemap_xml(), encoding="utf-8")
-        print(f"wrote {xml_path.relative_to(ROOT)}")
+    write_xml_sitemaps()
 
     patched = 0
     for path in sorted(ROOT.rglob("*.html")):

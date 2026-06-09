@@ -73,7 +73,7 @@
   }
 
   function postHref(base, slug) {
-    return base + 'blog/posts/' + slug + '.html';
+    return '/insights/' + slug;
   }
 
   function renderHomeCard(post, index, base, uniform) {
@@ -206,7 +206,7 @@
     if (!picked.length) {
       el.innerHTML =
         '<p class="insights-loading">No articles available yet. <a href="' +
-        escapeHtml(base + 'insights.html') +
+        escapeHtml('/insights') +
         '">View all insights</a>.</p>';
       return;
     }
@@ -262,7 +262,7 @@
         grids.forEach(function (el) {
           el.innerHTML =
             '<p class="insights-loading">Unable to load articles. <a href="' +
-            escapeHtml((el.getAttribute('data-base') || '') + 'insights.html') +
+            escapeHtml((el.getAttribute('data-base') || '/').replace(/\/?$/, '') + '/insights') +
             '">View all insights</a>.</p>';
         });
       });

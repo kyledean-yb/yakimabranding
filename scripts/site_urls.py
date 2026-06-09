@@ -48,6 +48,9 @@ def clean_segment(rel_path: str) -> str:
         slug = rel_path.replace("posts/", "").replace(".html", "")
         return f"insights/{slug}"
 
+    if rel_path.endswith("/index.html"):
+        return rel_path[: -len("index.html")].rstrip("/")
+
     return rel_path.replace(".html", "")
 
 

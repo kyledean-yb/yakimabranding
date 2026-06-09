@@ -41,43 +41,43 @@ TEAM_MEMBERS = [
 ]
 
 SERVICE_PAGES = {
-    "services/branding.html": {
+    "branding/index.html": {
         "slug": "branding",
         "name": "Branding & Design",
         "service_type": "Brand Identity Design",
         "description": "Comprehensive brand strategy, logo design, and design systems for Pacific Northwest businesses.",
     },
-    "services/content-creation.html": {
+    "content-marketing/index.html": {
         "slug": "content-marketing",
         "name": "Content Marketing",
         "service_type": "Content Marketing",
         "description": "Website content, blog writing, press releases, email campaigns, and social media content for growing businesses.",
     },
-    "services/google-ads.html": {
+    "google-ads/index.html": {
         "slug": "google-ads",
         "name": "Google Ads Management",
         "service_type": "Pay-Per-Click Advertising",
         "description": "Expert Google Ads management since 2005 — search, display, and Performance Max campaigns for Pacific Northwest businesses.",
     },
-    "services/press-releases.html": {
+    "press-releases/index.html": {
         "slug": "press-releases",
         "name": "Press Releases",
         "service_type": "Press Release Writing & Distribution",
         "description": "Professional press release writing and distribution for Pacific Northwest businesses.",
     },
-    "services/seo.html": {
+    "seo/index.html": {
         "slug": "seo",
         "name": "SEO & AI Optimization",
         "service_type": "Search Engine Optimization",
         "description": "Local SEO, technical SEO, keyword strategy, and AI search optimization for Pacific Northwest businesses.",
     },
-    "services/social-media.html": {
+    "social-media/index.html": {
         "slug": "social-media",
         "name": "Social Media Management",
         "service_type": "Social Media Marketing",
         "description": "Facebook, Instagram, and LinkedIn management with real growth strategies for Pacific Northwest businesses.",
     },
-    "services/web-design.html": {
+    "web-design/index.html": {
         "slug": "web-design",
         "name": "Web Design & Development",
         "service_type": "Web Design",

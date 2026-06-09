@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Replace placeholder contact forms on services/*.html with HubSpot embed."""
+"""Replace placeholder contact forms on main service pages with HubSpot embed."""
 
 import re
 import sys
@@ -10,12 +10,20 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from site_service_hubspot_form_snippet import (
     HS_EMBED_SCRIPT,
-    SERVICE_SOURCE_LABELS,
+    SERVICE_SOURCE_BY_FOLDER,
     service_hubspot_form_html,
     service_thank_you_redirect,
 )
 
-SERVICES_DIR = ROOT / "services"
+SERVICE_DIRS = [
+    "seo",
+    "google-ads",
+    "web-design",
+    "social-media",
+    "branding",
+    "content-marketing",
+    "press-releases",
+]
 
 CONTACT_CARD_FORM_RE = re.compile(
     r'\s*<h3 style="font-size:20px;margin:0 0 20px">Send Us a Message</h3>\s*'
@@ -48,11 +56,11 @@ def inject_hubspot_scripts(text: str, prefix: str) -> str:
     return text.replace("</body>", f"{hubspot_js}\n{embed_js}\n</body>", 1)
 
 
-def patch_service_page(path: Path) -> bool:
+def patch_service_page(path: Path, folder: str) -> bool:
     text = path.read_text(encoding="utf-8")
     original = text
-    source = SERVICE_SOURCE_LABELS.get(path.name, f"{path.stem.replace('-', ' ').title()} Service Page")
-    redirect = service_thank_you_redirect(path.name)
+    source = SERVICE_SOURCE_BY_FOLDER.get(folder, f"{folder.replace('-', ' ').title()} Service Page")
+    redirect = service_thank_you_redirect(path.name, folder=folder)
     form_html = service_hubspot_form_html(source, redirect=redirect)
 
     if not CONTACT_CARD_FORM_RE.search(text):
@@ -68,10 +76,13 @@ def patch_service_page(path: Path) -> bool:
 
 def main() -> None:
     patched = 0
-    for path in sorted(SERVICES_DIR.glob("*.html")):
-        if patch_service_page(path):
+    for folder in SERVICE_DIRS:
+        path = ROOT / folder / "index.html"
+        if not path.exists():
+            continue
+        if patch_service_page(path, folder):
             patched += 1
-            print(f"patched services/{path.name}")
+            print(f"patched {folder}/index.html")
     print(f"patched {patched} service pages")
 
 

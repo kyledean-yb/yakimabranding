@@ -36,14 +36,18 @@ ROOT_PAGES = [
 ]
 
 SERVICE_LABELS = {
-    "branding.html": "Branding & Design",
-    "web-design.html": "Web Design",
-    "seo.html": "SEO Optimization",
-    "google-ads.html": "Google Ads",
-    "social-media.html": "Social Media",
-    "press-releases.html": "Press Releases",
-    "content-creation.html": "Content Marketing",
+    "index.html": "Service",
 }
+
+SERVICE_INDEX_PAGES = [
+    ("seo/index.html", "SEO Optimization"),
+    ("google-ads/index.html", "Google Ads"),
+    ("web-design/index.html", "Web Design"),
+    ("social-media/index.html", "Social Media"),
+    ("branding/index.html", "Branding & Design"),
+    ("press-releases/index.html", "Press Releases"),
+    ("content-marketing/index.html", "Content Marketing"),
+]
 
 
 def clean_title(raw: str) -> str:
@@ -137,12 +141,9 @@ def collect_pages() -> tuple[
             continue
         compact["Main Pages"].append((page_href(href), label))
 
-    for path in sorted((ROOT / "services").glob("*.html")):
-        if "thank-you" in path.name:
-            continue
-        href = page_href(f"services/{path.name}")
-        label = SERVICE_LABELS.get(path.name, page_title(path))
-        compact["Services"].append((href, label))
+    for rel, label in SERVICE_INDEX_PAGES:
+        if (ROOT / rel).exists():
+            compact["Services"].append((page_href(rel), label))
 
     for path in sorted((ROOT / "about").glob("*.html")):
         if "thank-you" in path.name:
@@ -197,6 +198,8 @@ def public_url_for_page(path: Path) -> str:
 def page_sitemap_meta(rel: str) -> tuple[str, str]:
     if rel == "index.html":
         return "weekly", "1.0"
+    if rel in SERVICE_PAGES:
+        return "monthly", "0.9"
     if rel in {"about.html", "contact.html", "insights.html"}:
         return "monthly", "0.9"
     if rel.startswith("services/"):

@@ -176,9 +176,15 @@
 
 .team-layout-split {
   display: grid;
-  grid-template-columns: 1fr minmax(300px, 380px);
-  gap: 48px;
+  grid-template-columns: minmax(0, 11fr) minmax(0, 9fr);
+  gap: 40px;
   align-items: start;
+}
+
+.team-prose,
+.team-aside-stack {
+  min-width: 0;
+  width: 100%;
 }
 
 .team-aside-stack {
@@ -192,8 +198,9 @@
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--r-xl);
-  padding: 28px;
+  padding: 32px;
   box-shadow: var(--sh-sm);
+  width: 100%;
 }
 
 .team-aside-card h3 {
@@ -414,10 +421,33 @@
 
 .team-contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
-  max-width: 980px;
-  margin: 0 auto;
+  grid-template-columns: minmax(0, 11fr) minmax(0, 9fr);
+  gap: 40px;
+  max-width: none;
+  margin: 0;
+}
+
+.team-contact-grid > * {
+  min-width: 0;
+  width: 100%;
+}
+
+.team-aside-form .yb-hs-form {
+  min-height: 320px;
+  width: 100%;
+}
+
+.team-aside-form .hs-form-frame {
+  width: 100%;
+  max-width: none;
+}
+
+.team-aside-form .yb-hs-form-footnote {
+  font-size: 12.5px;
+  color: var(--fg3);
+  text-align: center;
+  margin: 16px 0 0;
+  line-height: 1.5;
 }
 
 /* FAQ accordion (Kevin) */
@@ -505,7 +535,7 @@
 /* Process steps */
 .team-steps {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 18px;
   margin-top: 32px;
 }

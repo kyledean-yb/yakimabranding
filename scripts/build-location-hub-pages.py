@@ -14,6 +14,12 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from reviews_section_snippet import reviews_section_html
 from schema_markup import seo_head_html
 from site_accessibe_snippet import ACCESSIBE_BODY_SCRIPT
+from site_local_service_hubspot_form_snippet import (
+    LOCAL_HS_FORM_PLACEHOLDER,
+    hubspot_script_tags,
+    local_hubspot_form_html,
+    location_thank_you_redirect,
+)
 from site_staging_seo_snippet import STAGING_ROBOTS_META
 from site_footer_snippet import site_footer_html
 from site_nav_snippet import site_header_html
@@ -388,8 +394,18 @@ def render_reviews(prefix: str) -> str:
     return reviews
 
 
-def render_contact(prefix: str) -> str:
-    return load_partial("contact-section.html", prefix)
+def render_contact(prefix: str, city: str, slug: str) -> str:
+    return (
+        load_partial("contact-section.html", prefix)
+        .replace('style="color:#159468"', 'style="color:var(--yb-blue)"')
+        .replace(
+            LOCAL_HS_FORM_PLACEHOLDER,
+            local_hubspot_form_html(
+                f"Digital Marketing in {city}",
+                redirect=location_thank_you_redirect(slug, from_locations_dir=True),
+            ),
+        )
+    )
 
 
 def page_shell(
@@ -427,7 +443,7 @@ def page_shell(
 {body}
 {footer}
 
-<script src="{prefix}js/contact-forms.js" defer></script>
+{hubspot_script_tags(prefix)}
 <script src="{prefix}js/newsletter-popup.js" defer></script>
 <script src="{prefix}js/chat-widget.js" defer></script>
 <script src="{prefix}js/site.js"></script>
@@ -479,7 +495,7 @@ def render_city_page(loc: dict, prefix: str = "../") -> str:
 {render_why_section(loc["whyYb"], loc["localSignals"], prefix, f"Serving {city} & Surrounding Areas")}
 {render_reviews(prefix)}
 {render_insights(prefix)}
-{render_contact(prefix)}"""
+{render_contact(prefix, city, slug)}"""
     return page_shell(
         loc["titleTag"],
         loc["metaDescription"],

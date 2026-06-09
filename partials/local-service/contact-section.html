@@ -8,41 +8,55 @@
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:980px;margin:0 auto" class="why-main-grid">
       <div style="background:#fff;border-radius:var(--r-xl);padding:28px;box-shadow:var(--sh-sm);border:1px solid var(--line)">
-          <div style="text-align:center;padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:18px">
+          <div style="text-align:center;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:22px">
             <div style="width:52px;height:52px;background:var(--grad-brand);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-family:var(--font-display);font-weight:800;font-size:20px;color:#fff">YB</div>
             <div style="font-size:12px;font-weight:600;color:var(--fg3);margin-bottom:4px">YB Marketing Team</div>
-            <div style="font-weight:700;font-size:17px;color:var(--ink);margin-bottom:6px">Introduction Meeting / YB Marketing</div>
-            <div style="display:flex;align-items:center;gap:6px;justify-content:center;font-size:13px;color:var(--fg3)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 30 min</div>
-            <p style="font-size:13px;color:var(--fg2);margin-top:8px;line-height:1.5">Introduction meeting to learn more about your business and how we can help you grow.</p>
+            <div style="font-weight:700;font-size:17px;color:var(--ink);margin-bottom:6px">Introduction Meeting</div>
+            <div style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--fg3);background:#fff;border-radius:var(--r-pill);padding:5px 12px;border:1px solid var(--line)">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              30 min · Free
+            </div>
+            <p style="font-size:13px;color:var(--fg2);margin-top:14px;line-height:1.6">An introduction meeting to learn more about your business, your goals, and how we can help you grow. No commitment required.</p>
           </div>
-          <!-- Calendly inline widget goes here -->
-          <!-- <div class="calendly-inline-widget" data-url="YOUR_CALENDLY_URL" style="min-width:320px;height:630px;"></div>
-               <script src="https://assets.calendly.com/assets/external/widget.js" async></script> -->
-          <a href="https://calendly.com/yakimabranding" target="_blank" class="btn btn-grad" style="width:100%;justify-content:center;margin-bottom:12px">Book a Meeting
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          </a>
-          <div style="background:var(--bg-soft);border-radius:var(--r-md);padding:10px 14px;text-align:center;font-size:11.5px;color:var(--yb-blue)">Replace the button above with your Calendly inline embed when ready.</div>
+          <p class="yb-schedule-intro">Choose who you'd like to meet with</p>
+          <div class="yb-schedule-grid">
+            <div class="yb-schedule-card yb-schedule-card--split">
+              <img src="../assets/jacob-headshot.webp" alt="Jacob Ross" class="yb-schedule-card__photo" width="64" height="64" loading="lazy">
+              <span class="yb-schedule-card__info">
+                <span class="yb-schedule-card__name">Jacob Ross</span>
+                <a href="https://calendly.com/jacobybmarketing" target="_blank" rel="noopener noreferrer" class="yb-schedule-card__cta">Schedule Call</a>
+                <a href="../about/jacob.html" class="yb-schedule-card__meet">Meet Jacob</a>
+              </span>
+            </div>
+            <div class="yb-schedule-card yb-schedule-card--split">
+              <img src="../assets/kristin-headshot.webp" alt="Kristin Sparling" class="yb-schedule-card__photo" width="64" height="64" loading="lazy">
+              <span class="yb-schedule-card__info">
+                <span class="yb-schedule-card__name">Kristin Sparling</span>
+                <a href="https://calendly.com/kristin-sparling/connect" target="_blank" rel="noopener noreferrer" class="yb-schedule-card__cta">Schedule Call</a>
+                <a href="../about/kristin.html" class="yb-schedule-card__meet">Meet Kristin</a>
+              </span>
+            </div>
+            <div class="yb-schedule-card yb-schedule-card--split">
+              <img src="../assets/kevin-headshot.webp" alt="Kevin Dean" class="yb-schedule-card__photo" width="64" height="64" loading="lazy">
+              <span class="yb-schedule-card__info">
+                <span class="yb-schedule-card__name">Kevin Dean</span>
+                <a href="https://calendly.com/kdean-wsi" target="_blank" rel="noopener noreferrer" class="yb-schedule-card__cta">Schedule Call</a>
+                <a href="../about/kevin.html" class="yb-schedule-card__meet">Meet Kevin</a>
+              </span>
+            </div>
+            <div class="yb-schedule-card yb-schedule-card--split">
+              <img src="../assets/sophie-headshot.webp" alt="Sophie Mann" class="yb-schedule-card__photo" width="64" height="64" loading="lazy">
+              <span class="yb-schedule-card__info">
+                <span class="yb-schedule-card__name">Sophie Mann</span>
+                <a href="https://calendly.com/sophie-yakimabranding/30min" target="_blank" rel="noopener noreferrer" class="yb-schedule-card__cta">Schedule Call</a>
+                <a href="../about/sophie.html" class="yb-schedule-card__meet">Meet Sophie</a>
+              </span>
+            </div>
+          </div>
         </div>
       <div style="background:#fff;border-radius:var(--r-xl);padding:28px;box-shadow:var(--sh-sm);border:1px solid var(--line)">
           <h3 style="font-size:20px;margin:0 0 20px">Send Us a Message</h3>
-          <form class="yb-contact-form" action="#" method="post">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
-            <div><label style="display:block;font-size:12px;font-weight:700;color:var(--fg2);margin-bottom:6px">Name *</label><input type="text" placeholder="What's your name?" style="width:100%;font-family:var(--font-body);font-size:14px;padding:11px 13px;border:1.5px solid var(--line-strong);border-radius:var(--r-md);background:#fff;color:var(--ink)"></div>
-            <div><label style="display:block;font-size:12px;font-weight:700;color:var(--fg2);margin-bottom:6px">Email *</label><input type="email" placeholder="What's your email?" style="width:100%;font-family:var(--font-body);font-size:14px;padding:11px 13px;border:1.5px solid var(--line-strong);border-radius:var(--r-md);background:#fff;color:var(--ink)"></div>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
-            <div><label style="display:block;font-size:12px;font-weight:700;color:var(--fg2);margin-bottom:6px">Company Name or URL *</label><input type="text" placeholder="What's your company?" style="width:100%;font-family:var(--font-body);font-size:14px;padding:11px 13px;border:1.5px solid var(--line-strong);border-radius:var(--r-md);background:#fff;color:var(--ink)"></div>
-            <div><label style="display:block;font-size:12px;font-weight:700;color:var(--fg2);margin-bottom:6px">Cell # *</label><input type="tel" placeholder="What's your cell #?" style="width:100%;font-family:var(--font-body);font-size:14px;padding:11px 13px;border:1.5px solid var(--line-strong);border-radius:var(--r-md);background:#fff;color:var(--ink)"></div>
-          </div>
-          <div style="margin-bottom:14px"><label style="display:block;font-size:12px;font-weight:700;color:var(--fg2);margin-bottom:6px">Message</label><textarea placeholder="What can we help you with?" style="width:100%;font-family:var(--font-body);font-size:14px;padding:11px 13px;border:1.5px solid var(--line-strong);border-radius:var(--r-md);background:#fff;color:var(--ink);min-height:110px;resize:vertical"></textarea></div>
-          <div style="border:1px solid var(--line-strong);border-radius:var(--r-md);padding:14px 16px;display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
-            <div style="display:flex;align-items:center;gap:10px"><div style="width:22px;height:22px;border:2px solid var(--line-strong);border-radius:4px;flex:none"></div><span style="font-size:14px;color:var(--fg2)">I'm not a robot</span></div>
-            <div style="text-align:right;font-size:10px;color:var(--fg3)">reCAPTCHA<br><span style="font-size:9px">Privacy · Terms</span></div>
-          </div>
-          <button type="submit" class="btn btn-grad" style="width:100%;justify-content:center;padding:15px;font-size:15px">Send Message
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-          </button>
-          </form>
+__LOCAL_HS_FORM__
         </div>
     </div>
   </div>

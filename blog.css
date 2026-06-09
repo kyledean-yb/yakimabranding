@@ -83,6 +83,22 @@
 .post-cat--general{color:var(--fg2);background:var(--bg-mute)}
 .post-header h1{font-size:clamp(1.75rem,3vw,2.35rem);line-height:1.15;margin:0 0 14px}
 .post-meta{font-size:14px;color:var(--fg3);font-weight:600;display:flex;flex-wrap:wrap;gap:14px}
+.post-updated{color:var(--fg3);font-weight:600}
+.post-updated::before{content:"·";margin-right:14px;opacity:.5}
+
+/* Article intro — Short Answer, Summary, Key Takeaways */
+.blog-intro{display:grid;gap:24px;margin-bottom:32px}
+.blog-short-answer{background:#fff7f2;border:1px solid #ffd4c2;border-radius:var(--r-lg);padding:22px 24px}
+.blog-short-answer__label{display:block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--yb-coral,#ff6b57);margin-bottom:10px}
+.blog-short-answer__text{margin:0;font-family:var(--font-display);font-size:1.05rem;line-height:1.55;font-weight:700;color:var(--ink)}
+.blog-summary__title,.blog-takeaways__title{font-family:var(--font-display);font-size:1.25rem;font-weight:700;color:var(--ink);margin:0 0 10px;line-height:1.3}
+.blog-summary__text{margin:0;font-size:16px;line-height:1.75;color:var(--fg2)}
+.blog-takeaways{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:22px 24px 20px}
+.blog-takeaways__list{margin:0;padding-left:0;list-style:none}
+.blog-takeaways__list li{position:relative;padding-left:18px;margin-bottom:10px;font-size:16px;line-height:1.65;color:var(--fg2)}
+.blog-takeaways__list li:last-child{margin-bottom:0}
+.blog-takeaways__list li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--yb-blue)}
+
 .breadcrumb{font-size:13px;color:var(--fg3);margin-bottom:20px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .breadcrumb a{color:var(--yb-blue);font-weight:600}
 .breadcrumb span{opacity:.5}

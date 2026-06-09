@@ -553,13 +553,20 @@ def schemas_for_rel_path(rel: str) -> tuple[list[dict], str, str]:
         )
         return global_schemas() + page_schemas, "Organization, WebSite, WebPage", notes
 
-    if rel == "thank-you.html":
+    if rel in ("thank-you.html", "thank-you-home.html", "thank-you-contact.html") or (
+        rel.startswith("about/thank-you-") and rel.endswith(".html")
+    ) or (
+        rel.startswith("services/thank-you-") and rel.endswith(".html")
+    ) or (
+        rel.startswith("locations/thank-you-") and rel.endswith(".html")
+    ):
+        url_path = rel.replace(".html", "")
         page_schemas.append(
             {
                 "@context": "https://schema.org",
                 "@type": "WebPage",
                 "name": "Thank You | YB Marketing",
-                "url": f"{SITE}/thank-you",
+                "url": f"{SITE}/{url_path}",
                 "noIndex": True,
             }
         )

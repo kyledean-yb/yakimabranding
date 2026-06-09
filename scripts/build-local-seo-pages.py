@@ -11,12 +11,20 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = ROOT / "seo"
 DATA_FILE = ROOT / "data" / "seoLocations.js"
 PREFIX = "../"
+PARTIALS = ROOT / "partials" / "local-service"
 
 sys.path.insert(0, str(ROOT / "scripts"))
 from reviews_section_snippet import reviews_section_html
 from schema_markup import seo_head_html
 from site_accessibe_snippet import ACCESSIBE_BODY_SCRIPT
+from site_local_service_hubspot_form_snippet import (
+    LOCAL_HS_FORM_PLACEHOLDER,
+    hubspot_script_tags,
+    local_hubspot_form_html,
+    location_thank_you_redirect,
+)
 from site_staging_seo_snippet import STAGING_ROBOTS_META
+from seo_vs_ppc_section_snippet import seo_vs_ppc_section_html
 from site_footer_snippet import site_footer_html
 from site_nav_snippet import site_header_html
 
@@ -147,6 +155,11 @@ def schema_json(loc: dict) -> tuple[str, str]:
     )
 
 
+def load_partial(name: str, prefix: str) -> str:
+    text = (PARTIALS / name).read_text(encoding="utf-8")
+    return text.replace("../", prefix)
+
+
 def render_features(features: list[dict]) -> str:
     cards = []
     for i, feat in enumerate(features):
@@ -203,6 +216,18 @@ def render_page(loc: dict) -> str:
     reviews_html = reviews_section_html()
     hero_aria = f'SEO services in {city}'
     orbit_html = render_hero_orbit(p, city)
+    contact_html = (
+        load_partial("contact-section.html", p)
+        .replace('style="color:#159468"', 'style="color:#2BC4F0"')
+        .replace(
+            LOCAL_HS_FORM_PLACEHOLDER,
+            local_hubspot_form_html(
+                f"SEO in {city}",
+                redirect=location_thank_you_redirect(slug),
+            ),
+        )
+    )
+    seo_vs_ppc_html = seo_vs_ppc_section_html(p)
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -345,49 +370,7 @@ section{{padding:88px 0}}
   </div>
 </section>
 
-<!-- SEO vs PPC -->
-<div class="wave-div" style="background:#ffffff"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,70 C480,0 960,0 1440,70 L1440,70 L0,70 Z" fill="#F6F8FC"/></svg></div>
-<section style="background:var(--bg-soft)">
-  <div class="container">
-    <div style="max-width:900px;margin:0 auto">
-      <div style="text-align:center;margin-bottom:44px">
-        <span class="eyebrow" style="color:#2BC4F0">SEO vs. PPC</span>
-        <h2 style="margin:14px 0 16px">Which Is Right for Your Business?</h2>
-        <p style="color:var(--fg2);font-size:16px;max-width:640px;margin:0 auto;line-height:1.75">Pay-per-click (PPC) advertising offers immediate visibility and control, while SEO builds organic, sustainable traffic over time. Many businesses benefit from both. <a href="{p}contact.html" style="color:var(--yb-blue);font-weight:600">Get in touch with YB</a> to find the right mix for your goals.</p>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px" class="why-main-grid">
-        <div style="background:#fff;border-radius:var(--r-lg);padding:28px;border:1px solid var(--line);box-shadow:0 2px 8px rgba(22,32,58,.05)">
-          <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
-            <div style="width:44px;height:44px;background:var(--wash-cyan);border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;flex:none">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            </div>
-            <span style="font-family:var(--font-display);font-weight:700;font-size:18px;color:var(--ink)">SEO</span>
-          </div>
-          <ul style="list-style:none;display:grid;gap:11px">
-            <li style="display:flex;gap:10px;font-size:14px;color:var(--fg2)"><span style="color:#2BC4F0;font-weight:700;flex:none">✓</span>Long-term, sustainable organic traffic</li>
-            <li style="display:flex;gap:10px;font-size:14px;color:var(--fg2)"><span style="color:#2BC4F0;font-weight:700;flex:none">✓</span>Builds authority and trust with Google</li>
-            <li style="display:flex;gap:10px;font-size:14px;color:var(--fg2)"><span style="color:#2BC4F0;font-weight:700;flex:none">✓</span>Compounds in value — results grow over time</li>
-            <li style="display:flex;gap:10px;font-size:14px;color:var(--fg2)"><span style="color:#2BC4F0;font-weight:700;flex:none">✓</span>Ranks in both traditional and AI search results</li>
-          </ul>
-        </div>
-        <div style="background:#fff;border-radius:var(--r-lg);padding:28px;border:1px solid var(--line);box-shadow:0 2px 8px rgba(22,32,58,.05)">
-          <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
-            <div style="width:44px;height:44px;background:var(--wash-coral);border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;flex:none">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--yb-coral)" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
-            </div>
-            <span style="font-family:var(--font-display);font-weight:700;font-size:18px;color:var(--ink)">PPC / Google Ads</span>
-          </div>
-          <ul style="list-style:none;display:grid;gap:11px">
-            <li style="display:flex;gap:10px;font-size:14px;color:var(--fg2)"><span style="color:var(--yb-coral);font-weight:700;flex:none">✓</span>Immediate visibility at the top of Google</li>
-            <li style="display:flex;gap:10px;font-size:14px;color:var(--fg2)"><span style="color:var(--yb-coral);font-weight:700;flex:none">✓</span>Full control over budget and targeting</li>
-            <li style="display:flex;gap:10px;font-size:14px;color:var(--fg2)"><span style="color:var(--yb-coral);font-weight:700;flex:none">✓</span>Great for promotions, launches, and events</li>
-            <li style="display:flex;gap:10px;font-size:14px;color:var(--fg2)"><span style="color:var(--yb-coral);font-weight:700;flex:none">✓</span>Measurable ROI on every dollar spent</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+{seo_vs_ppc_html}
 
 <!-- WHY YB -->
 <div class="wave-div" style="background:#F6F8FC"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,50 C480,70 960,10 1440,30 L1440,70 L0,70 Z" fill="#1B2A4A"/></svg></div>
@@ -459,8 +442,10 @@ section{{padding:88px 0}}
   </div>
 </section>
 
+{contact_html}
+
 <!-- CTA -->
-<div class="wave-div" style="background:#ffffff"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,50 C480,70 960,10 1440,30 L1440,70 L0,70 Z" fill="#1B2A4A"/></svg></div>
+<div class="wave-div" style="background:#F6F8FC"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,50 C480,70 960,10 1440,30 L1440,70 L0,70 Z" fill="#1B2A4A"/></svg></div>
 <div style="background:var(--grad-navy)">
 <div class="svc-cta">
   <div class="svc-cta-mesh"></div>
@@ -481,6 +466,7 @@ section{{padding:88px 0}}
 
 {footer}
 
+{hubspot_script_tags(p)}
 <script src="{p}js/newsletter-popup.js" defer></script>
 <script src="{p}js/chat-widget.js" defer></script>
 <script src="{p}js/site.js"></script>

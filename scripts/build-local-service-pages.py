@@ -18,6 +18,12 @@ from site_accessibe_snippet import ACCESSIBE_BODY_SCRIPT
 from site_staging_seo_snippet import STAGING_ROBOTS_META
 from site_footer_snippet import site_footer_html
 from site_nav_snippet import site_header_html
+from site_local_service_hubspot_form_snippet import (
+    LOCAL_HS_FORM_PLACEHOLDER,
+    hubspot_script_tags,
+    local_hubspot_form_html,
+    location_thank_you_redirect,
+)
 
 LOC_PIN = (
     '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
@@ -265,9 +271,18 @@ def render_page(loc: dict, config: dict) -> str:
     signals_html = render_local_signals(loc["localSignals"])
     process_html = render_process_steps(service_key)
     orbit_html = render_hero_orbit(p, city, config["service_label"], config)
-    contact_html = load_partial("contact-section.html", p).replace(
-        'style="color:#159468"', f'style="color:{accent}"'
-    ).replace('style="color:#FF6B57"', f'style="color:{accent}"')
+    contact_html = (
+        load_partial("contact-section.html", p)
+        .replace('style="color:#159468"', f'style="color:{accent}"')
+        .replace('style="color:#FF6B57"', f'style="color:{accent}"')
+        .replace(
+            LOCAL_HS_FORM_PLACEHOLDER,
+            local_hubspot_form_html(
+                f'{config["service_label"]} in {city}',
+                redirect=location_thank_you_redirect(slug),
+            ),
+        )
+    )
     hero_aria = f'{config["service_label"]} in {city}'
     eyebrow = loc["hero"].get("eyebrow", config["service_label"].upper())
 
@@ -484,7 +499,7 @@ section{{padding:88px 0}}
 
 {footer}
 
-<script src="{p}js/contact-forms.js" defer></script>
+{hubspot_script_tags(p)}
 <script src="{p}js/newsletter-popup.js" defer></script>
 <script src="{p}js/chat-widget.js" defer></script>
 <script src="{p}js/site.js"></script>

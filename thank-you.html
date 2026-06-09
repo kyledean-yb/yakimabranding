@@ -34,6 +34,7 @@ a{color:inherit;text-decoration:none}
 .ty-hero-lead{color:var(--fg2-on-dark);font-size:clamp(1rem,1.4vw,1.12rem);line-height:1.7;max-width:640px;margin:0 auto 24px}
 .ty-hero-urgent{color:rgba(255,255,255,.75);font-size:14.5px;line-height:1.65;max-width:560px;margin:0 auto 32px}
 .ty-hero-urgent a{color:var(--yb-cyan);font-weight:600}
+.ty-hero-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
 .ty-steps{background:#fff;padding:88px 0}
 .ty-steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
 .ty-step{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--r-lg);padding:28px}
@@ -42,6 +43,8 @@ a{color:inherit;text-decoration:none}
 .ty-step p{font-size:14.5px;color:var(--fg2);line-height:1.65;margin:0}
 .ty-calendly{background:var(--bg-soft);padding:88px 0}
 .ty-calendly-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);padding:36px;box-shadow:var(--sh-sm);max-width:720px;margin:36px auto 0;text-align:center}
+.ty-calendly-card--schedule{max-width:640px;text-align:left}
+.ty-calendly-card--schedule .yb-schedule-intro{margin-top:0}
 .ty-services{background:#fff;padding:88px 0}
 .ty-svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
 .ty-svc-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:24px;box-shadow:var(--sh-xs);transition:transform 240ms,box-shadow 240ms;text-decoration:none;color:inherit;display:flex;flex-direction:column;height:100%}
@@ -84,6 +87,7 @@ a{color:inherit;text-decoration:none}
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"YB Marketing","url":"https://yakimabranding.com","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://yakimabranding.com/insights?search={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Thank You | YB Marketing","url":"https://yakimabranding.com/thank-you","noIndex":true}</script>
 <!-- yb-schema-end -->
+
 </head>
 <body>
 <script>
@@ -167,9 +171,11 @@ a{color:inherit;text-decoration:none}
     <h1>Thank You for<br><span class="ty-hero-accent">Contacting YB Marketing!</span></h1>
     <p class="ty-hero-lead">We've received your message and a member of our team will be in touch within 1 business day. We look forward to learning more about your business and how we can help you grow.</p>
     <p class="ty-hero-urgent">For urgent needs, please call us directly at <a href="tel:5099019735">(509) 901-9735</a> or email <a href="mailto:info@yakimabranding.com">info@yakimabranding.com</a></p>
-    <a href="index.html" class="btn btn-grad btn-lg">Return to Home
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-    </a>
+    <div class="ty-hero-actions">
+      <a href="index.html" class="btn btn-grad btn-lg">Return to Home
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -210,24 +216,53 @@ a{color:inherit;text-decoration:none}
 <section class="ty-calendly" id="book">
   <div class="container" style="text-align:center">
     <h2 style="font-size:clamp(1.6rem,2.4vw,2rem);margin:0 0 12px">Don't Want to Wait? Book a Meeting Now.</h2>
-    <p class="yb-lead" style="max-width:560px;margin:0 auto">Schedule your free 30-minute introduction call directly — no forms, no back and forth.</p>
-    <div class="ty-calendly-card">
-      <div style="width:56px;height:56px;background:var(--grad-brand);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-family:var(--font-display);font-weight:800;font-size:22px;color:#fff">YB</div>
-      <div style="font-size:12px;font-weight:600;color:var(--fg3);margin-bottom:4px">YB Marketing Team</div>
-      <div style="font-weight:700;font-size:18px;color:var(--ink);margin-bottom:6px">Introduction Meeting</div>
-      <div style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--fg3);background:var(--bg-soft);border-radius:var(--r-pill);padding:5px 12px;border:1px solid var(--line);margin-bottom:16px">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        30 min · Free
+    <p class="yb-lead" style="max-width:560px;margin:0 auto 36px">Schedule your free 30-minute introduction call directly — no forms, no back and forth.</p>
+    <div class="ty-calendly-card ty-calendly-card--schedule">
+        <div style="text-align:center;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:22px">
+        <div style="width:56px;height:56px;background:var(--grad-brand);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-family:var(--font-display);font-weight:800;font-size:22px;color:#fff">YB</div>
+        <div style="font-size:12px;font-weight:600;color:var(--fg3);margin-bottom:4px">YB Marketing Team</div>
+        <div style="font-weight:700;font-size:18px;color:var(--ink);margin-bottom:6px">Introduction Meeting</div>
+        <div style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--fg3);background:#fff;border-radius:var(--r-pill);padding:5px 12px;border:1px solid var(--line)">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          30 min · Free
+        </div>
+        <p style="font-size:13.5px;color:var(--fg2);margin-top:14px;line-height:1.6">An introduction meeting to learn more about your business, your goals, and how we can help you grow. No commitment required.</p>
       </div>
-      <p style="font-size:13.5px;color:var(--fg2);margin-bottom:20px;line-height:1.6">An introduction meeting to learn more about your business, your goals, and how we can help you grow. No commitment required.</p>
-      <!-- Replace with your actual Calendly inline embed -->
-      <!-- <div class="calendly-inline-widget" data-url="https://calendly.com/yakimabranding/introduction-meeting" style="min-width:320px;height:630px;"></div>
-           <script src="https://assets.calendly.com/assets/external/widget.js" async></script> -->
-      <a href="https://calendly.com/yakimabranding" target="_blank" rel="noopener" class="btn btn-grad" style="width:100%;max-width:360px;justify-content:center;padding:15px">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
-        Schedule on Calendly
-      </a>
-      <p style="text-align:center;font-size:11.5px;color:var(--fg3);margin-top:10px">Replace the button above with a Calendly inline embed when your link is ready.</p>
+      <p class="yb-schedule-intro">Choose who you'd like to meet with</p>
+      <div class="yb-schedule-grid">
+        <div class="yb-schedule-card yb-schedule-card--split">
+          <img src="assets/jacob-headshot.webp" alt="Jacob Ross" class="yb-schedule-card__photo" width="64" height="64" loading="lazy">
+          <span class="yb-schedule-card__info">
+            <span class="yb-schedule-card__name">Jacob Ross</span>
+            <a href="https://calendly.com/jacobybmarketing" target="_blank" rel="noopener noreferrer" class="yb-schedule-card__cta">Schedule Call</a>
+            <a href="about/jacob.html" class="yb-schedule-card__meet">Meet Jacob</a>
+          </span>
+        </div>
+        <div class="yb-schedule-card yb-schedule-card--split">
+          <img src="assets/kristin-headshot.webp" alt="Kristin Sparling" class="yb-schedule-card__photo" width="64" height="64" loading="lazy">
+          <span class="yb-schedule-card__info">
+            <span class="yb-schedule-card__name">Kristin Sparling</span>
+            <a href="https://calendly.com/kristin-sparling/connect" target="_blank" rel="noopener noreferrer" class="yb-schedule-card__cta">Schedule Call</a>
+            <a href="about/kristin.html" class="yb-schedule-card__meet">Meet Kristin</a>
+          </span>
+        </div>
+        <div class="yb-schedule-card yb-schedule-card--split">
+          <img src="assets/kevin-headshot.webp" alt="Kevin Dean" class="yb-schedule-card__photo" width="64" height="64" loading="lazy">
+          <span class="yb-schedule-card__info">
+            <span class="yb-schedule-card__name">Kevin Dean</span>
+            <a href="https://calendly.com/kdean-wsi" target="_blank" rel="noopener noreferrer" class="yb-schedule-card__cta">Schedule Call</a>
+            <a href="about/kevin.html" class="yb-schedule-card__meet">Meet Kevin</a>
+          </span>
+        </div>
+        <div class="yb-schedule-card yb-schedule-card--split">
+          <img src="assets/sophie-headshot.webp" alt="Sophie Mann" class="yb-schedule-card__photo" width="64" height="64" loading="lazy">
+          <span class="yb-schedule-card__info">
+            <span class="yb-schedule-card__name">Sophie Mann</span>
+            <a href="https://calendly.com/sophie-yakimabranding/30min" target="_blank" rel="noopener noreferrer" class="yb-schedule-card__cta">Schedule Call</a>
+            <a href="about/sophie.html" class="yb-schedule-card__meet">Meet Sophie</a>
+          </span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -682,8 +717,6 @@ a{color:inherit;text-decoration:none}
 if (typeof window !== 'undefined') {
   window.history.replaceState(null, '', 'thank-you.html');
 }
-// Optional: redirect to homepage after 60 seconds
-// setTimeout(function() { window.location.href = 'index.html'; }, 60000);
 </script>
 <script src="js/newsletter-popup.js" defer></script>
 <script src="js/chat-widget.js" defer></script>

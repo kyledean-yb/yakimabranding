@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../favicon.png">
+<title>Thank You | Vancouver | YB Marketing</title>
+<meta name="description" content="Thank you for contacting YB Marketing. A member of our team will be in touch within 1 business day.">
+<!-- TODO: Add Google Ads conversion tracking snippet here if running paid campaigns -->
+<!-- TODO: Fire lead conversion event here — GA4: gtag('event', 'generate_lead') -->
+<!-- TODO: Fire Meta Pixel lead event here — fbq('track', 'Lead') -->
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="../site.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--fg1);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.container{width:100%;max-width:var(--container);margin:0 auto;padding:0 28px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:currentColor;flex:none}
+.btn{display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;font-family:var(--font-body);font-weight:700;font-size:15px;border-radius:var(--r-md);padding:13px 22px;transition:all 240ms;text-decoration:none;line-height:1}
+.btn-grad{background:var(--grad-brand);color:#fff;box-shadow:0 14px 30px -10px rgba(63,111,214,.45)}
+.btn-grad:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.btn-lg{padding:16px 28px;font-size:16px}
+.wave-div{position:relative;overflow:hidden;line-height:0;font-size:0}
+.wave-div svg{display:block;width:100%;height:70px}
+.ty-hero{background:var(--grad-navy);position:relative;overflow:hidden;padding:100px 0 88px;text-align:center}
+.ty-hero-mesh{position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.65;pointer-events:none}
+.ty-hero h1{font-family:var(--font-display);font-weight:800;font-size:clamp(2.2rem,4vw,3.4rem);color:#fff;line-height:1.08;margin:18px 0}
+.ty-hero-accent{background:var(--grad-brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ty-hero-lead{color:var(--fg2-on-dark);font-size:clamp(1rem,1.4vw,1.12rem);line-height:1.7;max-width:640px;margin:0 auto 24px}
+.ty-hero-urgent{color:rgba(255,255,255,.75);font-size:14.5px;line-height:1.65;max-width:560px;margin:0 auto 32px}
+.ty-hero-urgent a{color:var(--yb-cyan);font-weight:600}
+.ty-hero-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.ty-steps{background:#fff;padding:88px 0}
+.ty-steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.ty-step{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--r-lg);padding:28px}
+.ty-step-ic{width:56px;height:56px;border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.ty-step h3{font-family:var(--font-display);font-weight:800;font-size:15px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink);margin:0 0 12px}
+.ty-step p{font-size:14.5px;color:var(--fg2);line-height:1.65;margin:0}
+.ty-calendly{background:var(--bg-soft);padding:88px 0}
+.ty-calendly-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);padding:36px;box-shadow:var(--sh-sm);max-width:720px;margin:36px auto 0;text-align:center}
+.ty-calendly-card--schedule{max-width:640px;text-align:left}
+.ty-calendly-card--schedule .yb-schedule-intro{margin-top:0}
+.ty-services{background:#fff;padding:88px 0}
+.ty-svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.ty-svc-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:24px;box-shadow:var(--sh-xs);transition:transform 240ms,box-shadow 240ms;text-decoration:none;color:inherit;display:flex;flex-direction:column;height:100%}
+.ty-svc-card:hover{transform:translateY(-4px);box-shadow:var(--sh-md)}
+.ty-svc-ic{width:48px;height:48px;border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.ty-svc-ic svg{width:22px;height:22px}
+.ty-svc-card h3{font-size:16px;color:var(--ink);margin:0 0 8px;line-height:1.35}
+.ty-svc-card p{font-size:14px;color:var(--fg2);line-height:1.6;margin:0 0 16px;flex:1}
+.ty-svc-link{font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:5px;margin-top:auto}
+.ty-wave-services-reviews{background:#ffffff}
+.ty-wave-reviews-footer{background:#F6F8FC}
+.reviews-bg{background:var(--bg-soft)}
+.reviews-scroll-track{display:flex;width:max-content;animation:rv-scroll 50s linear infinite;gap:22px}
+.reviews-scroll-track:hover{animation-play-state:paused}
+.reviews-scroll-set{display:flex;gap:22px}
+.rv-scroll-card{width:320px;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:22px;box-shadow:var(--sh-sm);flex:none;display:flex;flex-direction:column}
+@keyframes rv-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.reviews-scroll-track{animation:none}}
+@media(max-width:1024px){
+  .ty-svc-grid{grid-template-columns:repeat(2,1fr)}
+  .ty-steps-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  .ty-hero{padding:72px 0 64px}
+  .ty-steps,.ty-calendly,.ty-services{padding:64px 0}
+  .ty-steps-grid{grid-template-columns:1fr}
+  .ty-svc-grid{grid-template-columns:1fr}
+  .reviews-bg{padding-top:64px!important}
+}
+@media(max-width:640px){
+  .container{padding:0 20px}
+  .ty-hero{padding:56px 0 48px}
+  .ty-hero-urgent{font-size:13px;padding:0 4px}
+  .ty-calendly-card{padding:24px 20px}
+  .rv-scroll-card{width:min(300px,calc(100vw - 48px))}
+}
+</style>
+<!-- yb-schema-start -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"YB Marketing","alternateName":"Yakima Branding","url":"https://yakimabranding.com","logo":"https://yakimabranding.com/assets/yb-logo-color.png","description":"Award-winning digital marketing agency helping businesses grow through strategic branding, SEO, and comprehensive digital solutions.","telephone":"+15099019735","email":"info@yakimabranding.com","foundingDate":"2004","address":{"@type":"PostalAddress","addressLocality":"Yakima","addressRegion":"WA","addressCountry":"US"},"areaServed":["Yakima, WA","Ellensburg, WA","Tri-Cities, WA","Spokane, WA","Boise, ID","Coeur d'Alene, ID","Tacoma, WA","Vancouver, WA","Wenatchee, WA","Walla Walla, WA","Pacific Northwest"],"sameAs":["https://www.facebook.com/yakimabranding","https://www.instagram.com/yakimabranding","https://www.linkedin.com/company/yakima-branding"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"43","bestRating":"5"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"YB Marketing","url":"https://yakimabranding.com","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://yakimabranding.com/insights?search={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Thank You | YB Marketing","url":"https://yakimabranding.com/locations/thank-you-vancouver-wa","noIndex":true}</script>
+<!-- yb-schema-end -->
+
+</head>
+<body>
+<script>
+(function(){ var s = document.createElement('script'); var h = document.querySelector('head') || document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function(){ acsbJS.init({ statementLink : '', footerHtml : '', hideMobile : false, hideTrigger : false, disableBgProcess : false, language : 'en', position : 'left', leadColor : '#146FF8', triggerColor : '#146FF8', triggerRadius : '50%', triggerPositionX : 'left', triggerPositionY : 'bottom', triggerIcon : 'people', triggerSize : 'medium', triggerOffsetX : 20, triggerOffsetY : 20, mobile : { triggerSize : 'small', triggerPositionX : 'right', triggerPositionY : 'bottom', triggerOffsetX : 10, triggerOffsetY : 10, triggerRadius : '20' } }); }; h.appendChild(s); })();
+</script>
+
+<div class="header top" id="header">
+  <div class="container header-inner">
+    <a class="logo" href="../index.html">
+      <img src="../assets/yb-logo-color.png" alt="YB Marketing logo" style="width:44px;height:44px">
+      <span class="logo-text">YB <span>Marketing</span></span>
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-a">Home</a>
+            <div class="nav-about" id="navAbout">
+        <button class="nav-svc-btn" type="button">About
+          <svg class="nav-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dd nav-dd-about">
+          <div class="nav-dd-arrow"></div>
+          <div class="nav-dd-about-inner">
+            <div class="nav-dd-about-banner">
+              <span class="nav-dd-eyebrow">About YB Marketing</span>
+              <p class="nav-dd-banner-text">Pacific Northwest agency · Washington State</p>
+            </div>
+            <div class="nav-dd-about-grid">
+              <a href="../about.html" class="dd-card">
+                <div class="dd-ic" style="background:var(--wash-blue);color:var(--yb-blue)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                <div><span class="dd-name">About Us</span><span class="dd-desc">Meet our team &amp; our story</span></div>
+              </a>
+              <a href="../washington-state-sales-tax.html" class="dd-card">
+                <div class="dd-ic" style="background:#e8f5ee;color:#2d9a5a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+                <div><span class="dd-name">WA Sales Tax Notice</span><span class="dd-desc">Oct 2025 advertising &amp; software tax info</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-services" id="navServices">
+        <button class="nav-svc-btn" type="button">Services
+          <svg class="nav-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dd">
+          <div class="nav-dd-arrow"></div>
+          <div class="nav-dd-grid">
+            <a href="../services/branding.html" class="dd-card"><div class="dd-ic" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="0.5" fill="currentColor"/><circle cx="17.5" cy="10.5" r="0.5" fill="currentColor"/><circle cx="8.5" cy="7.5" r="0.5" fill="currentColor"/><circle cx="6.5" cy="12.5" r="0.5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></div><div><span class="dd-name">Branding &amp; Design</span><span class="dd-desc">Logos, systems &amp; identity</span></div></a>
+            <a href="../services/web-design.html" class="dd-card"><div class="dd-ic" style="background:var(--wash-mint);color:#159468"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div><div><span class="dd-name">Web Design</span><span class="dd-desc">WordPress, Wix &amp; custom sites</span></div></a>
+            <a href="../services/social-media.html" class="dd-card"><div class="dd-ic" style="background:var(--wash-amber);color:#c77f12"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/></svg></div><div><span class="dd-name">Social Media</span><span class="dd-desc">Grow your following</span></div></a>
+            <a href="../services/google-ads.html" class="dd-card"><div class="dd-ic" style="background:var(--wash-coral);color:var(--yb-coral)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></div><div><span class="dd-name">Google Ads</span><span class="dd-desc">PPC that converts</span></div></a>
+            <a href="../services/seo.html" class="dd-card"><div class="dd-ic" style="background:var(--wash-cyan);color:var(--yb-cyan)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><div><span class="dd-name">SEO</span><span class="dd-desc">Rank higher on Google</span></div></a>
+            <a href="../services/press-releases.html" class="dd-card"><div class="dd-ic" style="background:var(--wash-pink);color:var(--yb-pink)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/></svg></div><div><span class="dd-name">Press Releases</span><span class="dd-desc">Get published</span></div></a>
+            <a href="../services/content-creation.html" class="dd-card"><div class="dd-ic" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div><span class="dd-name">Content &amp; Blogging</span><span class="dd-desc">Copy that converts</span></div></a>
+          </div>
+        </div>
+      </div>
+      <a href="../insights.html" class="nav-a">Insights</a>
+      <a href="../contact.html" class="nav-a">Contact</a>
+    </nav>
+    <div class="btn-hdr" style="display:flex;align-items:center;gap:8px">
+      <a href="tel:5099019735" class="btn btn-hdr-phone">509-901-9735</a>
+      <a href="../contact.html" class="btn btn-grad">Get Started</a>
+    </div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="../index.html">Home</a>
+    <a href="#" onclick="document.getElementById('mobileAboutList').classList.toggle('open');return false" style="display:flex;justify-content:space-between;align-items:center">About <span>▾</span></a>
+    <div class="mobile-svc-list" id="mobileAboutList">
+      <a href="../about.html" class="mobile-about-row"><strong>About Us</strong><span>Meet our team &amp; our story</span></a>
+      <a href="../washington-state-sales-tax.html" class="mobile-about-row"><strong>WA Sales Tax Notice</strong><span>Oct 2025 tax updates</span></a>
+    </div>
+    <a href="../insights.html">Insights</a>
+    <a href="../contact.html">Contact</a>
+  </div>
+</div>
+
+<section class="ty-hero">
+  <div class="ty-hero-mesh"></div>
+  <div class="container" style="position:relative">
+    <span class="eyebrow" style="color:var(--yb-coral)">Message Received</span>
+    <h1>Thank You for<br><span class="ty-hero-accent">Contacting YB Marketing!</span></h1>
+    <p class="ty-hero-lead">We've received your message and a member of our team will be in touch within 1 business day. We look forward to learning more about your business and how we can help you grow.</p>
+    <p class="ty-hero-urgent">For urgent needs, please call us directly at <a href="tel:5099019735">(509) 901-9735</a> or email <a href="mailto:info@yakimabranding.com">info@yakimabranding.com</a></p>
+    <div class="ty-hero-actions">
+      <a href="vancouver-wa.html" class="btn btn-grad btn-lg">Return to Vancouver
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="wave-div" style="background:#1B2A4A"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,0 C360,70 1080,70 1440,0 L1440,70 L0,70 Z" fill="#ffffff"/></svg></div>
+
+<section class="ty-steps">
+  <div class="container">
+    <div style="text-align:center;max-width:640px;margin:0 auto">
+      <span class="eyebrow" style="color:var(--yb-blue)">What to Expect</span>
+      <h2 style="margin:14px 0 0;font-size:clamp(1.8rem,2.6vw,2.4rem)">Here's What Happens Next</h2>
+    </div>
+    <div class="ty-steps-grid">
+      <div class="ty-step">
+        <div class="ty-step-ic" style="background:var(--wash-blue);color:var(--yb-blue)">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <h3>We Review Your Message</h3>
+        <p>A real member of the YB team — not a bot — reviews every inquiry personally and routes it to the right specialist for your needs.</p>
+      </div>
+      <div class="ty-step">
+        <div class="ty-step-ic" style="background:var(--wash-cyan);color:var(--yb-cyan)">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h3>We Reach Out Within 1 Business Day</h3>
+        <p>Expect a call or email from our team within 1 business day. If you'd like to skip the wait, book a 30-minute intro call directly using the link below.</p>
+      </div>
+      <div class="ty-step">
+        <div class="ty-step-ic" style="background:var(--wash-mint);color:var(--yb-mint)">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+        </div>
+        <h3>We Build Your Custom Strategy</h3>
+        <p>Once we connect, we'll start with a free audit of your website and marketing channels — and build a strategy tailored to your business and goals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ty-calendly" id="book">
+  <div class="container" style="text-align:center">
+    <h2 style="font-size:clamp(1.6rem,2.4vw,2rem);margin:0 0 12px">Don't Want to Wait? Book a Meeting Now.</h2>
+    <p class="yb-lead" style="max-width:560px;margin:0 auto 36px">Schedule your free 30-minute introduction call directly — no forms, no back and forth.</p>
+    <div class="ty-calendly-card ty-calendly-card--schedule">
+        <div style="text-align:center;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:22px">
+        <div style="width:56px;height:56px;background:var(--grad-brand);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-family:var(--font-display);font-weight:800;font-size:22px;color:#fff">YB</div>
+        <div style="font-size:12px;font-weight:600;color:var(--fg3);margin-bottom:4px">YB Marketing Team</div>
+        <div style="font-weight:700;font-size:18px;color:var(--ink);margin-bottom:6px">Introduction Meeting</div>
+        <div style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--fg3);background:#fff;border-radius:var(--r-pill);padding:5px 12px;border:1px solid var(--line)">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          30 min · Free
+        </div>
+        <p style="font-size:13.5px;color:var(--fg2);margin-top:14px;line-height:1.6">An introduction meeting to learn more about your business, your goals, and how we can help you grow. No commitment required.</p>
+      </div>
+      <p class="yb-schedule-intro">Choose who you'd like to meet with</p>
+      <div class="yb-schedule-grid">
+        <div class="yb-schedule-card yb-schedule-card--split">
+          <img src="../assets/jacob-headshot.webp" alt="Jacob Ross" class="yb-schedule-card__photo" width="64" height="64" loading="lazy">
+          <span class="yb-schedule-card__info">
+            <span class="yb-schedule-card__name">Jacob Ross</span>
+            <a href="https://calendly.com/jacobybmarketing" target="_blank" rel="noopener noreferrer" class="yb-schedule-card__cta">Schedule Call</a>
+            <a href="../about/jacob.html" class="yb-schedule-card__meet">Meet Jacob</a>
+          </span>
+        </div>
+        <div class="yb-schedule-card yb-schedule-card--split">
+          <img src="../assets/kristin-headshot.webp" alt="Kristin Sparling" class="yb-schedule-card__photo" width="64" height="64" loading="lazy">
+          <span class="yb-schedule-card__info">
+            <span class="yb-schedule-card__name">Kristin Sparling</span>
+            <a href="https://calendly.com/kristin-sparling/connect" target="_blank" rel="noopener noreferrer" class="yb-schedule-card__cta">Schedule Call</a>
+            <a href="../about/kristin.html" class="yb-schedule-card__meet">Meet Kristin</a>
+          </span>
+        </div>
+        <div class="yb-schedule-card yb-schedule-card--split">
+          <img src="../assets/kevin-headshot.webp" alt="Kevin Dean" class="yb-schedule-card__photo" width="64" height="64" loading="lazy">
+          <span class="yb-schedule-card__info">
+            <span class="yb-schedule-card__name">Kevin Dean</span>
+            <a href="https://calendly.com/kdean-wsi" target="_blank" rel="noopener noreferrer" class="yb-schedule-card__cta">Schedule Call</a>
+            <a href="../about/kevin.html" class="yb-schedule-card__meet">Meet Kevin</a>
+          </span>
+        </div>
+        <div class="yb-schedule-card yb-schedule-card--split">
+          <img src="../assets/sophie-headshot.webp" alt="Sophie Mann" class="yb-schedule-card__photo" width="64" height="64" loading="lazy">
+          <span class="yb-schedule-card__info">
+            <span class="yb-schedule-card__name">Sophie Mann</span>
+            <a href="https://calendly.com/sophie-yakimabranding/30min" target="_blank" rel="noopener noreferrer" class="yb-schedule-card__cta">Schedule Call</a>
+            <a href="../about/sophie.html" class="yb-schedule-card__meet">Meet Sophie</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ty-services">
+  <div class="container">
+    <div style="text-align:center;max-width:640px;margin:0 auto">
+      <span class="eyebrow" style="color:var(--yb-blue)">Explore Our Services</span>
+      <h2 style="margin:14px 0 0;font-size:clamp(1.8rem,2.6vw,2.4rem)">While You Wait, Explore What YB Can Do For You</h2>
+    </div>
+    <div class="ty-svc-grid">
+      <a href="../services/seo.html" class="ty-svc-card">
+        <div class="ty-svc-ic" style="background:var(--wash-cyan);color:var(--yb-cyan)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <h3>SEO & AI Optimization</h3>
+        <p>Rank higher on Google and AI search with a strategy built for your market.</p>
+        <span class="ty-svc-link" style="color:var(--yb-cyan)">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+      <a href="../services/google-ads.html" class="ty-svc-card">
+        <div class="ty-svc-ic" style="background:var(--wash-coral);color:var(--yb-coral)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>Google Ads Management</h3>
+        <p>Drive qualified leads with campaigns managed by certified PPC specialists.</p>
+        <span class="ty-svc-link" style="color:var(--yb-coral)">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+      <a href="../services/web-design.html" class="ty-svc-card">
+        <div class="ty-svc-ic" style="background:var(--wash-mint);color:#159468"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div>
+        <h3>Web Design & Development</h3>
+        <p>Fast, conversion-focused websites built on WordPress, Wix, or custom stacks.</p>
+        <span class="ty-svc-link" style="color:#159468">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+      <a href="../services/social-media.html" class="ty-svc-card">
+        <div class="ty-svc-ic" style="background:var(--wash-amber);color:#c77f12"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/></svg></div>
+        <h3>Social Media Management</h3>
+        <p>Grow your audience and turn followers into customers with consistent content.</p>
+        <span class="ty-svc-link" style="color:#c77f12">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+      <a href="../services/branding.html" class="ty-svc-card">
+        <div class="ty-svc-ic" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg></div>
+        <h3>Branding & Design</h3>
+        <p>Logos, visual identity systems, and brand guidelines that stand out.</p>
+        <span class="ty-svc-link" style="color:var(--yb-violet)">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+      <a href="../services/content-creation.html" class="ty-svc-card">
+        <div class="ty-svc-ic" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <h3>Content Marketing</h3>
+        <p>Blog posts, copy, and content strategy that builds authority and converts.</p>
+        <span class="ty-svc-link" style="color:var(--yb-violet)">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="wave-div ty-wave-services-reviews"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,0 C360,70 1080,70 1440,0 L1440,70 L0,70 Z" fill="#F6F8FC"/></svg></div>
+<!-- REVIEWS -->
+<section class="reviews-bg" style="overflow:hidden;padding:88px 0 0">
+  <div class="container" style="margin-bottom:40px">
+    <div style="text-align:center;max-width:640px;margin:0 auto">
+      <span class="eyebrow" style="color:var(--yb-coral)">Client Love</span>
+      <h2 style="margin:14px 0 16px">What Our Clients Say</h2>
+      <div style="display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:var(--r-pill);padding:8px 20px;box-shadow:var(--sh-xs)">
+        <div style="display:flex;gap:2px;color:var(--yb-amber)"><svg style="width:18px;height:18px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:18px;height:18px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:18px;height:18px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:18px;height:18px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:18px;height:18px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <span style="font-weight:800;font-size:16px;color:var(--ink)">5.0</span>
+        <span style="color:var(--fg3);font-size:13px;font-weight:600">· 43 Google Reviews</span>
+      </div>
+    </div>
+  </div>
+  <div style="padding-bottom:88px;overflow:hidden">
+    <div class="reviews-scroll-track">
+      <div class="reviews-scroll-set">
+        <div class="rv-scroll-card">
+        <div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Yakima Branding's team is professional, creative, accommodating and very patient! We made several changes, pivoted on our initial concept, and they stay…"</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--grad-brand);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">HH</div>
+            <span style="font-weight:700;font-size:13px;color:var(--ink)">Heather Hellums</span>
+          </div>
+          <span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span>
+        </div>
+      </div>
+      <div class="rv-scroll-card">
+        <div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Yakima Branding is an excellent choice for all of your SEO, marketing, branding, logos, websites and more. Jacob is extremely knowledgeable and easy to …"</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--grad-sunset);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">JD</div>
+            <span style="font-weight:700;font-size:13px;color:var(--ink)">Josh DeBoer</span>
+          </div>
+          <span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span>
+        </div>
+      </div>
+      <div class="rv-scroll-card">
+        <div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Yakima Branding designed my website, hosts it and maintains the SEO. They are good at targeting the right clients for my business. High-quality services…"</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--yb-cyan),var(--yb-blue));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">LO</div>
+            <span style="font-weight:700;font-size:13px;color:var(--ink)">Law Office</span>
+          </div>
+          <span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span>
+        </div>
+      </div>
+      <div class="rv-scroll-card">
+        <div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Great company to work with. I've completed two big projects and the business has been leaping up the Google results page with organic searches. I highly…"</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--yb-pink),var(--yb-violet));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">AD</div>
+            <span style="font-weight:700;font-size:13px;color:var(--ink)">Apex Dentures</span>
+          </div>
+          <span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span>
+        </div>
+      </div>
+      <div class="rv-scroll-card">
+        <div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Worked with Jacob and his team and had a great experience building a new website! They were professional and easy to work with through the whole process."</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--grad-brand);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">TH</div>
+            <span style="font-weight:700;font-size:13px;color:var(--ink)">The Healthy Worker</span>
+          </div>
+          <span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span>
+        </div>
+      </div>
+      <div class="rv-scroll-card">
+        <div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Great group to work with. Very knowledgeable and friendly."</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--grad-sunset);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">PS</div>
+            <span style="font-weight:700;font-size:13px;color:var(--ink)">PMI Supplies</span>
+          </div>
+          <span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span>
+        </div>
+      </div>
+      <div class="rv-scroll-card">
+        <div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Had a great experience working with Jacob. He and his team guided us through developing a logo and initial branding. Looking forward to working with Yak…"</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--yb-pink),var(--yb-violet));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">GS</div>
+            <span style="font-weight:700;font-size:13px;color:var(--ink)">Groundwork Systems</span>
+          </div>
+          <span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span>
+        </div>
+      </div>
+      <div class="rv-scroll-card">
+        <div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Yakima Branding was instrumental in the successful launch of my business and brand. Their creative ideas and mastery of technology and social media has …"</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--grad-sunset);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">JC</div>
+            <span style="font-weight:700;font-size:13px;color:var(--ink)">JLS Custom Construction</span>
+          </div>
+          <span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span>
+        </div>
+      </div>
+      <div class="rv-scroll-card">
+        <div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Kristin is a wealth of knowledge, she loves to understand your business and create the best marketing gameplan for you!"</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--grad-sunset);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">JW</div>
+            <span style="font-weight:700;font-size:13px;color:var(--ink)">Jadon Wise</span>
+          </div>
+          <span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span>
+        </div>
+      </div>
+      <div class="rv-scroll-card">
+        <div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Jacob and Kyle came through on time when I needed a website rebuild with a tight deadline. They delivered a great product and were available on short no…"</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--grad-sunset);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">DT</div>
+            <span style="font-weight:700;font-size:13px;color:var(--ink)">Doug Turner</span>
+          </div>
+          <span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span>
+        </div>
+      </div>
+      <div class="rv-scroll-card">
+        <div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"This company has been awesome. Jacob answered all my questions and did an awesome job with the website. He even dealt with Google when they suspended my…"</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--yb-cyan),var(--yb-blue));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">LF</div>
+            <span style="font-weight:700;font-size:13px;color:var(--ink)">Luis Fernandez</span>
+          </div>
+          <span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span>
+        </div>
+      </div>
+      <div class="rv-scroll-card">
+        <div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Jacob and his team were awesome to work with in designing my law firm's website. They listened to our needs, were hands on, and made me feel comfortable…"</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--yb-mint),var(--yb-cyan));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">ES</div>
+            <span style="font-weight:700;font-size:13px;color:var(--ink)">Emily Schwab</span>
+          </div>
+          <span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span>
+        </div>
+      </div>
+      <div class="rv-scroll-card">
+        <div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Jacob is knowledgeable, professional and extremely accommodating. Has helped us build our new site and we were so satisfied we're discussing additional …"</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--yb-mint),var(--yb-cyan));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">KM</div>
+            <span style="font-weight:700;font-size:13px;color:var(--ink)">Kitt Murry</span>
+          </div>
+          <span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span>
+        </div>
+      </div>
+      </div>
+      <div class="reviews-scroll-set" aria-hidden="true">
+        <div class="rv-scroll-card">
+        <div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Yakima Branding's team is professional, creative, accommodating and very patient! We made several changes, pivoted on our initial concept, and they stay…"</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--grad-brand);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">HH</div>
+            <span style="font-weight:700;font-size:13px;color:var(--ink)">Heather Hellums</span>
+          </div>
+          <span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span>
+        </div>
+      </div>
+      <div class="rv-scroll-card">
+        <div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Yakima Branding is an excellent choice for all of your SEO, marketing, branding, logos, websites and more. Jacob is extremely knowledgeable and easy to …"</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--grad-sunset);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">JD</div>
+            <span style="font-weight:700;font-size:13px;color:var(--ink)">Josh DeBoer</span>
+          </div>
+          <span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span>
+        </div>
+      </div>
+      <div class="rv-scroll-card">
+        <div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Yakima Branding designed my website, hosts it and maintains the SEO. They are good at targeting the right clients for my business. High-quality services…"</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--yb-cyan),var(--yb-blue));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">LO</div>
+            <span style="font-weight:700;font-size:13px;color:var(--ink)">Law Office</span>
+          </div>
+          <span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span>
+        </div>
+      </div>
+      <div class="rv-scroll-card">
+        <div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Great company to work with. I've completed two big projects and the business has been leaping up the Google results page with organic searches. I highly…"</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--yb-pink),var(--yb-violet));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">AD</div>
+            <span style="font-weight:700;font-size:13px;color:var(--ink)">Apex Dentures</span>
+          </div>
+          <span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span>
+        </div>
+      </div>
+      <div class="rv-scroll-card">
+        <div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Worked with Jacob and his team and had a great experience building a new website! They were professional and easy to work with through the whole process."</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--grad-brand);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">TH</div>
+            <span style="font-weight:700;font-size:13px;color:var(--ink)">The Healthy Worker</span>
+          </div>
+          <span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span>
+        </div>
+      </div>
+      <div class="rv-scroll-card">
+        <div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Great group to work with. Very knowledgeable and friendly."</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--grad-sunset);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">PS</div>
+            <span style="font-weight:700;font-size:13px;color:var(--ink)">PMI Supplies</span>
+          </div>
+          <span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span>
+        </div>
+      </div>
+      <div class="rv-scroll-card">
+        <div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Had a great experience working with Jacob. He and his team guided us through developing a logo and initial branding. Looking forward to working with Yak…"</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--yb-pink),var(--yb-violet));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">GS</div>
+            <span style="font-weight:700;font-size:13px;color:var(--ink)">Groundwork Systems</span>
+          </div>
+          <span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span>
+        </div>
+      </div>
+      <div class="rv-scroll-card">
+        <div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Yakima Branding was instrumental in the successful launch of my business and brand. Their creative ideas and mastery of technology and social media has …"</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--grad-sunset);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">JC</div>
+            <span style="font-weight:700;font-size:13px;color:var(--ink)">JLS Custom Construction</span>
+          </div>
+          <span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span>
+        </div>
+      </div>
+      <div class="rv-scroll-card">
+        <div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Kristin is a wealth of knowledge, she loves to understand your business and create the best marketing gameplan for you!"</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--grad-sunset);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">JW</div>
+            <span style="font-weight:700;font-size:13px;color:var(--ink)">Jadon Wise</span>
+          </div>
+          <span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span>
+        </div>
+      </div>
+      <div class="rv-scroll-card">
+        <div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Jacob and Kyle came through on time when I needed a website rebuild with a tight deadline. They delivered a great product and were available on short no…"</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--grad-sunset);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">DT</div>
+            <span style="font-weight:700;font-size:13px;color:var(--ink)">Doug Turner</span>
+          </div>
+          <span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span>
+        </div>
+      </div>
+      <div class="rv-scroll-card">
+        <div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"This company has been awesome. Jacob answered all my questions and did an awesome job with the website. He even dealt with Google when they suspended my…"</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--yb-cyan),var(--yb-blue));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">LF</div>
+            <span style="font-weight:700;font-size:13px;color:var(--ink)">Luis Fernandez</span>
+          </div>
+          <span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span>
+        </div>
+      </div>
+      <div class="rv-scroll-card">
+        <div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Jacob and his team were awesome to work with in designing my law firm's website. They listened to our needs, were hands on, and made me feel comfortable…"</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--yb-mint),var(--yb-cyan));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">ES</div>
+            <span style="font-weight:700;font-size:13px;color:var(--ink)">Emily Schwab</span>
+          </div>
+          <span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span>
+        </div>
+      </div>
+      <div class="rv-scroll-card">
+        <div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Jacob is knowledgeable, professional and extremely accommodating. Has helped us build our new site and we were so satisfied we're discussing additional …"</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+          <div style="display:flex;align-items:center;gap:9px">
+            <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--yb-mint),var(--yb-cyan));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">KM</div>
+            <span style="font-weight:700;font-size:13px;color:var(--ink)">Kitt Murry</span>
+          </div>
+          <span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-div ty-wave-reviews-footer"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,50 C480,70 960,10 1440,30 L1440,70 L0,70 Z" fill="#1B2A4A"/></svg></div>
+
+
+<footer class="footer">
+  <div class="footer-mesh"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:11px;margin-bottom:14px">
+          <img src="../assets/yb-logo-white.png" alt="YB" style="width:44px;height:44px;filter:drop-shadow(0 0 3px rgba(255,255,255,.4))">
+          <span style="font-family:var(--font-display);font-weight:800;font-size:22px;color:#fff">YB <span style="color:var(--yb-cyan)">Marketing</span></span>
+        </div>
+        <p>Award-winning digital marketing agency helping businesses grow through strategic branding, SEO, and comprehensive digital solutions.</p>
+        <div style="display:grid;gap:9px;margin:16px 0">
+          <a href="tel:5099019735" style="color:var(--fg2-on-dark);font-size:14px;display:flex;align-items:center;gap:9px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(509) 901-9735</a>
+          <a href="mailto:info@yakimabranding.com" style="color:var(--fg2-on-dark);font-size:14px;display:flex;align-items:center;gap:9px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@yakimabranding.com</a>
+        </div>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/yakimabranding" class="social-btn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/yb.marketing_/" class="social-btn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="17" height="17"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a>
+          <a href="https://www.linkedin.com/company/18939370" class="social-btn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="../insights.html">Insights</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../services/branding.html">Branding &amp; Design</a></li>
+          <li><a href="../services/web-design.html">Web Design</a></li>
+          <li><a href="../services/seo.html">SEO Optimization</a></li>
+          <li><a href="../services/google-ads.html">Google Ads</a></li>
+          <li><a href="../services/social-media.html">Social Media</a></li>
+          <li><a href="../services/press-releases.html">Press Releases</a></li>
+          <li><a href="../services/content-creation.html">Content Marketing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Reach</h4>
+        <p style="color:var(--fg2-on-dark);font-size:14px;line-height:1.7;margin-bottom:14px">Yakima Branding is centered in Central Washington, with deep roots in the Yakima community. From our home base in Yakima, we proudly serve businesses across the entire Pacific Northwest with strategic marketing, website design, SEO, advertising, and branding support.</p>
+        <div style="display:flex;align-items:center;gap:7px;font-size:13px;color:var(--yb-cyan);font-weight:600"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Yakima, WA &nbsp;·&nbsp; Pacific Northwest</div>
+      </div>
+    </div>
+    <div class="footer-locations">
+      <h4>Locations</h4>
+      <div class="footer-locations-scroll">
+        <div class="footer-locations-track">
+          <div class="footer-locations-set">
+          <a href="../locations/boise-id.html" class="footer-loc-btn">Boise, ID</a>
+          <a href="../locations/coeur-dalene-id.html" class="footer-loc-btn">Coeur d&#x27;Alene, ID</a>
+          <a href="../locations/ellensburg-wa.html" class="footer-loc-btn">Ellensburg, WA</a>
+          <a href="../locations/spokane-wa.html" class="footer-loc-btn">Spokane, WA</a>
+          <a href="../locations/tacoma-wa.html" class="footer-loc-btn">Tacoma, WA</a>
+          <a href="../locations/tri-cities-wa.html" class="footer-loc-btn">Tri-Cities, WA</a>
+          <a href="../locations/vancouver-wa.html" class="footer-loc-btn">Vancouver, WA</a>
+          <a href="../locations/walla-walla-wa.html" class="footer-loc-btn">Walla Walla, WA</a>
+          <a href="../locations/wenatchee-wa.html" class="footer-loc-btn">Wenatchee, WA</a>
+          <a href="../locations/yakima-wa.html" class="footer-loc-btn">Yakima, WA</a>
+          </div>
+          <div class="footer-locations-set" aria-hidden="true">
+          <a href="../locations/boise-id.html" class="footer-loc-btn">Boise, ID</a>
+          <a href="../locations/coeur-dalene-id.html" class="footer-loc-btn">Coeur d&#x27;Alene, ID</a>
+          <a href="../locations/ellensburg-wa.html" class="footer-loc-btn">Ellensburg, WA</a>
+          <a href="../locations/spokane-wa.html" class="footer-loc-btn">Spokane, WA</a>
+          <a href="../locations/tacoma-wa.html" class="footer-loc-btn">Tacoma, WA</a>
+          <a href="../locations/tri-cities-wa.html" class="footer-loc-btn">Tri-Cities, WA</a>
+          <a href="../locations/vancouver-wa.html" class="footer-loc-btn">Vancouver, WA</a>
+          <a href="../locations/walla-walla-wa.html" class="footer-loc-btn">Walla Walla, WA</a>
+          <a href="../locations/wenatchee-wa.html" class="footer-loc-btn">Wenatchee, WA</a>
+          <a href="../locations/yakima-wa.html" class="footer-loc-btn">Yakima, WA</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 YB Marketing. All rights reserved.</span>
+      <div style="display:flex;gap:18px"><a href="../privacy-policy.html">Privacy Policy</a><a href="../sitemap.html">Sitemap</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+if (typeof window !== 'undefined') {
+  window.history.replaceState(null, '', 'thank-you-vancouver-wa.html');
+}
+</script>
+<script src="../js/newsletter-popup.js" defer></script>
+<script src="../js/chat-widget.js" defer></script>
+<script src="../js/site.js" defer></script>
+</body>
+</html>

@@ -232,7 +232,7 @@ a{color:inherit;text-decoration:none}
 <!-- CONTACT METHODS -->
 <section style="padding:72px 0 0;background:#fff">
   <div class="container">
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:900px;margin:0 auto" class="contact-3col">
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:680px;margin:0 auto" class="contact-3col">
 
       <!-- Phone -->
       <div class="contact-method">
@@ -243,17 +243,6 @@ a{color:inherit;text-decoration:none}
         <p>We're available Monday–Friday during business hours. Leave a message any time.</p>
         <a href="tel:5099019735" class="link">(509) 901-9735</a>
         <a href="tel:5099019735" class="btn btn-grad" style="margin-top:4px">Call Now</a>
-      </div>
-
-      <!-- Calendly -->
-      <div class="contact-method">
-        <div class="contact-method-ic" style="background:var(--wash-mint)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#159468" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
-        </div>
-        <h3>Book a Meeting</h3>
-        <p>Schedule a free 30-minute introduction call with our sales team — no pressure, just a conversation.</p>
-        <span style="font-size:14px;color:var(--fg3)">30 min · Introduction Call</span>
-        <a href="https://calendly.com/yakimabranding" target="_blank" class="btn btn-grad" style="margin-top:4px;background:linear-gradient(135deg,#159468,#25C28A);box-shadow:0 14px 30px -10px rgba(21,148,104,.4)">Book a Time</a>
       </div>
 
       <!-- Email -->
@@ -294,67 +283,50 @@ a{color:inherit;text-decoration:none}
           </div>
           <p style="font-size:13.5px;color:var(--fg2);margin-top:14px;line-height:1.6">An introduction meeting to learn more about your business, your goals, and how we can help you grow. No commitment required.</p>
         </div>
-        <div style="display:grid;gap:12px">
-          <div style="background:#fff;border-radius:var(--r-md);padding:16px;border:1px solid var(--line);display:flex;align-items:center;gap:12px">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--yb-blue)" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            <div style="font-size:14px;color:var(--fg2)">Pick a date and time that works for you</div>
+        <p class="yb-schedule-intro">Choose who you'd like to meet with</p>
+        <div class="yb-schedule-grid">
+          <div class="yb-schedule-card yb-schedule-card--split">
+            <img src="assets/jacob-headshot.webp" alt="Jacob Ross" class="yb-schedule-card__photo" width="64" height="64" loading="lazy">
+            <span class="yb-schedule-card__info">
+              <span class="yb-schedule-card__name">Jacob Ross</span>
+              <a href="https://calendly.com/jacobybmarketing" target="_blank" rel="noopener noreferrer" class="yb-schedule-card__cta">Schedule Call</a>
+              <a href="about/jacob.html" class="yb-schedule-card__meet">Meet Jacob</a>
+            </span>
           </div>
-          <div style="background:#fff;border-radius:var(--r-md);padding:16px;border:1px solid var(--line);display:flex;align-items:center;gap:12px">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--yb-blue)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <div style="font-size:14px;color:var(--fg2)">We'll send you a calendar invite right away</div>
+          <div class="yb-schedule-card yb-schedule-card--split">
+            <img src="assets/kristin-headshot.webp" alt="Kristin Sparling" class="yb-schedule-card__photo" width="64" height="64" loading="lazy">
+            <span class="yb-schedule-card__info">
+              <span class="yb-schedule-card__name">Kristin Sparling</span>
+              <a href="https://calendly.com/kristin-sparling/connect" target="_blank" rel="noopener noreferrer" class="yb-schedule-card__cta">Schedule Call</a>
+              <a href="about/kristin.html" class="yb-schedule-card__meet">Meet Kristin</a>
+            </span>
           </div>
-          <div style="background:#fff;border-radius:var(--r-md);padding:16px;border:1px solid var(--line);display:flex;align-items:center;gap:12px">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--yb-blue)" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-            <div style="font-size:14px;color:var(--fg2)">Meet directly with our sales team</div>
+          <div class="yb-schedule-card yb-schedule-card--split">
+            <img src="assets/kevin-headshot.webp" alt="Kevin Dean" class="yb-schedule-card__photo" width="64" height="64" loading="lazy">
+            <span class="yb-schedule-card__info">
+              <span class="yb-schedule-card__name">Kevin Dean</span>
+              <a href="https://calendly.com/kdean-wsi" target="_blank" rel="noopener noreferrer" class="yb-schedule-card__cta">Schedule Call</a>
+              <a href="about/kevin.html" class="yb-schedule-card__meet">Meet Kevin</a>
+            </span>
+          </div>
+          <div class="yb-schedule-card yb-schedule-card--split">
+            <img src="assets/sophie-headshot.webp" alt="Sophie Mann" class="yb-schedule-card__photo" width="64" height="64" loading="lazy">
+            <span class="yb-schedule-card__info">
+              <span class="yb-schedule-card__name">Sophie Mann</span>
+              <a href="https://calendly.com/sophie-yakimabranding/30min" target="_blank" rel="noopener noreferrer" class="yb-schedule-card__cta">Schedule Call</a>
+              <a href="about/sophie.html" class="yb-schedule-card__meet">Meet Sophie</a>
+            </span>
           </div>
         </div>
-        <!-- Replace with your actual Calendly inline embed -->
-        <!-- <div class="calendly-inline-widget" data-url="https://calendly.com/yakimabranding/introduction-meeting" style="min-width:320px;height:630px;"></div>
-             <script src="https://assets.calendly.com/assets/external/widget.js" async></script> -->
-        <a href="https://calendly.com/yakimabranding" target="_blank" class="btn btn-grad" style="width:100%;justify-content:center;margin-top:20px;padding:15px">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
-          Schedule on Calendly
-        </a>
-        <p style="text-align:center;font-size:11.5px;color:var(--fg3);margin-top:10px">Replace the button above with a Calendly inline embed when your link is ready.</p>
       </div>
 
-      <!-- Contact form -->
-      <div style="background:#fff;border-radius:var(--r-xl);padding:36px;box-shadow:var(--sh-md);border:1px solid var(--line)">
+      <!-- HubSpot contact form -->
+      <div class="yb-hs-form-panel" style="background:#fff;border-radius:var(--r-xl);padding:36px;box-shadow:var(--sh-md);border:1px solid var(--line)">
         <h3 style="font-size:22px;margin:0 0 24px;color:var(--ink)">Send Us a Message</h3>
-        <form class="yb-contact-form" action="#" method="post" style="display:grid;gap:16px">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-            <div class="form-field"><label>Name *</label><input type="text" placeholder="Your name"></div>
-            <div class="form-field"><label>Email *</label><input type="email" placeholder="your@email.com"></div>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-            <div class="form-field"><label>Company / URL *</label><input type="text" placeholder="yourcompany.com"></div>
-            <div class="form-field"><label>Phone *</label><input type="tel" placeholder="(509) 555-0100"></div>
-          </div>
-          <div class="form-field">
-            <label>What are you interested in?</label>
-            <select>
-              <option value="">Select a service...</option>
-              <option>Search Engine Optimization / AI Optimization</option>
-              <option>Google Ads / Geofencing</option>
-              <option>Social Media Management + Ads</option>
-              <option>Website Development / Assistance</option>
-              <option>Branding &amp; Logo Design</option>
-              <option>Press Releases</option>
-              <option>Content Creation &amp; Blogging</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-field"><label>Message</label><textarea placeholder="Tell us about your business and goals..."></textarea></div>
-          <div style="border:1px solid var(--line-strong);border-radius:var(--r-md);padding:14px 16px;display:flex;align-items:center;justify-content:space-between">
-            <div style="display:flex;align-items:center;gap:10px"><div style="width:22px;height:22px;border:2px solid var(--line-strong);border-radius:4px;flex:none"></div><span style="font-size:14px;color:var(--fg2)">I'm not a robot</span></div>
-            <div style="text-align:right;font-size:10px;color:var(--fg3)">reCAPTCHA<br><span>Privacy · Terms</span></div>
-          </div>
-          <button type="submit" class="btn btn-grad" style="width:100%;justify-content:center;padding:15px;font-size:15px">
-            Send Message
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-          </button>
-          <p style="font-size:12.5px;color:var(--fg3);text-align:center">We respond within 4 business hours. Your information is never shared.</p>
-        </form>
+        <div class="yb-hs-form" data-source="Contact Page" data-redirect="thank-you-contact.html">
+          <div class="hs-form-frame" data-region="na2" data-form-id="c7a3c349-a4e9-4608-9771-9aa39c7f05e1" data-portal-id="243964841"></div>
+        </div>
+        <p class="yb-hs-form-footnote">We respond within 4 business hours. Your information is never shared.</p>
       </div>
 
     </div>
@@ -460,6 +432,8 @@ document.getElementById('hamburger').addEventListener('click', () => {
   document.getElementById('mobileMenu').classList.toggle('open');
 });
 </script>
+<script src="js/hubspot-form.js"></script>
+<script src="https://js-na2.hsforms.net/forms/embed/243964841.js" defer></script>
 <script src="js/contact-forms.js" defer></script>
 <script src="js/newsletter-popup.js" defer></script>
 <script src="js/chat-widget.js" defer></script>

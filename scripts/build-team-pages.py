@@ -14,7 +14,21 @@ from site_staging_seo_snippet import STAGING_ROBOTS_META
 from site_footer_snippet import site_footer_html
 
 PREFIX = "../"
-CALENDLY_URL = "https://calendly.com/yakimabranding"
+DEFAULT_CALENDLY_URL = "https://calendly.com/yakimabranding"
+HS_PORTAL_ID = "243964841"
+HS_REGION = "na2"
+HS_EMBED_SCRIPT = f"https://js-na2.hsforms.net/forms/embed/{HS_PORTAL_ID}.js"
+SOPHIE_HS_FORM_ID = "86dbae5d-b7ad-4a65-b339-481e9f2afc47"
+JACOB_HS_FORM_ID = "d5e25f7a-16e7-49ed-b125-fe339a50994e"
+KRISTIN_HS_FORM_ID = "325b4826-bc49-4f71-a06f-5bdb2b1f5ed5"
+KEVIN_HS_FORM_ID = "17ac4d96-5927-4908-b760-593936986399"
+HUBSPOT_THEMES = frozenset({"jacob", "kevin", "kristin", "sophie"})
+CALENDLY_BY_MEMBER = {
+    "Jacob Ross": "https://calendly.com/jacobybmarketing",
+    "Kristin Sparling": "https://calendly.com/kristin-sparling/connect",
+    "Kevin Dean": "https://calendly.com/kdean-wsi",
+    "Sophie Mann": "https://calendly.com/sophie-yakimabranding/30min",
+}
 ARROW = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>'
 CAL_ICON = (
     '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">'
@@ -35,7 +49,14 @@ def footer_html():
     return site_footer_html(PREFIX)
 
 
-def shell(title, desc, theme, body):
+def shell(title, desc, theme, body, hubspot=False):
+    if hubspot:
+        form_scripts = (
+            f'<script src="{PREFIX}js/hubspot-form.js"></script>\n'
+            f'<script src="{HS_EMBED_SCRIPT}" defer></script>'
+        )
+    else:
+        form_scripts = f'<script src="{PREFIX}js/contact-forms.js" defer></script>'
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,6 +85,7 @@ a{{color:inherit;text-decoration:none}}
 {footer_html()}
 <script src="{PREFIX}js/newsletter-popup.js" defer></script>
 <script src="{PREFIX}js/chat-widget.js" defer></script>
+{form_scripts}
 <script src="{PREFIX}js/site.js" defer></script>
 <script>
 document.getElementById('hamburger')?.addEventListener('click', function () {{
@@ -140,8 +162,13 @@ def hero_block(name, role, lead, photo, contacts):
 </section>"""
 
 
+def calendly_url_for(member_name: str) -> str:
+    return CALENDLY_BY_MEMBER.get(member_name, DEFAULT_CALENDLY_URL)
+
+
 def team_calendly_card_html(member_name: str) -> str:
     name = html.escape(member_name)
+    calendly_url = html.escape(calendly_url_for(member_name))
     return f"""
     <div class="team-aside-card team-aside-calendly">
       <div class="team-calendly-intro">
@@ -151,17 +178,17 @@ def team_calendly_card_html(member_name: str) -> str:
         <div class="team-calendly-duration"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 30 min</div>
         <p class="team-calendly-desc">Book time to discuss your business and how YB Marketing can help you grow.</p>
       </div>
-      <a href="{CALENDLY_URL}" class="btn btn-grad team-calendly-btn" target="_blank" rel="noopener">Book a Meeting {CAL_ICON}</a>
-      <p class="team-calendly-note">Replace with your Calendly inline embed when ready.</p>
+      <a href="{calendly_url}" class="btn btn-grad team-calendly-btn" target="_blank" rel="noopener">Book a Meeting {CAL_ICON}</a>
     </div>"""
 
 
-def team_contact_form_html() -> str:
+def team_contact_form_html(member_slug: str = "") -> str:
+    thank_you = f' data-thank-you="thank-you-{member_slug}.html"' if member_slug else ""
     return f"""
     <div class="team-aside-card team-aside-form">
       <h3>Send a message</h3>
       <p class="team-form-lead">Fill out the form and we&rsquo;ll be in touch as soon as possible.</p>
-      <form class="team-form yb-contact-form" action="#" method="post">
+      <form class="team-form yb-contact-form" action="#" method="post"{thank_you}>
         <div class="team-form-row">
           <div class="team-form-field">
             <label for="team-name">Name *</label>
@@ -195,13 +222,59 @@ def team_contact_form_html() -> str:
     </div>"""
 
 
-def team_contact_aside_html(member_name: str, extra_cards: str = "") -> str:
+def team_hubspot_form_html(member_slug: str, form_id: str, source: str) -> str:
+    redirect = f"thank-you-{member_slug}.html" if member_slug else "thank-you.html"
+    return f"""
+    <div class="team-aside-card team-aside-form">
+      <h3>Send a message</h3>
+      <p class="team-form-lead">Fill out the form and we&rsquo;ll be in touch as soon as possible.</p>
+      <div class="yb-hs-form" data-source="{html.escape(source)}" data-redirect="{html.escape(redirect)}">
+        <div class="hs-form-frame" data-region="{HS_REGION}" data-form-id="{form_id}" data-portal-id="{HS_PORTAL_ID}"></div>
+      </div>
+      <p class="yb-hs-form-footnote">We respond within 1 business day. Your information is never shared.</p>
+    </div>"""
+
+
+def team_calendly_aside_html(member_name: str, extra_cards: str = "") -> str:
     return f"""<aside class="team-aside-stack">
-{extra_cards}{team_calendly_card_html(member_name)}{team_contact_form_html()}
+{extra_cards}{team_calendly_card_html(member_name)}
 </aside>"""
 
 
-def team_contact_section_html(member_name: str) -> str:
+def team_contact_aside_html(
+    member_name: str,
+    extra_cards: str = "",
+    member_slug: str = "",
+    hubspot_form_id: str = "",
+    hubspot_source: str = "",
+) -> str:
+    if hubspot_form_id:
+        form_html = team_hubspot_form_html(
+            member_slug,
+            hubspot_form_id,
+            hubspot_source or f"{member_name} Profile",
+        )
+    else:
+        form_html = team_contact_form_html(member_slug)
+    return f"""<aside class="team-aside-stack">
+{extra_cards}{team_calendly_card_html(member_name)}{form_html}
+</aside>"""
+
+
+def team_contact_section_html(
+    member_name: str,
+    member_slug: str = "",
+    hubspot_form_id: str = "",
+    hubspot_source: str = "",
+) -> str:
+    if hubspot_form_id:
+        form_html = team_hubspot_form_html(
+            member_slug,
+            hubspot_form_id,
+            hubspot_source or f"{member_name} Profile",
+        )
+    else:
+        form_html = team_contact_form_html(member_slug)
     return f"""
 <section class="team-contact-section" id="contact">
   <div class="container">
@@ -212,7 +285,7 @@ def team_contact_section_html(member_name: str) -> str:
     </div>
     <div class="team-contact-grid">
       {team_calendly_card_html(member_name)}
-      {team_contact_form_html()}
+      {form_html}
     </div>
   </div>
 </section>"""
@@ -240,6 +313,7 @@ def page_kevin():
         "Certified advertising professional and SEO expert leading YB Marketing with a focus on superior service, clear communication, and measurable ROI.",
         "assets/kevin-headshot.webp",
         [
+            ("Book a Meeting", calendly_url_for("Kevin Dean"), PHONE_SVG),
             ("kevin@yakimabranding.com", "mailto:kevin@yakimabranding.com", MAIL_SVG),
             ("510-687-9737", "tel:5106879737", PHONE_SVG),
             ("509-901-9735 x1001", "tel:5099019735", PHONE_SVG),
@@ -277,10 +351,14 @@ def page_kevin():
         </div>
       </div>
     </div>
-    {team_contact_aside_html("Kevin Dean")}
+    {team_contact_aside_html(
+        "Kevin Dean",
+        member_slug="kevin",
+        hubspot_form_id=KEVIN_HS_FORM_ID,
+        hubspot_source="Kevin Profile Page",
+    )}
   </div>
 </section>"""
-    body += cta_strip()
     return "kevin", "Kevin Dean — Owner | YB Marketing", "Meet Kevin Dean, owner of YB Marketing. Digital marketing, SEO, and advertising strategy for growing businesses.", body
 
 
@@ -293,7 +371,7 @@ def page_jacob():
         [
             ("jacob@yakimabranding.com", "mailto:jacob@yakimabranding.com", MAIL_SVG),
             ("509-203-1007", "tel:5092031007", PHONE_SVG),
-            ("Book a 30-Min Call", "https://calendly.com/yakimabranding", PHONE_SVG),
+            ("Book a 30-Min Call", calendly_url_for("Jacob Ross"), PHONE_SVG),
         ],
     )
     quotes = [
@@ -339,10 +417,14 @@ def page_jacob():
       <h2>Testimonials</h2>
       <div class="team-quote-grid">{qhtml}</div>
     </div>
-    {team_contact_aside_html("Jacob Ross")}
+    {team_contact_aside_html(
+        "Jacob Ross",
+        member_slug="jacob",
+        hubspot_form_id=JACOB_HS_FORM_ID,
+        hubspot_source="Jacob Profile Page",
+    )}
   </div>
 </section>"""
-    body += cta_strip()
     return "jacob", "Jacob Ross — Account Executive | YB Marketing", "Meet Jacob Ross, account executive at YB Marketing. Custom digital marketing, SEO, Google Ads, and web strategy.", body
 
 
@@ -353,7 +435,7 @@ def page_kristin():
         "Strategy-first account executive helping Pacific Northwest businesses grow with tailored digital marketing plans.",
         "assets/kristin-headshot.webp",
         [
-            ("Book a Meeting", "https://calendly.com/yakimabranding", PHONE_SVG),
+            ("Book a Meeting", calendly_url_for("Kristin Sparling"), PHONE_SVG),
             ("kristin@yakimabranding.com", "mailto:kristin@yakimabranding.com", MAIL_SVG),
             ("509-940-1799", "tel:5099401799", PHONE_SVG),
         ],
@@ -385,10 +467,14 @@ def page_kristin():
         <div class="team-step"><div class="team-step-num">3</div><h3>Grow Your Business</h3><p>Aligned goals, then action.</p></div>
       </div>
     </div>
-    {team_contact_aside_html("Kristin Sparling")}
+    {team_contact_aside_html(
+        "Kristin Sparling",
+        member_slug="kristin",
+        hubspot_form_id=KRISTIN_HS_FORM_ID,
+        hubspot_source="Kristin Profile Page",
+    )}
   </div>
 </section>"""
-    body += cta_strip()
     return "kristin", "Kristin Sparling — Account Executive | YB Marketing", "Meet Kristin Sparling at YB Marketing. Custom SEO, web, social, and Google Ads for Washington businesses.", body
 
 
@@ -399,6 +485,7 @@ def page_sophie():
         "Strategic communications specialist with deep expertise in education and manufacturing — now serving clients from Chicago.",
         "assets/sophie-headshot.webp",
         [
+            ("Book a Meeting", calendly_url_for("Sophie Mann"), PHONE_SVG),
             ("sophie@yakimabranding.com", "mailto:sophie@yakimabranding.com", MAIL_SVG),
             ("303-955-6979", "tel:3039556979", PHONE_SVG),
         ],
@@ -415,8 +502,12 @@ def page_sophie():
     </div>
   </div>
 </section>"""
-    body += team_contact_section_html("Sophie Mann")
-    body += cta_strip()
+    body += team_contact_section_html(
+        "Sophie Mann",
+        member_slug="sophie",
+        hubspot_form_id=SOPHIE_HS_FORM_ID,
+        hubspot_source="Sophie Profile Page",
+    )
     return "sophie", "Sophie Mann — Account Executive | YB Marketing", "Meet Sophie Mann, account executive at YB Marketing based in Chicago.", body
 
 
@@ -446,7 +537,6 @@ def page_kayelyn():
     </div>
   </div>
 </section>"""
-    body += team_contact_section_html("Kayelyn Aggett")
     body += cta_strip()
     return "kayelyn", "Kayelyn Aggett — Social Media Manager | YB Marketing", "Meet Kayelyn Aggett, social media manager at YB Marketing.", body
 
@@ -478,7 +568,7 @@ def page_kirsten():
         <span class="team-skill">Admin &amp; Coordination</span>
       </div>
     </div>
-    {team_contact_aside_html("Kirsten Gonzalez", f'''
+    {team_calendly_aside_html("Kirsten Gonzalez", f'''
     <div class="team-aside-card team-aside-info">
       <h3>Work with Kirsten</h3>
       <p class="team-aside-info-text">Kirsten coordinates behind the scenes so your campaigns stay on track and your brand stays consistent across channels.</p>
@@ -527,7 +617,7 @@ def main():
     for builder in BUILDERS:
         theme, title, desc, body = builder()
         out = ABOUT_DIR / f"{theme}.html"
-        out.write_text(shell(title, desc, theme, body), encoding="utf-8")
+        out.write_text(shell(title, desc, theme, body, hubspot=(theme in HUBSPOT_THEMES)), encoding="utf-8")
         print(f"  · about/{theme}.html")
     update_about_links()
     print("\nUpdated about.html team links")

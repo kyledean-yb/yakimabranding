@@ -15,6 +15,7 @@ from schema_markup import seo_head_html
 from site_accessibe_snippet import ACCESSIBE_BODY_SCRIPT
 from site_staging_seo_snippet import STAGING_ROBOTS_META
 from site_footer_snippet import site_footer_html
+from blog_intro_snippet import intro_block_for_build, updated_meta_for_build
 
 def about_nav_block(prefix: str) -> str:
     return about_nav_shell(prefix).strip()
@@ -472,6 +473,9 @@ def build():
         if image:
             img_block = f'<div class="post-hero-img"><img src="{html.escape(image)}" alt="{html.escape(title)}" loading="lazy"></div>'
 
+        intro_block = intro_block_for_build(content, title, excerpt, slug)
+        updated_meta = updated_meta_for_build(slug)
+
         body = f"""
 <section class="blog-hero">
   <div class="blog-hero-mesh"></div>
@@ -494,8 +498,9 @@ def build():
       <header class="post-header">
         <div class="post-cats">{cat_html}</div>
         <h1>{html.escape(title)}</h1>
-        <div class="post-meta"><span>{date_str}</span><span>{rt} min read</span><span>YB Marketing</span></div>
+        <div class="post-meta"><span>{date_str}</span><span>{rt} min read</span><span>YB Marketing</span>{updated_meta}</div>
       </header>
+{intro_block}
       <div class="blog-prose">{content}</div>
     </article>
     {sidebar_html(POST_PREFIX, accent)}

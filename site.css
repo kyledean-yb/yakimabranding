@@ -998,6 +998,56 @@
   border-radius: var(--r-md, 10px);
 }
 
+/* HubSpot embed inside newsletter popup */
+.yb-newsletter-popup__fields--hs {
+  align-items: stretch;
+}
+
+.yb-newsletter-popup__hs {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+}
+
+.yb-newsletter-popup__hs .hs-form-frame,
+.yb-newsletter-popup__hs iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: block;
+}
+
+.yb-newsletter-popup__hs.yb-hs-form,
+.yb-newsletter-popup__hs .hs-form-frame {
+  --hsf-global__font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --hsf-global__font-size: 14px;
+  --hsf-global__color: #16203A;
+  --hsf-background__background-color: transparent;
+  --hsf-background__border-width: 0;
+  --hsf-background__padding: 0;
+  --hsf-row__vertical-spacing: 0;
+  --hsf-row__horizontal-spacing: 10px;
+  --hsf-module__vertical-spacing: 0;
+  --hsf-field-label__font-size: 0;
+  --hsf-field-input__font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --hsf-field-input__font-size: 14px;
+  --hsf-field-input__color: #16203A;
+  --hsf-field-input__background-color: #fff;
+  --hsf-field-input__placeholder-color: #7C879E;
+  --hsf-field-input__border-color: #CFD8E8;
+  --hsf-field-input__border-width: 1px;
+  --hsf-field-input__border-radius: 10px;
+  --hsf-field-input__padding: 12px 14px;
+  --hsf-button__font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --hsf-button__font-size: 14px;
+  --hsf-button__font-weight: 700;
+  --hsf-button__color: #fff;
+  --hsf-button__background-color: #3F6FD6;
+  --hsf-button__background-image: linear-gradient(135deg, #3F6FD6 0%, #2BC4F0 100%);
+  --hsf-button__border-radius: 10px;
+  --hsf-button__padding: 12px 18px;
+  --hsf-button__box-shadow: 0 8px 22px rgba(63, 111, 214, 0.28);
+}
+
 @media (max-width: 640px) {
   .yb-newsletter-popup {
     left: 0;
@@ -1027,6 +1077,10 @@
 
   .yb-newsletter-popup__fields {
     flex-direction: column;
+  }
+
+  .yb-newsletter-popup__fields--hs .yb-newsletter-popup__hs {
+    width: 100%;
   }
 
   .yb-newsletter-popup__submit {
@@ -1461,4 +1515,273 @@
     transition: none;
     animation: none;
   }
+}
+
+/* ─── Team schedule grid (Calendly cards) ─────────────────────── */
+.yb-schedule-intro {
+  margin: 22px 0 0;
+  font-family: var(--font-display, "Sora", sans-serif);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink, #16203a);
+  text-align: center;
+}
+
+.yb-schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 14px 0 4px;
+}
+
+.yb-schedule-grid--compact {
+  margin-top: 12px;
+  gap: 10px;
+}
+
+.contact-method .yb-schedule-grid--compact {
+  grid-template-columns: 1fr;
+  width: 100%;
+  align-self: stretch;
+}
+
+.contact-method .yb-schedule-intro {
+  align-self: stretch;
+  text-align: left;
+  margin-top: 4px;
+}
+
+.yb-schedule-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  background: #fff;
+  border: 1px solid var(--line, #e3e9f2);
+  border-radius: var(--r-md, 16px);
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--sh-xs, 0 1px 2px rgba(22, 32, 58, 0.06));
+  transition: transform 0.2s var(--ease, ease), box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.yb-schedule-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--sh-md, 0 10px 28px -8px rgba(22, 32, 58, 0.16));
+  border-color: var(--yb-blue, #3f6fd6);
+}
+
+.yb-schedule-card--split {
+  cursor: default;
+}
+
+.yb-schedule-card--split:hover {
+  transform: none;
+  box-shadow: var(--sh-xs, 0 1px 2px rgba(22, 32, 58, 0.06));
+  border-color: var(--line, #e3e9f2);
+}
+
+.yb-schedule-card--split:focus-within {
+  border-color: var(--yb-blue, #3f6fd6);
+  box-shadow: var(--sh-md, 0 10px 28px -8px rgba(22, 32, 58, 0.16));
+}
+
+.yb-schedule-card:focus-visible {
+  outline: 2px solid var(--yb-blue, #3f6fd6);
+  outline-offset: 2px;
+}
+
+.yb-schedule-card__photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--line, #e3e9f2);
+  flex-shrink: 0;
+}
+
+.yb-schedule-grid--compact .yb-schedule-card {
+  padding: 10px;
+  gap: 10px;
+}
+
+.yb-schedule-grid--compact .yb-schedule-card__photo {
+  width: 52px;
+  height: 52px;
+}
+
+.yb-schedule-card__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+  flex: 1;
+}
+
+.yb-schedule-card__name {
+  font-family: var(--font-display, "Sora", sans-serif);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.25;
+  color: var(--ink, #16203a);
+}
+
+.yb-schedule-grid--compact .yb-schedule-card__name {
+  font-size: 12px;
+}
+
+.yb-schedule-card__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: var(--r-sm, 10px);
+  background: var(--grad-brand, linear-gradient(135deg, #3f6fd6 0%, #2bc4f0 100%));
+  color: #fff;
+  font-family: var(--font-body, "Plus Jakarta Sans", sans-serif);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+a.yb-schedule-card__cta:hover {
+  filter: brightness(1.05);
+}
+
+.yb-schedule-card__meet {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: var(--r-sm, 10px);
+  background: #fff;
+  color: var(--yb-blue, #3f6fd6);
+  border: 1.5px solid var(--line, #e3e9f2);
+  font-family: var(--font-body, "Plus Jakarta Sans", sans-serif);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.yb-schedule-card__meet:hover {
+  background: var(--wash-blue, #eef4ff);
+  border-color: var(--yb-blue, #3f6fd6);
+}
+
+.yb-schedule-card__meet:focus-visible {
+  outline: 2px solid var(--yb-blue, #3f6fd6);
+  outline-offset: 2px;
+}
+
+.yb-schedule-grid--compact .yb-schedule-card__cta,
+.yb-schedule-grid--compact .yb-schedule-card__meet {
+  font-size: 10px;
+  padding: 7px 8px;
+}
+
+@media (max-width: 640px) {
+  .yb-schedule-grid:not(.yb-schedule-grid--compact) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── HubSpot embed forms ─────────────────────────────────────── */
+.yb-hs-form-panel .yb-hs-form {
+  min-height: 280px;
+}
+
+.yb-hs-form .hs-form-frame,
+.yb-hs-form iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: block;
+}
+
+.yb-hs-form-panel,
+.yb-hs-form,
+.yb-hs-form .hs-form-frame {
+  --hsf-global__font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --hsf-global__font-size: 15px;
+  --hsf-global__color: #16203A;
+  --hsf-global-error__color: #d93025;
+  --hsf-background__background-color: transparent;
+  --hsf-background__border-width: 0;
+  --hsf-background__padding: 0;
+  --hsf-row__vertical-spacing: 16px;
+  --hsf-row__horizontal-spacing: 14px;
+  --hsf-module__vertical-spacing: 16px;
+  --hsf-field-label__font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --hsf-field-label__font-size: 12.5px;
+  --hsf-field-label__font-weight: 700;
+  --hsf-field-label__color: #4A5673;
+  --hsf-field-label-requiredindicator__color: #d93025;
+  --hsf-field-input__font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --hsf-field-input__font-size: 15px;
+  --hsf-field-input__color: #16203A;
+  --hsf-field-input__background-color: #fff;
+  --hsf-field-input__placeholder-color: #7C879E;
+  --hsf-field-input__border-color: #CFD8E8;
+  --hsf-field-input__border-width: 1.5px;
+  --hsf-field-input__border-style: solid;
+  --hsf-field-input__border-radius: 16px;
+  --hsf-field-input__padding: 12px 14px;
+  --hsf-field-textarea__font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --hsf-field-textarea__font-size: 15px;
+  --hsf-field-textarea__color: #16203A;
+  --hsf-field-textarea__background-color: #fff;
+  --hsf-field-textarea__placeholder-color: #7C879E;
+  --hsf-field-textarea__border-color: #CFD8E8;
+  --hsf-field-textarea__border-width: 1.5px;
+  --hsf-field-textarea__border-style: solid;
+  --hsf-field-textarea__border-radius: 16px;
+  --hsf-field-textarea__padding: 12px 14px;
+  --hsf-field-checkbox__font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --hsf-field-checkbox__font-size: 14px;
+  --hsf-field-checkbox__color: #16203A;
+  --hsf-field-checkbox__background-color: #fff;
+  --hsf-field-checkbox__border-color: #CFD8E8;
+  --hsf-field-checkbox__border-radius: 4px;
+  --hsf-field-phone__font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --hsf-field-phone__font-size: 15px;
+  --hsf-field-phone__color: #16203A;
+  --hsf-field-phone__background-color: #fff;
+  --hsf-field-phone__border-color: #CFD8E8;
+  --hsf-field-phone__border-width: 1.5px;
+  --hsf-field-phone__border-radius: 16px;
+  --hsf-field-phone__padding: 12px 14px;
+  --hsf-button__font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --hsf-button__font-size: 15px;
+  --hsf-button__font-weight: 700;
+  --hsf-button__color: #fff;
+  --hsf-button__background-color: #3F6FD6;
+  --hsf-button__background-image: linear-gradient(135deg, #3F6FD6 0%, #2BC4F0 100%);
+  --hsf-button__border-radius: 16px;
+  --hsf-button__padding: 15px 22px;
+  --hsf-button__box-shadow: 0 14px 30px -10px rgba(63, 111, 214, 0.45);
+  --hsf-heading__font-family: 'Sora', system-ui, -apple-system, sans-serif;
+  --hsf-heading__color: #16203A;
+  --hsf-richtext__font-size: 13px;
+  --hsf-richtext__color: #7C879E;
+  --hsf-erroralert__font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --hsf-erroralert__font-size: 13px;
+}
+
+.yb-hs-form-panel .yb-hs-form-footnote {
+  font-size: 12.5px;
+  color: var(--fg3);
+  text-align: center;
+  margin: 16px 0 0;
+  line-height: 1.5;
 }

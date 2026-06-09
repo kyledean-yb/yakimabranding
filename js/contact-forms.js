@@ -4,7 +4,10 @@
 (function () {
   'use strict';
 
-  function thankYouUrl() {
+  function thankYouUrl(form) {
+    if (form && form.dataset.thankYou) {
+      return form.dataset.thankYou;
+    }
     var path = window.location.pathname || '';
     var parts = path.split('/').filter(Boolean);
     if (parts.length && /\.html?$/i.test(parts[parts.length - 1])) {
@@ -14,8 +17,8 @@
     return prefix + 'thank-you.html';
   }
 
-  function redirectThankYou() {
-    window.location.href = thankYouUrl();
+  function redirectThankYou(form) {
+    window.location.href = thankYouUrl(form);
   }
 
   function bindForm(form) {
@@ -27,7 +30,7 @@
         form.reportValidity();
         return;
       }
-      redirectThankYou();
+      redirectThankYou(form);
     });
   }
 

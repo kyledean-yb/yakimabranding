@@ -120,6 +120,11 @@ TEAM_MEMBERS = [
         ),
         "interests": ["Content Strategy", "Social Media", "Branding", "Creative Direction"],
         "profile_href": "sophie.html",
+        "hero_lead": (
+            "You're on Sophie's radar! She'll be in touch within one business day. "
+            "In the meantime, start thinking about what's working, what isn't, and where you want to go - "
+            "that's usually where our most productive conversations begin."
+        ),
     },
 ]
 
@@ -206,6 +211,11 @@ def build_team_thank_you_html(member: dict) -> str:
     phone = html.escape(member["phone"])
     profile = html.escape(member["profile_href"])
     history_path = f"thank-you-{member['slug']}.html"
+    default_hero_lead = (
+        f"{member['short']} received your message and will be in touch within 1 business day. "
+        "We look forward to learning more about your business and how we can help you grow."
+    )
+    hero_lead = html.escape(member.get("hero_lead", default_hero_lead))
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -325,7 +335,7 @@ a{{color:inherit;text-decoration:none}}
       <span class="eyebrow" style="color:var(--yb-coral)">Message Received</span>
       <h1>Thank You for<br><span class="ty-hero-accent">Reaching Out to {short}!</span></h1>
       <p class="ty-hero-role">{role} · YB Marketing</p>
-      <p class="ty-hero-lead">{short} received your message and will be in touch within 1 business day. We look forward to learning more about your business and how we can help you grow.</p>
+      <p class="ty-hero-lead">{hero_lead}</p>
       <p class="ty-hero-urgent">For urgent needs, call <a href="tel:{phone}">{phone_display}</a> or email <a href="mailto:{email}">{email}</a></p>
       <div class="ty-hero-actions">
         <a href="{profile}" class="btn btn-grad btn-lg">Back to {short}'s Profile

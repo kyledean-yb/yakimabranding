@@ -5,6 +5,74 @@
 
 @import url('hero-orbit.css');
 
+/* ─── Global page foundation ───────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--fg1);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--yb-blue);
+}
+
+.eyebrow::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: var(--r-md);
+  padding: 13px 22px;
+  transition: all 240ms;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.btn-grad {
+  background: var(--grad-brand);
+  color: #fff;
+  box-shadow: var(--sh-blue);
+}
+
 /* ─── Site header + nav layout (all pages using site.css) ───── */
 .header {
   position: sticky;
@@ -109,6 +177,7 @@
   color: var(--fg1);
   padding: 8px 14px;
   border-radius: var(--r-sm);
+  text-decoration: none;
   transition: background 0.2s ease, color 0.2s ease;
   display: inline-block;
 }
@@ -247,6 +316,66 @@
 
 .mobile-menu.open {
   display: block;
+}
+
+.mobile-menu-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line, #e3e9f2);
+}
+
+.mobile-menu a.btn,
+.mobile-menu .mobile-menu-actions .btn {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 13px 20px !important;
+  border-bottom: none !important;
+  text-align: center;
+  font-size: 15px;
+  box-sizing: border-box;
+  border-radius: var(--r-md, 16px);
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.mobile-menu a.btn:not(.btn-grad):not(.btn-ghost-white),
+.mobile-menu .mobile-menu-actions .btn-hdr-phone {
+  background: #fff !important;
+  color: var(--yb-blue, #3f6fd6) !important;
+  border: 1.5px solid var(--line-strong, #d8e0ed) !important;
+}
+
+.mobile-menu a.btn.btn-grad,
+.mobile-menu .mobile-menu-actions .btn-grad {
+  background: var(--grad-brand) !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: var(--sh-blue, 0 14px 30px -10px rgba(63, 111, 214, 0.45));
+}
+
+.mobile-menu a.btn.btn-grad:hover,
+.mobile-menu .mobile-menu-actions .btn-grad:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+}
+
+/* Standalone CTA buttons still inside .mobile-menu (no wrapper). */
+.mobile-menu > a.btn {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line, #e3e9f2) !important;
+}
+
+.mobile-menu > a.btn + a.btn {
+  margin-top: 0;
+  padding-top: 13px !important;
+  border-top: none !important;
 }
 
 .mobile-svc-list {
@@ -646,7 +775,9 @@
 .blog-hero-mesh,
 .news-hero-mesh,
 .svc-hero-mesh,
-.team-hero-mesh {
+.team-hero-mesh,
+.cs-hub-hero-mesh,
+.cs-hero-mesh {
   z-index: 0;
 }
 
@@ -657,7 +788,9 @@
   .svc-hero-inner,
   .team-hero-grid,
   .about-hero > .container,
-  .svc-hero-text
+  .svc-hero-text,
+  .cs-hub-hero-inner,
+  .cs-hero-inner
 ) {
   position: relative;
   z-index: 2;
@@ -803,6 +936,7 @@
 .footer-col a {
   color: var(--fg2-on-dark);
   font-size: 14px;
+  text-decoration: none;
   transition: color var(--dur);
 }
 .footer-col a:hover {
@@ -1564,6 +1698,7 @@
   color: inherit;
   box-shadow: var(--sh-xs, 0 1px 2px rgba(22, 32, 58, 0.06));
   transition: transform 0.2s var(--ease, ease), box-shadow 0.2s ease, border-color 0.2s ease;
+  container-type: inline-size;
 }
 
 .yb-schedule-card:hover {
@@ -1689,6 +1824,43 @@ a.yb-schedule-card__cta:hover {
 .yb-schedule-grid--compact .yb-schedule-card__meet {
   font-size: 10px;
   padding: 7px 8px;
+}
+
+/* Stack photo above actions when the card column is too narrow (tablet / split layouts). */
+@container (max-width: 300px) {
+  .yb-schedule-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 16px 12px;
+  }
+
+  .yb-schedule-card__info {
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .yb-schedule-card__name {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .yb-schedule-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 16px 12px;
+  }
+
+  .yb-schedule-card__info {
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .yb-schedule-card__name {
+    text-align: center;
+  }
 }
 
 @media (max-width: 640px) {

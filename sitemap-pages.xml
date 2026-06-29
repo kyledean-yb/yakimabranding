@@ -11,6 +11,21 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://yakimabranding.com/about/case-studies</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://yakimabranding.com/about/case-studies/fortune-500-multilingual-accessibility</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://yakimabranding.com/about/case-studies/wordpress-portfolio-malware-remediation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://yakimabranding.com/about/jacob</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

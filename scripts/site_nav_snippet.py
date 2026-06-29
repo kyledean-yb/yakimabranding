@@ -7,8 +7,8 @@ from site_urls import page_href
 
 
 def site_header_html(prefix: str = "", about_active: Optional[str] = None) -> str:
-    """about_active: 'about' | 'tax' | None — highlights About dropdown item."""
-    about_btn_style = "color:var(--yb-blue)" if about_active == "about" else ""
+    """about_active: 'about' | 'tax' | 'case-studies' | None — highlights About dropdown item."""
+    about_btn_style = "color:var(--yb-blue)" if about_active in ("about", "case-studies") else ""
     return f"""
 <div class="header top" id="header">
   <div class="container header-inner">
@@ -50,6 +50,7 @@ def site_header_html(prefix: str = "", about_active: Optional[str] = None) -> st
     <a href="#" onclick="document.getElementById('mobileAboutList').classList.toggle('open');return false" style="display:flex;justify-content:space-between;align-items:center">About <span>▾</span></a>
     <div class="mobile-svc-list" id="mobileAboutList">
       <a href="{page_href('about.html')}" class="mobile-about-row"><strong>About Us</strong><span>Meet our team &amp; our story</span></a>
+      <a href="{page_href('about/case-studies/index.html')}" class="mobile-about-row"><strong>Case Studies</strong><span>Enterprise accessibility &amp; security work</span></a>
       <a href="{page_href('washington-state-sales-tax.html')}" class="mobile-about-row"><strong>WA Sales Tax Notice</strong><span>Oct 2025 tax updates</span></a>
     </div>
     <a href="{page_href('insights.html')}">Insights</a>

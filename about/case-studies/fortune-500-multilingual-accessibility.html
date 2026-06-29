@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../../../favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../../../favicon.png">
+<title>Fortune 500 Multilingual Accessibility Remediation — YB Marketing</title>
+<meta name="description" content="How YB Marketing turned a Fortune 500 accessibility audit into shipped fixes across three domains and six languages — React, brand tokens, and translation pipeline included.">
+<link rel="canonical" href="https://yakimabranding.com/about/case-studies/fortune-500-multilingual-accessibility">
+<link rel="stylesheet" href="../../../colors_and_type.css">
+<link rel="stylesheet" href="../../../site.css">
+<link rel="stylesheet" href="../../../case-studies.css">
+
+<style>
+.cs-page { --cs-accent: #2BC4F0; }
+</style>
+<!-- yb-schema-start -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"YB Marketing","alternateName":"Yakima Branding","url":"https://yakimabranding.com","logo":"https://yakimabranding.com/assets/yb-logo-color.png","description":"Award-winning digital marketing agency helping businesses grow through strategic branding, SEO, and comprehensive digital solutions.","telephone":"+15099019735","email":"info@yakimabranding.com","foundingDate":"2004","address":{"@type":"PostalAddress","addressLocality":"Yakima","addressRegion":"WA","addressCountry":"US"},"areaServed":["Yakima, WA","Ellensburg, WA","Tri-Cities, WA","Spokane, WA","Boise, ID","Coeur d'Alene, ID","Tacoma, WA","Vancouver, WA","Wenatchee, WA","Walla Walla, WA","Pacific Northwest"],"sameAs":["https://www.facebook.com/yakimabranding","https://www.instagram.com/yakimabranding","https://www.linkedin.com/company/yakima-branding"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"43","bestRating":"5"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"YB Marketing","url":"https://yakimabranding.com","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://yakimabranding.com/insights?search={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Fortune 500 Multilingual Accessibility | YB Marketing Team","url":"https://yakimabranding.com/about/case-studies/fortune-500-multilingual-accessibility","breadcrumb":{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://yakimabranding.com"},{"@type":"ListItem","position":2,"name":"About","item":"https://yakimabranding.com/about"},{"@type":"ListItem","position":3,"name":"Fortune 500 Multilingual Accessibility","item":"https://yakimabranding.com/about/case-studies/fortune-500-multilingual-accessibility"}]}}</script>
+<!-- yb-schema-end -->
+
+</head>
+<body class="cs-page">
+<script>
+(function(){ var s = document.createElement('script'); var h = document.querySelector('head') || document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function(){ acsbJS.init({ statementLink : '', footerHtml : '', hideMobile : false, hideTrigger : false, disableBgProcess : false, language : 'en', position : 'left', leadColor : '#146FF8', triggerColor : '#146FF8', triggerRadius : '50%', triggerPositionX : 'left', triggerPositionY : 'bottom', triggerIcon : 'people', triggerSize : 'medium', triggerOffsetX : 20, triggerOffsetY : 20, mobile : { triggerSize : 'small', triggerPositionX : 'right', triggerPositionY : 'bottom', triggerOffsetX : 10, triggerOffsetY : 10, triggerRadius : '20' } }); }; h.appendChild(s); })();
+</script>
+
+<div class="header top" id="header">
+  <div class="container header-inner">
+    <a class="logo" href="/">
+      <img src="../../../assets/yb-logo-color.png" alt="YB Marketing logo" style="width:44px;height:44px">
+      <span class="logo-text">YB <span>Marketing</span></span>
+    </a>
+    <nav class="nav">
+      <a href="/" class="nav-a">Home</a>
+            <div class="nav-about" id="navAbout">
+        <button class="nav-svc-btn" type="button" style="color:var(--yb-blue)">About
+          <svg class="nav-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dd nav-dd-about">
+          <div class="nav-dd-arrow"></div>
+          <div class="nav-dd-about-inner">
+            <div class="nav-dd-about-banner">
+              <span class="nav-dd-eyebrow">About YB Marketing</span>
+              <p class="nav-dd-banner-text">Pacific Northwest agency · Washington State</p>
+            </div>
+            <div class="nav-dd-about-grid">
+              <a href="/about" class="dd-card">
+                <div class="dd-ic" style="background:var(--wash-blue);color:var(--yb-blue)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                <div><span class="dd-name">About Us</span><span class="dd-desc">Meet our team &amp; our story</span></div>
+              </a>
+              <a href="/about/case-studies" class="dd-card is-active">
+                <div class="dd-ic" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+                <div><span class="dd-name">Case Studies</span><span class="dd-desc">Enterprise accessibility &amp; security work</span></div>
+              </a>
+              <a href="/washington-state-sales-tax-notice" class="dd-card">
+                <div class="dd-ic" style="background:#e8f5ee;color:#2d9a5a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+                <div><span class="dd-name">WA Sales Tax Notice</span><span class="dd-desc">Oct 2025 advertising &amp; software tax info</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-services" id="navServices">
+        <button class="nav-svc-btn" type="button">Services
+          <svg class="nav-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dd">
+          <div class="nav-dd-arrow"></div>
+          <div class="nav-dd-grid">
+            <a href="/branding" class="dd-card"><div class="dd-ic" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="0.5" fill="currentColor"/><circle cx="17.5" cy="10.5" r="0.5" fill="currentColor"/><circle cx="8.5" cy="7.5" r="0.5" fill="currentColor"/><circle cx="6.5" cy="12.5" r="0.5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></div><div><span class="dd-name">Branding &amp; Design</span><span class="dd-desc">Logos, systems &amp; identity</span></div></a>
+            <a href="/web-design" class="dd-card"><div class="dd-ic" style="background:var(--wash-mint);color:#159468"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div><div><span class="dd-name">Web Design</span><span class="dd-desc">WordPress, Wix &amp; custom sites</span></div></a>
+            <a href="/social-media" class="dd-card"><div class="dd-ic" style="background:var(--wash-amber);color:#c77f12"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/></svg></div><div><span class="dd-name">Social Media</span><span class="dd-desc">Grow your following</span></div></a>
+            <a href="/google-ads" class="dd-card"><div class="dd-ic" style="background:var(--wash-coral);color:var(--yb-coral)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></div><div><span class="dd-name">Google Ads</span><span class="dd-desc">PPC that converts</span></div></a>
+            <a href="/seo" class="dd-card"><div class="dd-ic" style="background:var(--wash-cyan);color:var(--yb-cyan)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><div><span class="dd-name">SEO</span><span class="dd-desc">Rank higher on Google</span></div></a>
+            <a href="/press-releases" class="dd-card"><div class="dd-ic" style="background:var(--wash-pink);color:var(--yb-pink)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/></svg></div><div><span class="dd-name">Press Releases</span><span class="dd-desc">Get published</span></div></a>
+            <a href="/content-marketing" class="dd-card"><div class="dd-ic" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div><span class="dd-name">Content &amp; Blogging</span><span class="dd-desc">Copy that converts</span></div></a>
+          </div>
+        </div>
+      </div>
+      <a href="/insights" class="nav-a">Insights</a>
+      <a href="/contact" class="nav-a">Contact</a>
+    </nav>
+    <div class="btn-hdr" style="display:flex;align-items:center;gap:8px">
+      <a href="tel:5099019735" class="btn btn-hdr-phone">509-901-9735</a>
+      <a href="/contact" class="btn btn-grad">Get Started</a>
+    </div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/">Home</a>
+    <a href="#" onclick="document.getElementById('mobileAboutList').classList.toggle('open');return false" style="display:flex;justify-content:space-between;align-items:center">About <span>▾</span></a>
+    <div class="mobile-svc-list" id="mobileAboutList">
+      <a href="/about" class="mobile-about-row"><strong>About Us</strong><span>Meet our team &amp; our story</span></a>
+      <a href="/about/case-studies" class="mobile-about-row"><strong>Case Studies</strong><span>Enterprise accessibility &amp; security work</span></a>
+      <a href="/washington-state-sales-tax-notice" class="mobile-about-row"><strong>WA Sales Tax Notice</strong><span>Oct 2025 tax updates</span></a>
+    </div>
+    <a href="/insights">Insights</a>
+    <a href="/contact">Contact</a>
+  </div>
+</div>
+
+
+<main>
+  <section class="cs-hero">
+    <div class="cs-hero-mesh" aria-hidden="true"></div>
+    <div class="container cs-hero-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span>/</span>
+        <a href="/about">About</a><span>/</span>
+        <a href="/about/case-studies">Case Studies</a><span>/</span>
+        <span>Case Study</span>
+      </nav>
+      <span class="cs-hero-tag">Accessibility · Enterprise</span>
+      <h1>A Fortune 500 Accessibility Audit Identified the Issues. Implementing Them Across Six Languages Was the Real Work.</h1>
+    </div>
+  </section>
+
+  <div class="container cs-article">
+    <div class="cs-meta-panel">
+      <div class="cs-meta-panel__card">
+        <span class="cs-meta-panel__label">Project snapshot</span>
+        <div class="cs-meta-grid">
+        <div class="cs-meta-item">
+          <span class="cs-meta-item__label">Client</span>
+          <span class="cs-meta-item__value">A Fortune 500 enterprise (anonymised)</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-item__label">Scope</span>
+          <span class="cs-meta-item__value">Three domains, multilingual</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-item__label">Languages in scope</span>
+          <span class="cs-meta-item__value"><span class="cs-meta-tags"><span class="cs-meta-tag">English</span><span class="cs-meta-tag">German</span><span class="cs-meta-tag">Simplified Chinese</span><span class="cs-meta-tag">Traditional Chinese</span><span class="cs-meta-tag">Japanese</span><span class="cs-meta-tag">Korean</span></span></span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-item__label">Environments</span>
+          <span class="cs-meta-item__value">Development, staging, and production</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-item__label">Timeline</span>
+          <span class="cs-meta-item__value">Multi-month engagement</span>
+        </div>
+        <div class="cs-meta-item cs-meta-item--result">
+          <span class="cs-meta-item__label">Result</span>
+          <span class="cs-meta-item__value">Conformance achieved across all three domains and six languages with no regression to brand or translations</span>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-summary">
+      <span class="cs-summary__eyebrow">Summary</span>
+      <p>A Fortune 500 enterprise had commissioned a third-party accessibility audit across their global web presence. Three domains, each published in six languages. The audit returned a thorough inventory of issues. It did not return a way to fix them without affecting brand consistency, translation coverage, or the working experience of the live sites.</p>
+<p>That gap was where the project lived. The audit said what was wrong. Remediation was the body of work that had to take those findings and ship them into production cleanly, across three domains and six locales, with each fix verified in every language before it went live.</p>
+<p>Over a few months we took the audit from report to implementation. Three domains, six languages, conformant at the end of it, with the brand intact.</p>
+    </div>
+
+    <div class="cs-prose">
+      <section>
+<h2>The Situation</h2>
+<p>The client owned three domains: a primary corporate site and two supporting properties serving distinct business functions. Each was published in six languages. The audit had been performed against all three.</p>
+<p>The findings spanned the surface area you would expect at this scale: contrast failures inside brand-owned colour tokens, interactive components without keyboard or screen reader support, forms with missing programmatic labels and silent error states, carousels that played without controls, video without captions, and a long list of third-party embeds (PDFs, maps, and other inserted content) that arrived on the page without any accessibility scaffolding around them.</p>
+<p>None of the individual issues were exotic. What made the remediation work substantial was the combination they sat inside. A Fortune 500 web presence with brand tokens that could not be casually edited. Three connected domains. Six language versions of every fix. And a meaningful portion of the interactive surface rendered through React components.</p>
+</section>
+<section>
+<h2>Why Remediation Was the Hard Part</h2>
+<p>An audit is a static document. Remediation is the part that has to ship. On a multilingual estate with this kind of reach, that distinction matters.</p>
+<h3>Brand-owned colour and contrast tokens</h3>
+<p>Several contrast failures sat inside colour tokens that were part of the client&#x27;s global brand system. We could not unilaterally darken a brand colour. Each contrast adjustment had to be resolved at the usage layer (changing the background a token sat on, increasing font weight, switching to a different approved token, adjusting state colours for links, buttons, and focus) or escalated to the brand owners for an approved tonal variant.</p>
+<p>This part of the work was as much coordination as code. Each proposed change went through brand review before reaching the staging environment.</p>
+<h3>React-rendered interactive components</h3>
+<p>The most demanding piece of the remediation was the interactive layer rendered through React. These components had been built for visual behaviour first and accessibility second. Roles were missing or wrong, state changes were not announced, focus was lost on re-render, and keyboard interaction worked partially or not at all depending on which sub-component was active.</p>
+<p>Each component needed a real rebuild of its accessibility model. Roles, names, and states declared correctly. Focus surviving re-renders and routing back to a sensible place when modals, drawers, and overlays closed. State changes that mattered to a screen reader user (selections, expansions, errors, loading) announced through live regions without flooding them. None of this could be applied uniformly across components because each one had its own state model.</p>
+<h3>Dropdowns, forms, and error states</h3>
+<p>Forms across all three domains relied on a mix of native and custom dropdown controls. Native selects worked. The custom dropdowns, the styled ones the design system preferred, were the ones flagged by the audit. They needed correct roles, keyboard operation, programmatic state, and accessible names that flowed through the translation pipeline.</p>
+<p>The error-state work was equally material. Failing fields needed programmatic association between the error message and the input, the message itself had to be announced when it appeared, and required-field status had to be exposed correctly rather than left as a visual asterisk. Each fix was translated and verified across all six locales.</p>
+<h3>Carousels and slideshows</h3>
+<p>The carousels on the site autoplayed, did not expose a pause control to assistive technology, did not handle keyboard navigation cleanly, and lost focus when slides changed. Each of these is an individual fix in isolation. Together, they meant the carousel components had to be re-architected, not just patched. Pause and play controls exposed properly. Slide changes announced where it mattered. Focus managed when users interacted with controls. Reduced-motion preferences respected.</p>
+<h3>Embedded content: video, PDFs, and maps</h3>
+<p>A meaningful portion of the page content was not owned by the client&#x27;s sites at all. Videos were embedded from external players. PDFs were either linked or embedded inside iframes. Maps were embedded from a third-party provider. The source documents could not be edited as part of the engagement.</p>
+<p>What could be fixed was the embedding itself. Videos were configured to load with captions available and player controls exposed to assistive technology. PDF links and embeds were rewritten so the purpose, file type, and behaviour were clear to a screen reader user before the link was activated, with proper iframe titles where PDFs were displayed inline. Map embeds received accessible names, were taken out of the keyboard tab order where they trapped focus, and were paired with text-based alternatives (address, directions, contact) so the underlying information was reachable without the map widget itself being usable.</p>
+<h3>Images across six languages</h3>
+<p>Alt text gaps were spread across the asset library, and they were not symmetrical between language versions. Some images had alt text in English and nothing in the other five locales. Others were decorative on some pages and meaningful on others. Closing this required a per-locale pass, not a single global change.</p>
+<h3>Six language versions of every fix</h3>
+<p>Every accessible name, helper text string, error message, and announcement we introduced during the project had to exist in all six languages. Hardcoded English strings were not an option. Each new label and message was routed through the translation pipeline, registered in the site&#x27;s translation memory, and verified in every locale before the fix was considered shipped.</p>
+<h3>Working across development, staging, and production</h3>
+<p>The team had a development environment, a staging environment, and production. Each change moved through that pipeline before reaching live users, which removed the risk of shipping a broken fix into a Fortune 500 web presence directly. What it did not remove was the locale multiplication. A fix that passed verification in English on staging still had to be checked in German, where compound words ran longer and could wrap where they did not in English, and in each of the other four locales. Promotion to production was paced so that no business unit was caught out by a layout shift in their language.</p>
+</section>
+<section>
+<h2>The Gap Between the Audit and the Work</h2>
+<p>The audit document listed issues. It did not say, for each issue, which of the three domains it appeared on, which of the six languages it affected, which component generated it, or what the downstream consequences of fixing it would be. Building that mapping was the first piece of real work.</p>
+<p>Some audit findings, written generically, turned out to be a single shared component used in dozens of places. Fixing the component fixed every instance. Other findings, written as a single issue, were actually six instances (one per language) because the translated DOM diverged from the source in ways the audit had not captured. The audit&#x27;s count of issues and the count of actual fixes did not match in either direction.</p>
+<p>We rebuilt the issue list as a remediation plan organised by template, component, embed type, and locale. Fixes that could be made at the code layer were separated from those that required translation work, brand approval, or third-party embed configuration. That plan was what the rest of the engagement worked from.</p>
+</section>
+<section>
+<h2>What We Did</h2>
+<p>The work moved in tracks that ran in parallel where they could and serialised where they could not. Each track was scoped, executed, verified across all six locales on staging, and promoted to production before the next batch began.</p>
+<h3>Colour and contrast adjustments</h3>
+<p>Contrast failures were resolved through usage-layer changes wherever possible, and through brand-approved tonal variants where a token itself had to change. Focus, hover, disabled, and error states across links, buttons, and form fields were brought up to conformance, with the brand team signing off on each change before it shipped.</p>
+<h3>React component rebuilds</h3>
+<p>The interactive components rendered through React were the most concentrated body of work. Each component received a proper accessibility model: roles, accessible names, states, keyboard operation, focus management on mount and unmount, and announcements for the state changes that mattered to a screen reader user. Components were tested both in isolation and inside the pages that used them.</p>
+<h3>Forms and dropdowns</h3>
+<p>Forms across all three domains were rebuilt to associate labels programmatically with their inputs, expose required-field status correctly, announce errors when they appeared, and provide error text that screen readers could associate with the failing field. Custom dropdowns received correct roles, keyboard handling, and accessible names. Native dropdowns were left in place where they already worked.</p>
+<h3>Carousels and slideshows</h3>
+<p>Carousel components were re-architected to expose pause and play controls, support keyboard navigation, manage focus when slides changed, and respect reduced-motion preferences. Autoplay behaviour was reviewed against the requirement that users have meaningful control over moving content.</p>
+<h3>Video accessibility</h3>
+<p>Embedded video was configured to load with captions available and player controls exposed to assistive technology. Where videos were used to convey information not available elsewhere on the page, the embedding was paired with a textual fallback.</p>
+<h3>PDF, map, and other embed remediation</h3>
+<p>PDFs were not edited at the source. What changed was the way they were referenced from the sites: link text describing the document and its file type, iframe titles where PDFs were embedded inline, and clear indication of behaviour before the link was activated. Map embeds received accessible names, were prevented from trapping keyboard focus, and were paired with text-based alternatives so the underlying information was reachable without the map widget.</p>
+<h3>Image and alt text coverage</h3>
+<p>The asset library was reviewed per locale. Missing alt text was added in each language, decorative images were marked correctly, and image variants that differed between language versions received translated alt text rather than a default fallback.</p>
+<h3>Translation pipeline updates</h3>
+<p>Every new accessible name, helper text, and announcement introduced during remediation was translated into all six languages and registered in the site&#x27;s translation memory. Nothing was left as a hardcoded English string. The pipeline was extended so future content and feature work would inherit the same coverage.</p>
+<h3>Cross-locale verification</h3>
+<p>Every change went through a verification pass on staging in all six languages before being promoted to production. Automated tooling caught the structural failures (contrast, missing attributes, broken hierarchies). Manual testing covered the parts that required judgement: keyboard flow through React components, announcements firing at the right moment, error handling in real forms, and embed behaviour for video, PDFs, and maps.</p>
+</section>
+<section>
+<h2>The Outcome</h2>
+<p>All three domains reached conformance across all six languages within the engagement window. The brand system remained intact. The translation pipeline was extended cleanly to cover the new accessibility surface. No business unit experienced a regression in their language during the rollout.</p>
+<p>The internal documentation produced during the project (the remediation plan, the per-locale verification notes, the component-level guidance) was handed back to the client&#x27;s web and brand teams so future content and feature work would stay inside the conformance envelope rather than drifting back out of it.</p>
+</section>
+<section>
+<h2>What This Means for Multilingual Enterprise Sites</h2>
+<p>If you run a multilingual web estate at enterprise scale, the patterns that made this engagement substantial are likely already present in your environment.</p>
+<h3>The audit is the start of the work</h3>
+<p>A WCAG audit identifies issues. It does not tell you which component generates them, which language variants are affected, which fixes require brand approval, or which fixes will ripple through translation. Building that map is its own piece of work and is usually where remediation projects stall.</p>
+<h3>Multilingual makes every fix wider</h3>
+<p>A single accessibility fix on a monolingual site is one change. The same fix on a six-language site can be six changes, each with its own translation, layout, and verification requirements. Scoping accessibility work without accounting for locale multiplication is how timelines slip.</p>
+<h3>Custom React components carry most of the work</h3>
+<p>Custom interactive components rendered through React rarely behave correctly for assistive technology without a deliberate rebuild. Surface patches do not solve focus loss on re-render, missing state announcements, or broken keyboard models. The component has to be reworked, which is a different cost profile to fixing static markup.</p>
+<h3>Brand sign-off has to be in scope from the start</h3>
+<p>Contrast failures often live inside brand-owned colour tokens. Remediation that does not include the brand team in the loop either ships changes the brand will later roll back, or stalls indefinitely waiting for approval that was never requested correctly.</p>
+<h3>You can fix the embedding when you cannot fix the source</h3>
+<p>Videos, PDFs, and maps that arrive on the page from third-party sources often cannot be edited at the source. What can be fixed is the way they are embedded: link text, iframe titles, focus behaviour, and text-based alternatives that put the underlying information within reach of someone who cannot use the widget itself.</p>
+<h3>Conformance drifts without ongoing ownership</h3>
+<p>A site reaches conformance and then drifts out of it the next time a new feature ships, a new template is added, or a new piece of content is published without translation coverage on its accessible names. The handover documentation is what determines whether the work holds.</p>
+</section>
+
+      <div class="cs-cta-band">
+        <p>Sitting on an accessibility audit you have not yet implemented? <a href="/contact">YB Marketing</a> remediates multilingual enterprise sites at scale, takes audit findings from inventory to shipped conformance, and hands back the documentation your team needs to stay there.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cs-article-footer-wave" aria-hidden="true"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,50 C480,70 960,10 1440,30 L1440,70 L0,70 Z"/></svg></div>
+</main>
+
+
+<footer class="footer">
+  <div class="footer-mesh"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:11px;margin-bottom:14px">
+          <img src="../../../assets/yb-logo-white.png" alt="YB" style="width:44px;height:44px;filter:drop-shadow(0 0 3px rgba(255,255,255,.4))">
+          <span style="font-family:var(--font-display);font-weight:800;font-size:22px;color:#fff">YB <span style="color:var(--yb-cyan)">Marketing</span></span>
+        </div>
+        <p>Award-winning digital marketing agency helping businesses grow through strategic branding, SEO, and comprehensive digital solutions.</p>
+        <div style="display:grid;gap:9px;margin:16px 0">
+          <a href="tel:5099019735" style="color:var(--fg2-on-dark);font-size:14px;display:flex;align-items:center;gap:9px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(509) 901-9735</a>
+          <a href="mailto:info@yakimabranding.com" style="color:var(--fg2-on-dark);font-size:14px;display:flex;align-items:center;gap:9px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@yakimabranding.com</a>
+        </div>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/yakimabranding" class="social-btn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/yb.marketing_/" class="social-btn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="17" height="17"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a>
+          <a href="https://www.linkedin.com/company/18939370" class="social-btn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/insights">Insights</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/branding">Branding &amp; Design</a></li>
+          <li><a href="/web-design">Web Design</a></li>
+          <li><a href="/seo">SEO Optimization</a></li>
+          <li><a href="/google-ads">Google Ads</a></li>
+          <li><a href="/social-media">Social Media</a></li>
+          <li><a href="/press-releases">Press Releases</a></li>
+          <li><a href="/content-marketing">Content Marketing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Reach</h4>
+        <p style="color:var(--fg2-on-dark);font-size:14px;line-height:1.7;margin-bottom:14px">Yakima Branding is centered in Central Washington, with deep roots in the Yakima community. From our home base in Yakima, we proudly serve businesses across the entire Pacific Northwest with strategic marketing, website design, SEO, advertising, and branding support.</p>
+        <div style="display:flex;align-items:center;gap:7px;font-size:13px;color:var(--yb-cyan);font-weight:600"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Yakima, WA &nbsp;·&nbsp; Pacific Northwest</div>
+      </div>
+    </div>
+    <div class="footer-locations">
+      <h4>Locations</h4>
+      <div class="footer-locations-scroll">
+        <div class="footer-locations-track">
+          <div class="footer-locations-set">
+          <a href="/locations/boise-id" class="footer-loc-btn">Boise, ID</a>
+          <a href="/locations/coeur-dalene-id" class="footer-loc-btn">Coeur d&#x27;Alene, ID</a>
+          <a href="/locations/ellensburg-wa" class="footer-loc-btn">Ellensburg, WA</a>
+          <a href="/locations/spokane-wa" class="footer-loc-btn">Spokane, WA</a>
+          <a href="/locations/tacoma-wa" class="footer-loc-btn">Tacoma, WA</a>
+          <a href="/locations/tri-cities-wa" class="footer-loc-btn">Tri-Cities, WA</a>
+          <a href="/locations/vancouver-wa" class="footer-loc-btn">Vancouver, WA</a>
+          <a href="/locations/walla-walla-wa" class="footer-loc-btn">Walla Walla, WA</a>
+          <a href="/locations/wenatchee-wa" class="footer-loc-btn">Wenatchee, WA</a>
+          <a href="/locations/yakima-wa" class="footer-loc-btn">Yakima, WA</a>
+          </div>
+          <div class="footer-locations-set" aria-hidden="true">
+          <a href="/locations/boise-id" class="footer-loc-btn">Boise, ID</a>
+          <a href="/locations/coeur-dalene-id" class="footer-loc-btn">Coeur d&#x27;Alene, ID</a>
+          <a href="/locations/ellensburg-wa" class="footer-loc-btn">Ellensburg, WA</a>
+          <a href="/locations/spokane-wa" class="footer-loc-btn">Spokane, WA</a>
+          <a href="/locations/tacoma-wa" class="footer-loc-btn">Tacoma, WA</a>
+          <a href="/locations/tri-cities-wa" class="footer-loc-btn">Tri-Cities, WA</a>
+          <a href="/locations/vancouver-wa" class="footer-loc-btn">Vancouver, WA</a>
+          <a href="/locations/walla-walla-wa" class="footer-loc-btn">Walla Walla, WA</a>
+          <a href="/locations/wenatchee-wa" class="footer-loc-btn">Wenatchee, WA</a>
+          <a href="/locations/yakima-wa" class="footer-loc-btn">Yakima, WA</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 YB Marketing. All rights reserved.</span>
+      <div style="display:flex;gap:18px"><a href="/privacy-policy">Privacy Policy</a><a href="/sitemap">Sitemap</a></div>
+    </div>
+  </div>
+</footer>
+<script src="../../../js/newsletter-popup.js" defer></script>
+<script src="../../../js/chat-widget.js" defer></script>
+<script src="../../../js/site.js" defer></script>
+</body>
+</html>

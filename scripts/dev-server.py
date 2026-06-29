@@ -66,6 +66,9 @@ def resolve_request(path: str) -> tuple[str, bool]:
         return f"/{rel}", False
     if (ROOT / f"{rel}.html").is_file():
         return f"/{rel}.html", False
+    index = ROOT / rel / "index.html"
+    if index.is_file():
+        return f"/{rel}/index.html", False
     return path, False
 
 

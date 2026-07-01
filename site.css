@@ -1388,6 +1388,14 @@ a {
   box-shadow: 0 0 0 3px rgba(37, 194, 138, 0.22);
 }
 
+.yb-chat-widget__hours {
+  margin-top: 3px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.68);
+}
+
 .yb-chat-widget__close {
   width: 34px;
   height: 34px;

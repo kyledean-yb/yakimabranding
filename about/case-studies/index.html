@@ -7,7 +7,7 @@
 <link rel="icon" href="../../favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="../../favicon.png">
 <title>Case Studies — YB Marketing</title>
-<meta name="description" content="YB Marketing case studies — enterprise accessibility remediation, WordPress security, and portfolio-scale digital work.">
+<meta name="description" content="YB Marketing case studies — local SEO growth, enterprise accessibility remediation, WordPress security, and portfolio-scale digital work.">
 <link rel="canonical" href="https://yakimabranding.com/about/case-studies">
 <link rel="stylesheet" href="../../colors_and_type.css">
 <link rel="stylesheet" href="../../site.css">
@@ -30,7 +30,6 @@
 <body class="cs-page cs-hub-page">
 <!-- yb-gtm-body-start -->
 <!-- yb-gtm-body-end -->
-
 <script>
 (function(){ var s = document.createElement('script'); var h = document.querySelector('head') || document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function(){ acsbJS.init({ statementLink : '', footerHtml : '', hideMobile : false, hideTrigger : false, disableBgProcess : false, language : 'en', position : 'left', leadColor : '#146FF8', triggerColor : '#146FF8', triggerRadius : '50%', triggerPositionX : 'left', triggerPositionY : 'bottom', triggerIcon : 'people', triggerSize : 'medium', triggerOffsetX : 20, triggerOffsetY : 20, mobile : { triggerSize : 'small', triggerPositionX : 'right', triggerPositionY : 'bottom', triggerOffsetX : 10, triggerOffsetY : 10, triggerRadius : '20' } }); }; h.appendChild(s); })();
 </script>
@@ -61,7 +60,7 @@
               </a>
               <a href="/about/case-studies" class="dd-card is-active">
                 <div class="dd-ic" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
-                <div><span class="dd-name">Case Studies</span><span class="dd-desc">Enterprise accessibility &amp; security work</span></div>
+                <div><span class="dd-name">Case Studies</span><span class="dd-desc">Client results &amp; project highlights</span></div>
               </a>
               <a href="/washington-state-sales-tax-notice" class="dd-card">
                 <div class="dd-ic" style="background:#e8f5ee;color:#2d9a5a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
@@ -102,7 +101,7 @@
     <a href="#" onclick="document.getElementById('mobileAboutList').classList.toggle('open');return false" style="display:flex;justify-content:space-between;align-items:center">About <span>▾</span></a>
     <div class="mobile-svc-list" id="mobileAboutList">
       <a href="/about" class="mobile-about-row"><strong>About Us</strong><span>Meet our team &amp; our story</span></a>
-      <a href="/about/case-studies" class="mobile-about-row"><strong>Case Studies</strong><span>Enterprise accessibility &amp; security work</span></a>
+      <a href="/about/case-studies" class="mobile-about-row"><strong>Case Studies</strong><span>Client results &amp; project highlights</span></a>
       <a href="/washington-state-sales-tax-notice" class="mobile-about-row"><strong>WA Sales Tax Notice</strong><span>Oct 2025 tax updates</span></a>
     </div>
     <a href="/insights">Insights</a>
@@ -120,14 +119,18 @@
     <div class="container cs-hub-hero-inner">
       <span class="eyebrow">About YB Marketing</span>
       <h1>Case Studies</h1>
-      <p>Real engagements across accessibility, WordPress security, paid media, and enterprise-scale web — anonymised where required, specific where it matters.</p>
+      <p>Real engagements across SEO, accessibility, WordPress security, and enterprise-scale web — anonymised where required, specific where it matters.</p>
     </div>
   </section>
   <div class="cs-hub-wave" aria-hidden="true"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,0 C360,70 1080,70 1440,0 L1440,70 L0,70 Z"/></svg></div>
   <section class="cs-hub-listing">
     <div class="container">
-      <div class="cs-hub-grid">
-      <a href="/about/case-studies/fortune-500-multilingual-accessibility" class="cs-hub-card" style="--cs-accent:#2BC4F0">
+      <div class="cs-hub-filters" role="group" aria-label="Filter case studies">
+        <button type="button" class="cs-hub-filter is-active" data-cs-filter="all">All</button>        <button type="button" class="cs-hub-filter" data-cs-filter="seo">SEO</button>        <button type="button" class="cs-hub-filter" data-cs-filter="accessibility">Accessibility</button>        <button type="button" class="cs-hub-filter" data-cs-filter="security">Security</button>
+      </div>
+      <p class="cs-hub-filter-status" id="csHubFilterStatus" aria-live="polite"></p>
+      <div class="cs-hub-grid" id="csHubGrid">
+      <a href="/about/case-studies/fortune-500-multilingual-accessibility" class="cs-hub-card" style="--cs-accent:#2BC4F0" data-cs-categories="accessibility enterprise">
         <div class="cs-hub-card__accent"></div>
         <div class="cs-hub-card__body">
           <span class="cs-hub-card__tag">Accessibility · Enterprise</span>
@@ -136,12 +139,39 @@
           <span class="cs-hub-card__link">Read case study <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
         </div>
       </a>
-      <a href="/about/case-studies/wordpress-portfolio-malware-remediation" class="cs-hub-card" style="--cs-accent:#FF6B57">
+      <a href="/about/case-studies/wordpress-portfolio-malware-remediation" class="cs-hub-card" style="--cs-accent:#FF6B57" data-cs-categories="security wordpress">
         <div class="cs-hub-card__accent"></div>
         <div class="cs-hub-card__body">
           <span class="cs-hub-card__tag">WordPress · Security</span>
           <h2>A 130-Site WordPress Portfolio Looked Clean. Google Ads Knew Something Was Wrong.</h2>
           <p>A stealth malware campaign hid from every scanner — until Google Ads suspensions exposed what 130 sites had in common.</p>
+          <span class="cs-hub-card__link">Read case study <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="/about/case-studies/regional-tire-auto-seo-growth" class="cs-hub-card" style="--cs-accent:#25c28a" data-cs-categories="seo local">
+        <div class="cs-hub-card__accent"></div>
+        <div class="cs-hub-card__body">
+          <span class="cs-hub-card__tag">SEO · Local Search</span>
+          <h2>A Local Tire &amp; Auto Provider Had the Garage Covered. Google Search Was a Different Story.</h2>
+          <p>Central Washington tire and auto — organic search traffic up 46% year over year, search impressions up 243% at peak, and page-one keywords up 613% over three years.</p>
+          <span class="cs-hub-card__link">Read case study <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="/about/case-studies/local-electrical-contractor-seo-growth" class="cs-hub-card" style="--cs-accent:#3f6fd6" data-cs-categories="seo local">
+        <div class="cs-hub-card__accent"></div>
+        <div class="cs-hub-card__body">
+          <span class="cs-hub-card__tag">SEO · Local Search</span>
+          <h2>A Local Electrical Contractor Had the Crews and the Reputation. Organic Search Wasn&#x27;t Sending the Calls.</h2>
+          <p>Greater Bay Area electrical contractor — organic search traffic up 112% year over year, search impressions up 366% at peak, and page-one keywords up 204% in two years.</p>
+          <span class="cs-hub-card__link">Read case study <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+      <a href="/about/case-studies/local-refrigeration-services-seo-growth" class="cs-hub-card" style="--cs-accent:#7b5ea7" data-cs-categories="seo local">
+        <div class="cs-hub-card__accent"></div>
+        <div class="cs-hub-card__body">
+          <span class="cs-hub-card__tag">SEO · Local Search</span>
+          <h2>A Local Refrigeration Services Provider Had the Technicians. Search Visibility Hadn&#x27;t Caught Up.</h2>
+          <p>Central Washington industrial refrigeration — page-one keywords up 2,900%, organic traffic doubled in seven months, and top-three rankings up 57% in the past year.</p>
           <span class="cs-hub-card__link">Read case study <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
         </div>
       </a>
@@ -240,6 +270,7 @@
 <script src="../../js/newsletter-popup.js" defer></script>
 <script src="../../js/chat-widget.js" defer></script>
 <script src="../../js/site.js" defer></script>
+<script src="../../js/case-studies-hub.js" defer></script>
 <!-- yb-attributer-start -->
 <!-- yb-attributer-end -->
 </body>

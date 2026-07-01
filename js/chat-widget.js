@@ -18,6 +18,7 @@
     phoneDisplay: '509-901-9735',
     email: 'info@yakimabranding.com',
     scheduleUrl: 'https://calendly.com/yakimabranding',
+    officeHours: 'Office hours: 9am–5pm PST',
     welcomeMessage:
       "Hi! I'm here to help you learn more about YB Marketing. How can I assist you today?",
     offlineReply:
@@ -77,6 +78,7 @@
       '    <div>' +
       '      <div id="yb-chat-title" class="yb-chat-widget__title">YB Marketing</div>' +
       '      <div class="yb-chat-widget__status"><span class="yb-chat-widget__status-dot" aria-hidden="true"></span>Online now</div>' +
+      '      <div class="yb-chat-widget__hours">' + escapeHtml(cfg.officeHours) + '</div>' +
       '    </div>' +
       '  </div>' +
       '  <button type="button" class="yb-chat-widget__close" aria-label="Close chat">' + ICONS.close + '</button>' +

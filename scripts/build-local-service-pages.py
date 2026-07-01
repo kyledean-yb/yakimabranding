@@ -15,6 +15,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from service_local_config import PROCESS_STEPS, SERVICE_CONFIGS
 from schema_markup import seo_head_html
 from site_accessibe_snippet import ACCESSIBE_BODY_SCRIPT
+from site_tracking_snippet import ATTRIBUTER_FOOTER_BLOCK, GTM_BODY_NOSCRIPT_BLOCK, TRACKING_HEAD_BLOCK
 from site_staging_seo_snippet import STAGING_ROBOTS_META
 from site_footer_snippet import site_footer_html
 from site_nav_snippet import site_header_html
@@ -379,8 +380,11 @@ section{{padding:88px 0}}
 @media(max-width:900px){{.svc-hero-inner{{grid-template-columns:1fr}}.svc-hero-visual{{display:none}}.feat-grid{{grid-template-columns:1fr 1fr}}.why-main-grid{{grid-template-columns:1fr !important}}.why-tiles-grid{{grid-template-columns:1fr 1fr !important}}}}
 @media(max-width:640px){{.feat-grid{{grid-template-columns:1fr}}.footer-grid{{grid-template-columns:1fr}}section{{padding:60px 0}}}}
 </style>
-{schema_head}</head>
+{schema_head}
+{TRACKING_HEAD_BLOCK}
+</head>
 <body>
+{GTM_BODY_NOSCRIPT_BLOCK}
 {ACCESSIBE_BODY_SCRIPT}
 
 {header}
@@ -522,6 +526,7 @@ function toggleFaq(id, accent) {{
   }}
 }}
 </script>{brand_script}
+{ATTRIBUTER_FOOTER_BLOCK}
 </body>
 </html>"""
 

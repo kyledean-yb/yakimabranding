@@ -13,6 +13,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from about_nav_snippet import about_nav_shell
 from schema_markup import seo_head_html
 from site_accessibe_snippet import ACCESSIBE_BODY_SCRIPT
+from site_tracking_snippet import ATTRIBUTER_FOOTER_BLOCK, GTM_BODY_NOSCRIPT_BLOCK, TRACKING_HEAD_BLOCK
 from site_staging_seo_snippet import STAGING_ROBOTS_META
 from site_footer_snippet import site_footer_html
 from blog_intro_snippet import intro_block_for_build, updated_meta_for_build
@@ -414,8 +415,10 @@ a{{color:inherit;text-decoration:none}}
 @media(max-width:900px){{.nav,.btn-hdr{{display:none}}.hamburger{{display:flex}}.nav-dd{{display:none}}}}
 </style>
 {extra_head}
+{TRACKING_HEAD_BLOCK}
 </head>
 <body class="blog-page">
+{GTM_BODY_NOSCRIPT_BLOCK}
 {ACCESSIBE_BODY_SCRIPT}
 {header_nav(prefix, active_blog)}
 {body}
@@ -430,6 +433,7 @@ document.getElementById('hamburger')?.addEventListener('click', function () {{
 }});
 </script>
 {extra_script}
+{ATTRIBUTER_FOOTER_BLOCK}
 </body>
 </html>"""
 
@@ -596,7 +600,7 @@ def build():
         ),
         encoding="utf-8",
     )
-    redirect = """<!DOCTYPE html>
+    redirect = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -604,8 +608,13 @@ def build():
 <link rel="canonical" href="insights.html">
 <title>Redirecting to Insights — YB Marketing</title>
 <script>location.replace("insights.html");</script>
+{TRACKING_HEAD_BLOCK}
 </head>
-<body><p><a href="insights.html">Continue to Insights</a></p></body>
+<body>
+{GTM_BODY_NOSCRIPT_BLOCK}
+<p><a href="insights.html">Continue to Insights</a></p>
+{ATTRIBUTER_FOOTER_BLOCK}
+</body>
 </html>
 """
     (ROOT / "blog.html").write_text(redirect, encoding="utf-8")

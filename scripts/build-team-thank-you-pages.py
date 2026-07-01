@@ -18,15 +18,16 @@ _build_ty = importlib.util.module_from_spec(_spec)
 assert _spec.loader is not None
 _spec.loader.exec_module(_build_ty)
 
-ROOT_PREFIX = _build_ty.PREFIX
 prepare_reviews_for_thank_you = _build_ty.prepare_reviews_for_thank_you
 service_cards_html = _build_ty.service_cards_html
 from reviews_section_snippet import reviews_section_html
 from schema_markup import seo_head_html
 from site_accessibe_snippet import ACCESSIBE_BODY_SCRIPT
+from site_tracking_snippet import ATTRIBUTER_FOOTER_BLOCK, GTM_BODY_NOSCRIPT_BLOCK, TRACKING_HEAD_BLOCK
 from site_footer_snippet import site_footer_html
 from site_nav_snippet import site_header_html
 from site_staging_seo_snippet import STAGING_ROBOTS_META
+from site_thank_you_lead_snippet import thank_you_lead_script_html
 
 ABOUT_PREFIX = "../"
 ABOUT_DIR = ROOT / "about"
@@ -198,9 +199,7 @@ def build_team_thank_you_html(member: dict) -> str:
     schema_head = seo_head_html(filename)
     header = site_header_html(p).strip()
     footer = site_footer_html(p).strip()
-    reviews = prepare_reviews_for_thank_you(reviews_section_html()).replace(
-        f'src="{ROOT_PREFIX}', f'src="{p}'
-    )
+    reviews = prepare_reviews_for_thank_you(reviews_section_html(), p)
 
     name = html.escape(member["name"])
     short = html.escape(member["short"])
@@ -218,7 +217,7 @@ def build_team_thank_you_html(member: dict) -> str:
     hero_lead = html.escape(member.get("hero_lead", default_hero_lead))
 
     return f"""<!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-yb-lead-source="team_{member['slug']}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -321,8 +320,10 @@ a{{color:inherit;text-decoration:none}}
 }}
 </style>
 {schema_head}
+{TRACKING_HEAD_BLOCK}
 </head>
 <body>
+{GTM_BODY_NOSCRIPT_BLOCK}
 {ACCESSIBE_BODY_SCRIPT}
 
 {header}
@@ -391,7 +392,7 @@ a{{color:inherit;text-decoration:none}}
       <h2 style="margin:14px 0 0;font-size:clamp(1.8rem,2.6vw,2.4rem)">While You Wait, Explore What YB Can Do For You</h2>
     </div>
     <div class="ty-svc-grid">
-{chr(10).join(service_cards_html).replace(f'href="{ROOT_PREFIX}', f'href="{p}')}
+{chr(10).join(service_cards_html(p))}
     </div>
   </div>
 </section>
@@ -408,6 +409,8 @@ if (typeof window !== 'undefined') {{
 <script src="{p}js/newsletter-popup.js" defer></script>
 <script src="{p}js/chat-widget.js" defer></script>
 <script src="{p}js/site.js" defer></script>
+{thank_you_lead_script_html(p)}
+{ATTRIBUTER_FOOTER_BLOCK}
 </body>
 </html>
 """

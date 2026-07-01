@@ -14,6 +14,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from reviews_section_snippet import reviews_section_html
 from schema_markup import seo_head_html
 from site_accessibe_snippet import ACCESSIBE_BODY_SCRIPT
+from site_tracking_snippet import ATTRIBUTER_FOOTER_BLOCK, GTM_BODY_NOSCRIPT_BLOCK, TRACKING_HEAD_BLOCK
 from site_local_service_hubspot_form_snippet import (
     LOCAL_HS_FORM_PLACEHOLDER,
     hubspot_script_tags,
@@ -435,8 +436,10 @@ def page_shell(
 <link rel="stylesheet" href="{prefix}insights.css">
 <style>{PAGE_CSS}</style>
 {schema_blocks}
+{TRACKING_HEAD_BLOCK}
 </head>
 <body>
+{GTM_BODY_NOSCRIPT_BLOCK}
 {ACCESSIBE_BODY_SCRIPT}
 
 {header}
@@ -449,6 +452,7 @@ def page_shell(
 <script src="{prefix}js/site.js"></script>
 <script>{STAT_JS}</script>
 {extra_scripts}
+{ATTRIBUTER_FOOTER_BLOCK}
 </body>
 </html>
 """

@@ -11,10 +11,12 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from reviews_section_snippet import reviews_section_html
 from schema_markup import seo_head_html
 from site_accessibe_snippet import ACCESSIBE_BODY_SCRIPT
+from site_tracking_snippet import ATTRIBUTER_FOOTER_BLOCK, GTM_BODY_NOSCRIPT_BLOCK, TRACKING_HEAD_BLOCK
 from site_staging_seo_snippet import STAGING_ROBOTS_META
 from site_footer_snippet import site_footer_html
 from site_nav_snippet import site_header_html
 from site_schedule_grid_snippet import thank_you_calendly_section_html
+from site_thank_you_lead_snippet import thank_you_lead_script_html
 
 SERVICE_PAGES = [
     ("seo", "SEO", "seo.html"),
@@ -91,7 +93,7 @@ def build_thank_you_html(variant: dict) -> str:
     cards = service_cards_html(prefix)
 
     return f"""<!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-yb-lead-source="{variant["lead_source"]}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -101,8 +103,6 @@ def build_thank_you_html(variant: dict) -> str:
 <title>{variant["title"]}</title>
 <meta name="description" content="Thank you for contacting YB Marketing. A member of our team will be in touch within 1 business day.">
 <!-- TODO: Add Google Ads conversion tracking snippet here if running paid campaigns -->
-<!-- TODO: Fire lead conversion event here — GA4: gtag('event', 'generate_lead') -->
-<!-- TODO: Fire Meta Pixel lead event here — fbq('track', 'Lead') -->
 <link rel="stylesheet" href="{prefix}colors_and_type.css">
 <link rel="stylesheet" href="{prefix}site.css">
 <style>
@@ -175,8 +175,10 @@ a{{color:inherit;text-decoration:none}}
 }}
 </style>
 {schema_head}
+{TRACKING_HEAD_BLOCK}
 </head>
 <body>
+{GTM_BODY_NOSCRIPT_BLOCK}
 {ACCESSIBE_BODY_SCRIPT}
 
 {header}
@@ -256,6 +258,8 @@ if (typeof window !== 'undefined') {{
 <script src="{prefix}js/newsletter-popup.js" defer></script>
 <script src="{prefix}js/chat-widget.js" defer></script>
 <script src="{prefix}js/site.js" defer></script>
+{thank_you_lead_script_html(prefix)}
+{ATTRIBUTER_FOOTER_BLOCK}
 </body>
 </html>
 """
@@ -269,6 +273,7 @@ def all_variants() -> list[dict]:
             "prefix": "",
             "title": "Thank You | YB Marketing",
             "history_path": "thank-you.html",
+            "lead_source": "general",
             "cta_href": "index.html",
             "cta_label": "Return to Home",
         },
@@ -278,6 +283,7 @@ def all_variants() -> list[dict]:
             "prefix": "",
             "title": "Thank You | YB Marketing",
             "history_path": "thank-you-home.html",
+            "lead_source": "home",
             "cta_href": "index.html",
             "cta_label": "Return to Home",
         },
@@ -287,6 +293,7 @@ def all_variants() -> list[dict]:
             "prefix": "",
             "title": "Thank You for Contacting Us | YB Marketing",
             "history_path": "thank-you-contact.html",
+            "lead_source": "contact",
             "cta_href": "contact.html",
             "cta_label": "Return to Contact",
         },
@@ -301,6 +308,7 @@ def all_variants() -> list[dict]:
                 "prefix": "../",
                 "title": f"Thank You | {label} | YB Marketing",
                 "history_path": filename,
+                "lead_source": f"service_{key}",
                 "cta_href": service_file,
                 "cta_label": f"Return to {label}",
             }
@@ -317,6 +325,7 @@ def all_variants() -> list[dict]:
                 "prefix": "../",
                 "title": f"Thank You | {city} | YB Marketing",
                 "history_path": filename,
+                "lead_source": f"location_{slug}",
                 "cta_href": f"{slug}.html",
                 "cta_label": f"Return to {city}",
             }

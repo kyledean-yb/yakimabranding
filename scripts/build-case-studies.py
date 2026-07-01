@@ -13,6 +13,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from case_studies_content import CASE_STUDIES
 from schema_markup import seo_head_html
 from site_accessibe_snippet import ACCESSIBE_BODY_SCRIPT
+from site_tracking_snippet import ATTRIBUTER_FOOTER_BLOCK, GTM_BODY_NOSCRIPT_BLOCK, TRACKING_HEAD_BLOCK
 from site_footer_snippet import site_footer_html
 from site_nav_snippet import site_header_html
 from site_staging_seo_snippet import STAGING_ROBOTS_META
@@ -113,8 +114,10 @@ def page_shell(
 .cs-page {{ --cs-accent: {accent}; }}
 </style>
 {schema}
+{TRACKING_HEAD_BLOCK}
 </head>
 <body{body_class}>
+{GTM_BODY_NOSCRIPT_BLOCK}
 {ACCESSIBE_BODY_SCRIPT}
 
 {header}
@@ -125,6 +128,7 @@ def page_shell(
 <script src="{p}js/newsletter-popup.js" defer></script>
 <script src="{p}js/chat-widget.js" defer></script>
 <script src="{p}js/site.js" defer></script>
+{ATTRIBUTER_FOOTER_BLOCK}
 </body>
 </html>
 """

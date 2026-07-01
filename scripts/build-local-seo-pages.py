@@ -17,6 +17,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from reviews_section_snippet import reviews_section_html
 from schema_markup import seo_head_html
 from site_accessibe_snippet import ACCESSIBE_BODY_SCRIPT
+from site_tracking_snippet import ATTRIBUTER_FOOTER_BLOCK, GTM_BODY_NOSCRIPT_BLOCK, TRACKING_HEAD_BLOCK
 from site_local_service_hubspot_form_snippet import (
     LOCAL_HS_FORM_PLACEHOLDER,
     hubspot_script_tags,
@@ -320,8 +321,11 @@ section{{padding:88px 0}}
 @media(max-width:900px){{.svc-hero-inner{{grid-template-columns:1fr}}.svc-hero-visual{{display:none}}.feat-grid{{grid-template-columns:1fr 1fr}}.why-main-grid{{grid-template-columns:1fr !important}}.why-tiles-grid{{grid-template-columns:1fr 1fr !important}}}}
 @media(max-width:640px){{.feat-grid{{grid-template-columns:1fr}}.footer-grid{{grid-template-columns:1fr}}section{{padding:60px 0}}}}
 </style>
-{schema_head}</head>
+{schema_head}
+{TRACKING_HEAD_BLOCK}
+</head>
 <body>
+{GTM_BODY_NOSCRIPT_BLOCK}
 {ACCESSIBE_BODY_SCRIPT}
 
 {header}
@@ -489,6 +493,7 @@ function toggleFaq(id, accent) {{
   }}
 }}
 </script>
+{ATTRIBUTER_FOOTER_BLOCK}
 </body>
 </html>
 """

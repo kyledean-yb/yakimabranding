@@ -10,6 +10,7 @@ ABOUT_DIR = ROOT / "about"
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from site_nav_snippet import site_header_html
 from site_accessibe_snippet import ACCESSIBE_BODY_SCRIPT
+from site_tracking_snippet import ATTRIBUTER_FOOTER_BLOCK, GTM_BODY_NOSCRIPT_BLOCK, TRACKING_HEAD_BLOCK
 from site_staging_seo_snippet import STAGING_ROBOTS_META
 from site_footer_snippet import site_footer_html
 
@@ -77,8 +78,10 @@ a{{color:inherit;text-decoration:none}}
 .btn-grad{{background:var(--grad-brand);color:#fff;box-shadow:var(--sh-blue)}}
 .logo img{{width:44px;height:44px}}
 </style>
+{TRACKING_HEAD_BLOCK}
 </head>
 <body class="team-profile-page team-{theme}">
+{GTM_BODY_NOSCRIPT_BLOCK}
 {ACCESSIBE_BODY_SCRIPT}
 {header_html()}
 {body}
@@ -97,6 +100,7 @@ document.querySelectorAll('.team-faq-q').forEach(function (btn) {{
   }});
 }});
 </script>
+{ATTRIBUTER_FOOTER_BLOCK}
 </body>
 </html>"""
 

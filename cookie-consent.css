@@ -1,0 +1,108 @@
+/* Cookie consent banner — YB Marketing */
+
+.yb-cookie-banner {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 10001;
+  padding: 16px;
+  pointer-events: none;
+}
+
+.yb-cookie-banner[hidden] {
+  display: none !important;
+}
+
+.yb-cookie-banner__panel {
+  pointer-events: auto;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 22px 24px;
+  border-radius: var(--r-xl, 20px);
+  background: #fff;
+  border: 1px solid var(--line, #e3e9f2);
+  box-shadow: 0 18px 48px -16px rgba(22, 32, 58, 0.35);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px 24px;
+  align-items: center;
+}
+
+.yb-cookie-banner__copy {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--fg2, #4a5673);
+}
+
+.yb-cookie-banner__copy a {
+  color: var(--yb-blue, #3f6fd6);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.yb-cookie-banner__title {
+  display: block;
+  margin-bottom: 6px;
+  font-family: var(--font-display, 'Sora', sans-serif);
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--ink, #16203a);
+}
+
+.yb-cookie-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.yb-cookie-banner__btn {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: var(--r-md, 14px);
+  padding: 12px 18px;
+  transition: transform 0.2s ease, filter 0.2s ease, background 0.2s ease;
+}
+
+.yb-cookie-banner__btn:hover {
+  transform: translateY(-1px);
+}
+
+.yb-cookie-banner__btn--reject {
+  background: #fff;
+  color: var(--ink, #16203a);
+  border: 1.5px solid var(--line-strong, #cfd8e8);
+}
+
+.yb-cookie-banner__btn--accept {
+  background: var(--grad-brand, linear-gradient(135deg, #3f6fd6 0%, #2bc4f0 100%));
+  color: #fff;
+  box-shadow: 0 12px 28px -12px rgba(63, 111, 214, 0.55);
+}
+
+@media (max-width: 760px) {
+  .yb-cookie-banner {
+    padding: 12px;
+  }
+
+  .yb-cookie-banner__panel {
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+
+  .yb-cookie-banner__actions {
+    width: 100%;
+  }
+
+  .yb-cookie-banner__btn {
+    flex: 1 1 calc(50% - 5px);
+    justify-content: center;
+    text-align: center;
+  }
+}

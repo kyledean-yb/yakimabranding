@@ -16,6 +16,7 @@ from schema_markup import SERVICE_PAGES, SITE
 from site_urls import page_href, clean_segment
 from site_nav_snippet import site_header_html
 from site_accessibe_snippet import ACCESSIBE_BODY_SCRIPT
+from site_tracking_snippet import ATTRIBUTER_FOOTER_BLOCK, GTM_BODY_NOSCRIPT_BLOCK, TRACKING_HEAD_BLOCK
 from site_staging_seo_snippet import STAGING_ROBOTS_META
 from site_footer_snippet import site_footer_html
 TITLE_RE = re.compile(r"<title>([^<]+)</title>", re.IGNORECASE)
@@ -448,8 +449,10 @@ a{{color:inherit;text-decoration:none}}
 @media(max-width:640px){{.sitemap-insights-list{{columns:1}}}}
 </style>
 <link rel="stylesheet" href="site.css">
+{TRACKING_HEAD_BLOCK}
 </head>
 <body>
+{GTM_BODY_NOSCRIPT_BLOCK}
 {ACCESSIBE_BODY_SCRIPT}
 
 {header}
@@ -484,6 +487,7 @@ a{{color:inherit;text-decoration:none}}
 <script src="js/newsletter-popup.js" defer></script>
 <script src="js/chat-widget.js" defer></script>
 <script src="js/site.js"></script>
+{ATTRIBUTER_FOOTER_BLOCK}
 </body>
 </html>
 """

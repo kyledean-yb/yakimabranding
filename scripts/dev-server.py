@@ -56,7 +56,8 @@ def resolve_request(path: str) -> tuple[str, bool]:
     for pattern, dest in rewrite_rules():
         match = pattern.match(path)
         if match:
-            return apply_template(dest, match), False
+            path = apply_template(dest, match)
+            break
 
     if path == "/":
         return "/index.html", False

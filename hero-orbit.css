@@ -64,6 +64,23 @@
   z-index: 1;
 }
 
+/* Bare hub — logo only, no square/mesh backing (e.g. contact hero over navy) */
+.hero-orbit--bare-hub .hero-orbit-hub {
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+  width: min(44%, 200px);
+}
+
+.hero-orbit--bare-hub .hero-orbit-hub-mesh {
+  display: none;
+}
+
+.hero-orbit--bare-hub .hero-orbit-hub-logo {
+  width: 72%;
+  max-width: 150px;
+}
+
 /* Service pages — roomier orbit + original hero artwork in center */
 .svc-hero .hero-orbit {
   --orbit-r: 200px;

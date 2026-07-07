@@ -28,7 +28,6 @@
     { "source": "/:path*.html", "destination": "/:path*", "permanent": true }
   ],
   "rewrites": [
-    { "source": "/washington-state-sales-tax-notice", "destination": "/washington-state-sales-tax.html" },
-    { "source": "/insights/:slug", "destination": "/blog/posts/:slug.html" }
+    { "source": "/insights/:slug", "destination": "/blog/posts/:slug" }
   ]
 }

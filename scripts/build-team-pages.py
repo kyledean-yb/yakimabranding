@@ -21,12 +21,10 @@ HS_REGION = "na2"
 HS_EMBED_SCRIPT = f"https://js-na2.hsforms.net/forms/embed/{HS_PORTAL_ID}.js"
 SOPHIE_HS_FORM_ID = "86dbae5d-b7ad-4a65-b339-481e9f2afc47"
 JACOB_HS_FORM_ID = "d5e25f7a-16e7-49ed-b125-fe339a50994e"
-KRISTIN_HS_FORM_ID = "325b4826-bc49-4f71-a06f-5bdb2b1f5ed5"
 KEVIN_HS_FORM_ID = "17ac4d96-5927-4908-b760-593936986399"
-HUBSPOT_THEMES = frozenset({"jacob", "kevin", "kristin", "sophie"})
+HUBSPOT_THEMES = frozenset({"jacob", "kevin", "sophie"})
 CALENDLY_BY_MEMBER = {
     "Jacob Ross": "https://calendly.com/jacobybmarketing",
-    "Kristin Sparling": "https://calendly.com/kristin-sparling/connect",
     "Kevin Dean": "https://calendly.com/kdean-wsi",
     "Sophie Mann": "https://calendly.com/sophie-yakimabranding/30min",
 }
@@ -432,56 +430,6 @@ def page_jacob():
     return "jacob", "Jacob Ross — Account Executive | YB Marketing", "Meet Jacob Ross, account executive at YB Marketing. Custom digital marketing, SEO, Google Ads, and web strategy.", body
 
 
-def page_kristin():
-    body = hero_block(
-        "Kristin Sparling",
-        "Account Executive",
-        "A relationship-driven account executive who takes pride in understanding each client's goals and supporting their success.",
-        "assets/kristin-headshot.webp",
-        [
-            ("Book a Meeting", calendly_url_for("Kristin Sparling"), PHONE_SVG),
-            ("kristin@yakimabranding.com", "mailto:kristin@yakimabranding.com", MAIL_SVG),
-            ("509-940-1799", "tel:5099401799", PHONE_SVG),
-        ],
-    )
-    locs = ["Yakima", "Ellensburg", "Wenatchee", "Chelan", "Leavenworth", "Cashmere"]
-    chips = "".join(f'<span class="team-chip">{html.escape(l)}</span>' for l in locs)
-    body += f"""
-<section class="team-body" style="background:#fff">
-  <div class="container team-layout-split">
-    <div class="team-prose">
-      <p>Kristin comes from a family grounded in coaching, leadership, and the Western equine world. This background shaped her belief in strong relationships, clear communication, and supporting others with consistency and purpose.</p>
-      <p>She brings a leadership-driven and relationship-centered approach to YB Marketing. She focuses on understanding each client's business, identifying strategic opportunities, and developing tailored marketing plans that support long-term growth.</p>
-      <p>Kristin believes effective marketing is built on partnership. She works closely with clients to create custom strategies that strengthen visibility, attract qualified audiences, and align with their goals and budget. Her leadership style reflects the values she grew up with — trust, collaboration, and a commitment to helping people succeed.</p>
-      <h2>Where I spend my time</h2>
-      <div class="team-chips">{chips}</div>
-      <h2>Keep us in mind for</h2>
-      <div class="team-chips">
-        <span class="team-chip">Website Creation</span>
-        <span class="team-chip">Social Media</span>
-        <span class="team-chip">SEO</span>
-        <span class="team-chip">Google Ads</span>
-        <span class="team-chip">Graphic Design</span>
-        <span class="team-chip">Logos</span>
-      </div>
-      <p>I look forward to connecting with you. My mission is to help your business grow and see you succeed by establishing a strong online presence in this amazing, but crazy digital landscape.</p>
-      <div class="team-steps">
-        <div class="team-step"><div class="team-step-num">1</div><h3>Personalized Audit</h3><p>Free audit of your website and marketing channels.</p></div>
-        <div class="team-step"><div class="team-step-num">2</div><h3>Customized Strategy</h3><p>A plan built around your business goals.</p></div>
-        <div class="team-step"><div class="team-step-num">3</div><h3>Grow Your Business</h3><p>Aligned goals, then action.</p></div>
-      </div>
-    </div>
-    {team_contact_aside_html(
-        "Kristin Sparling",
-        member_slug="kristin",
-        hubspot_form_id=KRISTIN_HS_FORM_ID,
-        hubspot_source="Kristin Profile Page",
-    )}
-  </div>
-</section>"""
-    return "kristin", "Kristin Sparling — Account Executive | YB Marketing", "Meet Kristin Sparling at YB Marketing. Custom SEO, web, social, and Google Ads for Washington businesses.", body
-
-
 def page_sophie():
     body = hero_block(
         "Sophie Mann",
@@ -583,7 +531,7 @@ def page_kirsten():
     return "kirsten", "Kirsten Gonzalez — Marketing Administrator | YB Marketing", "Meet Kirsten Gonzalez, marketing administrator at YB Marketing.", body
 
 
-BUILDERS = [page_kevin, page_jacob, page_kristin, page_sophie, page_kayelyn, page_kirsten]
+BUILDERS = [page_kevin, page_jacob, page_sophie, page_kayelyn, page_kirsten]
 
 # kirsten URL on live site is about-kirsten - use kirsten.html locally
 
@@ -595,7 +543,6 @@ def update_about_links():
     pairs = [
         ("<!-- Kevin Dean -->", "about/kevin.html", "Kevin"),
         ("<!-- Jacob Ross -->", "about/jacob.html", "Jacob"),
-        ("<!-- Kristin Sparling -->", "about/kristin.html", "Kristin"),
         ("<!-- Sophie Mann -->", "about/sophie.html", "Sophie"),
         ("<!-- Kayelyn Aggett -->", "about/kayelyn.html", "Kayelyn"),
         ("<!-- Kirsten Gonzalez", "about/kirsten.html", "Kirsten"),

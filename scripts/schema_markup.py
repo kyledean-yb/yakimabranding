@@ -36,7 +36,6 @@ TEAM_MEMBERS = [
     ("Kayelyn Aggett", "Social Media Manager"),
     ("Kevin Dean", "Owner"),
     ("Kirsten Gonzalez", "Marketing Administrator"),
-    ("Kristin Sparling", "Account Executive"),
     ("Sophie Mann", "Account Executive"),
 ]
 
@@ -526,7 +525,7 @@ def schemas_for_rel_path(rel: str) -> tuple[list[dict], str, str]:
         )
         return global_schemas() + page_schemas, "Organization, WebSite, ContactPage", notes
 
-    if rel == "washington-state-sales-tax.html":
+    if rel == "washington-state-sales-tax-notice.html":
         page_schemas.append(
             webpage_schema(
                 "Washington State Sales Tax Notice | YB Marketing",
@@ -537,7 +536,7 @@ def schemas_for_rel_path(rel: str) -> tuple[list[dict], str, str]:
                 ],
             )
         )
-        notes = "Canonical URL uses /washington-state-sales-tax-notice per spec; file is washington-state-sales-tax.html"
+        notes = "Canonical URL uses /washington-state-sales-tax-notice per spec; file is washington-state-sales-tax-notice.html"
         return global_schemas() + page_schemas, "Organization, WebSite, WebPage", notes
 
     if rel == "privacy-policy.html":

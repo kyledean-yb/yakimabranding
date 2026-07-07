@@ -79,28 +79,6 @@ TEAM_MEMBERS = [
         "profile_href": "kevin.html",
     },
     {
-        "slug": "kristin",
-        "name": "Kristin Sparling",
-        "short": "Kristin",
-        "role": "Account Executive",
-        "photo": "kristin-headshot.webp",
-        "calendly": "https://calendly.com/kristin-sparling/connect",
-        "email": "kristin@yakimabranding.com",
-        "phone": "5099401799",
-        "phone_display": "(509) 940-1799",
-        "lead": (
-            "Strategy-first account executive helping Pacific Northwest businesses grow "
-            "with tailored digital marketing plans."
-        ),
-        "bio": (
-            "Kristin brings strategic insight and hands-on expertise from over three years in digital marketing. "
-            "She is committed to understanding each client's story, identifying their goals, and developing "
-            "tailored marketing plans that drive measurable growth across Washington."
-        ),
-        "interests": ["Website", "Social Media", "SEO", "Google Ads", "Graphic Design"],
-        "profile_href": "kristin.html",
-    },
-    {
         "slug": "sophie",
         "name": "Sophie Mann",
         "short": "Sophie",

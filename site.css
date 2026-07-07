@@ -293,6 +293,9 @@ a {
 }
 
 .btn-hdr-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   background: #fff;
   color: var(--yb-blue);
   border: 1.5px solid var(--line-strong);
@@ -1671,7 +1674,7 @@ a {
 
 .yb-schedule-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 14px;
   margin: 14px 0 4px;
 }
@@ -1868,12 +1871,6 @@ a.yb-schedule-card__cta:hover {
 
   .yb-schedule-card__name {
     text-align: center;
-  }
-}
-
-@media (max-width: 640px) {
-  .yb-schedule-grid:not(.yb-schedule-grid--compact) {
-    grid-template-columns: 1fr;
   }
 }
 

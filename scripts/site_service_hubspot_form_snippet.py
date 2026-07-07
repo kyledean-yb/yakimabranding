@@ -52,4 +52,4 @@ def service_hubspot_form_html(source: str, redirect: Optional[str] = None) -> st
           <div class="yb-hs-form" data-source="{source}" data-redirect="{redirect}">
             <div class="hs-form-frame" data-region="{HS_REGION}" data-form-id="{SERVICE_HS_FORM_ID}" data-portal-id="{HS_PORTAL_ID}"></div>
           </div>
-          <p class="yb-hs-form-footnote">We respond within 4 business hours. Your information is never shared.</p>"""
+          <p class="yb-hs-form-footnote">We respond by the next business day. Your information is never shared.</p>"""

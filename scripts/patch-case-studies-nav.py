@@ -42,7 +42,7 @@ def active_for(path: Path) -> Optional[str]:
     rel = path.relative_to(ROOT).as_posix()
     if rel == "about.html":
         return "about"
-    if rel == "washington-state-sales-tax.html":
+    if rel == "washington-state-sales-tax-notice.html":
         return "tax"
     if rel.startswith("about/case-studies/"):
         return "case-studies"

@@ -129,9 +129,9 @@ def patch_contact_html(text: str) -> str:
             1,
         )
         text = text.replace(
-            '          <p style="font-size:12.5px;color:var(--fg3);text-align:center">We respond within 4 business hours. Your information is never shared.</p>\n'
+            '          <p style="font-size:12.5px;color:var(--fg3);text-align:center">We respond by the next business day. Your information is never shared.</p>\n'
             "        </div>",
-            '          <p style="font-size:12.5px;color:var(--fg3);text-align:center">We respond within 4 business hours. Your information is never shared.</p>\n'
+            '          <p style="font-size:12.5px;color:var(--fg3);text-align:center">We respond by the next business day. Your information is never shared.</p>\n'
             "        </form>",
             1,
         )

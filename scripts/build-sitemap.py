@@ -31,7 +31,7 @@ ROOT_PAGES = [
     ("about.html", "About Us"),
     ("insights.html", "Insights"),
     ("contact.html", "Contact"),
-    ("washington-state-sales-tax.html", "Washington State Sales Tax Notice"),
+    ("washington-state-sales-tax-notice.html", "Washington State Sales Tax Notice"),
     ("privacy-policy.html", "Privacy Policy"),
     ("sitemap.html", "Sitemap"),
 ]
@@ -190,7 +190,7 @@ def public_url_for_page(path: Path) -> str:
         return f"{SITE}/"
     if rel in SERVICE_PAGES:
         return f"{SITE}/{SERVICE_PAGES[rel]['slug']}"
-    if rel == "washington-state-sales-tax.html":
+    if rel == "washington-state-sales-tax-notice.html":
         return f"{SITE}/washington-state-sales-tax-notice"
 
     return f"{SITE}/{rel.replace('.html', '')}"
@@ -215,7 +215,7 @@ def page_sitemap_meta(rel: str) -> tuple[str, str]:
         return "monthly", "0.8"
     if rel.startswith("about/"):
         return "monthly", "0.6"
-    if rel in {"privacy-policy.html", "washington-state-sales-tax.html"}:
+    if rel in {"privacy-policy.html", "washington-state-sales-tax-notice.html"}:
         return "yearly", "0.3"
     if rel == "sitemap.html":
         return "monthly", "0.2"

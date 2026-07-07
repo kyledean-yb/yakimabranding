@@ -14,13 +14,6 @@ TEAM_SCHEDULE = [
         "photo": "jacob-headshot.webp",
     },
     {
-        "name": "Kristin Sparling",
-        "short": "Kristin",
-        "slug": "kristin",
-        "calendly": "https://calendly.com/kristin-sparling/connect",
-        "photo": "kristin-headshot.webp",
-    },
-    {
         "name": "Kevin Dean",
         "short": "Kevin",
         "slug": "kevin",

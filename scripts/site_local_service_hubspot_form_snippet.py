@@ -23,7 +23,7 @@ def local_hubspot_form_html(
     return f"""          <div class="yb-hs-form" data-source="{html.escape(source)}" data-redirect="{html.escape(redirect)}">
             <div class="hs-form-frame" data-region="{HS_REGION}" data-form-id="{LOCAL_HS_FORM_ID}" data-portal-id="{HS_PORTAL_ID}"></div>
           </div>
-          <p class="yb-hs-form-footnote">We respond within 4 business hours. Your information is never shared.</p>"""
+          <p class="yb-hs-form-footnote">We respond by the next business day. Your information is never shared.</p>"""
 
 
 def hubspot_script_tags(prefix: str) -> str:

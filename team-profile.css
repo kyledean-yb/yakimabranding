@@ -696,18 +696,6 @@
   background: var(--yb-coral);
 }
 
-.team-kristin .team-hero {
-  background: linear-gradient(160deg, #22314f 0%, #159468 100%);
-}
-
-.team-kristin .team-hero-eyebrow {
-  color: #c8f5e4;
-}
-
-.team-kristin .team-step-num {
-  background: #159468;
-}
-
 .team-sophie .team-hero {
   background: linear-gradient(135deg, #7b5be6 0%, #3f6fd6 100%);
 }

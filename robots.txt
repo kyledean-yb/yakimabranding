@@ -1,3 +1,5 @@
-# Staging site — block all crawlers until launch
+# Allow all crawlers — production
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://yakimabranding.com/sitemap.xml

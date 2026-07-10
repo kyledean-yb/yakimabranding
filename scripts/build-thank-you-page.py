@@ -12,7 +12,7 @@ from reviews_section_snippet import reviews_section_html
 from schema_markup import seo_head_html
 from site_accessibe_snippet import ACCESSIBE_BODY_SCRIPT
 from site_tracking_snippet import ATTRIBUTER_FOOTER_BLOCK, GTM_BODY_NOSCRIPT_BLOCK, TRACKING_HEAD_BLOCK
-from site_staging_seo_snippet import STAGING_ROBOTS_META
+from site_staging_seo_snippet import THANK_YOU_ROBOTS_META
 from site_footer_snippet import site_footer_html
 from site_nav_snippet import site_header_html
 from site_schedule_grid_snippet import thank_you_calendly_section_html
@@ -97,7 +97,7 @@ def build_thank_you_html(variant: dict) -> str:
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-{STAGING_ROBOTS_META}
+{THANK_YOU_ROBOTS_META}
 <link rel="icon" href="{prefix}favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="{prefix}favicon.png">
 <title>{variant["title"]}</title>

@@ -375,6 +375,8 @@ def page_shell(prefix, title, desc, body, active_blog=False, extra_head="", extr
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="{prefix}favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="{prefix}favicon.png">
 {STAGING_ROBOTS_META}
 <title>{html.escape(title)}</title>
 <meta name="description" content="{html.escape(desc)}">
@@ -604,6 +606,8 @@ def build():
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="favicon.png">
 <meta http-equiv="refresh" content="0; url=insights.html">
 <link rel="canonical" href="insights.html">
 <title>Redirecting to Insights — YB Marketing</title>

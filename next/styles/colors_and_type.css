@@ -1,0 +1,203 @@
+/* ============================================================
+   YB MARKETING — Design System Foundations
+   Colors + Typography tokens (base + semantic)
+   Brand: cornflower blue + navy, extended into a bright,
+   colorful, engaging accent system.
+   ============================================================ */
+
+/* Fonts loaded from Google Fonts CDN (no original font files were
+   provided — see README "Font substitution" note).
+   Display: Sora · Body: Plus Jakarta Sans */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+:root {
+  /* ---------- BRAND CORE ---------- */
+  --yb-blue:        #3F6FD6;  /* primary — brightened brand cornflower */
+  --yb-blue-600:    #2F5AC0;  /* hover / pressed */
+  --yb-blue-700:    #244AA3;
+  --yb-blue-300:    #8FAEF0;  /* tints */
+  --yb-blue-100:    #E5ECFB;
+  --yb-cornflower:  #5472AB;  /* exact logo blue */
+  --yb-navy:        #1B2A4A;  /* ink / dark sections — from logo B */
+  --yb-navy-800:    #22314F;  /* exact logo navy */
+  --yb-navy-700:    #2C3E63;
+
+  /* ---------- BRIGHT ACCENTS (service spectrum) ---------- */
+  --yb-cyan:    #2BC4F0;  /* SEO / search */
+  --yb-violet:  #7B5BE6;  /* branding */
+  --yb-coral:   #FF6B57;  /* PPC / Google Ads */
+  --yb-amber:   #FFB23E;  /* social media */
+  --yb-mint:    #25C28A;  /* web design */
+  --yb-pink:    #FF5C9D;  /* content / email */
+
+  /* tinted accent backgrounds (10–14% wash) */
+  --wash-blue:   #EDF2FD;
+  --wash-cyan:   #E4F7FE;
+  --wash-violet: #F0ECFD;
+  --wash-coral:  #FFEDE9;
+  --wash-amber:  #FFF4E2;
+  --wash-mint:   #E3F8F1;
+  --wash-pink:   #FFEAF2;
+
+  /* ---------- NEUTRALS ---------- */
+  --ink:      #16203A;  /* fg1 — headings on light */
+  --fg1:      #16203A;
+  --fg2:      #4A5673;  /* secondary text */
+  --fg3:      #7C879E;  /* tertiary / captions */
+  --fg-on-dark:    #FFFFFF;
+  --fg2-on-dark:   #B8C4DE;
+
+  --bg:       #FFFFFF;  /* page */
+  --bg-soft:  #F6F8FC;  /* soft section */
+  --bg-mute:  #EEF2F9;  /* card mute */
+  --surface:  #FFFFFF;  /* cards */
+  --line:     #E3E9F2;  /* hairline borders */
+  --line-strong: #CFD8E8;
+
+  /* ---------- GRADIENTS ---------- */
+  --grad-brand:  linear-gradient(135deg, #3F6FD6 0%, #2BC4F0 100%);
+  --grad-sunset: linear-gradient(135deg, #FF6B57 0%, #FFB23E 100%);
+  --grad-violet: linear-gradient(135deg, #7B5BE6 0%, #3F6FD6 100%);
+  --grad-navy:   linear-gradient(165deg, #22314F 0%, #16203A 60%, #1B2A4A 100%);
+  --grad-mesh:   radial-gradient(circle at 18% 20%, #3F6FD633 0, transparent 42%),
+                 radial-gradient(circle at 82% 12%, #2BC4F033 0, transparent 38%),
+                 radial-gradient(circle at 70% 88%, #7B5BE628 0, transparent 45%);
+
+  /* ---------- TYPE FAMILIES ---------- */
+  --font-display: 'Sora', system-ui, -apple-system, sans-serif;
+  --font-body:    'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  /* ---------- TYPE SCALE (fluid) ---------- */
+  --fs-display: clamp(2.75rem, 5.5vw, 4.75rem);  /* hero */
+  --fs-h1:      clamp(2.25rem, 4vw, 3.5rem);
+  --fs-h2:      clamp(1.75rem, 2.6vw, 2.5rem);
+  --fs-h3:      clamp(1.3rem, 1.7vw, 1.6rem);
+  --fs-h4:      1.15rem;
+  --fs-lead:    clamp(1.1rem, 1.4vw, 1.3rem);
+  --fs-body:    1rem;
+  --fs-sm:      0.875rem;
+  --fs-xs:      0.75rem;
+  --fs-eyebrow: 0.8125rem;
+
+  /* ---------- WEIGHTS / LEADING / TRACKING ---------- */
+  --w-reg: 400; --w-med: 500; --w-semi: 600; --w-bold: 700; --w-x: 800;
+  --lh-tight: 1.05;
+  --lh-snug:  1.18;
+  --lh-body:  1.65;
+  --tr-tight: -0.02em;
+  --tr-eyebrow: 0.14em;
+
+  /* ---------- RADII ---------- */
+  --r-xs: 6px;
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 22px;
+  --r-xl: 32px;
+  --r-pill: 999px;
+
+  /* ---------- SHADOWS / ELEVATION ---------- */
+  --sh-xs: 0 1px 2px rgba(22,32,58,.06);
+  --sh-sm: 0 2px 8px rgba(22,32,58,.07);
+  --sh-md: 0 10px 28px -8px rgba(22,32,58,.16);
+  --sh-lg: 0 24px 56px -16px rgba(22,32,58,.22);
+  --sh-blue: 0 14px 30px -10px rgba(63,111,214,.45);
+  --sh-coral: 0 14px 30px -10px rgba(255,107,87,.42);
+
+  /* ---------- SPACING (4px base) ---------- */
+  --s-1: 4px;  --s-2: 8px;  --s-3: 12px; --s-4: 16px;
+  --s-5: 24px; --s-6: 32px; --s-7: 48px; --s-8: 64px;
+  --s-9: 96px; --s-10: 128px;
+
+  /* ---------- MOTION ---------- */
+  --ease: cubic-bezier(.4, 0, .2, 1);
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --ease-bounce: cubic-bezier(.34, 1.56, .64, 1);
+  --dur-fast: 140ms;
+  --dur: 240ms;
+  --dur-slow: 480ms;
+
+  --container: 1200px;
+}
+
+/* ============================================================
+   SEMANTIC ELEMENT STYLES — apply via classes or scope to .yb
+   ============================================================ */
+
+.yb-display {
+  font-family: var(--font-display);
+  font-weight: var(--w-x);
+  font-size: var(--fs-display);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tr-tight);
+  color: var(--ink);
+}
+
+h1, .yb-h1 {
+  font-family: var(--font-display);
+  font-weight: var(--w-bold);
+  font-size: var(--fs-h1);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tr-tight);
+  color: var(--ink);
+}
+
+h2, .yb-h2 {
+  font-family: var(--font-display);
+  font-weight: var(--w-bold);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tr-tight);
+  color: var(--ink);
+}
+
+h3, .yb-h3 {
+  font-family: var(--font-display);
+  font-weight: var(--w-semi);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-snug);
+  color: var(--ink);
+}
+
+h4, .yb-h4 {
+  font-family: var(--font-body);
+  font-weight: var(--w-bold);
+  font-size: var(--fs-h4);
+  line-height: 1.3;
+  color: var(--ink);
+}
+
+.yb-lead {
+  font-family: var(--font-body);
+  font-weight: var(--w-reg);
+  font-size: var(--fs-lead);
+  line-height: 1.5;
+  color: var(--fg2);
+}
+
+p, .yb-body {
+  font-family: var(--font-body);
+  font-weight: var(--w-reg);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--fg2);
+}
+
+.yb-small { font-size: var(--fs-sm); line-height: 1.55; color: var(--fg2); }
+.yb-caption { font-size: var(--fs-xs); color: var(--fg3); }
+
+.yb-eyebrow {
+  font-family: var(--font-body);
+  font-weight: var(--w-bold);
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tr-eyebrow);
+  text-transform: uppercase;
+  color: var(--yb-blue);
+}
+
+/* gradient text helper */
+.yb-grad-text {
+  background: var(--grad-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

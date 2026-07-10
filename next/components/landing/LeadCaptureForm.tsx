@@ -1,0 +1,75 @@
+"use client";
+
+import { Button } from "@/components/ui/Button";
+
+type LeadCaptureFormProps = {
+  id?: string;
+  ctaLabel: string;
+  compact?: boolean;
+  trustLine?: string;
+};
+
+export function LeadCaptureForm({
+  id,
+  ctaLabel,
+  compact = false,
+  trustLine,
+}: LeadCaptureFormProps) {
+  if (compact) {
+    return (
+      <form id={id} className="landing-form-compact" onSubmit={(e) => e.preventDefault()}>
+        <label className="landing-form-compact-field">
+          <span className="text-xs font-semibold uppercase tracking-wide text-fg3">Name</span>
+          <input className="yb-input landing-form-compact-input" type="text" name="name" placeholder="Your name" autoComplete="name" />
+        </label>
+        <label className="landing-form-compact-field">
+          <span className="text-xs font-semibold uppercase tracking-wide text-fg3">Email</span>
+          <input className="yb-input landing-form-compact-input" type="email" name="email" placeholder="you@company.com" autoComplete="email" />
+        </label>
+        <label className="landing-form-compact-field">
+          <span className="text-xs font-semibold uppercase tracking-wide text-fg3">Phone</span>
+          <input className="yb-input landing-form-compact-input" type="tel" name="phone" placeholder="(555) 555-5555" autoComplete="tel" />
+        </label>
+        <label className="landing-form-compact-field">
+          <span className="text-xs font-semibold uppercase tracking-wide text-fg3">Company</span>
+          <input className="yb-input landing-form-compact-input" type="text" name="company" placeholder="Company name" autoComplete="organization" />
+        </label>
+        <div className="landing-form-compact-submit">
+          <span className="text-xs font-semibold uppercase tracking-wide text-fg3 opacity-0" aria-hidden="true">
+            Submit
+          </span>
+          <Button type="submit" className="btn-form-inline w-full">
+            {ctaLabel}
+          </Button>
+          {trustLine ? <p className="landing-form-compact-trust">{trustLine}</p> : null}
+        </div>
+      </form>
+    );
+  }
+
+  return (
+    <form id={id} className="grid gap-3 md:grid-cols-2" onSubmit={(e) => e.preventDefault()}>
+      <label className="grid gap-1.5">
+        <span className="text-xs font-semibold uppercase tracking-wide text-fg3">Name</span>
+        <input className="yb-input" type="text" name="name" placeholder="Your name" autoComplete="name" />
+      </label>
+      <label className="grid gap-1.5">
+        <span className="text-xs font-semibold uppercase tracking-wide text-fg3">Email</span>
+        <input className="yb-input" type="email" name="email" placeholder="you@company.com" autoComplete="email" />
+      </label>
+      <label className="grid gap-1.5">
+        <span className="text-xs font-semibold uppercase tracking-wide text-fg3">Phone</span>
+        <input className="yb-input" type="tel" name="phone" placeholder="(555) 555-5555" autoComplete="tel" />
+      </label>
+      <label className="grid gap-1.5">
+        <span className="text-xs font-semibold uppercase tracking-wide text-fg3">Company</span>
+        <input className="yb-input" type="text" name="company" placeholder="Company name" autoComplete="organization" />
+      </label>
+      <div className="md:col-span-2">
+        <Button type="submit" className="w-full">
+          {ctaLabel}
+        </Button>
+      </div>
+    </form>
+  );
+}

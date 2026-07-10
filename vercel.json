@@ -1,4 +1,8 @@
 {
+  "buildCommand": "bash scripts/build-landing-page.sh",
+  "installCommand": "echo \"Dependencies installed by build script\"",
+  "outputDirectory": ".",
+  "framework": null,
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [

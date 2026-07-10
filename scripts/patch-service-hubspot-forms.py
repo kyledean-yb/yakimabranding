@@ -37,7 +37,7 @@ CONTACT_CARD_FORM_RE = re.compile(
 
 
 def inject_hubspot_scripts(text: str, prefix: str) -> str:
-    hubspot_js = f'<script src="{prefix}js/hubspot-form.js"></script>'
+    hubspot_js = f'<script src="{prefix}js/hubspot-form.js" defer></script>'
     embed_js = f'<script src="{HS_EMBED_SCRIPT}" defer></script>'
     if hubspot_js in text and embed_js in text:
         return text

@@ -51,7 +51,7 @@ def footer_html():
 def shell(title, desc, theme, body, hubspot=False):
     if hubspot:
         form_scripts = (
-            f'<script src="{PREFIX}js/hubspot-form.js"></script>\n'
+            f'<script src="{PREFIX}js/hubspot-form.js" defer></script>\n'
             f'<script src="{HS_EMBED_SCRIPT}" defer></script>'
         )
     else:

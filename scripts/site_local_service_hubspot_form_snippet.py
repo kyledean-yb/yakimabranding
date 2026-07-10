@@ -28,6 +28,6 @@ def local_hubspot_form_html(
 
 def hubspot_script_tags(prefix: str) -> str:
     return (
-        f'<script src="{prefix}js/hubspot-form.js"></script>\n'
+        f'<script src="{prefix}js/hubspot-form.js" defer></script>\n'
         f'<script src="{HS_EMBED_SCRIPT}" defer></script>'
     )

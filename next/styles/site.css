@@ -1237,11 +1237,12 @@ a {
   }
 }
 
-/* ─── Chat widget (global, bottom-left) ───────────────────────── */
+/* ─── Chat widget (global, bottom-left — above AccessiBe trigger) ─ */
 .yb-chat-widget {
   position: fixed;
   left: 24px;
-  bottom: 24px;
+  /* AccessiBe sits at bottom-left (~20px offset, ~50–70px trigger). Keep chat clear above it. */
+  bottom: 100px;
   z-index: 980;
   font-family: var(--font-body, "Plus Jakarta Sans", sans-serif);
 }
@@ -1302,7 +1303,7 @@ a {
   height: auto;
   position: fixed;
   left: 24px;
-  bottom: 24px;
+  bottom: 100px;
   z-index: 981;
   opacity: 1;
   transform: translateY(0);
@@ -1632,14 +1633,15 @@ a {
 }
 
 @media (max-width: 640px) {
+  /* On mobile AccessiBe moves to bottom-right, so chat can sit lower-left again. */
   .yb-chat-widget {
     left: 12px;
-    bottom: 12px;
+    bottom: 16px;
   }
 
   .yb-chat-widget__panel.is-open {
     left: 12px;
-    bottom: 12px;
+    bottom: 16px;
     width: calc(100vw - 24px);
   }
 

@@ -51,12 +51,19 @@ export type LandingPageConfig = {
   radiusMiles: number;
   mapImage: string;
   mapAlt: string;
+  localHeadline: string;
   topBar: {
     offerText: string;
     marketLabel: string;
     trustLine: string;
   };
   ctaLabel: string;
+  onboardingCtaLabel: string;
+  needMoreInfoLabel: string;
+  serviceSelectHeader: string;
+  customPricingMessage: string;
+  packagePricingLabel: string;
+  packagePrice: string;
   pain: LandingSectionIntro & { points: LandingPainPoint[] };
   benefitsSection: LandingSectionIntro;
   benefits: LandingBenefit[];
@@ -66,6 +73,13 @@ export type LandingPageConfig = {
   serviceCategories: ServiceCategory[];
   localProof: LandingLocalProof;
   finalCta: LandingSectionIntro;
+  visualHint: string;
+};
+
+const customOption = {
+  id: "custom",
+  label: "I want Custom!",
+  description: "Tell us what you need — we'll tailor a plan and pricing around your HVAC business.",
 };
 
 export const phoenixConfig: LandingPageConfig = {
@@ -73,33 +87,40 @@ export const phoenixConfig: LandingPageConfig = {
   stateName: "AZ",
   radiusMiles: 20,
   mapImage: "/placeholders/map-phoenix-az-radius-20mi.jpg",
-  mapAlt: "Phoenix, AZ 20-mile service radius map — full-service marketing coverage area",
+  mapAlt: "Greater Phoenix / Scottsdale HVAC service area map",
+  localHeadline: "Serving HVAC Companies in the Greater Phoenix / Scottsdale area!",
   topBar: {
-    offerText: "Get Your Free Marketing Plan",
-    marketLabel: "Serving Phoenix, AZ",
-    trustLine: "509-901-9735 · Local Team",
+    offerText: "Get More Information",
+    marketLabel: "Serving Phoenix & Scottsdale, AZ",
+    trustLine: "509-901-9735 · All fields required",
   },
-  ctaLabel: "Get My Free Marketing Plan",
+  ctaLabel: "Get More Information",
+  onboardingCtaLabel: "Start Onboarding with YB",
+  needMoreInfoLabel: "Need More info?",
+  serviceSelectHeader: "Select Your Service in each Row",
+  customPricingMessage: "Discover Your Solution and Pricing",
+  packagePricingLabel: "HVAC Package Pricing",
+  packagePrice: "$3,500 / month",
   pain: {
     eyebrow: "THE PROBLEM",
-    headline: "Your Marketing Shouldn't Feel This Scattered",
+    headline: "More Leads for HVAC Companies, Spend Less Time!",
     subheadline:
-      "Three vendors, three messages, one confused customer. If your branding, ads, and content don't feel like they're coming from the same company, they probably aren't.",
+      "Comprehensive marketing services and support for HVAC companies with > $1M in Sales and looking to grow. We can do it all for you.",
     points: [
       {
-        title: "Nobody's Actually in Charge",
+        title: "Deal with One Agency",
         description:
-          "Different agencies handling ads, SEO, and social — each optimizing for their own piece, nobody owning the whole picture.",
+          "Stop juggling vendors for ads, SEO, and social. One HVAC-focused team owns the full plan — so nothing falls through the cracks.",
       },
       {
-        title: "Spend Without a Story",
+        title: "Consistent Branding and Communication",
         description:
-          "Money is going out the door across channels, but there's no clear line from ad spend to actual leads.",
+          "Your trucks, ads, website, and follow-up emails should sound like the same company. We keep every touchpoint on-message.",
       },
       {
-        title: "You're the Marketing Department",
+        title: "Single Dashboard Management",
         description:
-          "Between running the business and chasing vendors for updates, marketing becomes the thing that gets squeezed to the bottom of the list.",
+          "See leads, spend, and channel performance in one place — not scattered reports from three different agencies.",
       },
     ],
   },
@@ -137,11 +158,12 @@ export const phoenixConfig: LandingPageConfig = {
   ],
   solutionSection: {
     eyebrow: "THE SOLUTION",
-    headline: "Build Your Full-Service Marketing Package",
-    subheadline: "Pick the channels you need. One accountable team runs the whole plan.",
+    headline: "Full Service HVAC Marketing Solutions With Options",
+    subheadline:
+      "If you are managing individual parts of your >$1M HVAC Marketing services and happy with the results, our Standard Plan can be customized to suit your needs.",
   },
   pricingPreviewIntro:
-    "Pricing is based on what you're currently doing — not a one-size-fits-all rate.",
+    "One clear package for HVAC companies ready to grow — or choose Custom on any row for a tailored quote.",
   serviceCategories: [
     {
       id: "search",
@@ -160,6 +182,7 @@ export const phoenixConfig: LandingPageConfig = {
           description:
             "AI-driven search optimization — positioning your business for how customers are starting to search now.",
         },
+        customOption,
       ],
     },
     {
@@ -179,6 +202,7 @@ export const phoenixConfig: LandingPageConfig = {
           description:
             "Hyper-local targeting that reaches customers the moment they're near your service area or a competitor's location.",
         },
+        customOption,
       ],
     },
     {
@@ -197,44 +221,34 @@ export const phoenixConfig: LandingPageConfig = {
           description:
             "Ongoing content, posting, and email nurture that keeps your brand top of mind between purchases.",
         },
+        customOption,
       ],
     },
   ],
   pricingOptions: [
     {
-      id: "starter",
-      label: "Tier 1 — Getting Started",
-      description: "For businesses doing some marketing already but lacking cohesion.",
-      pricePlaceholder: "[$X,XXX/mo]",
-    },
-    {
-      id: "growth",
-      label: "Tier 2 — Growth Package",
-      description: "For businesses ready to consolidate vendors into one plan.",
-      pricePlaceholder: "[$X,XXX/mo]",
-    },
-    {
-      id: "scale",
-      label: "Tier 3 — Full Scale",
-      description: "For businesses investing heavily across multiple channels.",
-      pricePlaceholder: "[$X,XXX/mo]",
+      id: "hvac-package",
+      label: "HVAC Package Pricing",
+      description: "Full-service marketing package for growing HVAC companies.",
+      pricePlaceholder: "$3,500 / month",
     },
   ],
   localProof: {
     eyebrow: "LOCAL PROOF",
-    body: "We know the Phoenix market — the competitive landscape, the local search behavior, and what actually moves the needle for businesses in this area.",
+    body: "We know the Greater Phoenix / Scottsdale HVAC market — the competitive landscape, seasonal demand, and what actually moves the needle for companies in this area.",
     proofPoints: [
       "Local market data folded into every strategy, not a generic national playbook.",
-      "Direct experience managing full-service marketing for Phoenix-area businesses.",
-      "One team covering your full 20-mile service radius — no city-by-city handoffs.",
+      "Direct experience managing full-service marketing for Phoenix-area service businesses.",
+      "One team covering Greater Phoenix / Scottsdale — no city-by-city handoffs.",
     ],
   },
   finalCta: {
     eyebrow: "GET STARTED",
-    headline: "Get Your Free Marketing Plan",
+    headline: "Get More Information!",
     subheadline:
-      "Tell us about your business and we'll put together a marketing plan built for Phoenix — one team, one strategy, no scattered vendors.",
+      "Tell us about your HVAC business and we'll put together a marketing plan built for Greater Phoenix / Scottsdale — one team, one strategy, more leads.",
   },
+  visualHint: "Mouse over the diagram to see what can happen!",
 };
 
 export const triCitiesConfig: LandingPageConfig = {
@@ -242,23 +256,24 @@ export const triCitiesConfig: LandingPageConfig = {
   cityName: "Tri-Cities",
   stateName: "WA",
   mapImage: "/placeholders/map-tri-cities-wa-radius-20mi.jpg",
-  mapAlt: "Tri-Cities, WA 20-mile service radius map — full-service marketing coverage area",
+  mapAlt: "Tri-Cities, WA HVAC service area map",
+  localHeadline: "Serving HVAC Companies in the Tri-Cities area!",
   topBar: {
     ...phoenixConfig.topBar,
     marketLabel: "Serving Tri-Cities, WA",
   },
   localProof: {
     eyebrow: "LOCAL PROOF",
-    body: `We know the Tri-Cities market — the competitive landscape, the local search behavior, and what actually moves the needle for businesses in this area.`,
+    body: "We know the Tri-Cities HVAC market — the competitive landscape, seasonal demand, and what actually moves the needle for companies in this area.",
     proofPoints: [
       "Local market data folded into every strategy, not a generic national playbook.",
-      "Direct experience managing full-service marketing for Tri-Cities-area businesses.",
-      "One team covering your full 20-mile service radius — no city-by-city handoffs.",
+      "Direct experience managing full-service marketing for Tri-Cities-area service businesses.",
+      "One team covering the Tri-Cities — no city-by-city handoffs.",
     ],
   },
   finalCta: {
     ...phoenixConfig.finalCta,
     subheadline:
-      "Tell us about your business and we'll put together a marketing plan built for the Tri-Cities — one team, one strategy, no scattered vendors.",
+      "Tell us about your HVAC business and we'll put together a marketing plan built for the Tri-Cities — one team, one strategy, more leads.",
   },
 };

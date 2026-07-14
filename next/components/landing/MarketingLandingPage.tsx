@@ -30,18 +30,10 @@ export function MarketingLandingPage({ config }: MarketingLandingPageProps) {
     ),
   );
 
-  const activePricingId = useMemo(() => {
-    const values = Object.values(selections).join("-");
-    if (values.includes("scale") || values.includes("google-ads")) {
-      return config.pricingOptions[2]?.id ?? config.pricingOptions[0].id;
-    }
-    if (values.includes("social") || values.includes("social-email")) {
-      return config.pricingOptions[1]?.id ?? config.pricingOptions[0].id;
-    }
-    return config.pricingOptions[0].id;
-  }, [config.pricingOptions, selections]);
-
-  const localHeadline = `Serving ${config.cityName} & ${config.radiusMiles}-Mile Radius`;
+  const hasCustomSelection = useMemo(
+    () => Object.values(selections).some((value) => value === "custom"),
+    [selections],
+  );
 
   return (
     <>
@@ -67,11 +59,14 @@ export function MarketingLandingPage({ config }: MarketingLandingPageProps) {
                 <Eyebrow className="mb-4">{config.pain.eyebrow}</Eyebrow>
                 <h1 className="yb-display mb-5 text-[clamp(2rem,4vw,3.25rem)]">{config.pain.headline}</h1>
                 <p className="yb-lead hero-lead mb-8">{config.pain.subheadline}</p>
-                <Button href="#solution" size="lg">
+                <Button href="#top-cta" size="lg">
                   {config.ctaLabel}
                 </Button>
               </div>
-              <HeroConvergeVisual />
+              <div className="hero-visual-col">
+                <HeroConvergeVisual />
+                <p className="hero-visual-hint">{config.visualHint}</p>
+              </div>
             </div>
 
             <div className="hero-pain-grid">
@@ -107,13 +102,14 @@ export function MarketingLandingPage({ config }: MarketingLandingPageProps) {
 
             <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
               <div className="grid gap-5">
+                <p className="service-select-header">{config.serviceSelectHeader}</p>
                 {config.serviceCategories.map((category) => (
                   <div key={category.id} className="yb-card">
                     <h3 className="mb-4 flex items-center gap-2.5 font-display text-lg font-bold text-ink">
                       <ServiceCategoryIcon id={category.icon} />
                       {category.label}
                     </h3>
-                    <div className="grid gap-3 sm:grid-cols-2">
+                    <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
                       {category.options.map((option) => {
                         const active = selections[category.id] === option.id;
                         return (
@@ -145,30 +141,36 @@ export function MarketingLandingPage({ config }: MarketingLandingPageProps) {
               </div>
 
               <aside className="flex flex-col gap-4">
-                <PackageSummaryCard selections={selections} />
+                {!hasCustomSelection ? <PackageSummaryCard selections={selections} /> : null}
                 <div className="yb-card h-fit">
-                <h3 className="mb-2 font-display text-lg font-bold text-ink">Pricing Preview</h3>
-                <p className="mb-5 text-sm text-fg2">{config.pricingPreviewIntro}</p>
-                <div className="grid gap-3">
-                  {config.pricingOptions.map((tier) => {
-                    const active = tier.id === activePricingId;
-                    return (
-                      <div
-                        key={tier.id}
-                        className={`rounded-md border p-4 ${active ? "border-yb-blue bg-wash-blue" : "border-line bg-white"}`}
-                      >
-                        <div className="mb-1 flex items-center justify-between gap-3">
-                          <h4 className="font-display text-sm font-bold text-ink">{tier.label}</h4>
-                          <span className="text-sm font-bold text-yb-blue">{tier.pricePlaceholder}</span>
-                        </div>
-                        <p className="text-xs leading-relaxed text-fg2">{tier.description}</p>
+                  <h3 className="mb-2 font-display text-lg font-bold text-ink">Pricing Preview</h3>
+                  <p className="mb-5 text-sm text-fg2">{config.pricingPreviewIntro}</p>
+
+                  {hasCustomSelection ? (
+                    <div className="rounded-md border border-yb-blue bg-wash-blue p-5 text-center">
+                      <p className="font-display text-lg font-bold text-ink">{config.customPricingMessage}</p>
+                      <p className="mt-2 text-sm text-fg2">
+                        You selected a custom option — we&apos;ll build a tailored HVAC plan and quote for you.
+                      </p>
+                    </div>
+                  ) : (
+                    <div className="rounded-md border border-yb-blue bg-wash-blue p-5">
+                      <div className="mb-1 flex flex-wrap items-center justify-between gap-3">
+                        <h4 className="font-display text-base font-bold text-ink">{config.packagePricingLabel}</h4>
+                        <span className="text-lg font-bold text-yb-blue">{config.packagePrice}</span>
                       </div>
-                    );
-                  })}
-                </div>
-                <Button href="#final-cta" className="mt-5 w-full justify-center">
-                  {config.ctaLabel}
-                </Button>
+                      <p className="text-xs leading-relaxed text-fg2">
+                        {config.pricingOptions[0]?.description}
+                      </p>
+                    </div>
+                  )}
+
+                  <Button href="#final-cta" className="mt-5 w-full justify-center">
+                    {config.onboardingCtaLabel}
+                  </Button>
+                  <a href="#top-cta" className="need-more-info-link">
+                    {config.needMoreInfoLabel}
+                  </a>
                 </div>
               </aside>
             </div>
@@ -180,7 +182,7 @@ export function MarketingLandingPage({ config }: MarketingLandingPageProps) {
             <div className="grid items-center gap-8 lg:grid-cols-2">
               <div>
                 <Eyebrow className="mb-3">{config.localProof.eyebrow}</Eyebrow>
-                <h2 className="yb-h2 mb-4">{localHeadline}</h2>
+                <h2 className="yb-h2 mb-4">{config.localHeadline}</h2>
                 <p className="yb-lead mb-4">{config.localProof.body}</p>
                 <ul className="grid gap-2 text-sm text-fg2">
                   {config.localProof.proofPoints.map((point) => (
@@ -200,12 +202,8 @@ export function MarketingLandingPage({ config }: MarketingLandingPageProps) {
                   }}
                 />
                 <div className="landing-map-fallback hidden" role="img" aria-label={config.mapAlt}>
-                  <span>
-                    Map — {config.cityName}, {config.radiusMiles} mi radius
-                  </span>
-                  <p className="mt-2 text-xs font-normal text-fg3">
-                    Add map asset: {config.mapImage}
-                  </p>
+                  <span>Static map — Greater Phoenix / Scottsdale</span>
+                  <p className="mt-2 text-xs font-normal text-fg3">Add map asset: {config.mapImage}</p>
                 </div>
               </div>
             </div>

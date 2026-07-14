@@ -9,9 +9,9 @@ import { phoenixConfig } from "@/lib/landing-config";
  * `triCitiesConfig` or a new config object in lib/landing-config.ts.
  */
 export const metadata: Metadata = {
-  title: "YB Marketing | 509-901-9735",
+  title: "HVAC Marketing for Phoenix & Scottsdale | YB Marketing | 509-901-9735",
   description:
-    "Full-spectrum branding and digital marketing for growing businesses. Call 509-901-9735 to get started.",
+    "More leads for HVAC companies with >$1M in sales. Full-service marketing for Greater Phoenix / Scottsdale — one agency, one plan. Call 509-901-9735.",
 };
 
 export default function LandingPage() {

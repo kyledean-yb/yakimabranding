@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Sora } from "next/font/google";
+import { WebsightsScript } from "@/components/tracking/WebsightsScript";
 import "./globals.css";
 
 const sora = Sora({
@@ -34,6 +35,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${sora.variable} ${jakarta.variable}`}>
+      <head>
+        <WebsightsScript />
+      </head>
       <body>{children}</body>
     </html>
   );

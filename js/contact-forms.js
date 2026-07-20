@@ -25,7 +25,7 @@
     if (parts[0] === 'services') {
       return '/services/thank-you';
     }
-    if (parts[0] === 'landing-page') {
+    if (parts[0] === 'phx-hvac' || parts[0] === 'landing-page') {
       return '/thank-you-landing-page';
     }
     return '/thank-you';

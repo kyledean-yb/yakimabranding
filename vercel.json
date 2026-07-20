@@ -29,6 +29,8 @@
     { "source": "/blog/posts/:slug", "destination": "/insights/:slug", "permanent": true },
     { "source": "/posts/:slug.html", "destination": "/insights/:slug", "permanent": true },
     { "source": "/posts/:slug", "destination": "/insights/:slug", "permanent": true },
+    { "source": "/landing-page", "destination": "/phx-hvac", "permanent": true },
+    { "source": "/landing-page/", "destination": "/phx-hvac", "permanent": true },
     { "source": "/:path*.html", "destination": "/:path*", "permanent": true }
   ],
   "rewrites": [

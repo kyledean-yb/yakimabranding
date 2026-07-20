@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
-# Build the Next.js landing page as static HTML and merge it into the root
+# Build the Next.js HVAC landing page as static HTML and merge it into the root
 # static site. Safe to run locally or as the Vercel build command.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+SLUG="phx-hvac"
 
 echo "==> Installing Next.js dependencies"
 cd "$ROOT/next"
@@ -23,20 +24,20 @@ fi
 
 echo "==> Copying landing page into static site"
 LANDING_SRC=""
-if [ -f out/landing-page/index.html ]; then
-  LANDING_SRC="out/landing-page"
-elif [ -f out/landing-page.html ]; then
-  mkdir -p out/landing-page
-  cp out/landing-page.html out/landing-page/index.html
-  LANDING_SRC="out/landing-page"
+if [ -f "out/${SLUG}/index.html" ]; then
+  LANDING_SRC="out/${SLUG}"
+elif [ -f "out/${SLUG}.html" ]; then
+  mkdir -p "out/${SLUG}"
+  cp "out/${SLUG}.html" "out/${SLUG}/index.html"
+  LANDING_SRC="out/${SLUG}"
 else
-  echo "error: landing page export not found in next/out" >&2
+  echo "error: landing page export not found in next/out/${SLUG}" >&2
   exit 1
 fi
 
-rm -rf "$ROOT/landing-page"
-mkdir -p "$ROOT/landing-page"
-cp -R "$LANDING_SRC/." "$ROOT/landing-page/"
+rm -rf "$ROOT/${SLUG}" "$ROOT/landing-page"
+mkdir -p "$ROOT/${SLUG}"
+cp -R "$LANDING_SRC/." "$ROOT/${SLUG}/"
 
 echo "==> Copying Next.js assets"
 rm -rf "$ROOT/_next"
@@ -56,4 +57,4 @@ for asset in hero-orbit.js hubspot-form.js; do
   fi
 done
 
-echo "==> Landing page ready at /landing-page/"
+echo "==> Landing page ready at /${SLUG}/"

@@ -74,7 +74,7 @@
     if (parts[0] === 'locations' && parts.length >= 2) {
       return '/locations/thank-you-' + parts[1].replace(/\.html$/i, '');
     }
-    if (parts[0] === 'landing-page') {
+    if (parts[0] === 'phx-hvac' || parts[0] === 'landing-page') {
       return '/thank-you-landing-page';
     }
     return '/thank-you';

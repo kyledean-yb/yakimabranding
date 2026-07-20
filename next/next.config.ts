@@ -4,7 +4,7 @@ import path from "path";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   output: "export",
-  // Match the static site's folder-based clean URLs (e.g. /landing-page/).
+  // Match the static site's folder-based clean URLs (e.g. /phx-hvac/).
   trailingSlash: true,
   // Prevent Next from treating the static-site repo root as the app root.
   outputFileTracingRoot: path.join(__dirname),

@@ -12,7 +12,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3010/landing-page](http://localhost:3010/landing-page)
+Open [http://localhost:3010/phx-hvac](http://localhost:3010/phx-hvac)
 
 ## Build for the static site
 
@@ -22,20 +22,20 @@ From the repo root:
 bash scripts/build-landing-page.sh
 ```
 
-This exports `/landing-page` as static HTML into `landing-page/` at the repo root, plus `/_next` assets. The existing static pages (`/`, `/about`, `/contact`, etc.) are untouched.
+This exports `/phx-hvac` as static HTML into `phx-hvac/` at the repo root, plus `/_next` assets. The existing static pages (`/`, `/about`, `/contact`, etc.) are untouched.
 
 ## Vercel deployment
 
 1. Link the Vercel project to the **repository root** (Root Directory: empty or `.`), not `next/`.
 2. The root `vercel.json` runs `scripts/build-landing-page.sh` on deploy, then serves the static site.
-3. Landing page URL: `https://<your-domain>/landing-page`
+3. Landing page URL: `https://<your-domain>/phx-hvac` (`/landing-page` redirects here)
 
 ## Landing page
 
-- Route: `/landing-page`
+- Route: `/phx-hvac`
 - Component: `components/landing/MarketingLandingPage.tsx`
 - Config: `lib/landing-config.ts` (`phoenixConfig`, `triCitiesConfig`, etc.)
 
-Swap the config object passed in `app/landing-page/page.tsx` to localize for Phoenix, Tri-Cities, Chicago, or other markets.
+Swap the config object passed in `app/phx-hvac/page.tsx` to localize for Phoenix, Tri-Cities, Chicago, or other markets.
 
 Design tokens mirror the static site (`colors_and_type.css`): YB blue, Sora + Plus Jakarta Sans, radii, shadows.

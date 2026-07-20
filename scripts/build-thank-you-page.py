@@ -304,8 +304,8 @@ def all_variants() -> list[dict]:
             "title": "Thank You | HVAC Marketing | YB Marketing",
             "history_path": "thank-you-landing-page.html",
             "lead_source": "landing_page_hvac",
-            "cta_href": "landing-page/",
-            "cta_label": "Return to Landing Page",
+            "cta_href": "phx-hvac/",
+            "cta_label": "Return to Page",
         },
     ]
 

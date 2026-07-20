@@ -8,6 +8,7 @@ type ButtonProps = {
   className?: string;
   size?: "default" | "lg";
   onClick?: () => void;
+  disabled?: boolean;
 };
 
 export function Button({
@@ -17,6 +18,7 @@ export function Button({
   className = "",
   size = "default",
   onClick,
+  disabled = false,
 }: ButtonProps) {
   const styles = ["btn", "btn-grad", size === "lg" ? "btn-lg" : "", className]
     .filter(Boolean)
@@ -31,7 +33,7 @@ export function Button({
   }
 
   return (
-    <button type={type} onClick={onClick} className={styles}>
+    <button type={type} onClick={onClick} className={styles} disabled={disabled}>
       {children}
     </button>
   );

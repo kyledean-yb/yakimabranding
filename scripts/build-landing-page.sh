@@ -49,9 +49,11 @@ for asset in yb-logo-color.png yb-logo-white.png; do
   fi
 done
 
-if [ -f public/js/hero-orbit.js ]; then
-  mkdir -p "$ROOT/js"
-  cp public/js/hero-orbit.js "$ROOT/js/hero-orbit.js"
-fi
+mkdir -p "$ROOT/js"
+for asset in hero-orbit.js hubspot-form.js; do
+  if [ -f "public/js/$asset" ]; then
+    cp "public/js/$asset" "$ROOT/js/$asset"
+  fi
+done
 
 echo "==> Landing page ready at /landing-page/"

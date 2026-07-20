@@ -588,6 +588,15 @@
     display: block;
   }
 
+  .landing-map-iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+
   .landing-map-fallback {
     display: flex;
     height: 100%;
@@ -646,7 +655,8 @@
   }
 
   .sticky-lead-bar--bold .landing-form-compact-field span,
-  .sticky-lead-bar--bold .landing-form-compact-trust {
+  .sticky-lead-bar--bold .landing-form-compact-trust,
+  .sticky-lead-bar--bold .landing-hs-form-trust {
     color: rgba(255, 255, 255, 0.82);
   }
 
@@ -675,6 +685,32 @@
     box-shadow:
       0 1px 0 rgba(255, 255, 255, 0.5) inset,
       0 12px 24px -6px rgba(16, 28, 58, 0.5);
+  }
+
+  /* HubSpot header embed — keep bar compact; field layout is set in HubSpot */
+  .sticky-lead-bar .landing-hs-form {
+    width: 100%;
+  }
+
+  .sticky-lead-bar .landing-hs-form .hs-form-frame,
+  .sticky-lead-bar .landing-hs-form iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block;
+    min-height: 72px;
+  }
+
+  .landing-hs-form-trust {
+    margin: 8px 0 0;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  @media (min-width: 1024px) {
+    .landing-hs-form-trust {
+      display: none;
+    }
   }
 
   .hero-visual-col {
@@ -757,6 +793,14 @@
     font-size: 11px;
     font-weight: 600;
     color: var(--fg3);
+  }
+
+  .landing-form-compact-error {
+    margin: 0;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffe0e0;
   }
 
   @media (min-width: 1024px) {

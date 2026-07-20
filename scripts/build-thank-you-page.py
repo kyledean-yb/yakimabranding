@@ -297,6 +297,16 @@ def all_variants() -> list[dict]:
             "cta_href": "contact.html",
             "cta_label": "Return to Contact",
         },
+        {
+            "output": ROOT / "thank-you-landing-page.html",
+            "schema_path": "thank-you-landing-page.html",
+            "prefix": "",
+            "title": "Thank You | HVAC Marketing | YB Marketing",
+            "history_path": "thank-you-landing-page.html",
+            "lead_source": "landing_page_hvac",
+            "cta_href": "landing-page/",
+            "cta_label": "Return to Landing Page",
+        },
     ]
 
     for key, label, service_file in SERVICE_PAGES:

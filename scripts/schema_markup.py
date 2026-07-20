@@ -552,7 +552,12 @@ def schemas_for_rel_path(rel: str) -> tuple[list[dict], str, str]:
         )
         return global_schemas() + page_schemas, "Organization, WebSite, WebPage", notes
 
-    if rel in ("thank-you.html", "thank-you-home.html", "thank-you-contact.html") or (
+    if rel in (
+        "thank-you.html",
+        "thank-you-home.html",
+        "thank-you-contact.html",
+        "thank-you-landing-page.html",
+    ) or (
         rel.startswith("about/thank-you-") and rel.endswith(".html")
     ) or (
         rel.startswith("services/thank-you-") and rel.endswith(".html")

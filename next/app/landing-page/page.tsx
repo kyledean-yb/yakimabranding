@@ -11,7 +11,11 @@ import { phoenixConfig } from "@/lib/landing-config";
 export const metadata: Metadata = {
   title: "HVAC Marketing for Phoenix & Scottsdale | YB Marketing | 509-901-9735",
   description:
-    "More leads for HVAC companies with >$1M in sales. Full-service marketing for Greater Phoenix / Scottsdale — one agency, one plan. Call 509-901-9735.",
+    "YB Marketing delivers full-service marketing for HVAC companies with >$1M in sales across Greater Phoenix and Scottsdale — SEO, ads, social, and more under one plan. Call 509-901-9735.",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function LandingPage() {

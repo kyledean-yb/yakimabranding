@@ -51,6 +51,8 @@ export type LandingPageConfig = {
   radiusMiles: number;
   mapImage: string;
   mapAlt: string;
+  /** Google Maps embed URL (preferred over static mapImage when set). */
+  mapEmbedUrl?: string;
   localHeadline: string;
   topBar: {
     offerText: string;
@@ -87,7 +89,9 @@ export const phoenixConfig: LandingPageConfig = {
   stateName: "AZ",
   radiusMiles: 20,
   mapImage: "/placeholders/map-phoenix-az-radius-20mi.jpg",
-  mapAlt: "Greater Phoenix / Scottsdale HVAC service area map",
+  mapAlt: "Map of Scottsdale and Greater Phoenix, Arizona",
+  mapEmbedUrl:
+    "https://maps.google.com/maps?q=Scottsdale%2C%20AZ&hl=en&z=11&output=embed",
   localHeadline: "Serving HVAC Companies in the Greater Phoenix / Scottsdale area!",
   topBar: {
     offerText: "Get More Information",

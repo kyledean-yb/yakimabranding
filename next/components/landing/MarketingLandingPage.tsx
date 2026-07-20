@@ -4,7 +4,11 @@ import { useMemo, useState } from "react";
 import { BenefitsSection } from "@/components/landing/BenefitsSection";
 import { ElevateBrandCta } from "@/components/landing/ElevateBrandCta";
 import { HeroConvergeVisual } from "@/components/landing/HeroConvergeVisual";
-import { LeadCaptureForm } from "@/components/landing/LeadCaptureForm";
+import {
+  HOME_HS_FORM_ID,
+  HubSpotLeadForm,
+  LANDING_THANK_YOU_PATH,
+} from "@/components/landing/HubSpotLeadForm";
 import { PackageSummaryCard } from "@/components/landing/PackageSummaryCard";
 import { ReviewsSection } from "@/components/landing/ReviewsSection";
 import { ServiceCategoryIcon } from "@/components/landing/ServiceCategoryIcon";
@@ -191,20 +195,33 @@ export function MarketingLandingPage({ config }: MarketingLandingPageProps) {
                 </ul>
               </div>
               <div className="landing-map-wrap">
-                <img
-                  src={config.mapImage}
-                  alt={config.mapAlt}
-                  className="landing-map-img"
-                  onError={(e) => {
-                    const img = e.currentTarget;
-                    img.style.display = "none";
-                    img.nextElementSibling?.classList.remove("hidden");
-                  }}
-                />
-                <div className="landing-map-fallback hidden" role="img" aria-label={config.mapAlt}>
-                  <span>Static map — Greater Phoenix / Scottsdale</span>
-                  <p className="mt-2 text-xs font-normal text-fg3">Add map asset: {config.mapImage}</p>
-                </div>
+                {config.mapEmbedUrl ? (
+                  <iframe
+                    title={config.mapAlt}
+                    src={config.mapEmbedUrl}
+                    className="landing-map-iframe"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    allowFullScreen
+                  />
+                ) : (
+                  <>
+                    <img
+                      src={config.mapImage}
+                      alt={config.mapAlt}
+                      className="landing-map-img"
+                      onError={(e) => {
+                        const img = e.currentTarget;
+                        img.style.display = "none";
+                        img.nextElementSibling?.classList.remove("hidden");
+                      }}
+                    />
+                    <div className="landing-map-fallback hidden" role="img" aria-label={config.mapAlt}>
+                      <span>Map — {config.cityName}, {config.stateName}</span>
+                      <p className="mt-2 text-xs font-normal text-fg3">Add map asset: {config.mapImage}</p>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </Container>
@@ -223,8 +240,18 @@ export function MarketingLandingPage({ config }: MarketingLandingPageProps) {
               </h2>
               <p className="mx-auto mb-8 max-w-2xl text-fg2-on-dark">{config.finalCta.subheadline}</p>
             </div>
-            <div className="mx-auto max-w-4xl rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm md:p-8">
-              <LeadCaptureForm ctaLabel={config.ctaLabel} />
+            <div className="mx-auto max-w-xl rounded-xl border border-[var(--line)] bg-white p-6 text-left text-[var(--ink)] shadow-[var(--sh-sm)] md:p-8">
+              <h3 className="mb-5 font-display text-[21px] font-bold text-[var(--ink)]">Send Us a Message</h3>
+              <HubSpotLeadForm
+                formId={HOME_HS_FORM_ID}
+                source="HVAC Landing Page"
+                redirect={LANDING_THANK_YOU_PATH}
+                theme="default"
+                className="landing-hs-form-bottom"
+              />
+              <p className="mt-4 text-center text-[12.5px] leading-normal text-[var(--fg3)]">
+                We respond by the next business day. Your information is never shared.
+              </p>
             </div>
           </Container>
         </section>

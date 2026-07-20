@@ -241,7 +241,6 @@ export function MarketingLandingPage({ config }: MarketingLandingPageProps) {
               <p className="mx-auto mb-8 max-w-2xl text-fg2-on-dark">{config.finalCta.subheadline}</p>
             </div>
             <div className="mx-auto max-w-xl rounded-xl border border-[var(--line)] bg-white p-6 text-left text-[var(--ink)] shadow-[var(--sh-sm)] md:p-8">
-              <h3 className="mb-5 font-display text-[21px] font-bold text-[var(--ink)]">Send Us a Message</h3>
               <HubSpotLeadForm
                 formId={HOME_HS_FORM_ID}
                 source="HVAC Landing Page"

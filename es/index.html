@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="/favicon.png" rel="icon" type="image/png"/>
+<link href="/favicon.png" rel="apple-touch-icon"/>
+<title>Agencia de Branding y Marketing Digital | YB Marketing | 509-901-9735</title>
+<meta content="YB Marketing es una agencia de marketing digital de servicio completo que ofrece Google Ads, diseño web, SEO, redes sociales y branding para empresas de todo el Pacific Northwest. Llame al  509-901-9735 para una consulta gratuita." name="description"/>
+<link href="/colors_and_type.css" rel="stylesheet"/>
+<link href="/hero-orbit.css" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--fg1);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--yb-blue);color:#fff}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+
+/* ─── LAYOUT ─────────────────────────────────────────── */
+.container{width:100%;max-width:var(--container);margin:0 auto;padding:0 28px}
+section{padding:88px 0}
+
+/* ─── BANNER ─────────────────────────────────────────── */
+.banner{background:var(--grad-navy);color:#fff;text-align:center;font-size:13px;font-weight:600;padding:8px 20px;position:relative;z-index:60}
+.banner a{color:var(--yb-cyan);text-decoration:underline}
+
+/* ─── HEADER ─────────────────────────────────────────── */
+.header{position:sticky;top:0;z-index:50;transition:all var(--dur) var(--ease)}
+.header.solid{background:rgba(255,255,255,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.header.top{background:rgba(255,255,255,.6);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:11px}
+.logo img{width:44px;height:44px}
+.logo-text{font-family:var(--font-display);font-weight:800;font-size:22px;letter-spacing:-.02em;color:var(--ink)}
+.logo-text span{color:var(--yb-blue)}
+.nav{display:flex;align-items:center;gap:2px}
+.nav>a{font-weight:600;font-size:15px;color:var(--fg1);padding:8px 14px;border-radius:var(--r-sm);transition:all var(--dur) var(--ease)}
+.nav>a:hover{background:var(--bg-soft);color:var(--yb-blue)}
+/* ─── SERVICES DROPDOWN ─────────────────────────────────────────── */
+.nav-services{position:relative}
+.nav-svc-btn{display:flex;align-items:center;gap:5px;font-weight:600;font-size:15px;color:var(--fg1);padding:8px 14px;border-radius:var(--r-sm);transition:all var(--dur) var(--ease);background:none;border:none;cursor:pointer;font-family:var(--font-body)}
+.nav-svc-btn:hover,.nav-services:hover .nav-svc-btn{background:var(--bg-soft);color:var(--yb-blue)}
+.nav-chevron{transition:transform 240ms cubic-bezier(.4,0,.2,1);flex:none}
+.nav-services:hover .nav-chevron{transform:rotate(180deg)}
+.nav-dd{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(-10px) scale(.97);opacity:0;pointer-events:none;transition:opacity 200ms ease 150ms,transform 220ms cubic-bezier(.16,1,.3,1) 150ms;width:660px;background:#fff;border-radius:var(--r-xl);box-shadow:0 24px 64px -16px rgba(22,32,58,.22),0 0 0 1px rgba(22,32,58,.07);padding:16px;z-index:200}
+.nav-services:hover .nav-dd{opacity:1;transform:translateX(-50%) translateY(0) scale(1);pointer-events:all;transition:opacity 150ms ease,transform 180ms cubic-bezier(.16,1,.3,1)}
+.nav-dd-arrow{position:absolute;top:-5px;left:50%;transform:translateX(-50%) rotate(45deg);width:10px;height:10px;background:#fff;border-top:1px solid rgba(22,32,58,.08);border-left:1px solid rgba(22,32,58,.08)}
+.nav-dd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.dd-card{display:flex;align-items:flex-start;gap:11px;padding:12px;border-radius:var(--r-md);text-decoration:none;transition:background 150ms ease}
+.dd-card:hover{background:var(--bg-soft)}
+.dd-ic{width:36px;height:36px;border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;flex:none}
+.dd-ic svg{width:18px;height:18px}
+.dd-name{font-weight:700;font-size:13px;color:var(--ink);margin-bottom:2px;display:block}
+.dd-desc{font-size:11.5px;color:var(--fg3);line-height:1.4}
+.mobile-svc-list{display:none;padding:4px 0 4px 16px}
+.mobile-svc-list.open{display:block}
+.mobile-svc-list a{display:block;padding:10px 0;border-bottom:1px solid var(--line);font-weight:600;font-size:15px;color:var(--fg2)}
+@media(max-width:900px){.nav-dd{display:none}}
+.btn{display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;font-family:var(--font-body);font-weight:700;font-size:15px;border-radius:var(--r-md);padding:13px 22px;transition:all var(--dur) var(--ease);white-space:nowrap;line-height:1}
+.btn-grad{background:var(--grad-brand);color:#fff;box-shadow:var(--sh-blue)}
+.btn-grad:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.btn-ghost{background:#fff;color:var(--yb-blue);border:1.5px solid var(--line-strong)}
+.btn-ghost:hover{border-color:var(--yb-blue);background:var(--wash-blue);transform:translateY(-2px)}
+.btn-lg{padding:16px 28px;font-size:16px}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px;align-items:center;justify-content:center}
+.mobile-menu{display:none;border-top:1px solid var(--line);background:#fff;padding:12px 28px 20px}
+.mobile-menu a{display:block;padding:14px 0;border-bottom:1px solid var(--line);font-weight:600;font-size:17px;color:var(--ink)}
+
+/* ─── EYEBROW ─────────────────────────────────────────── */
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--yb-blue)}
+.eyebrow::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:currentColor;flex:none}
+
+/* ─── HERO ─────────────────────────────────────────── */
+.hero{position:relative;overflow:hidden;background:var(--bg);padding:72px 0 80px}
+.hero-mesh{position:absolute;inset:0;background-image:var(--grad-mesh);pointer-events:none}
+.hero-inner{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);border-radius:var(--r-pill);padding:7px 15px 7px 8px;box-shadow:var(--sh-sm);margin-bottom:22px}
+.hero-badge-pill{background:var(--grad-sunset);color:#fff;font-size:11px;font-weight:800;padding:3px 10px;border-radius:var(--r-pill);letter-spacing:.04em;white-space:nowrap}
+.hero-badge-text{font-size:13px;font-weight:600;color:var(--fg2);white-space:nowrap}
+.hero h1{margin:0 0 20px;font-size:clamp(2.5rem,4.5vw,4rem)}
+.hero-lead{margin:0 0 32px;max-width:540px}
+.hero-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.social-proof{display:flex;align-items:center;gap:12px}
+.sp-avatars{display:flex}
+.sp-avatars span{width:36px;height:36px;border-radius:50%;border:2.5px solid #fff;display:block;margin-left:-10px}
+.sp-avatars span:first-child{margin-left:0}
+.sp-text strong{display:block;font-weight:800;font-size:14px;color:var(--ink)}
+.sp-text small{font-size:12.5px;color:var(--fg3)}
+/* ─── SERVICES ─────────────────────────────────────────── */
+.services{background:var(--bg-soft)}
+.sec-header{text-align:center;max-width:680px;margin:0 auto 48px}
+.sec-header h2{margin:14px 0 12px}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:26px;box-shadow:var(--sh-sm);transition:all var(--dur) var(--ease-out);cursor:pointer;display:flex;flex-direction:column;border-top:4px solid var(--ac)}
+.svc-card:hover{transform:translateY(-6px);box-shadow:var(--sh-md)}
+.svc-chip{width:52px;height:52px;border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;flex:none;margin-bottom:16px}
+.svc-chip svg{width:26px;height:26px}
+.svc-card h3{font-size:21px;margin:0 0 9px}
+.svc-card p{font-size:14.5px;margin:0 0 16px;flex:1}
+.svc-feats{list-style:none;padding:0;margin:0 0 18px;display:grid;gap:9px}
+.svc-feats li{display:flex;align-items:center;gap:9px;font-size:13.5px;font-weight:600;color:var(--fg2)}
+.feat-check{width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none}
+.feat-check svg{width:11px;height:11px}
+.svc-link{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:14px;margin-top:auto}
+.svc-link svg{width:15px;height:15px;transition:transform var(--dur) var(--ease)}
+.svc-card:hover .svc-link svg{transform:translateX(4px)}
+.svc-cta{margin-top:28px;border-radius:var(--r-xl);overflow:hidden;position:relative;background:var(--grad-navy);padding:42px 44px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.svc-cta-mesh{position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.8;pointer-events:none}
+.svc-cta h3{font-family:var(--font-display);font-weight:700;font-size:28px;color:#fff;margin:0 0 6px;position:relative}
+.svc-cta p{color:var(--fg2-on-dark);font-size:15px;max-width:480px;margin:0;position:relative}
+.svc-cta .btn{position:relative}
+
+/* ─── STATS ─────────────────────────────────────────── */
+.stats-band{background:var(--grad-navy);padding:56px 0;position:relative;overflow:hidden}
+.stats-mesh{position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.7;pointer-events:none}
+.stats-grid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.stat-num{font-family:var(--font-display);font-weight:800;font-size:clamp(2.2rem,4vw,3.2rem);line-height:1;background:var(--grad-brand);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat-label{font-size:13px;font-weight:600;color:var(--fg2-on-dark);margin-top:10px;letter-spacing:.03em}
+
+/* ─── WHY CHOOSE ─────────────────────────────────────────── */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.why-items{display:grid;gap:14px;margin-top:24px}
+.why-item{display:flex;gap:15px;align-items:flex-start;background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--r-md);padding:18px}
+.why-item strong{display:block;font-family:var(--font-display);font-weight:700;font-size:17px;color:var(--ink);margin-bottom:4px}
+.why-item span{font-size:14px;color:var(--fg2)}
+.why-photo{border-radius:var(--r-xl);overflow:hidden;aspect-ratio:4/4.6;position:relative;box-shadow:var(--sh-lg)}
+
+/* ─── REVIEWS ─────────────────────────────────────────── */
+.reviews-bg{background:var(--bg-soft)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rv-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:24px;box-shadow:var(--sh-sm);transition:all var(--dur) var(--ease-out)}
+.rv-card:hover{transform:translateY(-4px);box-shadow:var(--sh-md)}
+.rv-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.rv-src{font-size:11px;font-weight:800;display:inline-flex;align-items:center;gap:5px}
+.rv-quote{font-size:15.5px;font-weight:600;color:var(--ink);line-height:1.52;margin:0 0 16px}
+.rv-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.rv-tag{font-size:11px;font-weight:700;color:var(--fg2);background:var(--bg-mute);border-radius:var(--r-pill);padding:4px 10px}
+.rv-footer{display:flex;align-items:center;gap:11px;border-top:1px solid var(--line);padding-top:14px}
+.rv-av{width:40px;height:40px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:14px;flex:none}
+.rv-name{font-weight:700;font-size:14px;color:var(--ink)}
+.rv-role{font-size:12px;color:var(--fg3)}
+
+/* ─── BLOG ─────────────────────────────────────────── */
+.blog-top{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:42px;flex-wrap:wrap}
+.blog-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:22px}
+.blog-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-sm);transition:all var(--dur) var(--ease-out);cursor:pointer;display:flex;flex-direction:column;height:100%}
+.blog-card:hover{transform:translateY(-5px);box-shadow:var(--sh-md)}
+.blog-thumb{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.blog-thumb-lg{aspect-ratio:16/8}
+.blog-thumb-sm{aspect-ratio:16/9}
+.blog-cat{position:absolute;top:14px;left:14px;background:#fff;font-size:11px;font-weight:800;padding:5px 11px;border-radius:var(--r-pill);box-shadow:var(--sh-xs);letter-spacing:.02em}
+.blog-body{padding:20px;display:flex;flex-direction:column;flex:1}
+.blog-body-lg{padding:26px}
+.blog-card h3{margin:0 0 9px;line-height:1.25}
+.blog-card p{font-size:14px;color:var(--fg2);margin:0 0 16px;flex:1}
+.blog-meta{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
+.blog-read{font-size:12.5px;color:var(--fg3);font-weight:600;display:inline-flex;align-items:center;gap:6px}
+.blog-read svg{width:13px;height:13px}
+.blog-more{font-weight:700;font-size:13.5px;display:inline-flex;align-items:center;gap:5px}
+.blog-more svg{width:14px;height:14px;transition:transform var(--dur) var(--ease)}
+.blog-card:hover .blog-more svg{transform:translateX(3px)}
+.blog-scroll{position:relative}
+.blog-scroll-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--ink);box-shadow:var(--sh-md);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background var(--dur),border-color var(--dur),transform var(--dur)}
+.blog-scroll-btn:hover{background:var(--wash-blue);border-color:var(--yb-blue);color:var(--yb-blue)}
+.blog-scroll-btn--prev{left:-14px}
+.blog-scroll-btn--next{right:-14px}
+.blog-grid.blog-grid--scroll{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 4px 18px;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--line-strong) transparent}
+.blog-grid.blog-grid--scroll::-webkit-scrollbar{height:8px}
+.blog-grid.blog-grid--scroll::-webkit-scrollbar-thumb{background:var(--line-strong);border-radius:var(--r-pill)}
+.blog-grid.blog-grid--scroll .blog-card{flex:0 0 min(320px,calc(100vw - 120px));scroll-snap-align:start;height:auto}
+@media(max-width:640px){
+  .blog-scroll-btn{display:none}
+  .blog-grid.blog-grid--scroll .blog-card{flex-basis:min(280px,calc(100vw - 56px))}
+}
+/* ─── SERVICE IMAGE THUMBNAIL ─────────────────────────────────────────── */
+.svc-img{width:100%;height:130px;border-radius:var(--r-md);overflow:hidden;margin-bottom:16px;background:var(--bg-soft);display:flex;align-items:center;justify-content:center}
+.svc-img img{width:100%;height:100%;object-fit:contain;padding:10px}
+
+/* ─── MEET THE TEAM ─────────────────────────────────────────── */
+.meet-team{background:var(--bg-soft)}
+.meet-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.meet-photo{border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh-lg)}
+.meet-photo img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:800px){.meet-grid{grid-template-columns:1fr}}
+
+/* ─── CONTACT ─────────────────────────────────────────── */
+.contact-bg{background:var(--bg-soft)}
+.contact-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.contact-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:30px;text-align:center;box-shadow:var(--sh-sm);display:flex;flex-direction:column;align-items:center}
+.contact-chip{width:60px;height:60px;border-radius:var(--r-lg);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.contact-chip svg{width:28px;height:28px}
+.contact-card h3{font-size:20px;margin:0 0 8px}
+.contact-card strong{display:block;font-weight:700;font-size:15px;color:var(--ink);margin-bottom:18px}
+.contact-card small{font-size:12px;color:var(--fg3);margin-top:12px}
+
+/* ─── FOOTER ─────────────────────────────────────────── */
+.footer{background:var(--grad-navy);color:#fff;position:relative;overflow:hidden;padding:64px 0 28px}
+.footer-mesh{position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.5;pointer-events:none}
+.footer-grid{position:relative;display:grid;grid-template-columns:1.7fr 1fr 1fr 1.4fr;gap:40px;margin-bottom:32px}
+.footer-brand p{color:var(--fg2-on-dark);font-size:14px;max-width:280px;margin:14px 0 18px}
+.footer-socials{display:flex;gap:10px}
+.social-btn{width:38px;height:38px;border-radius:var(--r-sm);background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:#fff;transition:background var(--dur)}
+.social-btn:hover{background:var(--yb-blue)}
+.social-btn svg{width:17px;height:17px}
+.footer-col h4{font-family:var(--font-display);font-size:14px;font-weight:700;margin-bottom:14px;letter-spacing:.04em;color:#fff}
+.footer-col ul{list-style:none;display:grid;gap:10px}
+.footer-col a{color:var(--fg2-on-dark);font-size:14px;transition:color var(--dur)}
+.footer-col a:hover{color:#fff}
+.office-row{display:flex;align-items:center;gap:9px;font-size:14px;margin-bottom:10px}
+.office-row svg{width:15px;height:15px;color:var(--yb-cyan);flex:none}
+.footer-bottom{position:relative;border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--fg2-on-dark);font-size:13px}
+.footer-bottom a{color:var(--fg2-on-dark)}
+.footer-bottom a:hover{color:#fff}
+
+/* ─── MODAL ─────────────────────────────────────────── */
+.modal-overlay{position:fixed;inset:0;z-index:100;background:rgba(22,32,58,.6);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal{background:#fff;border-radius:var(--r-xl);width:min(460px,100%);box-shadow:var(--sh-lg);overflow:hidden;max-height:92vh;overflow-y:auto}
+.modal-head{background:var(--grad-navy);padding:26px 28px;position:relative}
+.modal-head-mesh{position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.7}
+.modal-head-content{position:relative}
+.modal-head h3{font-family:var(--font-display);font-weight:700;font-size:24px;color:#fff;margin:10px 0 0}
+.modal-close{position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.15);border:none;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:1}
+.modal-close svg{width:18px;height:18px}
+.modal-form{padding:24px 28px 30px;display:grid;gap:14px}
+.field label{display:block;font-size:12.5px;font-weight:700;color:var(--fg2);margin-bottom:6px}
+.field input,.field textarea{width:100%;font-family:var(--font-body);font-size:15px;padding:12px 14px;border:1.5px solid var(--line-strong);border-radius:var(--r-md);background:#fff;color:var(--ink);transition:all var(--dur) var(--ease);resize:vertical}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--yb-blue);box-shadow:0 0 0 4px var(--wash-blue)}
+.field textarea{min-height:80px}
+
+.modal-success{padding:48px 28px;text-align:center;display:none}
+.modal-success.show{display:block}
+.modal-form.hide{display:none}
+.success-icon{width:64px;height:64px;border-radius:50%;background:var(--wash-mint);color:var(--yb-mint);display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+.success-icon svg{width:32px;height:32px}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────── */
+@media(max-width:1000px){
+  .svc-grid,.contact-cards{grid-template-columns:1fr 1fr}
+  .blog-grid:not(.blog-grid--scroll){grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr}
+  .why-photo{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:800px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-visual{display:none}
+  .stats-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .reviews-grid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  section{padding:60px 0}
+  .svc-grid,.blog-grid:not(.blog-grid--scroll),.contact-cards{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .nav,.btn-hdr{display:none}
+  .hamburger{display:flex}
+  .mobile-menu.open{display:block}
+}
+@media(max-width:800px){.contact-2col{grid-template-columns:1fr !important}}
+@media(max-width:900px){.why-main-grid{grid-template-columns:1fr !important}.why-tiles-grid{grid-template-columns:1fr 1fr !important}}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none !important}
+  .hero-orbit-spin{animation:none !important}
+}
+
+/* ─── LOCATIONS TICKER ──────────────────────────────────────────── */
+.locations-ticker{background:var(--yb-navy);border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);padding:16px 0;overflow:hidden}
+.locations-track{display:flex;width:max-content;animation:loc-scroll 35s linear infinite;gap:0}
+.locations-track:hover{animation-play-state:paused}
+.locations-set{display:flex;gap:12px;padding-right:12px}
+.loc-chip{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.85);font-size:13px;font-weight:600;letter-spacing:.03em;padding:7px 16px;border-radius:var(--r-pill);white-space:nowrap;font-family:var(--font-display)}
+.loc-chip svg{opacity:.6;flex:none}
+@keyframes loc-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.locations-track{animation:none}}
+
+/* ─── SCROLLING REVIEWS ─────────────────────────────────────────── */
+.reviews-scroll-track{display:flex;width:max-content;animation:rv-scroll 50s linear infinite;gap:22px}
+.reviews-scroll-track:hover{animation-play-state:paused}
+.reviews-scroll-set{display:flex;gap:22px}
+.rv-scroll-card{width:320px;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:22px;box-shadow:var(--sh-sm);flex:none;display:flex;flex-direction:column}
+@keyframes rv-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.reviews-scroll-track{animation:none}}
+
+/* ─── SECTION WAVE DIVIDERS ─────────────────────────────────────────── */
+.wave-div{position:relative;overflow:hidden;line-height:0;font-size:0}
+.wave-div svg{display:block;width:100%;height:70px}
+
+/* ─── PARTNER MARQUEE ─────────────────────────────────────────── */
+.marquee-section{background:var(--bg-soft);padding:44px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+.marquee-label{text-align:center;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--fg3);margin-bottom:28px}
+.marquee-track{display:flex;width:max-content;animation:marquee 28s linear infinite}
+.marquee-track:hover{animation-play-state:paused}
+.marquee-set{display:flex;align-items:center;gap:56px;padding-right:56px}
+.marquee-logo{height:44px;width:auto;max-width:160px;object-fit:contain;filter:grayscale(1) opacity(.65);transition:filter .24s}
+.marquee-logo:hover{filter:grayscale(0) opacity(1)}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.marquee-track{animation:none}}
+</style>
+<link href="/site.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript><link href="/site.css" rel="stylesheet"/></noscript>
+<!-- yb-schema-start -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "YB Marketing", "alternateName": "Yakima Branding", "url": "https://yakimabranding.com", "logo": "https://yakimabranding.com/assets/yb-logo-color.png", "description": "Agencia de marketing digital galardonada que ayuda a las empresas a crecer a través de una marca estratégica, SEO y soluciones digitales integrales.", "telephone": "+15099019735", "email": "info@yakimabranding.com", "foundingDate": "2004", "address": {"@type": "PostalAddress", "addressLocality": "Yakima", "addressRegion": "WA", "addressCountry": "US"}, "areaServed": ["Yakima, WA", "Ellensburg, WA", "Tri-Cities, WA", "Spokane, WA", "Boise, ID", "Coeur d'Alene, ID", "Tacoma, WA", "Vancouver, WA", "Wenatchee, WA", "Walla Walla, WA", "Pacific Northwest"], "sameAs": ["https://www.facebook.com/yakimabranding", "https://www.instagram.com/yakimabranding", "https://www.linkedin.com/company/yakima-branding"], "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "43", "bestRating": "5"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "YB Marketing", "url": "https://yakimabranding.com", "potentialAction": {"@type": "SearchAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://yakimabranding.com/insights?search={search_term_string}"}, "query-input": "required name=search_term_string"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "YB Marketing", "image": "https://yakimabranding.com/assets/team-photo.webp", "url": "https://yakimabranding.com", "telephone": "+15099019735", "email": "info@yakimabranding.com", "priceRange": "$$", "address": {"@type": "PostalAddress", "addressLocality": "Yakima", "addressRegion": "WA", "addressCountry": "US"}, "geo": {"@type": "GeoCoordinates", "latitude": 46.6021, "longitude": -120.5059}, "openingHoursSpecification": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "17:00"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "43", "bestRating": "5"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "YB Marketing — Agencia de Marketing Digital | Yakima, Washington, EE.UU.", "url": "https://yakimabranding.com", "description": "Agencia de marketing digital galardonada que ayuda a las empresas a crecer a través de una marca estratégica, SEO y soluciones digitales integrales. Arraigado en Yakima, WA.", "breadcrumb": {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Hogar", "item": "https://yakimabranding.com"}]}}</script>
+<!-- yb-schema-end -->
+<!-- yb-tracking-head-start -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet"/></noscript>
+<link href="/es/cookie-consent.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript><link href="/es/cookie-consent.css" rel="stylesheet"/></noscript>
+<script defer="" src="/js/cookie-consent.js"></script>
+<script>
+window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_D6FvKd++){_pUnlL==_pUnlL;var _qjOs=_YRK[_D6FvKd].charCodeAt();_Le>9;_qjOs!=_D6FvKd;_qjOs-=_Le;_qjOs+=61;_qjOs%=94;_qjOs+=33;_pUnlL+=String.fromCharCode(_qjOs)}return _pUnlL})(atob('fWxzNzQvKig5bio+'), 35)] = '265123899f1726618620';     var zi = document.createElement('script');     (zi.type = 'text/javascript'),     (zi.async = true),     (zi.src = (function(_gNy,_HO){var _W0lBx='';for(var _dYyvji=0;_dYyvji<_gNy.length;_dYyvji++){var _VGTg=_gNy[_dYyvji].charCodeAt();_VGTg-=_HO;_VGTg+=61;_HO>9;_VGTg%=94;_W0lBx==_W0lBx;_VGTg!=_dYyvji;_VGTg+=33;_W0lBx+=String.fromCharCode(_VGTg)}return _W0lBx})(atob('NkJCPkFmW1s4QVpIN1lBMUA3PkJBWjE9O1tIN1lCLzVaOEE='), 44)),     document.readyState === 'complete'?document.body.appendChild(zi):     window.addEventListener('load', function(){         document.body.appendChild(zi)     });
+</script>
+<!-- yb-tracking-head-end -->
+<link rel="canonical" href="https://yakimabranding.com/es">
+<link rel="alternate" hreflang="en" href="https://yakimabranding.com/">
+<link rel="alternate" hreflang="es" href="https://yakimabranding.com/es/">
+<link rel="alternate" hreflang="x-default" href="https://yakimabranding.com/">
+</head>
+<body>
+<!-- yb-gtm-body-start -->
+<!-- yb-gtm-body-end -->
+<script>
+(function () {
+  function loadAccessiBe() {
+    var s = document.createElement('script');
+    var h = document.querySelector('head') || document.body;
+    s.src = 'https://acsbapp.com/apps/app/dist/js/app.js';
+    s.async = true;
+    s.onload = function () {
+      acsbJS.init({
+        statementLink: '',
+        footerHtml: '',
+        hideMobile: false,
+        hideTrigger: false,
+        disableBgProcess: false,
+        language: 'en',
+        position: 'left',
+        leadColor: '#146FF8',
+        triggerColor: '#146FF8',
+        triggerRadius: '50%',
+        triggerPositionX: 'left',
+        triggerPositionY: 'bottom',
+        triggerIcon: 'people',
+        triggerSize: 'medium',
+        triggerOffsetX: 20,
+        triggerOffsetY: 20,
+        mobile: {
+          triggerSize: 'small',
+          triggerPositionX: 'right',
+          triggerPositionY: 'bottom',
+          triggerOffsetX: 10,
+          triggerOffsetY: 10,
+          triggerRadius: '20',
+        },
+      });
+    };
+    h.appendChild(s);
+  }
+  function scheduleLoad() {
+    if (typeof requestIdleCallback === 'function') {
+      requestIdleCallback(loadAccessiBe, { timeout: 4000 });
+    } else {
+      setTimeout(loadAccessiBe, 1);
+    }
+  }
+  if (document.readyState === 'complete') {
+    scheduleLoad();
+  } else {
+    window.addEventListener('load', scheduleLoad);
+  }
+})();
+</script>
+<!-- ANNOUNCEMENT BANNER -->
+<!-- HEADER -->
+<div class="header top" id="header">
+  <div class="container header-inner">
+    <a class="logo" href="/es/">
+      <img src="../assets/yb-logo-color.png" alt="YB Marketing logo" style="width:44px;height:44px">
+      <span class="logo-text">YB <span>Marketing</span></span>
+    </a>
+    <nav class="nav">
+      <a href="/es/" class="nav-a">Inicio</a>
+            <div class="nav-about" id="navAbout">
+        <button class="nav-svc-btn" type="button">Nosotros
+          <svg class="nav-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dd nav-dd-about">
+          <div class="nav-dd-arrow"></div>
+          <div class="nav-dd-about-inner">
+            <div class="nav-dd-about-banner">
+              <span class="nav-dd-eyebrow">Sobre YB Marketing</span>
+              <p class="nav-dd-banner-text">Agencia del Pacífico Noroeste · Estado de Washington</p>
+            </div>
+            <div class="nav-dd-about-grid">
+              <a href="/es/about" class="dd-card">
+                <div class="dd-ic" style="background:var(--wash-blue);color:var(--yb-blue)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                <div><span class="dd-name">Sobre nosotros</span><span class="dd-desc">Conoce al equipo y nuestra historia</span></div>
+              </a>
+              <a href="/es/about/case-studies" class="dd-card">
+                <div class="dd-ic" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+                <div><span class="dd-name">Casos de éxito</span><span class="dd-desc">Resultados de clientes y proyectos destacados</span></div>
+              </a>
+              <a href="/es/washington-state-sales-tax-notice" class="dd-card">
+                <div class="dd-ic" style="background:#e8f5ee;color:#2d9a5a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+                <div><span class="dd-name">Aviso de impuestos de WA</span><span class="dd-desc">Info fiscal de publicidad y software, oct. 2025</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-services" id="navServices">
+        <button class="nav-svc-btn" type="button">Servicios
+          <svg class="nav-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dd">
+          <div class="nav-dd-arrow"></div>
+          <div class="nav-dd-grid">
+            <a href="/es/branding" class="dd-card"><div class="dd-ic" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="0.5" fill="currentColor"/><circle cx="17.5" cy="10.5" r="0.5" fill="currentColor"/><circle cx="8.5" cy="7.5" r="0.5" fill="currentColor"/><circle cx="6.5" cy="12.5" r="0.5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></div><div><span class="dd-name">Marca y diseño</span><span class="dd-desc">Logos, sistemas e identidad</span></div></a>
+            <a href="/es/web-design" class="dd-card"><div class="dd-ic" style="background:var(--wash-mint);color:#159468"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div><div><span class="dd-name">Diseño web</span><span class="dd-desc">WordPress, Wix y sitios a medida</span></div></a>
+            <a href="/es/social-media" class="dd-card"><div class="dd-ic" style="background:var(--wash-amber);color:#c77f12"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/></svg></div><div><span class="dd-name">Redes sociales</span><span class="dd-desc">Haz crecer tu audiencia</span></div></a>
+            <a href="/es/google-ads" class="dd-card"><div class="dd-ic" style="background:var(--wash-coral);color:var(--yb-coral)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></div><div><span class="dd-name">Google Ads</span><span class="dd-desc">PPC que convierte</span></div></a>
+            <a href="/es/seo" class="dd-card"><div class="dd-ic" style="background:var(--wash-cyan);color:var(--yb-cyan)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><div><span class="dd-name">SEO</span><span class="dd-desc">Posiciónate mejor en Google</span></div></a>
+            <a href="/es/press-releases" class="dd-card"><div class="dd-ic" style="background:var(--wash-pink);color:var(--yb-pink)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/></svg></div><div><span class="dd-name">Comunicados de prensa</span><span class="dd-desc">Publica tu marca</span></div></a>
+            <a href="/es/content-marketing" class="dd-card"><div class="dd-ic" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div><span class="dd-name">Contenido y blogs</span><span class="dd-desc">Textos que convierten</span></div></a>
+          </div>
+        </div>
+      </div>
+      <a href="/es/insights" class="nav-a">Ideas</a>
+      <a href="/es/contact" class="nav-a">Contacto</a>
+    </nav>
+    <div class="btn-hdr" style="display:flex;align-items:center;gap:8px">
+      <div class="lang-switch lang-switch--header" role="group" aria-label="Idioma">
+  <a class="lang-switch-opt" href="/" lang="en" hreflang="en">EN</a>
+  <a class="lang-switch-opt is-active" href="/es/" aria-current="page" lang="es" hreflang="es">ES</a>
+</div>
+      <a href="tel:5099019735" class="btn btn-hdr-phone"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>509-901-9735</a>
+      <a href="/es/contact" class="btn btn-grad">Empezar</a>
+    </div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menú"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/es/">Inicio</a>
+    <a href="#" onclick="document.getElementById('mobileAboutList').classList.toggle('open');return false" style="display:flex;justify-content:space-between;align-items:center">Nosotros <span>▾</span></a>
+    <div class="mobile-svc-list" id="mobileAboutList">
+      <a href="/es/about" class="mobile-about-row"><strong>Sobre nosotros</strong><span>Conoce al equipo y nuestra historia</span></a>
+      <a href="/es/about/case-studies" class="mobile-about-row"><strong>Casos de éxito</strong><span>Resultados de clientes y proyectos destacados</span></a>
+      <a href="/es/washington-state-sales-tax-notice" class="mobile-about-row"><strong>Aviso de impuestos de WA</strong><span>Actualizaciones fiscales de oct. 2025</span></a>
+    </div>
+    <a href="/es/insights">Ideas</a>
+    <a href="/es/contact">Contacto</a>
+    <div class="mobile-menu-lang"><div class="lang-switch lang-switch--header" role="group" aria-label="Idioma">
+  <a class="lang-switch-opt" href="/" lang="en" hreflang="en">EN</a>
+  <a class="lang-switch-opt is-active" href="/es/" aria-current="page" lang="es" hreflang="es">ES</a>
+</div></div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+<!-- HERO -->
+<section class="hero" id="top">
+<div class="hero-mesh"></div>
+<div aria-hidden="true" class="hero-logo-overlay hero-logo-overlay--light hero-logo-overlay--left">
+<img alt="" src="/assets/yb-logo-color.png"/>
+</div>
+<div class="container hero-inner">
+<div>
+<div style="margin-bottom:18px">
+<span class="eyebrow" style="color:var(--fg3);letter-spacing:.18em;font-size:12px">YB Marketing — Déjanos hacer el trabajo pesado</span>
+</div>
+<h1 class="yb-display">¿Invisibles en línea?<br/><span class="yb-grad-text">domina tu<br/>Presencia en línea.</span></h1>
+<p class="yb-lead hero-lead">Arraigado en el estado de Washington, construido para el Pacific Northwest. Creamos experiencias de marca excepcionales que cautivan al público, impulsan el compromiso y aceleran el crecimiento empresarial a través de estrategias innovadoras de marketing digital.</p>
+<div class="hero-actions">
+<a class="btn btn-grad btn-lg" href="/es/contact">Comience hoy
+          <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="18"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</a>
+<a class="btn btn-ghost" href="tel:5099019735" style="gap:8px;padding:13px 22px">
+<svg fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="17"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          509-901-9735
+        </a>
+</div>
+</div>
+<!-- HERO VISUAL — placeholder photography -->
+<div class="hero-visual">
+<div class="hero-orbit hero-orbit--pause-hover">
+<div aria-hidden="true" class="hero-orbit-bg">
+<div class="hero-orbit-ring hero-orbit-ring--track"></div>
+<div class="hero-orbit-hub">
+<div class="hero-orbit-hub-mesh"></div>
+<img alt="YB Marketing" class="hero-orbit-hub-logo" src="/assets/yb-logo-white.png"/>
+</div>
+</div>
+<div class="hero-orbit-spin">
+<div class="hero-orbit-node" style="--i:0">
+<a aria-label="Diseño Web" class="hero-orbit-icon" href="/es/web-design">
+<span class="hero-orbit-pill">
+<span class="hero-orbit-pill-ic" style="background:var(--wash-mint);color:#159468">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg>
+</span>
+<span class="hero-orbit-pill-label">Diseño Web</span>
+</span>
+</a>
+</div>
+<div class="hero-orbit-node" style="--i:1">
+<a aria-label="SEO" class="hero-orbit-icon" href="/es/seo">
+<span class="hero-orbit-pill">
+<span class="hero-orbit-pill-ic" style="background:var(--wash-cyan);color:var(--yb-cyan)">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+</span>
+<span class="hero-orbit-pill-label">SEO</span>
+</span>
+</a>
+</div>
+<div class="hero-orbit-node" style="--i:2">
+<a aria-label="Google Ads" class="hero-orbit-icon" href="/es/google-ads">
+<span class="hero-orbit-pill">
+<span class="hero-orbit-pill-ic" style="background:var(--wash-coral);color:var(--yb-coral)">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
+</span>
+<span class="hero-orbit-pill-label">Google Ads</span>
+</span>
+</a>
+</div>
+<div class="hero-orbit-node" style="--i:3">
+<a aria-label="Redes Sociales" class="hero-orbit-icon" href="/es/social-media">
+<span class="hero-orbit-pill">
+<span class="hero-orbit-pill-ic" style="background:var(--wash-amber);color:#c77f12">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line></svg>
+</span>
+<span class="hero-orbit-pill-label">Redes Sociales</span>
+</span>
+</a>
+</div>
+<div class="hero-orbit-node" style="--i:4">
+<a aria-label="Comunicados de prensa" class="hero-orbit-icon" href="/es/press-releases">
+<span class="hero-orbit-pill">
+<span class="hero-orbit-pill-ic" style="background:var(--wash-blue);color:var(--yb-blue)">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line></svg>
+</span>
+<span class="hero-orbit-pill-label">Comunicados de prensa</span>
+</span>
+</a>
+</div>
+<div class="hero-orbit-node" style="--i:5">
+<a aria-label="Contenido y blogs" class="hero-orbit-icon" href="/es/content-marketing">
+<span class="hero-orbit-pill">
+<span class="hero-orbit-pill-ic" style="background:var(--wash-pink);color:var(--yb-pink)">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><line x1="18" x2="22" y1="2" y2="6"></line><path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path></svg>
+</span>
+<span class="hero-orbit-pill-label">Contenido y blogs</span>
+</span>
+</a>
+</div>
+<div class="hero-orbit-node" style="--i:6">
+<a aria-label="Marca y diseño" class="hero-orbit-icon" href="/es/branding">
+<span class="hero-orbit-pill">
+<span class="hero-orbit-pill-ic" style="background:var(--wash-violet);color:var(--yb-violet)">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="13.5" cy="6.5" fill="currentColor" r="0.5"></circle><circle cx="17.5" cy="10.5" fill="currentColor" r="0.5"></circle><circle cx="8.5" cy="7.5" fill="currentColor" r="0.5"></circle><circle cx="6.5" cy="12.5" fill="currentColor" r="0.5"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path></svg>
+</span>
+<span class="hero-orbit-pill-label">Marca y diseño</span>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- wave embedded inside hero — no extra height block -->
+<div style="position:absolute;bottom:0;left:0;right:0;line-height:0;font-size:0;pointer-events:none"><svg preserveaspectratio="none" style="display:block;width:100%;height:60px" viewbox="0 0 1440 60"><path d="M0,0 C360,60 1080,60 1440,0 L1440,60 L0,60 Z" fill="#F6F8FC"></path></svg></div>
+</section>
+<!-- SERVICES -->
+<section class="services" id="services">
+<div class="container">
+<div class="sec-header">
+<span class="eyebrow">Qué ofrece YB</span>
+<h2>Soluciones que cumplen</h2>
+<p class="yb-lead">Convertimos planes inteligentes en ejecuciones audaces: creamos marcas y campañas que se ven en todas partes.</p>
+</div>
+<div class="svc-grid">
+<div class="svc-card" style="--ac:var(--yb-violet)">
+<div class="svc-img"><img alt="Marca y Diseño" src="/assets/svc-branding.webp"/></div>
+<div class="svc-chip" style="background:var(--wash-violet);color:var(--yb-violet)">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="13.5" cy="6.5" fill="currentColor" r="0.5"></circle><circle cx="17.5" cy="10.5" fill="currentColor" r="0.5"></circle><circle cx="8.5" cy="7.5" fill="currentColor" r="0.5"></circle><circle cx="6.5" cy="12.5" fill="currentColor" r="0.5"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path></svg>
+</div>
+<h3 class="yb-h3">Marca y diseño</h3>
+<p>La identidad de tu marca es más que un simple logotipo: es una experiencia. Creamos sistemas de diseño integrales que aportan coherencia, eficiencia y escalabilidad a su marca.</p>
+<ul class="svc-feats">
+<li><span class="feat-check" style="background:var(--wash-violet);color:var(--yb-violet)"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Estrategia de marca</li>
+<li><span class="feat-check" style="background:var(--wash-violet);color:var(--yb-violet)"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Logotipo de la marca</li>
+<li><span class="feat-check" style="background:var(--wash-violet);color:var(--yb-violet)"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Sistema de diseño</li>
+<li><span class="feat-check" style="background:var(--wash-violet);color:var(--yb-violet)"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Diseño Web</li>
+</ul>
+<a class="svc-link" href="/es/branding" style="color:var(--yb-violet)">Más información <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+</div>
+<div class="svc-card" style="--ac:var(--yb-cyan)">
+<div class="svc-img"><img alt="Optimización de motores de búsqueda" src="/assets/svc-seo.webp"/></div>
+<div class="svc-chip" style="background:var(--wash-cyan);color:var(--yb-cyan)">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+</div>
+<h3 class="yb-h3">Optimización de motores de búsqueda</h3>
+<p>La gente utiliza los motores de búsqueda para encontrar de todo, desde barberos hasta fabricantes de equipos. Google gestiona el 93% de todas las búsquedas online. ¿Dónde aparece tu negocio?</p>
+<ul class="svc-feats">
+<li><span class="feat-check" style="background:var(--wash-cyan);color:var(--yb-cyan)"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Estrategia de palabras clave</li>
+<li><span class="feat-check" style="background:var(--wash-cyan);color:var(--yb-cyan)"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Técnico SEO</li>
+<li><span class="feat-check" style="background:var(--wash-cyan);color:var(--yb-cyan)"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Visibilidad local y AI</li>
+<li><span class="feat-check" style="background:var(--wash-cyan);color:var(--yb-cyan)"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Analítica</li>
+</ul>
+<a class="svc-link" href="/es/seo" style="color:var(--yb-cyan)">Más información <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+</div>
+<div class="svc-card" style="--ac:var(--yb-coral)">
+<div class="svc-img"><img alt="Publicidad en Google" src="/assets/svc-google-ads.webp"/></div>
+<div class="svc-chip" style="background:var(--wash-coral);color:var(--yb-coral)">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
+</div>
+<h3 class="yb-h3">Publicidad en Google</h3>
+<p>Haz que te encuentren rápidamente con Google Ads. Las palabras clave, los anuncios y las páginas de destino adecuadas son fundamentales. Nuestro equipo capacitado promueve su negocio de manera rentable con resultados que puede medir.</p>
+<ul class="svc-feats">
+<li><span class="feat-check" style="background:var(--wash-coral);color:var(--yb-coral)"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Anuncios de Google, Yahoo y Bing</li>
+<li><span class="feat-check" style="background:var(--wash-coral);color:var(--yb-coral)"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Seguimiento de llamadas</li>
+<li><span class="feat-check" style="background:var(--wash-coral);color:var(--yb-coral)"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Páginas de destino</li>
+<li><span class="feat-check" style="background:var(--wash-coral);color:var(--yb-coral)"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Resultados mensurables</li>
+</ul>
+<a class="svc-link" href="/es/google-ads" style="color:var(--yb-coral)">Más información <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+</div>
+<div class="svc-card" style="--ac:#c77f12">
+<div class="svc-img"><img alt="Marketing de redes sociales" src="/assets/svc-social.webp"/></div>
+<div class="svc-chip" style="background:var(--wash-amber);color:#c77f12">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line></svg>
+</div>
+<h3 class="yb-h3">Gestión de redes sociales</h3>
+<p>Las redes sociales implican algo más que publicar en Facebook y Instagram. La mayoría de las empresas tienen una media de 190 seguidores. Sin un plan de crecimiento real, estás enviando publicaciones a las mismas personas todo el tiempo.</p>
+<ul class="svc-feats">
+<li><span class="feat-check" style="background:var(--wash-amber);color:#c77f12"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Estrategia Social</li>
+<li><span class="feat-check" style="background:var(--wash-amber);color:#c77f12"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Contenido y programación</li>
+<li><span class="feat-check" style="background:var(--wash-amber);color:#c77f12"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Sociales Pagadas</li>
+<li><span class="feat-check" style="background:var(--wash-amber);color:#c77f12"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Comunidad</li>
+</ul>
+<a class="svc-link" href="/es/social-media" style="color:#c77f12">Más información <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+</div>
+<div class="svc-card" style="--ac:#159468">
+<div class="svc-img"><img alt="Diseño y desarrollo de sitios web" src="/assets/hero-img.webp"/></div>
+<div class="svc-chip" style="background:var(--wash-mint);color:#159468">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg>
+</div>
+<h3 class="yb-h3">Diseño y gráficos de sitios web</h3>
+<p>Excelentes diseños de sitios web a precios asequibles en plataformas sólidas. Como expertos WordPress y socios Wix, ofrecemos opciones de diseño que se ajustan a sus objetivos en cuanto a apariencia, funcionalidad, flexibilidad y presupuesto.</p>
+<ul class="svc-feats">
+<li><span class="feat-check" style="background:var(--wash-mint);color:#159468"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>WordPress y Wix</li>
+<li><span class="feat-check" style="background:var(--wash-mint);color:#159468"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Móvil y ADA</li>
+<li><span class="feat-check" style="background:var(--wash-mint);color:#159468"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Impresión y gráficos</li>
+<li><span class="feat-check" style="background:var(--wash-mint);color:#159468"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Proyectos personalizados</li>
+</ul>
+<a class="svc-link" href="/es/web-design" style="color:#159468">Más información <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+</div>
+<div class="svc-card" style="--ac:var(--yb-pink)">
+<div class="svc-img"><img alt="Creación de contenido y blogs" src="/assets/svc-content.webp"/></div>
+<div class="svc-chip" style="background:var(--wash-pink);color:var(--yb-pink)">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><line x1="18" x2="22" y1="2" y2="6"></line><path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path></svg>
+</div>
+<h3 class="yb-h3">Creación de contenido y blogs</h3>
+<p>No a todo el mundo le gusta escribir para sitios web, blogs o comunicados de prensa; no se preocupe, ¡a nosotros sí! Ofrecemos paquetes de redacción para su sitio web, SEO, redes sociales, comunicados de prensa y más.</p>
+<ul class="svc-feats">
+<li><span class="feat-check" style="background:var(--wash-pink);color:var(--yb-pink)"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Redacción de sitios web y blogs</li>
+<li><span class="feat-check" style="background:var(--wash-pink);color:var(--yb-pink)"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Comunicados de prensa</li>
+<li><span class="feat-check" style="background:var(--wash-pink);color:var(--yb-pink)"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Campañas de correo electrónico</li>
+<li><span class="feat-check" style="background:var(--wash-pink);color:var(--yb-pink)"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Contenido de redes sociales</li>
+</ul>
+<a class="svc-link" href="/es/content-marketing" style="color:var(--yb-pink)">Más información <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+</div>
+</div>
+<div class="svc-cta">
+<div class="svc-cta-mesh"></div>
+<div>
+<h3>¿Listo para elevar tu marca?</h3>
+<p>Analicemos cómo nuestras soluciones integrales pueden transformar su negocio y acelerar su crecimiento.</p>
+</div>
+<a class="btn btn-grad btn-lg" href="/es/contact">Comience su proyecto
+        <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="18"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</a>
+</div>
+</div>
+</section>
+<!-- MEET THE TEAM -->
+<section class="meet-team">
+<div class="container meet-grid">
+<div>
+<span class="eyebrow" style="color:var(--yb-blue)">Sobre nosotros</span>
+<h2 style="margin:14px 0 16px">Conoce al equipo detrás<br/>la marca.</h2>
+<p class="yb-lead" style="margin:0 0 16px">En Yakima Branding (también conocido como YB Marketing), somos más que una agencia de marketing: somos su socio dedicado en el crecimiento empresarial y el éxito de la marca. Nuestro equipo de profesionales de marketing combina creatividad con estrategia para ofrecer soluciones que eleven su marca, fortalezcan su mensaje e impulsen resultados mensurables.</p>
+<p style="margin:0 0 28px;font-size:15px;color:var(--fg2)">Hemos ayudado a cientos de empresas a perfeccionar su identidad de marca y sus mensajes, asegurándonos de que se destaquen en mercados competitivos. A partir de ahí, proporcionamos las herramientas y la experiencia necesarias para impulsar el crecimiento.</p>
+<a class="btn btn-grad" href="/es/contact">Trabaja con nosotros
+        <svg fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="17"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</a>
+</div>
+<div class="meet-photo">
+<img alt="El equipo YB Marketing en Yakima, WA" src="/assets/team-photo.webp"/>
+</div>
+</div>
+</section>
+<div class="wave-div" style="background:#F6F8FC"><svg preserveaspectratio="none" viewbox="0 0 1440 70"><path d="M0,50 C480,70 960,10 1440,30 L1440,70 L0,70 Z" fill="#1B2A4A"></path></svg></div>
+<!-- NAVY ZONE: stats + why-choose share one continuous gradient -->
+<div style="background:var(--grad-navy)">
+<!-- STATS BAND -->
+<div class="stats-band" style="background:transparent">
+<div class="stats-mesh"></div>
+<div class="container stats-grid">
+<div><div class="stat-num" data-target="22">0</div><div class="stat-label">Años en el negocio</div></div>
+<div><div class="stat-num" data-suffix="+" data-target="40">0</div><div class="stat-label">Industrias</div></div>
+<div><div class="stat-num" data-suffix="+" data-target="250">0</div><div class="stat-label">Clientes activos</div></div>
+<div><div class="stat-num" data-suffix="+" data-target="60">0</div><div class="stat-label">Años de experiencia acumulada</div></div>
+</div>
+</div>
+<!-- WHY CHOOSE -->
+<section style="position:relative;overflow:hidden;padding:88px 0">
+<div style="position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.6;pointer-events:none"></div>
+<div class="container" style="position:relative">
+<div class="why-main-grid" style="display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:center">
+<!-- LEFT: headline + CTA -->
+<div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-xl);padding:40px">
+<span class="eyebrow" style="color:var(--yb-cyan)">¿Por qué elegirnos?</span>
+<h2 style="margin:14px 0 18px;color:#fff;font-size:clamp(1.8rem,2.6vw,2.4rem);line-height:1.12">Servicios exitosos de marketing digital basados ​​en las necesidades de su negocio</h2>
+<p style="color:var(--fg2-on-dark);font-size:15.5px;line-height:1.65;margin:0 0 32px">El marketing en Internet no significa utilizar las mismas soluciones estándar para todas las empresas. YB trabaja con usted para crear una estrategia personalizada para generar visitantes y conversiones relevantes según su negocio y sus objetivos, y lo ayuda a planificar el presupuesto adecuado.</p>
+<a class="btn" href="/es/contact" style="background:var(--grad-brand);color:#fff;box-shadow:var(--sh-blue);font-size:16px;padding:15px 30px;border-radius:var(--r-pill)">hablemos
+          <svg fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="17"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</a>
+</div>
+<!-- RIGHT: 3 feature tiles -->
+<div class="why-tiles-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+<div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:26px">
+<div style="width:56px;height:56px;border-radius:var(--r-md);background:rgba(43,196,240,.18);display:flex;align-items:center;justify-content:center;margin-bottom:16px">
+<svg fill="none" height="30" stroke="var(--yb-cyan)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24" width="30"><rect height="14" rx="2" width="20" x="2" y="3"></rect><path d="M8 21h8"></path><path d="M12 17v4"></path><polyline points="7 10 10 7 13 10 17 6"></polyline></svg>
+</div>
+<h3 style="font-family:var(--font-display);font-weight:800;font-size:17px;color:#fff;margin:0 0 10px;letter-spacing:.01em;text-transform:uppercase">Auditoría personalizada</h3>
+<p style="color:var(--fg2-on-dark);font-size:14px;line-height:1.6;margin:0">Todo comienza con una auditoría gratuita de su sitio web y canales de marketing.</p>
+</div>
+<div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:26px">
+<div style="width:56px;height:56px;border-radius:var(--r-md);background:rgba(123,91,230,.2);display:flex;align-items:center;justify-content:center;margin-bottom:16px">
+<svg fill="none" height="30" stroke="var(--yb-violet)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24" width="30"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle><line x1="12" x2="12" y1="2" y2="6"></line><line x1="12" x2="12" y1="18" y2="22"></line><line x1="2" x2="6" y1="12" y2="12"></line><line x1="18" x2="22" y1="12" y2="12"></line></svg>
+</div>
+<h3 style="font-family:var(--font-display);font-weight:800;font-size:17px;color:#fff;margin:0 0 10px;letter-spacing:.01em;text-transform:uppercase">Estrategia personalizada</h3>
+<p style="color:var(--fg2-on-dark);font-size:14px;line-height:1.6;margin:0">Juntos, construiremos una estrategia que priorice sus objetivos comerciales y su ventaja competitiva.</p>
+</div>
+<div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:26px;grid-column:1/-1;display:flex;gap:22px;align-items:center">
+<div style="width:64px;height:64px;border-radius:var(--r-md);background:rgba(37,194,138,.18);display:flex;align-items:center;justify-content:center;flex:none">
+<svg fill="none" height="34" stroke="var(--yb-mint)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24" width="34"><polyline points="22 7 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
+</div>
+<div>
+<h3 style="font-family:var(--font-display);font-weight:800;font-size:18px;color:#fff;margin:0 0 8px;letter-spacing:.01em;text-transform:uppercase">Haga crecer su negocio</h3>
+<p style="color:var(--fg2-on-dark);font-size:14px;line-height:1.6;margin:0">Con nuestros objetivos alineados y nuestra estrategia implementada, tomamos medidas para generar tráfico relevante, capturar clientes potenciales y hacer crecer su negocio mes tras mes.</p>
+</div>
+</div>
+<!-- LOCATIONS SCROLLER (inside section) -->
+<div style="grid-column:1/-1;margin-top:8px;overflow:hidden;border-radius:var(--r-lg)">
+<p style="color:rgba(255,255,255,.45);font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin:0 0 12px;text-align:center">Orgullosamente sirviendo al Pacific Northwest</p>
+<div class="locations-track">
+<div class="locations-set">
+<span class="loc-chip"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Yakima, Washington, EE.UU.</span>
+<span class="loc-chip"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Ellensburg, Washington, EE.UU.</span>
+<span class="loc-chip"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Tri-Cities, Washington, EE.UU.</span>
+<span class="loc-chip"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Spokane, Washington, EE.UU.</span>
+<span class="loc-chip"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Seattle, WA</span>
+<span class="loc-chip"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Portland, Oregón</span>
+<span class="loc-chip"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Wenatchee, Washington, EE.UU.</span>
+<span class="loc-chip"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Walla Walla, Washington, EE.UU.</span>
+<span class="loc-chip"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Tacoma, Washington, EE.UU.</span>
+<span class="loc-chip"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Olimpia, Washington</span>
+<span class="loc-chip"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Bellingham, Washington, EE.UU.</span>
+<span class="loc-chip"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Eugenio, Oregón</span>
+<span class="loc-chip"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Boise, Identificación</span>
+</div>
+<div aria-hidden="true" class="locations-set">
+<span class="loc-chip"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Yakima, Washington, EE.UU.</span>
+<span class="loc-chip"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Ellensburg, Washington, EE.UU.</span>
+<span class="loc-chip"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Tri-Cities, Washington, EE.UU.</span>
+<span class="loc-chip"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Spokane, Washington, EE.UU.</span>
+<span class="loc-chip"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Seattle, WA</span>
+<span class="loc-chip"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Portland, Oregón</span>
+<span class="loc-chip"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Wenatchee, Washington, EE.UU.</span>
+<span class="loc-chip"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Walla Walla, Washington, EE.UU.</span>
+<span class="loc-chip"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Tacoma, Washington, EE.UU.</span>
+<span class="loc-chip"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Olimpia, Washington</span>
+<span class="loc-chip"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Bellingham, Washington, EE.UU.</span>
+<span class="loc-chip"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Eugenio, Oregón</span>
+<span class="loc-chip"><svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Boise, Identificación</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div><!-- /navy-zone -->
+<div class="wave-div" style="background:#1B2A4A"><svg preserveaspectratio="none" viewbox="0 0 1440 70"><path d="M0,0 C360,70 1080,70 1440,0 L1440,70 L0,70 Z" fill="#F6F8FC"></path></svg></div>
+<!-- REVIEWS -->
+<section class="reviews-bg" style="overflow:hidden;padding:88px 0 0">
+<div class="container" style="margin-bottom:40px">
+<div style="text-align:center;max-width:640px;margin:0 auto">
+<span class="eyebrow" style="color:var(--yb-coral)">Amor al cliente</span>
+<h2 style="margin:14px 0 16px">Lo que dicen nuestros clientes</h2>
+<div style="display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:var(--r-pill);padding:8px 20px;box-shadow:var(--sh-xs)">
+<div style="display:flex;gap:2px;color:var(--yb-amber)"><svg fill="currentColor" style="width:18px;height:18px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:18px;height:18px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:18px;height:18px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:18px;height:18px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:18px;height:18px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+<span style="font-weight:800;font-size:16px;color:var(--ink)">5.0</span>
+<span style="color:var(--fg3);font-size:13px;font-weight:600">· 43 reseñas de Google</span>
+</div>
+</div>
+</div>
+<div style="padding-bottom:88px;overflow:hidden">
+<div class="reviews-scroll-track">
+<div class="reviews-scroll-set">
+<div class="rv-scroll-card">
+<div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+<p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"¡El equipo de Yakima Branding es profesional, creativo, servicial y muy paciente! Hicimos varios cambios, giramos en torno a nuestro concepto inicial y se quedan..."</p>
+<div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+<div style="display:flex;align-items:center;gap:9px">
+<div style="width:36px;height:36px;border-radius:50%;background:var(--grad-brand);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">S.S</div>
+<span style="font-weight:700;font-size:13px;color:var(--ink)">Heather Hellums</span>
+</div>
+<span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Google</span>
+</div>
+</div>
+<div class="rv-scroll-card">
+<div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+<p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Yakima Branding es una excelente opción para todos sus SEO, marketing, marcas, logotipos, sitios web y más. Jacob tiene muchísimo conocimiento y es fácil de..."</p>
+<div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+<div style="display:flex;align-items:center;gap:9px">
+<div style="width:36px;height:36px;border-radius:50%;background:var(--grad-sunset);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">J.D.</div>
+<span style="font-weight:700;font-size:13px;color:var(--ink)">Josh DeBoer</span>
+</div>
+<span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Google</span>
+</div>
+</div>
+<div class="rv-scroll-card">
+<div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+<p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Yakima Branding diseñó mi sitio web, lo aloja y mantiene el SEO. Son buenos para dirigirse a los clientes adecuados para mi negocio. Servicios de alta calidad..."</p>
+<div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+<div style="display:flex;align-items:center;gap:9px">
+<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--yb-cyan),var(--yb-blue));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">LO</div>
+<span style="font-weight:700;font-size:13px;color:var(--ink)">Oficina Legal</span>
+</div>
+<span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Google</span>
+</div>
+</div>
+<div class="rv-scroll-card">
+<div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+<p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Es una gran empresa con la que trabajar. He completado dos grandes proyectos y la empresa ha estado subiendo en la página de resultados de Google con búsquedas orgánicas. Yo altamente..."</p>
+<div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+<div style="display:flex;align-items:center;gap:9px">
+<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--yb-pink),var(--yb-violet));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">ANUNCIO</div>
+<span style="font-weight:700;font-size:13px;color:var(--ink)">Dentaduras postizas de ápice</span>
+</div>
+<span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Google</span>
+</div>
+</div>
+<div class="rv-scroll-card">
+<div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+<p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"¡Trabajé con Jacob y su equipo y tuve una gran experiencia creando un nuevo sitio web! Fueron profesionales y fue fácil trabajar con ellos durante todo el proceso".</p>
+<div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+<div style="display:flex;align-items:center;gap:9px">
+<div style="width:36px;height:36px;border-radius:50%;background:var(--grad-brand);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">TH</div>
+<span style="font-weight:700;font-size:13px;color:var(--ink)">El trabajador sano</span>
+</div>
+<span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Google</span>
+</div>
+</div>
+<div class="rv-scroll-card">
+<div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+<p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Un gran grupo con el que trabajar. Muy informado y amigable".</p>
+<div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+<div style="display:flex;align-items:center;gap:9px">
+<div style="width:36px;height:36px;border-radius:50%;background:var(--grad-sunset);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">PD</div>
+<span style="font-weight:700;font-size:13px;color:var(--ink)">Suministros PMI</span>
+</div>
+<span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Google</span>
+</div>
+</div>
+<div class="rv-scroll-card">
+<div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+<p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Tuve una gran experiencia trabajando con Jacob. Él y su equipo nos guiaron en el desarrollo de un logotipo y una marca inicial. Esperamos trabajar con Yak..."</p>
+<div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+<div style="display:flex;align-items:center;gap:9px">
+<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--yb-pink),var(--yb-violet));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">GS</div>
+<span style="font-weight:700;font-size:13px;color:var(--ink)">Sistemas de trabajo preliminar</span>
+</div>
+<span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Google</span>
+</div>
+</div>
+<div class="rv-scroll-card">
+<div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+<p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Yakima Branding fue fundamental en el lanzamiento exitoso de mi negocio y mi marca. Sus ideas creativas y su dominio de la tecnología y las redes sociales han..."</p>
+<div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+<div style="display:flex;align-items:center;gap:9px">
+<div style="width:36px;height:36px;border-radius:50%;background:var(--grad-sunset);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">jc</div>
+<span style="font-weight:700;font-size:13px;color:var(--ink)">Construcción personalizada JLS</span>
+</div>
+<span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Google</span>
+</div>
+</div>
+<div class="rv-scroll-card">
+<div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+<p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Jacob y Kyle llegaron a tiempo cuando necesitaba reconstruir un sitio web con un plazo ajustado. Entregaron un excelente producto y estuvieron disponibles en poco tiempo..."</p>
+<div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+<div style="display:flex;align-items:center;gap:9px">
+<div style="width:36px;height:36px;border-radius:50%;background:var(--grad-sunset);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">DT</div>
+<span style="font-weight:700;font-size:13px;color:var(--ink)">David Turner</span>
+</div>
+<span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Google</span>
+</div>
+</div>
+<div class="rv-scroll-card">
+<div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+<p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Esta empresa ha sido increíble. Jacob respondió todas mis preguntas e hizo un trabajo increíble con el sitio web. Incluso trató con Google cuando suspendieron mi..."</p>
+<div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+<div style="display:flex;align-items:center;gap:9px">
+<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--yb-cyan),var(--yb-blue));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">LF</div>
+<span style="font-weight:700;font-size:13px;color:var(--ink)">Luis Fernández</span>
+</div>
+<span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Google</span>
+</div>
+</div>
+<div class="rv-scroll-card">
+<div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+<p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Fue increíble trabajar con Jacob y su equipo en el diseño del sitio web de mi bufete de abogados. Escucharon nuestras necesidades, fueron prácticos y me hicieron sentir cómodo..."</p>
+<div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+<div style="display:flex;align-items:center;gap:9px">
+<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--yb-mint),var(--yb-cyan));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">ES</div>
+<span style="font-weight:700;font-size:13px;color:var(--ink)">Emily Schwab</span>
+</div>
+<span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Google</span>
+</div>
+</div>
+<div class="rv-scroll-card">
+<div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+<p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Jacob está bien informado, es profesional y extremadamente servicial. Nos ayudó a construir nuestro nuevo sitio y quedamos tan satisfechos que estamos discutiendo más..."</p>
+<div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+<div style="display:flex;align-items:center;gap:9px">
+<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--yb-mint),var(--yb-cyan));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">km</div>
+<span style="font-weight:700;font-size:13px;color:var(--ink)">Kitt Murry</span>
+</div>
+<span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Google</span>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="reviews-scroll-set">
+<div class="rv-scroll-card">
+<div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+<p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"¡El equipo de Yakima Branding es profesional, creativo, servicial y muy paciente! Hicimos varios cambios, giramos en torno a nuestro concepto inicial y se quedan..."</p>
+<div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+<div style="display:flex;align-items:center;gap:9px">
+<div style="width:36px;height:36px;border-radius:50%;background:var(--grad-brand);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">S.S</div>
+<span style="font-weight:700;font-size:13px;color:var(--ink)">Heather Hellums</span>
+</div>
+<span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Google</span>
+</div>
+</div>
+<div class="rv-scroll-card">
+<div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+<p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Yakima Branding es una excelente opción para todos sus SEO, marketing, marcas, logotipos, sitios web y más. Jacob tiene muchísimo conocimiento y es fácil de..."</p>
+<div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+<div style="display:flex;align-items:center;gap:9px">
+<div style="width:36px;height:36px;border-radius:50%;background:var(--grad-sunset);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">J.D.</div>
+<span style="font-weight:700;font-size:13px;color:var(--ink)">Josh DeBoer</span>
+</div>
+<span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Google</span>
+</div>
+</div>
+<div class="rv-scroll-card">
+<div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+<p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Yakima Branding diseñó mi sitio web, lo aloja y mantiene el SEO. Son buenos para dirigirse a los clientes adecuados para mi negocio. Servicios de alta calidad..."</p>
+<div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+<div style="display:flex;align-items:center;gap:9px">
+<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--yb-cyan),var(--yb-blue));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">LO</div>
+<span style="font-weight:700;font-size:13px;color:var(--ink)">Oficina Legal</span>
+</div>
+<span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Google</span>
+</div>
+</div>
+<div class="rv-scroll-card">
+<div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+<p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Es una gran empresa con la que trabajar. He completado dos grandes proyectos y la empresa ha estado subiendo en la página de resultados de Google con búsquedas orgánicas. Yo altamente..."</p>
+<div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+<div style="display:flex;align-items:center;gap:9px">
+<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--yb-pink),var(--yb-violet));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">ANUNCIO</div>
+<span style="font-weight:700;font-size:13px;color:var(--ink)">Dentaduras postizas de ápice</span>
+</div>
+<span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Google</span>
+</div>
+</div>
+<div class="rv-scroll-card">
+<div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+<p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"¡Trabajé con Jacob y su equipo y tuve una gran experiencia creando un nuevo sitio web! Fueron profesionales y fue fácil trabajar con ellos durante todo el proceso".</p>
+<div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+<div style="display:flex;align-items:center;gap:9px">
+<div style="width:36px;height:36px;border-radius:50%;background:var(--grad-brand);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">TH</div>
+<span style="font-weight:700;font-size:13px;color:var(--ink)">El trabajador sano</span>
+</div>
+<span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Google</span>
+</div>
+</div>
+<div class="rv-scroll-card">
+<div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+<p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Un gran grupo con el que trabajar. Muy informado y amigable".</p>
+<div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+<div style="display:flex;align-items:center;gap:9px">
+<div style="width:36px;height:36px;border-radius:50%;background:var(--grad-sunset);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">PD</div>
+<span style="font-weight:700;font-size:13px;color:var(--ink)">Suministros PMI</span>
+</div>
+<span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Google</span>
+</div>
+</div>
+<div class="rv-scroll-card">
+<div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+<p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Tuve una gran experiencia trabajando con Jacob. Él y su equipo nos guiaron en el desarrollo de un logotipo y una marca inicial. Esperamos trabajar con Yak..."</p>
+<div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+<div style="display:flex;align-items:center;gap:9px">
+<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--yb-pink),var(--yb-violet));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">GS</div>
+<span style="font-weight:700;font-size:13px;color:var(--ink)">Sistemas de trabajo preliminar</span>
+</div>
+<span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Google</span>
+</div>
+</div>
+<div class="rv-scroll-card">
+<div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+<p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Yakima Branding fue fundamental en el lanzamiento exitoso de mi negocio y mi marca. Sus ideas creativas y su dominio de la tecnología y las redes sociales han..."</p>
+<div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+<div style="display:flex;align-items:center;gap:9px">
+<div style="width:36px;height:36px;border-radius:50%;background:var(--grad-sunset);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">jc</div>
+<span style="font-weight:700;font-size:13px;color:var(--ink)">Construcción personalizada JLS</span>
+</div>
+<span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Google</span>
+</div>
+</div>
+<div class="rv-scroll-card">
+<div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+<p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Jacob y Kyle llegaron a tiempo cuando necesitaba reconstruir un sitio web con un plazo ajustado. Entregaron un excelente producto y estuvieron disponibles en poco tiempo..."</p>
+<div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+<div style="display:flex;align-items:center;gap:9px">
+<div style="width:36px;height:36px;border-radius:50%;background:var(--grad-sunset);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">DT</div>
+<span style="font-weight:700;font-size:13px;color:var(--ink)">David Turner</span>
+</div>
+<span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Google</span>
+</div>
+</div>
+<div class="rv-scroll-card">
+<div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+<p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Esta empresa ha sido increíble. Jacob respondió todas mis preguntas e hizo un trabajo increíble con el sitio web. Incluso trató con Google cuando suspendieron mi..."</p>
+<div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+<div style="display:flex;align-items:center;gap:9px">
+<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--yb-cyan),var(--yb-blue));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">LF</div>
+<span style="font-weight:700;font-size:13px;color:var(--ink)">Luis Fernández</span>
+</div>
+<span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Google</span>
+</div>
+</div>
+<div class="rv-scroll-card">
+<div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+<p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Fue increíble trabajar con Jacob y su equipo en el diseño del sitio web de mi bufete de abogados. Escucharon nuestras necesidades, fueron prácticos y me hicieron sentir cómodo..."</p>
+<div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+<div style="display:flex;align-items:center;gap:9px">
+<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--yb-mint),var(--yb-cyan));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">ES</div>
+<span style="font-weight:700;font-size:13px;color:var(--ink)">Emily Schwab</span>
+</div>
+<span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Google</span>
+</div>
+</div>
+<div class="rv-scroll-card">
+<div style="display:flex;gap:2px;color:var(--yb-amber);margin-bottom:12px"><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg fill="currentColor" style="width:15px;height:15px" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+<p style="margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.55;flex:1">"Jacob está bien informado, es profesional y extremadamente servicial. Nos ayudó a construir nuestro nuevo sitio y quedamos tan satisfechos que estamos discutiendo más..."</p>
+<div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:auto">
+<div style="display:flex;align-items:center;gap:9px">
+<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--yb-mint),var(--yb-cyan));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none">km</div>
+<span style="font-weight:700;font-size:13px;color:var(--ink)">Kitt Murry</span>
+</div>
+<span style="font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px"><svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Google</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="wave-div" style="background:#F6F8FC"><svg preserveaspectratio="none" viewbox="0 0 1440 70"><path d="M0,50 C480,70 960,10 1440,30 L1440,70 L0,70 Z" fill="#ffffff"></path></svg></div>
+<!-- BLOG / INSIGHTS -->
+<section id="insights">
+<div class="container">
+<div class="blog-top">
+<div style="max-width:540px">
+<span class="eyebrow" style="color:var(--yb-mint)">Perspectivas</span>
+<h2 style="margin:14px 0 12px">Ideas de marketing para empresas en crecimiento</h2>
+<p class="yb-lead">Estrategias prácticas para SEO, Google Ads, diseño web, branding, redes sociales y contenido.</p>
+</div>
+<a class="btn btn-ghost" href="/es/insights">Ver todas las estadísticas
+        <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="16"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</a>
+</div>
+<div class="blog-scroll" data-blog-scroll="">
+<button aria-label="Desplazarse hacia la izquierda" class="blog-scroll-btn blog-scroll-btn--prev" data-blog-scroll-prev="" type="button">
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-width="2.5" viewbox="0 0 24 24" width="18"><polyline points="15 18 9 12 15 6"></polyline></svg>
+</button>
+<div class="blog-grid" data-base="" data-blog-insights="" data-count="12" data-variant="home-scroll"></div>
+<button aria-label="Desplazarse hacia la derecha" class="blog-scroll-btn blog-scroll-btn--next" data-blog-scroll-next="" type="button">
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-width="2.5" viewbox="0 0 24 24" width="18"><polyline points="9 18 15 12 9 6"></polyline></svg>
+</button>
+</div>
+</div>
+</section>
+<div class="wave-div" style="background:#ffffff"><svg preserveaspectratio="none" viewbox="0 0 1440 70"><path d="M0,70 C360,0 1080,0 1440,70 L1440,70 L0,70 Z" fill="#F6F8FC"></path></svg></div>
+<!-- CONTACT / GET STARTED -->
+<section class="contact-bg" id="contact" style="padding:88px 0">
+<div class="container">
+<div style="text-align:center;max-width:680px;margin:0 auto 48px">
+<span class="eyebrow">Contáctenos</span>
+<h2 style="margin:14px 0 12px">Programe una llamada</h2>
+<p class="yb-lead">¿Listo para comenzar a elaborar su hoja de ruta hacia el éxito en línea? Complete el formulario con su información y uno de nuestros expertos se comunicará lo antes posible.</p>
+</div>
+<div class="contact-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start">
+<!-- SCHEDULE PANEL -->
+<div style="background:var(--bg-soft);border-radius:var(--r-xl);padding:36px;border:1px solid var(--line);box-shadow:var(--sh-sm)">
+<div style="text-align:center;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:22px">
+<div style="width:56px;height:56px;background:var(--grad-brand);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-family:var(--font-display);font-weight:800;font-size:22px;color:#fff">YB</div>
+<div style="font-size:12px;font-weight:600;color:var(--fg3);margin-bottom:4px">YB Marketing Equipo</div>
+<div style="font-weight:700;font-size:18px;color:var(--ink);margin-bottom:6px">Reunión de introducción</div>
+<div style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--fg3);background:#fff;border-radius:var(--r-pill);padding:5px 12px;border:1px solid var(--line)">
+<svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="13"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            30 minutos · Gratis
+          </div>
+<p style="font-size:13.5px;color:var(--fg2);margin-top:14px;line-height:1.6">Una reunión de introducción para conocer más sobre su negocio, sus objetivos y cómo podemos ayudarle a crecer. No se requiere compromiso.</p>
+</div>
+<p class="yb-schedule-intro">Elige con quién te gustaría reunirte</p>
+<div class="yb-schedule-grid">
+<div class="yb-schedule-card yb-schedule-card--split">
+<img alt="Jacob Ross" class="yb-schedule-card__photo" height="64" loading="lazy" src="/assets/jacob-headshot.webp" width="64"/>
+<span class="yb-schedule-card__info">
+<span class="yb-schedule-card__name">Jacob Ross</span>
+<a class="yb-schedule-card__cta" href="https://calendly.com/jacobybmarketing" rel="noopener noreferrer" target="_blank">Programar llamada</a>
+<a class="yb-schedule-card__meet" href="/es/about/jacob">Conoce a Jacob</a>
+</span>
+</div>
+<div class="yb-schedule-card yb-schedule-card--split">
+<img alt="Kevin Dean" class="yb-schedule-card__photo" height="64" loading="lazy" src="/assets/kevin-headshot.webp" width="64"/>
+<span class="yb-schedule-card__info">
+<span class="yb-schedule-card__name">Kevin Dean</span>
+<a class="yb-schedule-card__cta" href="https://calendly.com/kdean-wsi" rel="noopener noreferrer" target="_blank">Programar llamada</a>
+<a class="yb-schedule-card__meet" href="/es/about/kevin">Conoce a Kevin</a>
+</span>
+</div>
+<div class="yb-schedule-card yb-schedule-card--split">
+<img alt="Sofía Mann" class="yb-schedule-card__photo" height="64" loading="lazy" src="/assets/sophie-headshot.webp" width="64"/>
+<span class="yb-schedule-card__info">
+<span class="yb-schedule-card__name">Sofía Mann</span>
+<a class="yb-schedule-card__cta" href="https://calendly.com/sophie-yakimabranding/30min" rel="noopener noreferrer" target="_blank">Programar llamada</a>
+<a class="yb-schedule-card__meet" href="/es/about/sophie">Conoce a Sofía</a>
+</span>
+</div>
+</div>
+</div>
+<!-- FORM PANEL -->
+<div class="yb-hs-form-panel" style="background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);padding:28px;box-shadow:var(--sh-sm)">
+<h3 style="font-family:var(--font-display);font-weight:700;font-size:21px;color:var(--ink);margin:0 0 22px">Envíanos un mensaje</h3>
+<div class="yb-hs-form" data-redirect="/thank-you-home" data-source="Home Page">
+<div class="hs-form-frame" data-form-id="c7a3c349-a4e9-4608-9771-9aa39c7f05e1" data-portal-id="243964841" data-region="na2"></div>
+</div>
+<p class="yb-hs-form-footnote">Respondemos el siguiente día hábil. Su información nunca se comparte.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- PARTNER LOGOS MARQUEE -->
+<div class="marquee-section">
+<div class="marquee-label">Herramientas y socios confiables</div>
+<div class="marquee-track">
+<div class="marquee-set">
+<img alt="Contacto constante" class="marquee-logo" src="/assets/logo-constant-contact.webp"/>
+<img alt="CallRail" class="marquee-logo" src="/assets/logo-callrail.webp"/>
+<img alt="Anuncios de Amazon" class="marquee-logo" src="/assets/logo-amazon-ads.webp"/>
+<img alt="Cámara de Comercio del Condado de Kittitas" class="marquee-logo" src="/assets/logo-partner5.webp"/>
+<img alt="Pareja" class="marquee-logo" src="/assets/logo-partner4.webp"/>
+<img alt="BNI" class="marquee-logo" src="/assets/logo-bni.webp"/>
+<img alt="WSI Marketing Digital" class="marquee-logo" src="/assets/logo-wsi.webp"/>
+<img alt="Asociación de Constructores de Viviendas del Centro de Washington." class="marquee-logo" src="/assets/logo-cwhba.webp"/>
+</div>
+<div aria-hidden="true" class="marquee-set">
+<img alt="Contacto constante" class="marquee-logo" src="/assets/logo-constant-contact.webp"/>
+<img alt="CallRail" class="marquee-logo" src="/assets/logo-callrail.webp"/>
+<img alt="Anuncios de Amazon" class="marquee-logo" src="/assets/logo-amazon-ads.webp"/>
+<img alt="Cámara de Comercio del Condado de Kittitas" class="marquee-logo" src="/assets/logo-partner5.webp"/>
+<img alt="Pareja" class="marquee-logo" src="/assets/logo-partner4.webp"/>
+<img alt="BNI" class="marquee-logo" src="/assets/logo-bni.webp"/>
+<img alt="WSI Marketing Digital" class="marquee-logo" src="/assets/logo-wsi.webp"/>
+<img alt="Asociación de Constructores de Viviendas del Centro de Washington." class="marquee-logo" src="/assets/logo-cwhba.webp"/>
+</div>
+</div>
+</div>
+<div class="wave-div" style="background:#F6F8FC"><svg preserveaspectratio="none" viewbox="0 0 1440 70"><path d="M0,30 C480,10 960,70 1440,50 L1440,70 L0,70 Z" fill="#1B2A4A"></path></svg></div>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-mesh"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:11px;margin-bottom:14px">
+          <img src="../assets/yb-logo-white.png" alt="YB" style="width:44px;height:44px;filter:drop-shadow(0 0 3px rgba(255,255,255,.4))">
+          <span style="font-family:var(--font-display);font-weight:800;font-size:22px;color:#fff">YB <span style="color:var(--yb-cyan)">Marketing</span></span>
+        </div>
+        <p>Agencia de marketing digital galardonada que ayuda a las empresas a crecer mediante branding estratégico, SEO y soluciones digitales integrales.</p>
+        <div style="display:grid;gap:9px;margin:16px 0">
+          <a href="tel:5099019735" style="color:var(--fg2-on-dark);font-size:14px;display:flex;align-items:center;gap:9px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(509) 901-9735</a>
+          <a href="mailto:info@yakimabranding.com" style="color:var(--fg2-on-dark);font-size:14px;display:flex;align-items:center;gap:9px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@yakimabranding.com</a>
+        </div>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/yakimabranding" class="social-btn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/yb.marketing_/" class="social-btn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="17" height="17"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a>
+          <a href="https://www.linkedin.com/company/18939370" class="social-btn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="/es/">Inicio</a></li>
+          <li><a href="/es/about">Nosotros</a></li>
+          <li><a href="/es/#services">Servicios</a></li>
+          <li><a href="/es/insights">Ideas</a></li>
+          <li><a href="/es/contact">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="/es/branding">Marca y diseño</a></li>
+          <li><a href="/es/web-design">Diseño web</a></li>
+          <li><a href="/es/seo">Optimización SEO</a></li>
+          <li><a href="/es/google-ads">Google Ads</a></li>
+          <li><a href="/es/social-media">Redes sociales</a></li>
+          <li><a href="/es/press-releases">Comunicados de prensa</a></li>
+          <li><a href="/es/content-marketing">Marketing de contenidos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Nuestro alcance</h4>
+        <p style="color:var(--fg2-on-dark);font-size:14px;line-height:1.7;margin-bottom:14px">Yakima Branding tiene su centro en el centro de Washington, con profundas raíces en la comunidad de Yakima. Desde nuestra sede en Yakima, servimos con orgullo a empresas de todo el Pacífico Noroeste con marketing estratégico, diseño web, SEO, publicidad y soporte de marca.</p>
+        <div style="display:flex;align-items:center;gap:7px;font-size:13px;color:var(--yb-cyan);font-weight:600"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Yakima, WA &nbsp;·&nbsp; Pacific Northwest</div>
+      </div>
+    </div>
+    <div class="footer-locations">
+      <h4>Ubicaciones</h4>
+      <div class="footer-locations-scroll">
+        <div class="footer-locations-track">
+          <div class="footer-locations-set">
+          <a href="/es/locations/boise-id" class="footer-loc-btn">Boise, ID</a>
+          <a href="/es/locations/coeur-dalene-id" class="footer-loc-btn">Coeur d&#x27;Alene, ID</a>
+          <a href="/es/locations/ellensburg-wa" class="footer-loc-btn">Ellensburg, WA</a>
+          <a href="/es/locations/spokane-wa" class="footer-loc-btn">Spokane, WA</a>
+          <a href="/es/locations/tacoma-wa" class="footer-loc-btn">Tacoma, WA</a>
+          <a href="/es/locations/tri-cities-wa" class="footer-loc-btn">Tri-Cities, WA</a>
+          <a href="/es/locations/vancouver-wa" class="footer-loc-btn">Vancouver, WA</a>
+          <a href="/es/locations/walla-walla-wa" class="footer-loc-btn">Walla Walla, WA</a>
+          <a href="/es/locations/wenatchee-wa" class="footer-loc-btn">Wenatchee, WA</a>
+          <a href="/es/locations/yakima-wa" class="footer-loc-btn">Yakima, WA</a>
+          </div>
+          <div class="footer-locations-set" aria-hidden="true">
+          <a href="/es/locations/boise-id" class="footer-loc-btn">Boise, ID</a>
+          <a href="/es/locations/coeur-dalene-id" class="footer-loc-btn">Coeur d&#x27;Alene, ID</a>
+          <a href="/es/locations/ellensburg-wa" class="footer-loc-btn">Ellensburg, WA</a>
+          <a href="/es/locations/spokane-wa" class="footer-loc-btn">Spokane, WA</a>
+          <a href="/es/locations/tacoma-wa" class="footer-loc-btn">Tacoma, WA</a>
+          <a href="/es/locations/tri-cities-wa" class="footer-loc-btn">Tri-Cities, WA</a>
+          <a href="/es/locations/vancouver-wa" class="footer-loc-btn">Vancouver, WA</a>
+          <a href="/es/locations/walla-walla-wa" class="footer-loc-btn">Walla Walla, WA</a>
+          <a href="/es/locations/wenatchee-wa" class="footer-loc-btn">Wenatchee, WA</a>
+          <a href="/es/locations/yakima-wa" class="footer-loc-btn">Yakima, WA</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 YB Marketing. Todos los derechos reservados.</span>
+      <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">
+        <div class="lang-switch lang-switch--footer" role="group" aria-label="Idioma">
+  <a class="lang-switch-opt" href="/" lang="en" hreflang="en">EN</a>
+  <a class="lang-switch-opt is-active" href="/es/" aria-current="page" lang="es" hreflang="es">ES</a>
+</div>
+        <a href="/es/privacy-policy">Política de privacidad</a>
+        <a href="/es/sitemap">Mapa del sitio</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- CONTACT MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalBg(event)">
+<div class="modal">
+<div class="modal-head">
+<div class="modal-head-mesh"></div>
+<div class="modal-head-content">
+<span class="eyebrow" style="color:var(--yb-cyan)">Análisis de marketing gratuito</span>
+<h3>Empecemos</h3>
+</div>
+<button class="modal-close" onclick="closeModalDirect()">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
+</button>
+</div>
+<form action="#" class="modal-form yb-contact-form" id="modalForm" method="post">
+<div class="field"><label>Nombre *</label><input placeholder="Su nombre" required="" type="text"/></div>
+<div class="field"><label>Correo electrónico *</label><input placeholder="you@company.com" required="" type="email"/></div>
+<div class="field"><label>Nombre de la empresa o URL *</label><input placeholder="tuempresa.com" required="" type="text"/></div>
+<div class="field"><label>¿Cómo podemos ayudar?</label><textarea placeholder="Cuéntanos tu proyecto…"></textarea></div>
+<button class="btn btn-grad" style="justify-content:center;width:100%" type="submit">Enviar mensaje
+        <svg fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="17"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</button>
+</form>
+<div class="modal-success" id="modalSuccess">
+<div class="success-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+<h3 class="yb-h3" style="margin:0 0 8px">Gracias, ¡estaremos en contacto!</h3>
+<p style="margin:0 0 22px;font-size:15px">Uno de nuestros expertos se comunicará con usted dentro de 2 horas hábiles.</p>
+<button class="btn btn-grad" onclick="closeModalDirect()">Cerca</button>
+</div>
+</div>
+</div>
+<script>
+// Header scroll
+const hdr = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  hdr.className = 'header ' + (window.scrollY > 20 ? 'solid' : 'top');
+}, { passive: true });
+
+// Mobile menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+function closeMobile() { mobileMenu.classList.remove('open'); }
+
+// Stat counters
+const nums = document.querySelectorAll('.stat-num[data-target]');
+const statIO = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    statIO.unobserve(e.target);
+    const end = +e.target.dataset.target, sfx = e.target.dataset.suffix || '';
+    const dur = 1400, t0 = performance.now();
+    (function tick(t) {
+      const p = Math.min(1, (t - t0) / dur);
+      e.target.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))) + (p >= 1 ? sfx : '');
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+  });
+}, { threshold: 0.5 });
+nums.forEach(n => statIO.observe(n));
+
+// Modal
+const overlay = document.getElementById('modalOverlay');
+const mForm = document.getElementById('modalForm');
+const mSuccess = document.getElementById('modalSuccess');
+function openModal() {
+  overlay.classList.add('open');
+  mForm.classList.remove('hide');
+  mSuccess.classList.remove('show');
+  document.body.style.overflow = 'hidden';
+}
+function closeModalBg(e) { if (e.target === overlay) closeModalDirect(); }
+function closeModalDirect() {
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
+</script>
+<script defer="" src="/js/hubspot-form.js"></script>
+<script defer="" src="https://js-na2.hsforms.net/forms/embed/243964841.js"></script>
+<script defer="" src="/js/hero-orbit.js"></script>
+<script defer="" src="/js/contact-forms.js"></script>
+<script defer="" src="/js/newsletter-popup.js"></script>
+<script defer="" src="/js/chat-widget.js"></script>
+<script defer="" src="/js/site.js"></script>
+<script defer="" src="/js/blog-insights.js"></script>
+<!-- yb-attributer-start -->
+<!-- yb-attributer-end -->
+</body>
+</html>

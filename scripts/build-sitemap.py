@@ -24,7 +24,7 @@ CANONICAL_RE = re.compile(r'<link rel="canonical" href="([^"]+)"', re.IGNORECASE
 SITEMAP_LINK_RE = re.compile(r'<a href="#">Sitemap</a>')
 SITEMAP_LINKED_RE = re.compile(r'<a href="[^"]*sitemap(?:\.html)?">Sitemap</a>')
 
-EXCLUDE_DIRS = {"preview", "partials", "ui_kits", "posts", "scripts", "assets", "js", "node_modules", "blog"}
+EXCLUDE_DIRS = {"preview", "partials", "ui_kits", "posts", "scripts", "assets", "js", "node_modules", "blog", "es", "next", "_next", "data"}
 POSTS_DATA = ROOT / "blog" / "data" / "posts.json"
 ROOT_PAGES = [
     ("index.html", "Home"),
@@ -272,30 +272,66 @@ def collect_post_urls() -> list[tuple[str, str, str, str]]:
     return entries
 
 
+def spanish_url_for(en_url: str) -> str:
+    if en_url.rstrip("/") == SITE:
+        return f"{SITE}/es"
+    if en_url.startswith(f"{SITE}/"):
+        return f"{SITE}/es/{en_url[len(SITE) + 1 :].rstrip('/')}"
+    return f"{SITE}/es"
+
+
 def render_url_entry(
     url: str,
     changefreq: str,
     priority: str,
     lastmod: Optional[str] = None,
+    alternate_es: Optional[str] = None,
 ) -> str:
     lastmod_line = f"\n    <lastmod>{lastmod}</lastmod>" if lastmod else ""
+    hreflang = ""
+    if alternate_es:
+        en = url
+        es = alternate_es
+        hreflang = f"""
+    <xhtml:link rel="alternate" hreflang="en" href="{escape(en)}"/>
+    <xhtml:link rel="alternate" hreflang="es" href="{escape(es)}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="{escape(en)}"/>"""
     return f"""  <url>
     <loc>{escape(url)}</loc>{lastmod_line}
     <changefreq>{changefreq}</changefreq>
-    <priority>{priority}</priority>
+    <priority>{priority}</priority>{hreflang}
   </url>"""
 
 
-def build_urlset_xml(entries: list[tuple[str, str, str, Optional[str]]]) -> str:
-    body = "\n".join(
-        render_url_entry(url, changefreq, priority, lastmod)
-        for url, changefreq, priority, lastmod in entries
-    )
+def build_urlset_xml(entries: list[tuple]) -> str:
+    body_parts = []
+    for entry in entries:
+        url, changefreq, priority, lastmod = entry[:4]
+        alternate_es = entry[4] if len(entry) > 4 else None
+        body_parts.append(render_url_entry(url, changefreq, priority, lastmod, alternate_es))
+    body = "\n".join(body_parts)
     return f"""<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 {body}
 </urlset>
 """
+
+
+def expand_with_spanish(
+    entries: list[tuple[str, str, str, Optional[str]]],
+) -> list[tuple]:
+    expanded: list[tuple] = []
+    for url, changefreq, priority, lastmod in entries:
+        es = spanish_url_for(url)
+        expanded.append((url, changefreq, priority, lastmod, es))
+        try:
+            p = max(0.1, float(priority) - 0.1)
+            es_priority = f"{p:.1f}"
+        except ValueError:
+            es_priority = priority
+        expanded.append((es, changefreq, es_priority, lastmod, None))
+    return expanded
 
 
 def build_sitemap_index(lastmods: dict[str, str]) -> str:
@@ -314,8 +350,8 @@ def build_sitemap_index(lastmods: dict[str, str]) -> str:
 
 
 def write_xml_sitemaps() -> None:
-    page_entries = collect_page_urls()
-    post_entries = collect_post_urls()
+    page_entries = expand_with_spanish(collect_page_urls())
+    post_entries = expand_with_spanish(collect_post_urls())
 
     pages_path = ROOT / "sitemap-pages.xml"
     posts_path = ROOT / "sitemap-posts.xml"
@@ -338,7 +374,7 @@ def write_xml_sitemaps() -> None:
 
     print(f"wrote {pages_path.relative_to(ROOT)} ({len(page_entries)} URLs)")
     print(f"wrote {posts_path.relative_to(ROOT)} ({len(post_entries)} URLs)")
-    print(f"wrote {index_path.relative_to(ROOT)} (index)")
+    print(f"wrote {index_path.relative_to(ROOT)}")
 
 
 def render_link_list(links: list[tuple[str, str]], list_class: str = "") -> str:

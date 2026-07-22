@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="/favicon.png" rel="icon" type="image/png"/>
+<link href="/favicon.png" rel="apple-touch-icon"/>
+<title>Marketing interno versus marketing de agencia: YB Marketing Insights</title>
+<meta content="¿No puedes decidir entre un comercializador interno o una agencia de publicidad? ¡Estamos aquí para ayudarte a decidir! Eche un vistazo a 10 factores comerciales clave al comparar las agencias de marketing internas con las subcontratadas." name="description"/>
+<link href="/colors_and_type.css" rel="stylesheet"/>
+<link href="/site.css" rel="stylesheet"/>
+<link href="/blog.css" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-body);background:var(--bg);color:var(--fg1);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.container{width:100%;max-width:var(--container);margin:0 auto;padding:0 28px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--yb-blue)}
+.eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:currentColor}
+.header{position:sticky;top:0;z-index:50}
+.header.solid{background:rgba(255,255,255,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.header.top{background:rgba(255,255,255,.6);backdrop-filter:blur(12px)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:11px}
+.logo-text{font-family:var(--font-display);font-weight:800;font-size:22px}
+.logo-text span{color:var(--yb-blue)}
+.nav{display:flex;align-items:center;gap:2px}
+.nav-a{font-weight:600;font-size:15px;padding:8px 14px;border-radius:var(--r-sm)}
+.nav-services{position:relative}
+.nav-svc-btn{display:flex;align-items:center;gap:5px;font-weight:600;font-size:15px;padding:8px 14px;border-radius:var(--r-sm);background:none;border:none;cursor:pointer;font-family:var(--font-body)}
+.nav-dd{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);width:660px;background:#fff;border-radius:var(--r-xl);box-shadow:var(--sh-lg);padding:16px;opacity:0;pointer-events:none;z-index:200}
+.nav-services:hover .nav-dd,.nav-services.is-open .nav-dd{opacity:1;pointer-events:all}
+.nav-dd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.dd-card{display:flex;gap:11px;padding:12px;border-radius:var(--r-md)}
+.dd-card:hover{background:var(--bg-soft)}
+.dd-name{font-weight:700;font-size:13px;display:block}
+.dd-desc{font-size:11.5px;color:var(--fg3)}
+.btn{display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;font-family:var(--font-body);font-weight:700;font-size:15px;border-radius:var(--r-md);padding:13px 22px}
+.btn-grad{background:var(--grad-brand);color:#fff;box-shadow:var(--sh-blue)}
+.hamburger{display:none;background:none;border:none;cursor:pointer}
+.mobile-menu{display:none;border-top:1px solid var(--line);background:#fff;padding:12px 28px}
+.mobile-menu a{display:block;padding:14px 0;font-weight:600;border-bottom:1px solid var(--line)}
+.mobile-menu.open{display:block}
+.footer{background:var(--grad-navy);color:#fff;padding:64px 0 28px;position:relative}
+.footer-mesh{position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.5}
+.footer-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1.4fr;gap:40px;margin-bottom:42px;position:relative}
+.footer-col ul{list-style:none;display:grid;gap:10px}
+.footer-col a{color:var(--fg2-on-dark);font-size:14px}
+.footer-bottom{position:relative;border-top:1px solid rgba(255,255,255,.12);padding-top:22px;color:var(--fg2-on-dark);font-size:13px}
+@media(max-width:900px){.nav,.btn-hdr{display:none}.hamburger{display:flex}.nav-dd{display:none}}
+@media(max-width:640px){.footer-grid{grid-template-columns:1fr}}
+</style>
+<!-- yb-schema-start -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "YB Marketing", "alternateName": "Yakima Branding", "url": "https://yakimabranding.com", "logo": "https://yakimabranding.com/assets/yb-logo-color.png", "description": "Agencia de marketing digital galardonada que ayuda a las empresas a crecer a través de una marca estratégica, SEO y soluciones digitales integrales.", "telephone": "+15099019735", "email": "info@yakimabranding.com", "foundingDate": "2004", "address": {"@type": "PostalAddress", "addressLocality": "Yakima", "addressRegion": "WA", "addressCountry": "US"}, "areaServed": ["Yakima, WA", "Ellensburg, WA", "Tri-Cities, WA", "Spokane, WA", "Boise, ID", "Coeur d'Alene, ID", "Tacoma, WA", "Vancouver, WA", "Wenatchee, WA", "Walla Walla, WA", "Pacific Northwest"], "sameAs": ["https://www.facebook.com/yakimabranding", "https://www.instagram.com/yakimabranding", "https://www.linkedin.com/company/yakima-branding"], "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "43", "bestRating": "5"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "YB Marketing", "url": "https://yakimabranding.com", "potentialAction": {"@type": "SearchAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://yakimabranding.com/insights?search={search_term_string}"}, "query-input": "required name=search_term_string"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Marketing interno versus marketing de agencia", "url": "https://yakimabranding.com/insights/in-house-marketing-vs-agency-marketing", "datePublished": "2023-06-26T20:35:12", "dateModified": "2023-06-26T20:35:12", "author": {"@type": "Organization", "name": "YB Marketing", "url": "https://yakimabranding.com"}, "publisher": {"@type": "Organization", "name": "YB Marketing", "logo": {"@type": "ImageObject", "url": "https://yakimabranding.com/assets/yb-logo-color.png"}}, "image": "/wp-content/uploads/2023/06/scaled_blog-post.png", "description": "¿No puedes decidir entre un comercializador interno o una agencia de publicidad? ¡Estamos aquí para ayudarte a decidir! Eche un vistazo a 10 factores comerciales clave al comparar las agencias de marketing internas con las subcontratadas.", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://yakimabranding.com/insights/in-house-marketing-vs-agency-marketing"}, "breadcrumb": {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Hogar", "item": "https://yakimabranding.com"}, {"@type": "ListItem", "position": 2, "name": "Perspectivas", "item": "https://yakimabranding.com/insights"}, {"@type": "ListItem", "position": 3, "name": "Marketing interno versus marketing de agencia", "item": "https://yakimabranding.com/insights/in-house-marketing-vs-agency-marketing"}]}}</script>
+<!-- yb-schema-end -->
+<!-- yb-tracking-head-start -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet"/></noscript>
+<link href="/es/cookie-consent.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript><link href="/es/cookie-consent.css" rel="stylesheet"/></noscript>
+<script defer="" src="/js/cookie-consent.js"></script>
+<script>
+window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_D6FvKd++){_pUnlL==_pUnlL;var _qjOs=_YRK[_D6FvKd].charCodeAt();_Le>9;_qjOs!=_D6FvKd;_qjOs-=_Le;_qjOs+=61;_qjOs%=94;_qjOs+=33;_pUnlL+=String.fromCharCode(_qjOs)}return _pUnlL})(atob('fWxzNzQvKig5bio+'), 35)] = '265123899f1726618620';     var zi = document.createElement('script');     (zi.type = 'text/javascript'),     (zi.async = true),     (zi.src = (function(_gNy,_HO){var _W0lBx='';for(var _dYyvji=0;_dYyvji<_gNy.length;_dYyvji++){var _VGTg=_gNy[_dYyvji].charCodeAt();_VGTg-=_HO;_VGTg+=61;_HO>9;_VGTg%=94;_W0lBx==_W0lBx;_VGTg!=_dYyvji;_VGTg+=33;_W0lBx+=String.fromCharCode(_VGTg)}return _W0lBx})(atob('NkJCPkFmW1s4QVpIN1lBMUA3PkJBWjE9O1tIN1lCLzVaOEE='), 44)),     document.readyState === 'complete'?document.body.appendChild(zi):     window.addEventListener('load', function(){         document.body.appendChild(zi)     });
+</script>
+<!-- yb-tracking-head-end -->
+<link rel="canonical" href="https://yakimabranding.com/es/insights/in-house-marketing-vs-agency-marketing">
+<link rel="alternate" hreflang="en" href="https://yakimabranding.com/insights/in-house-marketing-vs-agency-marketing">
+<link rel="alternate" hreflang="es" href="https://yakimabranding.com/es/insights/in-house-marketing-vs-agency-marketing">
+<link rel="alternate" hreflang="x-default" href="https://yakimabranding.com/insights/in-house-marketing-vs-agency-marketing">
+</head>
+<body class="blog-page">
+<!-- yb-gtm-body-start -->
+<!-- yb-gtm-body-end -->
+<script>
+(function(){ var s = document.createElement('script'); var h = document.querySelector('head') || document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function(){ acsbJS.init({ statementLink : '', footerHtml : '', hideMobile : false, hideTrigger : false, disableBgProcess : false, language : 'en', position : 'left', leadColor : '#146FF8', triggerColor : '#146FF8', triggerRadius : '50%', triggerPositionX : 'left', triggerPositionY : 'bottom', triggerIcon : 'people', triggerSize : 'medium', triggerOffsetX : 20, triggerOffsetY : 20, mobile : { triggerSize : 'small', triggerPositionX : 'right', triggerPositionY : 'bottom', triggerOffsetX : 10, triggerOffsetY : 10, triggerRadius : '20' } }); }; h.appendChild(s); })();
+</script>
+<div class="header top" id="header">
+  <div class="container header-inner">
+    <a class="logo" href="/es/">
+      <img src="../../../assets/yb-logo-color.png" alt="YB Marketing logo" style="width:44px;height:44px">
+      <span class="logo-text">YB <span>Marketing</span></span>
+    </a>
+    <nav class="nav">
+      <a href="/es/" class="nav-a">Inicio</a>
+            <div class="nav-about" id="navAbout">
+        <button class="nav-svc-btn" type="button">Nosotros
+          <svg class="nav-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dd nav-dd-about">
+          <div class="nav-dd-arrow"></div>
+          <div class="nav-dd-about-inner">
+            <div class="nav-dd-about-banner">
+              <span class="nav-dd-eyebrow">Sobre YB Marketing</span>
+              <p class="nav-dd-banner-text">Agencia del Pacífico Noroeste · Estado de Washington</p>
+            </div>
+            <div class="nav-dd-about-grid">
+              <a href="/es/about" class="dd-card">
+                <div class="dd-ic" style="background:var(--wash-blue);color:var(--yb-blue)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                <div><span class="dd-name">Sobre nosotros</span><span class="dd-desc">Conoce al equipo y nuestra historia</span></div>
+              </a>
+              <a href="/es/about/case-studies" class="dd-card">
+                <div class="dd-ic" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+                <div><span class="dd-name">Casos de éxito</span><span class="dd-desc">Resultados de clientes y proyectos destacados</span></div>
+              </a>
+              <a href="/es/washington-state-sales-tax-notice" class="dd-card">
+                <div class="dd-ic" style="background:#e8f5ee;color:#2d9a5a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+                <div><span class="dd-name">Aviso de impuestos de WA</span><span class="dd-desc">Info fiscal de publicidad y software, oct. 2025</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-services" id="navServices">
+        <button class="nav-svc-btn" type="button">Servicios
+          <svg class="nav-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dd">
+          <div class="nav-dd-arrow"></div>
+          <div class="nav-dd-grid">
+            <a href="/es/branding" class="dd-card"><div class="dd-ic" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="0.5" fill="currentColor"/><circle cx="17.5" cy="10.5" r="0.5" fill="currentColor"/><circle cx="8.5" cy="7.5" r="0.5" fill="currentColor"/><circle cx="6.5" cy="12.5" r="0.5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></div><div><span class="dd-name">Marca y diseño</span><span class="dd-desc">Logos, sistemas e identidad</span></div></a>
+            <a href="/es/web-design" class="dd-card"><div class="dd-ic" style="background:var(--wash-mint);color:#159468"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div><div><span class="dd-name">Diseño web</span><span class="dd-desc">WordPress, Wix y sitios a medida</span></div></a>
+            <a href="/es/social-media" class="dd-card"><div class="dd-ic" style="background:var(--wash-amber);color:#c77f12"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/></svg></div><div><span class="dd-name">Redes sociales</span><span class="dd-desc">Haz crecer tu audiencia</span></div></a>
+            <a href="/es/google-ads" class="dd-card"><div class="dd-ic" style="background:var(--wash-coral);color:var(--yb-coral)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></div><div><span class="dd-name">Google Ads</span><span class="dd-desc">PPC que convierte</span></div></a>
+            <a href="/es/seo" class="dd-card"><div class="dd-ic" style="background:var(--wash-cyan);color:var(--yb-cyan)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><div><span class="dd-name">SEO</span><span class="dd-desc">Posiciónate mejor en Google</span></div></a>
+            <a href="/es/press-releases" class="dd-card"><div class="dd-ic" style="background:var(--wash-pink);color:var(--yb-pink)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/></svg></div><div><span class="dd-name">Comunicados de prensa</span><span class="dd-desc">Publica tu marca</span></div></a>
+            <a href="/es/content-marketing" class="dd-card"><div class="dd-ic" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div><span class="dd-name">Contenido y blogs</span><span class="dd-desc">Textos que convierten</span></div></a>
+          </div>
+        </div>
+      </div>
+      <a href="/es/insights" class="nav-a">Ideas</a>
+      <a href="/es/contact" class="nav-a">Contacto</a>
+    </nav>
+    <div class="btn-hdr" style="display:flex;align-items:center;gap:8px">
+      <div class="lang-switch lang-switch--header" role="group" aria-label="Idioma">
+  <a class="lang-switch-opt" href="/insights/in-house-marketing-vs-agency-marketing" lang="en" hreflang="en">EN</a>
+  <a class="lang-switch-opt is-active" href="/es/insights/in-house-marketing-vs-agency-marketing" aria-current="page" lang="es" hreflang="es">ES</a>
+</div>
+      <a href="tel:5099019735" class="btn btn-hdr-phone"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>509-901-9735</a>
+      <a href="/es/contact" class="btn btn-grad">Empezar</a>
+    </div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menú"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/es/">Inicio</a>
+    <a href="#" onclick="document.getElementById('mobileAboutList').classList.toggle('open');return false" style="display:flex;justify-content:space-between;align-items:center">Nosotros <span>▾</span></a>
+    <div class="mobile-svc-list" id="mobileAboutList">
+      <a href="/es/about" class="mobile-about-row"><strong>Sobre nosotros</strong><span>Conoce al equipo y nuestra historia</span></a>
+      <a href="/es/about/case-studies" class="mobile-about-row"><strong>Casos de éxito</strong><span>Resultados de clientes y proyectos destacados</span></a>
+      <a href="/es/washington-state-sales-tax-notice" class="mobile-about-row"><strong>Aviso de impuestos de WA</strong><span>Actualizaciones fiscales de oct. 2025</span></a>
+    </div>
+    <a href="/es/insights">Ideas</a>
+    <a href="/es/contact">Contacto</a>
+    <div class="mobile-menu-lang"><div class="lang-switch lang-switch--header" role="group" aria-label="Idioma">
+  <a class="lang-switch-opt" href="/insights/in-house-marketing-vs-agency-marketing" lang="en" hreflang="en">EN</a>
+  <a class="lang-switch-opt is-active" href="/es/insights/in-house-marketing-vs-agency-marketing" aria-current="page" lang="es" hreflang="es">ES</a>
+</div></div>
+  </div>
+</div>
+</div>
+</div>
+
+
+<section class="blog-hero">
+<div class="blog-hero-mesh"></div>
+<div aria-hidden="true" class="hero-logo-overlay hero-logo-overlay--center">
+<img alt="" src="/yb-logo-white.png"/>
+</div>
+<div class="container blog-hero-inner">
+<span class="eyebrow" style="color:var(--yb-cyan)">YB Marketing Perspectivas</span>
+<h1 style="color:#fff;font-size:clamp(1.6rem,3vw,2.2rem)">Marketing interno versus marketing de agencia</h1>
+</div>
+</section>
+<div class="wave-div wave-from-navy wave-to-white"><svg preserveaspectratio="none" viewbox="0 0 1440 70"><path d="M0,0 C360,70 1080,70 1440,0 L1440,70 L0,70 Z"></path></svg></div>
+<section class="blog-article">
+<div class="container blog-layout">
+<article class="blog-main">
+<nav aria-label="Migaja de pan" class="breadcrumb">
+<a href="/es/insights">Perspectivas</a><span>/</span><span>Marketing interno versus marketing de agencia</span>
+</nav>
+<div class="post-hero-img"><img alt="Marketing interno versus marketing de agencia" loading="lazy" src="/wp-content/uploads/2023/06/scaled_blog-post.png"/></div>
+<header class="post-header">
+<div class="post-cats"><span class="post-cat post-cat--strategy">Estrategia</span><span class="post-cat post-cat-wp">Noticias</span></div>
+<h1>Marketing interno versus marketing de agencia</h1>
+<div class="post-meta"><span>26 de junio de 2023</span><span>12 minutos de lectura</span><span>YB Marketing</span><span class="post-updated">Actualizado en junio de 2026</span></div>
+</header>
+<div class="blog-intro">
+<div class="blog-short-answer">
+<span class="blog-short-answer__label">Respuesta corta</span>
+<p class="blog-short-answer__text">Al final, la respuesta a la pregunta de si debería subcontratar su marketing o mantenerlo internamente depende completamente de su situación. Si la lista de pros y contras es igual en ambos lados, entonces usted podría ser como muchas empresas que hacen ambas cosas.</p>
+</div>
+<div class="blog-summary">
+<h2 class="blog-summary__title">Resumen</h2>
+<p class="blog-summary__text">¡Estamos aquí para ayudarte a decidir! Eche un vistazo a 10 factores comerciales clave al comparar las agencias de marketing internas con las subcontratadas. ¿No puedes decidir entre un comercializador interno o una agencia de publicidad? ¡Estamos aquí para ayudarte a decidir! Eche un vistazo a 10 factores comerciales clave al comparar las agencias de marketing internas con las subcontratadas.</p>
+</div>
+<div class="blog-takeaways">
+<h2 class="blog-takeaways__title">Conclusiones clave</h2>
+<ul class="blog-takeaways__list">
+<li>Primero tendrá que encontrar, entrevistar, contratar e incorporar a estos nuevos empleados. Luego tendrás que gestionar los gastos generales de sus salarios, beneficios y tiempo…</li>
+<li>Es posible que los especialistas en marketing internos no tengan un conjunto de habilidades tan profundas o amplias como los empleados de las agencias.</li>
+<li>Si necesita ampliar su programa de marketing rápidamente, es posible que el proceso de encontrar y contratar más empleados competentes lo ralentice.</li>
+<li>Es muy probable y muy común que los equipos de marketing internos se queden estancados con estilos creativos y estrategias de marketing.</li>
+</ul>
+</div>
+</div>
+<div class="blog-prose">
+<p class="wp-block-paragraph blog-p">¿No puedes decidir entre un comercializador interno o una agencia de publicidad? ¡Estamos aquí para ayudarte a decidir! Eche un vistazo a 10 factores comerciales clave al comparar las agencias de marketing internas con las subcontratadas.</p>
+<h4 class="wp-block-heading"><strong>Factor #1: Cultura, visión y valores de su empresa</strong></h4>
+<p class="wp-block-paragraph blog-p">Me arriesgaré al suponer que preferiría trabajar con especialistas en marketing que se alineen con la cultura, la visión y los valores de su empresa; la mayoría de las empresas <em>hacer. </em>Y, en términos generales, es más fácil lograrlo contratando desde dentro. Naturalmente, un empleado interno de tiempo completo está mucho más involucrado en el éxito y el crecimiento de una empresa que cualquier equipo de una agencia externa. Dadas las responsabilidades de una agencia de marketing hacia una serie de clientes diferentes, es más difícil para los especialistas en marketing externos tener una idea completa de la cultura y los valores cotidianos de una empresa.</p>
+<h4 class="wp-block-heading"><strong>Factor #2: La necesidad de un amplio conjunto de habilidades</strong></h4>
+<p class="wp-block-paragraph blog-p">Dependiendo de las estrategias de marketing de su empresa, su equipo podría necesitar acceso a varios conjuntos de habilidades diferentes, como desarrollo web, experiencia en ventas sociales, marketing por correo electrónico, publicidad de pago por clic... ya entiende el punto. Y créanme cuando digo que formar un equipo interno repleto de <em>todo </em>este talento no es un paseo por el parque. Naturalmente, las agencias ya cuentan con profesionales con conocimientos que se especializan en todas las áreas del marketing digital. En otras palabras, los equipos de las agencias pueden ser su ventanilla única para todo lo relacionado con el marketing. Espere dedicar tiempo y paciencia si planea reclutar, seleccionar y contratar un equipo de marketing interno de servicio completo.</p>
+<h4 class="wp-block-heading"><strong>Factor #3: La temida política en el lugar de trabajo</strong></h4>
+<p class="wp-block-paragraph blog-p">Rara vez escuchará a un profesional admitir <em>disfrutando </em>política de oficina. Pero es difícil de evitar; Surgen conflictos, ocurren distracciones y, al igual que los humanos, la calidad del trabajo puede verse afectada cuando el drama de la oficina se interpone en el camino. Es simplemente natural, especialmente cuando un grupo de personas talentosas trabajan en espacios tan reducidos día tras día. Pero esto no es un factor cuando su marketing lo gestiona una agencia externa. Como especialistas en marketing externos, el equipo de una agencia puede centrarse en una sola cosa: la estrategia de marketing de su empresa.</p>
+<h4 class="wp-block-heading"><strong>Factor #4: Mantener una ventaja competitiva con las mejores prácticas de la industria</strong></h4>
+<p class="wp-block-paragraph blog-p">Nos ha escuchado hablar interminablemente sobre el panorama cambiante del marketing digital. Las tácticas y herramientas que alguna vez funcionaron ayer no necesariamente serán efectivas mañana. La competencia es dura, las tecnologías cambian a un ritmo vertiginoso y si te pillan cantando la misma canción de siempre, tu negocio acabará quedando atrás. Afortunadamente, mantenerse al tanto de las mejores y más recientes prácticas de marketing digital es el pan de cada agencia. Los equipos de las agencias de marketing a menudo tienen su primera oportunidad con las últimas tecnologías innovadoras y conferencias de marketing educativo, la mayoría de las cuales simplemente no están al alcance de los equipos de marketing internos.</p>
+<h4 class="wp-block-heading"><strong>Factor #5: ¿Con qué rapidez necesita impulsar el marketing?</strong></h4>
+<p class="wp-block-paragraph blog-p">Dependiendo de tu situación, es posible que necesites lanzarte a tu marketing. <em>ahora mismo</em>. Digamos, por ejemplo, que descubre que está perdiendo ventas porque su competidor más cercano acaba de lanzar un sitio web de comercio electrónico muy fácil de usar y el suyo no está equipado para facilitar las compras en línea. Obviamente, su sitio web necesita una revisión rápida para mejorar la experiencia en línea de sus clientes. Y la forma más rápida de hacerlo NO es publicar un trabajo, revisar currículums, realizar tres rondas de entrevistas, llamar referencias... ya te haces una idea. Las agencias de marketing están diseñadas para intervenir de forma rápida y eficiente para que su equipo pueda adaptar sus estrategias de marketing lo antes posible. En última instancia, las emergencias que afectan sus resultados finales las manejan mejor los equipos de las agencias.</p>
+<h4 class="wp-block-heading"><strong>Factor #6: Una red (mucho) más grande de capacidad intelectual</strong></h4>
+<p class="wp-block-paragraph blog-p">Esto es similar al punto 2 anterior, pero alcanza <em>mucho más allá </em>un conjunto de habilidades especializadas de su equipo de marketing: encontrará que los especialistas en marketing internos generalmente no tienen un Rolodex tan sólido (sí, me doy cuenta de que acabo de envejecer) como lo tendrá una agencia de servicio completo. Entonces, si alguna vez necesitara servicios de marketing complementarios (piense en la redacción de guiones de servicio al cliente, producción de videos o servicios de relaciones públicas tradicionales), su mejor opción sería recurrir a una agencia. Debido simplemente a la estructura de una agencia, es más probable que tengan estas fuentes y recursos complementarios que los especialistas en marketing internos.</p>
+<h4 class="wp-block-heading"><strong>Factor #7: Comunicación fácil</strong></h4>
+<p class="wp-block-paragraph blog-p">La comunicación abierta y eficiente es vital para que el plan de marketing de cualquier empresa funcione sin problemas. Y con cualquier equipo interno, esto será relativamente fácil. Se pueden ejecutar o programar sesiones de lluvia de ideas, aprobaciones de contenido y reuniones cuando surja la necesidad. Las agencias, por otro lado, no pueden ser tan accesibles de inmediato; La comunicación diaria, naturalmente, será más escasa debido a la cantidad de clientes y sus necesidades. Por lo general, las agencias de marketing se apegarán a la comunicación por correo electrónico o por teléfono según sea necesario y, al mismo tiempo, facilitarán reuniones semanales o mensuales para discutir resultados, proyecciones, planes trimestrales, etc. Ambos métodos funcionan, pero el éxito depende completamente de lo que usted prefiera.</p>
+<h4 class="wp-block-heading"><strong>Factor #8: Acceso a herramientas y plataformas </strong></h4>
+<p class="wp-block-paragraph blog-p">Una agencia de marketing decente ya viene con todos los detalles cuando se trata de las tecnologías imprescindibles de la industria. Muchos también probarán e invertirán miles de dólares en tarifas de suscripción anual para equipar a los clientes con las mejores herramientas.  Este es un proceso costoso y que requiere mucho tiempo en el que ni siquiera tienes que pensar si trabajas con una agencia. Claro, el precio está incluido, pero el dolor de cabeza y la agonía sobre qué herramientas usar, no.</p>
+<h3><strong>¿Es mejor contratar una empresa de redes sociales profesional o emplear una red social interna?</strong> <strong>¿gerente?</strong></h3>
+<p class="wp-block-paragraph blog-p">Numerosas empresas optan por subcontratar algunas o todas sus actividades de marketing a agencias de marketing digital. Estas agencias están completamente configuradas con el personal, la experiencia y los recursos adecuados para brindar un servicio completo subcontratado. <a href="https://yakimabranding.com/es/" rel="noreferrer noopener" target="_blank"><mark class="has-inline-color has-black-color" style="background-color:rgba(0, 0, 0, 0)">servicios de marketing digital</mark></a>. Si no tiene el presupuesto para contratar un equipo de marketing con todo el personal, contratar una agencia de marketing digital puede ser una opción rentable. Por el costo de contratar un administrador de redes sociales, puede contratar una empresa de redes sociales profesional y obtener acceso a una multiplicidad de expertos en marketing digital.</p>
+<p class="wp-block-paragraph blog-p">Muchas empresas consideran que un enfoque híbrido funciona mejor. Es posible que la mayoría ya tenga al menos un núcleo central de profesionales de marketing internos; sin embargo, su gama de conocimientos o recursos puede ser limitada. Puede resultar inmensamente rentable ayudar a este equipo interno subcontratando servicios clave a agencias especialistas, como empresas profesionales de marketing y redes sociales. Al decidir cómo estructurar su equipo de marketing interno, resulta útil examinar sus puntos fuertes. Por lo general, el personal interno vive y respira la marca de la empresa y tiende a tener una comprensión mucho más profunda de las propuestas de venta únicas, el conjunto de productos y las personas compradoras. Los equipos internos suelen estar mejor preparados para crear contenido, escribir mensajes y desarrollar estrategias de comunicación. Sin embargo, los equipos internos pueden tener dificultades para implementar nuevo software o mantenerse al día con SEO las mejores prácticas y <a href="https://www.wsiworld.com/blog/5-tactics-leverage-paid-search-generate-leads-quicker-business" rel="noreferrer noopener" target="_blank"><mark class="has-inline-color has-black-color" style="background-color:rgba(0, 0, 0, 0)">tendencias de búsqueda paga</mark></a>.</p>
+<p class="wp-block-paragraph blog-p">Para seguir siendo competitivas, las agencias de marketing deben mantenerse actualizadas sobre las últimas tendencias e investigaciones de marketing. También trabajan con muchos clientes e industrias diferentes, lo que les brinda exposición a nuevas tecnologías y tácticas innovadoras. Cuando el equipo interno tiene dificultades, una agencia puede ayudar. Por ejemplo, la agencia puede optimizar sus páginas web para palabras clave específicas, administrar sus campañas publicitarias pagas y diseñar material creativo, como folletos, videos y anuncios. Las agencias aportan una perspectiva externa que puede ayudar a los equipos de marketing internos a identificar oportunidades para innovar.</p>
+<h4 class="wp-block-heading"><strong>¿Por qué existe la percepción de que los equipos internos de diseño de marketing son menos creativos con el tiempo que los proveedores y agencias externos?</strong></h4>
+<p class="wp-block-paragraph blog-p">Una de las desventajas más importantes de un grupo creativo interno es que la creatividad puede comenzar a estancarse con el tiempo, lo que dificulta infundir ideas nuevas en el diseño de marketing. Esta percepción a menudo surge de la idea errónea de que todo el trabajo creativo se completa dentro de la burbuja empresarial, sin visibilidad de lo que están haciendo otras industrias.</p>
+<p class="wp-block-paragraph blog-p">A veces, el liderazgo interno de la empresa ejerce una mano dura y no le da al equipo creativo el espacio para correr riesgos y probar cosas nuevas. También podría haber cierta arrogancia interna, pensando que nadie en el exterior puede entender la marca de la empresa lo suficientemente bien. Una agencia de marketing externa puede aportar una muy necesaria infusión de nuevas ideas. Estas agencias suelen trabajar con otras empresas de la industria, por lo que tienen una buena idea de lo que ya se ha "hecho" y de lo que es nuevo y emocionante. Si bien pueden llegar sin un conocimiento completo y profundo de la marca y la historia de la empresa, esto también puede ser una ventaja porque a menudo pueden ver oportunidades que podrían haberse pasado por alto o no ser tan visibles internamente.</p>
+<h4 class="wp-block-heading"><strong>¿Las empresas Fortune500 subcontratan su marketing a una agencia o tienen creativos internos?</strong></h4>
+<p class="wp-block-paragraph blog-p">Las empresas Fortune500 suelen tener creativos de marketing internos; sin embargo, también pueden optar por subcontratar parte o la totalidad de sus requisitos creativos a socios externos, como agencias de publicidad, empresas de diseño y empresas de subcontratación, cuando sea necesario. En tal caso, sus equipos creativos de marketing internos se centran en dirigir la creatividad desde el lado del cliente y garantizar que se cumplan los requisitos de las partes interesadas internas de la empresa.</p>
+<p class="wp-block-paragraph blog-p">Además de la dirección creativa estratégica, lo que hacen estos equipos incluye un aspecto de gestión de cuentas internas y de gestión de proyectos. En ocasiones, estos equipos también gestionarán el flujo de trabajo de un socio externo a otro.</p>
+<h4 class="wp-block-heading"><strong>¿Qué pueden hacer las agencias de marketing subcontratadas y las empresas internas no?</strong></h4>
+<p class="wp-block-paragraph blog-p">Las agencias dominan las mejores prácticas de casi todas las tácticas de marketing. Son profesionales que han trabajado en infinidad de cuentas diferentes. Las agencias de publicidad pueden trabajar de manera mucho más eficiente que un equipo de marketing interno reunido. Debido a que las agencias de marketing subcontratadas manejan tanto trabajo, cuentan con flujos de trabajo y procesos de última generación diseñados para brindar calidad, volumen y eficiencia. Las agencias suelen conocer a los mejores talentos que existen.</p>
+<p class="wp-block-paragraph blog-p">Si desea encontrar a la persona perfecta para crear ilustraciones para una campaña de marketing, podrá sacar el número de la persona ideal del bolsillo de su abrigo, mientras que su equipo de marketing interno puede tardar días en encontrar a alguien que sea competente o lo suficientemente bueno. A las agencias les resultará más fácil ofrecer ideas nuevas, tanto para tácticas creativas como de marketing, que un equipo interno. Las agencias de marketing subcontratadas pueden tener acceso a herramientas y software que los equipos internos más pequeños no pueden permitirse.</p>
+<h4 class="wp-block-heading"><strong>¿Cómo se comparan las habilidades que tiene una agencia con las habilidades de los empleados contratados?</strong></h4>
+<p class="wp-block-paragraph blog-p">Una agencia de marketing digital a menudo cuenta con habilidades que los equipos internos no pueden igualar, especialmente los equipos de marketing interno de las pequeñas y medianas empresas. Estas capacidades pueden variar desde el acceso a funciones beta en Google Ads hasta datos sobre tácticas o estrategias efectivas.</p>
+<p class="wp-block-paragraph blog-p">Si solo puede permitirse el lujo de contratar una pequeña cantidad de empleados para su grupo creativo interno, tendrá que elegir qué conjuntos de habilidades contratará. Por ejemplo, quizás contrate a un diseñador gráfico, un director de proyectos y un director de marketing directo. Supongamos que eso es todo lo que puede permitirse internamente. En ese caso, deberá descubrir cómo cubrir habilidades como estrategia y posicionamiento de marca, poética y escritura, video y animación, SEO, y desarrollo web, por nombrar solo algunas, ya sea capacitando a esos mismos miembros del personal o encontrando recursos contratados.</p>
+<p class="wp-block-paragraph blog-p">Una agencia puede ofrecerle acceso a todas esas habilidades, incluso aquellas que solo necesita durante unas pocas horas a la semana o al mes. Su trabajo estará más coordinado que si usted simplemente contratara el trabajo a trabajadores independientes, y la agencia haría gran parte de la gestión del proyecto y la comunicación por usted.</p>
+<h4 class="wp-block-heading"><strong>Los beneficios de contratar una agencia frente a contratar a una persona internamente</strong></h4>
+<p class="wp-block-paragraph blog-p">El amplio conocimiento y la experiencia que aportan las agencias profesionales es quizás su mayor ventaja. Los empleados de la agencia comen, duermen y respiran las redes sociales y tienen una amplia experiencia en numerosas industrias. Tienen un conocimiento profundo de qué redes se beneficiarían más su empresa y conocen el enfoque ideal para la ejecución de su campaña.</p>
+<p class="wp-block-paragraph blog-p">Por ejemplo, la mayoría de las empresas suelen utilizar Twitter y Facebook. Sin embargo, una agencia podría recomendar y saber cómo extraer valor de sitios como Instagram, Pinterest y Tumblr, según su industria, productos o servicios.</p>
+<p class="wp-block-paragraph blog-p">Dado que es una parte externa, una agencia de redes sociales puede realizar una evaluación objetiva de su negocio e implementar una estrategia que le brindará las mayores posibilidades de éxito. En la mayoría de los casos, también pueden garantizar los resultados más rápidos porque saben qué funciona y qué no. Debido a la curva de aprendizaje asociada con el marketing en redes sociales, asociarse con una agencia externa puede ayudar a prevenir los errores típicos de los “novatos”. En lugar de dedicar tiempo y esfuerzo a experimentar con diferentes posibilidades, se puede poner en práctica un plan concreto de inmediato para obtener un retorno de la inversión más rápido.</p>
+<p class="wp-block-paragraph blog-p">A medida que avanza su campaña de marketing, una agencia también puede utilizar análisis y otras herramientas para optimizar varios aspectos de esa campaña. Por ejemplo, pueden utilizar software como Google Analytics, HootSuite o SproutSocial para monitorear cada canal de redes sociales. Saber qué software utilizar y cómo utilizarlo lleva tiempo dominarlo. El conjunto de habilidades de una agencia ayudará a descubrir una gran cantidad de información con el tiempo, lo que se traducirá en más acciones, más seguidores y, en última instancia, mayores ventas.</p>
+<h4 class="wp-block-heading"><strong>Riesgos de contratar un equipo de marketing interno en lugar de una agencia</strong></h4>
+<ul class="wp-block-list">
+<li>Primero tendrá que encontrar, entrevistar, contratar e incorporar a estos nuevos empleados. Luego tendrás que gestionar los gastos generales de sus salarios, beneficios y tiempo libre.</li>
+<li>Es posible que los especialistas en marketing internos no tengan un conjunto de habilidades tan profundas o amplias como los empleados de las agencias.</li>
+<li>Si necesita ampliar su programa de marketing rápidamente, es posible que el proceso de encontrar y contratar más empleados competentes lo ralentice.</li>
+<li>Es muy probable y muy común que los equipos de marketing internos se queden estancados con estilos creativos y estrategias de marketing.</li>
+<li>Si un miembro vital de su equipo de marketing renuncia, todo su programa de marketing puede congelarse hasta que pueda encontrar un reemplazo adecuado.</li>
+</ul>
+<h4 class="wp-block-heading"><strong>Conclusión</strong></h4>
+<p class="wp-block-paragraph blog-p">Al final, la respuesta a la pregunta de si debería subcontratar su marketing o mantenerlo internamente depende completamente de su situación. Cuando repasa nuestros 8 factores comerciales clave del debate entre el marketing interno y las agencias de marketing, ¿se encuentra usted o su equipo inclinándose hacia un lado o hacia el otro? Esa podría ser tu respuesta.</p>
+<p class="wp-block-paragraph blog-p">Si la lista de pros y contras es igual en ambos lados, entonces usted podría ser como muchas empresas que hacen ambas cosas. Nunca está de más pedir ayuda, especialmente en áreas donde no tienes un experto en el equipo o con tácticas nuevas y de moda con las que intentas obtener una ventaja competitiva.</p>
+<p class="wp-block-paragraph blog-p">La subcontratación y el trabajo independiente pueden ser la decisión correcta y rentable que genere los mejores resultados para su negocio. Si tiene problemas para decidir qué camino tomar, <a href="https://yakimabranding.com/es/contact"><mark class="has-inline-color has-black-color" style="background-color:rgba(0, 0, 0, 0)">Nos encantaría discutir su situación de marketing con usted.</mark></a>!</p>
+</div>
+</article>
+<aside aria-label="Acciones relacionadas" class="blog-sidebar">
+<div class="sidebar-card">
+<h3>¿Listo para crecer?</h3>
+<p>Hable con YB Marketing sobre una estrategia basada en sus objetivos comerciales.</p>
+<a class="btn btn-grad" href="/es/contact"><svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-width="2.5" viewbox="0 0 24 24" width="15"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> Empezar</a>
+</div>
+<div class="sidebar-card sidebar-card-ghost">
+<h3>Explora nuestros servicios</h3>
+<p>SEO, Google Ads, diseño web, branding, redes sociales y marketing de contenidos bajo una sola estrategia.</p>
+<a class="btn" href="/es/#services"><svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-width="2.5" viewbox="0 0 24 24" width="15"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> Ver servicios</a>
+</div>
+<div class="sidebar-card sidebar-card-accent">
+<h3>¿Necesita algo mejor Google Ads?</h3>
+<p>Descubra cómo YB Marketing ayuda a mejorar los resultados de Google Ads con un enfoque que prioriza la estrategia.</p>
+<a class="btn" href="/es/google-ads"><svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-width="2.5" viewbox="0 0 24 24" width="15"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> Ver Google Ads Servicios</a>
+</div>
+</aside>
+</div>
+</section>
+<div class="wave-div wave-to-footer wave-from-white"><svg preserveaspectratio="none" viewbox="0 0 1440 70"><path d="M0,70 C360,0 1080,0 1440,70 L1440,70 L0,70 Z"></path></svg></div>
+<footer class="footer">
+  <div class="footer-mesh"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:11px;margin-bottom:14px">
+          <img src="../../../assets/yb-logo-white.png" alt="YB" style="width:44px;height:44px;filter:drop-shadow(0 0 3px rgba(255,255,255,.4))">
+          <span style="font-family:var(--font-display);font-weight:800;font-size:22px;color:#fff">YB <span style="color:var(--yb-cyan)">Marketing</span></span>
+        </div>
+        <p>Agencia de marketing digital galardonada que ayuda a las empresas a crecer mediante branding estratégico, SEO y soluciones digitales integrales.</p>
+        <div style="display:grid;gap:9px;margin:16px 0">
+          <a href="tel:5099019735" style="color:var(--fg2-on-dark);font-size:14px;display:flex;align-items:center;gap:9px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(509) 901-9735</a>
+          <a href="mailto:info@yakimabranding.com" style="color:var(--fg2-on-dark);font-size:14px;display:flex;align-items:center;gap:9px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@yakimabranding.com</a>
+        </div>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/yakimabranding" class="social-btn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/yb.marketing_/" class="social-btn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="17" height="17"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a>
+          <a href="https://www.linkedin.com/company/18939370" class="social-btn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="/es/">Inicio</a></li>
+          <li><a href="/es/about">Nosotros</a></li>
+          <li><a href="/es/#services">Servicios</a></li>
+          <li><a href="/es/insights">Ideas</a></li>
+          <li><a href="/es/contact">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="/es/branding">Marca y diseño</a></li>
+          <li><a href="/es/web-design">Diseño web</a></li>
+          <li><a href="/es/seo">Optimización SEO</a></li>
+          <li><a href="/es/google-ads">Google Ads</a></li>
+          <li><a href="/es/social-media">Redes sociales</a></li>
+          <li><a href="/es/press-releases">Comunicados de prensa</a></li>
+          <li><a href="/es/content-marketing">Marketing de contenidos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Nuestro alcance</h4>
+        <p style="color:var(--fg2-on-dark);font-size:14px;line-height:1.7;margin-bottom:14px">Yakima Branding tiene su centro en el centro de Washington, con profundas raíces en la comunidad de Yakima. Desde nuestra sede en Yakima, servimos con orgullo a empresas de todo el Pacífico Noroeste con marketing estratégico, diseño web, SEO, publicidad y soporte de marca.</p>
+        <div style="display:flex;align-items:center;gap:7px;font-size:13px;color:var(--yb-cyan);font-weight:600"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Yakima, WA &nbsp;·&nbsp; Pacific Northwest</div>
+      </div>
+    </div>
+    <div class="footer-locations">
+      <h4>Ubicaciones</h4>
+      <div class="footer-locations-scroll">
+        <div class="footer-locations-track">
+          <div class="footer-locations-set">
+          <a href="/es/locations/boise-id" class="footer-loc-btn">Boise, ID</a>
+          <a href="/es/locations/coeur-dalene-id" class="footer-loc-btn">Coeur d&#x27;Alene, ID</a>
+          <a href="/es/locations/ellensburg-wa" class="footer-loc-btn">Ellensburg, WA</a>
+          <a href="/es/locations/spokane-wa" class="footer-loc-btn">Spokane, WA</a>
+          <a href="/es/locations/tacoma-wa" class="footer-loc-btn">Tacoma, WA</a>
+          <a href="/es/locations/tri-cities-wa" class="footer-loc-btn">Tri-Cities, WA</a>
+          <a href="/es/locations/vancouver-wa" class="footer-loc-btn">Vancouver, WA</a>
+          <a href="/es/locations/walla-walla-wa" class="footer-loc-btn">Walla Walla, WA</a>
+          <a href="/es/locations/wenatchee-wa" class="footer-loc-btn">Wenatchee, WA</a>
+          <a href="/es/locations/yakima-wa" class="footer-loc-btn">Yakima, WA</a>
+          </div>
+          <div class="footer-locations-set" aria-hidden="true">
+          <a href="/es/locations/boise-id" class="footer-loc-btn">Boise, ID</a>
+          <a href="/es/locations/coeur-dalene-id" class="footer-loc-btn">Coeur d&#x27;Alene, ID</a>
+          <a href="/es/locations/ellensburg-wa" class="footer-loc-btn">Ellensburg, WA</a>
+          <a href="/es/locations/spokane-wa" class="footer-loc-btn">Spokane, WA</a>
+          <a href="/es/locations/tacoma-wa" class="footer-loc-btn">Tacoma, WA</a>
+          <a href="/es/locations/tri-cities-wa" class="footer-loc-btn">Tri-Cities, WA</a>
+          <a href="/es/locations/vancouver-wa" class="footer-loc-btn">Vancouver, WA</a>
+          <a href="/es/locations/walla-walla-wa" class="footer-loc-btn">Walla Walla, WA</a>
+          <a href="/es/locations/wenatchee-wa" class="footer-loc-btn">Wenatchee, WA</a>
+          <a href="/es/locations/yakima-wa" class="footer-loc-btn">Yakima, WA</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 YB Marketing. Todos los derechos reservados.</span>
+      <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">
+        <div class="lang-switch lang-switch--footer" role="group" aria-label="Idioma">
+  <a class="lang-switch-opt" href="/insights/in-house-marketing-vs-agency-marketing" lang="en" hreflang="en">EN</a>
+  <a class="lang-switch-opt is-active" href="/es/insights/in-house-marketing-vs-agency-marketing" aria-current="page" lang="es" hreflang="es">ES</a>
+</div>
+        <a href="/es/privacy-policy">Política de privacidad</a>
+        <a href="/es/sitemap">Mapa del sitio</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script defer="" src="/js/newsletter-popup.js"></script>
+<script defer="" src="/js/chat-widget.js"></script>
+<script defer="" src="/js/site.js"></script>
+<script>
+document.getElementById('hamburger')?.addEventListener('click', function () {
+  document.getElementById('mobileMenu')?.classList.toggle('open');
+});
+</script>
+<!-- yb-attributer-start -->
+<!-- yb-attributer-end -->
+</body>
+</html>

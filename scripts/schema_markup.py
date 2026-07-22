@@ -646,6 +646,18 @@ def schemas_for_rel_path(rel: str) -> tuple[list[dict], str, str]:
                 ),
             ]
         )
+        from location_hub_faqs import location_service_faqs
+
+        hub_city = hub.get("city", city)
+        hub_state = hub.get("state", state)
+        faqs = location_service_faqs(hub_city, hub_state, slug)
+        if faqs:
+            page_schemas.append(faq_schema(faqs))
+            return (
+                global_schemas() + page_schemas,
+                "Organization, WebSite, LocalBusiness, WebPage, BreadcrumbList, FAQPage",
+                notes,
+            )
         return global_schemas() + page_schemas, "Organization, WebSite, LocalBusiness, WebPage, BreadcrumbList", notes
 
     for service_key, meta in LOCAL_SERVICE_META.items():

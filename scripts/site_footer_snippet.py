@@ -6,7 +6,7 @@ import subprocess
 from functools import lru_cache
 from pathlib import Path
 
-from site_urls import page_href
+from site_i18n import language_switcher_html, page_href_lang, t
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -27,17 +27,17 @@ def load_footer_locations() -> list[dict]:
     return json.loads(result.stdout)
 
 
-def footer_location_buttons(prefix: str) -> str:
+def footer_location_buttons(prefix: str, lang: str = "en") -> str:
     buttons = []
     for loc in sorted(load_footer_locations(), key=lambda item: (item["state"], item["city"])):
         label = f"{loc['city']}, {loc['state']}"
-        href = page_href(f"locations/{loc['slug']}.html")
+        href = page_href_lang(f"locations/{loc['slug']}.html", lang)
         buttons.append(f'<a href="{href}" class="footer-loc-btn">{html.escape(label)}</a>')
     return "\n          ".join(buttons)
 
 
-def footer_locations_marquee(prefix: str) -> str:
-    buttons = footer_location_buttons(prefix)
+def footer_locations_marquee(prefix: str, lang: str = "en") -> str:
+    buttons = footer_location_buttons(prefix, lang)
     return f"""      <div class="footer-locations-scroll">
         <div class="footer-locations-track">
           <div class="footer-locations-set">
@@ -50,9 +50,10 @@ def footer_locations_marquee(prefix: str) -> str:
       </div>"""
 
 
-def site_footer_html(prefix: str = "") -> str:
+def site_footer_html(prefix: str = "", lang: str = "en", current_path: str = "") -> str:
     p = prefix
-    location_marquee = footer_locations_marquee(p)
+    location_marquee = footer_locations_marquee(p, lang)
+    switcher = language_switcher_html(current_path, lang, variant="footer")
     return f"""
 <footer class="footer">
   <div class="footer-mesh"></div>
@@ -63,7 +64,7 @@ def site_footer_html(prefix: str = "") -> str:
           <img src="{p}assets/yb-logo-white.png" alt="YB" style="width:44px;height:44px;filter:drop-shadow(0 0 3px rgba(255,255,255,.4))">
           <span style="font-family:var(--font-display);font-weight:800;font-size:22px;color:#fff">YB <span style="color:var(--yb-cyan)">Marketing</span></span>
         </div>
-        <p>Award-winning digital marketing agency helping businesses grow through strategic branding, SEO, and comprehensive digital solutions.</p>
+        <p>{t("Award-winning digital marketing agency helping businesses grow through strategic branding, SEO, and comprehensive digital solutions.", lang)}</p>
         <div style="display:grid;gap:9px;margin:16px 0">
           <a href="tel:5099019735" style="color:var(--fg2-on-dark);font-size:14px;display:flex;align-items:center;gap:9px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(509) 901-9735</a>
           <a href="mailto:info@yakimabranding.com" style="color:var(--fg2-on-dark);font-size:14px;display:flex;align-items:center;gap:9px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@yakimabranding.com</a>
@@ -75,40 +76,44 @@ def site_footer_html(prefix: str = "") -> str:
         </div>
       </div>
       <div class="footer-col">
-        <h4>Navigation</h4>
+        <h4>{t("Navigation", lang)}</h4>
         <ul>
-          <li><a href="{page_href('index.html')}">Home</a></li>
-          <li><a href="{page_href('about.html')}">About</a></li>
-          <li><a href="{page_href('index.html', 'services')}">Services</a></li>
-          <li><a href="{page_href('insights.html')}">Insights</a></li>
-          <li><a href="{page_href('contact.html')}">Contact</a></li>
+          <li><a href="{page_href_lang('index.html', lang)}">{t("Home", lang)}</a></li>
+          <li><a href="{page_href_lang('about.html', lang)}">{t("About", lang)}</a></li>
+          <li><a href="{page_href_lang('index.html', lang, 'services')}">{t("Services", lang)}</a></li>
+          <li><a href="{page_href_lang('insights.html', lang)}">{t("Insights", lang)}</a></li>
+          <li><a href="{page_href_lang('contact.html', lang)}">{t("Contact", lang)}</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
+        <h4>{t("Services", lang)}</h4>
         <ul>
-          <li><a href="{page_href('services/branding.html')}">Branding &amp; Design</a></li>
-          <li><a href="{page_href('services/web-design.html')}">Web Design</a></li>
-          <li><a href="{page_href('services/seo.html')}">SEO Optimization</a></li>
-          <li><a href="{page_href('services/google-ads.html')}">Google Ads</a></li>
-          <li><a href="{page_href('services/social-media.html')}">Social Media</a></li>
-          <li><a href="{page_href('services/press-releases.html')}">Press Releases</a></li>
-          <li><a href="{page_href('services/content-creation.html')}">Content Marketing</a></li>
+          <li><a href="{page_href_lang('services/branding.html', lang)}">{t("Branding & Design", lang)}</a></li>
+          <li><a href="{page_href_lang('services/web-design.html', lang)}">{t("Web Design", lang)}</a></li>
+          <li><a href="{page_href_lang('services/seo.html', lang)}">{t("SEO Optimization", lang)}</a></li>
+          <li><a href="{page_href_lang('services/google-ads.html', lang)}">{t("Google Ads", lang)}</a></li>
+          <li><a href="{page_href_lang('services/social-media.html', lang)}">{t("Social Media", lang)}</a></li>
+          <li><a href="{page_href_lang('services/press-releases.html', lang)}">{t("Press Releases", lang)}</a></li>
+          <li><a href="{page_href_lang('services/content-creation.html', lang)}">{t("Content Marketing", lang)}</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Our Reach</h4>
-        <p style="color:var(--fg2-on-dark);font-size:14px;line-height:1.7;margin-bottom:14px">Yakima Branding is centered in Central Washington, with deep roots in the Yakima community. From our home base in Yakima, we proudly serve businesses across the entire Pacific Northwest with strategic marketing, website design, SEO, advertising, and branding support.</p>
+        <h4>{t("Our Reach", lang)}</h4>
+        <p style="color:var(--fg2-on-dark);font-size:14px;line-height:1.7;margin-bottom:14px">{t("Yakima Branding is centered in Central Washington, with deep roots in the Yakima community. From our home base in Yakima, we proudly serve businesses across the entire Pacific Northwest with strategic marketing, website design, SEO, advertising, and branding support.", lang)}</p>
         <div style="display:flex;align-items:center;gap:7px;font-size:13px;color:var(--yb-cyan);font-weight:600"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Yakima, WA &nbsp;·&nbsp; Pacific Northwest</div>
       </div>
     </div>
     <div class="footer-locations">
-      <h4>Locations</h4>
+      <h4>{t("Locations", lang)}</h4>
 {location_marquee}
     </div>
     <div class="footer-bottom">
-      <span>© 2026 YB Marketing. All rights reserved.</span>
-      <div style="display:flex;gap:18px"><a href="{page_href('privacy-policy.html')}">Privacy Policy</a><a href="{page_href('sitemap.html')}">Sitemap</a></div>
+      <span>© 2026 YB Marketing. {t("All rights reserved.", lang)}</span>
+      <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">
+        {switcher}
+        <a href="{page_href_lang('privacy-policy.html', lang)}">{t("Privacy Policy", lang)}</a>
+        <a href="{page_href_lang('sitemap.html', lang)}">{t("Sitemap", lang)}</a>
+      </div>
     </div>
   </div>
 </footer>"""

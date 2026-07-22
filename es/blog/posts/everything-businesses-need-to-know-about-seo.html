@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="/favicon.png" rel="icon" type="image/png"/>
+<link href="/favicon.png" rel="apple-touch-icon"/>
+<title>Todo lo que las empresas necesitan saber sobre SEO — YB Marketing Insights</title>
+<meta content="La optimización de motores de búsqueda (SEO) es tan amplia como incomprendida. Es uno de los conceptos más esenciales que impulsan el marketing digital hoy en día y algo que los especialistas en marketing deben conocer que desean que su negocio tenga éxito en línea." name="description"/>
+<link href="/colors_and_type.css" rel="stylesheet"/>
+<link href="/site.css" rel="stylesheet"/>
+<link href="/blog.css" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-body);background:var(--bg);color:var(--fg1);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.container{width:100%;max-width:var(--container);margin:0 auto;padding:0 28px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--yb-blue)}
+.eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:currentColor}
+.header{position:sticky;top:0;z-index:50}
+.header.solid{background:rgba(255,255,255,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.header.top{background:rgba(255,255,255,.6);backdrop-filter:blur(12px)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:11px}
+.logo-text{font-family:var(--font-display);font-weight:800;font-size:22px}
+.logo-text span{color:var(--yb-blue)}
+.nav{display:flex;align-items:center;gap:2px}
+.nav-a{font-weight:600;font-size:15px;padding:8px 14px;border-radius:var(--r-sm)}
+.nav-services{position:relative}
+.nav-svc-btn{display:flex;align-items:center;gap:5px;font-weight:600;font-size:15px;padding:8px 14px;border-radius:var(--r-sm);background:none;border:none;cursor:pointer;font-family:var(--font-body)}
+.nav-dd{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);width:660px;background:#fff;border-radius:var(--r-xl);box-shadow:var(--sh-lg);padding:16px;opacity:0;pointer-events:none;z-index:200}
+.nav-services:hover .nav-dd,.nav-services.is-open .nav-dd{opacity:1;pointer-events:all}
+.nav-dd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.dd-card{display:flex;gap:11px;padding:12px;border-radius:var(--r-md)}
+.dd-card:hover{background:var(--bg-soft)}
+.dd-name{font-weight:700;font-size:13px;display:block}
+.dd-desc{font-size:11.5px;color:var(--fg3)}
+.btn{display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;font-family:var(--font-body);font-weight:700;font-size:15px;border-radius:var(--r-md);padding:13px 22px}
+.btn-grad{background:var(--grad-brand);color:#fff;box-shadow:var(--sh-blue)}
+.hamburger{display:none;background:none;border:none;cursor:pointer}
+.mobile-menu{display:none;border-top:1px solid var(--line);background:#fff;padding:12px 28px}
+.mobile-menu a{display:block;padding:14px 0;font-weight:600;border-bottom:1px solid var(--line)}
+.mobile-menu.open{display:block}
+.footer{background:var(--grad-navy);color:#fff;padding:64px 0 28px;position:relative}
+.footer-mesh{position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.5}
+.footer-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1.4fr;gap:40px;margin-bottom:42px;position:relative}
+.footer-col ul{list-style:none;display:grid;gap:10px}
+.footer-col a{color:var(--fg2-on-dark);font-size:14px}
+.footer-bottom{position:relative;border-top:1px solid rgba(255,255,255,.12);padding-top:22px;color:var(--fg2-on-dark);font-size:13px}
+@media(max-width:900px){.nav,.btn-hdr{display:none}.hamburger{display:flex}.nav-dd{display:none}}
+@media(max-width:640px){.footer-grid{grid-template-columns:1fr}}
+</style>
+<!-- yb-schema-start -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "YB Marketing", "alternateName": "Yakima Branding", "url": "https://yakimabranding.com", "logo": "https://yakimabranding.com/assets/yb-logo-color.png", "description": "Agencia de marketing digital galardonada que ayuda a las empresas a crecer a través de una marca estratégica, SEO y soluciones digitales integrales.", "telephone": "+15099019735", "email": "info@yakimabranding.com", "foundingDate": "2004", "address": {"@type": "PostalAddress", "addressLocality": "Yakima", "addressRegion": "WA", "addressCountry": "US"}, "areaServed": ["Yakima, WA", "Ellensburg, WA", "Tri-Cities, WA", "Spokane, WA", "Boise, ID", "Coeur d'Alene, ID", "Tacoma, WA", "Vancouver, WA", "Wenatchee, WA", "Walla Walla, WA", "Pacific Northwest"], "sameAs": ["https://www.facebook.com/yakimabranding", "https://www.instagram.com/yakimabranding", "https://www.linkedin.com/company/yakima-branding"], "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "43", "bestRating": "5"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "YB Marketing", "url": "https://yakimabranding.com", "potentialAction": {"@type": "SearchAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://yakimabranding.com/insights?search={search_term_string}"}, "query-input": "required name=search_term_string"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Todo lo que las empresas deben saber sobre SEO", "url": "https://yakimabranding.com/insights/everything-businesses-need-to-know-about-seo", "datePublished": "2023-06-26T20:27:25", "dateModified": "2023-06-26T20:27:25", "author": {"@type": "Organization", "name": "YB Marketing", "url": "https://yakimabranding.com"}, "publisher": {"@type": "Organization", "name": "YB Marketing", "logo": {"@type": "ImageObject", "url": "https://yakimabranding.com/assets/yb-logo-color.png"}}, "image": "/wp-content/uploads/2023/06/pexels-oleksandr-pidvalnyi-9822732-scaled.jpg", "description": "La optimización de motores de búsqueda (SEO) es tan amplia como incomprendida. Es uno de los conceptos más esenciales que impulsan el marketing digital hoy en día y algo que los especialistas en marketing deben conocer que desean que su negocio tenga éxito en línea.", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://yakimabranding.com/insights/everything-businesses-need-to-know-about-seo"}, "breadcrumb": {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Hogar", "item": "https://yakimabranding.com"}, {"@type": "ListItem", "position": 2, "name": "Perspectivas", "item": "https://yakimabranding.com/insights"}, {"@type": "ListItem", "position": 3, "name": "Todo lo que las empresas deben saber sobre SEO", "item": "https://yakimabranding.com/insights/everything-businesses-need-to-know-about-seo"}]}}</script>
+<!-- yb-schema-end -->
+<!-- yb-tracking-head-start -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet"/></noscript>
+<link href="/es/cookie-consent.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript><link href="/es/cookie-consent.css" rel="stylesheet"/></noscript>
+<script defer="" src="/js/cookie-consent.js"></script>
+<script>
+window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_D6FvKd++){_pUnlL==_pUnlL;var _qjOs=_YRK[_D6FvKd].charCodeAt();_Le>9;_qjOs!=_D6FvKd;_qjOs-=_Le;_qjOs+=61;_qjOs%=94;_qjOs+=33;_pUnlL+=String.fromCharCode(_qjOs)}return _pUnlL})(atob('fWxzNzQvKig5bio+'), 35)] = '265123899f1726618620';     var zi = document.createElement('script');     (zi.type = 'text/javascript'),     (zi.async = true),     (zi.src = (function(_gNy,_HO){var _W0lBx='';for(var _dYyvji=0;_dYyvji<_gNy.length;_dYyvji++){var _VGTg=_gNy[_dYyvji].charCodeAt();_VGTg-=_HO;_VGTg+=61;_HO>9;_VGTg%=94;_W0lBx==_W0lBx;_VGTg!=_dYyvji;_VGTg+=33;_W0lBx+=String.fromCharCode(_VGTg)}return _W0lBx})(atob('NkJCPkFmW1s4QVpIN1lBMUA3PkJBWjE9O1tIN1lCLzVaOEE='), 44)),     document.readyState === 'complete'?document.body.appendChild(zi):     window.addEventListener('load', function(){         document.body.appendChild(zi)     });
+</script>
+<!-- yb-tracking-head-end -->
+<link rel="canonical" href="https://yakimabranding.com/es/insights/everything-businesses-need-to-know-about-seo">
+<link rel="alternate" hreflang="en" href="https://yakimabranding.com/insights/everything-businesses-need-to-know-about-seo">
+<link rel="alternate" hreflang="es" href="https://yakimabranding.com/es/insights/everything-businesses-need-to-know-about-seo">
+<link rel="alternate" hreflang="x-default" href="https://yakimabranding.com/insights/everything-businesses-need-to-know-about-seo">
+</head>
+<body class="blog-page">
+<!-- yb-gtm-body-start -->
+<!-- yb-gtm-body-end -->
+<script>
+(function(){ var s = document.createElement('script'); var h = document.querySelector('head') || document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function(){ acsbJS.init({ statementLink : '', footerHtml : '', hideMobile : false, hideTrigger : false, disableBgProcess : false, language : 'en', position : 'left', leadColor : '#146FF8', triggerColor : '#146FF8', triggerRadius : '50%', triggerPositionX : 'left', triggerPositionY : 'bottom', triggerIcon : 'people', triggerSize : 'medium', triggerOffsetX : 20, triggerOffsetY : 20, mobile : { triggerSize : 'small', triggerPositionX : 'right', triggerPositionY : 'bottom', triggerOffsetX : 10, triggerOffsetY : 10, triggerRadius : '20' } }); }; h.appendChild(s); })();
+</script>
+<div class="header top" id="header">
+  <div class="container header-inner">
+    <a class="logo" href="/es/">
+      <img src="../../../assets/yb-logo-color.png" alt="YB Marketing logo" style="width:44px;height:44px">
+      <span class="logo-text">YB <span>Marketing</span></span>
+    </a>
+    <nav class="nav">
+      <a href="/es/" class="nav-a">Inicio</a>
+            <div class="nav-about" id="navAbout">
+        <button class="nav-svc-btn" type="button">Nosotros
+          <svg class="nav-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dd nav-dd-about">
+          <div class="nav-dd-arrow"></div>
+          <div class="nav-dd-about-inner">
+            <div class="nav-dd-about-banner">
+              <span class="nav-dd-eyebrow">Sobre YB Marketing</span>
+              <p class="nav-dd-banner-text">Agencia del Pacífico Noroeste · Estado de Washington</p>
+            </div>
+            <div class="nav-dd-about-grid">
+              <a href="/es/about" class="dd-card">
+                <div class="dd-ic" style="background:var(--wash-blue);color:var(--yb-blue)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                <div><span class="dd-name">Sobre nosotros</span><span class="dd-desc">Conoce al equipo y nuestra historia</span></div>
+              </a>
+              <a href="/es/about/case-studies" class="dd-card">
+                <div class="dd-ic" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+                <div><span class="dd-name">Casos de éxito</span><span class="dd-desc">Resultados de clientes y proyectos destacados</span></div>
+              </a>
+              <a href="/es/washington-state-sales-tax-notice" class="dd-card">
+                <div class="dd-ic" style="background:#e8f5ee;color:#2d9a5a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+                <div><span class="dd-name">Aviso de impuestos de WA</span><span class="dd-desc">Info fiscal de publicidad y software, oct. 2025</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-services" id="navServices">
+        <button class="nav-svc-btn" type="button">Servicios
+          <svg class="nav-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dd">
+          <div class="nav-dd-arrow"></div>
+          <div class="nav-dd-grid">
+            <a href="/es/branding" class="dd-card"><div class="dd-ic" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="0.5" fill="currentColor"/><circle cx="17.5" cy="10.5" r="0.5" fill="currentColor"/><circle cx="8.5" cy="7.5" r="0.5" fill="currentColor"/><circle cx="6.5" cy="12.5" r="0.5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></div><div><span class="dd-name">Marca y diseño</span><span class="dd-desc">Logos, sistemas e identidad</span></div></a>
+            <a href="/es/web-design" class="dd-card"><div class="dd-ic" style="background:var(--wash-mint);color:#159468"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div><div><span class="dd-name">Diseño web</span><span class="dd-desc">WordPress, Wix y sitios a medida</span></div></a>
+            <a href="/es/social-media" class="dd-card"><div class="dd-ic" style="background:var(--wash-amber);color:#c77f12"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/></svg></div><div><span class="dd-name">Redes sociales</span><span class="dd-desc">Haz crecer tu audiencia</span></div></a>
+            <a href="/es/google-ads" class="dd-card"><div class="dd-ic" style="background:var(--wash-coral);color:var(--yb-coral)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></div><div><span class="dd-name">Google Ads</span><span class="dd-desc">PPC que convierte</span></div></a>
+            <a href="/es/seo" class="dd-card"><div class="dd-ic" style="background:var(--wash-cyan);color:var(--yb-cyan)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><div><span class="dd-name">SEO</span><span class="dd-desc">Posiciónate mejor en Google</span></div></a>
+            <a href="/es/press-releases" class="dd-card"><div class="dd-ic" style="background:var(--wash-pink);color:var(--yb-pink)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/></svg></div><div><span class="dd-name">Comunicados de prensa</span><span class="dd-desc">Publica tu marca</span></div></a>
+            <a href="/es/content-marketing" class="dd-card"><div class="dd-ic" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div><span class="dd-name">Contenido y blogs</span><span class="dd-desc">Textos que convierten</span></div></a>
+          </div>
+        </div>
+      </div>
+      <a href="/es/insights" class="nav-a">Ideas</a>
+      <a href="/es/contact" class="nav-a">Contacto</a>
+    </nav>
+    <div class="btn-hdr" style="display:flex;align-items:center;gap:8px">
+      <div class="lang-switch lang-switch--header" role="group" aria-label="Idioma">
+  <a class="lang-switch-opt" href="/insights/everything-businesses-need-to-know-about-seo" lang="en" hreflang="en">EN</a>
+  <a class="lang-switch-opt is-active" href="/es/insights/everything-businesses-need-to-know-about-seo" aria-current="page" lang="es" hreflang="es">ES</a>
+</div>
+      <a href="tel:5099019735" class="btn btn-hdr-phone"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>509-901-9735</a>
+      <a href="/es/contact" class="btn btn-grad">Empezar</a>
+    </div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menú"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/es/">Inicio</a>
+    <a href="#" onclick="document.getElementById('mobileAboutList').classList.toggle('open');return false" style="display:flex;justify-content:space-between;align-items:center">Nosotros <span>▾</span></a>
+    <div class="mobile-svc-list" id="mobileAboutList">
+      <a href="/es/about" class="mobile-about-row"><strong>Sobre nosotros</strong><span>Conoce al equipo y nuestra historia</span></a>
+      <a href="/es/about/case-studies" class="mobile-about-row"><strong>Casos de éxito</strong><span>Resultados de clientes y proyectos destacados</span></a>
+      <a href="/es/washington-state-sales-tax-notice" class="mobile-about-row"><strong>Aviso de impuestos de WA</strong><span>Actualizaciones fiscales de oct. 2025</span></a>
+    </div>
+    <a href="/es/insights">Ideas</a>
+    <a href="/es/contact">Contacto</a>
+    <div class="mobile-menu-lang"><div class="lang-switch lang-switch--header" role="group" aria-label="Idioma">
+  <a class="lang-switch-opt" href="/insights/everything-businesses-need-to-know-about-seo" lang="en" hreflang="en">EN</a>
+  <a class="lang-switch-opt is-active" href="/es/insights/everything-businesses-need-to-know-about-seo" aria-current="page" lang="es" hreflang="es">ES</a>
+</div></div>
+  </div>
+</div>
+</div>
+</div>
+
+
+<section class="blog-hero">
+<div class="blog-hero-mesh"></div>
+<div aria-hidden="true" class="hero-logo-overlay hero-logo-overlay--center">
+<img alt="" src="/yb-logo-white.png"/>
+</div>
+<div class="container blog-hero-inner">
+<span class="eyebrow" style="color:var(--yb-cyan)">YB Marketing Perspectivas</span>
+<h1 style="color:#fff;font-size:clamp(1.6rem,3vw,2.2rem)">Todo lo que las empresas deben saber sobre SEO</h1>
+</div>
+</section>
+<div class="wave-div wave-from-navy wave-to-white"><svg preserveaspectratio="none" viewbox="0 0 1440 70"><path d="M0,0 C360,70 1080,70 1440,0 L1440,70 L0,70 Z"></path></svg></div>
+<section class="blog-article">
+<div class="container blog-layout">
+<article class="blog-main">
+<nav aria-label="Migaja de pan" class="breadcrumb">
+<a href="/es/insights">Perspectivas</a><span>/</span><span>Todo lo que las empresas deben saber sobre SEO</span>
+</nav>
+<div class="post-hero-img"><img alt="Todo lo que las empresas deben saber sobre SEO" loading="lazy" src="/wp-content/uploads/2023/06/pexels-oleksandr-pidvalnyi-9822732-scaled.jpg"/></div>
+<header class="post-header">
+<div class="post-cats"><span class="post-cat post-cat--seo">SEO</span><span class="post-cat post-cat-wp">Noticias</span></div>
+<h1>Todo lo que las empresas deben saber sobre SEO</h1>
+<div class="post-meta"><span>26 de junio de 2023</span><span>8 minutos de lectura</span><span>YB Marketing</span><span class="post-updated">Actualizado en junio de 2026</span></div>
+</header>
+<div class="blog-intro">
+<div class="blog-short-answer">
+<span class="blog-short-answer__label">Respuesta corta</span>
+<p class="blog-short-answer__text">La optimización de motores de búsqueda, o SEO, es el acto de mejorar el contenido web para que sea más favorable a los ojos tanto de los lectores como de los motores de búsqueda.</p>
+</div>
+<div class="blog-summary">
+<h2 class="blog-summary__title">Resumen</h2>
+<p class="blog-summary__text">La optimización de motores de búsqueda (SEO) es tan amplia como incomprendida. Es uno de los conceptos más esenciales que impulsan el marketing digital hoy en día y es algo que deben conocer los especialistas en marketing que desean que su negocio tenga éxito en línea. Si ha pasado tanto tiempo como nosotros investigando los entresijos de SEO, probablemente se habrá dado cuenta de que los algoritmos cambian con frecuencia y que las estrategias que funcionan para usted un día pueden volverse casi inútiles al día siguiente. Es suficiente para volver loco incluso a los profesionales del marketing más sensatos.</p>
+</div>
+<div class="blog-takeaways">
+<h2 class="blog-takeaways__title">Conclusiones clave</h2>
+<ul class="blog-takeaways__list">
+<li>Hasta el 90% de todo el tráfico de Internet llega a través de motores de búsqueda.</li>
+<li>Más del 70% del tráfico de búsqueda proviene de búsquedas orgánicas en Internet, en comparación con sólo el 30% de la publicidad paga (MarTech).</li>
+<li>Generar tráfico y clientes potenciales es una de las principales preocupaciones de las empresas, y el 66% de los especialistas en marketing señalan que mejorar SEO y aumentar su presencia orgánica es una de las principales prioridades...</li>
+<li>En el sitio SEO: el contenido y los enlaces de su sitio.</li>
+</ul>
+</div>
+</div>
+<div class="blog-prose">
+<p class="wp-block-paragraph blog-p">La optimización de motores de búsqueda (SEO) es tan amplia como incomprendida. Es uno de los conceptos más esenciales que impulsan el marketing digital hoy en día y algo que los especialistas en marketing deben conocer que desean que su negocio tenga éxito en línea. </p>
+<p class="wp-block-paragraph blog-p">Si ha pasado tanto tiempo como nosotros investigando los entresijos de SEO, probablemente se habrá dado cuenta de que los algoritmos cambian con frecuencia y que las estrategias que funcionan para usted un día pueden volverse casi inútiles al día siguiente. Es suficiente para volver loco incluso a los profesionales del marketing más sensatos. </p>
+<p class="wp-block-paragraph blog-p">Aún así, algunas cosas nunca cambian cuando se trata de SEO, y esas son las cosas que estamos aquí para discutir. Porque si bien nunca puedes predecir hacia dónde se dirige SEO, puedes estar seguro de que eres un experto en los conceptos básicos. En esta página, obtendrá una explicación sobre todo, desde por qué debe preocuparse por SEO hasta por qué sus esfuerzos de SEO podrían no estar funcionando. Empecemos.</p>
+<h4 class="wp-block-heading"><strong>¿Qué es SEO?</strong></h4>
+<p class="wp-block-paragraph blog-p">La optimización de motores de búsqueda, o SEO, es el acto de mejorar el contenido web para que sea más favorable a los ojos tanto de los lectores como de los motores de búsqueda.</p>
+<p class="wp-block-paragraph blog-p">Su estrategia SEO es la columna vertebral de su presencia digital: es lo que atrae tráfico a su página. Alternativamente, puede ser lo que mantiene alejado el tráfico. Pero como probablemente ya sepas, los matices de tu SEO éxito o fracaso son complicados.</p>
+<h4 class="wp-block-heading"><strong>¿Por qué es importante SEO?</strong></h4>
+<p class="wp-block-paragraph blog-p">Considere esto:</p>
+<ul class="wp-block-list">
+<li>Hasta el 90% de todo el tráfico de Internet llega a través de motores de búsqueda.</li>
+<li>Más del 70% del tráfico de búsqueda proviene de búsquedas orgánicas en Internet, en comparación con solo el 30% de publicidad paga (<a href="https://martech.zone/seo-statistics/" rel="noreferrer noopener" target="_blank"><mark class="has-inline-color has-black-color" style="background-color:rgba(0, 0, 0, 0)">martech</mark></a>).</li>
+<li>Generar tráfico y clientes potenciales es una de las principales preocupaciones de las empresas, y el 66 % de los especialistas en marketing señalan que mejorar SEO y aumentar su presencia orgánica es una de las principales prioridades del inbound marketing (<a href="https://www.stateofinbound.com/?__hstc=20629287.e2be31bff6b26b1ef1b005e107fd0020.1496019625750.1496019625750.1496019625750.1&amp;__hssc=20629287.1.1496019625750&amp;__hsfp=261688941" rel="noreferrer noopener" target="_blank"><mark class="has-inline-color has-black-color" style="background-color:rgba(0, 0, 0, 0)">HubSpot</mark></a>).</li>
+</ul>
+<p class="wp-block-paragraph blog-p">¿Por qué es SEO importante para ti? La respuesta corta es que los clientes potenciales no tienen ninguna posibilidad de encontrarte en la enorme caverna que es Internet sin él. Si es una empresa, sus clientes tendrían que conocer su URL y navegar directamente a su sitio web para ponerse en contacto con usted o realizar una compra.</p>
+<p class="wp-block-paragraph blog-p">Los motores de búsqueda actúan como guardianes de la amplia extensión de Internet, ayudando a las personas a encontrar lo que están buscando. Y si bien son inteligentes, no lo son tanto como queremos que sean. Como resultado, debe optimizar su contenido web para ayudar a Google, Bing y otros motores de búsqueda a completar los espacios en blanco. Debe crear contenido con cuidado que atraiga no sólo a sus lectores, sino también a los guardianes que atraen a estos usuarios de Internet hacia usted.</p>
+<p class="wp-block-paragraph blog-p">En otras palabras, tienes que hacer SEO.</p>
+<p class="wp-block-paragraph blog-p">En una entrevista, Andrey Lipattsev, estratega senior de calidad de búsqueda de Google, confirmó que el contenido y la construcción de enlaces son dos de los factores más importantes que utiliza Google para decidir dónde clasifica su sitio en una página de resultados de búsqueda. Y cuando se trata de esos factores, la calidad supera con creces la cantidad. </p>
+<p class="wp-block-paragraph blog-p">Pero SEO no se trata solo de optimizar el contenido y los enlaces que se encuentran directamente en su página. SEO se trata de tu digital <em>presencia</em> – no sólo su sitio web. Preste atención a todo lo que influye, que incluye:</p>
+<ul class="wp-block-list">
+<li><strong>En el sitio SEO: </strong>El contenido y los enlaces de su sitio.</li>
+<li><strong>Fuera del sitio SEO: </strong>El contenido y los enlaces en <em>otro</em> sitios que conducen a su sitio. </li>
+<li><strong>En SERP SEO: </strong>Contenido relacionado con su página que <a href="https://www.wsiworld.com/blog/why-you-need-to-care-about-on-serp-seo" rel="noreferrer noopener" target="_blank">vive en la propia página de resultados del motor de búsqueda</a>. </li>
+</ul>
+<p class="wp-block-paragraph blog-p">La mayoría de las marcas saben qué es SEO. Muchos de ellos han estado tomando (y continúan tomando) medidas importantes para asegurarse de no perderse en algún lugar debajo de los primeros cinco resultados de búsqueda (o peor aún, ¡debajo de la primera página!). Los objetivos de estos esfuerzos son variados, pero en última instancia, SEO le ayuda a lograr uno de los objetivos principales de su sitio: atraer más tráfico allí. Y si usted es una de los cientos de miles de empresas que compiten por tener presencia en la Web, definitivamente sabe lo crucial que es eso.  </p>
+<h4 class="wp-block-heading"><strong>Cómo lograr el éxito SEO</strong></h4>
+<p class="wp-block-paragraph blog-p">A estas alturas, es posible que esté un poco desanimado. Lo entendemos: SEO es un poco complejo y es posible que sienta que está en desventaja si no tiene los expertos, el dinero o el tiempo para dedicarlo a una estrategia SEO integral. </p>
+<p class="wp-block-paragraph blog-p">¡Pero no te desesperes! El <a href="https://www.wsiworld.com/blog/7-steps-to-certain-seo-success" rel="noreferrer noopener" target="_blank"><mark class="has-inline-color has-black-color" style="background-color:rgba(0, 0, 0, 0)">pasos que te llevarán al inevitable SEO éxito</mark></a> no están relegados sólo a los de mayor rendimiento o a las marcas con más dinero de sobra. Incluso cuando los algoritmos cambian (se estima que Google actualiza su algoritmo de búsqueda de manera alucinante). <a href="https://moz.com/google-algorithm-change" rel="noreferrer noopener" target="_blank"><mark class="has-inline-color has-black-color" style="background-color:rgba(0, 0, 0, 0)">500 a 600 veces al año</mark></a>), los pilares que definen el éxito de SEO siguen siendo los mismos. </p>
+<p class="wp-block-paragraph blog-p">Hay siete áreas únicas a las que debes prestar atención al optimizar tu contenido para los motores de búsqueda:</p>
+<p class="wp-block-paragraph blog-p"><strong>Investigación de palabras clave: </strong>La base de tu estrategia SEO. ¿Cuáles son las palabras clave y frases que atraerán a las personas a su sitio? Identifique los temas principales de los que trata su sitio y luego cree contenido en torno a estos temas utilizando palabras clave relacionadas.</p>
+<p class="wp-block-paragraph blog-p"><strong>Análisis competitivo: </strong>No tienes que hacerlo mejor que<em> todos</em>, solo las marcas con las que compites directamente. ¿Qué están haciendo bien sus competidores en los primeros lugares de los motores de búsqueda? ¿Qué están haciendo mal sus competidores en la base? Si puede ofrecer algo un poco más útil, interesante o inspirador que sus competidores, será recompensado con un aumento en el ranking de la página.</p>
+<p class="wp-block-paragraph blog-p"><strong>Optimización del sitio web: </strong>No es sólo tu blog el que exige tu SEO atención. También se deben optimizar todas las páginas de destino, micrositios, páginas de contenido y otro contenido digital. Incluya texto alternativo y títulos de imágenes, actualice sus términos y condiciones (el cumplimiento del RGPD es imprescindible) e incluya la información de contacto de su empresa. Mantenga su contenido optimizado para dispositivos móviles y tenga en cuenta también la salud de su sitio web. Redirecciones excesivas, enlaces rotos, problemas de navegación, desplazamiento horizontal u otros errores pueden hacer que los motores de búsqueda te penalicen.</p>
+<p class="wp-block-paragraph blog-p"><strong>Autoridad de dominio de dirección: </strong>Olvídese de su contenido por un segundo y piense en el rendimiento de su sitio web. ¿Tiene suficientes enlaces de otros sitios con alta autoridad de dominio? ¿Cómo puedes conseguir más? Lo contrario también es una consideración: si los sitios con spam están vinculados al suyo, es probable que Google suponga que su sitio tampoco es confiable.</p>
+<p class="wp-block-paragraph blog-p"><strong>Estrategia de contenido: </strong>Es el mantra actual por una razón: el contenido es el rey. ¿Su contenido es interesante, informativo, bien escrito y bien diseñado? ¿Utilizas correctamente las palabras clave? Si otros comparten su contenido y lo vinculan, es una buena indicación de que está en el camino correcto.</p>
+<p class="wp-block-paragraph blog-p"><strong>Estrategia de redes sociales: </strong>Los motores de búsqueda están empezando a prestar más atención a sus plataformas sociales. ¿Se utilizan para promocionar su contenido? ¿Estás logrando un buen compromiso?</p>
+<p class="wp-block-paragraph blog-p"><strong>Medir, informar, mejorar: </strong>SEO no es un trato único. ¿Está auditando periódicamente su sitio para asegurarse de que esté optimizado? ¿En qué áreas le está yendo bien y en qué se está quedando atrás?</p>
+<p class="wp-block-paragraph blog-p">Crear una estrategia SEO integral requiere seguir cada uno de los pasos anteriores para identificar sus fortalezas, debilidades, puntos de referencia y barreras. Asegúrate de hacerlo todo con <em>un contexto</em> en mente. Por ejemplo, <a href="https://www.wsiworld.com/blog/top-10-seo-must-dos-for-every-local-business-to-drive-traffic-and-growth" rel="noreferrer noopener" target="_blank"><mark class="has-inline-color has-black-color" style="background-color:rgba(0, 0, 0, 0)">SEO imprescindibles para las empresas locales</mark></a> variará ligeramente de los deberes que se aplican a las empresas que solo operan en línea o a los negocios sin sitios web (sí, existen, incluso en 2020). </p>
+<p class="wp-block-paragraph blog-p">Otro contexto crítico que merece algunos detalles adicionales: escritorio versus móvil. Los comportamientos de búsqueda en dispositivos móviles difieren de los comportamientos de búsqueda en computadoras de escritorio. <a href="https://www.wsiworld.com/blog/discoverability-meet-mobility-5-ways-to-ensure-your-brands-content-is-optimized-for-mobile-seo" rel="noreferrer noopener" target="_blank"><mark class="has-inline-color has-black-color" style="background-color:rgba(0, 0, 0, 0)">Optimice el contenido de su marca para dispositivos móviles</mark></a> – si no lo hace, se está perdiendo conexiones críticas con el <a href="https://www.statista.com/statistics/330695/number-of-smartphone-users-worldwide/" rel="noreferrer noopener" target="_blank"><mark class="has-inline-color has-black-color" style="background-color:rgba(0, 0, 0, 0)">2,71 mil millones de usuarios de teléfonos inteligentes en todo el mundo</mark></a>.</p>
+<h3><strong>SEO Errores a evitar</strong></h3>
+<p class="wp-block-paragraph blog-p">Ahora que hemos repasado lo que tienes que hacer para que tus esfuerzos SEO sean exitosos, cambiemos de tema y veamos lo que no debes hacer. Estos son los errores SEO más importantes a los que debes prestar atención. </p>
+<p class="wp-block-paragraph blog-p"><strong>Error n.º 1: no comprende los términos clave SEO. </strong>SERP. Tasas de clics. Vínculos de retroceso. Hay muchos términos dentro de SEO que probablemente no hayas encontrado antes, y puede parecer un lenguaje completamente nuevo cuando estás comenzando. Asegúrate de estar actualizado sobre los significados detrás <a href="https://www.wsiworld.com/blog/lets-simplify-commonly-confused-seo-concepts" rel="noreferrer noopener" target="_blank"><mark class="has-inline-color has-black-color" style="background-color:rgba(0, 0, 0, 0)">comúnmente malinterpretan SEO conceptos</mark></a> para que no dispares accidentalmente tu SEO en el pie. </p>
+<p class="wp-block-paragraph blog-p"><strong>Error nº 2: su investigación de palabras clave no es correcta. </strong>No todas las palabras clave se crean de la misma manera. Incluso dentro de un tema, las palabras clave específicas tendrán una clasificación mejor que otras. Su error puede ser no utilizar las palabras clave que se clasifican mejor para su ubicación geográfica particular o ignorar palabras clave fáciles de clasificar con volúmenes de búsqueda bajos. Si sus palabras clave no le funcionan, puede deberse a que tiene las incorrectas. </p>
+<p class="wp-block-paragraph blog-p"><strong>Error #3: Te estás enfocando solo en el contenido o solo en la construcción de enlaces. </strong>Ambos factores influyen en gran medida en su éxito general SEO, pero no se hace ningún favor a sí mismo si pone toda su energía en detrimento del otro. Pésalos relativamente por igual y no dejes que ninguno se quede en el camino. </p>
+<p class="wp-block-paragraph blog-p"><strong>Error #4: Estás intentando estafar al sistema. </strong>Incluso si no es su intención, es posible que esté utilizando tácticas SEO de baja calidad que dañan la reputación de su sitio ante los motores de búsqueda. Cosas como el relleno de palabras clave, el cultivo de enlaces y la duplicación de contenido te perjudicarán mucho más de lo que te ayudarán. </p>
+<p class="wp-block-paragraph blog-p"><strong>Error #5: Estás ignorando algo clave. </strong>Hacer muchas cosas bien no compensará perder lo esencial. Además de optimizar el contenido y los enlaces, debe hacer cosas como asegurarse de que su sitio web sea rastreable y compatible con dispositivos móviles. Busque optimizar sus metadatos y manténgase actualizado sobre los cambios algorítmicos de Google.</p>
+<p class="wp-block-paragraph blog-p">Cuando se trata de SEO, el punto medio no es suficiente. Tienes que estar en la cima y, para llegar allí, debes tener una estrategia que abarque todas las cosas que debes y no debes hacer que definen el bien SEO. Una vez que tengas un buen plan de acción, modifícalo según sea necesario para adaptarlo al panorama SEO en constante cambio. Si lo hace, debería ver más tráfico, más conversiones y, en última instancia, más éxito en línea. </p>
+</div>
+</article>
+<aside aria-label="Acciones relacionadas" class="blog-sidebar">
+<div class="sidebar-card">
+<h3>¿Listo para crecer?</h3>
+<p>Hable con YB Marketing sobre una estrategia basada en sus objetivos comerciales.</p>
+<a class="btn btn-grad" href="/es/contact"><svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-width="2.5" viewbox="0 0 24 24" width="15"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> Empezar</a>
+</div>
+<div class="sidebar-card sidebar-card-ghost">
+<h3>Explora nuestros servicios</h3>
+<p>SEO, Google Ads, diseño web, branding, redes sociales y marketing de contenidos bajo una sola estrategia.</p>
+<a class="btn" href="/es/#services"><svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-width="2.5" viewbox="0 0 24 24" width="15"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> Ver servicios</a>
+</div>
+<div class="sidebar-card sidebar-card-accent">
+<h3>¿Necesitas más fuerte SEO?</h3>
+<p>Clasifique más alto a nivel local y nacional con un plan SEO personalizado creado en torno a sus servicios y mercados.</p>
+<a class="btn" href="/es/seo"><svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-width="2.5" viewbox="0 0 24 24" width="15"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> Ver SEO Servicios</a>
+</div>
+</aside>
+</div>
+</section>
+<div class="wave-div wave-to-footer wave-from-white"><svg preserveaspectratio="none" viewbox="0 0 1440 70"><path d="M0,70 C360,0 1080,0 1440,70 L1440,70 L0,70 Z"></path></svg></div>
+<footer class="footer">
+  <div class="footer-mesh"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:11px;margin-bottom:14px">
+          <img src="../../../assets/yb-logo-white.png" alt="YB" style="width:44px;height:44px;filter:drop-shadow(0 0 3px rgba(255,255,255,.4))">
+          <span style="font-family:var(--font-display);font-weight:800;font-size:22px;color:#fff">YB <span style="color:var(--yb-cyan)">Marketing</span></span>
+        </div>
+        <p>Agencia de marketing digital galardonada que ayuda a las empresas a crecer mediante branding estratégico, SEO y soluciones digitales integrales.</p>
+        <div style="display:grid;gap:9px;margin:16px 0">
+          <a href="tel:5099019735" style="color:var(--fg2-on-dark);font-size:14px;display:flex;align-items:center;gap:9px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(509) 901-9735</a>
+          <a href="mailto:info@yakimabranding.com" style="color:var(--fg2-on-dark);font-size:14px;display:flex;align-items:center;gap:9px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@yakimabranding.com</a>
+        </div>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/yakimabranding" class="social-btn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/yb.marketing_/" class="social-btn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="17" height="17"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a>
+          <a href="https://www.linkedin.com/company/18939370" class="social-btn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="/es/">Inicio</a></li>
+          <li><a href="/es/about">Nosotros</a></li>
+          <li><a href="/es/#services">Servicios</a></li>
+          <li><a href="/es/insights">Ideas</a></li>
+          <li><a href="/es/contact">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="/es/branding">Marca y diseño</a></li>
+          <li><a href="/es/web-design">Diseño web</a></li>
+          <li><a href="/es/seo">Optimización SEO</a></li>
+          <li><a href="/es/google-ads">Google Ads</a></li>
+          <li><a href="/es/social-media">Redes sociales</a></li>
+          <li><a href="/es/press-releases">Comunicados de prensa</a></li>
+          <li><a href="/es/content-marketing">Marketing de contenidos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Nuestro alcance</h4>
+        <p style="color:var(--fg2-on-dark);font-size:14px;line-height:1.7;margin-bottom:14px">Yakima Branding tiene su centro en el centro de Washington, con profundas raíces en la comunidad de Yakima. Desde nuestra sede en Yakima, servimos con orgullo a empresas de todo el Pacífico Noroeste con marketing estratégico, diseño web, SEO, publicidad y soporte de marca.</p>
+        <div style="display:flex;align-items:center;gap:7px;font-size:13px;color:var(--yb-cyan);font-weight:600"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Yakima, WA &nbsp;·&nbsp; Pacific Northwest</div>
+      </div>
+    </div>
+    <div class="footer-locations">
+      <h4>Ubicaciones</h4>
+      <div class="footer-locations-scroll">
+        <div class="footer-locations-track">
+          <div class="footer-locations-set">
+          <a href="/es/locations/boise-id" class="footer-loc-btn">Boise, ID</a>
+          <a href="/es/locations/coeur-dalene-id" class="footer-loc-btn">Coeur d&#x27;Alene, ID</a>
+          <a href="/es/locations/ellensburg-wa" class="footer-loc-btn">Ellensburg, WA</a>
+          <a href="/es/locations/spokane-wa" class="footer-loc-btn">Spokane, WA</a>
+          <a href="/es/locations/tacoma-wa" class="footer-loc-btn">Tacoma, WA</a>
+          <a href="/es/locations/tri-cities-wa" class="footer-loc-btn">Tri-Cities, WA</a>
+          <a href="/es/locations/vancouver-wa" class="footer-loc-btn">Vancouver, WA</a>
+          <a href="/es/locations/walla-walla-wa" class="footer-loc-btn">Walla Walla, WA</a>
+          <a href="/es/locations/wenatchee-wa" class="footer-loc-btn">Wenatchee, WA</a>
+          <a href="/es/locations/yakima-wa" class="footer-loc-btn">Yakima, WA</a>
+          </div>
+          <div class="footer-locations-set" aria-hidden="true">
+          <a href="/es/locations/boise-id" class="footer-loc-btn">Boise, ID</a>
+          <a href="/es/locations/coeur-dalene-id" class="footer-loc-btn">Coeur d&#x27;Alene, ID</a>
+          <a href="/es/locations/ellensburg-wa" class="footer-loc-btn">Ellensburg, WA</a>
+          <a href="/es/locations/spokane-wa" class="footer-loc-btn">Spokane, WA</a>
+          <a href="/es/locations/tacoma-wa" class="footer-loc-btn">Tacoma, WA</a>
+          <a href="/es/locations/tri-cities-wa" class="footer-loc-btn">Tri-Cities, WA</a>
+          <a href="/es/locations/vancouver-wa" class="footer-loc-btn">Vancouver, WA</a>
+          <a href="/es/locations/walla-walla-wa" class="footer-loc-btn">Walla Walla, WA</a>
+          <a href="/es/locations/wenatchee-wa" class="footer-loc-btn">Wenatchee, WA</a>
+          <a href="/es/locations/yakima-wa" class="footer-loc-btn">Yakima, WA</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 YB Marketing. Todos los derechos reservados.</span>
+      <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">
+        <div class="lang-switch lang-switch--footer" role="group" aria-label="Idioma">
+  <a class="lang-switch-opt" href="/insights/everything-businesses-need-to-know-about-seo" lang="en" hreflang="en">EN</a>
+  <a class="lang-switch-opt is-active" href="/es/insights/everything-businesses-need-to-know-about-seo" aria-current="page" lang="es" hreflang="es">ES</a>
+</div>
+        <a href="/es/privacy-policy">Política de privacidad</a>
+        <a href="/es/sitemap">Mapa del sitio</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script defer="" src="/js/newsletter-popup.js"></script>
+<script defer="" src="/js/chat-widget.js"></script>
+<script defer="" src="/js/site.js"></script>
+<script>
+document.getElementById('hamburger')?.addEventListener('click', function () {
+  document.getElementById('mobileMenu')?.classList.toggle('open');
+});
+</script>
+<!-- yb-attributer-start -->
+<!-- yb-attributer-end -->
+</body>
+</html>

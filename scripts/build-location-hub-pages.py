@@ -24,6 +24,8 @@ from site_local_service_hubspot_form_snippet import (
 from site_staging_seo_snippet import STAGING_ROBOTS_META
 from site_footer_snippet import site_footer_html
 from site_nav_snippet import site_header_html
+from location_hub_faqs import FAQ_CSS, FAQ_JS, render_faq_section
+from site_urls import page_href
 
 LOC_PIN = (
     '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
@@ -95,8 +97,8 @@ section{padding:88px 0}
 .hub-hero-accent{display:block;color:var(--yb-cyan);margin-top:6px}
 .hero-lead{margin:0 0 32px;color:var(--fg2-on-dark);max-width:540px;font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.7}
 .hub-hero-actions{display:flex;gap:14px;flex-wrap:wrap}
-.hub-hero-visual{position:relative;display:flex;align-items:center;justify-content:center}
-.hub-hero-visual img{width:min(100%,420px);border-radius:var(--r-xl);box-shadow:0 24px 64px rgba(0,0,0,.35)}
+.hub-hero-visual{position:relative;display:flex;align-items:center;justify-content:center;width:100%;max-width:520px;margin-left:auto;aspect-ratio:4/3.4}
+.hub-hero-visual .hero-orbit{position:absolute;inset:0}
 .services{background:var(--bg-soft)}
 .sec-header{text-align:center;max-width:680px;margin:0 auto 48px}
 .sec-header h2{margin:14px 0 12px}
@@ -170,7 +172,7 @@ section{padding:88px 0}
 @media(max-width:1100px){.hub-svc-grid--5{grid-template-columns:1fr 1fr}.hub-svc-grid--5 .hub-svc-card{grid-column:auto !important}.overview-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:900px){.hub-hero-inner{grid-template-columns:1fr}.hub-hero-visual{display:none}.hub-svc-grid{grid-template-columns:1fr 1fr}.meet-grid{grid-template-columns:1fr}.why-main-grid{grid-template-columns:1fr !important}.why-tiles-grid{grid-template-columns:1fr 1fr !important}.stats-grid{grid-template-columns:1fr 1fr}.loc-grid{grid-template-columns:1fr}}
 @media(max-width:640px){.hub-svc-grid{grid-template-columns:1fr}.overview-grid{grid-template-columns:1fr 1fr}.why-tiles-grid{grid-template-columns:1fr !important}.footer-grid{grid-template-columns:1fr}section{padding:60px 0}.blog-grid{grid-template-columns:1fr}}
-"""
+""" + FAQ_CSS
 
 STAT_JS = """
 const nums = document.querySelectorAll('.stat-num[data-target]');
@@ -274,7 +276,7 @@ def render_why_section(why: dict, signals: list[str], prefix: str, signals_label
         <span class="eyebrow" style="color:var(--yb-cyan)">{esc(why["eyebrow"])}</span>
         <h2 style="margin:14px 0 18px;color:#fff;font-size:clamp(1.8rem,2.6vw,2.4rem);line-height:1.12">{esc(why["heading"])}</h2>
         <p style="color:var(--fg2-on-dark);font-size:15.5px;line-height:1.65;margin:0 0 32px">{esc(why["body"])}</p>
-        <a href="{prefix}contact.html" class="btn btn-grad btn-lg">Let's Talk
+        <a href="{page_href('contact.html')}" class="btn btn-grad btn-lg">Let's Talk
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
       </div>
@@ -292,7 +294,7 @@ def render_why_section(why: dict, signals: list[str], prefix: str, signals_label
 def render_service_cards(cards: list[dict], slug: str, prefix: str) -> str:
     items = []
     for card, theme in zip(cards, SERVICE_THEMES):
-        href = f"{prefix}{theme['folder']}/{slug}.html"
+        href = page_href(f"{theme['folder']}/{slug}.html")
         items.append(
             f"""      <a href="{href}" class="hub-svc-card" style="--ac:{theme['accent']}">
         <div class="hub-svc-chip" style="background:{theme['wash']};color:{theme['accent']}">{theme['icon']}</div>
@@ -302,6 +304,93 @@ def render_service_cards(cards: list[dict], slug: str, prefix: str) -> str:
       </a>"""
         )
     return "\n".join(items)
+
+
+def render_hero_orbit(prefix: str) -> str:
+    """Homepage/contact-style rotating service orbit for navy location heroes."""
+    logo = f"{prefix}assets/yb-logo-white.png"
+    return f"""    <div class="hub-hero-visual">
+      <div class="hero-orbit hero-orbit--pause-hover hero-orbit--bare-hub">
+        <div class="hero-orbit-bg" aria-hidden="true">
+          <div class="hero-orbit-ring hero-orbit-ring--track"></div>
+          <div class="hero-orbit-hub">
+            <img class="hero-orbit-hub-logo" src="{logo}" alt="YB Marketing">
+          </div>
+        </div>
+        <div class="hero-orbit-spin">
+          <div class="hero-orbit-node" style="--i:0">
+            <a href="/web-design" class="hero-orbit-icon" aria-label="Web Design">
+              <span class="hero-orbit-pill">
+                <span class="hero-orbit-pill-ic" style="background:var(--wash-mint);color:#159468">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                </span>
+                <span class="hero-orbit-pill-label">Web Design</span>
+              </span>
+            </a>
+          </div>
+          <div class="hero-orbit-node" style="--i:1">
+            <a href="/seo" class="hero-orbit-icon" aria-label="SEO">
+              <span class="hero-orbit-pill">
+                <span class="hero-orbit-pill-ic" style="background:var(--wash-cyan);color:var(--yb-cyan)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </span>
+                <span class="hero-orbit-pill-label">SEO</span>
+              </span>
+            </a>
+          </div>
+          <div class="hero-orbit-node" style="--i:2">
+            <a href="/google-ads" class="hero-orbit-icon" aria-label="Google Ads">
+              <span class="hero-orbit-pill">
+                <span class="hero-orbit-pill-ic" style="background:var(--wash-coral);color:var(--yb-coral)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+                </span>
+                <span class="hero-orbit-pill-label">Google Ads</span>
+              </span>
+            </a>
+          </div>
+          <div class="hero-orbit-node" style="--i:3">
+            <a href="/social-media" class="hero-orbit-icon" aria-label="Social Media">
+              <span class="hero-orbit-pill">
+                <span class="hero-orbit-pill-ic" style="background:var(--wash-amber);color:#c77f12">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                </span>
+                <span class="hero-orbit-pill-label">Social Media</span>
+              </span>
+            </a>
+          </div>
+          <div class="hero-orbit-node" style="--i:4">
+            <a href="/press-releases" class="hero-orbit-icon" aria-label="Press Releases">
+              <span class="hero-orbit-pill">
+                <span class="hero-orbit-pill-ic" style="background:var(--wash-blue);color:var(--yb-blue)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                </span>
+                <span class="hero-orbit-pill-label">Press Releases</span>
+              </span>
+            </a>
+          </div>
+          <div class="hero-orbit-node" style="--i:5">
+            <a href="/content-marketing" class="hero-orbit-icon" aria-label="Content &amp; Blogging">
+              <span class="hero-orbit-pill">
+                <span class="hero-orbit-pill-ic" style="background:var(--wash-pink);color:var(--yb-pink)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="2" x2="22" y2="6"/><path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"/></svg>
+                </span>
+                <span class="hero-orbit-pill-label">Content &amp; Blogging</span>
+              </span>
+            </a>
+          </div>
+          <div class="hero-orbit-node" style="--i:6">
+            <a href="/branding" class="hero-orbit-icon" aria-label="Branding &amp; Design">
+              <span class="hero-orbit-pill">
+                <span class="hero-orbit-pill-ic" style="background:var(--wash-violet);color:var(--yb-violet)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="0.5" fill="currentColor"/><circle cx="17.5" cy="10.5" r="0.5" fill="currentColor"/><circle cx="8.5" cy="7.5" r="0.5" fill="currentColor"/><circle cx="6.5" cy="12.5" r="0.5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+                </span>
+                <span class="hero-orbit-pill-label">Branding &amp; Design</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>"""
 
 
 def render_hero(hero: dict, prefix: str) -> str:
@@ -317,7 +406,7 @@ def render_hero(hero: dict, prefix: str) -> str:
       <h1>{esc(hero["headline"])} <span class="hub-hero-accent">{esc(hero["accentHeadline"])}</span></h1>
       <p class="hero-lead">{esc(hero["body"])}</p>
       <div class="hub-hero-actions">
-        <a href="{prefix}contact.html" class="btn btn-grad btn-lg">Get Started Today
+        <a href="{page_href('contact.html')}" class="btn btn-grad btn-lg">Get Started Today
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
         <a href="tel:5099019735" class="btn btn-hdr-phone btn-lg">
@@ -326,9 +415,7 @@ def render_hero(hero: dict, prefix: str) -> str:
         </a>
       </div>
     </div>
-    <div class="hub-hero-visual">
-      <img src="{prefix}assets/team-photo.webp" alt="YB Marketing team">
-    </div>
+{render_hero_orbit(prefix)}
   </div>
 </section>
 <div class="wave-div" style="background:#1B2A4A"><svg viewBox="0 0 1440 80" preserveAspectRatio="none" style="height:80px"><path d="M0,0 C360,80 1080,80 1440,0 L1440,80 L0,80 Z" fill="#F6F8FC"/></svg></div>"""
@@ -434,6 +521,7 @@ def page_shell(
 <link rel="stylesheet" href="{prefix}colors_and_type.css">
 <link rel="stylesheet" href="{prefix}site.css">
 <link rel="stylesheet" href="{prefix}insights.css">
+<link rel="stylesheet" href="{prefix}hero-orbit.css">
 <style>{PAGE_CSS}</style>
 {schema_blocks}
 {TRACKING_HEAD_BLOCK}
@@ -450,7 +538,9 @@ def page_shell(
 <script src="{prefix}js/newsletter-popup.js" defer></script>
 <script src="{prefix}js/chat-widget.js" defer></script>
 <script src="{prefix}js/site.js"></script>
+<script src="{prefix}js/hero-orbit.js" defer></script>
 <script>{STAT_JS}</script>
+<script>{FAQ_JS}</script>
 {extra_scripts}
 {ATTRIBUTER_FOOTER_BLOCK}
 </body>
@@ -487,7 +577,7 @@ def render_city_page(loc: dict, prefix: str = "../") -> str:
       <span class="eyebrow" style="color:var(--yb-blue)">{esc(cred["eyebrow"])}</span>
       <h2 style="margin:14px 0 16px">{esc(cred["heading"])}</h2>
       {cred_paras}
-      <a href="{prefix}contact.html" class="btn btn-grad">Work With Us
+      <a href="{page_href('contact.html')}" class="btn btn-grad">Work With Us
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
     </div>
@@ -499,6 +589,7 @@ def render_city_page(loc: dict, prefix: str = "../") -> str:
 {render_why_section(loc["whyYb"], loc["localSignals"], prefix, f"Serving {city} & Surrounding Areas")}
 {render_reviews(prefix)}
 {render_insights(prefix)}
+{render_faq_section(city, loc["state"], slug)}
 {render_contact(prefix, city, slug)}"""
     return page_shell(
         loc["titleTag"],

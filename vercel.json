@@ -29,12 +29,19 @@
     { "source": "/blog/posts/:slug", "destination": "/insights/:slug", "permanent": true },
     { "source": "/posts/:slug.html", "destination": "/insights/:slug", "permanent": true },
     { "source": "/posts/:slug", "destination": "/insights/:slug", "permanent": true },
+    { "source": "/es/blog.html", "destination": "/es/insights", "permanent": true },
+    { "source": "/es/blog", "destination": "/es/insights", "permanent": true },
+    { "source": "/es/blog/posts/:slug.html", "destination": "/es/insights/:slug", "permanent": true },
+    { "source": "/es/blog/posts/:slug", "destination": "/es/insights/:slug", "permanent": true },
+    { "source": "/es/posts/:slug.html", "destination": "/es/insights/:slug", "permanent": true },
+    { "source": "/es/posts/:slug", "destination": "/es/insights/:slug", "permanent": true },
     { "source": "/landing-page", "destination": "/phx-hvac", "permanent": true },
     { "source": "/landing-page/", "destination": "/phx-hvac", "permanent": true },
     { "source": "/:path*.html", "destination": "/:path*", "permanent": true }
   ],
   "rewrites": [
-    { "source": "/insights/:slug", "destination": "/blog/posts/:slug" }
+    { "source": "/insights/:slug", "destination": "/blog/posts/:slug" },
+    { "source": "/es/insights/:slug", "destination": "/es/blog/posts/:slug" }
   ],
   "headers": [
     {

@@ -110,6 +110,15 @@ section{padding:88px 0}
 .svc-cta h3{font-family:var(--font-display);font-weight:700;font-size:28px;color:#fff;margin:0 0 6px;position:relative}
 .svc-cta p{color:var(--fg2-on-dark);font-size:15px;max-width:480px;margin:0;position:relative}
 .svc-cta .btn{position:relative}
+.video-announce{background:#fff;padding:88px 0}
+.video-announce-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:center}
+.video-announce-copy .eyebrow{margin-bottom:12px}
+.video-announce-copy h2{margin:0 0 14px}
+.video-announce-copy .yb-lead{margin:0 0 24px;max-width:36ch}
+.video-announce-frame{border-radius:var(--r-xl);overflow:hidden;background:#000;aspect-ratio:16/9;box-shadow:var(--sh-md)}
+.video-announce-frame iframe{display:block;width:100%;height:100%;border:0}
+@media(max-width:800px){.video-announce-grid{grid-template-columns:1fr;gap:28px}}
+@media(max-width:640px){.video-announce{padding:60px 0}}
 
 /* ─── STATS ─────────────────────────────────────────── */
 .stats-band{background:var(--grad-navy);padding:56px 0;position:relative;overflow:hidden}
@@ -697,6 +706,29 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
       <a href="/contact" class="btn btn-grad btn-lg">Start Your Project
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO ANIMATION -->
+<section class="video-announce" id="video-animation">
+  <div class="container video-announce-grid">
+    <div class="video-announce-copy">
+      <span class="eyebrow" style="color:var(--yb-violet)">Now Offering</span>
+      <h2>Video Animation That Brings Brands to Life</h2>
+      <p class="yb-lead">YB Marketing now creates custom motion graphics and animated video — so your story moves as clearly as your brand looks.</p>
+      <a href="/contact" class="btn btn-grad">Get Animating Today
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="video-announce-frame">
+      <iframe
+        src="https://www.youtube.com/embed/phURHOG_rC4"
+        title="YB Marketing video animation reel"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"></iframe>
     </div>
   </div>
 </section>

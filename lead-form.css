@@ -1,0 +1,119 @@
+/* YB Marketing lead forms — GHL webhook-ready */
+.yb-lead-form {
+  display: grid;
+  gap: 14px;
+  width: 100%;
+  margin: 0;
+}
+
+.yb-lead-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.yb-lead-form__field {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.yb-lead-form__field label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--fg2);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.yb-lead-form__field input,
+.yb-lead-form__field textarea,
+.yb-lead-form__field select {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.4;
+  padding: 12px 14px;
+  border: 1.5px solid var(--line-strong);
+  border-radius: var(--r-md);
+  background: #fff;
+  color: var(--ink);
+  transition: border-color 200ms, box-shadow 200ms;
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.yb-lead-form__field textarea {
+  min-height: 96px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.yb-lead-form__field input:focus,
+.yb-lead-form__field textarea:focus,
+.yb-lead-form__field select:focus {
+  outline: none;
+  border-color: var(--yb-blue);
+  box-shadow: 0 0 0 4px var(--wash-blue);
+}
+
+.yb-lead-form__field input::placeholder,
+.yb-lead-form__field textarea::placeholder {
+  color: var(--fg3);
+}
+
+.yb-lead-form__select-wrap {
+  position: relative;
+}
+
+.yb-lead-form__select-wrap::after {
+  content: '';
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--fg3);
+  border-bottom: 2px solid var(--fg3);
+  transform: translateY(-60%) rotate(45deg);
+  pointer-events: none;
+}
+
+.yb-lead-form__select-wrap select {
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.yb-lead-form__submit {
+  width: 100%;
+  margin-top: 4px;
+  justify-content: center;
+}
+
+.yb-lead-form__submit.is-loading {
+  opacity: 0.72;
+  pointer-events: none;
+}
+
+.yb-lead-form__status {
+  margin: 0;
+  font-size: 13px;
+  color: var(--fg2);
+  text-align: center;
+  line-height: 1.45;
+}
+
+.yb-lead-form__status.is-error {
+  color: #c0392b;
+}
+
+@media (max-width: 640px) {
+  .yb-lead-form__row {
+    grid-template-columns: 1fr;
+  }
+}

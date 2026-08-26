@@ -1,11 +1,8 @@
-"""HubSpot contact form embed for services/*.html pages."""
+"""Contact form embed for service hub pages (GoHighLevel webhook)."""
 
 from typing import Optional
 
-HS_PORTAL_ID = "243964841"
-HS_REGION = "na2"
-HS_EMBED_SCRIPT = f"https://js-na2.hsforms.net/forms/embed/{HS_PORTAL_ID}.js"
-SERVICE_HS_FORM_ID = "6f398aa2-6690-4d5f-98e1-da96f49c633d"
+from site_lead_form_snippet import service_lead_form_html
 
 SERVICE_SOURCE_LABELS = {
     "index.html": "Service Page",
@@ -48,8 +45,4 @@ def service_thank_you_redirect(service_filename: str, folder: str = "") -> str:
 
 def service_hubspot_form_html(source: str, redirect: Optional[str] = None) -> str:
     redirect = redirect or "/thank-you"
-    return f"""          <h3 style="font-size:20px;margin:0 0 20px">Send Us a Message</h3>
-          <div class="yb-hs-form" data-source="{source}" data-redirect="{redirect}">
-            <div class="hs-form-frame" data-region="{HS_REGION}" data-form-id="{SERVICE_HS_FORM_ID}" data-portal-id="{HS_PORTAL_ID}"></div>
-          </div>
-          <p class="yb-hs-form-footnote">We respond by the next business day. Your information is never shared.</p>"""
+    return service_lead_form_html(source, redirect)

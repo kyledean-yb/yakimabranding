@@ -95,6 +95,7 @@ a {
   justify-content: space-between;
   height: 72px;
   gap: 12px;
+  flex-wrap: nowrap;
 }
 
 .logo {
@@ -123,6 +124,7 @@ a {
   flex: 1;
   justify-content: center;
   min-width: 0;
+  flex-wrap: nowrap;
 }
 
 .nav-services {
@@ -180,6 +182,8 @@ a {
   text-decoration: none;
   transition: background 0.2s ease, color 0.2s ease;
   display: inline-block;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .nav-a:hover {
@@ -201,6 +205,8 @@ a {
   cursor: pointer;
   font-family: var(--font-body);
   transition: background 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .nav-chevron {
@@ -407,7 +413,26 @@ a {
   cursor: pointer;
 }
 
-@media (max-width: 900px) {
+/* Compact before collapse: EN/ES + phone + CTA no longer fit beside full nav. */
+@media (max-width: 1280px) {
+  .nav > a.nav-a:first-child {
+    display: none;
+  }
+
+  .nav-a,
+  .nav-svc-btn {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .btn-hdr-phone {
+    font-size: 0;
+    gap: 0;
+    padding: 11px 12px;
+  }
+}
+
+@media (max-width: 1100px) {
   .nav-dd {
     display: none !important;
   }

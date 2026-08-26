@@ -17,7 +17,7 @@
     phone: '5099019735',
     phoneDisplay: '509-901-9735',
     email: 'info@yakimabranding.com',
-    scheduleUrl: 'https://calendly.com/yakimabranding',
+    scheduleUrl: '/contact',
     officeHours: 'Office hours: 9am–5pm PST',
     welcomeMessage:
       "Hi! I'm here to help you learn more about YB Marketing. How can I assist you today?",

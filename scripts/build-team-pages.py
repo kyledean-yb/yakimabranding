@@ -15,7 +15,7 @@ from site_staging_seo_snippet import STAGING_ROBOTS_META
 from site_footer_snippet import site_footer_html
 
 PREFIX = "../"
-DEFAULT_CALENDLY_URL = "https://calendly.com/yakimabranding"
+DEFAULT_CALENDLY_URL = "/contact"
 HS_PORTAL_ID = "243964841"
 HS_REGION = "na2"
 HS_EMBED_SCRIPT = f"https://js-na2.hsforms.net/forms/embed/{HS_PORTAL_ID}.js"
@@ -24,9 +24,9 @@ JACOB_HS_FORM_ID = "d5e25f7a-16e7-49ed-b125-fe339a50994e"
 KEVIN_HS_FORM_ID = "17ac4d96-5927-4908-b760-593936986399"
 HUBSPOT_THEMES = frozenset({"jacob", "kevin", "sophie"})
 CALENDLY_BY_MEMBER = {
-    "Jacob Ross": "https://calendly.com/jacobybmarketing",
-    "Kevin Dean": "https://calendly.com/kdean-wsi",
-    "Sophie Mann": "https://calendly.com/sophie-yakimabranding/30min",
+    "Jacob Ross": "https://link.bluesoftwebsites.com/widget/booking/lRk0w69pQF0RRze2xKqx",
+    "Kevin Dean": "https://link.bluesoftwebsites.com/widget/booking/UFZzPYN4w4sYMXsTvGHP",
+    "Sophie Mann": "https://link.bluesoftwebsites.com/widget/booking/dwvAN8VTyHIbsbW3OLUF",
 }
 ARROW = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>'
 CAL_ICON = (

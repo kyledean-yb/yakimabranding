@@ -384,6 +384,11 @@ def rewrite_links(soup: BeautifulSoup, source_file: Path) -> None:
         if href and not href.startswith(("http", "//", "/", "data:")):
             tag["href"] = absolute_asset_url(href, source_file)
 
+    for form in soup.find_all("form", class_="yb-lead-form"):
+        redirect = form.get("data-redirect")
+        if redirect:
+            form["data-redirect"] = rewrite_internal_href_to_es(redirect)
+
 
 def restamp_chrome(html: str, rel_en: str, source_en: Path) -> str:
     current = clean_path_from_file(source_en)

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Fetch YB Marketing blog posts via WP REST API and generate static HTML."""
 
+import argparse
 import html
 import json
 import re
@@ -24,6 +25,7 @@ def about_nav_block(prefix: str) -> str:
 ROOT = Path(__file__).resolve().parents[1]
 POSTS_DIR = ROOT / "blog" / "posts"
 DATA_FILE = ROOT / "blog" / "data" / "posts.json"
+LOCAL_POSTS_FILE = ROOT / "blog" / "data" / "local-posts.json"
 API = "https://www.yakimabranding.com/wp-json/wp/v2"
 BLOG_INDEX_PREFIX = ""  # insights.html at site root
 POST_PREFIX = "../../"  # blog/posts/*.html → site root
@@ -107,6 +109,18 @@ SLUG_TOPIC = {
     "pcba-design-for-manufacturability": "general",
     "selecting-a-commercial-landscape-maintenance-company": "general",
     "why-choose-gasoline-box-trucks-vs-diesel": "general",
+    "does-seo-still-matter-with-ai-search": "seo",
+    "how-to-show-up-chatgpt-ai-search": "seo",
+    "zero-click-local-marketing-washington": "seo",
+    "seo-vs-google-ads-pacific-northwest": "strategy",
+    "local-seo-washington-city-pages": "seo",
+    "how-long-does-seo-take": "seo",
+    "local-business-marketing-budget": "strategy",
+    "what-business-website-needs-2026": "web-design",
+    "should-you-rebuild-your-website": "web-design",
+    "local-service-page-seo-washington": "seo",
+    "why-yb-builds-marketing-tools": "strategy",
+    "seo-audit-what-actually-matters": "seo",
 }
 
 
@@ -127,6 +141,28 @@ def fetch_all_posts():
         if page >= total_pages:
             break
         page += 1
+    return posts
+
+
+def load_local_posts():
+    if not LOCAL_POSTS_FILE.exists():
+        return []
+    raw = json.loads(LOCAL_POSTS_FILE.read_text(encoding="utf-8"))
+    posts = []
+    for item in raw:
+        posts.append({
+            "slug": item["slug"],
+            "title": {"rendered": item["title"]},
+            "content": {"rendered": item["contentHtml"]},
+            "excerpt": {"rendered": f"<p>{html.escape(item.get('metaDescription', ''))}</p>"},
+            "date": item["date"],
+            "_local": True,
+            "_metaTitle": item.get("metaTitle"),
+            "_metaDescription": item.get("metaDescription"),
+            "_image": item.get("image", ""),
+            "_topic": item.get("topic"),
+            "_categories": item.get("categories", ["Blog"]),
+        })
     return posts
 
 
@@ -440,49 +476,48 @@ document.getElementById('hamburger')?.addEventListener('click', function () {{
 </html>"""
 
 
-def build():
-    print("Fetching posts from WordPress API…")
-    raw_posts = fetch_all_posts()
-    raw_posts.sort(key=lambda p: p["date"], reverse=True)
-
-    slug_map = {p["slug"]: p["slug"] for p in raw_posts}
-    entries = []
-
-    POSTS_DIR.mkdir(parents=True, exist_ok=True)
-    DATA_FILE.parent.mkdir(parents=True, exist_ok=True)
-
-    for post in raw_posts:
-        slug = post["slug"]
-        title = html.unescape(post["title"]["rendered"])
-        content = rewrite_content(post["content"]["rendered"], slug_map)
+def render_post(post, slug_map):
+    """Generate HTML file and metadata entry for one post."""
+    slug = post["slug"]
+    is_local = post.get("_local", False)
+    title = html.unescape(post["title"]["rendered"])
+    raw_content = post["content"]["rendered"]
+    content = rewrite_content(raw_content, slug_map) if not is_local else raw_content
+    if is_local and post.get("_metaDescription"):
+        excerpt = post["_metaDescription"][:220]
+    else:
         excerpt = strip_html(post["excerpt"]["rendered"])[:220]
-        if excerpt.endswith("[…]") or excerpt.endswith("[...]"):
-            excerpt = excerpt.rsplit(" ", 1)[0] + "…"
+    if excerpt.endswith("[…]") or excerpt.endswith("[...]"):
+        excerpt = excerpt.rsplit(" ", 1)[0] + "…"
+    if is_local:
+        image = post.get("_image", "")
+        cats = post.get("_categories", ["Blog"])
+        topic = post.get("_topic") or assign_topic(post)
+    else:
         image = get_featured_url(post)
         cats = get_categories(post)
-        date_str = format_date(post["date"])
-        rt = reading_time(post["content"]["rendered"])
-        accent = pick_service_cta(post, POST_PREFIX)
-
         topic = assign_topic(post)
-        topic_label = TOPIC_LABELS.get(topic, "Strategy")
-        cat_html = (
-            f'<span class="post-cat post-cat--{html.escape(topic)}">{html.escape(topic_label)}</span>'
-            + "".join(
-                f'<span class="post-cat post-cat-wp">{html.escape(c)}</span>'
-                for c in cats[:2]
-                if c.lower() not in ("blog", topic_label.lower())
-            )
+    date_str = format_date(post["date"])
+    rt = reading_time(raw_content)
+    accent = pick_service_cta(post, POST_PREFIX)
+    topic_label = TOPIC_LABELS.get(topic, "Strategy")
+    cat_html = (
+        f'<span class="post-cat post-cat--{html.escape(topic)}">{html.escape(topic_label)}</span>'
+        + "".join(
+            f'<span class="post-cat post-cat-wp">{html.escape(c)}</span>'
+            for c in cats[:2]
+            if c.lower() not in ("blog", topic_label.lower())
         )
+    )
 
-        img_block = ""
-        if image:
-            img_block = f'<div class="post-hero-img"><img src="{html.escape(image)}" alt="{html.escape(title)}" loading="lazy"></div>'
+    img_block = ""
+    if image:
+        img_block = f'<div class="post-hero-img"><img src="{html.escape(image)}" alt="{html.escape(title)}" loading="lazy"></div>'
 
-        intro_block = intro_block_for_build(content, title, excerpt, slug)
-        updated_meta = updated_meta_for_build(slug)
+    intro_block = intro_block_for_build(content, title, excerpt, slug)
+    updated_meta = updated_meta_for_build(slug)
 
-        body = f"""
+    body = f"""
 <section class="blog-hero">
   <div class="blog-hero-mesh"></div>
   <div class="hero-logo-overlay hero-logo-overlay--center" aria-hidden="true">
@@ -514,34 +549,37 @@ def build():
 </section>
 """
 
+    if is_local and post.get("_metaDescription"):
+        desc = post["_metaDescription"]
+    else:
         desc = excerpt or strip_html(content)[:160]
-        page = page_shell(
-            POST_PREFIX,
-            f"{title} — YB Marketing Insights",
-            desc,
-            body,
-            footer_wave=WAVE_FOOTER_FROM_WHITE,
-            extra_head=seo_head_html(f"blog/posts/{slug}.html"),
-        )
-        out = POSTS_DIR / f"{slug}.html"
-        out.write_text(page, encoding="utf-8")
+    page_title = post.get("_metaTitle") if is_local and post.get("_metaTitle") else f"{title} — YB Marketing Insights"
+    page = page_shell(
+        POST_PREFIX,
+        page_title,
+        desc,
+        body,
+        footer_wave=WAVE_FOOTER_FROM_WHITE,
+        extra_head=seo_head_html(f"blog/posts/{slug}.html"),
+    )
+    out = POSTS_DIR / f"{slug}.html"
+    out.write_text(page, encoding="utf-8")
 
-        entries.append({
-            "slug": slug,
-            "title": title,
-            "excerpt": excerpt,
-            "date": post["date"],
-            "dateFormatted": date_str,
-            "image": image,
-            "categories": cats,
-            "topic": topic,
-            "topicLabel": TOPIC_LABELS.get(topic, "Strategy"),
-            "readingTime": rt,
-        })
-        print(f"  · {slug}.html")
+    return {
+        "slug": slug,
+        "title": title,
+        "excerpt": excerpt,
+        "date": post["date"],
+        "dateFormatted": date_str,
+        "image": image,
+        "categories": cats,
+        "topic": topic,
+        "topicLabel": TOPIC_LABELS.get(topic, "Strategy"),
+        "readingTime": rt,
+    }
 
-    DATA_FILE.write_text(json.dumps(entries, indent=2), encoding="utf-8")
 
+def write_insights_index(entries, sidebar_post):
     cards = []
     for i, e in enumerate(entries):
         img = e["image"] or "../assets/blog-1.webp"
@@ -582,7 +620,7 @@ def build():
         </div>
         <p class="blog-filter-empty" id="blogFilterEmpty" hidden>No articles in this category yet. Try another filter.</p>
       </div>
-      {sidebar_html(BLOG_INDEX_PREFIX, pick_service_cta(raw_posts[0], BLOG_INDEX_PREFIX))}
+      {sidebar_html(BLOG_INDEX_PREFIX, pick_service_cta(sidebar_post, BLOG_INDEX_PREFIX))}
     </div>
   </div>
 </section>
@@ -622,8 +660,64 @@ def build():
 </html>
 """
     (ROOT / "blog.html").write_text(redirect, encoding="utf-8")
+
+
+def build(offline=False):
+    POSTS_DIR.mkdir(parents=True, exist_ok=True)
+    DATA_FILE.parent.mkdir(parents=True, exist_ok=True)
+
+    local_posts = load_local_posts()
+    local_slugs = {p["slug"] for p in local_posts}
+
+    if offline:
+        print("Offline mode: keeping existing WordPress posts, updating local posts…")
+        entries = json.loads(DATA_FILE.read_text(encoding="utf-8")) if DATA_FILE.exists() else []
+        entries = [e for e in entries if e["slug"] not in local_slugs]
+        slug_map = {e["slug"]: e["slug"] for e in entries}
+        slug_map.update({p["slug"]: p["slug"] for p in local_posts})
+        for post in local_posts:
+            entry = render_post(post, slug_map)
+            entries.append(entry)
+            print(f"  · {post['slug']}.html")
+        entries.sort(key=lambda e: e["date"], reverse=True)
+        DATA_FILE.write_text(json.dumps(entries, indent=2), encoding="utf-8")
+        sidebar_post = local_posts[0] if local_posts else {"slug": entries[0]["slug"], "title": {"rendered": entries[0]["title"]}}
+        write_insights_index(entries, sidebar_post)
+        print(f"\nGenerated insights.html + {len(entries)} posts in blog/posts/")
+        return
+
+    print("Fetching posts from WordPress API…")
+    try:
+        raw_posts = fetch_all_posts()
+    except Exception as exc:
+        print(f"  WordPress API unavailable ({exc}); falling back to offline mode")
+        build(offline=True)
+        return
+
+    if local_posts:
+        wp_slugs = {p["slug"] for p in raw_posts}
+        for lp in local_posts:
+            if lp["slug"] in wp_slugs:
+                raw_posts = [p for p in raw_posts if p["slug"] != lp["slug"]]
+        raw_posts.extend(local_posts)
+        print(f"  Merged {len(local_posts)} local post(s)")
+    raw_posts.sort(key=lambda p: p["date"], reverse=True)
+
+    slug_map = {p["slug"]: p["slug"] for p in raw_posts}
+    entries = []
+
+    for post in raw_posts:
+        entry = render_post(post, slug_map)
+        entries.append(entry)
+        print(f"  · {post['slug']}.html")
+
+    DATA_FILE.write_text(json.dumps(entries, indent=2), encoding="utf-8")
+    write_insights_index(entries, raw_posts[0])
     print(f"\nGenerated insights.html + {len(entries)} posts in blog/posts/")
 
 
 if __name__ == "__main__":
-    build()
+    parser = argparse.ArgumentParser(description="Build YB Marketing blog static pages")
+    parser.add_argument("--offline", action="store_true", help="Skip WordPress API; only rebuild local posts")
+    args = parser.parse_args()
+    build(offline=args.offline)

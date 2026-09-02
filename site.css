@@ -1832,6 +1832,10 @@ a {
   margin-top: 4px;
 }
 
+#book {
+  scroll-margin-top: 88px;
+}
+
 .yb-schedule-card {
   display: flex;
   flex-direction: row;

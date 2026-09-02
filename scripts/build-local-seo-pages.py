@@ -437,7 +437,7 @@ section{{padding:88px 0}}
   <div class="container">
     <div style="text-align:center;max-width:700px;margin:0 auto 48px">
       <span class="eyebrow" style="color:#2BC4F0">Common Questions</span>
-      <h2 style="margin:14px 0 14px">{esc(city)} SEO — Frequently Asked Questions</h2>
+      <h2 style="margin:14px 0 14px">{esc(city)} SEO FAQs</h2>
       <p style="color:var(--fg2);font-size:16px;line-height:1.75">Answers to the questions we hear most often about SEO in {esc(city)}.</p>
     </div>
     <div style="max-width:760px;margin:0 auto;border-top:1px solid var(--line)">

@@ -286,6 +286,7 @@ def render_page(loc: dict, config: dict) -> str:
     )
     hero_aria = f'{config["service_label"]} in {city}'
     eyebrow = loc["hero"].get("eyebrow", config["service_label"].upper())
+    faq_heading = f"{city} {config['service_label']} FAQs"
 
     extra_css = BRAND_ACCordion_CSS if service_key == "branding" else ""
     brand_script = (
@@ -470,7 +471,7 @@ section{{padding:88px 0}}
   <div class="container">
     <div style="text-align:center;max-width:700px;margin:0 auto 48px">
       <span class="eyebrow" style="color:{accent}">Common Questions</span>
-      <h2 style="margin:14px 0 14px">{esc(city)} {esc(config['service_label'])} — Frequently Asked Questions</h2>
+      <h2 style="margin:14px 0 14px">{esc(faq_heading)}</h2>
       <p style="color:var(--fg2);font-size:16px;line-height:1.75">Answers to the questions we hear most often about {esc(config['service_label'].lower())} in {esc(city)}.</p>
     </div>
     <div style="max-width:760px;margin:0 auto;border-top:1px solid var(--line)">

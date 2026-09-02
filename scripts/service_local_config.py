@@ -46,15 +46,15 @@ PROCESS_STEPS = {
     "branding": [
         (
             "DISCOVERY & BRAND VISIONING",
-            "We learn your story, audience, and differentiators — through research, journey mapping, and conversations with you and your clients.",
+            "We learn your story, audience, and differentiators through research, customer conversations, and a clear look at your market.",
         ),
         (
             "STRATEGY & DESIGN SYSTEM",
-            "Together we define your brand story, logo, typography, color, and graphic standards — a flexible system your team can use with confidence.",
+            "Together we define your brand story, logo, typography, color, and graphic standards in a system your team can use with confidence.",
         ),
         (
             "LAUNCH A COHESIVE BRAND",
-            "From logo guides to print, packaging, signage, and web — we deliver assets that look and feel like family everywhere your brand appears.",
+            "From logo guides to print, packaging, signage, and web, we deliver assets that look like the same company everywhere customers see you.",
         ),
     ],
 }

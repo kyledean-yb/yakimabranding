@@ -53,9 +53,8 @@ SERVICE_FAQS = [
         "accent": "#2BC4F0",
         "question": "Do you offer SEO in {place}?",
         "answer": (
-            "Yes. YB Marketing provides local SEO for {place} businesses — including Google Business "
-            "Profile optimization, local keyword targeting, technical SEO, and content that helps you "
-            "rank in search and Maps."
+            "Yes. We handle local SEO for {place} businesses: Google Business Profile, on-page work, "
+            "technical fixes, and content aimed at how people search in your market."
         ),
     },
     {
@@ -64,8 +63,8 @@ SERVICE_FAQS = [
         "accent": "#FF6B57",
         "question": "Do you manage Google Ads in {place}?",
         "answer": (
-            "Yes. We manage Google Ads campaigns for {place} businesses with keyword strategy, "
-            "conversion tracking, and ongoing optimization so your ad spend reaches the right local customers."
+            "Yes. We run Google Ads for {place} companies with conversion tracking, geographic targeting, "
+            "and monthly optimization so spend goes toward real leads."
         ),
     },
     {
@@ -74,8 +73,8 @@ SERVICE_FAQS = [
         "accent": "#159468",
         "question": "Do you design websites for businesses in {place}?",
         "answer": (
-            "Yes. We build custom, mobile-ready websites for {place} businesses that are fast, "
-            "SEO-friendly, and designed to convert visitors into leads."
+            "Yes. We build fast, mobile-ready websites for {place} businesses that are easy to update "
+            "and structured for search."
         ),
     },
     {
@@ -84,8 +83,8 @@ SERVICE_FAQS = [
         "accent": "#c77f12",
         "question": "Do you provide social media management in {place}?",
         "answer": (
-            "Yes. Our team creates and manages social content that reflects {city}'s local market "
-            "and helps {place} businesses build engagement and brand awareness."
+            "Yes. We plan and publish social content for {place} brands, aligned with your voice "
+            "and the seasons that matter in your market."
         ),
     },
     {
@@ -94,8 +93,8 @@ SERVICE_FAQS = [
         "accent": "#7B5BE6",
         "question": "Do you offer branding services in {place}?",
         "answer": (
-            "Yes. We develop brand identities — logos, visual systems, and messaging — built for "
-            "{place} businesses that want to stand out in their market."
+            "Yes. We offer brand strategy, logo design, and identity systems for {place} businesses, "
+            "from signage to digital applications."
         ),
     },
 ]
@@ -160,7 +159,7 @@ def render_faq_section(city: str, state: str, slug: str) -> str:
   <div class="container">
     <div style="text-align:center;max-width:700px;margin:0 auto 48px">
       <span class="eyebrow" style="color:var(--yb-blue)">Common Questions</span>
-      <h2 style="margin:14px 0 14px">{esc(place)} Digital Marketing — Frequently Asked Questions</h2>
+      <h2 style="margin:14px 0 14px">{esc(place)} Digital Marketing FAQs</h2>
       <p style="color:var(--fg2);font-size:16px;line-height:1.75">Answers about our SEO, Google Ads, web design, social media, and branding services in {esc(place)}.</p>
     </div>
     <div style="max-width:760px;margin:0 auto;border-top:1px solid var(--line)">

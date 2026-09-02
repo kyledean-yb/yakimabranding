@@ -1,5 +1,185 @@
 [
   {
+    "slug": "seo-audit-what-actually-matters",
+    "title": "Why an SEO Score Is Not the Same Thing as an SEO Strategy",
+    "excerpt": "A high SEO audit score does not mean a site is performing well. Learn how we prioritize indexing, search opportunities, content, and business impact.",
+    "date": "2026-09-03T17:00:00",
+    "dateFormatted": "September 03, 2026",
+    "image": "/wp-content/uploads/2023/06/pexels-pixabay-39284-scaled.jpg",
+    "categories": [
+      "Blog",
+      "SEO"
+    ],
+    "topic": "seo",
+    "topicLabel": "SEO",
+    "readingTime": 5
+  },
+  {
+    "slug": "why-yb-builds-marketing-tools",
+    "title": "Why We Started Building Our Own Marketing Tools at YB",
+    "excerpt": "We did not need another marketing dashboard. We needed better ways to connect client data, priorities, and workflows into useful decisions.",
+    "date": "2026-09-03T16:00:00",
+    "dateFormatted": "September 03, 2026",
+    "image": "/wp-content/uploads/2023/06/pexels-mikael-blomkvist-6476589-scaled.jpg",
+    "categories": [
+      "Blog",
+      "Strategy"
+    ],
+    "topic": "strategy",
+    "topicLabel": "Strategy",
+    "readingTime": 4
+  },
+  {
+    "slug": "local-service-page-seo-washington",
+    "title": "What Makes a Good Local Service Page? Examples From Washington Businesses",
+    "excerpt": "Learn how Washington businesses can create useful local service pages that reflect real geography, customer needs, and regional expertise.",
+    "date": "2026-09-03T15:00:00",
+    "dateFormatted": "September 03, 2026",
+    "image": "/wp-content/uploads/2023/06/Fountain-Exposed-Aggregate-Patio.jpg",
+    "categories": [
+      "Blog",
+      "SEO"
+    ],
+    "topic": "seo",
+    "topicLabel": "SEO",
+    "readingTime": 3
+  },
+  {
+    "slug": "should-you-rebuild-your-website",
+    "title": "Should You Rebuild Your Website? What We Evaluate Before Recommending It",
+    "excerpt": "Not every older website needs replacing. Learn what we evaluate before recommending that a business invest in a full website rebuild.",
+    "date": "2026-09-03T14:00:00",
+    "dateFormatted": "September 03, 2026",
+    "image": "/wp-content/uploads/2023/06/pexels-lex-photography-1109543-scaled.jpg",
+    "categories": [
+      "Blog",
+      "Web Design"
+    ],
+    "topic": "web-design",
+    "topicLabel": "Web Design",
+    "readingTime": 4
+  },
+  {
+    "slug": "what-business-website-needs-2026",
+    "title": "What We Think a Business Website Needs to Do in 2026",
+    "excerpt": "A modern business website needs to do more than look good. Learn how websites can support sales, search visibility, authority, and customer education.",
+    "date": "2026-09-03T13:00:00",
+    "dateFormatted": "September 03, 2026",
+    "image": "/wp-content/uploads/2023/06/pexels-cottonbro-studio-5053738-scaled.jpg",
+    "categories": [
+      "Blog",
+      "Web Design"
+    ],
+    "topic": "web-design",
+    "topicLabel": "Web Design",
+    "readingTime": 4
+  },
+  {
+    "slug": "local-business-marketing-budget",
+    "title": "How Much Should a Local Business Spend on Digital Marketing?",
+    "excerpt": "Marketing budgets should reflect customer value, margins, growth goals, and capacity. Learn how local businesses can think about digital marketing spend.",
+    "date": "2026-09-03T12:00:00",
+    "dateFormatted": "September 03, 2026",
+    "image": "/wp-content/uploads/2023/06/pexels-andrea-piacquadio-789822-scaled.jpg",
+    "categories": [
+      "Blog",
+      "Strategy"
+    ],
+    "topic": "strategy",
+    "topicLabel": "Strategy",
+    "readingTime": 3
+  },
+  {
+    "slug": "how-long-does-seo-take",
+    "title": "How Long Does SEO Take? What We Look for in Months 1, 3, 6, and 12",
+    "excerpt": "SEO does not follow a fixed timeline. Learn what we typically evaluate during months 1, 3, 6, and 12 of an SEO campaign.",
+    "date": "2026-09-03T11:00:00",
+    "dateFormatted": "September 03, 2026",
+    "image": "/wp-content/uploads/2023/06/pexels-tranmautritam-69432-scaled.jpg",
+    "categories": [
+      "Blog",
+      "SEO"
+    ],
+    "topic": "seo",
+    "topicLabel": "SEO",
+    "readingTime": 4
+  },
+  {
+    "slug": "local-seo-washington-city-pages",
+    "title": "Local SEO in Washington Is More Than Creating a Page for Every City",
+    "excerpt": "Creating dozens of nearly identical city pages is not a complete local SEO strategy. Learn how Washington businesses can build more useful local content.",
+    "date": "2026-09-03T10:00:00",
+    "dateFormatted": "September 03, 2026",
+    "image": "/wp-content/uploads/2023/06/pexels-oleksandr-pidvalnyi-9822732-scaled.jpg",
+    "categories": [
+      "Blog",
+      "SEO"
+    ],
+    "topic": "seo",
+    "topicLabel": "SEO",
+    "readingTime": 4
+  },
+  {
+    "slug": "seo-vs-google-ads-pacific-northwest",
+    "title": "SEO vs. Google Ads for Pacific Northwest Businesses: Where Should the First Dollar Go?",
+    "excerpt": "Should a Pacific Northwest business invest in SEO or Google Ads first? The answer depends on lead urgency, customer value, competition, and buying behavior.",
+    "date": "2026-09-02T13:00:00",
+    "dateFormatted": "September 02, 2026",
+    "image": "/wp-content/uploads/2023/06/pexels-pixabay-265087-scaled.jpg",
+    "categories": [
+      "Blog",
+      "Strategy"
+    ],
+    "topic": "strategy",
+    "topicLabel": "Strategy",
+    "readingTime": 4
+  },
+  {
+    "slug": "zero-click-local-marketing-washington",
+    "title": "Zero-Click Search Is Changing Local Marketing in Washington",
+    "excerpt": "Customers can discover and contact businesses without visiting their websites. Learn how zero-click search is changing local marketing and measurement.",
+    "date": "2026-09-02T12:00:00",
+    "dateFormatted": "September 02, 2026",
+    "image": "/wp-content/uploads/2023/06/pexels-magnus-mueller-2818118-scaled.jpg",
+    "categories": [
+      "Blog",
+      "SEO"
+    ],
+    "topic": "seo",
+    "topicLabel": "SEO",
+    "readingTime": 4
+  },
+  {
+    "slug": "how-to-show-up-chatgpt-ai-search",
+    "title": "How Can a Pacific Northwest Business Show Up in ChatGPT and AI Search?",
+    "excerpt": "Learn how Pacific Northwest businesses can strengthen visibility in ChatGPT and AI search through clearer content, authority, local relevance, and third-party signals.",
+    "date": "2026-09-02T11:00:00",
+    "dateFormatted": "September 02, 2026",
+    "image": "/wp-content/uploads/2023/06/pexels-sora-shimazaki-5669602-scaled.jpg",
+    "categories": [
+      "Blog",
+      "SEO"
+    ],
+    "topic": "seo",
+    "topicLabel": "SEO",
+    "readingTime": 4
+  },
+  {
+    "slug": "does-seo-still-matter-with-ai-search",
+    "title": "Does SEO Still Matter With AI Search? What Pacific Northwest Businesses Should Consider",
+    "excerpt": "AI is changing how customers search, but SEO still matters. Learn how Pacific Northwest businesses can adapt their search strategy for Google and AI platforms.",
+    "date": "2026-09-02T10:00:00",
+    "dateFormatted": "September 02, 2026",
+    "image": "/wp-content/uploads/2023/08/pexels-pixabay-270637-scaled.jpg",
+    "categories": [
+      "Blog",
+      "SEO"
+    ],
+    "topic": "seo",
+    "topicLabel": "SEO",
+    "readingTime": 5
+  },
+  {
     "slug": "yb-marketing-announces-strategic-acquisition-of-encite-branding-marketing-creative",
     "title": "YB Marketing Announces Strategic Acquisition of encite branding + marketing + creative",
     "excerpt": "SAN JOSE, CA, UNITED STATES, January 8, 2025 /EINPresswire.com/ \u2014 YB Marketing, a team of dedicated marketing professionals and providers of specialized services based in San Jose, California, today announced it has sign",

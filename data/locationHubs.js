@@ -4,66 +4,66 @@ export const locationHubs = [
     "city": "Yakima",
     "state": "WA",
     "titleTag": "Digital Marketing Agency Yakima WA | YB Marketing",
-    "metaDescription": "YB Marketing is Yakima's full-service digital marketing agency. SEO, Google Ads, web design, social media, and branding for Yakima Valley businesses. Based in Yakima.",
+    "metaDescription": "YB Marketing is a full-service digital marketing agency for Yakima Valley businesses. SEO, Google Ads, web design, social media, and branding from a team based in Yakima.",
     "canonicalUrl": "https://yakimabranding.com/locations/yakima-wa",
     "hero": {
-      "eyebrow": "YB MARKETING — YAKIMA'S LOCAL MARKETING TEAM",
-      "headline": "Yakima's Digital Marketing Agency.",
-      "accentHeadline": "Built for the Valley.",
-      "body": "Rooted in Yakima, built for the Pacific Northwest. We help Yakima Valley businesses dominate search results, build stronger brands, and grow through digital marketing strategies that actually work in this market."
+      "eyebrow": "YB MARKETING · YAKIMA, WA",
+      "headline": "Digital Marketing for the Yakima Valley",
+      "accentHeadline": "From a Team That Lives Here",
+      "body": "We are based in Yakima and work with Valley businesses every day. Search, ads, websites, social, and branding with local context baked in, not bolted on."
     },
     "servicesSection": {
-      "eyebrow": "YAKIMA MARKETING SERVICES",
-      "heading": "Everything Your Yakima Business Needs to Grow Online",
-      "subheading": "From SEO to branding to Google Ads, we handle every piece of your digital marketing — so you can focus on running your business.",
+      "eyebrow": "SERVICES IN YAKIMA",
+      "heading": "Marketing Help for Yakima Valley Businesses",
+      "subheading": "One team for SEO, paid search, websites, social, and brand design so your message stays consistent.",
       "cards": [
         {
           "title": "SEO & AI Optimization",
-          "body": "Rank higher in Yakima search results and get found by the Valley customers who are actively searching for your services."
+          "body": "Show up when Yakima customers search on Google and in AI tools. Local keywords, technical fixes, and content that matches how people in the Valley actually look for services."
         },
         {
           "title": "Google Ads Management",
-          "body": "Get in front of Yakima customers immediately with expertly managed PPC campaigns built around the Valley's seasonal patterns and industries."
+          "body": "Paid search with tight geographic targeting and budgets that respect seasonal swings in agriculture, tourism, and retail."
         },
         {
           "title": "Web Design & Development",
-          "body": "Custom WordPress and Wix websites built for Yakima businesses — fast, mobile-ready, and designed to convert Valley visitors into leads."
+          "body": "Fast, mobile-friendly sites for Yakima businesses. Built to rank, easy to update, and designed to turn visits into calls and form fills."
         },
         {
           "title": "Social Media Management",
-          "body": "Grow your Yakima following with content that reflects the Valley's identity — agriculture, wine country, outdoor culture, and community pride."
+          "body": "Content that fits Yakima: community events, harvest season, local partnerships, and the mix of English and Spanish audiences many Valley businesses serve."
         },
         {
           "title": "Branding & Design",
-          "body": "Build a brand identity that earns recognition across the Yakima Valley — from logo and design system to signage and packaging."
-        }
+          "body": "Logos, brand standards, signage, and packaging for businesses that need to look credible from downtown to the warehouse district."
+        },
       ]
     },
     "credibility": {
       "eyebrow": "ABOUT US",
-      "heading": "Yakima's Home-Grown Marketing Team",
+      "heading": "A Yakima Team, Not a Distant Account",
       "paragraphs": [
-        "At YB Marketing (aka Yakima Branding), we're more than a marketing agency — we're your dedicated partner in business growth, right here in the Yakima Valley. Our team combines creativity with strategy to deliver solutions that elevate your brand, strengthen your message, and drive measurable results for Yakima businesses.",
-        "We've helped hundreds of Valley businesses — wineries, contractors, medical practices, restaurants, and retailers — sharpen their brand identity and build the digital presence needed to compete and grow. We understand Yakima's industries, its seasons, and its community because we're part of it."
+        "YB Marketing started in the Yakima Valley. We know the industries here: wine, ag, healthcare, trades, retail, and the small businesses that keep Main Street moving.",
+        "When you call, you talk to people who understand your market. We have helped hundreds of local companies sharpen their brand and fix the digital basics that drive leads.",
       ]
     },
     "whyYb": {
       "eyebrow": "WHY CHOOSE US",
-      "heading": "Successful Digital Marketing Built Around Your Yakima Business",
-      "body": "Digital marketing doesn't mean using the same cookie-cutter solutions for every business. YB works with you to build a custom strategy around your Yakima market, your specific goals, and the competitive landscape of the Valley.",
+      "heading": "Marketing Plans Built Around Your Yakima Business",
+      "body": "No cookie-cutter packages. We look at your competitors, your margins, and where your best customers come from, then build a plan you can measure.",
       "steps": [
         {
-          "label": "PERSONALIZED AUDIT",
-          "body": "It all starts with a free audit of your Yakima website and marketing channels."
+          "label": "FREE AUDIT",
+          "body": "We review your site, listings, and current marketing to find quick wins and bigger gaps."
         },
         {
-          "label": "CUSTOMIZED STRATEGY",
-          "body": "Together, we'll build a strategy that prioritizes your Yakima business goals and competitive advantage."
+          "label": "CLEAR STRATEGY",
+          "body": "You get priorities, timelines, and realistic expectations for Yakima search and ad performance."
         },
         {
-          "label": "GROW YOUR BUSINESS",
-          "body": "With our goals aligned and strategy in place, we take action to drive relevant traffic, capture leads, and grow your Yakima business month after month."
-        }
+          "label": "MONTHLY EXECUTION",
+          "body": "We implement, report in plain language, and adjust based on what the data shows."
+        },
       ]
     },
     "localSignals": [
@@ -84,66 +84,66 @@ export const locationHubs = [
     "city": "Ellensburg",
     "state": "WA",
     "titleTag": "Digital Marketing Agency Ellensburg WA | YB Marketing",
-    "metaDescription": "YB Marketing provides full-service digital marketing for Ellensburg and Kittitas County businesses. SEO, Google Ads, web design, social media, and branding for Central Washington.",
+    "metaDescription": "Digital marketing for Ellensburg and Kittitas County. SEO, Google Ads, web design, social media, and branding for Central Washington businesses.",
     "canonicalUrl": "https://yakimabranding.com/locations/ellensburg-wa",
     "hero": {
-      "eyebrow": "YB MARKETING — SERVING ELLENSBURG & KITTITAS COUNTY",
-      "headline": "Ellensburg Digital Marketing",
-      "accentHeadline": "That Gets Results.",
-      "body": "Ellensburg's unique market — a university town with deep agricultural roots and a tight-knit local business community — deserves a marketing partner who understands it. YB Marketing builds digital strategies tailored to Ellensburg and Kittitas County businesses."
+      "eyebrow": "YB MARKETING · ELLENSBURG & KITTITAS COUNTY",
+      "headline": "Marketing for Ellensburg",
+      "accentHeadline": "Locals, Students, and I-90 Traffic",
+      "body": "Ellensburg is small enough that word of mouth still wins, but big enough that you need a real web presence. We help Kittitas County businesses get found and look trustworthy online."
     },
     "servicesSection": {
-      "eyebrow": "ELLENSBURG MARKETING SERVICES",
-      "heading": "Full-Service Digital Marketing for Ellensburg Businesses",
-      "subheading": "We handle SEO, ads, web design, social media, and branding so you can focus on what you do best — running your Ellensburg business.",
+      "eyebrow": "ELLENSBURG SERVICES",
+      "heading": "Digital Marketing for Kittitas County",
+      "subheading": "Practical marketing for businesses that serve downtown Ellensburg, CWU, and drivers along I-90.",
       "cards": [
         {
           "title": "SEO & AI Optimization",
-          "body": "Get found by Ellensburg and Kittitas County customers searching for your services — on Google, on maps, and in AI-powered search results."
+          "body": "Rank for Ellensburg and county searches. Map visibility, local pages, and content tuned to how Kittitas customers search."
         },
         {
           "title": "Google Ads Management",
-          "body": "Reach CWU students and longtime Kittitas County residents immediately with targeted PPC campaigns built for Ellensburg's dual-audience market."
+          "body": "Geo-targeted campaigns for seasonal peaks, university move-in, and highway travelers who need services now."
         },
         {
           "title": "Web Design & Development",
-          "body": "Custom websites for Ellensburg businesses that serve both the CWU community and long-term residents — fast, professional, and easy to manage."
+          "body": "Clean websites that load fast on mobile and make it obvious what you do and where you serve."
         },
         {
           "title": "Social Media Management",
-          "body": "Build a social following that spans Ellensburg's diverse audience — from CWU students on Instagram to established Kittitas County residents on Facebook."
+          "body": "Posts that connect with ranch families, students, and longtime residents without sounding like a corporate template."
         },
         {
           "title": "Branding & Design",
-          "body": "Create a brand identity rooted in Ellensburg's character — the rodeo heritage, the university connection, the agricultural pride of Kittitas County."
-        }
+          "body": "Logos and identity systems that look professional on Main Street and credible to customers from outside the county."
+        },
       ]
     },
     "credibility": {
       "eyebrow": "ABOUT US",
-      "heading": "Your Central Washington Marketing Partner",
+      "heading": "We Know Ellensburg's Two Audiences",
       "paragraphs": [
-        "YB Marketing understands what makes Ellensburg unique — a community that blends university energy with ranching heritage, where local pride runs deep and word-of-mouth still matters. We build marketing strategies that speak to Ellensburg's specific audiences and help local businesses grow in a market that rewards authenticity.",
-        "We've worked with Central Washington businesses across industries — from downtown Ellensburg retailers to Kittitas County contractors to businesses that serve the CWU community. Our approach is always the same: understand your market first, then build a strategy around it."
+        "Ellensburg blends university life with agricultural roots. Marketing here has to speak to both without alienating either.",
+        "We have worked with retailers, contractors, and service businesses across Central Washington. Our approach is simple: learn your market, then build campaigns that fit it.",
       ]
     },
     "whyYb": {
       "eyebrow": "WHY CHOOSE US",
-      "heading": "Digital Marketing Built for Ellensburg's Market",
-      "body": "Ellensburg businesses need marketing partners who understand the I-90 corridor, the CWU dynamic, and the Kittitas County customer. YB builds custom strategies around your specific Ellensburg business — not a generic package.",
+      "heading": "Marketing That Fits Kittitas County",
+      "body": "You do not need a Seattle agency playbook. You need someone who understands I-90 corridor traffic, CWU cycles, and how referrals work in a tight community.",
       "steps": [
         {
-          "label": "PERSONALIZED AUDIT",
-          "body": "Free review of your current Ellensburg website and marketing presence."
+          "label": "FREE AUDIT",
+          "body": "We check your site, Google presence, and competitors in Ellensburg and nearby towns."
         },
         {
-          "label": "CUSTOMIZED STRATEGY",
-          "body": "A strategy built around your Ellensburg goals, your competition, and the audiences you need to reach."
+          "label": "CLEAR STRATEGY",
+          "body": "A plan tied to your real customers: locals, students, or regional traffic."
         },
         {
-          "label": "GROW YOUR BUSINESS",
-          "body": "Consistent action that drives traffic, generates leads, and grows your Ellensburg business month over month."
-        }
+          "label": "MONTHLY EXECUTION",
+          "body": "Steady work on SEO, ads, and content so leads keep coming between rodeo season and graduation."
+        },
       ]
     },
     "localSignals": [
@@ -164,66 +164,66 @@ export const locationHubs = [
     "city": "Tri-Cities",
     "state": "WA",
     "titleTag": "Digital Marketing Agency Tri-Cities WA | Kennewick, Pasco & Richland | YB Marketing",
-    "metaDescription": "YB Marketing is the Tri-Cities' full-service digital marketing agency. SEO, Google Ads, web design, social media, and branding for Kennewick, Pasco, and Richland businesses.",
+    "metaDescription": "Digital marketing for Kennewick, Pasco, and Richland. SEO, Google Ads, web design, social, and branding for Tri-Cities businesses.",
     "canonicalUrl": "https://yakimabranding.com/locations/tri-cities-wa",
     "hero": {
-      "eyebrow": "YB MARKETING — SERVING KENNEWICK, PASCO & RICHLAND",
+      "eyebrow": "YB MARKETING · TRI-CITIES, WA",
       "headline": "Tri-Cities Digital Marketing",
-      "accentHeadline": "Across the Columbia Basin.",
-      "body": "The Tri-Cities is one of Washington's fastest-growing markets — and one of the most complex. Three cities. Multiple demographics. A diverse economy. YB Marketing builds digital marketing strategies that work across the entire Columbia Basin."
+      "accentHeadline": "All Three Cities, One Strategy",
+      "body": "Kennewick, Pasco, and Richland attract different customers. We build campaigns that respect those differences instead of blasting one generic message across the Basin."
     },
     "servicesSection": {
-      "eyebrow": "TRI-CITIES MARKETING SERVICES",
-      "heading": "Digital Marketing Built for Kennewick, Pasco & Richland",
-      "subheading": "We build strategies that don't treat the Tri-Cities as one market — because it isn't. From Pasco to Richland to Kennewick, we cover every city.",
+      "eyebrow": "TRI-CITIES SERVICES",
+      "heading": "Marketing for Kennewick, Pasco, and Richland",
+      "subheading": "City-level targeting, bilingual options where they matter, and reporting you can actually read.",
       "cards": [
         {
           "title": "SEO & AI Optimization",
-          "body": "Rank in local search across all three Tri-Cities — Kennewick, Pasco, and Richland — with SEO strategies built for the Columbia Basin's multi-city reality."
+          "body": "Local SEO across the metro: separate landing pages, map rankings, and content for each city's search habits."
         },
         {
           "title": "Google Ads Management",
-          "body": "PPC campaigns that target customers across the entire Tri-Cities metro, with city-specific targeting that puts your budget where it delivers results."
+          "body": "Budget split by city and service line so Pasco, Richland, and Kennewick each get appropriate coverage."
         },
         {
           "title": "Web Design & Development",
-          "body": "Custom websites for Tri-Cities businesses that communicate your service area clearly and convert visitors from all three cities into real leads."
+          "body": "Sites that state your service area clearly and convert visitors whether they land from a phone search or a referral."
         },
         {
           "title": "Social Media Management",
-          "body": "Social strategies that reflect the Tri-Cities' diversity — bilingual content options for the Pasco market, professional content for Richland's DOE community, and visual content for Kennewick's hospitality economy."
+          "body": "Content options for Pasco's bilingual audience, Richland's professional base, and Kennewick's hospitality sector."
         },
         {
           "title": "Branding & Design",
-          "body": "Brand identities built for the Columbia Basin — rooted in the Tri-Cities' wine country, river culture, and fast-growing community identity."
-        }
+          "body": "Brand systems rooted in Columbia Basin identity: wine, river culture, energy, and fast residential growth."
+        },
       ]
     },
     "credibility": {
       "eyebrow": "ABOUT US",
-      "heading": "A Marketing Partner Who Knows All Three Cities",
+      "heading": "We Treat the Tri-Cities as Three Markets",
       "paragraphs": [
-        "YB Marketing brings Pacific Northwest marketing expertise to the Tri-Cities with a deep understanding of what makes this market distinct. From the Hanford ecosystem to the Columbia Valley wine industry to the rapid residential growth reshaping all three cities, we build strategies that account for the Tri-Cities' real complexity — not a simplified version of it.",
-        "We've worked with Kennewick, Pasco, and Richland businesses across industries, and we understand the demographic diversity, the seasonal patterns, and the competitive dynamics that make effective marketing in this market different from anywhere else in Washington."
+        "Hanford, wine, agriculture, and housing growth all shape how people buy here. We account for that instead of copying a one-city playbook.",
+        "Our team has supported Tri-Cities businesses in trades, healthcare, hospitality, and professional services. We know the seasonality and the competition.",
       ]
     },
     "whyYb": {
       "eyebrow": "WHY CHOOSE US",
-      "heading": "Digital Marketing That Covers the Whole Columbia Basin",
-      "body": "Most agencies treat the Tri-Cities as one market. We build strategies that respect the differences between Kennewick, Pasco, and Richland — targeting the right audiences in each city with the right message.",
+      "heading": "Columbia Basin Marketing Without the Guesswork",
+      "body": "Most agencies flatten the Tri-Cities into one blob. We target the cities and demographics that actually drive your revenue.",
       "steps": [
         {
-          "label": "PERSONALIZED AUDIT",
-          "body": "Free review of your Tri-Cities website and marketing presence across all three cities."
+          "label": "FREE AUDIT",
+          "body": "Review of your visibility in Kennewick, Pasco, Richland, and Maps."
         },
         {
-          "label": "CUSTOMIZED STRATEGY",
-          "body": "A Columbia Basin strategy built around your business, your competition, and your target customers in each city."
+          "label": "CLEAR STRATEGY",
+          "body": "City-by-city priorities based on where your best jobs come from."
         },
         {
-          "label": "GROW YOUR BUSINESS",
-          "body": "Consistent execution that drives traffic, captures leads, and grows your Tri-Cities business across the entire metro."
-        }
+          "label": "MONTHLY EXECUTION",
+          "body": "Ongoing SEO, ads, and content with reporting tied to leads, not vanity metrics."
+        },
       ]
     },
     "localSignals": [
@@ -244,66 +244,66 @@ export const locationHubs = [
     "city": "Spokane",
     "state": "WA",
     "titleTag": "Digital Marketing Agency Spokane WA | YB Marketing",
-    "metaDescription": "YB Marketing provides full-service digital marketing for Spokane and the Inland Northwest. SEO, Google Ads, web design, social media, and branding for Eastern Washington's largest market.",
+    "metaDescription": "Digital marketing for Spokane and the Inland Northwest. SEO, Google Ads, web design, social media, and branding for Eastern Washington businesses.",
     "canonicalUrl": "https://yakimabranding.com/locations/spokane-wa",
     "hero": {
-      "eyebrow": "YB MARKETING — SERVING SPOKANE & THE INLAND NORTHWEST",
+      "eyebrow": "YB MARKETING · SPOKANE, WA",
       "headline": "Spokane Digital Marketing",
-      "accentHeadline": "Built to Compete.",
-      "body": "Spokane is Eastern Washington's largest and most competitive business market — and your digital presence needs to match. YB Marketing builds data-driven strategies that help Spokane businesses rank higher, convert more, and grow faster in the Inland Northwest."
+      "accentHeadline": "Built for a Competitive Market",
+      "body": "Spokane is Eastern Washington's business capital. Your site and ads need to keep pace with national brands and sharp local competitors. We build strategies that earn attention and convert it."
     },
     "servicesSection": {
-      "eyebrow": "SPOKANE MARKETING SERVICES",
-      "heading": "Full-Service Digital Marketing for Spokane Businesses",
-      "subheading": "From healthcare to home services to professional firms, we build marketing strategies that compete at the level Spokane's market demands.",
+      "eyebrow": "SPOKANE SERVICES",
+      "heading": "Full-Service Marketing for Spokane Businesses",
+      "subheading": "Healthcare, home services, legal, retail, and more. Campaigns sized for the Inland Northwest.",
       "cards": [
         {
           "title": "SEO & AI Optimization",
-          "body": "Rank higher in Spokane's competitive search landscape — from South Hill to Spokane Valley — with SEO strategies built for Eastern Washington's largest market."
+          "body": "Competitive local SEO from South Hill to Spokane Valley. Technical health, content, and map rankings that compound over time."
         },
         {
           "title": "Google Ads Management",
-          "body": "Expert PPC management since 2005 that keeps your Spokane ad spend focused on the Inland Northwest customers most likely to convert."
+          "body": "PPC with conversion tracking and negative keywords that protect spend in a crowded auction."
         },
         {
           "title": "Web Design & Development",
-          "body": "Custom websites that compete with the best in the Inland Northwest — fast, mobile-optimized, SEO-ready, and built to convert Spokane visitors into leads."
+          "body": "Sites that look credible next to larger competitors and load fast on mobile."
         },
         {
           "title": "Social Media Management",
-          "body": "Social content that reflects Spokane's community identity — the Lilac City character, local neighborhoods, Bloomsday, Hoopfest — building real engagement from real Spokane customers."
+          "body": "Community-focused content: neighborhoods, events, and the local tone Spokane customers respond to."
         },
         {
           "title": "Branding & Design",
-          "body": "Brand identities built to compete in Spokane's sophisticated market — professional, differentiated, and rooted in the Inland Northwest's character."
-        }
+          "body": "Professional identity systems for businesses that need to look established in a sophisticated market."
+        },
       ]
     },
     "credibility": {
       "eyebrow": "ABOUT US",
-      "heading": "Your Inland Northwest Marketing Partner",
+      "heading": "Inland Northwest Experience",
       "paragraphs": [
-        "YB Marketing brings Pacific Northwest marketing expertise to Spokane's competitive landscape. We understand the Inland Northwest's business environment — the competitive pressure from national brands, the nuances of Spokane's neighborhoods and demographics, and the industries that drive Eastern Washington's economy.",
-        "We work with Spokane healthcare providers, contractors, legal firms, restaurants, retailers, and professional services — building marketing strategies that compete at the highest level in this market without wasting budget on approaches that don't deliver."
+        "Spokane buyers compare options. We help you show up in search, look credible on your site, and follow up fast enough to win the job.",
+        "We work with providers, contractors, firms, and retailers across Eastern Washington. Strategy comes first; tactics follow what your data shows.",
       ]
     },
     "whyYb": {
       "eyebrow": "WHY CHOOSE US",
-      "heading": "Marketing Built for Spokane's Competitive Market",
-      "body": "Spokane's market is competitive across nearly every industry. We build strategies with the sophistication this market demands — custom, data-driven, and relentlessly focused on results.",
+      "heading": "Spokane Marketing With Accountability",
+      "body": "You get clear goals, regular reporting, and adjustments when something is not working. No black-box agency nonsense.",
       "steps": [
         {
-          "label": "PERSONALIZED AUDIT",
-          "body": "Free review of your Spokane website, SEO, and marketing channels."
+          "label": "FREE AUDIT",
+          "body": "SEO, ads, and site review with specific Spokane competitor context."
         },
         {
-          "label": "CUSTOMIZED STRATEGY",
-          "body": "A Spokane-specific strategy built around your competition, your goals, and your target customers in the Inland Northwest."
+          "label": "CLEAR STRATEGY",
+          "body": "Channel mix and budget guidance based on your industry and margins."
         },
         {
-          "label": "GROW YOUR BUSINESS",
-          "body": "Ongoing execution, reporting, and optimization that compounds into a real competitive advantage in the Spokane market."
-        }
+          "label": "MONTHLY EXECUTION",
+          "body": "Optimization loops that improve cost per lead over time."
+        },
       ]
     },
     "localSignals": [
@@ -324,73 +324,72 @@ export const locationHubs = [
     "city": "Boise",
     "state": "ID",
     "titleTag": "Digital Marketing Agency Boise ID | YB Marketing",
-    "metaDescription": "YB Marketing provides full-service digital marketing for Boise and the Treasure Valley. SEO, Google Ads, web design, social media, and branding for Idaho's fastest-growing market.",
+    "metaDescription": "Digital marketing for Boise and the Treasure Valley. SEO, Google Ads, web design, social media, and branding for Idaho's fastest-growing market.",
     "canonicalUrl": "https://yakimabranding.com/locations/boise-id",
     "hero": {
-      "eyebrow": "YB MARKETING — SERVING BOISE & THE TREASURE VALLEY",
+      "eyebrow": "YB MARKETING · BOISE & TREASURE VALLEY",
       "headline": "Boise Digital Marketing",
-      "accentHeadline": "Built for Growth.",
-      "body": "Boise is one of the fastest-growing cities in America — which means more competition for your customers every single year. YB Marketing helps Boise businesses build the digital presence they need to stay visible, stay competitive, and keep growing in the Treasure Valley."
+      "accentHeadline": "For a Crowded, Growing Market",
+      "body": "Boise adds competitors every quarter. Strong SEO, sharp ads, and a website that converts are table stakes. We help Treasure Valley businesses stand out without overspending."
     },
     "servicesSection": {
-      "eyebrow": "BOISE MARKETING SERVICES",
-      "heading": "Digital Marketing for Boise's Fast-Moving Market",
-      "subheading": "Boise's growth creates opportunity — and competition. We build marketing strategies that help Treasure Valley businesses capture that opportunity before their competitors do.",
+      "eyebrow": "BOISE SERVICES",
+      "heading": "Marketing for Treasure Valley Growth",
+      "subheading": "From startups to established operators in Boise, Meridian, and Nampa.",
       "cards": [
         {
           "title": "SEO & AI Optimization",
-          "body": "Build long-term search visibility across Boise and the Treasure Valley — ranking for the searches that bring qualified customers to your business month after month."
+          "body": "Local rankings in a noisy market. Content and technical work aimed at customers ready to buy, not just browse."
         },
         {
           "title": "Google Ads Management",
-          "body": "Stay ahead of Boise's increasingly competitive PPC landscape with expert campaign management that keeps your cost-per-lead low as more players enter the market."
+          "body": "Campaign structure that scales with growth and protects budget as CPCs rise."
         },
         {
           "title": "Web Design & Development",
-          "body": "Custom WordPress and Wix websites built for Boise's tech-savvy, growth-oriented audience — fast, modern, and optimized to convert across the Treasure Valley."
+          "body": "Modern sites for Boise businesses that need to look credible to transplants and longtime residents alike."
         },
         {
           "title": "Social Media Management",
-          "body": "Grow your Boise following with content that speaks to the Treasure Valley's outdoor lifestyle, local pride, and community identity — authentic enough to earn loyalty in a market full of newcomers."
+          "body": "Brand voice that fits Boise: outdoor culture, neighborhood pride, and direct communication."
         },
         {
           "title": "Branding & Design",
-          "body": "Build a brand identity that stands out in Boise's crowded, fast-growing market — professionally executed, authentically local, and built to scale as the Treasure Valley continues to grow."
-        }
+          "body": "Identity design that avoids generic mountain-badge clichés and actually fits your company."
+        },
       ]
     },
     "credibility": {
       "eyebrow": "ABOUT US",
-      "heading": "Pacific Northwest Expertise for Boise's Growing Market",
+      "heading": "Treasure Valley Marketing That Keeps Up",
       "paragraphs": [
-        "YB Marketing brings over two decades of Pacific Northwest digital marketing experience to Boise's dynamic market. We understand what's happening in the Treasure Valley — the rapid growth, the demographic shifts, the rising competition from national brands — and we build strategies that help established Boise businesses defend their position and new businesses break through.",
-        "We work remotely with Boise clients through a fully managed engagement model — you get a dedicated account team, regular reporting, and direct access to strategists who understand Idaho's market."
+        "Boise's growth brought more national brands and higher customer expectations. Local businesses need marketing that looks current and performs.",
+        "We partner with Boise-area companies in home services, health, food and beverage, and professional services. Plans flex as you add locations or lines of business.",
       ]
     },
     "whyYb": {
       "eyebrow": "WHY CHOOSE US",
-      "heading": "Marketing That Grows With Boise's Market",
-      "body": "Boise's opportunity is real — but so is the competition. We build marketing strategies that compound over time, giving Boise businesses a durable advantage as the Treasure Valley market continues to intensify.",
+      "heading": "Boise Plans You Can Scale",
+      "body": "Start focused, expand what works. We align SEO, ads, and creative with your growth stage instead of selling everything at once.",
       "steps": [
         {
-          "label": "PERSONALIZED AUDIT",
-          "body": "Free review of your Boise website, SEO, and digital marketing channels."
+          "label": "FREE AUDIT",
+          "body": "Where you rank today, what ads cost, and what your site loses on mobile."
         },
         {
-          "label": "CUSTOMIZED STRATEGY",
-          "body": "A Treasure Valley strategy built around your specific goals, competition, and the Boise customers you need to reach."
+          "label": "CLEAR STRATEGY",
+          "body": "Prioritized roadmap for the next 90 days and beyond."
         },
         {
-          "label": "GROW YOUR BUSINESS",
-          "body": "Sustained execution that builds momentum — driving traffic, leads, and revenue growth month after month in Idaho's fastest-growing market."
-        }
+          "label": "MONTHLY EXECUTION",
+          "body": "Testing, reporting, and budget shifts based on lead quality."
+        },
       ]
     },
     "localSignals": [
       "Boise, ID",
       "Meridian, ID",
       "Nampa, ID",
-      "Eagle, ID",
       "Treasure Valley"
     ],
     "schema": {
@@ -404,74 +403,73 @@ export const locationHubs = [
     "city": "Coeur d'Alene",
     "state": "ID",
     "titleTag": "Digital Marketing Agency Coeur d'Alene ID | YB Marketing",
-    "metaDescription": "YB Marketing provides full-service digital marketing for Coeur d'Alene and North Idaho businesses. SEO, Google Ads, web design, social media, and branding for the Lake City market.",
+    "metaDescription": "Digital marketing for Coeur d'Alene and North Idaho. SEO, Google Ads, web design, social, and branding for lake country businesses.",
     "canonicalUrl": "https://yakimabranding.com/locations/coeur-dalene-id",
     "hero": {
-      "eyebrow": "YB MARKETING — SERVING COEUR D'ALENE & NORTH IDAHO",
+      "eyebrow": "YB MARKETING · COEUR D'ALENE, ID",
       "headline": "Coeur d'Alene Digital Marketing",
-      "accentHeadline": "For the Lake City & Beyond.",
-      "body": "Coeur d'Alene's booming tourism economy, rapid growth, and tight-knit local community create a marketing environment unlike any other in the Pacific Northwest. YB Marketing builds digital strategies that capture both the year-round local market and the seasonal visitors who discover CDA businesses online."
+      "accentHeadline": "Tourism Season and Year-Round Locals",
+      "body": "CDA businesses juggle summer visitors and loyal Kootenai County customers. We build marketing that performs in peak season and keeps leads flowing in winter."
     },
     "servicesSection": {
-      "eyebrow": "COEUR D'ALENE MARKETING SERVICES",
-      "heading": "Full-Service Digital Marketing for CDA & North Idaho",
-      "subheading": "We build marketing strategies that serve both your year-round local customers and the seasonal visitors who plan their CDA trips online.",
+      "eyebrow": "CDA SERVICES",
+      "heading": "Marketing for North Idaho Businesses",
+      "subheading": "Hospitality, recreation, home services, and retail with lake-country context.",
       "cards": [
         {
           "title": "SEO & AI Optimization",
-          "body": "Get found by both Kootenai County residents and the Pacific Northwest visitors planning their Coeur d'Alene trip on Google — with SEO built for both audiences."
+          "body": "Rank for Coeur d'Alene, Post Falls, and Hayden searches. Seasonal content when tourism spikes."
         },
         {
           "title": "Google Ads Management",
-          "body": "Capture local customers and seasonal visitors with PPC campaigns that adjust for CDA's tourism patterns and target both audiences efficiently."
+          "body": "Campaigns timed to summer demand and local service needs in the off-season."
         },
         {
           "title": "Web Design & Development",
-          "body": "Custom websites that convert the visitors who discover your CDA business on mobile while building trust with the year-round local customers who become your loyal regulars."
+          "body": "Sites that look great on phones, load fast, and make booking or calling obvious."
         },
         {
           "title": "Social Media Management",
-          "body": "Leverage Coeur d'Alene's extraordinary visual appeal with social content that builds year-round local loyalty and attracts Pacific Northwest visitors before they arrive."
+          "body": "Visual content that fits CDA without looking like a stock photo resort feed."
         },
         {
           "title": "Branding & Design",
-          "body": "Brand identities rooted in North Idaho's lake country character — visually compelling, professionally executed, and built to earn recognition from both locals and the visitors who discover you online."
-        }
+          "body": "Logos and environments that feel North Idaho, not theme-park rustic."
+        },
       ]
     },
     "credibility": {
       "eyebrow": "ABOUT US",
-      "heading": "Marketing Built for CDA's Unique Market",
+      "heading": "Lake Country Is a Different Rhythm",
       "paragraphs": [
-        "YB Marketing understands what makes Coeur d'Alene's business environment distinctive — the seasonal visitor economy, the rapid growth, the high aesthetic expectations of a tourism-driven market, and the year-round local community that's the backbone of every successful CDA business.",
-        "We build strategies that serve both audiences: capturing visitor intent at the moments of peak discovery while building the kind of authentic local presence that earns repeat customers and word-of-mouth referrals from Kootenai County residents."
+        "CDA marketing has to plan for swings in traffic and a local base that values trust over hype.",
+        "We support marinas, restaurants, lodging, and trades across Kootenai County with campaigns tied to real booking and call data.",
       ]
     },
     "whyYb": {
       "eyebrow": "WHY CHOOSE US",
-      "heading": "Marketing That Captures Both of CDA's Audiences",
-      "body": "Coeur d'Alene businesses have two audiences — locals and visitors — with different needs and different search behaviors. We build strategies that serve both, maximizing your year-round revenue potential.",
+      "heading": "Marketing That Respects CDA Seasonality",
+      "body": "We ramp spend when demand is there and focus on retention and local SEO when it is not.",
       "steps": [
         {
-          "label": "PERSONALIZED AUDIT",
-          "body": "Free review of your CDA website, local visibility, and marketing channels."
+          "label": "FREE AUDIT",
+          "body": "Search visibility, ad history, and site conversion review."
         },
         {
-          "label": "CUSTOMIZED STRATEGY",
-          "body": "A North Idaho strategy built around your specific business, your seasonal patterns, and your local and visitor audiences."
+          "label": "CLEAR STRATEGY",
+          "body": "Seasonal calendar aligned to your revenue pattern."
         },
         {
-          "label": "GROW YOUR BUSINESS",
-          "body": "Consistent execution that keeps your CDA business visible and converting year-round — in peak season and off-season alike."
-        }
+          "label": "MONTHLY EXECUTION",
+          "body": "Adjustments as tourism and local demand shift."
+        },
       ]
     },
     "localSignals": [
       "Coeur d'Alene, ID",
       "Post Falls, ID",
       "Hayden, ID",
-      "Rathdrum, ID",
-      "Kootenai County"
+      "North Idaho"
     ],
     "schema": {
       "addressLocality": "Coeur d'Alene",
@@ -484,74 +482,73 @@ export const locationHubs = [
     "city": "Tacoma",
     "state": "WA",
     "titleTag": "Digital Marketing Agency Tacoma WA | YB Marketing",
-    "metaDescription": "YB Marketing provides full-service digital marketing for Tacoma and Pierce County businesses. SEO, Google Ads, web design, social media, and branding for the South Sound market.",
+    "metaDescription": "Digital marketing for Tacoma and Pierce County. SEO, Google Ads, web design, social media, and branding for South Sound businesses.",
     "canonicalUrl": "https://yakimabranding.com/locations/tacoma-wa",
     "hero": {
-      "eyebrow": "YB MARKETING — SERVING TACOMA & THE SOUTH SOUND",
+      "eyebrow": "YB MARKETING · TACOMA & PIERCE COUNTY",
       "headline": "Tacoma Digital Marketing",
-      "accentHeadline": "Built for a City on the Rise.",
-      "body": "Tacoma is no longer in Seattle's shadow — it's a destination city with a growing economy, a vibrant community, and real competition for every customer search. YB Marketing builds digital marketing strategies that help Tacoma businesses compete and win in the South Sound's evolving market."
+      "accentHeadline": "Local Loyalty Meets Real Competition",
+      "body": "Tacoma customers support businesses that show up in the community. They also compare you to Seattle options online. We help South Sound companies win both battles."
     },
     "servicesSection": {
-      "eyebrow": "TACOMA MARKETING SERVICES",
-      "heading": "Full-Service Digital Marketing for Tacoma & Pierce County",
-      "subheading": "We build strategies that compete with Seattle brands targeting the South Sound while building the authentic Tacoma community identity your local customers respond to.",
+      "eyebrow": "TACOMA SERVICES",
+      "heading": "Marketing for Pierce County Businesses",
+      "subheading": "Neighborhood-aware campaigns with the polish to compete regionally.",
       "cards": [
         {
           "title": "SEO & AI Optimization",
-          "body": "Rank higher across Tacoma and Pierce County — from the Hilltop to Puyallup — with SEO strategies built for the South Sound's competitive and fast-growing market."
+          "body": "Local search across Tacoma, Lakewood, and Pierce County with content that reflects how people here actually search."
         },
         {
           "title": "Google Ads Management",
-          "body": "Expert PPC management that keeps your Tacoma ad spend focused on Pierce County customers — not Seattle searchers who will never become your customers."
+          "body": "Geo-fenced campaigns that prioritize South Sound leads over wasted Seattle clicks."
         },
         {
           "title": "Web Design & Development",
-          "body": "Custom websites built for Tacoma's ambitious market — professional enough to compete with Seattle brands, locally authentic enough to earn South Sound loyalty."
+          "body": "Sites that tell a Tacoma story and convert visitors who found you from a referral or a search."
         },
         {
           "title": "Social Media Management",
-          "body": "Social content rooted in Tacoma's community identity — the waterfront, the arts scene, the city's blue-collar character and rising pride — building the authentic local presence that earns customer loyalty."
+          "body": "Community partnerships, local events, and creative that feels like Tacoma, not a national template."
         },
         {
           "title": "Branding & Design",
-          "body": "Brand identities that reflect Tacoma's momentum — professionally executed, community-connected, and built to compete as the South Sound continues to grow."
-        }
+          "body": "Identity work for businesses tying their growth to the city's momentum."
+        },
       ]
     },
     "credibility": {
       "eyebrow": "ABOUT US",
-      "heading": "Your South Sound Digital Marketing Partner",
+      "heading": "South Sound Roots, Regional Standards",
       "paragraphs": [
-        "YB Marketing brings Pacific Northwest marketing expertise to Tacoma's evolving market. We understand the South Sound's competitive dynamics — the pressure from Seattle brands targeting Pierce County, the growing sophistication of Tacoma's local business community, and the city's strong sense of independent identity.",
-        "We work with Tacoma businesses across industries — healthcare, contractors, restaurants, legal, retail, and professional services — building marketing strategies that leverage Tacoma's local authenticity while competing at the level this market increasingly demands."
+        "Tacoma's reputation changed because local businesses invested in the city. Marketing should reflect that same pride and professionalism.",
+        "We work with contractors, clinics, restaurants, and professional firms across Pierce County. Every plan starts with where your leads really come from.",
       ]
     },
     "whyYb": {
       "eyebrow": "WHY CHOOSE US",
-      "heading": "Marketing Built for Tacoma's Competitive & Growing Market",
-      "body": "Tacoma is a real city with real competition — and the marketing strategies that worked five years ago aren't enough anymore. We build strategies built for Tacoma's current market reality.",
+      "heading": "Tacoma Marketing Without Seattle Pretense",
+      "body": "You get direct communication, realistic timelines, and work tied to leads and revenue.",
       "steps": [
         {
-          "label": "PERSONALIZED AUDIT",
-          "body": "Free review of your Tacoma website, SEO rankings, and marketing channels."
+          "label": "FREE AUDIT",
+          "body": "Site, SEO, and ad review with Tacoma competitor notes."
         },
         {
-          "label": "CUSTOMIZED STRATEGY",
-          "body": "A South Sound strategy built around your specific Tacoma business, competition, and growth goals."
+          "label": "CLEAR STRATEGY",
+          "body": "Channel mix for your neighborhood and service area."
         },
         {
-          "label": "GROW YOUR BUSINESS",
-          "body": "Consistent, data-driven execution that builds your Tacoma market position and grows revenue month after month."
-        }
+          "label": "MONTHLY EXECUTION",
+          "body": "Reporting and optimization focused on calls and form fills."
+        },
       ]
     },
     "localSignals": [
       "Tacoma, WA",
       "Lakewood, WA",
-      "University Place, WA",
-      "Puyallup, WA",
-      "Pierce County"
+      "Pierce County",
+      "South Sound"
     ],
     "schema": {
       "addressLocality": "Tacoma",
@@ -564,74 +561,73 @@ export const locationHubs = [
     "city": "Vancouver",
     "state": "WA",
     "titleTag": "Digital Marketing Agency Vancouver WA | YB Marketing",
-    "metaDescription": "YB Marketing provides full-service digital marketing for Vancouver, WA and Clark County businesses. SEO, Google Ads, web design, social media, and branding that builds your Washington-side identity.",
+    "metaDescription": "Digital marketing for Vancouver, WA and Clark County. SEO, Google Ads, web design, social, and branding on the Washington side of the river.",
     "canonicalUrl": "https://yakimabranding.com/locations/vancouver-wa",
     "hero": {
-      "eyebrow": "YB MARKETING — SERVING VANCOUVER, WA & CLARK COUNTY",
-      "headline": "Vancouver, WA Digital Marketing",
-      "accentHeadline": "Built for the Washington Side.",
-      "body": "Vancouver, WA businesses compete in one of the Pacific Northwest's most complex markets — a fast-growing city in Portland's metro that's building its own distinct identity. YB Marketing builds digital strategies that help Clark County businesses stand out, rank on the Washington side, and grow."
+      "eyebrow": "YB MARKETING · VANCOUVER, WA",
+      "headline": "Vancouver Digital Marketing",
+      "accentHeadline": "Clark County First",
+      "body": "Many Clark County customers actively choose Washington businesses. We make sure they find you, understand why you are local, and trust what they see online."
     },
     "servicesSection": {
-      "eyebrow": "VANCOUVER, WA MARKETING SERVICES",
-      "heading": "Digital Marketing Built for Clark County Businesses",
-      "subheading": "We solve Vancouver's unique marketing challenge — building your Washington-side presence so the right customers find you instead of a Portland competitor.",
+      "eyebrow": "VANCOUVER SERVICES",
+      "heading": "Marketing for Clark County",
+      "subheading": "Washington-side SEO and ads that do not get lost in Portland noise.",
       "cards": [
         {
           "title": "SEO & AI Optimization",
-          "body": "Rank in Clark County search results specifically — not Portland's — with SEO strategies built to establish your Vancouver, WA identity and capture the customers who want to stay on the Washington side."
+          "body": "Rank for Vancouver, Camas, and Ridgefield queries with location pages and map optimization."
         },
         {
           "title": "Google Ads Management",
-          "body": "PPC campaigns with precise Clark County targeting that keep your ad budget focused on Vancouver, WA customers — not Oregon searchers who will never convert."
+          "body": "Targeting that favors Clark County zip codes and filters out irrelevant Oregon traffic when needed."
         },
         {
           "title": "Web Design & Development",
-          "body": "Custom websites that establish your Clark County identity, rank in Vancouver, WA search results, and convert the Washington-side customers who are specifically looking for a local provider."
+          "body": "Websites that highlight your Washington presence and make contact frictionless."
         },
         {
           "title": "Social Media Management",
-          "body": "Social content that builds Vancouver, WA's growing community identity — celebrating Clark County's neighborhoods, culture, and independent character distinct from Portland."
+          "body": "Local proof: projects, reviews, and community involvement on the Washington side."
         },
         {
           "title": "Branding & Design",
-          "body": "Brand identities rooted in Clark County's character — establishing your Vancouver, WA business as a genuine local brand, not just a Portland alternative."
-        }
+          "body": "Visual identity that establishes Clark County roots distinct from Portland competitors."
+        },
       ]
     },
     "credibility": {
       "eyebrow": "ABOUT US",
-      "heading": "Marketing That Puts Vancouver, WA on the Map",
+      "heading": "We Know the Portland Shadow Problem",
       "paragraphs": [
-        "YB Marketing understands Vancouver's unique position — a large, fast-growing city that competes daily with Portland for search visibility, customer attention, and market share. We've built strategies specifically for Clark County's marketing challenges, helping Vancouver businesses rank on the Washington side, capture customers who prefer local providers, and build brand identities that stand on their own.",
-        "We work with contractors, healthcare providers, attorneys, restaurants, real estate professionals, and service businesses throughout Clark County — always with an eye on Vancouver's specific market dynamics."
+        "Vancouver businesses often compete with Oregon brands that dominate search results. We fix that with local SEO, clear service-area messaging, and ads geo-locked to Clark County.",
+        "Contractors, healthcare, legal, and retail across Vancouver and Camas use us to grow Washington-side leads without pretending to be a Portland agency.",
       ]
     },
     "whyYb": {
       "eyebrow": "WHY CHOOSE US",
-      "heading": "Marketing That Solves Vancouver's Portland Problem",
-      "body": "Generic marketing doesn't work for Vancouver, WA businesses — you need strategies built specifically for Clark County's competitive reality. We understand the dynamics and build around them.",
+      "heading": "Washington-Side Growth, Measured",
+      "body": "Track leads by city and campaign so you know what is working in Vancouver versus Camas or Ridgefield.",
       "steps": [
         {
-          "label": "PERSONALIZED AUDIT",
-          "body": "Free review of your Vancouver, WA website, local visibility, and how your business performs in Clark County search results vs. Portland results."
+          "label": "FREE AUDIT",
+          "body": "How you appear for 'Vancouver WA' searches versus Portland competitors."
         },
         {
-          "label": "CUSTOMIZED STRATEGY",
-          "body": "A Clark County strategy built to establish your Washington-side identity and capture the customers who are specifically looking for a Vancouver, WA provider."
+          "label": "CLEAR STRATEGY",
+          "body": "Messaging that reinforces Clark County identity."
         },
         {
-          "label": "GROW YOUR BUSINESS",
-          "body": "Consistent execution that builds your Clark County market presence and compounds into a real competitive advantage over Portland brands targeting your customers."
-        }
+          "label": "MONTHLY EXECUTION",
+          "body": "SEO and ads tuned to Washington customers who want a local provider."
+        },
       ]
     },
     "localSignals": [
       "Vancouver, WA",
+      "Clark County",
       "Camas, WA",
-      "Washougal, WA",
-      "Battle Ground, WA",
-      "Clark County"
+      "Ridgefield, WA"
     ],
     "schema": {
       "addressLocality": "Vancouver",
@@ -644,73 +640,72 @@ export const locationHubs = [
     "city": "Wenatchee",
     "state": "WA",
     "titleTag": "Digital Marketing Agency Wenatchee WA | YB Marketing",
-    "metaDescription": "YB Marketing provides full-service digital marketing for Wenatchee and North Central Washington businesses. SEO, Google Ads, web design, social media, and branding for the Apple Capital region.",
+    "metaDescription": "Digital marketing for Wenatchee and North Central Washington. SEO, Google Ads, web design, social, and branding for the Apple Capital region.",
     "canonicalUrl": "https://yakimabranding.com/locations/wenatchee-wa",
     "hero": {
-      "eyebrow": "YB MARKETING — SERVING WENATCHEE & NORTH CENTRAL WASHINGTON",
+      "eyebrow": "YB MARKETING · WENATCHEE & NCW",
       "headline": "Wenatchee Digital Marketing",
-      "accentHeadline": "Built for the Apple Capital Region.",
-      "body": "Wenatchee is the commercial hub of North Central Washington — serving customers from Leavenworth to Chelan and across the Columbia River corridor. YB Marketing builds digital strategies that extend your regional reach and grow your business across the entire North Central Washington market."
+      "accentHeadline": "Regional Hub, Local Detail",
+      "body": "Wenatchee serves the whole valley. Your marketing should too. We help NCW businesses rank regionally and convert customers who drive in from nearby towns."
     },
     "servicesSection": {
-      "eyebrow": "WENATCHEE MARKETING SERVICES",
-      "heading": "Digital Marketing for Wenatchee & the North Central Washington Region",
-      "subheading": "We build strategies that extend your reach across the entire Columbia River corridor — capturing customers from Leavenworth to Chelan who look to Wenatchee for business.",
+      "eyebrow": "WENATCHEE SERVICES",
+      "heading": "Marketing for North Central Washington",
+      "subheading": "Ag, food, healthcare, trades, and tourism with NCW-specific messaging.",
       "cards": [
         {
           "title": "SEO & AI Optimization",
-          "body": "Get found across North Central Washington — not just Wenatchee city searches, but the regional audience from Leavenworth, Chelan, and beyond who rely on Wenatchee businesses."
+          "body": "Visibility in Wenatchee, East Wenatchee, Leavenworth, and Chelan searches."
         },
         {
           "title": "Google Ads Management",
-          "body": "Efficient PPC campaigns that capture the regional search audience across Chelan and Douglas counties — often at lower cost-per-click than larger Pacific Northwest markets."
+          "body": "Seasonal campaigns for tourism peaks and steady local service demand."
         },
         {
           "title": "Web Design & Development",
-          "body": "Custom websites that establish your regional authority as a North Central Washington hub business — communicating the quality that makes customers drive to Wenatchee."
+          "body": "Sites that signal regional authority and make phone calls easy on mobile."
         },
         {
           "title": "Social Media Management",
-          "body": "Social content rooted in the Apple Capital's identity — the orchards, the Columbia River, the outdoor recreation culture — building a regional following that drives customers from across the Valley."
+          "body": "Content rooted in orchard country, outdoor recreation, and community events."
         },
         {
           "title": "Branding & Design",
-          "body": "Brand identities that reflect the Wenatchee Valley's agricultural heritage and outdoor character — establishing your business as the regional authority it already is."
-        }
+          "body": "Packaging, signage, and identity for agricultural and consumer brands alike."
+        },
       ]
     },
     "credibility": {
       "eyebrow": "ABOUT US",
-      "heading": "Your North Central Washington Marketing Partner",
+      "heading": "Built for a Regional Commercial Center",
       "paragraphs": [
-        "YB Marketing understands Wenatchee's role as the commercial anchor of North Central Washington — and we build marketing strategies around that regional dynamic. We know the agricultural economy, the outdoor recreation culture, the seasonal patterns of the Valley, and the wide geographic audience that Wenatchee businesses serve.",
-        "Whether you're an orchard operation, a contractor, a healthcare practice, or a downtown retailer, we build strategies that capture your full regional audience — not just the customers who happen to search from within city limits."
+        "Customers travel to Wenatchee for services they cannot get at home. Your online presence should convince them the trip is worth it.",
+        "We work with food producers, medical offices, contractors, and hospitality businesses across NCW. Messaging always includes the towns you actually serve.",
       ]
     },
     "whyYb": {
       "eyebrow": "WHY CHOOSE US",
-      "heading": "Marketing That Reaches All of North Central Washington",
-      "body": "Wenatchee businesses serve a wider region than most cities their size. We build marketing strategies that reflect that regional reach — capturing the full audience that relies on Wenatchee as their commercial hub.",
+      "heading": "NCW Marketing With Geographic Precision",
+      "body": "We target the towns that send you revenue, not just the city limits on a map.",
       "steps": [
         {
-          "label": "PERSONALIZED AUDIT",
-          "body": "Free review of your Wenatchee website, regional visibility, and marketing channels."
+          "label": "FREE AUDIT",
+          "body": "Regional search review across Wenatchee and surrounding communities."
         },
         {
-          "label": "CUSTOMIZED STRATEGY",
-          "body": "A North Central Washington strategy built around your regional service area, your industries, and the audiences across Chelan and Douglas counties."
+          "label": "CLEAR STRATEGY",
+          "body": "Service-area SEO and ad targeting aligned to your draw radius."
         },
         {
-          "label": "GROW YOUR BUSINESS",
-          "body": "Consistent execution that grows your regional reach and builds Wenatchee market leadership month after month."
-        }
+          "label": "MONTHLY EXECUTION",
+          "body": "Ongoing content and optimization for seasonal NCW traffic."
+        },
       ]
     },
     "localSignals": [
       "Wenatchee, WA",
       "East Wenatchee, WA",
       "Leavenworth, WA",
-      "Chelan, WA",
       "North Central Washington"
     ],
     "schema": {
@@ -724,73 +719,73 @@ export const locationHubs = [
     "city": "Walla Walla",
     "state": "WA",
     "titleTag": "Digital Marketing Agency Walla Walla WA | YB Marketing",
-    "metaDescription": "YB Marketing provides full-service digital marketing for Walla Walla businesses. SEO, Google Ads, web design, social media, and branding for wine country businesses and local services.",
+    "metaDescription": "Digital marketing for Walla Walla wine country and local businesses. SEO, Google Ads, web design, social, and branding for a high-expectation market.",
     "canonicalUrl": "https://yakimabranding.com/locations/walla-walla-wa",
     "hero": {
-      "eyebrow": "YB MARKETING — SERVING WALLA WALLA WINE COUNTRY",
+      "eyebrow": "YB MARKETING · WALLA WALLA, WA",
       "headline": "Walla Walla Digital Marketing",
-      "accentHeadline": "Built for Wine Country & Beyond.",
-      "body": "Walla Walla has one of the Pacific Northwest's most distinctive business environments — world-class wine country, a destination tourism economy, and a tight-knit local community. YB Marketing builds digital strategies that help Walla Walla businesses capture both their local customers and the visitors who plan every trip online."
+      "accentHeadline": "Wine Country and Year-Round Community",
+      "body": "Walla Walla runs on tourism and loyal locals. We build marketing that fills tasting rooms in peak season and keeps your phone ringing when visitors go home."
     },
     "servicesSection": {
-      "eyebrow": "WALLA WALLA MARKETING SERVICES",
-      "heading": "Digital Marketing for Walla Walla's Wine Country Economy",
-      "subheading": "We build strategies for both of Walla Walla's audiences — the year-round local community and the wine tourists who research everything before they arrive.",
+      "eyebrow": "WALLA WALLA SERVICES",
+      "heading": "Marketing for Wine Country Businesses",
+      "subheading": "Wineries, hospitality, retail, and trades with taste-level creative.",
       "cards": [
         {
           "title": "SEO & AI Optimization",
-          "body": "Rank for both local Walla Walla searches and wine country destination searches — capturing customers whether they're a local resident or a Pacific Northwest visitor planning their wine trip."
+          "body": "Rank for wine tourism and local service searches with content that matches how visitors plan trips."
         },
         {
           "title": "Google Ads Management",
-          "body": "PPC campaigns that target local customers and wine tourists simultaneously — with seasonal budget adjustments that follow Walla Walla's wine country calendar."
+          "body": "Campaigns for events, weekends, and high-intent local keywords."
         },
         {
           "title": "Web Design & Development",
-          "body": "Custom websites that convert wine tourists who are researching on their phone while also building trust with year-round local customers who make long-term decisions."
+          "body": "Beautiful, fast sites for wineries and service businesses that need to impress on first click."
         },
         {
           "title": "Social Media Management",
-          "body": "Social content that showcases Walla Walla's stunning wine country setting while building year-round local loyalty — driving both visitor interest and repeat community customers."
+          "body": "Visual storytelling for releases, events, and behind-the-scenes content locals share."
         },
         {
           "title": "Branding & Design",
-          "body": "Brand identities built for Walla Walla's discerning wine country market — visually compelling, story-driven, and built to earn the recognition that fills tasting rooms and tables."
-        }
+          "body": "Label, tasting room, and identity work that meets Walla Walla's design bar."
+        },
       ]
     },
     "credibility": {
       "eyebrow": "ABOUT US",
-      "heading": "Marketing Built for Walla Walla's Unique Economy",
+      "heading": "Wine Country Expectations Are High",
       "paragraphs": [
-        "YB Marketing understands what makes Walla Walla's business environment distinctive — the wine tourism calendar, the destination visitor's research-heavy decision process, the role of Whitman College and Walla Walla University in shaping the local community, and the tight-knit local economy where reputation travels fast.",
-        "We work with Walla Walla wineries, restaurants, hospitality businesses, and local services — building marketing strategies that capture the visitor economy while building the local brand loyalty that sustains businesses year-round."
+        "Visitors compare you to the best labels and tasting rooms in town. Locals notice when marketing feels generic.",
+        "We support wineries, restaurants, hotels, and non-wine businesses across Walla Walla County with integrated brand and performance marketing.",
       ]
     },
     "whyYb": {
       "eyebrow": "WHY CHOOSE US",
-      "heading": "Marketing That Captures Both of Walla Walla's Audiences",
-      "body": "Walla Walla businesses serve locals and wine tourists — two audiences with different needs, different search behaviors, and different decision timelines. We build strategies that serve both at once.",
+      "heading": "Marketing That Matches the Market",
+      "body": "Creative quality and measurable leads. You should not have to pick one.",
       "steps": [
         {
-          "label": "PERSONALIZED AUDIT",
-          "body": "Free review of your Walla Walla website, local visibility, and how your business shows up for both local and wine tourism searches."
+          "label": "FREE AUDIT",
+          "body": "Site, SEO, and ad review with wine-country competitive context."
         },
         {
-          "label": "CUSTOMIZED STRATEGY",
-          "body": "A wine country strategy built around your specific business, your local and visitor audiences, and Walla Walla's seasonal tourism calendar."
+          "label": "CLEAR STRATEGY",
+          "body": "Seasonal plan for DTC, bookings, and local leads."
         },
         {
-          "label": "GROW YOUR BUSINESS",
-          "body": "Consistent execution that builds your visibility for both local customers and wine tourists — converting online research into real visits, reservations, and revenue."
-        }
+          "label": "MONTHLY EXECUTION",
+          "body": "Creative and performance work that adapts through harvest and event seasons."
+        },
       ]
     },
     "localSignals": [
       "Walla Walla, WA",
-      "College Place, WA",
+      "Wine Country",
       "Walla Walla County",
-      "Columbia Valley Wine Country"
+      "Whitman College"
     ],
     "schema": {
       "addressLocality": "Walla Walla",
@@ -808,61 +803,61 @@ export const locationHubsMaster = {
     "eyebrow": "YB MARKETING — PACIFIC NORTHWEST & MOUNTAIN WEST",
     "headline": "Invisible Online?",
     "accentHeadline": "Dominate Your Local Market.",
-    "body": "Rooted in Washington State, built for the Pacific Northwest and Mountain West. YB Marketing serves businesses across the region with the same local market knowledge and strategic depth that's driven results for hundreds of businesses since 2004."
+    "body": "We are based in Washington and work across the Pacific Northwest and Mountain West. Same team, same standards, local context for each market we serve."
   },
   "locationsGrid": {
     "eyebrow": "WHERE WE WORK",
     "heading": "Find Your Local Marketing Team",
-    "subheading": "We serve businesses across the Pacific Northwest and Mountain West with local market knowledge, regional expertise, and the full-service digital marketing capabilities your business needs to grow.",
+    "subheading": "Pick your city to see how we help businesses nearby with SEO, ads, websites, social, and branding.",
     "cards": [
       {
         "title": "Yakima, WA",
-        "body": "YB's home base. Deep roots in the Yakima Valley with expertise across the agricultural, wine, healthcare, and small business industries that drive Central Washington.",
+        "body": "Our home base. Wineries, orchards, healthcare, trades, and the small businesses that keep the Valley running.",
         "slug": "yakima-wa"
       },
       {
         "title": "Ellensburg, WA",
-        "body": "Marketing strategies built for Kittitas County's unique dual audience — CWU's university community and the longtime residents who make Ellensburg thrive.",
+        "body": "Marketing for Kittitas County: downtown Ellensburg, CWU, and customers along I-90.",
         "slug": "ellensburg-wa"
       },
       {
         "title": "Tri-Cities, WA",
-        "body": "Kennewick, Pasco & Richland. Three cities, one strategy — built for the Columbia Basin's diverse economy, wine industry, and rapidly growing metro.",
+        "body": "Kennewick, Pasco, and Richland each need different messaging. We build campaigns for all three.",
         "slug": "tri-cities-wa"
       },
       {
         "title": "Spokane, WA",
-        "body": "Eastern Washington's largest market demands marketing at the highest level. We build strategies that compete with the Inland Northwest's most well-funded brands.",
+        "body": "Eastern Washington's largest market. Competitive search, sharp creative, and reporting you can act on.",
         "slug": "spokane-wa"
       },
       {
         "title": "Boise, ID",
-        "body": "One of America's fastest-growing cities. We help established Boise businesses defend their market share and new businesses break through in the Treasure Valley.",
+        "body": "Fast-growing Treasure Valley. Help for established operators and new businesses trying to break through.",
         "slug": "boise-id"
       },
       {
         "title": "Coeur d'Alene, ID",
-        "body": "The Lake City's tourism economy and tight-knit local community require strategies that serve both audiences — year-round residents and seasonal visitors.",
+        "body": "Lake country tourism plus a tight local base. Campaigns that work in summer and winter.",
         "slug": "coeur-dalene-id"
       },
       {
         "title": "Tacoma, WA",
-        "body": "A city on the rise with real competition from both local businesses and Seattle brands. We build South Sound strategies that compete at the level Tacoma's market demands.",
+        "body": "South Sound businesses competing with Seattle brands and earning Tacoma loyalty.",
         "slug": "tacoma-wa"
       },
       {
         "title": "Vancouver, WA",
-        "body": "Clark County's growing independent identity deserves marketing built specifically for the Washington side — not a Portland afterthought.",
+        "body": "Clark County marketing built for the Washington side, not as a Portland add-on.",
         "slug": "vancouver-wa"
       },
       {
         "title": "Wenatchee, WA",
-        "body": "North Central Washington's commercial hub. We build strategies that extend your regional reach across Chelan, Douglas, and beyond.",
+        "body": "North Central Washington's hub. Regional reach across Chelan, Douglas, and nearby towns.",
         "slug": "wenatchee-wa"
       },
       {
         "title": "Walla Walla, WA",
-        "body": "Wine country marketing for a destination economy. We capture both local customers and the visitors who plan every detail of their wine country trip online.",
+        "body": "Wine country tourism and a year-round local market. Creative and performance work in one place.",
         "slug": "walla-walla-wa"
       }
     ]
@@ -870,7 +865,7 @@ export const locationHubsMaster = {
   "servicesOverview": {
     "eyebrow": "WHAT YB OFFERS",
     "heading": "Solutions That Deliver",
-    "subheading": "We turn smart plans into bold execution — building brands and campaigns that get seen everywhere.",
+    "subheading": "Branding, SEO, Google Ads, social, and web design with clear plans and measurable results.",
     "items": [
       {
         "label": "Branding & Design",
@@ -907,7 +902,7 @@ export const locationHubsMaster = {
   "whyYb": {
     "eyebrow": "WHY CHOOSE US",
     "heading": "Successful Digital Marketing Based on Your Business Needs",
-    "body": "Internet Marketing does not mean using the same cookie-cutter solutions for every business. YB works with you to build a custom strategy to drive relevant visitors and conversions based on your business, goals, and helps you plan for the right budget.",
+    "body": "Every business is different. We start with a free audit, build a plan around your goals and budget, then execute and report in plain language.",
     "steps": [
       {
         "label": "PERSONALIZED AUDIT",

@@ -576,6 +576,39 @@ def sitemap_prefix_for(path: Path) -> str:
     return "../" * depth
 
 
+def sync_es_sitemap_insights() -> None:
+    """Refresh insights list in es/sitemap.html from posts.json."""
+    es_path = ROOT / "es" / "sitemap.html"
+    if not es_path.exists():
+        return
+
+    posts = sorted(load_posts_data(), key=lambda item: item["slug"])
+    lines = []
+    for post in posts:
+        slug = post["slug"]
+        es_post = ROOT / "es" / "blog" / "posts" / f"{slug}.html"
+        title = page_title(es_post) if es_post.exists() else post["title"]
+        lines.append(f'<li><a href="/es/insights/{slug}">{escape(title)}</a></li>')
+
+    text = es_path.read_text(encoding="utf-8")
+    text = re.sub(
+        r'(<ul class="sitemap-insights-list">).*?(</ul>)',
+        r"\1\n" + "\n".join(lines) + r"\n\2",
+        text,
+        count=1,
+        flags=re.S,
+    )
+    page_links = len(re.findall(r'<li><a href="/es/', text))
+    text = re.sub(
+        r'<p class="sitemap-count">.*?</p>',
+        f'<p class="sitemap-count">{page_links} páginas enumeradas en este mapa del sitio.</p>',
+        text,
+        count=1,
+    )
+    es_path.write_text(text, encoding="utf-8")
+    print(f"wrote {es_path.relative_to(ROOT)}")
+
+
 def main() -> None:
     compact, local_groups, insights = collect_pages()
     sitemap_path = ROOT / "sitemap.html"
@@ -585,6 +618,7 @@ def main() -> None:
     print(f"wrote {sitemap_path.relative_to(ROOT)}")
 
     write_xml_sitemaps()
+    sync_es_sitemap_insights()
 
     patched = 0
     for path in sorted(ROOT.rglob("*.html")):

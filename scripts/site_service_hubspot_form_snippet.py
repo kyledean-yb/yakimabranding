@@ -13,6 +13,7 @@ SERVICE_SOURCE_LABELS = {
     "branding.html": "Branding Service Page",
     "content-creation.html": "Content Creation Service Page",
     "press-releases.html": "Press Releases Service Page",
+    "customer-growth.html": "Customer Growth Service Page",
 }
 
 SERVICE_SOURCE_BY_FOLDER = {
@@ -23,6 +24,7 @@ SERVICE_SOURCE_BY_FOLDER = {
     "branding": "Branding Service Page",
     "content-marketing": "Content Creation Service Page",
     "press-releases": "Press Releases Service Page",
+    "customer-growth": "Customer Growth Service Page",
 }
 
 SERVICE_THANK_YOU = {
@@ -34,6 +36,7 @@ SERVICE_THANK_YOU = {
     "content-creation": "thank-you-content-creation",
     "content-marketing": "thank-you-content-creation",
     "press-releases": "thank-you-press-releases",
+    "customer-growth": "thank-you-customer-growth",
 }
 
 

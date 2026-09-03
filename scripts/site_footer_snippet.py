@@ -95,6 +95,7 @@ def site_footer_html(prefix: str = "", lang: str = "en", current_path: str = "")
           <li><a href="{page_href_lang('services/social-media.html', lang)}">{t("Social Media", lang)}</a></li>
           <li><a href="{page_href_lang('services/press-releases.html', lang)}">{t("Press Releases", lang)}</a></li>
           <li><a href="{page_href_lang('services/content-creation.html', lang)}">{t("Content Marketing", lang)}</a></li>
+          <li><a href="{page_href_lang('services/customer-growth.html', lang)}">{t("Customer Growth & Communication Tool", lang)}</a></li>
         </ul>
       </div>
       <div class="footer-col">

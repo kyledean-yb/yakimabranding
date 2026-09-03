@@ -13,6 +13,7 @@ INTEREST_OPTIONS = [
     ("social-media", "Social Media"),
     ("content-marketing", "Content Marketing"),
     ("press-releases", "Press Releases"),
+    ("customer-growth", "Customer Growth & Communication Tool"),
     ("video-animation", "Video Animation"),
     ("other", "Not sure / Other"),
 ]
@@ -25,6 +26,7 @@ DEFAULT_INTEREST_BY_SOURCE = {
     "Branding": "branding",
     "Content": "content-marketing",
     "Press": "press-releases",
+    "Customer Growth": "customer-growth",
     "Video": "video-animation",
 }
 

@@ -119,9 +119,61 @@ export function SiteHeader() {
             </div>
           </div>
 
-          <a href={siteLinks.insights} className="nav-a">
-            Insights
-          </a>
+          <div className="nav-insights" id="navInsights">
+            <button className="nav-svc-btn" type="button">
+              Insights
+              {chevronIcon}
+            </button>
+            <div className="nav-dd nav-dd-about">
+              <div className="nav-dd-arrow" />
+              <div className="nav-dd-about-inner">
+                <div className="nav-dd-about-banner">
+                  <span className="nav-dd-eyebrow">YB Marketing Insights</span>
+                  <p className="nav-dd-banner-text">Articles, Marketing Minute &amp; CRM guides</p>
+                </div>
+                <div className="nav-dd-about-grid">
+                  <a href={siteLinks.insights} className="dd-card">
+                    <div className="dd-ic" style={{ background: "var(--wash-cyan)", color: "var(--yb-cyan)" }}>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        <line x1="8" y1="7" x2="16" y2="7" />
+                        <line x1="8" y1="11" x2="14" y2="11" />
+                      </svg>
+                    </div>
+                    <div>
+                      <span className="dd-name">Blog</span>
+                      <span className="dd-desc">Marketing tips &amp; articles</span>
+                    </div>
+                  </a>
+                  <a href={siteLinks.clientCorner} className="dd-card">
+                    <div className="dd-ic" style={{ background: "var(--wash-violet)", color: "var(--yb-violet)" }}>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <polygon points="23 7 16 12 23 17 23 7" />
+                        <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                      </svg>
+                    </div>
+                    <div>
+                      <span className="dd-name">Client Corner</span>
+                      <span className="dd-desc">Resources &amp; Marketing Minute</span>
+                    </div>
+                  </a>
+                  <a href={siteLinks.crmTutorials} className="dd-card">
+                    <div className="dd-ic" style={{ background: "var(--wash-blue)", color: "var(--yb-blue)" }}>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <polygon points="10 8 16 12 10 16 10 8" />
+                      </svg>
+                    </div>
+                    <div>
+                      <span className="dd-name">CRM Tutorials</span>
+                      <span className="dd-desc">How-to videos for your CRM</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
           <a href={siteLinks.contact} className="nav-a">
             Contact
           </a>
@@ -172,7 +224,31 @@ export function SiteHeader() {
             <span>Oct 2025 tax updates</span>
           </a>
         </div>
-        <a href={siteLinks.insights}>Insights</a>
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            const el = document.getElementById("mobileInsightsList");
+            el?.classList.toggle("open");
+          }}
+          style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}
+        >
+          Insights <span>▾</span>
+        </a>
+        <div className="mobile-svc-list" id="mobileInsightsList">
+          <a href={siteLinks.insights} className="mobile-about-row">
+            <strong>Blog</strong>
+            <span>Marketing tips &amp; articles</span>
+          </a>
+          <a href={siteLinks.clientCorner} className="mobile-about-row">
+            <strong>Client Corner</strong>
+            <span>Resources &amp; Marketing Minute</span>
+          </a>
+          <a href={siteLinks.crmTutorials} className="mobile-about-row">
+            <strong>CRM Tutorials</strong>
+            <span>How-to videos for your CRM</span>
+          </a>
+        </div>
         <a href={siteLinks.contact}>Contact</a>
       </div>
     </div>

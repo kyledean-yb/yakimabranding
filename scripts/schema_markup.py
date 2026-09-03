@@ -82,6 +82,24 @@ SERVICE_PAGES = {
         "service_type": "Web Design",
         "description": "Custom WordPress and Wix website design and development for Pacific Northwest businesses.",
     },
+    "client-corner/index.html": {
+        "slug": "client-corner",
+        "name": "Client Corner",
+        "service_type": "Marketing Education",
+        "description": "Marketing Minute videos and client resources from YB Marketing for Pacific Northwest businesses.",
+    },
+    "crm-tutorials/index.html": {
+        "slug": "crm-tutorials",
+        "name": "CRM Tutorials",
+        "service_type": "Software Training",
+        "description": "Step-by-step video tutorials for YB Marketing's Customer Growth & Communication Tool.",
+    },
+    "customer-growth/index.html": {
+        "slug": "customer-growth",
+        "name": "Customer Growth & Communication Tool",
+        "service_type": "Customer Relationship Management",
+        "description": "Lead management, centralized messaging, automation, and customer follow-up for Pacific Northwest businesses.",
+    },
 }
 
 LOCAL_SERVICE_META = {

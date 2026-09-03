@@ -153,13 +153,15 @@ a {
 .header-inner,
 .nav,
 .nav-services,
-.nav-about {
+.nav-about,
+.nav-insights {
   overflow: visible !important;
 }
 
 /* Invisible bridge between trigger and panel (prevents hover gap on scroll) */
 .nav-services::before,
-.nav-about::before {
+.nav-about::before,
+.nav-insights::before {
   content: '';
   position: absolute;
   left: -16px;
@@ -170,6 +172,10 @@ a {
 }
 
 .nav-about {
+  position: relative;
+}
+
+.nav-insights {
   position: relative;
 }
 
@@ -465,7 +471,10 @@ a {
 .nav-services:focus-within .nav-dd,
 .nav-about.is-open .nav-dd,
 .nav-about:hover .nav-dd,
-.nav-about:focus-within .nav-dd {
+.nav-about:focus-within .nav-dd,
+.nav-insights.is-open .nav-dd,
+.nav-insights:hover .nav-dd,
+.nav-insights:focus-within .nav-dd {
   opacity: 1;
   transform: translateX(-50%) translateY(0) scale(1);
   pointer-events: all;
@@ -474,14 +483,20 @@ a {
 
 .nav-about.is-open .nav-svc-btn,
 .nav-about:hover .nav-svc-btn,
-.nav-about:focus-within .nav-svc-btn {
+.nav-about:focus-within .nav-svc-btn,
+.nav-insights.is-open .nav-svc-btn,
+.nav-insights:hover .nav-svc-btn,
+.nav-insights:focus-within .nav-svc-btn {
   background: var(--bg-soft);
   color: var(--yb-blue);
 }
 
 .nav-about.is-open .nav-chevron,
 .nav-about:hover .nav-chevron,
-.nav-about:focus-within .nav-chevron {
+.nav-about:focus-within .nav-chevron,
+.nav-insights.is-open .nav-chevron,
+.nav-insights:hover .nav-chevron,
+.nav-insights:focus-within .nav-chevron {
   transform: rotate(180deg);
 }
 

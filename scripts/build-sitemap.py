@@ -48,6 +48,9 @@ SERVICE_INDEX_PAGES = [
     ("branding/index.html", "Branding & Design"),
     ("press-releases/index.html", "Press Releases"),
     ("content-marketing/index.html", "Content Marketing"),
+    ("customer-growth/index.html", "Customer Growth & Communication Tool"),
+    ("client-corner/index.html", "Client Corner"),
+    ("crm-tutorials/index.html", "CRM Tutorials"),
 ]
 
 

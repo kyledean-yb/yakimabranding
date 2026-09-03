@@ -7,7 +7,7 @@
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function initNavDropdown() {
-    document.querySelectorAll('.nav-services, .nav-about').forEach(function (nav) {
+    document.querySelectorAll('.nav-services, .nav-about, .nav-insights').forEach(function (nav) {
       var btn = nav.querySelector('.nav-svc-btn');
       var closeTimer;
 
@@ -40,15 +40,15 @@
 
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') {
-        document.querySelectorAll('.nav-services.is-open, .nav-about.is-open').forEach(function (n) {
+        document.querySelectorAll('.nav-services.is-open, .nav-about.is-open, .nav-insights.is-open').forEach(function (n) {
           n.classList.remove('is-open');
         });
       }
     });
 
     document.addEventListener('click', function (e) {
-      if (!e.target.closest('.nav-services') && !e.target.closest('.nav-about')) {
-        document.querySelectorAll('.nav-services.is-open, .nav-about.is-open').forEach(function (n) {
+      if (!e.target.closest('.nav-services') && !e.target.closest('.nav-about') && !e.target.closest('.nav-insights')) {
+        document.querySelectorAll('.nav-services.is-open, .nav-about.is-open, .nav-insights.is-open').forEach(function (n) {
           n.classList.remove('is-open');
         });
       }

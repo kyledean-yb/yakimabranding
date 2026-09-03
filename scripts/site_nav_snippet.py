@@ -3,6 +3,7 @@
 from typing import Optional
 
 from about_nav_snippet import about_nav_shell
+from insights_nav_snippet import insights_mobile_block, insights_nav_shell
 from site_i18n import language_switcher_html, page_href_lang, t
 
 PHONE_ICON_SVG = (
@@ -50,10 +51,11 @@ def site_header_html(
             <a href="{page_href_lang('services/seo.html', lang)}" class="dd-card"><div class="dd-ic" style="background:var(--wash-cyan);color:var(--yb-cyan)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><div><span class="dd-name">{t("SEO", lang)}</span><span class="dd-desc">{t("Rank higher on Google", lang)}</span></div></a>
             <a href="{page_href_lang('services/press-releases.html', lang)}" class="dd-card"><div class="dd-ic" style="background:var(--wash-pink);color:var(--yb-pink)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/></svg></div><div><span class="dd-name">{t("Press Releases", lang)}</span><span class="dd-desc">{t("Get published", lang)}</span></div></a>
             <a href="{page_href_lang('services/content-creation.html', lang)}" class="dd-card"><div class="dd-ic" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div><span class="dd-name">{t("Content & Blogging", lang)}</span><span class="dd-desc">{t("Copy that converts", lang)}</span></div></a>
+            <a href="{page_href_lang('services/customer-growth.html', lang)}" class="dd-card"><div class="dd-ic" style="background:var(--wash-blue);color:var(--yb-blue)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div><span class="dd-name">{t("Customer Growth & Communication Tool", lang)}</span><span class="dd-desc">{t("CRM, messaging & automation", lang)}</span></div></a>
           </div>
         </div>
       </div>
-      <a href="{page_href_lang('insights.html', lang)}" class="nav-a">{t("Insights", lang)}</a>
+      {insights_nav_shell(prefix, None, '', lang)}
       <a href="{page_href_lang('contact.html', lang)}" class="nav-a">{t("Contact", lang)}</a>
     </nav>
     <div class="btn-hdr" style="display:flex;align-items:center;gap:8px">
@@ -71,7 +73,7 @@ def site_header_html(
       <a href="{page_href_lang('about/case-studies/index.html', lang)}" class="mobile-about-row"><strong>{t("Case Studies", lang)}</strong><span>{t("Client results & project highlights", lang)}</span></a>
       <a href="{page_href_lang('washington-state-sales-tax.html', lang)}" class="mobile-about-row"><strong>{t("WA Sales Tax Notice", lang)}</strong><span>{t("Oct 2025 tax updates", lang)}</span></a>
     </div>
-    <a href="{page_href_lang('insights.html', lang)}">{t("Insights", lang)}</a>
+    {insights_mobile_block(lang)}
     <a href="{page_href_lang('contact.html', lang)}">{t("Contact", lang)}</a>
     <div class="mobile-menu-lang">{switcher}</div>
   </div>

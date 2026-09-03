@@ -44,6 +44,8 @@ UI_ES: dict[str, str] = {
     "Get published": "Publica tu marca",
     "Content & Blogging": "Contenido y blogs",
     "Copy that converts": "Textos que convierten",
+    "Customer Growth & Communication Tool": "Herramienta de crecimiento y comunicación",
+    "CRM, messaging & automation": "CRM, mensajería y automatización",
     "Navigation": "Navegación",
     "Our Reach": "Nuestro alcance",
     "Locations": "Ubicaciones",
@@ -62,6 +64,14 @@ UI_ES: dict[str, str] = {
         "empresas de todo el Pacífico Noroeste con marketing estratégico, diseño web, SEO, "
         "publicidad y soporte de marca."
     ),
+    "YB Marketing Insights": "Ideas de YB Marketing",
+    "Articles, Marketing Minute & CRM guides": "Artículos, Marketing Minute y guías CRM",
+    "Blog": "Blog",
+    "Marketing tips & articles": "Consejos y artículos de marketing",
+    "Client Corner": "Rincón del cliente",
+    "Resources & Marketing Minute": "Recursos y Marketing Minute",
+    "CRM Tutorials": "Tutoriales CRM",
+    "How-to videos for your CRM": "Videos prácticos de tu CRM",
     "Language": "Idioma",
 }
 

@@ -434,7 +434,6 @@ section{{padding:88px 0}}
       <div style="background:#fff;border-radius:var(--r-xl);padding:28px;box-shadow:var(--sh-sm);border:1px solid var(--line)">
         <h3 style="font-size:20px;margin:0 0 20px">Send Us a Message</h3>
 {form}
-        <p class="yb-lead-form-footnote">We respond by the next business day. Your information is never shared.</p>
       </div>
     </div>
   </div>

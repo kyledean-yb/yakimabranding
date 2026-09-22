@@ -101,6 +101,11 @@ def lead_form_html(
               <label for="{fid("message")}">How can we help?</label>
               <textarea id="{fid("message")}" name="message" rows="4" placeholder="Tell us about your goals…"></textarea>
             </div>
+            <div class="yb-lead-form__hp" aria-hidden="true">
+              <label for="{fid("hp")}">Company website</label>
+              <input id="{fid("hp")}" name="company_website" type="text" value="" tabindex="-1" autocomplete="off">
+            </div>
+            <input type="hidden" name="form_started" value="">
             <input type="hidden" name="source" value="{src}">
             <input type="hidden" name="page_url" value="">
             <button type="submit" class="btn btn-grad yb-lead-form__submit">{html.escape(submit_label)}

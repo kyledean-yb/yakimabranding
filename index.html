@@ -91,20 +91,29 @@ section{padding:88px 0}
 .services{background:var(--bg-soft)}
 .sec-header{text-align:center;max-width:680px;margin:0 auto 48px}
 .sec-header h2{margin:14px 0 12px}
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.svc-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:26px;box-shadow:var(--sh-sm);transition:all var(--dur) var(--ease-out);cursor:pointer;display:flex;flex-direction:column;border-top:4px solid var(--ac)}
-.svc-card:hover{transform:translateY(-6px);box-shadow:var(--sh-md)}
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.svc-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:28px 30px;box-shadow:var(--sh-sm);transition:transform var(--dur) var(--ease-out),box-shadow var(--dur) var(--ease-out);cursor:pointer;display:flex;flex-direction:column;border-top:4px solid var(--ac)}
+.svc-card:hover,.svc-card:focus-within{transform:translateY(-6px);box-shadow:var(--sh-md)}
 .svc-chip{width:52px;height:52px;border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;flex:none;margin-bottom:16px}
 .svc-chip svg{width:26px;height:26px}
-.svc-card h3{font-size:21px;margin:0 0 9px}
-.svc-card p{font-size:14.5px;margin:0 0 16px;flex:1}
-.svc-feats{list-style:none;padding:0;margin:0 0 18px;display:grid;gap:9px}
+.svc-card h3{font-size:22px;margin:0 0 9px}
+.svc-card p{font-size:15px;margin:0;line-height:1.65;flex:1}
+.svc-feats{list-style:none;padding:0;margin:0;display:grid;gap:9px;max-height:0;opacity:0;overflow:hidden;transform:translateY(-4px);transition:max-height 320ms cubic-bezier(.16,1,.3,1),opacity 220ms ease,margin 220ms ease,transform 220ms ease}
+.svc-card:hover .svc-feats,.svc-card:focus-within .svc-feats{max-height:180px;opacity:1;margin:16px 0 0;transform:translateY(0)}
 .svc-feats li{display:flex;align-items:center;gap:9px;font-size:13.5px;font-weight:600;color:var(--fg2)}
 .feat-check{width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none}
 .feat-check svg{width:11px;height:11px}
-.svc-link{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:14px;margin-top:auto}
+.svc-link{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:14px;margin-top:0;max-height:0;opacity:0;overflow:hidden;transform:translateY(-4px);transition:max-height 320ms cubic-bezier(.16,1,.3,1),opacity 220ms ease,margin 220ms ease,transform 220ms ease}
+.svc-card:hover .svc-link,.svc-card:focus-within .svc-link{max-height:40px;opacity:1;margin-top:16px;transform:translateY(0)}
 .svc-link svg{width:15px;height:15px;transition:transform var(--dur) var(--ease)}
-.svc-card:hover .svc-link svg{transform:translateX(4px)}
+.svc-card:hover .svc-link svg,.svc-card:focus-within .svc-link svg{transform:translateX(4px)}
+@media(hover:none){
+  .svc-feats{max-height:none;opacity:1;margin:16px 0 0;transform:none;overflow:visible}
+  .svc-link{max-height:none;opacity:1;margin-top:16px;transform:none;overflow:visible}
+}
+@media(prefers-reduced-motion:reduce){
+  .svc-feats,.svc-link{transition:none}
+}
 .svc-cta{margin-top:28px;border-radius:var(--r-xl);overflow:hidden;position:relative;background:var(--grad-navy);padding:42px 44px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .svc-cta-mesh{position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.8;pointer-events:none}
 .svc-cta h3{font-family:var(--font-display);font-weight:700;font-size:28px;color:#fff;margin:0 0 6px;position:relative}
@@ -197,10 +206,11 @@ section{padding:88px 0}
 
 /* ─── MEET THE TEAM ─────────────────────────────────────────── */
 .meet-team{background:var(--bg-soft)}
-.meet-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.meet-photo{border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh-lg)}
-.meet-photo img{width:100%;height:100%;object-fit:cover;display:block}
-@media(max-width:800px){.meet-grid{grid-template-columns:1fr}}
+.meet-inner{max-width:760px;margin:0 auto;text-align:center}
+.meet-inner .eyebrow{justify-content:center}
+.meet-inner h2{margin:14px 0 16px}
+.meet-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px}
+@media(max-width:640px){.meet-actions{flex-direction:column;align-items:stretch}.meet-actions .btn{justify-content:center}}
 
 /* ─── CONTACT ─────────────────────────────────────────── */
 .contact-bg{background:var(--bg-soft)}
@@ -454,6 +464,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
             <a href="/press-releases" class="dd-card"><div class="dd-ic" style="background:var(--wash-pink);color:var(--yb-pink)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/></svg></div><div><span class="dd-name">Press Releases</span><span class="dd-desc">Get published</span></div></a>
             <a href="/content-marketing" class="dd-card"><div class="dd-ic" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div><span class="dd-name">Content & Blogging</span><span class="dd-desc">Copy that converts</span></div></a>
             <a href="/customer-growth" class="dd-card"><div class="dd-ic" style="background:var(--wash-blue);color:var(--yb-blue)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div><span class="dd-name">Customer Growth & Communication Tool</span><span class="dd-desc">CRM, messaging & automation</span></div></a>
+            <a href="/ai-for-business" class="dd-card"><div class="dd-ic" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4v1h1a3 3 0 0 1 0 6h-.5"/><path d="M8 7V6a4 4 0 0 1 7.2-2.4"/><path d="M7.5 13H7a3 3 0 0 1 0-6h1"/><path d="M8 13v3a4 4 0 0 0 8 0v-3"/><circle cx="9" cy="17" r="1"/><circle cx="15" cy="17" r="1"/></svg></div><div><span class="dd-name">AI for Business</span><span class="dd-desc">Practical AI for marketing teams</span></div></a>
           </div>
         </div>
       </div>
@@ -757,6 +768,22 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
         <a href="/customer-growth" class="svc-link" style="color:var(--yb-blue)">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
 
+      <div class="svc-card" style="--ac:var(--yb-violet)">
+        <div class="svc-img"><img src="assets/svc-content.webp" alt="AI for Business"></div>
+        <div class="svc-chip" style="background:var(--wash-violet);color:var(--yb-violet)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4v1h1a3 3 0 0 1 0 6h-.5"/><path d="M8 7V6a4 4 0 0 1 7.2-2.4"/><path d="M7.5 13H7a3 3 0 0 1 0-6h1"/><path d="M8 13v3a4 4 0 0 0 8 0v-3"/><circle cx="9" cy="17" r="1"/><circle cx="15" cy="17" r="1"/></svg>
+        </div>
+        <h3 class="yb-h3">AI for Business</h3>
+        <p>Practical AI guidance, training, and support so your team can draft content, follow up faster, and catch more leads.</p>
+        <ul class="svc-feats">
+          <li><span class="feat-check" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Content &amp; Social</li>
+          <li><span class="feat-check" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Automations &amp; Follow Up</li>
+          <li><span class="feat-check" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Chat &amp; Voice Agents</li>
+          <li><span class="feat-check" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Training &amp; Support</li>
+        </ul>
+        <a href="/ai-for-business" class="svc-link" style="color:var(--yb-violet)">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
     </div>
     <div class="svc-cta">
       <div class="svc-cta-mesh"></div>
@@ -796,18 +823,18 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
 
 <!-- MEET THE TEAM -->
 <section class="meet-team">
-  <div class="container meet-grid">
-    <div>
+  <div class="container">
+    <div class="meet-inner">
       <span class="eyebrow" style="color:var(--yb-blue)">About Us</span>
-      <h2 style="margin:14px 0 16px">Meet the team behind<br>the brand.</h2>
+      <h2>Meet the team behind the brand.</h2>
       <p class="yb-lead" style="margin:0 0 16px">At Yakima Branding (aka YB Marketing), we are more than a marketing agency — we are your dedicated partner in business growth and brand success. Our team of marketing professionals combines creativity with strategy to deliver solutions that elevate your brand, strengthen your message, and drive measurable results.</p>
-      <p style="margin:0 0 28px;font-size:15px;color:var(--fg2)">We've helped hundreds of businesses sharpen their brand identity and messaging, ensuring they stand out in competitive markets. From there, we provide the tools and expertise needed to fuel growth.</p>
-      <a href="/contact" class="btn btn-grad">Work With Us
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
-    </div>
-    <div class="meet-photo">
-      <img src="assets/team-photo.webp" alt="The YB Marketing team in Yakima, WA">
+      <p style="margin:0;font-size:15px;color:var(--fg2)">We've helped hundreds of businesses sharpen their brand identity and messaging, ensuring they stand out in competitive markets. From there, we provide the tools and expertise needed to fuel growth.</p>
+      <div class="meet-actions">
+        <a href="/about" class="btn btn-grad">About Us
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="/contact" class="btn btn-ghost">Work With Us</a>
+      </div>
     </div>
   </div>
 </section>
@@ -1340,6 +1367,8 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
 <option value="content-marketing">Content Marketing</option>
 <option value="press-releases">Press Releases</option>
 <option value="customer-growth">Customer Growth &amp; Communication Tool</option>
+<option value="ai-for-business">AI for Business</option>
+<option value="ai-for-small-business">AI for Small Business</option>
 <option value="video-animation">Video Animation</option>
 <option value="other">Not sure / Other</option>
                 </select>
@@ -1433,6 +1462,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
           <li><a href="/press-releases">Press Releases</a></li>
           <li><a href="/content-marketing">Content Marketing</a></li>
           <li><a href="/customer-growth">Customer Growth & Communication Tool</a></li>
+          <li><a href="/ai-for-business">AI for Business</a></li>
         </ul>
       </div>
       <div class="footer-col">

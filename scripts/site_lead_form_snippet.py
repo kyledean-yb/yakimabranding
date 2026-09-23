@@ -14,6 +14,8 @@ INTEREST_OPTIONS = [
     ("content-marketing", "Content Marketing"),
     ("press-releases", "Press Releases"),
     ("customer-growth", "Customer Growth & Communication Tool"),
+    ("ai-for-business", "AI for Business"),
+    ("ai-for-small-business", "AI for Small Business"),
     ("video-animation", "Video Animation"),
     ("other", "Not sure / Other"),
 ]
@@ -27,6 +29,8 @@ DEFAULT_INTEREST_BY_SOURCE = {
     "Content": "content-marketing",
     "Press": "press-releases",
     "Customer Growth": "customer-growth",
+    "AI for Business": "ai-for-business",
+    "AI for Small": "ai-for-small-business",
     "Video": "video-animation",
 }
 

@@ -17,6 +17,8 @@ SERVICE_FILE_SLUGS = {
     "social-media.html": "social-media",
     "web-design.html": "web-design",
     "customer-growth.html": "customer-growth",
+    "ai-for-business.html": "ai-for-business",
+    "ai-for-small-business.html": "ai-for-small-business",
 }
 
 SPECIAL_PATHS = {

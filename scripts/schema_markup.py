@@ -100,6 +100,18 @@ SERVICE_PAGES = {
         "service_type": "Customer Relationship Management",
         "description": "Lead management, centralized messaging, automation, and customer follow-up for Pacific Northwest businesses.",
     },
+    "ai-for-business/index.html": {
+        "slug": "ai-for-business",
+        "name": "AI for Business",
+        "service_type": "Artificial Intelligence Consulting",
+        "description": "YB Marketing provides practical AI guidance, training, and support for businesses across the Pacific Northwest, including content, follow up, chatbots, and voice tools.",
+    },
+    "ai-for-small-business/index.html": {
+        "slug": "ai-for-small-business",
+        "name": "AI for Small Business",
+        "service_type": "Artificial Intelligence Consulting",
+        "description": "YB Marketing helps small businesses across the Pacific Northwest use AI for content, follow up, chat, and voice tools that save time and catch more leads.",
+    },
 }
 
 LOCAL_SERVICE_META = {

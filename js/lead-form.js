@@ -11,6 +11,7 @@
  * - Interaction required (focus/input before submit)
  * - Gibberish name heuristics
  * - Phone digit count check
+ * - Message must include letters (blocks phone-only comments)
  */
 (function () {
   'use strict';
@@ -117,6 +118,18 @@
     return (phone.match(/\d/g) || []).length;
   }
 
+  function messageHasLetters(message) {
+    return /[a-zA-Z\u00C0-\u024F]/.test(message);
+  }
+
+  function messageLooksPhoneOnly(message) {
+    var cleaned = message.replace(/\s+/g, ' ').trim();
+    if (!cleaned) return false;
+    // Reject when there are no letters at all (digits, dashes, parens, + only)
+    if (!messageHasLetters(cleaned)) return true;
+    return false;
+  }
+
   function spamReason(form, data) {
     var hp = form.querySelector('[name="' + HP_NAME + '"]');
     if (hp && String(hp.value || '').trim()) {
@@ -139,6 +152,10 @@
 
     if (phoneDigitCount(data.phone) < 10) {
       return 'bad_phone';
+    }
+
+    if (messageLooksPhoneOnly(data.message)) {
+      return 'message_no_letters';
     }
 
     // Obvious disposable / role-spam patterns (light touch)
@@ -254,6 +271,10 @@
       }
       if (reason === 'bad_phone') {
         finishErr('Please enter a valid phone number.');
+        return;
+      }
+      if (reason === 'message_no_letters') {
+        finishErr('Please write a short message using words, not just a phone number.');
         return;
       }
       if (reason === 'disposable_email') {

@@ -102,8 +102,8 @@ def lead_form_html(
               </div>
             </div>
             <div class="yb-lead-form__field">
-              <label for="{fid("message")}">How can we help?</label>
-              <textarea id="{fid("message")}" name="message" rows="4" placeholder="Tell us about your goals…"></textarea>
+              <label for="{fid("message")}">How can we help? *</label>
+              <textarea id="{fid("message")}" name="message" rows="4" required placeholder="Tell us about your goals…"></textarea>
             </div>
             <div class="yb-lead-form__hp" aria-hidden="true">
               <label for="{fid("hp")}">Company website</label>

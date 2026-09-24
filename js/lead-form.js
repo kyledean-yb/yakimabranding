@@ -122,11 +122,10 @@
     return /[a-zA-Z\u00C0-\u024F]/.test(message);
   }
 
-  function messageLooksPhoneOnly(message) {
+  function messageMissingLetters(message) {
     var cleaned = message.replace(/\s+/g, ' ').trim();
-    if (!cleaned) return false;
-    // Reject when there are no letters at all (digits, dashes, parens, + only)
-    if (!messageHasLetters(cleaned)) return true;
+    // Required: must have content with real letters (blocks empty + phone-only spam)
+    if (!cleaned || !messageHasLetters(cleaned)) return true;
     return false;
   }
 
@@ -154,7 +153,7 @@
       return 'bad_phone';
     }
 
-    if (messageLooksPhoneOnly(data.message)) {
+    if (messageMissingLetters(data.message)) {
       return 'message_no_letters';
     }
 
@@ -274,7 +273,7 @@
         return;
       }
       if (reason === 'message_no_letters') {
-        finishErr('Please write a short message using words, not just a phone number.');
+        finishErr('Please enter a message with a few words about how we can help.');
         return;
       }
       if (reason === 'disposable_email') {

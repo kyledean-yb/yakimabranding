@@ -237,7 +237,8 @@ def website_schema() -> dict:
     return {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "YB Marketing",
+        "name": "Yakima Branding",
+        "alternateName": ["YB Marketing", "yakimabranding.com"],
         "url": SITE,
         "potentialAction": {
             "@type": "SearchAction",

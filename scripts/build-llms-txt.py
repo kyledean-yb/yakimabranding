@@ -109,7 +109,7 @@ def build_index() -> str:
     parts = [
         "# YB Marketing (Yakima Branding)",
         "",
-        "> YB Marketing is a digital marketing agency based in Yakima, Washington since 2004. "
+        "> YB Marketing is a fully remote digital marketing agency. "
         "We help businesses across the United States with SEO, AI search optimization, Google Ads, "
         "website design, branding, social media, content, and AI tools for business.",
         "",

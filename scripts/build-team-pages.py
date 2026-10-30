@@ -285,7 +285,7 @@ def team_contact_section_html(
     <div class="team-contact-intro">
       <span class="eyebrow">Get Started</span>
       <h2>Book a meeting or send a message</h2>
-      <p>Schedule a free 30-minute introduction with {html.escape(member_name)} or use the form below.</p>
+      <p>Schedule a 30-minute introduction with {html.escape(member_name)} or use the form below.</p>
     </div>
     <div class="team-contact-grid">
       {team_calendly_card_html(member_name)}
@@ -335,23 +335,23 @@ def page_kevin():
       <div class="team-faq">
         <div class="team-faq-item">
           <button class="team-faq-q" type="button">Why did you go into Internet Marketing?<svg class="team-faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <div class="team-faq-a">In 2003, the Internet was still young. We were moving past dial-up, Google was just getting started, and laptops didn't really exist. But the future was obvious — the Internet was the place to be. I wanted to start my own company to help clients grow by using this new technology.</div>
+          <div class="team-faq-a">In 2003, the Internet was still young. We were moving past dial-up, Google was just getting started, and laptops didn't really exist. But the future was obvious: the Internet was the place to be. I wanted to start my own company to help clients grow by using this new technology.</div>
         </div>
         <div class="team-faq-item">
           <button class="team-faq-q" type="button">What is your management philosophy?<svg class="team-faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <div class="team-faq-a">We do all we can to help the customer. We educate our customers as to what we think are the best steps and methods to help them achieve their goals. We do not chase the latest technologies — we may be slower to latch onto the next trend so we understand how something works best.</div>
+          <div class="team-faq-a">We do all we can to help the customer. We educate our customers as to what we think are the best steps and methods to help them achieve their goals. We do not chase the latest technologies. We may be slower to latch onto the next trend so we understand how something works best.</div>
         </div>
         <div class="team-faq-item">
           <button class="team-faq-q" type="button">What motivates you?<svg class="team-faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <div class="team-faq-a">I enjoy talking to customers who put their faith in us to help them grow. The Internet can be a scary place for some business owners — but our systems and tools are time-tested. We follow up, we communicate, and we admit when we need to fix something.</div>
+          <div class="team-faq-a">I enjoy talking to customers who put their faith in us to help them grow. The Internet can be a scary place for some business owners, but our systems and tools are time-tested. We follow up, we communicate, and we admit when we need to fix something.</div>
         </div>
         <div class="team-faq-item">
           <button class="team-faq-q" type="button">What Internet Marketing technique is best for my business?<svg class="team-faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <div class="team-faq-a">That depends on your industry, demographic, ideal customer, and brand voice. It can be a mix of several platforms. Each platform delivers to a specific group — reach out so we can determine which will deliver you the best results.</div>
+          <div class="team-faq-a">That depends on your industry, demographic, ideal customer, and brand voice. It can be a mix of several platforms. Each platform delivers to a specific group, so reach out so we can determine which will deliver you the best results.</div>
         </div>
         <div class="team-faq-item">
           <button class="team-faq-q" type="button">Are you more expensive than other agencies?<svg class="team-faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <div class="team-faq-a">We are different in that we do not try to be the cheapest agency. We trust our systems and services and can show using real data that they work. It is not about what you are paying — it is about what we can make for you. Low pricing is forgotten once you get the deal; low performance is felt for a long time.</div>
+          <div class="team-faq-a">We are different in that we do not try to be the cheapest agency. We trust our systems and services and can show using real data that they work. It is not about what you are paying. It is about what we can make for you. Low pricing is forgotten once you get the deal; low performance is felt for a long time.</div>
         </div>
       </div>
     </div>
@@ -370,7 +370,7 @@ def page_jacob():
     body = hero_block(
         "Jacob Ross",
         "Account Executive",
-        "Digital marketing expert and self-proclaimed grill master — building memorable brands with data-driven campaigns.",
+        "Digital marketing expert and self-proclaimed grill master who builds memorable brands with data-driven campaigns.",
         "assets/jacob-headshot.webp",
         [
             ("jacob@yakimabranding.com", "mailto:jacob@yakimabranding.com", MAIL_SVG),
@@ -385,7 +385,7 @@ def page_jacob():
         ("Yakima Branding was instrumental in the successful launch of my business and brand.", "JLS Custom Construction"),
     ]
     qhtml = "".join(
-        f'<blockquote class="team-quote"><p>"{html.escape(q)}"</p><cite>— {html.escape(c)}</cite></blockquote>'
+        f'<blockquote class="team-quote"><p>"{html.escape(q)}"</p><cite>{html.escape(c)}</cite></blockquote>'
         for q, c in quotes
     )
     body += f"""
@@ -414,7 +414,7 @@ def page_jacob():
       </div>
       <h2>How we work together</h2>
       <div class="team-steps">
-        <div class="team-step"><div class="team-step-num">1</div><h3>Personalized Audit</h3><p>It all starts with a free audit of your website and marketing channels.</p></div>
+        <div class="team-step"><div class="team-step-num">1</div><h3>Personalized Audit</h3><p>It all starts with a review of your website and marketing channels.</p></div>
         <div class="team-step"><div class="team-step-num">2</div><h3>Customized Strategy</h3><p>Together, we'll build a strategy that prioritizes your business goals.</p></div>
         <div class="team-step"><div class="team-step-num">3</div><h3>Grow Your Business</h3><p>With our goals aligned and strategy in place, we take action to grow your business.</p></div>
       </div>
@@ -436,7 +436,7 @@ def page_sophie():
     body = hero_block(
         "Sophie Mann",
         "Account Executive",
-        "Strategic communications specialist with deep expertise in education and manufacturing — now serving clients from Chicago.",
+        "Strategic communications specialist with deep expertise in education and manufacturing, now serving clients from Chicago.",
         "assets/sophie-headshot.webp",
         [
             ("Book a Meeting", calendly_url_for("Sophie Mann"), PHONE_SVG),
@@ -484,7 +484,7 @@ def page_kayelyn():
     </div>
     <div class="team-social-band">
       <h3>Social media that supports your brand</h3>
-      <p>From content planning to publishing and engagement, Kayelyn helps your social channels work as part of a complete marketing strategy — not an afterthought.</p>
+      <p>From content planning to publishing and engagement, Kayelyn helps your social channels work as part of a complete marketing strategy, not an afterthought.</p>
       <div style="margin-top:22px">
         <a href="{PREFIX}services/social-media.html" class="btn btn-grad">Explore Social Media Services</a>
       </div>
@@ -510,7 +510,7 @@ def page_kirsten():
   <div class="container team-layout-split">
     <div class="team-prose">
       <p>With 3+ years of experience as a versatile marketing professional, Kirsten Gonzalez has established herself as a true jack-of-all-trades. While she specializes in brand reputation and social media marketing, she brings a strategic, creative, and solutions-focused approach to every project.</p>
-      <p>At YB, she provides tailored marketing support to clients and team members across a wide range of industries. She ensures each project aligns with specific goals and needs — whether it involves administrative assistance, social media management, email marketing, SEO, website maintenance, or broader initiatives.</p>
+      <p>At YB, she provides tailored marketing support to clients and team members across a wide range of industries. She ensures each project aligns with specific goals and needs, whether it involves administrative assistance, social media management, email marketing, SEO, website maintenance, or broader initiatives.</p>
       <p>Her overarching goal is to build meaningful, trust-driven relationships with clients, ensuring they feel supported, confident, and equipped to thrive in an ever-evolving digital landscape.</p>
       <h2>How she supports your marketing</h2>
       <div class="team-skill-grid">

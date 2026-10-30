@@ -4,13 +4,13 @@ export const locationHubs = [
     "city": "Yakima",
     "state": "WA",
     "titleTag": "Digital Marketing Agency Yakima WA | YB Marketing",
-    "metaDescription": "YB Marketing is a full-service digital marketing agency for Yakima Valley businesses. SEO, Google Ads, web design, social media, and branding from a team based in Yakima.",
+    "metaDescription": "YB Marketing is a full-service digital marketing agency for Yakima Valley businesses. SEO, Google Ads, web design, social media, and branding for Yakima businesses.",
     "canonicalUrl": "https://yakimabranding.com/locations/yakima-wa",
     "hero": {
       "eyebrow": "YB MARKETING · YAKIMA, WA",
       "headline": "Digital Marketing for the Yakima Valley",
       "accentHeadline": "From a Team That Lives Here",
-      "body": "We are based in Yakima and work with Valley businesses every day. Search, ads, websites, social, and branding with local context baked in, not bolted on."
+      "body": "We work with Valley businesses every day. Search, ads, websites, social, and branding with local context baked in, not bolted on."
     },
     "servicesSection": {
       "eyebrow": "SERVICES IN YAKIMA",
@@ -43,7 +43,7 @@ export const locationHubs = [
       "eyebrow": "ABOUT US",
       "heading": "A Yakima Team, Not a Distant Account",
       "paragraphs": [
-        "YB Marketing started in the Yakima Valley. We know the industries here: wine, ag, healthcare, trades, retail, and the small businesses that keep Main Street moving.",
+        "We work with a lot of Yakima Valley businesses. We know the industries here: wine, ag, healthcare, trades, retail, and the small businesses that keep Main Street moving.",
         "When you call, you talk to people who understand your market. We have helped hundreds of local companies sharpen their brand and fix the digital basics that drive leads.",
       ]
     },
@@ -803,7 +803,7 @@ export const locationHubsMaster = {
     "eyebrow": "YB MARKETING — PACIFIC NORTHWEST & MOUNTAIN WEST",
     "headline": "Invisible Online?",
     "accentHeadline": "Dominate Your Local Market.",
-    "body": "We are based in Washington and work across the Pacific Northwest and Mountain West. Same team, same standards, local context for each market we serve."
+    "body": "We work across the Pacific Northwest and Mountain West. Same team, same standards, local context for each market we serve."
   },
   "locationsGrid": {
     "eyebrow": "WHERE WE WORK",
@@ -812,7 +812,7 @@ export const locationHubsMaster = {
     "cards": [
       {
         "title": "Yakima, WA",
-        "body": "Our home base. Wineries, orchards, healthcare, trades, and the small businesses that keep the Valley running.",
+        "body": "Wineries, orchards, healthcare, trades, and the small businesses that keep the Valley running.",
         "slug": "yakima-wa"
       },
       {
@@ -906,7 +906,7 @@ export const locationHubsMaster = {
     "steps": [
       {
         "label": "PERSONALIZED AUDIT",
-        "body": "It all starts with a free audit of your website and marketing channels."
+        "body": "It all starts with a review of your website and marketing channels."
       },
       {
         "label": "CUSTOMIZED STRATEGY",

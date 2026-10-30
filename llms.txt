@@ -1,6 +1,6 @@
 # YB Marketing (Yakima Branding)
 
-> YB Marketing is a digital marketing agency based in Yakima, Washington since 2004. We help businesses across the United States with SEO, AI search optimization, Google Ads, website design, branding, social media, content, and AI tools for business.
+> YB Marketing is a fully remote digital marketing agency. We help businesses across the United States with SEO, AI search optimization, Google Ads, website design, branding, social media, content, and AI tools for business.
 
 - Phone: (509) 901-9735
 - Email: info@yakimabranding.com
@@ -33,9 +33,9 @@
 ## Company
 
 - [Meet the YB Marketing Team](https://yakimabranding.com/about): Meet the experienced digital marketing consultants behind YB Marketing, serving small businesses since 2003 with SEO, Google Ads, social media, and web design. Call 509-901-9735 to discuss your goals.
-- [Client Reviews](https://yakimabranding.com/reviews): Read what clients say about working with YB Marketing (Yakima Branding). 5.0 stars across 48 Google reviews for web design, SEO, branding, and marketing.
+- [Client Reviews](https://yakimabranding.com/reviews): Read what clients say about working with YB Marketing (Yakima Branding). 5.0 stars across 48 Google reviews, plus verified Clutch reviews from Denver and across the country.
 - [Case Studies](https://yakimabranding.com/about/case-studies): YB Marketing case studies: local SEO growth, website redesigns, Google Ads, content marketing, accessibility and WordPress security for real clients.
-- [Contact YB Marketing](https://yakimabranding.com/contact): Ready to grow your business with more leads and more profit? Contact YB Marketing for a free consultation on SEO, Google Ads, web design, social media, or branding. Call 509-901-9735 today.
+- [Contact YB Marketing](https://yakimabranding.com/contact): Ready to grow your business with more leads and more profit? Contact YB Marketing to talk about SEO, Google Ads, web design, social media, or branding. Call 509-901-9735 today.
 - [Kevin Dean, Owner](https://yakimabranding.com/about/kevin): Meet Kevin Dean, owner of YB Marketing, leading digital marketing, SEO, and advertising strategy for growing businesses across the country. Call 509-901-9735 to get started.
 - [Jacob Ross, Account Executive](https://yakimabranding.com/about/jacob): Meet Jacob Ross, account executive at YB Marketing, specializing in SEO, Google Ads, and web strategy for growing businesses. Ready to talk strategy? Call 509-901-9735.
 - [Sophie Mann, Account Executive](https://yakimabranding.com/about/sophie): Meet Sophie Mann, account executive at YB Marketing based in Chicago, helping businesses grow with SEO, Google Ads, and web strategy. Ready to talk strategy? Call 509-901-9735.
@@ -48,7 +48,7 @@
 - [EMS Contract Manufacturer Google Ads & SEO Case Study](https://yakimabranding.com/about/case-studies/ems-contract-manufacturer-google-ads-seo): How YB Marketing grew a Silicon Valley EMS contract manufacturer from a small ad budget to nationwide reach, with traffic up 75% and visibility up 108% in one year.
 - [Environmental Engineering Content Marketing Case Study: +93% Visibility](https://yakimabranding.com/about/case-studies/environmental-engineering-content-marketing): How YB Marketing grew traffic 57% and search visibility 93% in one year for a California environmental engineering firm with a website redesign and content marketing.
 - [Equipment Manufacturer Website Redesign & SEO Case Study](https://yakimabranding.com/about/case-studies/equipment-manufacturer-website-redesign): How YB Marketing redesigned the website and SEO for a California automated assembly equipment manufacturer, growing traffic 75% and visibility 108% in one year.
-- [Fortune 500 Multilingual Accessibility Remediation](https://yakimabranding.com/about/case-studies/fortune-500-multilingual-accessibility): How YB Marketing turned a Fortune 500 accessibility audit into shipped fixes across three domains and six languages — React, brand tokens, and translation pipeline included.
+- [Fortune 500 Multilingual Accessibility Remediation](https://yakimabranding.com/about/case-studies/fortune-500-multilingual-accessibility): How YB Marketing turned a Fortune 500 accessibility audit into shipped fixes across three domains and six languages, including React, brand tokens, and the translation pipeline.
 - [Local Electrical Contractor SEO Case Study, +112% Organic Traffic](https://yakimabranding.com/about/case-studies/local-electrical-contractor-seo-growth): How YB Marketing grew organic search traffic 112% year over year, search impressions 366% at peak, and page-one keyword rankings 204% for a Greater Bay Area electrical contractor.
 - [Local Refrigeration SEO Case Study, +2,900% Page 1 Growth](https://yakimabranding.com/about/case-studies/local-refrigeration-services-seo-growth): How YB Marketing grew page-one keyword rankings 2,900%, doubled organic traffic in seven months, and lifted top-three rankings 57% for a Central Washington industrial refrigeration contractor.
 - [Local Tire & Auto SEO Case Study, +613% Page 1 Growth](https://yakimabranding.com/about/case-studies/regional-tire-auto-seo-growth): How YB Marketing grew organic search traffic 46% year over year, search impressions 243% at peak, and page-one keyword rankings 613% for a Central Washington tire and auto service provider.
@@ -116,7 +116,7 @@
 
 - [Insights](https://yakimabranding.com/insights): Digital marketing insights from YB Marketing.
 - [Client Corner](https://yakimabranding.com/client-corner): Marketing Minute videos and client resources from YB Marketing. Learn AI search, listings, reviews, Bing profiles, and Google Ads tips.
-- [CRM Tutorials](https://yakimabranding.com/crm-tutorials): Step-by-step video guides for YB Marketing's Customer Growth & Communication Tool — platform walkthrough, opportunities, and pipelines.
+- [CRM Tutorials](https://yakimabranding.com/crm-tutorials): Step-by-step video guides for YB Marketing's Customer Growth & Communication Tool, including a platform walkthrough, opportunities, and pipelines.
 
 ## Optional
 

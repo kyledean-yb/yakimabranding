@@ -561,7 +561,7 @@ def build_sitemap_html() -> str:
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="favicon.png">
 <title>Sitemap — YB Marketing</title>
-<meta name="description" content="Browse every page on the YB Marketing website — services, team profiles, insights, and more.">
+<meta name="description" content="Browse every page on the YB Marketing website, including services, team profiles, insights, and more.">
 <link rel="stylesheet" href="colors_and_type.css">
 <style>
 *{{box-sizing:border-box;margin:0;padding:0}}

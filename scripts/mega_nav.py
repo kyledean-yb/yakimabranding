@@ -24,6 +24,8 @@ ICONS = {
 CASE_ELECTRICAL = ("+204%", "Page one keywords for a Bay Area electrical contractor", "/about/case-studies/local-electrical-contractor-seo-growth")
 CASE_REFRIG = ("+2,900%", "Page one keywords for a Central Washington refrigeration company", "/about/case-studies/local-refrigeration-services-seo-growth")
 CASE_TIRE = ("+613%", "Page one keywords for a regional tire and auto shop", "/about/case-studies/regional-tire-auto-seo-growth")
+CASE_EMS = ("10×", "Ad budget growth for a Silicon Valley electronics manufacturer", "/about/case-studies/ems-contract-manufacturer-google-ads-seo")
+CASE_ROOF = ("+160%", "More phone calls for a local roofing contractor", "/about/case-studies/roofing-contractor-inbound-marketing")
 CASE_WP = ("130", "WordPress websites cleaned and secured in 15 days", "/about/case-studies/wordpress-portfolio-malware-remediation")
 
 MENUS: list[dict] = [
@@ -103,6 +105,7 @@ MENUS: list[dict] = [
                 ("Types of Facebook Ads", "/blog/posts/types-of-facebook-ads"),
             ]},
         ],
+        "feature": {"title": "Ads Results", "cards": [CASE_EMS, CASE_ROOF], "more": ("All case studies", "/about/case-studies")},
     },
     {
         "label": "Insights",
@@ -197,6 +200,9 @@ ES = {
     "Page one keywords for a Central Washington refrigeration company": "Palabras clave en la primera página para una empresa de refrigeración",
     "Page one keywords for a regional tire and auto shop": "Palabras clave en la primera página para un taller de llantas",
     "WordPress websites cleaned and secured in 15 days": "Sitios WordPress limpiados y protegidos en 15 días",
+    "Ad budget growth for a Silicon Valley electronics manufacturer": "Crecimiento del presupuesto de anuncios para un fabricante de electrónica",
+    "More phone calls for a local roofing contractor": "Más llamadas para un contratista de techos local",
+    "Ads Results": "Resultados de anuncios",
 }
 
 

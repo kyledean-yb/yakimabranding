@@ -283,7 +283,11 @@
   }
 
   function init() {
-    var grids = document.querySelectorAll('[data-blog-insights]');
+    var grids = Array.prototype.filter.call(document.querySelectorAll('[data-blog-insights]'), function (el) {
+      if (!el.hasAttribute('data-prerendered')) return true;
+      if (el.getAttribute('data-variant') === 'home-scroll') initScrollControls(el);
+      return false;
+    });
     if (!grids.length) return;
 
     var base = grids[0].getAttribute('data-base') || '';

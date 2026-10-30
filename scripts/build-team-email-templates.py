@@ -33,7 +33,7 @@ MEMBERS = [
         ),
         "step2": (
             "Expect a call or email from me within 1 business day. "
-            "Want to skip the wait? Book a free 30-minute intro call using the button below."
+            "Want to skip the wait? Book a 30-minute intro call using the button below."
         ),
         "step3": (
             "Once we connect, we'll start with a clear picture of your goals and build a strategy "
@@ -64,7 +64,7 @@ MEMBERS = [
         ),
         "step2": (
             "You'll hear from me within 1 business day. "
-            "Prefer to get on the calendar right away? Use the button below to book a free intro meeting."
+            "Prefer to get on the calendar right away? Use the button below to book an intro meeting."
         ),
         "step3": (
             "When we connect, we'll talk through your goals, your current marketing, and where the biggest "
@@ -95,7 +95,7 @@ MEMBERS = [
         ),
         "step2": (
             "Expect to hear from me within 1 business day. "
-            "Want to get ahead of the queue? Book a free 30-minute intro call below."
+            "Want to get ahead of the queue? Book a 30-minute intro call below."
         ),
         "step3": (
             "When we connect, we'll dig into your brand, your audience, and your goals — "

@@ -228,7 +228,7 @@ def organization(full: bool, lang: str, with_reviews: bool = False) -> dict:
     if not full:
         return org
     org.update({
-        "description": "YB Marketing has been based in Yakima, Washington since 2004 and helps businesses across the country with marketing, website design, SEO, advertising, and branding.",
+        "description": "YB Marketing is a fully remote team that helps businesses across the country with marketing, website design, SEO, advertising, and branding.",
         "foundingDate": "2004",
         "foundingLocation": {"@type": "Place", "name": "Yakima, Washington"},
         "contactPoint": [{

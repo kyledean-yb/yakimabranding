@@ -403,7 +403,7 @@ section{{padding:88px 0}}
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px" class="why-tiles-grid">
       <div style="background:#fff;border-radius:var(--r-lg);padding:28px;border:1px solid var(--line);box-shadow:0 2px 8px rgba(22,32,58,.05)">
         <h3 style="font-family:var(--font-display);font-weight:800;font-size:16px;color:var(--ink);margin:0 0 12px;text-transform:uppercase;letter-spacing:.04em">SEO Site Audit</h3>
-        <p style="color:var(--fg2);font-size:14px;line-height:1.65;margin:0">We start with a free review of your rankings, technical health, content gaps, and local visibility.</p>
+        <p style="color:var(--fg2);font-size:14px;line-height:1.65;margin:0">We start with a review of your rankings, technical health, content gaps, and local visibility.</p>
       </div>
       <div style="background:#fff;border-radius:var(--r-lg);padding:28px;border:1px solid var(--line);box-shadow:0 2px 8px rgba(22,32,58,.05)">
         <h3 style="font-family:var(--font-display);font-weight:800;font-size:16px;color:var(--ink);margin:0 0 12px;text-transform:uppercase;letter-spacing:.04em">Keyword &amp; Content Plan</h3>
@@ -456,7 +456,7 @@ section{{padding:88px 0}}
   <div class="container svc-cta-inner">
     <span class="eyebrow" style="color:var(--yb-cyan)">Ready to Grow?</span>
     <h2 style="margin:14px 0 14px;color:#fff;font-size:clamp(1.8rem,2.6vw,2.4rem)">Let&rsquo;s Talk About Your Goals</h2>
-    <p style="color:var(--fg2-on-dark);font-size:16px;margin-bottom:32px">Schedule a free consultation and let our team build a custom strategy for your business.</p>
+    <p style="color:var(--fg2-on-dark);font-size:16px;margin-bottom:32px">Schedule a meeting and let our team build a custom strategy for your business.</p>
     <div class="svc-cta-btns">
       <a href="{p}contact.html" class="btn btn-grad btn-lg">Get Started Today</a>
       <a href="tel:5099019735" class="btn btn-ghost-white btn-lg">

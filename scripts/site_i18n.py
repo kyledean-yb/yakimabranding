@@ -58,8 +58,8 @@ UI_ES: dict[str, str] = {
         "Agencia de marketing digital galardonada que ayuda a las empresas a crecer "
         "mediante branding estratégico, SEO y soluciones digitales integrales."
     ),
-    "YB Marketing has been based in Yakima, Washington since 2004. Today we help businesses across the country with marketing, website design, SEO, advertising, and branding.": (
-        "YB Marketing tiene su sede en Yakima, Washington, desde 2004. Hoy ayudamos a empresas de todo el país con marketing, diseño web, SEO, publicidad y branding."
+    "YB Marketing is a fully remote team. We help businesses across the country with marketing, website design, SEO, advertising, and branding.": (
+        "YB Marketing es un equipo totalmente remoto. Ayudamos a empresas de todo el país con marketing, diseño web, SEO, publicidad y branding."
     ),
     "Clients nationwide": "Clientes en todo el país",
     "YB Marketing Insights": "Ideas de YB Marketing",

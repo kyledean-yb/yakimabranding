@@ -30,14 +30,14 @@ SERVICES = [
         "step2_title": "We Reach Out Within 1 Business Day",
         "step2": (
             "Expect a call or email from our team within 1 business day. "
-            "Want to skip the wait? Book a free intro call and we'll start with a quick look at your site."
+            "Want to skip the wait? Book an intro call and we'll start with a quick look at your site."
         ),
         "step3_title": "We Build Your SEO Roadmap",
         "step3": (
             "Once we connect, we'll audit your website and search presence — then map out a strategy "
             "tailored to your market, whether that's local SEO, technical fixes, or content that ranks."
         ),
-        "cta": "Book a Free SEO Consultation",
+        "cta": "Schedule a Meeting",
     },
     {
         "slug": "google-ads",
@@ -59,7 +59,7 @@ SERVICES = [
         "step2_title": "We Reach Out Within 1 Business Day",
         "step2": (
             "Expect a call or email from our team within 1 business day. "
-            "Prefer to get on the calendar right away? Book a free intro call using the button below."
+            "Prefer to get on the calendar right away? Book an intro call using the button below."
         ),
         "step3_title": "We Build Your Campaign Strategy",
         "step3": (
@@ -88,7 +88,7 @@ SERVICES = [
         "step2_title": "We Reach Out Within 1 Business Day",
         "step2": (
             "Expect a call or email from our team within 1 business day. "
-            "Want to talk sooner? Book a free intro call and tell us about your vision."
+            "Want to talk sooner? Book an intro call and tell us about your vision."
         ),
         "step3_title": "We Plan Your Website",
         "step3": (
@@ -117,7 +117,7 @@ SERVICES = [
         "step2_title": "We Reach Out Within 1 Business Day",
         "step2": (
             "Expect a call or email from our team within 1 business day. "
-            "Want to get ahead of the queue? Book a free intro call below."
+            "Want to get ahead of the queue? Book an intro call below."
         ),
         "step3_title": "We Build Your Content Plan",
         "step3": (
@@ -146,7 +146,7 @@ SERVICES = [
         "step2_title": "We Reach Out Within 1 Business Day",
         "step2": (
             "Expect a call or email from our team within 1 business day. "
-            "Ready to talk through your vision? Book a free intro call using the button below."
+            "Ready to talk through your vision? Book an intro call using the button below."
         ),
         "step3_title": "We Shape Your Brand Direction",
         "step3": (
@@ -175,7 +175,7 @@ SERVICES = [
         "step2_title": "We Reach Out Within 1 Business Day",
         "step2": (
             "Expect a call or email from our team within 1 business day. "
-            "Want to skip the wait? Book a free intro call and tell us what you're working on."
+            "Want to skip the wait? Book an intro call and tell us what you're working on."
         ),
         "step3_title": "We Build Your Content Strategy",
         "step3": (
@@ -204,14 +204,14 @@ SERVICES = [
         "step2_title": "We Reach Out Within 1 Business Day",
         "step2": (
             "Expect a call or email from our team within 1 business day. "
-            "Have a launch date coming up? Book a free intro call to get the ball rolling."
+            "Have a launch date coming up? Book an intro call to get the ball rolling."
         ),
         "step3_title": "We Plan Your Release",
         "step3": (
             "Once we connect, we'll discuss your story, target outlets, and timeline — then outline "
             "how we'll craft and distribute a release that gets noticed."
         ),
-        "cta": "Book a Free Consultation",
+        "cta": "Schedule a Meeting",
     },
 ]
 

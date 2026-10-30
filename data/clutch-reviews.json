@@ -1,0 +1,392 @@
+[
+  {
+    "name": "Kate McKenna",
+    "title": "Executive Director",
+    "company": "Ballpark General Improvement District",
+    "city": "Denver",
+    "state": "CO",
+    "quote": "The deliverables exceeded our expectations.",
+    "services": [
+      "Branding",
+      "SEO",
+      "Social Media"
+    ],
+    "via_encite": false
+  },
+  {
+    "name": "Jade Cutler",
+    "title": "Social Media & E-Commerce Manager",
+    "company": "The Focus Group of Companies",
+    "city": "Denver",
+    "state": "CO",
+    "quote": "Their communication style and depth of knowledge is unmatched.",
+    "services": [
+      "SEO",
+      "Google Ads"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "Ken Rayment",
+    "title": "Committee Chair",
+    "company": "NOCO Manufacturing Sector Partnership",
+    "city": "Loveland",
+    "state": "CO",
+    "quote": "They're the first agency I've worked with that acts as a partner and invests in our value as an individual company.",
+    "services": [
+      "Video Production"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "Michelle Greenberg",
+    "title": "Director of Medical Education & Marketing",
+    "company": "IlluminOss Medical",
+    "city": "East Providence",
+    "state": "RI",
+    "quote": "They're always responsive and on top of tasks and requests, no matter what time of day.",
+    "services": [
+      "Social Media",
+      "Google Ads",
+      "Email Marketing"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "Katie Vaughan",
+    "title": "Director of Operations",
+    "company": "Enterprise Coworking",
+    "city": "Denver",
+    "state": "CO",
+    "quote": "They respond quickly with rational and helpful answers, provide timely results, and stay on top of problems.",
+    "services": [
+      "Google Ads"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "Anonymous Executive",
+    "title": "Executive",
+    "company": "Technical College of the Rockies",
+    "city": "Delta",
+    "state": "CO",
+    "quote": "Top tier company to work with.",
+    "services": [
+      "Advertising",
+      "Social Media",
+      "Content Marketing"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "Kristine Weiszbrod",
+    "title": "Career Advisor & Student Services",
+    "company": "Technical College of the Rockies",
+    "city": "Delta",
+    "state": "CO",
+    "quote": "We are very happy and enjoy working with them.",
+    "services": [
+      "Advertising",
+      "Social Media"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "Devin Saunders",
+    "title": "Executive Director",
+    "company": "Denver North Business Association",
+    "city": "Denver",
+    "state": "CO",
+    "quote": "Their team was very responsive and candid.",
+    "services": [
+      "Advertising",
+      "Graphic Design"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "Sophie Wright",
+    "title": "Events & Communication Manager",
+    "company": "Nonprofit Organization",
+    "city": "Manhattan",
+    "state": "NY",
+    "quote": "They understood our organization and audience very well.",
+    "services": [
+      "Branding",
+      "Email Marketing",
+      "Social Media"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "Kadie Whitten",
+    "title": "Inventory and Logistics Manager",
+    "company": "Beauty & Personal Care Firm",
+    "city": "Denver",
+    "state": "CO",
+    "quote": "The quality of their service distinguishes them from other companies.",
+    "services": [
+      "Social Media"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "Molly Lightner",
+    "title": "Nominations Manager",
+    "company": "Sequel (Premier Stallion Farm)",
+    "city": "Hudson",
+    "state": "NY",
+    "quote": "Their level of professionalism and focus distinguishes them from other providers.",
+    "services": [
+      "Advertising",
+      "Branding",
+      "Graphic Design"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "Amy Parsons",
+    "title": "CEO",
+    "company": "Mozzafiato.com",
+    "city": "Denver",
+    "state": "CO",
+    "quote": "They've worked with a lot of other companies, and they brought all of those experiences to the table for our benefit.",
+    "services": [
+      "Email Marketing"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "Allen Golden",
+    "title": "Executive Director",
+    "company": "Technical College of the Rockies",
+    "city": "Delta",
+    "state": "CO",
+    "quote": "They're practically geniuses when it comes to branding, marketing, and creativity.",
+    "services": [
+      "Branding",
+      "Digital Strategy"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "Erik Olson",
+    "title": "Principal",
+    "company": "Open Market (Insurance)",
+    "city": "Fort Collins",
+    "state": "CO",
+    "quote": "Their kindness, integrity, and communicative nature have really stood out.",
+    "services": [
+      "Web Development"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "John Lawson",
+    "title": "Multimedia Graphic Design Instructor",
+    "company": "Pickens Technical College",
+    "city": "Aurora",
+    "state": "CO",
+    "quote": "Their knowledge and customer service is fantastic.",
+    "services": [
+      "Branding",
+      "Social Media",
+      "Video Production"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "Anonymous CEO",
+    "title": "Chief Executive Officer",
+    "company": "Hydration Beverage Company",
+    "city": "Lexington",
+    "state": "KY",
+    "quote": "We were really impressed. We've been very satisfied with these guys.",
+    "services": [
+      "Advertising",
+      "Social Media"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "Jenise Rosa",
+    "title": "Career Advisor",
+    "company": "Pickens Technical College",
+    "city": "Aurora",
+    "state": "CO",
+    "quote": "They are quick problem solvers, and easy to communicate with.",
+    "services": [
+      "Advertising",
+      "Video Production"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "Margaret Linn-Addison",
+    "title": "Assistant Vice President Alumni Engagement",
+    "company": "Regis University",
+    "city": "Denver",
+    "state": "CO",
+    "quote": "They have great ideas, and it's great to be able to rely on them.",
+    "services": [
+      "Graphic Design"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "Séamus Blaney",
+    "title": "President",
+    "company": "Onion Print Inc.",
+    "city": "Thornton",
+    "state": "CO",
+    "quote": "They deliver at a level that would make any brand proud.",
+    "services": [
+      "Graphic Design"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "Adam Labadie",
+    "title": "Director of VMI",
+    "company": "MFCP (Industrial Distribution)",
+    "city": "Denver",
+    "state": "CO",
+    "quote": "Encite was very easy to work with, and we found them to be enthusiastic and dedicated.",
+    "services": [
+      "Advertising",
+      "Branding"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "Anonymous Chief Growth Officer",
+    "title": "Chief Growth Officer",
+    "company": "Management Consulting Company",
+    "city": "Denver",
+    "state": "CO",
+    "quote": "Encite's extensive and in-depth knowledge of marketing practices stands out most to us.",
+    "services": [
+      "Branding"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "James Iacino",
+    "title": "Executive Chairman",
+    "company": "Seattle Fish Company",
+    "city": "Denver",
+    "state": "CO",
+    "quote": "They understand the market and use that expertise to fulfill their customer's vision.",
+    "services": [
+      "Web Development",
+      "Branding"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "Anonymous President",
+    "title": "President",
+    "company": "Investment Group",
+    "city": "Parker",
+    "state": "CO",
+    "quote": "Encite was very responsive and always on time.",
+    "services": [
+      "Branding"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "Anonymous Owner",
+    "title": "Owner",
+    "company": "Mediation Consulting Company",
+    "city": "Denver",
+    "state": "CO",
+    "quote": "Their work style is attentive but easygoing.",
+    "services": [
+      "Branding",
+      "Web Development",
+      "SEO"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "Ben Reder",
+    "title": "General Manager",
+    "company": "Ireland's Finest Inc.",
+    "city": "Denver",
+    "state": "CO",
+    "quote": "We're incredibly happy with the work they continue to deliver.",
+    "services": [
+      "Social Media",
+      "Advertising"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "Greg Phelan",
+    "title": "COO",
+    "company": "incredibles (Medically Correct, LLC)",
+    "city": "Denver",
+    "state": "CO",
+    "quote": "They made the experience feel personal. I felt like I had a true partner.",
+    "services": [
+      "Branding"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "Eric Ward",
+    "title": "Assistant Director",
+    "company": "Pickens Technical College",
+    "city": "Aurora",
+    "state": "CO",
+    "quote": "We view them as an extension of our own team.",
+    "services": [
+      "Advertising",
+      "Social Media",
+      "Content Marketing",
+      "Email Marketing"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "Anonymous Executive",
+    "title": "Executive",
+    "company": "Help On Demand",
+    "city": "Denver",
+    "state": "CO",
+    "quote": "We were impressed with their responsiveness and the quality of the work they delivered.",
+    "services": [
+      "Branding",
+      "Social Media",
+      "Email Marketing",
+      "Video Production"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "Kristi Pohly",
+    "title": "Owner",
+    "company": "Fleur Decor",
+    "city": "Denver",
+    "state": "CO",
+    "quote": "Excellent quality. They delivered exactly what we wanted.",
+    "services": [
+      "Web Development"
+    ],
+    "via_encite": true
+  },
+  {
+    "name": "Brian Arnold",
+    "title": "Owner",
+    "company": "Brian Arnold Real Estate",
+    "city": "Denver",
+    "state": "CO",
+    "quote": "The workflow was efficient and responsive.",
+    "services": [
+      "Branding",
+      "Web Development"
+    ],
+    "via_encite": true
+  }
+]

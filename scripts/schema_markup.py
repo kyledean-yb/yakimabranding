@@ -527,7 +527,7 @@ def schemas_for_rel_path(rel: str) -> tuple[list[dict], str, str]:
                 "@type": "ContactPage",
                 "name": "Contact YB Marketing",
                 "url": f"{SITE}/contact",
-                "description": "Get in touch with YB Marketing. Schedule a free 30-minute consultation or send us a message. We serve businesses across the country.",
+                "description": "Get in touch with YB Marketing. Schedule a 30-minute consultation or send us a message. We serve businesses across the country.",
                 "breadcrumb": breadcrumb(
                     [(1, "Home", SITE), (2, "Contact", f"{SITE}/contact")]
                 ),

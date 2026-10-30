@@ -214,7 +214,7 @@ section{{padding:88px 0}}
     <div class="svc-hero-text">
       <span class="eyebrow" style="color:var(--yb-cyan)">CRM &amp; Automation</span>
       <h1>Customer Growth &amp;<br><span style="background:linear-gradient(135deg,var(--yb-cyan),var(--yb-blue));-webkit-background-clip:text;background-clip:text;color:transparent">Communication Tool</span></h1>
-      <p class="hero-lead">Organize every lead, centralize every conversation, and automate the follow-up that turns interest into customers — all in one tool.</p>
+      <p class="hero-lead">Organize every lead, centralize every conversation, and automate the follow-up that turns interest into customers, all in one tool.</p>
       <div class="svc-hero-actions">
         <a href="/contact" class="btn btn-grad btn-lg">Get Started Today
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -309,7 +309,7 @@ section{{padding:88px 0}}
       <div class="feat-card">
         <div class="feat-ic" style="background:var(--wash-blue);color:var(--yb-blue)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
         <div class="feat-title">Centralized Inbox</div>
-        <div class="feat-desc">SMS, email, Facebook, Instagram DMs, and live chat — all in one feed.</div>
+        <div class="feat-desc">SMS, email, Facebook, Instagram DMs, and live chat, all in one feed.</div>
       </div>
       <div class="feat-card">
         <div class="feat-ic" style="background:var(--wash-blue);color:var(--yb-blue)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
@@ -384,7 +384,7 @@ section{{padding:88px 0}}
     </div>
     <div class="faq-list">
       <div class="faq-item"><button class="faq-q" type="button" style="--faq-ac:var(--yb-blue)">What is YB Marketing's Customer Growth &amp; Communication Tool?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">It is our all-in-one platform for managing leads, conversations, follow-up, and customer engagement. In industry terms, it is a CRM (customer relationship management) system.</div></div></div>
-      <div class="faq-item"><button class="faq-q" type="button" style="--faq-ac:var(--yb-blue)">What is a CRM?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">A CRM helps you organize leads, track conversations, and follow up so fewer opportunities fall through the cracks. Our Customer Growth &amp; Communication Tool is that CRM — plus messaging, automation, scheduling, and more in one place.</div></div></div>
+      <div class="faq-item"><button class="faq-q" type="button" style="--faq-ac:var(--yb-blue)">What is a CRM?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">A CRM helps you organize leads, track conversations, and follow up so fewer opportunities fall through the cracks. Our Customer Growth &amp; Communication Tool is that CRM, plus messaging, automation, scheduling, and more in one place.</div></div></div>
       <div class="faq-item"><button class="faq-q" type="button" style="--faq-ac:var(--yb-blue)">Who is this tool for?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">It is built for local businesses and one-person teams that need a clear place for contacts, pipelines, tasks, and marketing tools without enterprise complexity.</div></div></div>
       <div class="faq-item"><button class="faq-q" type="button" style="--faq-ac:var(--yb-blue)">Can you help set up the tool?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. We help configure your pipeline, import contacts, connect forms and ads, and train your team so the system matches how you actually sell.</div></div></div>
       <div class="faq-item"><button class="faq-q" type="button" style="--faq-ac:var(--yb-blue)">Does it work with our website and ads?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. We can connect form fills, call tracking, and ad leads so new inquiries land in your Customer Growth &amp; Communication Tool with the right context.</div></div></div>

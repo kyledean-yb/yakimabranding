@@ -62,7 +62,7 @@ def schedule_intro_header_html(compact: bool = False) -> str:
             <div style="font-weight:700;font-size:17px;color:var(--ink);margin-bottom:6px">Introduction Meeting</div>
             <div style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--fg3);background:#fff;border-radius:var(--r-pill);padding:5px 12px;border:1px solid var(--line)">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              30 min · Free
+              30 min
             </div>
             <p style="font-size:13px;color:var(--fg2);margin-top:14px;line-height:1.6">An introduction meeting to learn more about your business, your goals, and how we can help you grow. No commitment required.</p>
           </div>"""
@@ -72,7 +72,7 @@ def schedule_intro_header_html(compact: bool = False) -> str:
           <div style="font-weight:700;font-size:18px;color:var(--ink);margin-bottom:6px">Introduction Meeting</div>
           <div style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--fg3);background:#fff;border-radius:var(--r-pill);padding:5px 12px;border:1px solid var(--line)">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            30 min · Free
+            30 min
           </div>
           <p style="font-size:13.5px;color:var(--fg2);margin-top:14px;line-height:1.6">An introduction meeting to learn more about your business, your goals, and how we can help you grow. No commitment required.</p>
         </div>"""
@@ -92,7 +92,7 @@ def thank_you_calendly_section_html(prefix: str = "") -> str:
     return f"""<section class="ty-calendly" id="book">
   <div class="container" style="text-align:center">
     <h2 style="font-size:clamp(1.6rem,2.4vw,2rem);margin:0 0 12px">Don't Want to Wait? Book a Meeting Now.</h2>
-    <p class="yb-lead" style="max-width:560px;margin:0 auto 36px">Schedule your free 30-minute introduction call directly — no forms, no back and forth.</p>
+    <p class="yb-lead" style="max-width:560px;margin:0 auto 36px">Schedule a 30-minute introduction call directly. No forms, no back and forth.</p>
     <div class="ty-calendly-card ty-calendly-card--schedule">
 {header}
 {grid}

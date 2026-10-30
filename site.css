@@ -1034,6 +1034,8 @@ a {
   list-style: none;
   display: grid;
   gap: 10px;
+  margin: 0;
+  padding: 0;
 }
 .footer-col a {
   color: var(--fg2-on-dark);

@@ -7,8 +7,8 @@ CASE_STUDIES = [
         "metaTitle": "Fortune 500 Multilingual Accessibility Remediation — YB Marketing",
         "hubTag": "Accessibility · Enterprise",
         "hubCategories": ["accessibility", "enterprise"],
-        "hubExcerpt": "Three domains, six languages — from audit inventory to shipped WCAG conformance without breaking brand or translations.",
-        "metaDescription": "How YB Marketing turned a Fortune 500 accessibility audit into shipped fixes across three domains and six languages — React, brand tokens, and translation pipeline included.",
+        "hubExcerpt": "Three domains and six languages, from audit inventory to shipped WCAG conformance without breaking brand or translations.",
+        "metaDescription": "How YB Marketing turned a Fortune 500 accessibility audit into shipped fixes across three domains and six languages, including React, brand tokens, and the translation pipeline.",
         "accent": "#2BC4F0",
         "accentWash": "var(--wash-cyan)",
         "hubPills": ["6 languages", "3 domains", "Multi-month"],
@@ -157,7 +157,7 @@ CASE_STUDIES = [
         "metaTitle": "130-Site WordPress Malware Remediation — YB Marketing",
         "hubTag": "WordPress · Security",
         "hubCategories": ["security", "wordpress"],
-        "hubExcerpt": "A stealth malware campaign hid from every scanner — until Google Ads suspensions exposed what 130 sites had in common.",
+        "hubExcerpt": "A stealth malware campaign hid from every scanner until Google Ads suspensions exposed what 130 sites had in common.",
         "metaDescription": "How YB Marketing cleaned a 130-site WordPress portfolio infected with ad-click-only malware, got Google Ads reinstated, and achieved zero reinfections in three months.",
         "accent": "#FF6B57",
         "accentWash": "var(--wash-coral)",
@@ -274,7 +274,7 @@ CASE_STUDIES = [
         "metaTitle": "Local Tire & Auto SEO Case Study — +613% Page 1 Growth | YB Marketing",
         "hubTag": "SEO · Local Search",
         "hubCategories": ["seo", "local"],
-        "hubExcerpt": "Central Washington tire and auto — organic search traffic up 46% year over year, search impressions up 243% at peak, and page-one keywords up 613% over three years.",
+        "hubExcerpt": "Central Washington tire and auto shop. Organic search traffic up 46% year over year, search impressions up 243% at peak, and page-one keywords up 613% over three years.",
         "metaDescription": "How YB Marketing grew organic search traffic 46% year over year, search impressions 243% at peak, and page-one keyword rankings 613% for a Central Washington tire and auto service provider.",
         "accent": "#25c28a",
         "accentWash": "var(--wash-mint)",
@@ -287,13 +287,13 @@ CASE_STUDIES = [
         "meta": [
             {"label": "Industry", "value": "Local automotive repair & tire services"},
             {"label": "Location", "value": "Central Washington"},
-            {"label": "Service", "value": "SEO — local search & organic growth"},
+            {"label": "Service", "value": "SEO for local search & organic growth"},
             {"label": "Engagement", "value": "~3 years"},
         ],
         "summary": [
-            "A multi-location tire and auto service business in Central Washington had built its reputation on repeat customers and word-of-mouth. Service quality was strong. Organic visibility was not — negligible page-one keyword coverage, and the website generated almost no independent lead flow.",
+            "A multi-location tire and auto service business in Central Washington had built its reputation on repeat customers and word-of-mouth. Service quality was strong. Organic visibility was not. Page-one keyword coverage was negligible, and the website generated almost no independent lead flow.",
             "As paid ad costs in the automotive category climbed, the client needed an owned channel: local searches like \"tire shop near me\" and \"brake repair [city]\" had to start finding them before a competitor did.",
-            "Over roughly three years, our team built a long-term local SEO program — technical fixes, service and location content, and monthly rank tracking across hundreds of terms. Annual organic search traffic rose 46% year over year, search impressions grew 243% at peak, and page-one keyword rankings rose more than sixfold.",
+            "Over roughly three years, our team built a long-term local SEO program covering technical fixes, service and location content, and monthly rank tracking across hundreds of terms. Annual organic search traffic rose 46% year over year, search impressions grew 243% at peak, and page-one keyword rankings rose more than sixfold.",
         ],
         "compareCard": {
             "heading": "2022 vs. 2025 snapshot",
@@ -311,7 +311,7 @@ CASE_STUDIES = [
                 "heading": "The Challenge",
                 "paragraphs": [
                     "Despite strong in-shop service, the business had almost no visibility in organic search. The site generated minimal independent lead flow, and the paid landscape in automotive services was getting more expensive quarter over quarter.",
-                    "High-intent local queries — flat tires, brake issues, same-day oil changes — were going to competitors who had invested in local SEO years earlier. The client needed a scalable, owned channel to reduce customer acquisition costs and capture demand when it was most urgent.",
+                    "High-intent local queries like flat tires, brake issues, and same-day oil changes were going to competitors who had invested in local SEO years earlier. The client needed a scalable, owned channel to reduce customer acquisition costs and capture demand when it was most urgent.",
                 ],
             },
             {
@@ -423,12 +423,12 @@ CASE_STUDIES = [
             {
                 "heading": "Why It Matters",
                 "paragraphs": [
-                    "For a local service business, page-one rankings translate directly into phone calls and store visits — not just traffic. Growing page-one rankings more than sixfold means the business now shows up for hundreds of the specific searches customers use when they have an urgent, high-intent need.",
-                    "That shift moved the business from relying on paid ads and referrals to owning a durable, compounding organic channel — one that keeps working after the campaign budget is spent.",
+                    "For a local service business, page-one rankings translate directly into phone calls and store visits, not just traffic. Growing page-one rankings more than sixfold means the business now shows up for hundreds of the specific searches customers use when they have an urgent, high-intent need.",
+                    "That shift moved the business from relying on paid ads and referrals to owning a durable, compounding organic channel that keeps working after the campaign budget is spent.",
                 ],
             },
         ],
-        "closingCta": 'Need local SEO that compounds instead of resetting every quarter? <a href="/contact">YB Marketing</a> builds long-term organic programs for service businesses — technical foundation, content expansion, and rank tracking included.',
+        "closingCta": 'Need local SEO that compounds instead of resetting every quarter? <a href="/contact">YB Marketing</a> builds long-term organic programs for service businesses, including technical foundation work, content expansion, and rank tracking.',
     },
     {
         "slug": "local-electrical-contractor-seo-growth",
@@ -436,7 +436,7 @@ CASE_STUDIES = [
         "metaTitle": "Local Electrical Contractor SEO Case Study — +112% Organic Traffic | YB Marketing",
         "hubTag": "SEO · Local Search",
         "hubCategories": ["seo", "local"],
-        "hubExcerpt": "Greater Bay Area electrical contractor — organic search traffic up 112% year over year, search impressions up 366% at peak, and page-one keywords up 204% in two years.",
+        "hubExcerpt": "Greater Bay Area electrical contractor. Organic search traffic up 112% year over year, search impressions up 366% at peak, and page-one keywords up 204% in two years.",
         "metaDescription": "How YB Marketing grew organic search traffic 112% year over year, search impressions 366% at peak, and page-one keyword rankings 204% for a Greater Bay Area electrical contractor.",
         "accent": "#3f6fd6",
         "accentWash": "var(--wash-blue)",
@@ -449,13 +449,13 @@ CASE_STUDIES = [
         "meta": [
             {"label": "Industry", "value": "Residential & commercial electrical services"},
             {"label": "Location", "value": "Greater Bay Area, CA"},
-            {"label": "Service", "value": "SEO — local search & lead generation"},
+            {"label": "Service", "value": "SEO for local search & lead generation"},
             {"label": "Engagement", "value": "~2 years"},
         ],
         "summary": [
-            "A growing electrical contracting business in the Greater Bay Area — serving both residential and commercial customers — had a functional website but almost no organic search visibility outside of its own brand name. New customer acquisition relied almost entirely on paid advertising and subcontractor referrals.",
+            "A growing electrical contracting business in the Greater Bay Area, serving both residential and commercial customers, had a functional website but almost no organic search visibility outside of its own brand name. New customer acquisition relied almost entirely on paid advertising and subcontractor referrals.",
             "As costs rose and lead volume swung month to month, the client needed a repeatable channel that could generate qualified calls for high-value work: panel upgrades, rewiring, EV charger installation, and emergency electrical repair.",
-            "Over roughly two years, we built a full-funnel local SEO program — service and location pages, local authority signals, and monthly rank tracking. Annual organic search traffic rose 112% year over year, search impressions grew 366% at peak, and page-one keyword coverage grew 204%.",
+            "Over roughly two years, we built a full-funnel local SEO program with service and location pages, local authority signals, and monthly rank tracking. Annual organic search traffic rose 112% year over year, search impressions grew 366% at peak, and page-one keyword coverage grew 204%.",
         ],
         "compareCard": {
             "heading": "2024 vs. 2025 snapshot",
@@ -472,8 +472,8 @@ CASE_STUDIES = [
             {
                 "heading": "The Challenge",
                 "paragraphs": [
-                    "The business had a solid reputation and busy crews, but organic search was effectively limited to branded queries. Paid ads and referrals drove most new work — both with rising costs and uneven volume.",
-                    "The client needed a lower-cost, repeatable channel that could surface the business for urgent, high-intent searches — panel upgrades, commercial wiring, emergency repair — without relying on the ad budget alone.",
+                    "The business had a solid reputation and busy crews, but organic search was effectively limited to branded queries. Paid ads and referrals drove most new work, and both came with rising costs and uneven volume.",
+                    "The client needed a lower-cost, repeatable channel that could surface the business for urgent, high-intent searches like panel upgrades, commercial wiring, and emergency repair without relying on the ad budget alone.",
                 ],
             },
             {
@@ -557,7 +557,7 @@ CASE_STUDIES = [
             {
                 "heading": "Keyword Rankings",
                 "paragraphs": [
-                    "Page 1 keyword rankings grew 204% since tracking began, with the client also establishing a meaningful presence in emerging AI-powered search placements — a category that didn't exist for this business two years ago.",
+                    "Page 1 keyword rankings grew 204% since tracking began, with the client also establishing a meaningful presence in emerging AI-powered search placements, a category that didn't exist for this business two years ago.",
                 ],
                 "chart": {
                     "type": "growth_area",
@@ -596,11 +596,11 @@ CASE_STUDIES = [
                 "heading": "Why It Matters",
                 "paragraphs": [
                     "For a contractor whose business depends on a steady pipeline of new service calls, growing organic visibility is the difference between constantly buying traffic and owning a channel that compounds over time.",
-                    "The impression and organic traffic growth map directly to more qualified discovery — the searches that turn into phone calls and quote requests.",
+                    "The impression and organic traffic growth map directly to more qualified discovery, meaning the searches that turn into phone calls and quote requests.",
                 ],
             },
         ],
-        "closingCta": 'Need local SEO that turns search visibility into service calls? <a href="/contact">YB Marketing</a> builds programs for contractors — service pages, map-pack authority, and rank tracking included.',
+        "closingCta": 'Need local SEO that turns search visibility into service calls? <a href="/contact">YB Marketing</a> builds programs for contractors, including service pages, map-pack authority, and rank tracking.',
     },
     {
         "slug": "local-refrigeration-services-seo-growth",
@@ -608,7 +608,7 @@ CASE_STUDIES = [
         "metaTitle": "Local Refrigeration SEO Case Study — +2,900% Page 1 Growth | YB Marketing",
         "hubTag": "SEO · Local Search",
         "hubCategories": ["seo", "local"],
-        "hubExcerpt": "Central Washington industrial refrigeration — page-one keywords up 2,900%, organic traffic doubled in seven months, and top-three rankings up 57% in the past year.",
+        "hubExcerpt": "Central Washington industrial refrigeration contractor. Page-one keywords up 2,900%, organic traffic doubled in seven months, and top-three rankings up 57% in the past year.",
         "metaDescription": "How YB Marketing grew page-one keyword rankings 2,900%, doubled organic traffic in seven months, and lifted top-three rankings 57% for a Central Washington industrial refrigeration contractor.",
         "accent": "#7b5ea7",
         "accentWash": "var(--wash-violet)",
@@ -621,12 +621,12 @@ CASE_STUDIES = [
         "meta": [
             {"label": "Industry", "value": "Industrial & commercial refrigeration"},
             {"label": "Location", "value": "Central Washington"},
-            {"label": "Service", "value": "SEO — local search & lead generation"},
+            {"label": "Service", "value": "SEO for local search & lead generation"},
             {"label": "Engagement", "value": "~2.5 years"},
         ],
         "summary": [
-            "An industrial and commercial refrigeration contractor in Central Washington — serving restaurants, grocery, agriculture, and cold-storage clients — had almost no organic search presence when the engagement began.",
-            "In a specialized B2B category with high-value contracts and long sales cycles, the business needed visibility for technical, service, and emergency-repair searches across an entire regional service area — not just its home city.",
+            "An industrial and commercial refrigeration contractor in Central Washington, serving restaurants, grocery, agriculture, and cold-storage clients, had almost no organic search presence when the engagement began.",
+            "In a specialized B2B category with high-value contracts and long sales cycles, the business needed visibility for technical, service, and emergency-repair searches across an entire regional service area, not just its home city.",
             "Over roughly two and a half years, we built a long-horizon SEO program with service, equipment, and location pages across dozens of markets. Page-one keyword rankings grew 2,900%, organic traffic doubled within seven months of the traffic program launch, and top-three rankings rose 57% in the past year alone.",
         ],
         "compareCard": {
@@ -645,7 +645,7 @@ CASE_STUDIES = [
                 "heading": "The Challenge",
                 "paragraphs": [
                     "The business had strong technical capability and long-standing client relationships, but organic search was effectively absent outside branded queries. High-value commercial and industrial work was difficult to fill consistently without leaning on referrals and expensive demand-generation channels.",
-                    "The client needed to show up across a wide regional footprint — for walk-in cooler repair, ammonia refrigeration service, emergency breakdowns, and equipment-specific searches in market after market.",
+                    "The client needed to show up across a wide regional footprint for walk-in cooler repair, ammonia refrigeration service, emergency breakdowns, and equipment-specific searches in market after market.",
                 ],
             },
             {
@@ -663,7 +663,7 @@ CASE_STUDIES = [
             {
                 "heading": "Keyword Rankings",
                 "paragraphs": [
-                    "Page-one keyword rankings grew 2,900% since tracking began — one of the steepest ranking growth curves in our portfolio. Top-three rankings, which only became a meaningful category in 2025, have continued to grow 57% over the past year even as the overall keyword footprint matured.",
+                    "Page-one keyword rankings grew 2,900% since tracking began, one of the steepest ranking growth curves in our portfolio. Top-three rankings, which only became a meaningful category in 2025, have continued to grow 57% over the past year even as the overall keyword footprint matured.",
                 ],
                 "chart": {
                     "type": "growth_area",
@@ -711,7 +711,7 @@ CASE_STUDIES = [
             {
                 "heading": "Organic Traffic Growth",
                 "paragraphs": [
-                    "Traffic tracking began in mid-2025. In just seven months, organic traffic doubled — with a peak six-month stretch reaching 135% growth before settling into a strong, sustained baseline nearly 2× the starting point.",
+                    "Traffic tracking began in mid-2025. In just seven months, organic traffic doubled, with a peak six-month stretch reaching 135% growth before settling into a strong, sustained baseline nearly 2× the starting point.",
                 ],
                 "chart": {
                     "type": "area",
@@ -737,11 +737,11 @@ CASE_STUDIES = [
                 "heading": "Why It Matters",
                 "paragraphs": [
                     "For a technical B2B service business with a large regional footprint, a 2,900% increase in page-one visibility means the business now competes for demand across an entire multi-market territory instead of a single home base.",
-                    "Combined with organic traffic doubling in under a year, this shift builds a compounding, owned pipeline of qualified commercial and industrial discovery — the searches that precede high-value service contracts.",
+                    "Combined with organic traffic doubling in under a year, this shift builds a compounding, owned pipeline of qualified commercial and industrial discovery, the searches that precede high-value service contracts.",
                 ],
             },
         ],
-        "closingCta": 'Need local SEO across a multi-market service territory? <a href="/contact">YB Marketing</a> builds long-horizon programs for technical contractors — service pages, regional authority, and rank tracking included.',
+        "closingCta": 'Need local SEO across a multi-market service territory? <a href="/contact">YB Marketing</a> builds long-horizon programs for technical contractors, including service pages, regional authority, and rank tracking.',
     },
     {
         "slug": "roofing-contractor-inbound-marketing",

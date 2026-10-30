@@ -226,7 +226,7 @@ a{{color:inherit;text-decoration:none}}
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
         </div>
         <h3>We Build Your Custom Strategy</h3>
-        <p>Once we connect, we'll start with a free audit of your website and marketing channels — and build a strategy tailored to your business and goals.</p>
+        <p>Once we connect, we'll start with a review of your website and marketing channels — and build a strategy tailored to your business and goals.</p>
       </div>
     </div>
   </div>

@@ -123,7 +123,7 @@ def member_calendly_section(member: dict) -> str:
     return f"""<section class="ty-calendly" id="book">
   <div class="container" style="text-align:center">
     <h2 style="font-size:clamp(1.6rem,2.4vw,2rem);margin:0 0 12px">Don't Want to Wait? Book a Meeting with {short}.</h2>
-    <p class="yb-lead" style="max-width:560px;margin:0 auto 36px">Schedule your free 30-minute introduction call directly — no forms, no back and forth.</p>
+    <p class="yb-lead" style="max-width:560px;margin:0 auto 36px">Schedule a 30-minute introduction call directly. No forms, no back and forth.</p>
     <div class="ty-calendly-card ty-calendly-card--member">
       <div class="ty-member-calendly-intro">
         <img src="{photo}" alt="{name}" class="ty-member-calendly-photo" width="88" height="88" loading="lazy">
@@ -131,7 +131,7 @@ def member_calendly_section(member: dict) -> str:
         <div class="ty-member-calendly-title">Introduction Meeting</div>
         <div class="ty-member-calendly-duration">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          30 min · Free
+          30 min
         </div>
         <p class="ty-member-calendly-desc">Book time to discuss your business and how YB Marketing can help you grow.</p>
       </div>
@@ -353,7 +353,7 @@ a{{color:inherit;text-decoration:none}}
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
         </div>
         <h3>We Build Your Custom Strategy</h3>
-        <p>Once we connect, we'll start with a free audit of your website and marketing channels — and build a strategy tailored to your business and goals.</p>
+        <p>Once we connect, we'll start with a review of your website and marketing channels — and build a strategy tailored to your business and goals.</p>
       </div>
     </div>
   </div>

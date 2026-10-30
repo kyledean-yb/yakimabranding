@@ -113,7 +113,7 @@ function ContactModal({ open, onClose }) {
             border: 'none', borderRadius: '50%', width: 32, height: 32, color: '#fff', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <Icon name="x" size={18} /></button>
           <div style={{ position: 'relative' }}>
-            <Eyebrow color="var(--yb-cyan)">Free Marketing Analysis</Eyebrow>
+            <Eyebrow color="var(--yb-cyan)">Get in Touch</Eyebrow>
             <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 24, margin: '10px 0 0' }}>Let's Get Started</h3>
           </div>
         </div>

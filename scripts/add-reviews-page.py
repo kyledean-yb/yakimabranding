@@ -46,6 +46,11 @@ REVIEWS = [
     ("PMI Supplies", "Great group to work with. Very knowledgeable and friendly."),
 ]
 
+import importlib.util as _ilu
+_spec = _ilu.spec_from_file_location("clutch_reviews", Path(__file__).resolve().parent / "clutch_reviews.py")
+CL = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(CL)
+
 AVATAR_BGS = ["var(--grad-brand)", "var(--grad-sunset)", "linear-gradient(135deg,#7c5cff,#2bc4f0)", "linear-gradient(135deg,#16b38a,#2bc4f0)", "linear-gradient(135deg,#f5a524,#ff6b6b)"]
 
 STAR = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>'
@@ -93,6 +98,19 @@ PAGE_CSS = """
 .rv-cta .container{position:relative;z-index:1}
 .rv-cta h2{color:#fff;margin:14px 0 14px}
 .rv-cta p{color:var(--fg2-on-dark);font-size:16px;max-width:560px;margin:0 auto 28px}
+.cl-section{background:#fff;padding:72px 0 64px}
+.cl-head{text-align:center;max-width:680px;margin:0 auto 26px}
+.cl-head h2{margin:14px 0 12px}
+.cl-head p{color:var(--fg2);font-size:16px;line-height:1.7;margin:0}
+.cl-locs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 auto 40px;max-width:820px}
+.cl-locs span{display:inline-flex;align-items:center;gap:6px;padding:6px 13px;border-radius:var(--r-pill);background:var(--wash-blue);color:var(--yb-blue);font-size:13px;font-weight:700}
+.cl-locs svg{width:13px;height:13px}
+.cl-group{font-family:var(--font-display);font-size:20px;color:var(--ink);margin:8px 0 18px}
+.cl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:36px}
+.rv-score-clutch{font-family:var(--font-display);font-weight:800;font-size:18px;color:#fff}
+.rv-score-clutch::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:#E62415;margin-right:6px;vertical-align:2px}
+@media(max-width:980px){.cl-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.cl-grid{grid-template-columns:1fr}}
 @media(max-width:640px){.rv-score{flex-direction:column;gap:10px;border-radius:var(--r-lg)}.rv-score-meta{align-items:center}}
 """
 
@@ -100,27 +118,33 @@ PAGE_CSS = """
 T = {
     "en": dict(
         title="Client Reviews | YB Marketing | 509-901-9735",
-        meta="Read what clients say about working with YB Marketing (Yakima Branding). 5.0 stars across 48 Google reviews for web design, SEO, branding, and marketing.",
+        meta="Read what clients say about working with YB Marketing (Yakima Branding). 5.0 stars across 48 Google reviews, plus verified Clutch reviews from Denver and across the country.",
         home="Home", about="About", crumb="Reviews",
         eyebrow="Client Reviews", h1a="Don't Take Our Word for It.", h1b="Take Our Clients'.",
-        lead="These are reviews from the business owners we work with every day, pulled from our Google Business Profile.",
+        lead="These are reviews from the business owners we work with, pulled from our Google Business Profile and Clutch.",
         stars="5 out of 5 stars", count="48 Google reviews", source="Google review", yelp="5 star rating",
         work="Work With Us", google="See Us on Google", all="Read All 48 Reviews on Google",
         cta_eyebrow="Your Turn", cta_h2="Ready to see what we can do for your business?",
-        cta_p="Book a free 30 minute intro call. We'll talk through your goals and where we'd start.",
+        cta_p="Book a 30 minute intro call. We'll talk through your goals and where we'd start.",
         cta_btn="Get Started Today",
+        cl_eyebrow="Verified on Clutch", cl_h2="What Clients Say on Clutch",
+        cl_lead="Clutch reviews include work from encite branding + marketing + creative in Denver, which joined YB Marketing in January 2025.",
+        cl_co="Colorado", cl_other="Other States", cl_btn="Read All Reviews on Clutch", cl_count="Clutch reviews",
     ),
     "es": dict(
         title="Reseñas de clientes | YB Marketing | 509-901-9735",
         meta="Lea lo que dicen los clientes sobre trabajar con YB Marketing (Yakima Branding). 5.0 estrellas en 48 reseñas de Google sobre diseño web, SEO, marca y marketing.",
         home="Inicio", about="Nosotros", crumb="Reseñas",
         eyebrow="Reseñas de clientes", h1a="No lo decimos nosotros.", h1b="Lo dicen nuestros clientes.",
-        lead="Estas son reseñas de los dueños de negocios con los que trabajamos todos los días, tomadas de nuestro perfil de Google. Las reseñas se muestran en su idioma original.",
+        lead="Estas son reseñas de los dueños de negocios con los que trabajamos todos los días, tomadas de nuestro perfil de Google y de Clutch. Las reseñas se muestran en su idioma original.",
         stars="5 de 5 estrellas", count="48 reseñas en Google", source="Reseña de Google", yelp="5 estrellas",
         work="Trabaje con nosotros", google="Véanos en Google", all="Lea las 48 reseñas en Google",
         cta_eyebrow="Su turno", cta_h2="¿Listo para ver lo que podemos hacer por su negocio?",
-        cta_p="Reserve una llamada introductoria gratuita de 30 minutos. Hablaremos de sus metas y de por dónde empezaríamos.",
+        cta_p="Reserve una llamada introductoria de 30 minutos. Hablaremos de sus metas y de por dónde empezaríamos.",
         cta_btn="Comience hoy",
+        cl_eyebrow="Verificadas en Clutch", cl_h2="Lo que dicen los clientes en Clutch",
+        cl_lead="Las reseñas de Clutch incluyen trabajos de encite branding + marketing + creative en Denver, que se unió a YB Marketing en enero de 2025. Las reseñas se muestran en su idioma original.",
+        cl_co="Colorado", cl_other="Otros estados", cl_btn="Lea todas las reseñas en Clutch", cl_count="reseñas en Clutch",
     ),
 }
 
@@ -141,6 +165,32 @@ def card(i: int, name: str, text: str, lang: str = "en") -> str:
         f'<div><span class="rv-name">{escape(name)}</span><span class="rv-source">{T[lang]["source"]}</span></div></div>\n'
         f"      </article>"
     )
+
+
+def clutch_section(lang: str) -> str:
+    from collections import Counter
+    L = T[lang]
+    co = [r for r in CL.REVIEWS if r["state"] == "CO"]
+    co.sort(key=lambda r: (r["city"] != "Denver", r["city"]))
+    other = [r for r in CL.REVIEWS if r["state"] != "CO"]
+    counts = Counter(f'{r["city"]}, {r["state"]}' for r in CL.REVIEWS)
+    chips = "".join(f"<span>{CL.PIN}{escape(k)} ({v})</span>" for k, v in counts.most_common())
+    grid = lambda rs: '<div class="cl-grid">' + "".join(CL.card(r, lang) for r in rs) + "</div>"
+    return f"""<section class="cl-section" id="clutch">
+  <div class="container">
+    <div class="cl-head">
+      <span class="eyebrow" style="color:#E62415">{L["cl_eyebrow"]}</span>
+      <h2>{L["cl_h2"]}</h2>
+      <p>{L["cl_lead"]}</p>
+    </div>
+    <div class="cl-locs">{chips}</div>
+    <h3 class="cl-group">{L["cl_co"]}</h3>
+    {grid(co)}
+    <h3 class="cl-group">{L["cl_other"]}</h3>
+    {grid(other)}
+    <div class="rv-more"><a class="btn btn-ghost" href="{CL.CLUTCH_URL}" target="_blank" rel="noopener">{L["cl_btn"]}</a></div>
+  </div>
+</section>"""
 
 
 def build(lang: str = "en") -> str:
@@ -174,7 +224,7 @@ def build(lang: str = "en") -> str:
 <meta property="og:title" content="{escape(title)}">
 <meta property="og:description" content="{escape(meta)}">
 <link rel="stylesheet" href="/colors_and_type.css">
-<style>{BASE_CSS}{PAGE_CSS}</style>
+<style>{BASE_CSS}{PAGE_CSS}{CL.CSS}</style>
 <link rel="stylesheet" href="/site.css">
 {render_schema_head(schemas)}
 {TRACKING_HEAD_BLOCK}
@@ -204,6 +254,13 @@ def build(lang: str = "en") -> str:
           <span class="rv-score-label"><span class="yelp-word">yelp</span> {L["yelp"]}</span>
         </div>
       </a>
+      <a class="rv-score" href="#clutch">
+        <span class="rv-score-num">{len(CL.REVIEWS)}</span>
+        <div class="rv-score-meta">
+          <span class="rv-score-clutch">Clutch</span>
+          <span class="rv-score-label">{L["cl_count"]}</span>
+        </div>
+      </a>
     </div>
     <div class="rv-hero-actions">
       <a href="{pre}/contact" class="btn btn-grad btn-lg">{L["work"]} {ARROW}</a>
@@ -222,7 +279,8 @@ def build(lang: str = "en") -> str:
   </div>
 </section>
 
-<div class="wave-div" style="background:#F6F8FC"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,50 C480,70 960,10 1440,30 L1440,70 L0,70 Z" fill="#1B2A4A"/></svg></div>
+{clutch_section(lang)}
+<div class="wave-div" style="background:#ffffff"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,50 C480,70 960,10 1440,30 L1440,70 L0,70 Z" fill="#1B2A4A"/></svg></div>
 <section class="rv-cta">
   <div class="container">
     <span class="eyebrow" style="color:var(--yb-cyan)">{L["cta_eyebrow"]}</span>

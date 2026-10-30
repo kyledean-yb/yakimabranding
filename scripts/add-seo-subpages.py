@@ -391,7 +391,7 @@ def build_page(page: dict) -> str:
     <div style="text-align:center;max-width:720px;margin:0 auto 40px">
       <span class="eyebrow" style="color:#2BC4F0">Get Started</span>
       <h2 style="margin:14px 0 12px">Book a Meeting or Send Us a Message</h2>
-      <p style="color:var(--fg2);font-size:16px;line-height:1.75">Grab a free 30 minute intro call, or send a note and we'll get back to you.</p>
+      <p style="color:var(--fg2);font-size:16px;line-height:1.75">Grab a 30 minute intro call, or send a note and we'll get back to you.</p>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start" class="why-main-grid">
       <div>

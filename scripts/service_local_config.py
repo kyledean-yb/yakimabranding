@@ -32,7 +32,7 @@ SERVICE_CONFIGS = {
         "why_eyebrow": "Why YB for Google Ads",
         "process_title": "How We Manage Your Campaigns",
         "cta_heading": "Let's Talk About Your Goals",
-        "cta_sub": "Schedule a free consultation and let our team build a custom Google Ads strategy for your business.",
+        "cta_sub": "Schedule a meeting and let our team build a custom Google Ads strategy for your business.",
         "layout": "google-ads",
         "included_partial": "ga-included.html",
         "perfmax_partial": "ga-perfmax-seovsppc.html",

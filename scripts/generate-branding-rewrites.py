@@ -248,12 +248,12 @@ HUBS = [
         "state": "WA",
         "localSignals": ["Yakima, WA", "Selah, WA", "Union Gap, WA", "Yakima Valley", "Central Washington"],
         "schema_locality": "Yakima",
-        "metaDescription": "YB Marketing is a full-service digital marketing agency for Yakima Valley businesses. SEO, Google Ads, web design, social media, and branding from a team based in Yakima.",
+        "metaDescription": "YB Marketing is a full-service digital marketing agency for Yakima Valley businesses. SEO, Google Ads, web design, social media, and branding for Yakima businesses.",
         "hero": {
             "eyebrow": "YB MARKETING · YAKIMA, WA",
             "headline": "Digital Marketing for the Yakima Valley",
             "accentHeadline": "From a Team That Lives Here",
-            "body": "We are based in Yakima and work with Valley businesses every day. Search, ads, websites, social, and branding with local context baked in, not bolted on.",
+            "body": "We work with Valley businesses every day. Search, ads, websites, social, and branding with local context baked in, not bolted on.",
         },
         "servicesSection": {
             "eyebrow": "SERVICES IN YAKIMA",
@@ -270,7 +270,7 @@ HUBS = [
         "credibility": {
             "heading": "A Yakima Team, Not a Distant Account",
             "paragraphs": [
-                "YB Marketing started in the Yakima Valley. We know the industries here: wine, ag, healthcare, trades, retail, and the small businesses that keep Main Street moving.",
+                "We work with a lot of Yakima Valley businesses. We know the industries here: wine, ag, healthcare, trades, retail, and the small businesses that keep Main Street moving.",
                 "When you call, you talk to people who understand your market. We have helped hundreds of local companies sharpen their brand and fix the digital basics that drive leads.",
             ],
         },

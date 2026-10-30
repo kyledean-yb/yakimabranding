@@ -39,6 +39,7 @@ YELP_URL = _rv.YELP_URL
 GOOGLE_REVIEWS_URL = _rv.GOOGLE_REVIEWS_URL
 REVIEWS = dict(_rv.REVIEWS)
 initials = _rv.initials
+CL = _load("clutch_reviews", "clutch_reviews.py")
 
 PHONE = "509-901-9735"
 
@@ -139,7 +140,7 @@ REGIONS = [
         "group": "Washington",
         "accent": "#159468",
         "h1": "Digital Marketing for <span>Central Washington</span>",
-        "lead": "We've worked with businesses in Yakima, Ellensburg, Wenatchee, and nearby towns since 2004.",
+        "lead": "We work with businesses in Yakima, Ellensburg, Wenatchee, and nearby towns.",
         "intro": [
             "In Central Washington, word of mouth still matters, and most people look you up on their phone before they call. We focus on what brings in calls here: showing up in Google Maps, a website that works well on a phone, and ads aimed only at the towns you serve.",
             "We work with everyone from family run shops to industrial companies that sell across the whole state. Many of our clients have been with us for years, and a lot of new ones come from their referrals.",
@@ -162,7 +163,7 @@ REGIONS = [
         "lead": "SEO, Google Ads, and websites for businesses in Spokane, the Tri-Cities, Walla Walla, and everywhere in between.",
         "intro": [
             "Eastern Washington businesses often serve a big area with a lot of driving in between. Your customers search by town, so your marketing has to show up town by town, not just in the city you're based in.",
-            "We started in Yakima and know the region well, and we've been doing this for local businesses since 2004.",
+            "We work with businesses across the region and know what it takes to show up in each town you serve.",
         ],
         "industries": ["Contractors & trades", "Healthcare", "Agriculture", "Wineries & tourism", "Professional services"],
         "cities": ["Spokane", "Spokane Valley", "Kennewick", "Pasco", "Richland", "Walla Walla", "Pullman", "Cheney"],
@@ -217,9 +218,9 @@ CITIES = [
         "slug": "yakima-wa", "name": "Yakima", "short": "Yakima", "state": "Washington", "region": "central-washington",
         "title": "Digital Marketing Agency Yakima WA | YB Marketing",
         "h1": "Digital Marketing for <span>Yakima</span> Businesses",
-        "lead": "SEO, Google Ads, websites, and branding from a team based right here in Yakima since 2004.",
+        "lead": "SEO, Google Ads, websites, and branding for Yakima businesses, with a sales rep here who can meet with you in person.",
         "intro": [
-            "Yakima is where we started, and a lot of our longest running clients are here. People here still ask friends for recommendations, but they check Google before they call. If you don't show up there, the referral often goes to someone else.",
+            "We work with a lot of businesses in Yakima. People here still ask friends for recommendations, but they check Google before they call. If you don't show up there, the referral often goes to someone else.",
             "We help Yakima businesses show up in Google Maps and search, build websites that work well on a phone, and run ads that only reach the towns you serve.",
         ],
         "cities": ["Yakima", "Selah", "Union Gap", "Moxee", "Terrace Heights", "Wapato", "Toppenish", "Sunnyside"],
@@ -1096,9 +1097,9 @@ def in_person_area(slug: str) -> Optional[dict]:
 
 
 def proof_pills(slug: str = "") -> str:
-    items = ["Since 2004", "No long sales pitch", "Talk to the people doing the work"]
+    items = ["No long sales pitch", "Talk to the people doing the work"]
     if in_person_area(slug):
-        items[1] = "Meet with us in person"
+        items.insert(0, "Meet with us in person")
     return '<div class="lc-proof">' + "".join(f"<span>{CHECK}{escape(i)}</span>" for i in items) + "</div>"
 
 
@@ -1308,6 +1309,13 @@ def region_page(r: dict) -> str:
     path = f"/locations/{r['slug']}"
     faqs = faqs_for(r)
     review_names = ["Josh DeBoer", "Heather Hellums", "Chris Hutchens"]
+    clutch = CL.for_location(short, r["state"], r["slug"]) if r["state"] == "Colorado" else []
+    if clutch:
+        reviews_html = f"<style>{CL.CSS}</style>\n" + "\n".join(CL.card(c) for c in clutch)
+        reviews_link = "/reviews#clutch"
+    else:
+        reviews_html = review_cards(review_names)
+        reviews_link = "/reviews"
     by_slug = {o["slug"]: o for o in REGIONS}
     if r in CITIES:
         parent = by_slug.get(r.get("region") or "")
@@ -1338,9 +1346,9 @@ def region_page(r: dict) -> str:
 <section class="lc-soft" style="padding:0 0 88px">
   <div class="container">
     <div class="lc-reviews">
-{review_cards(review_names)}
+{reviews_html}
     </div>
-    <p class="lc-reviews-link"><a href="/reviews">Read more client reviews {ARROW}</a></p>
+    <p class="lc-reviews-link"><a href="{reviews_link}">Read more client reviews {ARROW}</a></p>
 
     <div class="lc-intro" style="margin-top:72px">
       <div>
@@ -1429,7 +1437,7 @@ def region_page(r: dict) -> str:
 <section class="lc-book" id="book">
   <div class="container lc-book-grid">
     <div>
-      <span class="eyebrow" style="color:var(--yb-cyan)">Free Strategy Call</span>
+      <span class="eyebrow" style="color:var(--yb-cyan)">Schedule a Meeting</span>
       <h2>Book 30 minutes with our team</h2>
       <p>Tell us about your business, your goals, and what hasn't worked so far. We'll tell you honestly what we'd do in your shoes. It's a conversation, not a sales pitch.</p>
       <ul class="lc-book-list">
@@ -1512,7 +1520,7 @@ def hub_page() -> str:
   <div class="container">
     <span class="lc-pin">{PIN}Locations We Serve</span>
     <h1 class="visually-hidden">Locations We Serve</h1>
-    <p class="lc-hero-lead">We've helped businesses grow online since 2004. You work with the same small team the whole way through, and you can always reach the people doing the work.</p>
+    <p class="lc-hero-lead">You work with the same small team the whole way through, and you can always reach the people doing the work.</p>
     {proof_pills()}
   </div>
 </section>

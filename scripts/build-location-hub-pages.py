@@ -470,7 +470,7 @@ def render_insights(prefix: str) -> str:
     <div class="blog-grid" data-blog-insights data-variant="related" data-base="{prefix}" data-count="3"></div>
   </div>
 </section>
-<script src="{prefix}js/blog-insights.js?v=3" defer></script>"""
+<script src="{prefix}js/blog-insights.js?v=4" defer></script>"""
 
 
 def render_reviews(prefix: str) -> str:

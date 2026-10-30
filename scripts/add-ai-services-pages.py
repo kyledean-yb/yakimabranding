@@ -842,7 +842,7 @@ def main() -> None:
     general_kwargs = dict(
         slug=GENERAL_SLUG,
         title="AI for Business Services",
-        meta="YB Marketing provides practical AI guidance, training, and support for businesses across the Pacific Northwest, including content, follow up, chatbots, and voice tools. Call 509-901-9735 to get started.",
+        meta="YB Marketing provides practical AI guidance, training, and support for businesses across the country, including content, follow up, chatbots, and voice tools. Call 509-901-9735 to get started.",
         eyebrow="AI Services",
         h1="Work smarter.<br>Grow faster.",
         lead="Practical AI guidance, training, and support so you make informed marketing decisions without added confusion.",
@@ -854,7 +854,7 @@ def main() -> None:
     smb_kwargs = dict(
         slug=SMB_SLUG,
         title="AI for Small Business Services",
-        meta="YB Marketing helps small businesses across the Pacific Northwest use AI for content, follow up, chat, and voice tools that save time and catch more leads. Call 509-901-9735 to get started.",
+        meta="YB Marketing helps small businesses across the country use AI for content, follow up, chat, and voice tools that save time and catch more leads. Call 509-901-9735 to get started.",
         eyebrow="AI for Small Business",
         h1="Work smarter.<br>Grow faster.",
         lead="Practical AI guidance, training, and support sized for a small team, so you make better marketing decisions without adding confusion.",

@@ -7,13 +7,26 @@
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function initNavDropdown() {
-    document.querySelectorAll('.nav-services, .nav-about, .nav-insights').forEach(function (nav) {
+    document.querySelectorAll('.nav-services, .nav-about, .nav-insights, .nav-mega').forEach(function (nav) {
       var btn = nav.querySelector('.nav-svc-btn');
       var closeTimer;
 
       function open() {
         clearTimeout(closeTimer);
+        if (nav.classList.contains('nav-mega')) {
+          document.querySelectorAll('.nav-mega.is-open').forEach(function (other) {
+            if (other !== nav) other.classList.remove('is-open');
+          });
+        }
         nav.classList.add('is-open');
+        var panel = nav.querySelector('.mega-panel');
+        if (panel) {
+          panel.style.marginLeft = '0px';
+          var rect = panel.getBoundingClientRect();
+          var maxRight = document.documentElement.clientWidth - 16;
+          if (rect.right > maxRight) panel.style.marginLeft = (maxRight - rect.right) + 'px';
+          else if (rect.left < 16) panel.style.marginLeft = (16 - rect.left) + 'px';
+        }
       }
 
       function scheduleClose() {
@@ -40,15 +53,15 @@
 
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') {
-        document.querySelectorAll('.nav-services.is-open, .nav-about.is-open, .nav-insights.is-open').forEach(function (n) {
+        document.querySelectorAll('.nav-services.is-open, .nav-about.is-open, .nav-insights.is-open, .nav-mega.is-open').forEach(function (n) {
           n.classList.remove('is-open');
         });
       }
     });
 
     document.addEventListener('click', function (e) {
-      if (!e.target.closest('.nav-services') && !e.target.closest('.nav-about') && !e.target.closest('.nav-insights')) {
-        document.querySelectorAll('.nav-services.is-open, .nav-about.is-open, .nav-insights.is-open').forEach(function (n) {
+      if (!e.target.closest('.nav-services') && !e.target.closest('.nav-about') && !e.target.closest('.nav-insights') && !e.target.closest('.nav-mega')) {
+        document.querySelectorAll('.nav-services.is-open, .nav-about.is-open, .nav-insights.is-open, .nav-mega.is-open').forEach(function (n) {
           n.classList.remove('is-open');
         });
       }

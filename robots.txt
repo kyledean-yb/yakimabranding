@@ -1,5 +1,29 @@
-# Allow all crawlers — production
+# YB Marketing (yakimabranding.com)
 User-agent: *
 Allow: /
+Disallow: /preview/
+Disallow: /ui_kits/
+Disallow: /partials/
+Disallow: /scraps/
 
+# AI search and assistant crawlers are welcome
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Bingbot
+User-agent: CCBot
+Allow: /
+Disallow: /preview/
+Disallow: /ui_kits/
+Disallow: /partials/
+Disallow: /scraps/
+
+# Site guide for AI assistants: https://yakimabranding.com/llms.txt
 Sitemap: https://yakimabranding.com/sitemap.xml

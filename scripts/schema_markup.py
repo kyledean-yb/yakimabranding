@@ -27,7 +27,7 @@ MARKER_BLOCK_RE = re.compile(
 AGGREGATE_RATING = {
     "@type": "AggregateRating",
     "ratingValue": "5.0",
-    "reviewCount": "43",
+    "reviewCount": "48",
     "bestRating": "5",
 }
 
@@ -44,7 +44,7 @@ SERVICE_PAGES = {
         "slug": "branding",
         "name": "Branding & Design",
         "service_type": "Brand Identity Design",
-        "description": "Comprehensive brand strategy, logo design, and design systems for Pacific Northwest businesses.",
+        "description": "Comprehensive brand strategy, logo design, and design systems for growing businesses.",
     },
     "content-marketing/index.html": {
         "slug": "content-marketing",
@@ -56,37 +56,37 @@ SERVICE_PAGES = {
         "slug": "google-ads",
         "name": "Google Ads Management",
         "service_type": "Pay-Per-Click Advertising",
-        "description": "Expert Google Ads management since 2005 — search, display, and Performance Max campaigns for Pacific Northwest businesses.",
+        "description": "Expert Google Ads management since 2005 — search, display, and Performance Max campaigns for growing businesses.",
     },
     "press-releases/index.html": {
         "slug": "press-releases",
         "name": "Press Releases",
         "service_type": "Press Release Writing & Distribution",
-        "description": "Professional press release writing and distribution for Pacific Northwest businesses.",
+        "description": "Professional press release writing and distribution for growing businesses.",
     },
     "seo/index.html": {
         "slug": "seo",
         "name": "SEO & AI Optimization",
         "service_type": "Search Engine Optimization",
-        "description": "Local SEO, technical SEO, keyword strategy, and AI search optimization for Pacific Northwest businesses.",
+        "description": "Local SEO, technical SEO, keyword strategy, and AI search optimization for growing businesses.",
     },
     "social-media/index.html": {
         "slug": "social-media",
         "name": "Social Media Management",
         "service_type": "Social Media Marketing",
-        "description": "Facebook, Instagram, and LinkedIn management with real growth strategies for Pacific Northwest businesses.",
+        "description": "Facebook, Instagram, and LinkedIn management with real growth strategies for growing businesses.",
     },
     "web-design/index.html": {
         "slug": "web-design",
         "name": "Web Design & Development",
         "service_type": "Web Design",
-        "description": "Custom WordPress and Wix website design and development for Pacific Northwest businesses.",
+        "description": "Custom WordPress and Wix website design and development for growing businesses.",
     },
     "client-corner/index.html": {
         "slug": "client-corner",
         "name": "Client Corner",
         "service_type": "Marketing Education",
-        "description": "Marketing Minute videos and client resources from YB Marketing for Pacific Northwest businesses.",
+        "description": "Marketing Minute videos and client resources from YB Marketing for growing businesses.",
     },
     "crm-tutorials/index.html": {
         "slug": "crm-tutorials",
@@ -98,19 +98,25 @@ SERVICE_PAGES = {
         "slug": "customer-growth",
         "name": "Customer Growth & Communication Tool",
         "service_type": "Customer Relationship Management",
-        "description": "Lead management, centralized messaging, automation, and customer follow-up for Pacific Northwest businesses.",
+        "description": "Lead management, centralized messaging, automation, and customer follow-up for growing businesses.",
+    },
+    "growth-marketing/index.html": {
+        "slug": "growth-marketing",
+        "name": "Growth Marketing",
+        "service_type": "Marketing Analytics and Strategy",
+        "description": "SEO, AI search, ads and social measured side by side in one live dashboard, with a monthly review that moves budget toward what's working.",
     },
     "ai-for-business/index.html": {
         "slug": "ai-for-business",
         "name": "AI for Business",
         "service_type": "Artificial Intelligence Consulting",
-        "description": "YB Marketing provides practical AI guidance, training, and support for businesses across the Pacific Northwest, including content, follow up, chatbots, and voice tools.",
+        "description": "YB Marketing provides practical AI guidance, training, and support for businesses across the country, including content, follow up, chatbots, and voice tools.",
     },
     "ai-for-small-business/index.html": {
         "slug": "ai-for-small-business",
         "name": "AI for Small Business",
         "service_type": "Artificial Intelligence Consulting",
-        "description": "YB Marketing helps small businesses across the Pacific Northwest use AI for content, follow up, chat, and voice tools that save time and catch more leads.",
+        "description": "YB Marketing helps small businesses across the country use AI for content, follow up, chat, and voice tools that save time and catch more leads.",
     },
 }
 
@@ -222,12 +228,12 @@ def organization_schema() -> dict:
             "Vancouver, WA",
             "Wenatchee, WA",
             "Walla Walla, WA",
-            "Pacific Northwest",
+            "United States",
         ],
         "sameAs": [
             "https://www.facebook.com/yakimabranding",
-            "https://www.instagram.com/yakimabranding",
-            "https://www.linkedin.com/company/yakima-branding",
+            "https://www.instagram.com/yb.marketing_/",
+            "https://www.linkedin.com/company/18939370",
         ],
         "aggregateRating": AGGREGATE_RATING.copy(),
     }
@@ -308,7 +314,7 @@ def service_schema(name: str, service_type: str, url: str, description: str) -> 
             "name": "YB Marketing",
             "url": SITE,
         },
-        "areaServed": {"@type": "State", "name": "Pacific Northwest"},
+        "areaServed": {"@type": "Country", "name": "United States"},
         "url": url,
         "description": description,
     }
@@ -512,7 +518,7 @@ def schemas_for_rel_path(rel: str) -> tuple[list[dict], str, str]:
                 "@type": "AboutPage",
                 "name": "About YB Marketing | Yakima Branding",
                 "url": f"{SITE}/about",
-                "description": "Meet the YB Marketing team. We are a dedicated digital marketing agency rooted in Yakima, WA, serving businesses across the Pacific Northwest.",
+                "description": "Meet the YB Marketing team. We are a digital marketing agency based in Yakima, WA, working with businesses across the country.",
                 "breadcrumb": breadcrumb(
                     [(1, "Home", SITE), (2, "About", f"{SITE}/about")]
                 ),
@@ -548,7 +554,7 @@ def schemas_for_rel_path(rel: str) -> tuple[list[dict], str, str]:
                 "@type": "ContactPage",
                 "name": "Contact YB Marketing",
                 "url": f"{SITE}/contact",
-                "description": "Get in touch with YB Marketing. Schedule a free 30-minute consultation or send us a message. We serve businesses across the Pacific Northwest.",
+                "description": "Get in touch with YB Marketing. Schedule a free 30-minute consultation or send us a message. We serve businesses across the country.",
                 "breadcrumb": breadcrumb(
                     [(1, "Home", SITE), (2, "Contact", f"{SITE}/contact")]
                 ),

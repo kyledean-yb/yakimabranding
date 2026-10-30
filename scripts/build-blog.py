@@ -3,6 +3,7 @@
 
 import argparse
 import html
+import hashlib
 import json
 import re
 import sys
@@ -25,6 +26,10 @@ def about_nav_block(prefix: str) -> str:
 ROOT = Path(__file__).resolve().parents[1]
 POSTS_DIR = ROOT / "blog" / "posts"
 DATA_FILE = ROOT / "blog" / "data" / "posts.json"
+IMAGE_OVERRIDES_FILE = ROOT / "blog" / "data" / "image-overrides.json"
+IMAGE_OVERRIDES = (
+    json.loads(IMAGE_OVERRIDES_FILE.read_text(encoding="utf-8")) if IMAGE_OVERRIDES_FILE.exists() else {}
+)
 LOCAL_POSTS_FILE = ROOT / "blog" / "data" / "local-posts.json"
 API = "https://www.yakimabranding.com/wp-json/wp/v2"
 BLOG_INDEX_PREFIX = ""  # insights.html at site root
@@ -498,6 +503,7 @@ def render_post(post, slug_map):
         image = get_featured_url(post)
         cats = get_categories(post)
         topic = assign_topic(post)
+    image = IMAGE_OVERRIDES.get(slug, image)
     date_str = format_date(post["date"])
     rt = reading_time(raw_content)
     accent = pick_service_cta(post, POST_PREFIX)
@@ -526,7 +532,7 @@ def render_post(post, slug_map):
   </div>
   <div class="container blog-hero-inner">
     <span class="eyebrow" style="color:var(--yb-cyan)">YB Marketing Insights</span>
-    <h1 style="color:#fff;font-size:clamp(1.6rem,3vw,2.2rem)">{html.escape(title)}</h1>
+    <p class="yb-h1" style="color:#fff;font-size:clamp(1.6rem,3vw,2.2rem)">{html.escape(title)}</p>
   </div>
 </section>
 {WAVE_HERO_TO_WHITE}
@@ -663,6 +669,19 @@ def write_insights_index(entries, sidebar_post):
     (ROOT / "blog.html").write_text(redirect, encoding="utf-8")
 
 
+def tag_image_ids(entries: list[dict]) -> None:
+    """Identical photos are stored under several file names; tag each entry by file content."""
+    for e in entries:
+        if e["slug"] in IMAGE_OVERRIDES:
+            e["image"] = IMAGE_OVERRIDES[e["slug"]]
+        img = e.get("image") or ""
+        f = ROOT / img.lstrip("/")
+        if img and f.is_file():
+            e["imageId"] = hashlib.md5(f.read_bytes()).hexdigest()[:12]
+        elif img:
+            e["imageId"] = img
+
+
 def build(offline=False):
     POSTS_DIR.mkdir(parents=True, exist_ok=True)
     DATA_FILE.parent.mkdir(parents=True, exist_ok=True)
@@ -681,6 +700,7 @@ def build(offline=False):
             entries.append(entry)
             print(f"  · {post['slug']}.html")
         entries.sort(key=lambda e: e["date"], reverse=True)
+        tag_image_ids(entries)
         DATA_FILE.write_text(json.dumps(entries, indent=2), encoding="utf-8")
         sidebar_post = local_posts[0] if local_posts else {"slug": entries[0]["slug"], "title": {"rendered": entries[0]["title"]}}
         write_insights_index(entries, sidebar_post)
@@ -712,6 +732,7 @@ def build(offline=False):
         entries.append(entry)
         print(f"  · {post['slug']}.html")
 
+    tag_image_ids(entries)
     DATA_FILE.write_text(json.dumps(entries, indent=2), encoding="utf-8")
     write_insights_index(entries, raw_posts[0])
     print(f"\nGenerated insights.html + {len(entries)} posts in blog/posts/")

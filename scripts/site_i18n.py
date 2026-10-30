@@ -58,12 +58,10 @@ UI_ES: dict[str, str] = {
         "Agencia de marketing digital galardonada que ayuda a las empresas a crecer "
         "mediante branding estratégico, SEO y soluciones digitales integrales."
     ),
-    "Yakima Branding is centered in Central Washington, with deep roots in the Yakima community. From our home base in Yakima, we proudly serve businesses across the entire Pacific Northwest with strategic marketing, website design, SEO, advertising, and branding support.": (
-        "Yakima Branding tiene su centro en el centro de Washington, con profundas raíces "
-        "en la comunidad de Yakima. Desde nuestra sede en Yakima, servimos con orgullo a "
-        "empresas de todo el Pacífico Noroeste con marketing estratégico, diseño web, SEO, "
-        "publicidad y soporte de marca."
+    "YB Marketing has been based in Yakima, Washington since 2004. Today we help businesses across the country with marketing, website design, SEO, advertising, and branding.": (
+        "YB Marketing tiene su sede en Yakima, Washington, desde 2004. Hoy ayudamos a empresas de todo el país con marketing, diseño web, SEO, publicidad y branding."
     ),
+    "Clients nationwide": "Clientes en todo el país",
     "YB Marketing Insights": "Ideas de YB Marketing",
     "Articles, Marketing Minute & CRM guides": "Artículos, Marketing Minute y guías CRM",
     "Blog": "Blog",
@@ -112,6 +110,15 @@ def localize_clean_path(clean: str, lang: str) -> str:
     return "/" if not clean else f"/{clean}"
 
 
+def es_page_exists(current_clean: str) -> bool:
+    clean = current_clean.strip("/")
+    if clean.startswith("insights/"):
+        clean = "blog/posts/" + clean[len("insights/"):]
+    if not clean:
+        return (ROOT / "es" / "index.html").exists()
+    return (ROOT / "es" / f"{clean}.html").exists() or (ROOT / "es" / clean / "index.html").exists()
+
+
 def alternate_path(current_clean: str, target_lang: str) -> str:
     """current_clean is without /es prefix ('' for home)."""
     return localize_clean_path(current_clean, target_lang)
@@ -127,7 +134,7 @@ def strip_es_prefix(url_path: str) -> str:
 def language_switcher_html(current_clean: str, lang: str = "en", variant: str = "header") -> str:
     """EN / ES segmented switcher."""
     en_href = alternate_path(current_clean, "en")
-    es_href = alternate_path(current_clean, "es")
+    es_href = alternate_path(current_clean, "es") if es_page_exists(current_clean) else "/es/"
     label = t("Language", lang)
     cls = "lang-switch lang-switch--header" if variant == "header" else "lang-switch lang-switch--footer"
     en_active = " is-active" if lang == "en" else ""
@@ -178,6 +185,9 @@ def rewrite_internal_href_to_es(href_value: str) -> str:
     path = parsed.path or ""
     if not path.startswith("/"):
         # relative — leave for asset-prefix fixer
+        return href_value
+
+    if path.endswith((".css", ".js", ".png", ".jpg", ".jpeg", ".webp", ".svg", ".ico", ".woff2", ".xml", ".txt", ".pdf")):
         return href_value
 
     # Skip static assets

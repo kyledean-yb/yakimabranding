@@ -135,16 +135,15 @@ export function SiteFooter() {
           <div className="footer-col">
             <h4>Our Reach</h4>
             <p style={{ color: "var(--fg2-on-dark)", fontSize: 14, lineHeight: 1.7, marginBottom: 14 }}>
-              Yakima Branding is centered in Central Washington, with deep roots in the Yakima community. From our home
-              base in Yakima, we proudly serve businesses across the entire Pacific Northwest with strategic marketing,
-              website design, SEO, advertising, and branding support.
+              YB Marketing has been based in Yakima, Washington since 2004. Today we help businesses across the country
+              with marketing, website design, SEO, advertising, and branding.
             </p>
             <div style={{ display: "flex", alignItems: "center", gap: 7, fontSize: 13, color: "var(--yb-cyan)", fontWeight: 600 }}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" strokeWidth="2.2" strokeLinecap="round">
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                 <circle cx="12" cy="10" r="3" />
               </svg>
-              Yakima, WA &nbsp;·&nbsp; Pacific Northwest
+              Yakima, WA &nbsp;·&nbsp; Clients nationwide
             </div>
           </div>
         </div>

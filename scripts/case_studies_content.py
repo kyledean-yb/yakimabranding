@@ -743,4 +743,321 @@ CASE_STUDIES = [
         ],
         "closingCta": 'Need local SEO across a multi-market service territory? <a href="/contact">YB Marketing</a> builds long-horizon programs for technical contractors — service pages, regional authority, and rank tracking included.',
     },
+    {
+        "slug": "roofing-contractor-inbound-marketing",
+        "title": "A Local Roofing Company Was Busy in the Rainy Season. They Needed Leads All Year.",
+        "metaTitle": "Roofing Contractor Marketing Case Study: +271% Organic Traffic | YB Marketing",
+        "hubTag": "SEO · Ads · Content",
+        "hubCategories": ["seo", "ads", "content", "local"],
+        "hubExcerpt": "Locally owned roofing contractor. Form submissions up 120%, calls up 160%, organic traffic up 271% over three years, and revenue more than tripled.",
+        "metaDescription": "How YB Marketing helped a local roofing contractor grow form submissions 120%, calls 160% and organic traffic 271% over three years with SEO, ads, content and social.",
+        "accent": "#ff6b57",
+        "accentWash": "var(--wash-coral)",
+        "heroStats": [
+            {"value": "+120%", "label": "Form submissions"},
+            {"value": "+160%", "label": "Phone calls"},
+            {"value": "+271%", "label": "Organic traffic over three years"},
+            {"value": "3×", "label": "Revenue growth"},
+        ],
+        "meta": [
+            {"label": "Industry", "value": "Residential roofing"},
+            {"label": "Location", "value": "Local service area"},
+            {"label": "Services", "tags": ["SEO", "Google Ads", "Content", "Social media", "CRO"]},
+            {"label": "Engagement", "value": "3+ years"},
+        ],
+        "summary": [
+            "A locally owned and operated roofing company had very little online presence and a static website. Work came in during the rainy months and dried up the rest of the year.",
+            "We built an inbound marketing program to keep their lead pipeline full year round, combining new content, SEO, digital advertising and social media.",
+            "Form submissions increased 120%, calls went up 160%, and organic traffic grew 271% over three years. Revenue has more than tripled since the program started.",
+        ],
+        "sections": [
+            {
+                "heading": "The Challenge",
+                "paragraphs": [
+                    "The existing site already ranked well for a handful of valuable keywords, but that visibility was narrow. Whole groups of searches homeowners use when they need a roofer were going to competitors.",
+                    "The company needed steady leads through every season, not just when the rain started.",
+                ],
+            },
+            {
+                "heading": "The Approach",
+                "paragraphs": [
+                    "We started with a competitive analysis to set the strategy and pick new keyword targets, then agreed on a set of metrics tied to the company's goals. Early website changes improved the user experience and made it easier for visitors to get in touch.",
+                ],
+                "bullets": [
+                    "Content and social: regular blog posts and social updates, plus helpful offers like quizzes to size up a homeowner's needs and guides on roof care, maintenance and repair.",
+                    "Local visibility: individual service pages with supporting pages for each neighborhood and town served, and more than 150 local directory listings claimed and filled out.",
+                    "Paid search: search ads to capture homeowners ready to call now while organic rankings grew.",
+                    "Conversion testing: A/B tests on landing pages and calls to action to turn more visitors into leads over time.",
+                ],
+                "pillars": True,
+            },
+            {
+                "heading": "The Results",
+                "paragraphs": [
+                    "New rankings from website content, landing page offers, social posts and ads changed the shape of the business. Form submissions increased 120%, calls went up 160%, and organic traffic grew 271% over three years.",
+                    "Most important to the owners, revenue has more than tripled since the program began, and the lead flow no longer depends on the weather.",
+                ],
+            },
+        ],
+        "closingCta": 'Want leads that keep coming after the busy season ends? <a href="/contact">Talk to YB Marketing</a> about SEO, ads and content built for contractors.',
+    },
+    {
+        "slug": "custom-home-builder-website-seo",
+        "title": "A Custom Home Builder Had Beautiful Work. Not Enough of the Right People Were Seeing It.",
+        "metaTitle": "Custom Home Builder Website & SEO Case Study | YB Marketing",
+        "hubTag": "Web Design · SEO",
+        "hubCategories": ["web-design", "seo", "content", "local"],
+        "hubExcerpt": "Northern California custom home builder. A new website, local SEO and a steady blog brought more qualified quote requests from homeowners who fit.",
+        "metaDescription": "How YB Marketing rebuilt the website and SEO for a Northern California custom home builder, growing traffic 75% and search visibility 108% in one year.",
+        "accent": "#16b38a",
+        "accentWash": "var(--wash-mint)",
+        "heroStats": [
+            {"value": "+75%", "label": "Website traffic in one year"},
+            {"value": "+108%", "label": "Search visibility in one year"},
+        ],
+        "meta": [
+            {"label": "Industry", "value": "Custom home building & renovation"},
+            {"label": "Location", "value": "Northern California"},
+            {"label": "Services", "tags": ["Competitive analysis", "Web design", "SEO", "Blogging"]},
+        ],
+        "summary": [
+            "Our client is an experienced Northern California custom home builder that specializes in renovating a style of home first designed in the 1950s and 60s.",
+            "Their photos of past projects were stunning, but the website was dated, hard to update, and not built to win new clients from Google. They asked us to help more people see their work and request quotes.",
+            "A new website, better service content, and a steady blog grew traffic 75% and search visibility 108% in one year, and brought in the kind of leads they actually wanted.",
+        ],
+        "sections": [
+            {
+                "heading": "Start With the Competition",
+                "paragraphs": [
+                    "Our first step was a competitive analysis of other home renovation businesses in their area. We looked at website quality, search competition, advertising and social media.",
+                    "That review led to a plan that was affordable and focused. This builder didn't need hundreds of leads. They needed a few good ones each month from homeowners looking for their specific style of work who could afford it.",
+                ],
+            },
+            {
+                "heading": "A Website That Matches the Work",
+                "paragraphs": [
+                    "Plenty of people search every day for what this company does, but weak content and poor SEO were pushing the site down the rankings. Over a few months we built a new website that shows off the craftsmanship and innovation behind every renovation and custom build.",
+                    "Alongside the photography, we rewrote the service pages so they read well for homeowners and for search engines. We started a blog about the home styles they specialize in and put more emphasis on the areas they serve.",
+                ],
+            },
+            {
+                "heading": "The Results",
+                "paragraphs": [
+                    "The new site set a new standard for home builders in the area, with great photos and stories, video testimonials, and tours with happy clients.",
+                    "Search engines responded with more relevant, higher quality traffic. Local rankings grew beyond the builder's own town into other areas where their style of home is common.",
+                ],
+            },
+            {
+                "heading": "What's Next",
+                "paragraphs": [
+                    "We keep adding blog posts and finding new keywords that bring in relevant leads. Social media is next. It usually has a longer buying cycle, but it plants seeds with future clients.",
+                ],
+            },
+        ],
+        "closingCta": 'Is your website doing justice to your work? <a href="/contact">YB Marketing</a> builds sites and SEO programs for builders and contractors.',
+    },
+    {
+        "slug": "tree-services-local-seo",
+        "title": "A Tree Services Company Couldn't Find Its Own Website in Local Searches. That Changed Fast.",
+        "metaTitle": "Tree Services Local SEO Case Study | YB Marketing",
+        "hubTag": "SEO · Local Search",
+        "hubCategories": ["seo", "local"],
+        "hubExcerpt": "Southern California tree services company. Local SEO and mobile fixes lifted rankings for their most important keywords and brought more calls across their target regions.",
+        "metaDescription": "How YB Marketing used local SEO to grow traffic 75% and visibility 108% in a year for a Southern California tree services company that had given up on doing ads alone.",
+        "accent": "#25c28a",
+        "accentWash": "var(--wash-mint)",
+        "heroStats": [
+            {"value": "+75%", "label": "Website traffic in one year"},
+            {"value": "+108%", "label": "Search visibility in one year"},
+        ],
+        "meta": [
+            {"label": "Industry", "value": "Tree care services"},
+            {"label": "Location", "value": "Southern California"},
+            {"label": "Services", "tags": ["Local SEO", "On-page content", "Mobile fixes"]},
+        ],
+        "summary": [
+            "Our client, a Southern California tree services company, has been in business for nearly 20 years with a team of certified tree experts.",
+            "They had tried running Google Ads themselves and felt like they'd wasted their money, with no way to measure results. They couldn't even find their own site in basic local searches.",
+            "By making each service page more complete, localizing the site, and fixing a mobile issue, we grew traffic 75% and search visibility 108% in one year.",
+        ],
+        "sections": [
+            {
+                "heading": "The Challenge",
+                "paragraphs": [
+                    "The site looked professional, with lots of photos of their work and short descriptions of each service. The company had several certifications and awards but no idea how to turn that into more traffic.",
+                    "Plenty of people search every day for tree services in their area, but thin content and poor SEO kept the site buried.",
+                ],
+            },
+            {
+                "heading": "The Approach",
+                "paragraphs": [
+                    "We worked with the client to make every service page more relevant and more complete. We localized the site for the cities and towns where they wanted more work.",
+                    "We moved their call to action and phone number higher on the page so visitors saw it right away, and fixed a mobile issue that had been hurting visibility for about 25% of their traffic.",
+                ],
+            },
+            {
+                "heading": "The Results",
+                "paragraphs": [
+                    "In a short time, Google rankings for their most important keywords and locations improved dramatically. As they ranked for more and more searches, calls and new business picked up across all of their target regions.",
+                ],
+            },
+            {
+                "heading": "What's Next",
+                "paragraphs": [
+                    "A fresh site design is in the works with easier access to services and photos that better reflect how the company has grown. Advertising may come next to cover areas where SEO hasn't caught up yet, along with better call and lead tracking.",
+                ],
+            },
+        ],
+        "closingCta": 'Not showing up when locals search for what you do? <a href="/contact">YB Marketing</a> can fix that with local SEO built around your service area.',
+    },
+    {
+        "slug": "ems-contract-manufacturer-google-ads-seo",
+        "title": "A Small Electronics Manufacturer Had a Tiny Budget and Big Plans. We Started Small and Grew With Them.",
+        "metaTitle": "EMS Contract Manufacturer Google Ads & SEO Case Study | YB Marketing",
+        "hubTag": "Google Ads · SEO · B2B",
+        "hubCategories": ["ads", "seo", "web-design"],
+        "hubExcerpt": "Silicon Valley electronics contract manufacturer. Targeted Google Ads funded early growth, then a rebuilt site and SEO helped them expand nationwide as the ad budget grew 10×.",
+        "metaDescription": "How YB Marketing grew a Silicon Valley EMS contract manufacturer from a small ad budget to nationwide reach, with traffic up 75% and visibility up 108% in one year.",
+        "accent": "#3f6fd6",
+        "accentWash": "var(--wash-blue)",
+        "heroStats": [
+            {"value": "+75%", "label": "Website traffic in one year"},
+            {"value": "+108%", "label": "Search visibility in one year"},
+            {"value": "10×", "label": "Ad budget growth"},
+        ],
+        "meta": [
+            {"label": "Industry", "value": "Electronics manufacturing services (EMS)"},
+            {"label": "Location", "value": "Silicon Valley, CA"},
+            {"label": "Services", "tags": ["Google Ads", "Web design", "SEO", "Blogging"]},
+        ],
+        "summary": [
+            "Our client was a small Silicon Valley electronics manufacturing company with funding and a talented team of engineers. They wanted to move into their own facility and build products themselves instead of designing solutions and outsourcing production.",
+            "We met them early, when the marketing budget was as small as the company, and recommended starting small.",
+            "Targeted Google Ads paid for the first round of growth. Later, a rebuilt website and SEO helped them reach hardware developers across the country as their ad budget grew tenfold.",
+        ],
+        "sections": [
+            {
+                "heading": "Make the Website Work First",
+                "paragraphs": [
+                    "There was no budget for a rebuild at the start, so we cleaned up the existing site to make it easier to use. If we were going to send people there, they needed to understand what this company could do.",
+                ],
+            },
+            {
+                "heading": "Let Ads Pay for Growth",
+                "paragraphs": [
+                    "Once the site was ready, we launched tightly targeted Google Ads for specialized services and for buyers who needed quick turns and hands-on support. In short, we bootstrapped their marketing by using new business to fund more business.",
+                ],
+            },
+            {
+                "heading": "Rebuild as the Company Grew",
+                "paragraphs": [
+                    "As the business moved into its own office and manufacturing space, we rebuilt the website, added a blog, and built up their SEO. The company kept growing, taking over more of their building with new private funding made possible by their unique services and steady growth.",
+                ],
+            },
+            {
+                "heading": "The Results",
+                "paragraphs": [
+                    "With a tight budget early on, we spent our time only on the work that would get them moving. Over time the ad budget grew 10×, and we expanded SEO and ads to other parts of the country to reach hardware developers in other states.",
+                    "Today they handle much larger production runs and are still known as experts in new materials development and fast, manufacturable engineering prototypes.",
+                ],
+            },
+        ],
+        "closingCta": 'Working with a small budget and big goals? <a href="/contact">YB Marketing</a> can build a plan that grows with you.',
+    },
+    {
+        "slug": "equipment-manufacturer-website-redesign",
+        "title": "An Equipment Manufacturer With 50 Years of Engineering Had a Website That Didn't Show It.",
+        "metaTitle": "Equipment Manufacturer Website Redesign & SEO Case Study | YB Marketing",
+        "hubTag": "Web Design · SEO · B2B",
+        "hubCategories": ["web-design", "seo", "content"],
+        "hubExcerpt": "California automated assembly equipment maker. A mobile friendly redesign and focused content replaced off-topic traffic with qualified leads.",
+        "metaDescription": "How YB Marketing redesigned the website and SEO for a California automated assembly equipment manufacturer, growing traffic 75% and visibility 108% in one year.",
+        "accent": "#7b5ea7",
+        "accentWash": "var(--wash-violet)",
+        "heroStats": [
+            {"value": "+75%", "label": "Website traffic in one year"},
+            {"value": "+108%", "label": "Search visibility in one year"},
+        ],
+        "meta": [
+            {"label": "Industry", "value": "Automated assembly equipment"},
+            {"label": "Location", "value": "Silicon Valley, CA"},
+            {"label": "Services", "tags": ["Web design", "SEO", "Content", "Google Ads"]},
+        ],
+        "summary": [
+            "Our client is a California company that designs, engineers and builds automated product assembly equipment. They've been in business since the 1970s and helped develop processes still used across the industry today.",
+            "Their market is mature and highly competitive. What sets them apart is engineering skill and the repeatability and reliability of their equipment, but their old website didn't show it.",
+            "A mobile friendly redesign and new application focused content replaced off-topic traffic with qualified visitors and leads, growing traffic 75% and search visibility 108% in one year.",
+        ],
+        "sections": [
+            {
+                "heading": "The Challenge",
+                "paragraphs": [
+                    "We had worked with them on several projects over the years before they decided to get serious about digital marketing. Their website was old and dusty, and much of its traffic had nothing to do with their core business.",
+                ],
+            },
+            {
+                "heading": "The Approach",
+                "paragraphs": [
+                    "We redesigned the website so it worked on mobile and was much easier to read. The company supplied most of the core content, and we added our SEO knowledge so Google could understand, index and show it to the right buyers.",
+                    "We also started adding content on applications, industries and the problems their equipment solves. The goal was to show prospects that this company's knowledge and approach to engineering is unique. We run occasional targeted Google Ads for trade shows and specific services as needed.",
+                ],
+            },
+            {
+                "heading": "The Results",
+                "paragraphs": [
+                    "The new site gave search engines and visitors clearer, more complete content. Traffic, time on site and leads all showed the plan worked, and it's still working today.",
+                ],
+            },
+        ],
+        "closingCta": 'Does your website undersell your engineering? <a href="/contact">YB Marketing</a> builds sites and content for manufacturers that bring in qualified leads.',
+    },
+    {
+        "slug": "environmental-engineering-content-marketing",
+        "title": "An Environmental Engineering Firm Knew Its Content Mattered. It Just Never Got Written.",
+        "metaTitle": "Environmental Engineering Content Marketing Case Study: +93% Visibility | YB Marketing",
+        "hubTag": "Content · Web Design · SEO",
+        "hubCategories": ["content", "web-design", "seo"],
+        "hubExcerpt": "California environmental engineering firm. A redesigned site and a steady flow of expert content grew traffic 57% and search visibility 93% in one year.",
+        "metaDescription": "How YB Marketing grew traffic 57% and search visibility 93% in one year for a California environmental engineering firm with a website redesign and content marketing.",
+        "accent": "#2BC4F0",
+        "accentWash": "var(--wash-cyan)",
+        "heroStats": [
+            {"value": "+57%", "label": "Website traffic in one year"},
+            {"value": "+93%", "label": "Search visibility in one year"},
+        ],
+        "meta": [
+            {"label": "Industry", "value": "Environmental engineering & remediation"},
+            {"label": "Location", "value": "California"},
+            {"label": "Services", "tags": ["Web design", "Content marketing", "SEO", "Blogging"]},
+        ],
+        "summary": [
+            "Our client, a California environmental engineering firm, had planned to start a content marketing program in house but never got it off the ground.",
+            "Their analytical and pollution remediation services are needed around the world, but their website had too little content and not enough focus.",
+            "A redesigned website and a steady flow of expert content grew traffic 57% and search visibility 93% in one year.",
+        ],
+        "sections": [
+            {
+                "heading": "The Challenge",
+                "paragraphs": [
+                    "We met them early and tried to guide their own content creation, but they soon realized the website needed a revamp to really show the work they do for clients.",
+                    "In those early conversations they also saw that we could help create quality content that works for search engines, social media and even printed marketing materials.",
+                ],
+            },
+            {
+                "heading": "The Approach",
+                "paragraphs": [
+                    "We redesigned the website to showcase their expertise, with strong images, deep navigation so visitors can find information quickly, and SEO so the content gets found.",
+                    "We organized the business around specific industries and target clients. Then we worked with management to plan and write blog content that backed up their service pages with real examples of their work and the problems they solve.",
+                ],
+            },
+            {
+                "heading": "The Results",
+                "paragraphs": [
+                    "Because the old site was so weak, it took Google a little while to recognize the new site and rank it for the keywords we wanted. Within a few months, adding a couple of new blog posts or pages each month, the investment started paying off.",
+                    "Traffic grew 57% and search visibility 93% in one year, and the results opened management's eyes to promoting new services with new content.",
+                ],
+            },
+        ],
+        "closingCta": 'Know your expertise should be online but never find time to write it? <a href="/contact">YB Marketing</a> plans and writes content that gets found.',
+    },
 ]

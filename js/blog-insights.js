@@ -72,6 +72,49 @@
     return picked.slice(0, count);
   }
 
+  function photoKey(post) {
+    return post.imageId || post.image || '';
+  }
+
+  function uniqueImages(picked, allPosts) {
+    var reserved = {};
+    picked.forEach(function (p) {
+      if (p.image) reserved[photoKey(p)] = true;
+    });
+    var spares = [];
+    var spareSeen = {};
+    allPosts.forEach(function (p) {
+      var key = photoKey(p);
+      if (p.image && !reserved[key] && !spareSeen[key]) {
+        spareSeen[key] = true;
+        spares.push({ image: p.image, imageId: key });
+      }
+    });
+
+    var used = {};
+    return picked.map(function (p) {
+      var key = photoKey(p);
+      if (!p.image) return p;
+      if (!used[key]) {
+        used[key] = true;
+        return p;
+      }
+      var copy = {};
+      Object.keys(p).forEach(function (k) {
+        copy[k] = p[k];
+      });
+      var spare = spares.shift();
+      if (spare) {
+        copy.image = spare.image;
+        copy.imageId = spare.imageId;
+      } else {
+        copy.image = '';
+        copy.imageId = '';
+      }
+      return copy;
+    });
+  }
+
   function postHref(base, slug) {
     return '/insights/' + slug;
   }
@@ -200,7 +243,7 @@
     var variant = el.getAttribute('data-variant') || 'related';
     var count = parseInt(el.getAttribute('data-count') || '3', 10);
     var accent = el.getAttribute('data-accent') || '';
-    var picked = pickPosts(posts, topic, count);
+    var picked = uniqueImages(pickPosts(posts, topic, count), posts);
     var isHomeScroll = variant === 'home-scroll';
 
     if (!picked.length) {
@@ -248,7 +291,7 @@
       el.innerHTML = '<p class="insights-loading">Loading articles…</p>';
     });
 
-    fetch(base + 'blog/data/posts.json')
+    fetch(base + 'blog/data/posts.json', { cache: 'no-cache' })
       .then(function (res) {
         if (!res.ok) throw new Error('posts.json ' + res.status);
         return res.json();

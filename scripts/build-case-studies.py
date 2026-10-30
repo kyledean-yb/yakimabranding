@@ -36,6 +36,9 @@ ARROW = (
 HUB_FILTERS = [
     ("all", "All"),
     ("seo", "SEO"),
+    ("web-design", "Web Design"),
+    ("ads", "Google Ads"),
+    ("content", "Content"),
     ("accessibility", "Accessibility"),
     ("security", "Security"),
 ]
@@ -63,6 +66,9 @@ def render_bullets(items: list[str], as_pillars: bool = False) -> str:
                 title, body = item.split(" — ", 1)
             elif " - " in item:
                 title, body = item.split(" - ", 1)
+            elif ": " in item:
+                title, body = item.split(": ", 1)
+                body = body[:1].upper() + body[1:]
             else:
                 title, body = item, ""
             cards.append(
@@ -347,7 +353,7 @@ def build_hub() -> None:
     <div class="container cs-hub-hero-inner">
       <span class="eyebrow">About YB Marketing</span>
       <h1>Case Studies</h1>
-      <p>Real engagements across SEO, accessibility, WordPress security, and enterprise-scale web — anonymised where required, specific where it matters.</p>
+      <p>Real results from SEO, web design, Google Ads, content, accessibility and WordPress security work. Client names stay private, the numbers stay specific.</p>
     </div>
   </section>
   <div class="cs-hub-wave" aria-hidden="true"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,0 C360,70 1080,70 1440,0 L1440,70 L0,70 Z"/></svg></div>
@@ -370,8 +376,8 @@ def build_hub() -> None:
     (OUT_DIR / "index.html").write_text(
         page_shell(
             prefix,
-            "Case Studies — YB Marketing",
-            "YB Marketing case studies — local SEO growth, enterprise accessibility remediation, WordPress security, and portfolio-scale digital work.",
+            "Case Studies | YB Marketing",
+            "YB Marketing case studies: local SEO growth, website redesigns, Google Ads, content marketing, accessibility and WordPress security for real clients.",
             body,
             rel,
             extra_class=" cs-hub-page",

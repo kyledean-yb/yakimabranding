@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../favicon.png">
+
+<title>Website Migration SEO Services | YB Marketing</title>
+<meta name="description" content="Redesigning your website, changing domains, or moving platforms? Protect existing search visibility with URL mapping, redirects, launch checks, and post launch monitoring.">
+<link rel="canonical" href="https://yakimabranding.com/seo/website-migration">
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="../insights.css">
+<link rel="stylesheet" href="../lead-form.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--fg1);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--yb-blue);color:#fff}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.container{width:100%;max-width:var(--container);margin:0 auto;padding:0 28px}
+section{padding:88px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--yb-blue)}
+.eyebrow::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:currentColor;flex:none}
+.header{position:sticky;top:0;z-index:50;transition:all 240ms cubic-bezier(.4,0,.2,1)}
+.header.solid{background:rgba(255,255,255,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.header.top{background:rgba(255,255,255,.6);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:11px}
+.logo img{width:44px;height:44px}
+.logo-text{font-family:var(--font-display);font-weight:800;font-size:22px;letter-spacing:-.02em;color:var(--ink)}
+.logo-text span{color:var(--yb-blue)}
+.nav{display:flex;align-items:center;gap:2px}
+.nav-a{font-weight:600;font-size:15px;color:var(--fg1);padding:8px 14px;border-radius:var(--r-sm);transition:all 240ms;display:inline-block}
+.nav-a:hover{background:var(--bg-soft);color:var(--yb-blue)}
+.nav-services,.nav-about,.nav-insights{position:relative}
+.nav-svc-btn{display:flex;align-items:center;gap:5px;font-weight:600;font-size:15px;color:var(--fg1);padding:8px 14px;border-radius:var(--r-sm);transition:all 240ms;background:none;border:none;cursor:pointer;font-family:var(--font-body)}
+.nav-svc-btn:hover,.nav-services:hover .nav-svc-btn,.nav-about:hover .nav-svc-btn,.nav-insights:hover .nav-svc-btn{background:var(--bg-soft);color:var(--yb-blue)}
+.nav-chevron{transition:transform 240ms;flex:none;color:currentColor}
+.nav-services:hover .nav-chevron,.nav-about:hover .nav-chevron,.nav-insights:hover .nav-chevron{transform:rotate(180deg)}
+.nav-dd{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(-10px) scale(.97);opacity:0;pointer-events:none;transition:opacity 200ms ease 150ms,transform 220ms cubic-bezier(.16,1,.3,1) 150ms;width:720px;background:#fff;border-radius:var(--r-xl);box-shadow:0 24px 64px -16px rgba(22,32,58,.22),0 0 0 1px rgba(22,32,58,.07);padding:16px;z-index:200}
+.nav-services:hover .nav-dd,.nav-about:hover .nav-dd,.nav-insights:hover .nav-dd,.nav-services.is-open .nav-dd,.nav-about.is-open .nav-dd,.nav-insights.is-open .nav-dd{opacity:1;transform:translateX(-50%) translateY(0) scale(1);pointer-events:all;transition:opacity 150ms ease,transform 180ms cubic-bezier(.16,1,.3,1)}
+.nav-dd-arrow{position:absolute;top:-5px;left:50%;transform:translateX(-50%) rotate(45deg);width:10px;height:10px;background:#fff;border-top:1px solid rgba(22,32,58,.08);border-left:1px solid rgba(22,32,58,.08)}
+.nav-dd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.dd-card{display:flex;align-items:flex-start;gap:11px;padding:12px;border-radius:var(--r-md);transition:background 150ms ease}
+.dd-card:hover{background:var(--bg-soft)}
+.dd-ic{width:36px;height:36px;border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;flex:none}
+.dd-ic svg{width:18px;height:18px}
+.dd-name{font-weight:700;font-size:13px;color:var(--ink);margin-bottom:2px;display:block;line-height:1.3}
+.dd-desc{font-size:11.5px;color:var(--fg3);line-height:1.4}
+.btn{display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;font-family:var(--font-body);font-weight:700;font-size:15px;border-radius:var(--r-md);padding:13px 22px;transition:all 240ms;white-space:nowrap;line-height:1}
+.btn-grad{background:var(--grad-brand);color:#fff;box-shadow:0 14px 30px -10px rgba(63,111,214,.45)}
+.btn-grad:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.btn-ghost-white{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.28)}
+.btn-ghost-white:hover{background:rgba(255,255,255,.22);transform:translateY(-2px)}
+.btn-lg{padding:16px 28px;font-size:16px}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px;align-items:center;justify-content:center}
+.mobile-menu{display:none;border-top:1px solid var(--line);background:#fff;padding:12px 28px 20px}
+.mobile-menu a,.mobile-menu button{display:block;padding:14px 0;border-bottom:1px solid var(--line);font-weight:600;font-size:17px;color:var(--ink);width:100%;text-align:left;background:none;border:none;font-family:var(--font-body);cursor:pointer}
+.mobile-svc-list{display:none;padding:8px 0 8px 16px}
+.mobile-svc-list.open{display:block}
+.mobile-svc-list a{font-size:15px;padding:10px 0;color:var(--fg2)}
+.svc-hero{position:relative;overflow:hidden;background:var(--grad-navy);padding:80px 0 100px}
+.svc-hero-mesh{position:absolute;inset:0;background-image:var(--grad-mesh);pointer-events:none}
+.svc-hero-inner{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.svc-hero h1{margin:16px 0 20px;font-size:clamp(2.1rem,3.8vw,3.4rem);color:#fff;line-height:1.08}
+.hero-lead{margin:0 0 32px;color:var(--fg2-on-dark);max-width:540px;font-size:clamp(1rem,1.3vw,1.2rem);line-height:1.6}
+.svc-hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.feat-card{background:#fff;border-radius:var(--r-lg);padding:26px;border:1px solid var(--line);box-shadow:0 2px 8px rgba(22,32,58,.06);transition:all 240ms}
+.feat-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px -8px rgba(22,32,58,.14)}
+.feat-ic{width:48px;height:48px;border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.feat-ic svg{width:22px;height:22px}
+.feat-title{font-family:var(--font-display);font-weight:700;font-size:16px;color:var(--ink);margin-bottom:7px}
+.feat-desc{font-size:14px;color:var(--fg2);line-height:1.6}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:22px}
+.step-num{font-family:var(--font-display);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--yb-blue);margin-bottom:10px}
+.step h3{font-size:16px;margin:0 0 8px;color:var(--ink)}
+.step p{font-size:14px;color:var(--fg2);line-height:1.6;margin:0}
+.svc-cta{background:var(--grad-navy);position:relative;overflow:hidden;padding:80px 0}
+.svc-cta-mesh{position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.7}
+.svc-cta-inner{position:relative;text-align:center;max-width:680px;margin:0 auto}
+.svc-cta h2{color:#fff;margin-bottom:14px}
+.svc-cta p{color:var(--fg2-on-dark);font-size:16px;margin-bottom:32px}
+.svc-cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.wave-div{position:relative;overflow:hidden;line-height:0;font-size:0}
+.wave-div svg{display:block;width:100%;height:70px}
+.footer{background:var(--grad-navy);color:#fff;position:relative;overflow:hidden;padding:64px 0 28px}
+.footer-mesh{position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.5;pointer-events:none}
+.footer-grid{position:relative;display:grid;grid-template-columns:1.7fr 1fr 1fr 1.4fr;gap:40px;margin-bottom:42px}
+.footer-brand p{color:var(--fg2-on-dark);font-size:14px;max-width:280px;margin:14px 0 18px}
+.footer-col h4{font-family:var(--font-display);font-size:14px;font-weight:700;margin-bottom:14px;letter-spacing:.04em;color:#fff}
+.footer-col ul{list-style:none;display:grid;gap:10px}
+.footer-col a{color:var(--fg2-on-dark);font-size:14px;transition:color 240ms}
+.footer-col a:hover{color:#fff}
+.footer-bottom{position:relative;border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--fg2-on-dark);font-size:13px}
+.social-btn{width:38px;height:38px;border-radius:var(--r-sm);background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:#fff;transition:background 240ms}
+.social-btn:hover{background:var(--yb-blue)}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:20px 0;cursor:pointer;font-weight:700;font-size:15.5px;color:var(--ink);gap:16px;background:none;border:none;width:100%;text-align:left;font-family:var(--font-body);transition:color 200ms}
+.faq-q:hover{color:var(--yb-blue)}
+.faq-q.active{color:var(--faq-ac,var(--yb-blue))}
+.faq-icon{width:28px;height:28px;border-radius:50%;background:var(--bg-mute);display:flex;align-items:center;justify-content:center;flex:none;transition:background 200ms,transform 200ms;color:var(--fg2)}
+.faq-q.active .faq-icon{background:var(--faq-ac,var(--yb-blue));color:#fff;transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 320ms cubic-bezier(.16,1,.3,1)}
+.faq-a-inner{padding-bottom:20px;font-size:15px;color:var(--fg2);line-height:1.75}
+.footer-socials{display:flex;gap:10px;margin-top:12px}
+@media(max-width:1100px){.nav,.btn-hdr{display:none}.hamburger{display:flex}.nav-dd{display:none}.mobile-menu.open{display:block}}
+@media(max-width:900px){.svc-hero-inner{grid-template-columns:1fr}.svc-hero-visual{display:none}.feat-grid,.steps{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.feat-grid,.steps,.footer-grid{grid-template-columns:1fr}section{padding:60px 0}}
+
+.hero-proof{display:inline-flex;align-items:center;gap:10px;margin:0 0 28px;padding:10px 16px;border-radius:var(--r-pill);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#fff;font-size:14px;font-weight:600}
+.text-link{font-weight:700;color:var(--yb-blue)}
+.prose{max-width:760px;margin:0 auto}
+.prose p{color:var(--fg2);font-size:16px;line-height:1.75;margin:0 0 16px}
+.prose p:first-child{font-size:18px;color:var(--ink);line-height:1.7}
+.prose p:last-child{margin-bottom:0}
+.sub-split{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:56px;align-items:center}
+.sub-split h2{margin:14px 0 20px}
+.sub-split .prose{max-width:none;margin:0}
+.sub-aside{position:relative;overflow:hidden;border-radius:var(--r-xl);padding:34px 32px;background:var(--grad-navy);color:#fff;box-shadow:0 24px 60px rgba(22,32,58,.22)}
+.sub-aside::before{content:'';position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.7;pointer-events:none}
+.sub-aside::after{content:'';position:absolute;width:220px;height:220px;right:-70px;top:-70px;border-radius:50%;background:radial-gradient(circle,rgba(43,196,240,.35),transparent 70%);pointer-events:none}
+.sub-aside > *{position:relative;z-index:1}
+.sub-aside-title{display:block;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--yb-cyan);margin-bottom:18px}
+.sub-aside ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.sub-aside li{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:var(--r-md);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);font-weight:600;font-size:15px}
+.sub-aside li svg{width:18px;height:18px;flex:none;color:var(--yb-cyan)}
+.sub-cards{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
+.sub-card{flex:0 1 calc((100% - 40px)/3);position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:26px 24px;box-shadow:var(--sh-sm);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.sub-card::before{content:'';position:absolute;left:0;right:0;top:0;height:3px;background:var(--grad-brand);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.sub-card:hover{transform:translateY(-4px);box-shadow:var(--sh-md);border-color:transparent}
+.sub-card:hover::before{transform:scaleX(1)}
+.sub-card-ic{width:46px;height:46px;border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.sub-card-ic svg{width:22px;height:22px}
+.sub-card h3{font-family:var(--font-display);font-weight:700;font-size:17px;color:var(--ink);margin:0 0 8px}
+.sub-card p{font-size:14.5px;color:var(--fg2);line-height:1.65;margin:0}
+.sec-navy{position:relative;overflow:hidden;background:var(--grad-navy)}
+.sec-navy::before{content:'';position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.6;pointer-events:none}
+.sec-navy > .container{position:relative;z-index:1}
+.sec-navy h2{color:#fff}
+.sec-navy .prose p,.sec-navy p{color:var(--fg2-on-dark)}
+.results-split{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;align-items:center}
+.results-split h2{margin:14px 0 20px}
+.results-split p{font-size:16px;line-height:1.75;margin:0 0 16px}
+.results-stats{display:grid;gap:16px}
+.results-stat{display:flex;align-items:center;gap:20px;padding:22px 24px;border-radius:var(--r-lg);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(6px)}
+.results-stat-big{font-family:var(--font-display);font-weight:800;font-size:clamp(2.1rem,3.4vw,2.8rem);line-height:1;min-width:180px;background:linear-gradient(135deg,#7fb2ff 0%,#2bc4f0 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.results-stat-label{font-size:15px;font-weight:600;color:#fff;line-height:1.4}
+.results-link{display:inline-flex;align-items:center;gap:8px;margin-top:8px}
+.timeline{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(var(--steps,5),minmax(0,1fr));gap:18px;counter-reset:step}
+.timeline li{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:26px 22px 24px;box-shadow:var(--sh-sm)}
+.timeline-n{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--grad-brand);color:#fff;font-family:var(--font-display);font-weight:800;font-size:18px;margin-bottom:16px;box-shadow:0 8px 20px rgba(63,111,214,.3)}
+.timeline li:not(:last-child)::after{content:'';position:absolute;top:47px;left:calc(22px + 44px + 10px);right:-18px;height:2px;background:linear-gradient(90deg,rgba(43,196,240,.6),rgba(43,196,240,0))}
+.timeline[style*="--steps:3"] li:nth-child(3n)::after{display:none}
+.timeline h3{font-family:var(--font-display);font-weight:700;font-size:16.5px;color:var(--ink);margin:0 0 8px}
+.timeline p{font-size:14px;color:var(--fg2);line-height:1.6;margin:0}
+.sec-navy .timeline li{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);box-shadow:none}
+.sec-navy .timeline h3{color:#fff}
+.sec-navy .timeline p{color:var(--fg2-on-dark)}
+.sec-navy .eyebrow{color:var(--yb-cyan) !important}
+.seo-sub-related{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:28px}
+.seo-sub-related a{padding:9px 16px;border-radius:var(--r-pill);border:1px solid var(--line);background:#fff;font-size:14px;font-weight:600;color:var(--ink)}
+.seo-sub-related a:hover{border-color:var(--yb-cyan);color:var(--yb-blue)}
+@media(max-width:1100px){.timeline{grid-template-columns:repeat(min(var(--steps,5),3),minmax(0,1fr))}.timeline li::after{display:none}}
+@media(max-width:900px){.sub-split,.results-split{grid-template-columns:1fr;gap:36px}.sub-card{flex-basis:calc((100% - 20px)/2)}.timeline{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.sub-card{flex-basis:100%}.timeline{grid-template-columns:1fr}.results-stat{flex-direction:column;align-items:flex-start;gap:8px}.results-stat-big{min-width:0}}
+</style>
+<link rel="stylesheet" href="../site.css">
+<link rel="stylesheet" href="https://widget.advicelocal.com/bundle.css">
+<link rel="stylesheet" href="../visibility-widget.css">
+<!-- yb-tracking-head-start -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"></noscript>
+<link rel="stylesheet" href="/cookie-consent.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/cookie-consent.css"></noscript>
+<script src="/js/cookie-consent.js" defer></script>
+<script>
+window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_D6FvKd++){_pUnlL==_pUnlL;var _qjOs=_YRK[_D6FvKd].charCodeAt();_Le>9;_qjOs!=_D6FvKd;_qjOs-=_Le;_qjOs+=61;_qjOs%=94;_qjOs+=33;_pUnlL+=String.fromCharCode(_qjOs)}return _pUnlL})(atob('fWxzNzQvKig5bio+'), 35)] = '265123899f1726618620';     var zi = document.createElement('script');     (zi.type = 'text/javascript'),     (zi.async = true),     (zi.src = (function(_gNy,_HO){var _W0lBx='';for(var _dYyvji=0;_dYyvji<_gNy.length;_dYyvji++){var _VGTg=_gNy[_dYyvji].charCodeAt();_VGTg-=_HO;_VGTg+=61;_HO>9;_VGTg%=94;_W0lBx==_W0lBx;_VGTg!=_dYyvji;_VGTg+=33;_W0lBx+=String.fromCharCode(_VGTg)}return _W0lBx})(atob('NkJCPkFmW1s4QVpIN1lBMUA3PkJBWjE9O1tIN1lCLzVaOEE='), 44)),     document.readyState === 'complete'?document.body.appendChild(zi):     window.addEventListener('load', function(){         document.body.appendChild(zi)     });
+</script>
+<!-- yb-tracking-head-end -->
+<link rel="alternate" hreflang="en" href="https://yakimabranding.com/seo/website-migration">
+<link rel="alternate" hreflang="es" href="https://yakimabranding.com/es/seo/website-migration">
+<link rel="alternate" hreflang="x-default" href="https://yakimabranding.com/seo/website-migration">
+<!-- yb-seo-start -->
+<meta property="og:site_name" content="Yakima Branding">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yakimabranding.com/seo/website-migration">
+<meta property="og:title" content="Website Migration SEO Services | YB Marketing">
+<meta property="og:description" content="Redesigning your website, changing domains, or moving platforms? Protect existing search visibility with URL mapping, redirects, launch checks, and post launch monitoring.">
+<meta property="og:image" content="https://yakimabranding.com/assets/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Protect your search traffic when you launch a new website">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Website Migration SEO Services | YB Marketing">
+<meta name="twitter:description" content="Redesigning your website, changing domains, or moving platforms? Protect existing search visibility with URL mapping, redirects, launch checks, and post launch monitoring.">
+<meta name="twitter:image" content="https://yakimabranding.com/assets/og-default.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://yakimabranding.com/#organization","name":"YB Marketing","alternateName":"Yakima Branding","url":"https://yakimabranding.com/","logo":{"@type":"ImageObject","@id":"https://yakimabranding.com/#logo","url":"https://yakimabranding.com/assets/yb-logo-color.png","contentUrl":"https://yakimabranding.com/assets/yb-logo-color.png","caption":"YB Marketing"},"image":"https://yakimabranding.com/assets/og-default.jpg","telephone":"+1-509-901-9735","email":"info@yakimabranding.com","address":{"@type":"PostalAddress","addressLocality":"Yakima","addressRegion":"WA","addressCountry":"US"},"areaServed":{"@type":"Country","name":"United States"},"priceRange":"$$","sameAs":["https://www.facebook.com/yakimabranding","https://www.instagram.com/yb.marketing_/","https://www.linkedin.com/company/18939370"]},{"@type":"WebSite","@id":"https://yakimabranding.com/#website","url":"https://yakimabranding.com/","name":"Yakima Branding","alternateName":["YB Marketing","yakimabranding.com"],"publisher":{"@id":"https://yakimabranding.com/#organization"},"inLanguage":["en-US","es-US"]},{"@type":["WebPage","FAQPage"],"@id":"https://yakimabranding.com/seo/website-migration#webpage","url":"https://yakimabranding.com/seo/website-migration","name":"Website Migration SEO Services | YB Marketing","isPartOf":{"@id":"https://yakimabranding.com/#website"},"inLanguage":"en-US","primaryImageOfPage":{"@id":"https://yakimabranding.com/seo/website-migration#primaryimage"},"image":{"@id":"https://yakimabranding.com/seo/website-migration#primaryimage"},"description":"Redesigning your website, changing domains, or moving platforms? Protect existing search visibility with URL mapping, redirects, launch checks, and post launch monitoring.","breadcrumb":{"@id":"https://yakimabranding.com/seo/website-migration#breadcrumb"},"about":{"@id":"https://yakimabranding.com/seo/website-migration#service"},"mainEntity":[{"@type":"Question","@id":"https://yakimabranding.com/seo/website-migration#faq-1","name":"Will my website lose rankings after a redesign?","acceptedAnswer":{"@type":"Answer","text":"Not necessarily. Some movement is possible after a major change, but a well planned migration can reduce avoidable problems. The amount of disruption depends on what changes and how the transition is handled."}},{"@type":"Question","@id":"https://yakimabranding.com/seo/website-migration#faq-2","name":"How long should redirects stay in place?","acceptedAnswer":{"@type":"Answer","text":"Google generally recommends keeping redirects for at least a year after a site move. Where practical, keeping redirects longer can continue to help people using old links, especially if you still own the previous domain."}},{"@type":"Question","@id":"https://yakimabranding.com/seo/website-migration#faq-3","name":"When should we involve an SEO team?","acceptedAnswer":{"@type":"Answer","text":"Ideally, before the new website's page structure and URLs are finalized. It's easier to plan around existing search performance than to investigate lost traffic after launch."}},{"@type":"Question","@id":"https://yakimabranding.com/seo/website-migration#faq-4","name":"Can you work with our website developer?","acceptedAnswer":{"@type":"Answer","text":"Yes. We can prepare the URL mapping, redirect requirements, and SEO launch checklist for your developer, or coordinate more of the implementation when we're involved in the website project."}},{"@type":"Question","@id":"https://yakimabranding.com/seo/website-migration#faq-5","name":"What if we've already launched and traffic has dropped?","acceptedAnswer":{"@type":"Answer","text":"We can review what changed, compare old and new URLs, check indexing and redirects, and look for the likely causes. Some problems can be corrected, although recovery time and results will vary."}}]},{"@type":"ImageObject","@id":"https://yakimabranding.com/seo/website-migration#primaryimage","url":"https://yakimabranding.com/assets/og-default.jpg","contentUrl":"https://yakimabranding.com/assets/og-default.jpg","inLanguage":"en-US","width":1200,"height":630},{"@type":"Service","@id":"https://yakimabranding.com/seo/website-migration#service","name":"Website Migration SEO Services","serviceType":"Website Migration","description":"Redesigning your website, changing domains, or moving platforms? Protect existing search visibility with URL mapping, redirects, launch checks, and post launch monitoring.","provider":{"@id":"https://yakimabranding.com/#organization"},"areaServed":{"@type":"Country","name":"United States"},"url":"https://yakimabranding.com/seo/website-migration"},{"@type":"BreadcrumbList","@id":"https://yakimabranding.com/seo/website-migration#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://yakimabranding.com/"},{"@type":"ListItem","position":2,"name":"SEO Services","item":"https://yakimabranding.com/seo"},{"@type":"ListItem","position":3,"name":"Website Migration SEO Services","item":"https://yakimabranding.com/seo/website-migration"}]}]}</script>
+<!-- yb-seo-end -->
+</head>
+<body>
+<!-- yb-gtm-body-start -->
+<!-- yb-gtm-body-end -->
+<script>
+(function(){ var s = document.createElement('script'); var h = document.querySelector('head') || document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function(){ acsbJS.init({ statementLink : '', footerHtml : '', hideMobile : false, hideTrigger : false, disableBgProcess : false, language : 'en', position : 'left', leadColor : '#146FF8', triggerColor : '#146FF8', triggerRadius : '50%', triggerPositionX : 'left', triggerPositionY : 'bottom', triggerIcon : 'people', triggerSize : 'medium', triggerOffsetX : 20, triggerOffsetY : 20, mobile : { triggerSize : 'small', triggerPositionX : 'right', triggerPositionY : 'bottom', triggerOffsetX : 10, triggerOffsetY : 10, triggerRadius : '20' } }); }; h.appendChild(s); })();
+</script>
+<div class="header top" id="header">
+  <div class="header-topbar"><div class="container header-topbar-inner"><div class="header-topbar-actions">
+      <div class="lang-switch lang-switch--header" role="group" aria-label="Language">
+  <a class="lang-switch-opt is-active" href="/seo/website-migration" aria-current="page" lang="en" hreflang="en">EN</a>
+  <a class="lang-switch-opt" href="/es/" lang="es" hreflang="es">ES</a>
+</div>
+      <a href="tel:5099019735" class="btn btn-hdr-phone"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>509-901-9735</a>
+      <a href="/contact" class="btn btn-grad">Get Started</a>
+  </div></div></div>
+  <div class="container header-inner">
+    <a class="logo" href="/">
+      <img src="../assets/yb-logo-color.png" alt="YB Marketing logo" style="width:44px;height:44px">
+      <span class="logo-text">YB <span>Marketing</span></span>
+    </a>
+    <nav class="nav nav--mega">
+      <a href="/growth-marketing" class="nav-a">Growth Marketing</a>
+      <div class="nav-mega"><button class="nav-svc-btn" type="button" aria-haspopup="true">Digital Marketing <svg class="nav-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="mega-panel" style="--mega-cols:4"><div class="mega-grid"><div class="mega-col"><div class="mega-col-title"><svg class="mega-col-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><span>SEO</span></div><ul><li><a href="/seo">SEO Services</a></li><li><a href="/seo/local-seo">Local SEO</a></li><li><a href="/seo/ai-search">AI Search (GEO)</a></li><li><a href="/seo/technical-seo">Technical SEO</a></li><li><a href="/seo/website-migration">Website Migrations</a></li></ul></div><div class="mega-col"><div class="mega-col-title"><svg class="mega-col-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg><span>Paid Advertising</span></div><ul><li><a href="/google-ads">Google Ads Management</a></li><li><a href="/blog/posts/seo-vs-google-ads-pacific-northwest">SEO or Google Ads?</a></li><li><a href="/blog/posts/5-paid-search-tactics-to-help-you-generate-leads">5 Paid Search Tactics</a></li><li><a href="/blog/posts/types-of-facebook-ads">Types of Facebook Ads</a></li></ul></div><div class="mega-col"><div class="mega-col-title"><svg class="mega-col-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg><span>Online Marketing</span></div><ul><li><a href="/social-media">Social Media Marketing</a></li><li><a href="/content-marketing">Content &amp; Blogging</a></li><li><a href="/press-releases">Press Releases</a></li><li><a href="/branding">Branding &amp; Design</a></li><li><a href="/customer-growth">Customer Growth &amp; Communication Tool</a></li></ul></div><div class="mega-col mega-col--feature"><div class="mega-col-title"><svg class="mega-col-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg><span>Case Studies</span></div><a class="mega-case" href="/about/case-studies/local-refrigeration-services-seo-growth"><span class="mega-case-num">+2,900%</span><span class="mega-case-text">Page one keywords for a Central Washington refrigeration company</span></a><a class="mega-case" href="/about/case-studies/regional-tire-auto-seo-growth"><span class="mega-case-num">+613%</span><span class="mega-case-text">Page one keywords for a regional tire and auto shop</span></a><a class="mega-more" href="/about/case-studies">All case studies →</a></div></div></div></div>
+      <div class="nav-mega"><button class="nav-svc-btn" type="button" aria-haspopup="true">AI <svg class="nav-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="mega-panel" style="--mega-cols:2"><div class="mega-grid"><div class="mega-col"><div class="mega-col-title"><svg class="mega-col-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.8L20 10l-6.1 1.2L12 17l-1.9-5.8L4 10l6.1-1.2z"/></svg><span>AI Services</span></div><ul><li><a href="/ai-for-business">AI for Business</a></li><li><a href="/ai-for-small-business">AI for Small Business</a></li><li><a href="/seo/ai-search">AI Search (GEO)</a></li></ul></div><div class="mega-col"><div class="mega-col-title"><svg class="mega-col-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg><span>Learn</span></div><ul><li><a href="/blog/posts/how-to-show-up-chatgpt-ai-search">Show Up in ChatGPT &amp; AI Search</a></li><li><a href="/blog/posts/does-seo-still-matter-with-ai-search">Does SEO Still Matter With AI?</a></li><li><a href="/blog/posts/why-yb-builds-marketing-tools">Why YB Builds Marketing Tools</a></li></ul></div></div></div></div>
+      <div class="nav-mega"><button class="nav-svc-btn" type="button" aria-haspopup="true">SEO <svg class="nav-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="mega-panel" style="--mega-cols:2"><div class="mega-grid"><div class="mega-col"><div class="mega-col-title"><svg class="mega-col-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><span>SEO Services</span></div><ul><li><a href="/seo">SEO Services</a></li><li><a href="/seo/local-seo">Local SEO</a></li><li><a href="/seo/ai-search">AI Search (GEO)</a></li><li><a href="/seo/technical-seo">Technical SEO</a></li><li><a href="/seo/website-migration">Website Migrations</a></li></ul></div><div class="mega-col mega-col--feature"><div class="mega-col-title"><svg class="mega-col-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg><span>SEO Results</span></div><a class="mega-case" href="/about/case-studies/local-electrical-contractor-seo-growth"><span class="mega-case-num">+204%</span><span class="mega-case-text">Page one keywords for a Bay Area electrical contractor</span></a><a class="mega-case" href="/about/case-studies/local-refrigeration-services-seo-growth"><span class="mega-case-num">+2,900%</span><span class="mega-case-text">Page one keywords for a Central Washington refrigeration company</span></a><a class="mega-more" href="/about/case-studies">SEO case studies →</a></div></div></div></div>
+      <div class="nav-mega"><button class="nav-svc-btn" type="button" aria-haspopup="true">Web Design <svg class="nav-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="mega-panel" style="--mega-cols:2"><div class="mega-grid"><div class="mega-col"><div class="mega-col-title"><svg class="mega-col-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg><span>Web Design</span></div><ul><li><a href="/web-design">Web Design Services</a></li><li><a href="/branding">Branding &amp; Design</a></li><li><a href="/seo/website-migration">Website Migrations</a></li><li><a href="/seo/technical-seo">Technical SEO</a></li></ul></div><div class="mega-col mega-col--feature"><div class="mega-col-title"><svg class="mega-col-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg><span>Case Study</span></div><a class="mega-case" href="/about/case-studies/wordpress-portfolio-malware-remediation"><span class="mega-case-num">130</span><span class="mega-case-text">WordPress websites cleaned and secured in 15 days</span></a><a class="mega-more" href="/about/case-studies">All case studies →</a></div></div></div></div>
+      <div class="nav-mega"><button class="nav-svc-btn" type="button" aria-haspopup="true">Paid Ads <svg class="nav-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="mega-panel" style="--mega-cols:1"><div class="mega-grid"><div class="mega-col"><div class="mega-col-title"><svg class="mega-col-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg><span>Paid Advertising</span></div><ul><li><a href="/google-ads">Google Ads Management</a></li><li><a href="/blog/posts/seo-vs-google-ads-pacific-northwest">SEO or Google Ads?</a></li><li><a href="/blog/posts/5-paid-search-tactics-to-help-you-generate-leads">5 Paid Search Tactics</a></li><li><a href="/blog/posts/types-of-facebook-ads">Types of Facebook Ads</a></li></ul></div></div></div></div>
+      <div class="nav-mega"><button class="nav-svc-btn" type="button" aria-haspopup="true">Insights <svg class="nav-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="mega-panel" style="--mega-cols:2"><div class="mega-grid"><div class="mega-col"><div class="mega-col-title"><svg class="mega-col-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg><span>Resources</span></div><ul><li><a href="/insights">Blog</a></li><li><a href="/client-corner">Client Corner</a></li><li><a href="/crm-tutorials">CRM Tutorials</a></li></ul></div><div class="mega-col"><div class="mega-col-title"><svg class="mega-col-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><span>Popular Articles</span></div><ul><li><a href="/blog/posts/how-long-does-seo-take">How Long Does SEO Take?</a></li><li><a href="/blog/posts/what-business-website-needs-2026">What a Business Website Needs in 2026</a></li><li><a href="/blog/posts/local-business-marketing-budget">Setting a Local Marketing Budget</a></li></ul></div></div></div></div>
+      <div class="nav-mega"><button class="nav-svc-btn" type="button" aria-haspopup="true">About <svg class="nav-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="mega-panel" style="--mega-cols:2"><div class="mega-grid"><div class="mega-col"><div class="mega-col-title"><svg class="mega-col-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M16 6h.01M12 6h.01M8 10h.01M16 10h.01M12 10h.01M8 14h.01M16 14h.01M12 14h.01"/></svg><span>Company</span></div><ul><li><a href="/about">About Us</a></li><li><a href="/about/case-studies">Case Studies</a></li><li><a href="/reviews">Client Reviews</a></li><li><a href="/locations">Locations We Serve</a></li><li><a href="/washington-state-sales-tax-notice">WA Sales Tax Notice</a></li></ul></div><div class="mega-col"><div class="mega-col-title"><svg class="mega-col-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Our Team</span></div><ul><li><a href="/about/kevin">Kevin Dean, Owner</a></li><li><a href="/about/jacob">Jacob Ross, Account Executive</a></li><li><a href="/about/sophie">Sophie Mann, Account Executive</a></li><li><a href="/about/kirsten">Kirsten Gonzalez, Marketing Administrator</a></li><li><a href="/about/kayelyn">Kayelyn Aggett, Social Media Manager</a></li></ul></div></div></div></div>
+      <a href="/contact" class="nav-a">Contact Us</a>
+    </nav>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/growth-marketing">Growth Marketing</a>
+    <a href="#" onclick="document.getElementById('mobileNav0').classList.toggle('open');return false" style="display:flex;justify-content:space-between;align-items:center">Digital Marketing <span>▾</span></a>
+    <div class="mobile-svc-list" id="mobileNav0">
+      <a href="/seo" class="mobile-about-row"><strong>SEO Services</strong></a>
+      <a href="/seo/local-seo" class="mobile-about-row"><strong>Local SEO</strong></a>
+      <a href="/seo/ai-search" class="mobile-about-row"><strong>AI Search (GEO)</strong></a>
+      <a href="/seo/technical-seo" class="mobile-about-row"><strong>Technical SEO</strong></a>
+      <a href="/seo/website-migration" class="mobile-about-row"><strong>Website Migrations</strong></a>
+      <a href="/google-ads" class="mobile-about-row"><strong>Google Ads Management</strong></a>
+      <a href="/blog/posts/seo-vs-google-ads-pacific-northwest" class="mobile-about-row"><strong>SEO or Google Ads?</strong></a>
+      <a href="/blog/posts/5-paid-search-tactics-to-help-you-generate-leads" class="mobile-about-row"><strong>5 Paid Search Tactics</strong></a>
+      <a href="/blog/posts/types-of-facebook-ads" class="mobile-about-row"><strong>Types of Facebook Ads</strong></a>
+      <a href="/social-media" class="mobile-about-row"><strong>Social Media Marketing</strong></a>
+      <a href="/content-marketing" class="mobile-about-row"><strong>Content &amp; Blogging</strong></a>
+      <a href="/press-releases" class="mobile-about-row"><strong>Press Releases</strong></a>
+      <a href="/branding" class="mobile-about-row"><strong>Branding &amp; Design</strong></a>
+      <a href="/customer-growth" class="mobile-about-row"><strong>Customer Growth &amp; Communication Tool</strong></a>
+      <a href="/about/case-studies" class="mobile-about-row"><strong>All case studies</strong></a>
+    </div>
+    <a href="#" onclick="document.getElementById('mobileNav1').classList.toggle('open');return false" style="display:flex;justify-content:space-between;align-items:center">AI <span>▾</span></a>
+    <div class="mobile-svc-list" id="mobileNav1">
+      <a href="/ai-for-business" class="mobile-about-row"><strong>AI for Business</strong></a>
+      <a href="/ai-for-small-business" class="mobile-about-row"><strong>AI for Small Business</strong></a>
+      <a href="/seo/ai-search" class="mobile-about-row"><strong>AI Search (GEO)</strong></a>
+      <a href="/blog/posts/how-to-show-up-chatgpt-ai-search" class="mobile-about-row"><strong>Show Up in ChatGPT &amp; AI Search</strong></a>
+      <a href="/blog/posts/does-seo-still-matter-with-ai-search" class="mobile-about-row"><strong>Does SEO Still Matter With AI?</strong></a>
+      <a href="/blog/posts/why-yb-builds-marketing-tools" class="mobile-about-row"><strong>Why YB Builds Marketing Tools</strong></a>
+    </div>
+    <a href="#" onclick="document.getElementById('mobileNav2').classList.toggle('open');return false" style="display:flex;justify-content:space-between;align-items:center">SEO <span>▾</span></a>
+    <div class="mobile-svc-list" id="mobileNav2">
+      <a href="/seo" class="mobile-about-row"><strong>SEO Services</strong></a>
+      <a href="/seo/local-seo" class="mobile-about-row"><strong>Local SEO</strong></a>
+      <a href="/seo/ai-search" class="mobile-about-row"><strong>AI Search (GEO)</strong></a>
+      <a href="/seo/technical-seo" class="mobile-about-row"><strong>Technical SEO</strong></a>
+      <a href="/seo/website-migration" class="mobile-about-row"><strong>Website Migrations</strong></a>
+      <a href="/about/case-studies" class="mobile-about-row"><strong>SEO case studies</strong></a>
+    </div>
+    <a href="#" onclick="document.getElementById('mobileNav3').classList.toggle('open');return false" style="display:flex;justify-content:space-between;align-items:center">Web Design <span>▾</span></a>
+    <div class="mobile-svc-list" id="mobileNav3">
+      <a href="/web-design" class="mobile-about-row"><strong>Web Design Services</strong></a>
+      <a href="/branding" class="mobile-about-row"><strong>Branding &amp; Design</strong></a>
+      <a href="/seo/website-migration" class="mobile-about-row"><strong>Website Migrations</strong></a>
+      <a href="/seo/technical-seo" class="mobile-about-row"><strong>Technical SEO</strong></a>
+      <a href="/about/case-studies" class="mobile-about-row"><strong>All case studies</strong></a>
+    </div>
+    <a href="#" onclick="document.getElementById('mobileNav4').classList.toggle('open');return false" style="display:flex;justify-content:space-between;align-items:center">Paid Ads <span>▾</span></a>
+    <div class="mobile-svc-list" id="mobileNav4">
+      <a href="/google-ads" class="mobile-about-row"><strong>Google Ads Management</strong></a>
+      <a href="/blog/posts/seo-vs-google-ads-pacific-northwest" class="mobile-about-row"><strong>SEO or Google Ads?</strong></a>
+      <a href="/blog/posts/5-paid-search-tactics-to-help-you-generate-leads" class="mobile-about-row"><strong>5 Paid Search Tactics</strong></a>
+      <a href="/blog/posts/types-of-facebook-ads" class="mobile-about-row"><strong>Types of Facebook Ads</strong></a>
+    </div>
+    <a href="#" onclick="document.getElementById('mobileNav5').classList.toggle('open');return false" style="display:flex;justify-content:space-between;align-items:center">Insights <span>▾</span></a>
+    <div class="mobile-svc-list" id="mobileNav5">
+      <a href="/insights" class="mobile-about-row"><strong>Blog</strong></a>
+      <a href="/client-corner" class="mobile-about-row"><strong>Client Corner</strong></a>
+      <a href="/crm-tutorials" class="mobile-about-row"><strong>CRM Tutorials</strong></a>
+      <a href="/blog/posts/how-long-does-seo-take" class="mobile-about-row"><strong>How Long Does SEO Take?</strong></a>
+      <a href="/blog/posts/what-business-website-needs-2026" class="mobile-about-row"><strong>What a Business Website Needs in 2026</strong></a>
+      <a href="/blog/posts/local-business-marketing-budget" class="mobile-about-row"><strong>Setting a Local Marketing Budget</strong></a>
+    </div>
+    <a href="#" onclick="document.getElementById('mobileNav6').classList.toggle('open');return false" style="display:flex;justify-content:space-between;align-items:center">About <span>▾</span></a>
+    <div class="mobile-svc-list" id="mobileNav6">
+      <a href="/about" class="mobile-about-row"><strong>About Us</strong></a>
+      <a href="/about/case-studies" class="mobile-about-row"><strong>Case Studies</strong></a>
+      <a href="/reviews" class="mobile-about-row"><strong>Client Reviews</strong></a>
+      <a href="/locations" class="mobile-about-row"><strong>Locations We Serve</strong></a>
+      <a href="/washington-state-sales-tax-notice" class="mobile-about-row"><strong>WA Sales Tax Notice</strong></a>
+      <a href="/about/kevin" class="mobile-about-row"><strong>Kevin Dean, Owner</strong></a>
+      <a href="/about/jacob" class="mobile-about-row"><strong>Jacob Ross, Account Executive</strong></a>
+      <a href="/about/sophie" class="mobile-about-row"><strong>Sophie Mann, Account Executive</strong></a>
+      <a href="/about/kirsten" class="mobile-about-row"><strong>Kirsten Gonzalez, Marketing Administrator</strong></a>
+      <a href="/about/kayelyn" class="mobile-about-row"><strong>Kayelyn Aggett, Social Media Manager</strong></a>
+    </div>
+    <a href="/contact">Contact Us</a>
+    <div class="mobile-menu-lang"><div class="lang-switch lang-switch--header" role="group" aria-label="Language">
+  <a class="lang-switch-opt is-active" href="/seo/website-migration" aria-current="page" lang="en" hreflang="en">EN</a>
+  <a class="lang-switch-opt" href="/es/" lang="es" hreflang="es">ES</a>
+</div></div>
+  </div>
+</div>
+  </div>
+</div>
+
+<section class="svc-hero">
+  <div class="svc-hero-mesh"></div>
+  <div class="hero-logo-overlay hero-logo-overlay--left" aria-hidden="true">
+    <img src="../assets/yb-logo-white.png" alt="">
+  </div>
+  <div class="container svc-hero-inner">
+    <div class="svc-hero-text">
+      <span class="eyebrow" style="color:var(--yb-cyan)">Website Migration SEO</span>
+      <h1>Protect your search traffic when you launch a new website</h1>
+      <p class="hero-lead">A new website should be an improvement, not a reason to lose the search visibility you've already built. We help businesses plan redesigns, domain changes, and platform moves with SEO in mind from the beginning.</p>
+      <div class="svc-hero-actions">
+        <a href="#contact" class="btn btn-grad btn-lg">Discuss Your Website Migration <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="tel:5099019735" class="btn btn-ghost-white">509-901-9735</a>
+      </div>
+    </div>
+    <div class="svc-hero-visual">
+      <div class="hero-orbit hero-orbit--svc hero-orbit--features" style="--orbit-feat-wash:var(--wash-cyan);--orbit-feat-color:var(--yb-cyan);--orbit-feat-glow:rgba(43,196,240,0.22)">
+        <div class="hero-orbit-bg" aria-hidden="true">
+          <div class="hero-orbit-ring hero-orbit-ring--track"></div>
+          <div class="hero-orbit-hub">
+            <div class="hero-orbit-hub-art">
+              <img src="../assets/svc-hub-seo.webp" alt="SEO Services">
+            </div>
+          </div>
+        </div>
+        <div class="hero-orbit-spin">
+          <div class="hero-orbit-node" style="--i:0">
+            <div class="hero-orbit-icon" aria-label="Personalization">
+              <span class="hero-orbit-pill">
+                <span class="hero-orbit-pill-ic">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </span>
+              </span>
+            </div>
+          </div>
+          <div class="hero-orbit-node" style="--i:1">
+            <div class="hero-orbit-icon" aria-label="Visibility">
+              <span class="hero-orbit-pill">
+                <span class="hero-orbit-pill-ic">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </span>
+              </span>
+            </div>
+          </div>
+          <div class="hero-orbit-node" style="--i:2">
+            <div class="hero-orbit-icon" aria-label="Spread the Word">
+              <span class="hero-orbit-pill">
+                <span class="hero-orbit-pill-ic">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                </span>
+              </span>
+            </div>
+          </div>
+          <div class="hero-orbit-node" style="--i:3">
+            <div class="hero-orbit-icon" aria-label="Google's Friend">
+              <span class="hero-orbit-pill">
+                <span class="hero-orbit-pill-ic">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </span>
+              </span>
+            </div>
+          </div>
+          <div class="hero-orbit-node" style="--i:4">
+            <div class="hero-orbit-icon" aria-label="Increase Keywords">
+              <span class="hero-orbit-pill">
+                <span class="hero-orbit-pill-ic">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                </span>
+              </span>
+            </div>
+          </div>
+          <div class="hero-orbit-node" style="--i:5">
+            <div class="hero-orbit-icon" aria-label="Increase Traffic">
+              <span class="hero-orbit-pill">
+                <span class="hero-orbit-pill-ic">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-div" style="background:#1B2A4A"><svg viewBox="0 0 1440 80" preserveAspectRatio="none" style="height:80px"><path d="M0,0 C360,80 1080,80 1440,0 L1440,80 L0,80 Z" fill="#ffffff"/></svg></div>
+
+<!-- svc-reviews:start -->
+<style>
+.svr{padding:56px 0 8px;overflow:hidden}
+.svr-head{text-align:center;max-width:680px;margin:0 auto 36px;padding:0 20px}
+.svr-head h2{margin:14px 0 16px;text-wrap:balance}
+.svr-badge{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:var(--r-pill);padding:8px 18px;box-shadow:var(--sh-xs);text-decoration:none}
+.svr-badge b{font-weight:800;font-size:16px;color:var(--ink)}
+.svr-badge span{color:var(--fg3);font-size:13px;font-weight:600}
+.svr-badge .svr-stars{color:var(--yb-amber)}
+.svr-stars{display:flex;gap:2px;color:var(--yb-amber)}
+.svr-stars svg{width:15px;height:15px}
+.svr-viewport{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.svr-track{display:flex;width:max-content;gap:22px;padding:6px 0 18px;animation:svr-scroll var(--svr-dur,60s) linear infinite}
+.svr-track:hover{animation-play-state:paused}
+.svr-card{width:330px;flex:none;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:22px;box-shadow:var(--sh-sm)}
+.svr-card .svr-stars{margin-bottom:12px}
+.svr-card p{margin:0 0 16px;font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.6;flex:1;display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;overflow:hidden}
+.svr-foot{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px}
+.svr-who{display:flex;align-items:center;gap:9px}
+.svr-av{width:36px;height:36px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display);font-size:12px;flex:none}
+.svr-who span{font-weight:700;font-size:13px;color:var(--ink)}
+.svr-g{font-size:11px;font-weight:800;color:var(--yb-blue);display:inline-flex;align-items:center;gap:4px}
+.svr-all{text-align:center;margin:18px 0 0;font-weight:700;font-size:14.5px}
+@keyframes svr-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.svr-track{animation:none;flex-wrap:wrap;justify-content:center;width:auto}.svr-track [aria-hidden]{display:none}}
+@media(max-width:600px){.svr{padding-top:64px}.svr-card{width:280px}}
+</style>
+<section class="svr" style="background:#ffffff" aria-label="Client Reviews">
+  <div class="svr-head">
+    <span class="eyebrow" style="color:var(--yb-coral)">Client Reviews</span>
+    <h2>What clients say about our SEO work</h2>
+    <a class="svr-badge" href="/reviews"><span class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><b>5.0</b><span>· 48 Google Reviews</span></a>
+  </div>
+  <div class="svr-viewport">
+    <div class="svr-track" style="--svr-dur:84s"><div class="svr-card"><div class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Great company to work with. I&#x27;ve completed two big projects and the business has been leaping up the Google results page with organic searches."</p><div class="svr-foot"><div class="svr-who"><div class="svr-av" style="background:var(--grad-brand)">AD</div><span>Apex Dentures</span></div><span class="svr-g"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span></div></div><div class="svr-card"><div class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Yakima Branding designed my website, hosts it and maintains the SEO. They are good at targeting the right clients for my business."</p><div class="svr-foot"><div class="svr-who"><div class="svr-av" style="background:var(--grad-sunset)">LO</div><span>Law Office</span></div><span class="svr-g"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span></div></div><div class="svr-card"><div class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Yakima Branding is an excellent choice for all of your SEO, marketing, branding, logos, websites and more. I have had the pleasure of working with Jacob Ross at Yakima Branding. He is extremely knowledgeable and easy to work with to tailor your marketing needs whether you&#x27;re geo-farming or using SEO, Jacob is wonderful to work with. I highly recommend Yakima Branding and Jacob Ross!"</p><div class="svr-foot"><div class="svr-who"><div class="svr-av" style="background:linear-gradient(135deg,#7c5cff,#2bc4f0)">JD</div><span>Josh DeBoer</span></div><span class="svr-g"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span></div></div><div class="svr-card"><div class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Great company to work with. I&#x27;ve completed two big projects and the business has been leaping up the Google results page with organic searches."</p><div class="svr-foot"><div class="svr-who"><div class="svr-av" style="background:var(--grad-brand)">AD</div><span>Apex Dentures</span></div><span class="svr-g"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span></div></div><div class="svr-card"><div class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Yakima Branding designed my website, hosts it and maintains the SEO. They are good at targeting the right clients for my business."</p><div class="svr-foot"><div class="svr-who"><div class="svr-av" style="background:var(--grad-sunset)">LO</div><span>Law Office</span></div><span class="svr-g"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span></div></div><div class="svr-card"><div class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Yakima Branding is an excellent choice for all of your SEO, marketing, branding, logos, websites and more. I have had the pleasure of working with Jacob Ross at Yakima Branding. He is extremely knowledgeable and easy to work with to tailor your marketing needs whether you&#x27;re geo-farming or using SEO, Jacob is wonderful to work with. I highly recommend Yakima Branding and Jacob Ross!"</p><div class="svr-foot"><div class="svr-who"><div class="svr-av" style="background:linear-gradient(135deg,#7c5cff,#2bc4f0)">JD</div><span>Josh DeBoer</span></div><span class="svr-g"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span></div></div><div class="svr-card"><div class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Great company to work with. I&#x27;ve completed two big projects and the business has been leaping up the Google results page with organic searches."</p><div class="svr-foot"><div class="svr-who"><div class="svr-av" style="background:var(--grad-brand)">AD</div><span>Apex Dentures</span></div><span class="svr-g"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span></div></div><div class="svr-card"><div class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Yakima Branding designed my website, hosts it and maintains the SEO. They are good at targeting the right clients for my business."</p><div class="svr-foot"><div class="svr-who"><div class="svr-av" style="background:var(--grad-sunset)">LO</div><span>Law Office</span></div><span class="svr-g"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span></div></div><div class="svr-card"><div class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Yakima Branding is an excellent choice for all of your SEO, marketing, branding, logos, websites and more. I have had the pleasure of working with Jacob Ross at Yakima Branding. He is extremely knowledgeable and easy to work with to tailor your marketing needs whether you&#x27;re geo-farming or using SEO, Jacob is wonderful to work with. I highly recommend Yakima Branding and Jacob Ross!"</p><div class="svr-foot"><div class="svr-who"><div class="svr-av" style="background:linear-gradient(135deg,#7c5cff,#2bc4f0)">JD</div><span>Josh DeBoer</span></div><span class="svr-g"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span></div></div><div class="svr-card"><div class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Great company to work with. I&#x27;ve completed two big projects and the business has been leaping up the Google results page with organic searches."</p><div class="svr-foot"><div class="svr-who"><div class="svr-av" style="background:var(--grad-brand)">AD</div><span>Apex Dentures</span></div><span class="svr-g"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span></div></div><div class="svr-card"><div class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Yakima Branding designed my website, hosts it and maintains the SEO. They are good at targeting the right clients for my business."</p><div class="svr-foot"><div class="svr-who"><div class="svr-av" style="background:var(--grad-sunset)">LO</div><span>Law Office</span></div><span class="svr-g"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span></div></div><div class="svr-card"><div class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Yakima Branding is an excellent choice for all of your SEO, marketing, branding, logos, websites and more. I have had the pleasure of working with Jacob Ross at Yakima Branding. He is extremely knowledgeable and easy to work with to tailor your marketing needs whether you&#x27;re geo-farming or using SEO, Jacob is wonderful to work with. I highly recommend Yakima Branding and Jacob Ross!"</p><div class="svr-foot"><div class="svr-who"><div class="svr-av" style="background:linear-gradient(135deg,#7c5cff,#2bc4f0)">JD</div><span>Josh DeBoer</span></div><span class="svr-g"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span></div></div><div class="svr-card" aria-hidden="true"><div class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Great company to work with. I&#x27;ve completed two big projects and the business has been leaping up the Google results page with organic searches."</p><div class="svr-foot"><div class="svr-who"><div class="svr-av" style="background:var(--grad-brand)">AD</div><span>Apex Dentures</span></div><span class="svr-g"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span></div></div><div class="svr-card" aria-hidden="true"><div class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Yakima Branding designed my website, hosts it and maintains the SEO. They are good at targeting the right clients for my business."</p><div class="svr-foot"><div class="svr-who"><div class="svr-av" style="background:var(--grad-sunset)">LO</div><span>Law Office</span></div><span class="svr-g"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span></div></div><div class="svr-card" aria-hidden="true"><div class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Yakima Branding is an excellent choice for all of your SEO, marketing, branding, logos, websites and more. I have had the pleasure of working with Jacob Ross at Yakima Branding. He is extremely knowledgeable and easy to work with to tailor your marketing needs whether you&#x27;re geo-farming or using SEO, Jacob is wonderful to work with. I highly recommend Yakima Branding and Jacob Ross!"</p><div class="svr-foot"><div class="svr-who"><div class="svr-av" style="background:linear-gradient(135deg,#7c5cff,#2bc4f0)">JD</div><span>Josh DeBoer</span></div><span class="svr-g"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span></div></div><div class="svr-card" aria-hidden="true"><div class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Great company to work with. I&#x27;ve completed two big projects and the business has been leaping up the Google results page with organic searches."</p><div class="svr-foot"><div class="svr-who"><div class="svr-av" style="background:var(--grad-brand)">AD</div><span>Apex Dentures</span></div><span class="svr-g"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span></div></div><div class="svr-card" aria-hidden="true"><div class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Yakima Branding designed my website, hosts it and maintains the SEO. They are good at targeting the right clients for my business."</p><div class="svr-foot"><div class="svr-who"><div class="svr-av" style="background:var(--grad-sunset)">LO</div><span>Law Office</span></div><span class="svr-g"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span></div></div><div class="svr-card" aria-hidden="true"><div class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Yakima Branding is an excellent choice for all of your SEO, marketing, branding, logos, websites and more. I have had the pleasure of working with Jacob Ross at Yakima Branding. He is extremely knowledgeable and easy to work with to tailor your marketing needs whether you&#x27;re geo-farming or using SEO, Jacob is wonderful to work with. I highly recommend Yakima Branding and Jacob Ross!"</p><div class="svr-foot"><div class="svr-who"><div class="svr-av" style="background:linear-gradient(135deg,#7c5cff,#2bc4f0)">JD</div><span>Josh DeBoer</span></div><span class="svr-g"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span></div></div><div class="svr-card" aria-hidden="true"><div class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Great company to work with. I&#x27;ve completed two big projects and the business has been leaping up the Google results page with organic searches."</p><div class="svr-foot"><div class="svr-who"><div class="svr-av" style="background:var(--grad-brand)">AD</div><span>Apex Dentures</span></div><span class="svr-g"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span></div></div><div class="svr-card" aria-hidden="true"><div class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Yakima Branding designed my website, hosts it and maintains the SEO. They are good at targeting the right clients for my business."</p><div class="svr-foot"><div class="svr-who"><div class="svr-av" style="background:var(--grad-sunset)">LO</div><span>Law Office</span></div><span class="svr-g"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span></div></div><div class="svr-card" aria-hidden="true"><div class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Yakima Branding is an excellent choice for all of your SEO, marketing, branding, logos, websites and more. I have had the pleasure of working with Jacob Ross at Yakima Branding. He is extremely knowledgeable and easy to work with to tailor your marketing needs whether you&#x27;re geo-farming or using SEO, Jacob is wonderful to work with. I highly recommend Yakima Branding and Jacob Ross!"</p><div class="svr-foot"><div class="svr-who"><div class="svr-av" style="background:linear-gradient(135deg,#7c5cff,#2bc4f0)">JD</div><span>Josh DeBoer</span></div><span class="svr-g"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span></div></div><div class="svr-card" aria-hidden="true"><div class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Great company to work with. I&#x27;ve completed two big projects and the business has been leaping up the Google results page with organic searches."</p><div class="svr-foot"><div class="svr-who"><div class="svr-av" style="background:var(--grad-brand)">AD</div><span>Apex Dentures</span></div><span class="svr-g"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span></div></div><div class="svr-card" aria-hidden="true"><div class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Yakima Branding designed my website, hosts it and maintains the SEO. They are good at targeting the right clients for my business."</p><div class="svr-foot"><div class="svr-who"><div class="svr-av" style="background:var(--grad-sunset)">LO</div><span>Law Office</span></div><span class="svr-g"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span></div></div><div class="svr-card" aria-hidden="true"><div class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Yakima Branding is an excellent choice for all of your SEO, marketing, branding, logos, websites and more. I have had the pleasure of working with Jacob Ross at Yakima Branding. He is extremely knowledgeable and easy to work with to tailor your marketing needs whether you&#x27;re geo-farming or using SEO, Jacob is wonderful to work with. I highly recommend Yakima Branding and Jacob Ross!"</p><div class="svr-foot"><div class="svr-who"><div class="svr-av" style="background:linear-gradient(135deg,#7c5cff,#2bc4f0)">JD</div><span>Josh DeBoer</span></div><span class="svr-g"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Google</span></div></div></div>
+  </div>
+  <p class="svr-all"><a href="/reviews">Read all reviews &rarr;</a></p>
+</section>
+<!-- svc-reviews:end -->
+
+
+
+
+
+
+<section style="background:#fff" data-bg="#ffffff">
+  <div class="container sub-split">
+    <div>
+      <span class="eyebrow" style="color:#2BC4F0">Website Migration SEO</span>
+      <h2>What is a website migration?</h2>
+    <div class="prose">
+      <p>A website migration is a significant change to your site that can affect how search engines find and index its pages. It might involve changing domains, moving to a different platform, reorganizing URLs, or combining multiple websites.</p>
+      <p>These projects involve more than transferring content. Existing pages may already rank for valuable searches or have links from other websites. When those pages are removed or renamed without a proper plan, search engines and visitors can end up at missing or unrelated URLs.</p>
+      <p>We help map out those changes before launch and monitor the site afterward, so problems can be identified and addressed quickly.</p>
+
+    </div>
+    </div>
+    <aside class="sub-aside"><span class="sub-aside-title">Changes that count as a migration</span><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Changing domains</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Moving to a new platform</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Reorganizing URLs</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Combining multiple websites</span></li></ul></aside>
+  </div>
+</section>
+
+<div class="wave-div" style="background:#ffffff"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,70 C480,0 960,0 1440,70 L1440,70 L0,70 Z" fill="#F6F8FC"/></svg></div>
+<section style="background:var(--bg-soft)" data-bg="#F6F8FC">
+  <div class="container">
+    <div style="text-align:center;max-width:720px;margin:0 auto 44px">
+      <span class="eyebrow" style="color:#2BC4F0">When You Need This</span>
+      <h2 style="margin:14px 0 0px">Common reasons for a migration</h2>
+    </div>
+    <div class="sub-cards">
+      <div class="sub-card"><div class="sub-card-ic" style="background:var(--wash-cyan);color:var(--yb-cyan)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div><h3>Website redesigns</h3><p>Especially when the redesign changes URLs, navigation, or page structure.</p></div>
+      <div class="sub-card"><div class="sub-card-ic" style="background:var(--wash-blue);color:var(--yb-blue)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div><h3>Platform changes</h3><p>Moving between WordPress, Wix, Squarespace, or another website platform.</p></div>
+      <div class="sub-card"><div class="sub-card-ic" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><h3>Domain changes</h3><p>Updating your website address as part of a rebrand or business change.</p></div>
+      <div class="sub-card"><div class="sub-card-ic" style="background:var(--wash-mint);color:#159468"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 21V9a9 9 0 0 0 9 9"/></svg></div><h3>Website consolidations</h3><p>Combining separate brands, locations, or websites into one.</p></div>
+      <div class="sub-card"><div class="sub-card-ic" style="background:var(--wash-amber);color:#c77f12"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg></div><h3>Major URL or protocol changes</h3><p>Reorganizing large sections of a website or correcting HTTP/HTTPS and www configurations.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-div" style="background:#F6F8FC"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,70 C480,0 960,0 1440,70 L1440,70 L0,70 Z" fill="#1B2A4A"/></svg></div>
+<section class="sec-navy" data-bg="#1B2A4A" id="how-it-works">
+  <div class="container">
+    <div style="text-align:center;max-width:720px;margin:0 auto 44px">
+      <span class="eyebrow" style="color:#2BC4F0">How It Works</span>
+      <h2 style="margin:14px 0 0px">How we work</h2>
+    </div>
+    <ol class="timeline" style="--steps:3">
+      <li><span class="timeline-n">1</span><h3>Review the existing website</h3><p>We gather the current URLs and use available analytics, Search Console data, and backlink information to identify important pages.</p></li>
+      <li><span class="timeline-n">2</span><h3>Plan the new URL structure</h3><p>We match old pages to relevant destinations on the new site and document the redirects needed for launch.</p></li>
+      <li><span class="timeline-n">3</span><h3>Check the new site before launch</h3><p>We review staging pages for missing content, broken links, metadata issues, indexing restrictions, and other potential problems.</p></li>
+      <li><span class="timeline-n">4</span><h3>Support the launch</h3><p>We check redirects, submit the appropriate sitemap, and handle applicable Search Console steps for a domain move.</p></li>
+      <li><span class="timeline-n">5</span><h3>Monitor the transition</h3><p>We watch indexing, traffic, rankings, and errors after launch, investigate unexpected changes, and make adjustments where needed.</p></li>
+      <li><span class="timeline-n">6</span><h3>Update important external links</h3><p>We identify business profiles, directory listings, and other important references that should point to the new site.</p></li>
+    </ol>
+  </div>
+</section>
+
+<div class="wave-div" style="background:#1B2A4A"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,70 C480,0 960,0 1440,70 L1440,70 L0,70 Z" fill="#ffffff"/></svg></div>
+
+
+
+
+
+<section class="faq-visibility-section" style="background:#fff" data-bg="#ffffff" id="faq">
+  <div class="container">
+    <div style="text-align:center;max-width:720px;margin:0 auto 44px">
+      <span class="eyebrow" style="color:#2BC4F0">FAQ</span>
+      <h2 style="margin:14px 0 0px">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-visibility-grid" id="visibility-score">
+    <div class="faq-visibility-faqs">
+    <div class="faq-list" style="border-top:1px solid var(--line)">
+<div class="faq-item"><button class="faq-q" type="button" style="--faq-ac:#2BC4F0">Will my website lose rankings after a redesign?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Not necessarily. Some movement is possible after a major change, but a well planned migration can reduce avoidable problems. The amount of disruption depends on what changes and how the transition is handled.</div></div></div><div class="faq-item"><button class="faq-q" type="button" style="--faq-ac:#2BC4F0">How long should redirects stay in place?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Google generally recommends keeping redirects for at least a year after a site move. Where practical, keeping redirects longer can continue to help people using old links, especially if you still own the previous domain.</div></div></div><div class="faq-item"><button class="faq-q" type="button" style="--faq-ac:#2BC4F0">When should we involve an SEO team?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Ideally, before the new website's page structure and URLs are finalized. It's easier to plan around existing search performance than to investigate lost traffic after launch.</div></div></div><div class="faq-item"><button class="faq-q" type="button" style="--faq-ac:#2BC4F0">Can you work with our website developer?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. We can prepare the URL mapping, redirect requirements, and SEO launch checklist for your developer, or coordinate more of the implementation when we're involved in the website project.</div></div></div><div class="faq-item"><button class="faq-q" type="button" style="--faq-ac:#2BC4F0">What if we've already launched and traffic has dropped?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">We can review what changed, compare old and new URLs, check indexing and redirects, and look for the likely causes. Some problems can be corrected, although recovery time and results will vary.</div></div></div>
+    </div>
+    <div class="seo-sub-related"><a href="/seo">All SEO Services</a><a href="/seo/local-seo">Local SEO</a><a href="/seo/ai-search">AI Search</a><a href="/seo/technical-seo">Technical SEO</a></div>
+    </div>
+    <aside class="faq-visibility-widget">
+      <div class="visibility-widget-card">
+        <div class="visibility-widget-card__head">
+          <span class="eyebrow" style="color:#2BC4F0">Free SEO Tool</span>
+          <h3>Run Your Visibility Score</h3>
+          <p>See how your business shows up in local search. We&rsquo;ll email your results, no obligation.</p>
+        </div>
+        <div class="visibility-widget-card__body">
+          <div class="visibility-widget-wrap">
+            <p class="visibility-widget-loading" aria-hidden="true">Loading visibility tool&hellip;</p>
+            <widget-app style_key="wk_ea5bc5a588df89d69feae137"></widget-app>
+          </div>
+        </div>
+      </div>
+    </aside>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff" id="contact">
+  <div class="container">
+    <div style="text-align:center;max-width:720px;margin:0 auto 40px">
+      <span class="eyebrow" style="color:#2BC4F0">Get Started</span>
+      <h2 style="margin:14px 0 12px">Book a Meeting or Send Us a Message</h2>
+      <p style="color:var(--fg2);font-size:16px;line-height:1.75">Grab a free 30 minute intro call, or send a note and we'll get back to you.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start" class="why-main-grid">
+      <div>
+        <p style="color:var(--fg2);font-size:16px;line-height:1.75;margin-bottom:24px">An introduction meeting to learn more about your business, your goals, and how we can help you grow. No commitment required.</p>
+        <p class="yb-schedule-intro" style="font-weight:700;margin-bottom:14px">Choose who you'd like to meet with</p>
+        <div class="yb-schedule-grid">
+          <div class="yb-schedule-card yb-schedule-card--split">
+            <img src="../assets/jacob-headshot.webp" alt="Jacob Ross" class="yb-schedule-card__photo" width="64" height="64" loading="lazy">
+            <span class="yb-schedule-card__info">
+              <span class="yb-schedule-card__name">Jacob Ross</span>
+              <a href="https://link.bluesoftwebsites.com/widget/booking/lRk0w69pQF0RRze2xKqx" target="_blank" rel="noopener noreferrer" class="yb-schedule-card__cta">Schedule Call</a>
+              <a href="/about/jacob" class="yb-schedule-card__meet">Meet Jacob</a>
+            </span>
+          </div>
+          <div class="yb-schedule-card yb-schedule-card--split">
+            <img src="../assets/kevin-headshot.webp" alt="Kevin Dean" class="yb-schedule-card__photo" width="64" height="64" loading="lazy">
+            <span class="yb-schedule-card__info">
+              <span class="yb-schedule-card__name">Kevin Dean</span>
+              <a href="https://link.bluesoftwebsites.com/widget/booking/UFZzPYN4w4sYMXsTvGHP" target="_blank" rel="noopener noreferrer" class="yb-schedule-card__cta">Schedule Call</a>
+              <a href="/about/kevin" class="yb-schedule-card__meet">Meet Kevin</a>
+            </span>
+          </div>
+          <div class="yb-schedule-card yb-schedule-card--split">
+            <img src="../assets/sophie-headshot.webp" alt="Sophie Mann" class="yb-schedule-card__photo" width="64" height="64" loading="lazy">
+            <span class="yb-schedule-card__info">
+              <span class="yb-schedule-card__name">Sophie Mann</span>
+              <a href="https://link.bluesoftwebsites.com/widget/booking/dwvAN8VTyHIbsbW3OLUF" target="_blank" rel="noopener noreferrer" class="yb-schedule-card__cta">Schedule Call</a>
+              <a href="/about/sophie" class="yb-schedule-card__meet">Meet Sophie</a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div style="background:#fff;border-radius:var(--r-xl);padding:28px;box-shadow:var(--sh-sm);border:1px solid var(--line)">
+        <h3 style="font-size:20px;margin:0 0 20px">Send Us a Message</h3>
+          <form class="yb-lead-form" action="#" method="post" data-source="Website Migration SEO Service Page" data-redirect="/services/thank-you-seo" novalidate>
+            <div class="yb-lead-form__row">
+              <div class="yb-lead-form__field">
+                <label for="yb-website-migration-seo-se-name">Name *</label>
+                <input id="yb-website-migration-seo-se-name" name="name" type="text" autocomplete="name" required placeholder="Your name">
+              </div>
+              <div class="yb-lead-form__field">
+                <label for="yb-website-migration-seo-se-email">Email *</label>
+                <input id="yb-website-migration-seo-se-email" name="email" type="email" autocomplete="email" required placeholder="you@company.com">
+              </div>
+            </div>
+            <div class="yb-lead-form__row">
+              <div class="yb-lead-form__field">
+                <label for="yb-website-migration-seo-se-phone">Phone *</label>
+                <input id="yb-website-migration-seo-se-phone" name="phone" type="tel" autocomplete="tel" required placeholder="(509) 555-0100">
+              </div>
+              <div class="yb-lead-form__field">
+                <label for="yb-website-migration-seo-se-company">Company or URL</label>
+                <input id="yb-website-migration-seo-se-company" name="company" type="text" autocomplete="organization" placeholder="yourcompany.com">
+              </div>
+            </div>
+            <div class="yb-lead-form__field">
+              <label for="yb-website-migration-seo-se-interest">I'm interested in *</label>
+              <div class="yb-lead-form__select-wrap">
+                <select id="yb-website-migration-seo-se-interest" name="interest" required>
+<option value="" disabled>What are you interested in?</option>
+<option value="web-design">Web Design</option>
+<option value="seo" selected>SEO</option>
+<option value="google-ads">Google Ads</option>
+<option value="branding">Branding &amp; Design</option>
+<option value="social-media">Social Media</option>
+<option value="content-marketing">Content Marketing</option>
+<option value="press-releases">Press Releases</option>
+<option value="customer-growth">Customer Growth &amp; Communication Tool</option>
+<option value="ai-for-business">AI for Business</option>
+<option value="ai-for-small-business">AI for Small Business</option>
+<option value="video-animation">Video Animation</option>
+<option value="other">Not sure / Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="yb-lead-form__field">
+              <label for="yb-website-migration-seo-se-message">How can we help? *</label>
+              <textarea id="yb-website-migration-seo-se-message" name="message" rows="4" required placeholder="Tell us about your goals…"></textarea>
+            </div>
+            <div class="yb-lead-form__hp" aria-hidden="true">
+              <label for="yb-website-migration-seo-se-hp">Company website</label>
+              <input id="yb-website-migration-seo-se-hp" name="company_website" type="text" value="" tabindex="-1" autocomplete="off">
+            </div>
+            <input type="hidden" name="form_started" value="">
+            <input type="hidden" name="source" value="Website Migration SEO Service Page">
+            <input type="hidden" name="page_url" value="">
+            <button type="submit" class="btn btn-grad yb-lead-form__submit">Get Started Today
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+            <p class="yb-lead-form__status" hidden aria-live="polite"></p>
+          </form>
+          <p class="yb-lead-form-footnote">We respond by the next business day. Your information is never shared.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-div" style="background:#ffffff"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,50 C480,70 960,10 1440,30 L1440,70 L0,70 Z" fill="#1B2A4A"/></svg></div>
+<div style="background:var(--grad-navy)">
+<div class="svc-cta">
+  <div class="svc-cta-mesh"></div>
+  <div class="container svc-cta-inner">
+    <span class="eyebrow" style="color:var(--yb-cyan)">Website Migration SEO</span>
+    <h2 style="margin:14px 0 14px;color:#fff;font-size:clamp(1.8rem,2.6vw,2.4rem)">Redesigning or moving your website?</h2>
+    <p style="color:var(--fg2-on-dark);font-size:16px;margin-bottom:32px">Bring us into the planning process early. We'll help identify the pages and search visibility that need to be protected during the move.</p>
+    <div class="svc-cta-btns">
+      <a href="#contact" class="btn btn-grad btn-lg">Discuss My Website Migration</a>
+      <a href="tel:5099019735" class="btn btn-ghost-white btn-lg">509-901-9735</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<footer class="footer">
+  <div class="footer-mesh"></div>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:11px;margin-bottom:14px">
+          <img src="../assets/yb-logo-white.png" alt="YB" style="width:44px;height:44px;filter:drop-shadow(0 0 3px rgba(255,255,255,.4))">
+          <span style="font-family:var(--font-display);font-weight:800;font-size:22px;color:#fff">YB <span style="color:var(--yb-cyan)">Marketing</span></span>
+        </div>
+        <p>YB Marketing has helped businesses grow since 2004 with marketing, website design, SEO, advertising, and branding.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/yakimabranding" class="social-btn" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/yb.marketing_/" class="social-btn" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="17" height="17"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a>
+          <a href="https://www.linkedin.com/company/18939370" class="social-btn" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="tel:5099019735"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(509) 901-9735</a></li>
+          <li><a href="mailto:info@yakimabranding.com"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@yakimabranding.com</a></li>
+          <li><a href="/contact"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>Let's get in touch</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Our Locations</h4>
+        <ul>
+          <li><a href="/locations/phoenix-az"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Scottsdale, AZ</a></li>
+          <li><a href="/locations/yakima-wa"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Yakima, WA</a></li>
+          <li><a href="/locations/san-francisco-bay-area"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>San Francisco, CA</a></li>
+          <li><a href="/locations/chicago-il"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Chicago, IL</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Digital Marketing</h4>
+        <ul>
+          <li><a href="/growth-marketing">Growth Marketing</a></li>
+          <li><a href="/seo">SEO Services</a></li>
+          <li><a href="/seo/local-seo">Local SEO</a></li>
+          <li><a href="/seo/technical-seo">Technical SEO</a></li>
+          <li><a href="/seo/website-migration">Website Migrations</a></li>
+          <li><a href="/google-ads">Google Ads Management</a></li>
+          <li><a href="/social-media">Social Media Marketing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Web &amp; Brand</h4>
+        <ul>
+          <li><a href="/web-design">Web Design Services</a></li>
+          <li><a href="/branding">Branding &amp; Design</a></li>
+          <li><a href="/content-marketing">Content &amp; Blogging</a></li>
+          <li><a href="/press-releases">Press Releases</a></li>
+          <li><a href="/customer-growth">Customer Growth &amp; Communication Tool</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>AI</h4>
+        <ul>
+          <li><a href="/ai-for-business">AI for Business</a></li>
+          <li><a href="/ai-for-small-business">AI for Small Business</a></li>
+          <li><a href="/seo/ai-search">AI Search (GEO)</a></li>
+          <li><a href="/blog/posts/how-to-show-up-chatgpt-ai-search">Show Up in ChatGPT &amp; AI Search</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/about/case-studies">Case Studies</a></li>
+          <li><a href="/reviews">Client Reviews</a></li>
+          <li><a href="/insights">Blog</a></li>
+          <li><a href="/client-corner">Client Corner</a></li>
+          <li><a href="/crm-tutorials">CRM Tutorials</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Locations</h4>
+        <ul>
+          <li><a href="/locations">All Locations</a></li>
+          <li><a href="/locations/central-washington">Central Washington</a></li>
+          <li><a href="/locations/eastern-washington">Eastern Washington</a></li>
+          <li><a href="/locations/san-francisco-bay-area">San Francisco Bay Area</a></li>
+          <li><a href="/locations/denver-co">Denver Area</a></li>
+          <li><a href="/locations/phoenix-az">Phoenix Area</a></li>
+          <li><a href="/locations/chicago-il">Chicago Area</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 YB Marketing. All rights reserved.</span>
+      <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">
+        <div class="lang-switch lang-switch--footer" role="group" aria-label="Language">
+  <a class="lang-switch-opt is-active" href="/seo/website-migration" aria-current="page" lang="en" hreflang="en">EN</a>
+  <a class="lang-switch-opt" href="/es/" lang="es" hreflang="es">ES</a>
+</div>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/sitemap">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/newsletter-popup.js" defer></script>
+<script src="../js/chat-widget.js" defer></script>
+<script src="../js/hero-orbit.js" defer></script>
+<script src="../js/site.js" defer></script>
+<script src="../js/lead-form-config.js" defer></script>
+<script src="../js/lead-form.js" defer></script>
+<script src="https://widget.advicelocal.com/bundle.js" defer></script>
+<script src="../js/visibility-widget.js" defer></script>
+<script>
+document.getElementById('hamburger')?.addEventListener('click', function () {
+  document.getElementById('mobileMenu')?.classList.toggle('open');
+});
+document.querySelectorAll('.faq-q').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var item = btn.closest('.faq-item');
+    var panel = item.querySelector('.faq-a');
+    var open = btn.classList.contains('active');
+    document.querySelectorAll('.faq-q.active').forEach(function (b) {
+      b.classList.remove('active');
+      b.closest('.faq-item').querySelector('.faq-a').style.maxHeight = '0';
+    });
+    if (!open) {
+      btn.classList.add('active');
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+    }
+  });
+});
+</script>
+<!-- yb-attributer-start -->
+<!-- yb-attributer-end -->
+</body>
+</html>

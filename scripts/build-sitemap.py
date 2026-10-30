@@ -26,32 +26,92 @@ SITEMAP_LINKED_RE = re.compile(r'<a href="[^"]*sitemap(?:\.html)?">Sitemap</a>')
 
 EXCLUDE_DIRS = {"preview", "partials", "ui_kits", "posts", "scripts", "assets", "js", "node_modules", "blog", "es", "next", "_next", "data"}
 POSTS_DATA = ROOT / "blog" / "data" / "posts.json"
-ROOT_PAGES = [
+MAIN_PAGES = [
     ("index.html", "Home"),
     ("about.html", "About Us"),
+    ("reviews.html", "Client Reviews"),
+    ("about/case-studies/index.html", "Case Studies"),
+    ("locations/index.html", "Locations We Serve"),
     ("insights.html", "Insights"),
     ("contact.html", "Contact"),
     ("washington-state-sales-tax-notice.html", "Washington State Sales Tax Notice"),
     ("privacy-policy.html", "Privacy Policy"),
-    ("sitemap.html", "Sitemap"),
 ]
 
-SERVICE_LABELS = {
-    "index.html": "Service",
-}
-
 SERVICE_INDEX_PAGES = [
-    ("seo/index.html", "SEO Optimization"),
-    ("google-ads/index.html", "Google Ads"),
-    ("web-design/index.html", "Web Design"),
-    ("social-media/index.html", "Social Media"),
+    ("growth-marketing/index.html", "Growth Marketing"),
+    ("seo/index.html", "SEO Services"),
+    ("seo/local-seo.html", "Local SEO"),
+    ("seo/ai-search.html", "AI Search (GEO)"),
+    ("seo/technical-seo.html", "Technical SEO"),
+    ("seo/website-migration.html", "Website Migrations"),
+    ("google-ads/index.html", "Google Ads Management"),
+    ("web-design/index.html", "Web Design Services"),
     ("branding/index.html", "Branding & Design"),
+    ("social-media/index.html", "Social Media Marketing"),
+    ("content-marketing/index.html", "Content & Blogging"),
     ("press-releases/index.html", "Press Releases"),
-    ("content-marketing/index.html", "Content Marketing"),
     ("customer-growth/index.html", "Customer Growth & Communication Tool"),
+    ("ai-for-business/index.html", "AI for Business"),
+    ("ai-for-small-business/index.html", "AI for Small Business"),
+    ("phx-hvac/index.html", "HVAC Marketing in Phoenix"),
+]
+
+RESOURCE_PAGES = [
+    ("insights.html", "Blog"),
     ("client-corner/index.html", "Client Corner"),
     ("crm-tutorials/index.html", "CRM Tutorials"),
 ]
+
+REGION_PAGES = [
+    ("locations/index.html", "All Locations"),
+    ("locations/central-washington.html", "Central Washington"),
+    ("locations/eastern-washington.html", "Eastern Washington"),
+    ("locations/san-francisco-bay-area.html", "San Francisco Bay Area"),
+    ("locations/denver-co.html", "Denver Area"),
+    ("locations/phoenix-az.html", "Phoenix Area"),
+    ("locations/chicago-il.html", "Chicago Area"),
+]
+
+SITEMAP_ES = {
+    "Main Pages": "Páginas principales",
+    "Services": "Servicios",
+    "Resources": "Recursos",
+    "Case Studies": "Casos de éxito",
+    "Team": "Equipo",
+    "Locations": "Ubicaciones",
+    "Regions": "Regiones",
+    "Insights": "Perspectivas",
+    "Home": "Inicio",
+    "About Us": "Sobre nosotros",
+    "Client Reviews": "Reseñas de clientes",
+    "Locations We Serve": "Dónde trabajamos",
+    "Contact": "Contacto",
+    "Washington State Sales Tax Notice": "Aviso de impuesto sobre las ventas del estado de Washington",
+    "Privacy Policy": "Política de privacidad",
+    "HVAC Marketing in Phoenix": "Marketing para HVAC en Phoenix",
+    "Digital Marketing Agency in {place}": "Agencia de marketing digital en {place}",
+    "{service} in {place}": "{service} en {place}",
+}
+
+
+def sm_tr(text: str, lang: str) -> str:
+    if lang != "es":
+        return text
+    from site_footer_snippet import ft
+    return SITEMAP_ES.get(text) or ft(text, lang)
+
+
+def lang_link(rel: str, label: str, lang: str) -> tuple[str, str]:
+    """Link to the Spanish page when one exists, otherwise the English page."""
+    href = page_href(rel)
+    if lang == "es" and (ROOT / "es" / rel).exists():
+        href = "/es" + (href if href != "/" else "/")
+    return href, sm_tr(label, lang)
+
+
+def existing_links(pages: list[tuple[str, str]], lang: str) -> list[tuple[str, str]]:
+    return [lang_link(rel, label, lang) for rel, label in pages if (ROOT / rel).exists()]
 
 
 def clean_title(raw: str) -> str:
@@ -63,7 +123,8 @@ def clean_title(raw: str) -> str:
     ):
         if title.endswith(suffix):
             title = title[: -len(suffix)].strip()
-    return title
+    title = title.split(" | ")[0].strip()
+    return re.sub(r"\s+[—–-]\s+", ", ", title)
 
 
 def page_title(path: Path) -> str:
@@ -109,55 +170,81 @@ LOCAL_SERVICE_FOLDERS = [
 ]
 
 
-def location_group_links(slug: str, city: str, state: str) -> list[tuple[str, str]]:
+def load_location_module():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("yb_locations", ROOT / "scripts" / "add-location-pages.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def location_group_links(slug: str, city: str, state: str, lang: str) -> list[tuple[str, str]]:
     place = f"{city}, {state}"
     links = []
     for folder, service in LOCAL_SERVICE_FOLDERS:
-        if not (ROOT / folder / f"{slug}.html").exists():
+        rel = f"{folder}/{slug}.html"
+        if not (ROOT / rel).exists():
             continue
-        links.append((page_href(f"{folder}/{slug}.html"), f"{service} in {place}"))
+        href, _ = lang_link(rel, "", lang)
+        links.append((href, sm_tr("{service} in {place}", lang).format(service=sm_tr(service, lang), place=place)))
     return links
 
 
-def collect_pages() -> tuple[
+def page_title_lang(rel: str, lang: str) -> str:
+    es_file = ROOT / "es" / rel
+    return page_title(es_file if lang == "es" and es_file.exists() else ROOT / rel)
+
+
+def collect_pages(lang: str = "en") -> tuple[
     dict[str, list[tuple[str, str]]],
     list[tuple[str, str, list[tuple[str, str]]]],
     list[tuple[str, str]],
 ]:
     compact: dict[str, list[tuple[str, str]]] = {
-        "Main Pages": [],
-        "Services": [],
-        "Team": [],
+        sm_tr("Main Pages", lang): existing_links(MAIN_PAGES, lang),
+        sm_tr("Services", lang): existing_links(SERVICE_INDEX_PAGES, lang),
+        sm_tr("Resources", lang): existing_links(RESOURCE_PAGES, lang),
+        sm_tr("Case Studies", lang): [
+            lang_link(f"about/case-studies/{p.name}", page_title_lang(f"about/case-studies/{p.name}", lang), lang)
+            for p in sorted((ROOT / "about" / "case-studies").glob("*.html"))
+            if p.name != "index.html" and "thank-you" not in p.name
+        ],
+        sm_tr("Team", lang): [
+            lang_link(f"about/{p.name}", page_title_lang(f"about/{p.name}", lang), lang)
+            for p in sorted((ROOT / "about").glob("*.html"))
+            if "thank-you" not in p.name
+        ],
     }
-    local_groups: list[tuple[str, str, list[tuple[str, str]]]] = []
-    insights: list[tuple[str, str]] = []
 
+    local_groups: list[tuple[str, str, list[tuple[str, str]]]] = [
+        (sm_tr("Regions", lang), lang_link("locations/index.html", "", lang)[0], existing_links(REGION_PAGES[1:], lang))
+    ]
     for loc in sorted(load_location_hubs(), key=lambda item: item["slug"]):
-        city = loc["city"]
-        state = loc["state"]
-        slug = loc["slug"]
-        group_title = f"Digital Marketing Agency in {city}, {state}"
-        hub_href = page_href(f"locations/{slug}.html")
-        local_groups.append((group_title, hub_href, location_group_links(slug, city, state)))
-
-    for href, label in ROOT_PAGES:
-        if href == "sitemap.html":
+        city, state, slug = loc["city"], loc["state"], loc["slug"]
+        place = f"{city}, {state}"
+        title = sm_tr("Digital Marketing Agency in {place}", lang).format(place=place)
+        hub_href, _ = lang_link(f"locations/{slug}.html", "", lang)
+        local_groups.append((title, hub_href, location_group_links(slug, city, state, lang)))
+    hub_slugs = {loc["slug"] for loc in load_location_hubs()}
+    loc_mod = load_location_module()
+    for region in loc_mod.REGIONS:
+        cities = [c for c in loc_mod.CITIES if c.get("region") == region["slug"] and c["slug"] not in hub_slugs]
+        if not cities:
             continue
-        compact["Main Pages"].append((page_href(href), label))
+        region_href, _ = lang_link(f"locations/{region['slug']}.html", "", lang)
+        title = sm_tr("Digital Marketing Agency in {place}", lang).format(place=f"{region['name']} Area")
+        local_groups.append((title, region_href, [
+            lang_link(f"locations/{c['slug']}.html", f"{c['name']}, {c['state']}", lang) for c in cities
+        ]))
 
-    for rel, label in SERVICE_INDEX_PAGES:
-        if (ROOT / rel).exists():
-            compact["Services"].append((page_href(rel), label))
-
-    for path in sorted((ROOT / "about").glob("*.html")):
-        if "thank-you" in path.name:
-            continue
-        href = page_href(f"about/{path.name}")
-        compact["Team"].append((href, page_title(path)))
-
-    for path in sorted((ROOT / "blog" / "posts").glob("*.html")):
-        href = page_href(f"blog/posts/{path.name}")
-        insights.append((href, page_title(path)))
+    insights: list[tuple[str, str]] = []
+    for post in sorted(load_posts_data(), key=lambda item: item["slug"]):
+        slug = post["slug"]
+        es_post = ROOT / "es" / "blog" / "posts" / f"{slug}.html"
+        if lang == "es" and es_post.exists():
+            insights.append((f"/es/insights/{slug}", page_title(es_post)))
+        else:
+            insights.append((f"/insights/{slug}", post["title"]))
 
     return compact, local_groups, insights
 
@@ -196,6 +283,8 @@ def public_url_for_page(path: Path) -> str:
     if rel == "washington-state-sales-tax-notice.html":
         return f"{SITE}/washington-state-sales-tax-notice"
 
+    if rel.endswith("/index.html"):
+        return f"{SITE}/{rel[: -len('/index.html')]}"
     return f"{SITE}/{rel.replace('.html', '')}"
 
 
@@ -321,11 +410,23 @@ def build_urlset_xml(entries: list[tuple]) -> str:
 """
 
 
+def es_page_exists(en_url: str) -> bool:
+    path = en_url[len(SITE):].strip("/")
+    if not path:
+        return (ROOT / "es" / "index.html").exists()
+    if path.startswith("insights/"):
+        return (ROOT / "es" / "blog" / "posts" / f"{path[len('insights/'):]}.html").exists()
+    return (ROOT / "es" / f"{path}.html").exists() or (ROOT / "es" / path / "index.html").exists()
+
+
 def expand_with_spanish(
     entries: list[tuple[str, str, str, Optional[str]]],
 ) -> list[tuple]:
     expanded: list[tuple] = []
     for url, changefreq, priority, lastmod in entries:
+        if not es_page_exists(url):
+            expanded.append((url, changefreq, priority, lastmod, None))
+            continue
         es = spanish_url_for(url)
         expanded.append((url, changefreq, priority, lastmod, es))
         try:
@@ -396,7 +497,7 @@ def render_compact_section(title: str, links: list[tuple[str, str]]) -> str:
       </div>"""
 
 
-def render_local_section(groups: list[tuple[str, str, list[tuple[str, str]]]]) -> str:
+def render_local_section(groups: list[tuple[str, str, list[tuple[str, str]]]], heading: str = "Locations") -> str:
     subgroups = []
     for title, hub_href, links in groups:
         subgroups.append(
@@ -407,35 +508,53 @@ def render_local_section(groups: list[tuple[str, str, list[tuple[str, str]]]]) -
         )
     body = "\n".join(subgroups)
     return f"""      <div class="sitemap-section sitemap-section--full">
-        <h2>Locations</h2>
+        <h2>{escape(heading)}</h2>
         <div class="sitemap-local-grid">
 {body}
         </div>
       </div>"""
 
 
-def render_insights_section(links: list[tuple[str, str]]) -> str:
+def render_insights_section(links: list[tuple[str, str]], heading: str = "Insights") -> str:
     return f"""      <div class="sitemap-section sitemap-section--full">
-        <h2>Insights</h2>
+        <h2>{escape(heading)}</h2>
 {render_link_list(links, "sitemap-insights-list")}
       </div>"""
 
 
-def build_sitemap_html(
-    compact: dict[str, list[tuple[str, str]]],
-    local_groups: list[tuple[str, str, list[tuple[str, str]]]],
-    insights: list[tuple[str, str]],
-) -> str:
+def sitemap_main_html(lang: str = "en") -> str:
+    compact, local_groups, insights = collect_pages(lang)
     compact_blocks = "\n".join(
         render_compact_section(title, links) for title, links in compact.items() if links
     )
-    local_block = render_local_section(local_groups)
-    insights_block = render_insights_section(insights)
-    total = sum(len(links) for links in compact.values()) + sum(
-        len(links) for _, _, links in local_groups
-    ) + len(insights) + 1
+    local_block = render_local_section(local_groups, sm_tr("Locations", lang))
+    insights_block = render_insights_section(insights, sm_tr("Insights", lang))
+    hrefs = {h for links in compact.values() for h, _ in links}
+    hrefs |= {h for _, hub, links in local_groups for h in [hub] + [x for x, _ in links]}
+    hrefs |= {h for h, _ in insights}
+    count = (
+        f"{len(hrefs)} páginas enumeradas en este mapa del sitio."
+        if lang == "es"
+        else f"{len(hrefs)} pages listed on this sitemap."
+    )
+    return f"""<main class="sitemap-main">
+  <div class="container">
+    <div class="sitemap-grid">
+      <div class="sitemap-compact">
+{compact_blocks}
+      </div>
+{local_block}
+{insights_block}
+    </div>
+    <p class="sitemap-count">{count}</p>
+  </div>
+</main>"""
+
+
+def build_sitemap_html() -> str:
+    main_block = sitemap_main_html("en")
     header = site_header_html("").strip()
-    footer = site_footer_html("").strip()
+    footer = site_footer_html("", current_path="sitemap").strip()
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -508,18 +627,7 @@ a{{color:inherit;text-decoration:none}}
   </div>
 </section>
 
-<main class="sitemap-main">
-  <div class="container">
-    <div class="sitemap-grid">
-      <div class="sitemap-compact">
-{compact_blocks}
-      </div>
-{local_block}
-{insights_block}
-    </div>
-    <p class="sitemap-count">{total} pages listed on this sitemap.</p>
-  </div>
-</main>
+{main_block}
 
 {footer}
 
@@ -579,49 +687,24 @@ def sitemap_prefix_for(path: Path) -> str:
     return "../" * depth
 
 
-def sync_es_sitemap_insights() -> None:
-    """Refresh insights list in es/sitemap.html from posts.json."""
+def sync_es_sitemap() -> None:
+    """Rebuild the page lists inside es/sitemap.html, keeping its Spanish header and hero."""
     es_path = ROOT / "es" / "sitemap.html"
     if not es_path.exists():
         return
-
-    posts = sorted(load_posts_data(), key=lambda item: item["slug"])
-    lines = []
-    for post in posts:
-        slug = post["slug"]
-        es_post = ROOT / "es" / "blog" / "posts" / f"{slug}.html"
-        title = page_title(es_post) if es_post.exists() else post["title"]
-        lines.append(f'<li><a href="/es/insights/{slug}">{escape(title)}</a></li>')
-
     text = es_path.read_text(encoding="utf-8")
-    text = re.sub(
-        r'(<ul class="sitemap-insights-list">).*?(</ul>)',
-        r"\1\n" + "\n".join(lines) + r"\n\2",
-        text,
-        count=1,
-        flags=re.S,
-    )
-    page_links = len(re.findall(r'<li><a href="/es/', text))
-    text = re.sub(
-        r'<p class="sitemap-count">.*?</p>',
-        f'<p class="sitemap-count">{page_links} páginas enumeradas en este mapa del sitio.</p>',
-        text,
-        count=1,
-    )
+    text = re.sub(r'<main class="sitemap-main">.*?</main>', lambda _: sitemap_main_html("es"), text, count=1, flags=re.S)
     es_path.write_text(text, encoding="utf-8")
     print(f"wrote {es_path.relative_to(ROOT)}")
 
 
 def main() -> None:
-    compact, local_groups, insights = collect_pages()
     sitemap_path = ROOT / "sitemap.html"
-    sitemap_path.write_text(
-        build_sitemap_html(compact, local_groups, insights), encoding="utf-8"
-    )
+    sitemap_path.write_text(build_sitemap_html(), encoding="utf-8")
     print(f"wrote {sitemap_path.relative_to(ROOT)}")
 
     write_xml_sitemaps()
-    sync_es_sitemap_insights()
+    sync_es_sitemap()
 
     patched = 0
     for path in sorted(ROOT.rglob("*.html")):

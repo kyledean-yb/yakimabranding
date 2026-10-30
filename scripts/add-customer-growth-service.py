@@ -94,7 +94,7 @@ def build_service_page() -> str:
 <link rel="apple-touch-icon" href="../favicon.png">
 {STAGING_ROBOTS_META}
 <title>Customer Growth &amp; Communication Tool | YB Marketing | 509-901-9735</title>
-<meta name="description" content="Organize every lead, centralize every conversation, and automate follow-up with YB Marketing's Customer Growth &amp; Communication Tool — CRM, messaging, and automation for Pacific Northwest businesses.">
+<meta name="description" content="Organize every lead, centralize every conversation, and automate follow-up with YB Marketing's Customer Growth &amp; Communication Tool: CRM, messaging, and automation for growing businesses.">
 <link rel="stylesheet" href="../colors_and_type.css">
 <link rel="stylesheet" href="../insights.css">
 <link rel="stylesheet" href="../lead-form.css">

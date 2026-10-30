@@ -7,6 +7,7 @@ import re
 
 INTEREST_OPTIONS = [
     ("web-design", "Web Design"),
+    ("growth-marketing", "Growth Marketing"),
     ("seo", "SEO"),
     ("google-ads", "Google Ads"),
     ("branding", "Branding & Design"),
@@ -21,6 +22,7 @@ INTEREST_OPTIONS = [
 ]
 
 DEFAULT_INTEREST_BY_SOURCE = {
+    "Growth Marketing": "growth-marketing",
     "SEO": "seo",
     "Google Ads": "google-ads",
     "Web Design": "web-design",

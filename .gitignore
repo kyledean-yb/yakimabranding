@@ -7,3 +7,4 @@
 /yb-logo-color.png
 /yb-logo-white.png
 .env*
+.DS_Store

@@ -104,7 +104,7 @@ def build_thank_you_html(variant: dict) -> str:
 <meta name="description" content="Thank you for contacting YB Marketing. A member of our team will be in touch within 1 business day.">
 <!-- TODO: Add Google Ads conversion tracking snippet here if running paid campaigns -->
 <link rel="stylesheet" href="{prefix}colors_and_type.css">
-<link rel="stylesheet" href="{prefix}site.css">
+<link rel="stylesheet" href="{prefix}site.css?v=4">
 <style>
 *{{box-sizing:border-box;margin:0;padding:0}}
 html{{scroll-behavior:smooth}}
@@ -186,7 +186,7 @@ a{{color:inherit;text-decoration:none}}
 <section class="ty-hero">
   <div class="ty-hero-mesh"></div>
   <div class="container" style="position:relative">
-    <span class="eyebrow" style="color:var(--yb-coral)">Message Received</span>
+    <span class="eyebrow" style="color:#c93d29">Message Received</span>
     <h1>Thank You for<br><span class="ty-hero-accent">Contacting YB Marketing!</span></h1>
     <p class="ty-hero-lead">We've received your message and a member of our team will be in touch within 1 business day. We look forward to learning more about your business and how we can help you grow.</p>
     <p class="ty-hero-urgent">For urgent needs, please call us directly at <a href="tel:5099019735">(509) 901-9735</a> or email <a href="mailto:info@yakimabranding.com">info@yakimabranding.com</a></p>

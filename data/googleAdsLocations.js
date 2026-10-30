@@ -6,16 +6,16 @@ export const googleAdsLocations = [
     state: "WA",
     region: "Yakima Valley",
     titleTag: "Google Ads Management Yakima WA | YB Marketing",
-    metaDescription: "Google Ads management for Yakima Valley businesses since 2005. Expert PPC campaigns with local targeting, conversion tracking, and budgets aligned to seasonal demand.",
+    metaDescription: "Google Ads management for Yakima Valley businesses. Local targeting, conversion tracking, and budgets planned around your busy seasons.",
     canonicalUrl: 'https://yakimabranding.com/google-ads/yakima-wa',
     hero: {
       eyebrow: 'GOOGLE ADS MANAGEMENT',
       headline: "Yakima Google Ads That Stop Burning Budget on Bad Clicks",
-      subheadline: "Expert PPC for Yakima and Yakima Valley Businesses Since 2005",
-      body: "Most Yakima businesses running their own Google Ads pay for clicks that never become jobs. Wrong keywords, loose targeting, and weak landing pages drain budget fast. We have managed campaigns since 2005 and know how to make every dollar work harder in the Valley.",
+      subheadline: "PPC Management for Yakima and Yakima Valley Businesses",
+      body: "Most Yakima businesses running their own Google Ads pay for clicks that never become jobs. Wrong keywords, loose targeting, and weak landing pages drain budget fast. We tighten all three so more of your budget turns into calls and booked jobs.",
     },
     googleAdsIntro: {
-      heading: 'Managed by Experts Since 2005',
+      heading: 'Google Ads Managed Every Week',
       intro: "Google Ads change constantly. Most owners do not have time to watch search terms, adjust bids, and rewrite ads every week. That is why campaigns drift into waste or get turned off entirely. We manage accounts full time so yours stays focused on leads, not clicks.",
       localParagraph: "Yakima search behavior has real seasonality. Ag and winery traffic spikes at different times. Contractors surge after storms and in spring. Healthcare stays steadier year round. Generic national PPC playbooks miss those patterns. We build Yakima campaigns around your industry's calendar, your service area, and the keywords that actually produce calls in Selah, Union Gap, and across the Valley.",
     },
@@ -64,7 +64,7 @@ export const googleAdsLocations = [
     state: "WA",
     region: "Kittitas County",
     titleTag: "Google Ads Management Ellensburg WA | YB Marketing",
-    metaDescription: "Google Ads management for Ellensburg and Kittitas County businesses. Expert PPC since 2005 with targeting for students, locals, and I-90 corridor traffic.",
+    metaDescription: "Google Ads management for Ellensburg and Kittitas County businesses. Targeting built for students, locals, and I-90 traffic.",
     canonicalUrl: 'https://yakimabranding.com/google-ads/ellensburg-wa',
     hero: {
       eyebrow: 'GOOGLE ADS MANAGEMENT',
@@ -73,8 +73,8 @@ export const googleAdsLocations = [
       body: "Ellensburg's market is smaller than Seattle, which can mean lower cost per click and better ROI when campaigns are set up right. It also means sloppy targeting wastes budget fast. We build Ellensburg campaigns that reach the right people in the right season.",
     },
     googleAdsIntro: {
-      heading: 'Managed by Experts Since 2005',
-      intro: "Running Google Ads without daily attention leads to broad keywords, irrelevant clicks, and budgets that disappear before the phone rings. We have managed PPC since 2005 and treat account structure, negative keywords, and conversion tracking as non-negotiable.",
+      heading: 'Google Ads Managed Every Week',
+      intro: "Running Google Ads without daily attention leads to broad keywords, irrelevant clicks, and budgets that disappear before the phone rings. We set up clean account structure, negative keywords, and conversion tracking from day one.",
       localParagraph: "Ellensburg has two distinct audiences: CWU students who search differently than longtime Kittitas County residents, plus I-90 travelers who need services now. A single broad campaign rarely serves all three well. We segment messaging and geography where it matters so your spend reaches students during the academic year, locals year round, and corridor traffic when that is part of your business.",
     },
     whyYb: {
@@ -122,7 +122,7 @@ export const googleAdsLocations = [
     state: "WA",
     region: "Columbia Basin",
     titleTag: "Google Ads Management Tri-Cities WA | Kennewick, Pasco & Richland | YB Marketing",
-    metaDescription: "Google Ads management for Kennewick, Pasco, and Richland businesses. Expert PPC since 2005 with city-level targeting across the Columbia Basin.",
+    metaDescription: "Google Ads management for Kennewick, Pasco, and Richland businesses. City by city targeting across the Columbia Basin.",
     canonicalUrl: 'https://yakimabranding.com/google-ads/tri-cities-wa',
     hero: {
       eyebrow: 'GOOGLE ADS MANAGEMENT',
@@ -131,8 +131,8 @@ export const googleAdsLocations = [
       body: "A single Tri-Cities campaign set to cover all three cities often underperforms all three. Search behavior, competition, and demographics differ between Kennewick, Pasco, and Richland. We structure campaigns with the specificity this market requires.",
     },
     googleAdsIntro: {
-      heading: 'Managed by Experts Since 2005',
-      intro: "Tri-Cities PPC needs more than a radius on a map. Budget allocation, ad copy, and landing pages should reflect where your best customers actually search. We have managed Google Ads since 2005 and apply that experience to multi-city metros like the Basin.",
+      heading: 'Google Ads Managed Every Week',
+      intro: "Tri-Cities PPC needs more than a radius on a map. Budget allocation, ad copy, and landing pages should reflect where your best customers actually search. We split budget and messaging by city so each part of the Basin gets the right ads.",
       localParagraph: "Pasco's bilingual audience, Richland's professional base, and Kennewick's retail and hospitality economy respond to different messages. We build campaign structures that split budget by city and service line where data supports it, unify messaging where it does not, and track conversions so you know which city drives revenue.",
     },
     whyYb: {
@@ -180,7 +180,7 @@ export const googleAdsLocations = [
     state: "WA",
     region: "Inland Northwest",
     titleTag: "Google Ads Management Spokane WA | YB Marketing",
-    metaDescription: "Google Ads management for Spokane and Inland Northwest businesses. Expert PPC since 2005 with conversion tracking and competitive keyword strategy.",
+    metaDescription: "Google Ads management for Spokane and Inland Northwest businesses. Conversion tracking and a keyword plan built to compete.",
     canonicalUrl: 'https://yakimabranding.com/google-ads/spokane-wa',
     hero: {
       eyebrow: 'GOOGLE ADS MANAGEMENT',
@@ -189,8 +189,8 @@ export const googleAdsLocations = [
       body: "Spokane's ad auctions are competitive. Broad keywords and weak landing pages burn budget without producing jobs. We build structured campaigns with negative keywords, conversion tracking, and ongoing optimization so spend protects your margins.",
     },
     googleAdsIntro: {
-      heading: 'Managed by Experts Since 2005',
-      intro: "Google Ads reward accounts that are maintained weekly, not set up once and ignored. We have managed PPC since 2005 and focus on account structure, search term reviews, and landing pages that match ad intent.",
+      heading: 'Google Ads Managed Every Week',
+      intro: "Google Ads reward accounts that are maintained weekly, not set up once and ignored. We focus on account structure, weekly search term reviews, and landing pages that match what people searched for.",
       localParagraph: "Healthcare, home services, legal, and retail all compete for the same Spokane searches. Winning requires tight keyword groups, ads that speak to local buyers, and landing pages that make calling easy. We build Spokane campaigns sized for Inland Northwest competition, not small-town budgets with big-city auction prices.",
     },
     whyYb: {
@@ -238,7 +238,7 @@ export const googleAdsLocations = [
     state: "ID",
     region: "Treasure Valley",
     titleTag: "Google Ads Management Boise ID | YB Marketing",
-    metaDescription: "Google Ads management for Boise and Treasure Valley businesses. Expert PPC since 2005 built for a fast-growing, competitive Idaho market.",
+    metaDescription: "Google Ads management for Boise and Treasure Valley businesses. Campaigns built for a fast growing, competitive Idaho market.",
     canonicalUrl: 'https://yakimabranding.com/google-ads/boise-id',
     hero: {
       eyebrow: 'GOOGLE ADS MANAGEMENT',
@@ -247,7 +247,7 @@ export const googleAdsLocations = [
       body: "Boise competition pushes click costs up every year. Campaigns without structure, tracking, and weekly optimization waste money fast. We manage Google Ads with the discipline growing Treasure Valley businesses need.",
     },
     googleAdsIntro: {
-      heading: 'Managed by Experts Since 2005',
+      heading: 'Google Ads Managed Every Week',
       intro: "Boise adds new advertisers constantly. Accounts that worked two years ago may bleed budget today without refreshed keywords, negatives, and landing pages. We manage PPC full time so yours keeps pace with the market.",
       localParagraph: "Home services, medical, legal, and outdoor brands all bid on Treasure Valley searches. We build Boise campaigns around your profit per job, not just click volume. That means geographic targeting across Boise, Meridian, and Nampa where you actually serve, ad copy that differentiates you, and conversion tracking that shows which keywords deserve more budget.",
     },
@@ -296,7 +296,7 @@ export const googleAdsLocations = [
     state: "ID",
     region: "North Idaho",
     titleTag: "Google Ads Management Coeur d'Alene ID | YB Marketing",
-    metaDescription: "Google Ads management for Coeur d'Alene and North Idaho businesses. Expert PPC since 2005 with seasonal campaigns for tourism and year-round local leads.",
+    metaDescription: "Google Ads management for Coeur d'Alene and North Idaho businesses. Seasonal campaigns for tourism plus steady local leads all year.",
     canonicalUrl: 'https://yakimabranding.com/google-ads/coeur-dalene-id',
     hero: {
       eyebrow: 'GOOGLE ADS MANAGEMENT',
@@ -305,8 +305,8 @@ export const googleAdsLocations = [
       body: "CDA businesses face two calendars: summer tourism and year-round local service. Google Ads should follow that rhythm. We manage campaigns that ramp when demand is high and stay efficient when it is not.",
     },
     googleAdsIntro: {
-      heading: 'Managed by Experts Since 2005',
-      intro: "Lake country search volume swings with the season. Campaigns left on autopilot overspend in winter or miss peak summer demand. We have managed Google Ads since 2005 and build seasonal strategies into North Idaho accounts.",
+      heading: 'Google Ads Managed Every Week',
+      intro: "Lake country search volume swings with the season. Campaigns left on autopilot overspend in winter or miss peak summer demand. We plan budgets around the seasons so your North Idaho account spends when customers are searching.",
       localParagraph: "Hospitality, recreation, and home services all search differently in Coeur d'Alene, Post Falls, and Hayden. Visitors search on phones for things to do tonight. Locals search for providers they can trust next month. We target each intent with the right keywords, ad copy, and landing pages so budget follows real booking and call data.",
     },
     whyYb: {
@@ -354,21 +354,21 @@ export const googleAdsLocations = [
     state: "WA",
     region: "South Sound",
     titleTag: "Google Ads Management Tacoma WA | YB Marketing",
-    metaDescription: "Google Ads management for Tacoma and Pierce County businesses. Expert PPC since 2005 with geo-targeting that prioritizes South Sound leads.",
+    metaDescription: "Google Ads management for Tacoma and Pierce County businesses. Local targeting that puts your budget toward South Sound customers.",
     canonicalUrl: 'https://yakimabranding.com/google-ads/tacoma-wa',
     hero: {
       eyebrow: 'GOOGLE ADS MANAGEMENT',
       headline: "Tacoma Google Ads That Win South Sound Searches",
       subheadline: "PPC Management for Tacoma and Pierce County",
-      body: "Tacoma advertisers compete with Seattle budgets if targeting is too broad. We geo-fence campaigns to Pierce County, write ads that sound local, and track conversions so you know which keywords produce calls.",
+      body: "Broad targeting puts Tacoma businesses in the same auctions as the whole Puget Sound. We focus your campaigns on the parts of Pierce County you serve, write ads that sound local, and track conversions so you know which keywords bring in calls.",
     },
     googleAdsIntro: {
-      heading: 'Managed by Experts Since 2005',
+      heading: 'Google Ads Managed Every Week',
       intro: "Google Ads fail when accounts are too broad, too stale, or missing conversion tracking. We manage PPC with weekly attention and reporting tied to leads, not vanity metrics.",
-      localParagraph: "Tacoma customers search for contractors, clinics, restaurants, and professional services with local intent. We build campaigns that prioritize South Sound zip codes, filter irrelevant Seattle traffic when needed, and send clicks to landing pages that make contacting you easy.",
+      localParagraph: "Tacoma customers search for contractors, clinics, restaurants, and professional services with local intent. We build campaigns around the South Sound zip codes you serve, filter out traffic from areas you do not cover, and send clicks to landing pages that make contacting you easy.",
     },
     whyYb: {
-      heading: "Tacoma PPC Without Wasted Seattle Clicks",
+      heading: "Tacoma PPC Without Wasted Clicks",
       body: "Your budget should go toward Pierce County leads. We structure campaigns and negatives to protect spend and improve cost per lead over time.",
     },
     localSignals: ["Tacoma, WA", "Lakewood, WA", "Pierce County", "South Sound"],
@@ -378,8 +378,8 @@ export const googleAdsLocations = [
         a: "Depends on industry and competition. We recommend budget after reviewing your market and goals.",
       },
       {
-        q: "Can you target Tacoma without paying for Seattle clicks?",
-        a: "Yes. Geographic targeting and negative keywords help focus spend on South Sound.",
+        q: "Can you target only Tacoma and Pierce County?",
+        a: "Yes. Location targeting and negative keywords keep your budget focused on the South Sound areas you serve.",
       },
       {
         q: "How fast do Tacoma Google Ads generate leads?",
@@ -412,7 +412,7 @@ export const googleAdsLocations = [
     state: "WA",
     region: "Clark County",
     titleTag: "Google Ads Management Vancouver WA | YB Marketing",
-    metaDescription: "Google Ads management for Vancouver, WA and Clark County businesses. Expert PPC since 2005 with targeting that favors Washington-side leads over Portland noise.",
+    metaDescription: "Google Ads management for Vancouver, WA and Clark County businesses. Targeting that keeps your budget on the Washington side of the river.",
     canonicalUrl: 'https://yakimabranding.com/google-ads/vancouver-wa',
     hero: {
       eyebrow: 'GOOGLE ADS MANAGEMENT',
@@ -421,8 +421,8 @@ export const googleAdsLocations = [
       body: "Vancouver businesses often compete with Portland advertisers in the same auction. Without tight geo-targeting and Washington-focused messaging, budget leaks across the river. We build Clark County campaigns that keep spend local.",
     },
     googleAdsIntro: {
-      heading: 'Managed by Experts Since 2005',
-      intro: "Clark County PPC requires deliberate geography and messaging. We have managed Google Ads since 2005 and know how to structure accounts so Vancouver searches do not fund Portland leads.",
+      heading: 'Google Ads Managed Every Week',
+      intro: "Clark County PPC requires deliberate geography and messaging. We structure accounts so your budget goes to Clark County customers, not Portland searches you cannot serve.",
       localParagraph: "Customers in Vancouver, Camas, and Ridgefield often want a Washington provider. Your ads and landing pages should say that clearly. We target Clark County zip codes, use local proof in ad copy, and track calls and forms so you see which campaigns drive Washington-side revenue.",
     },
     whyYb: {
@@ -470,7 +470,7 @@ export const googleAdsLocations = [
     state: "WA",
     region: "North Central Washington",
     titleTag: "Google Ads Management Wenatchee WA | YB Marketing",
-    metaDescription: "Google Ads management for Wenatchee and North Central Washington businesses. Expert PPC since 2005 with seasonal and regional targeting across NCW.",
+    metaDescription: "Google Ads management for Wenatchee and North Central Washington businesses. Seasonal and regional targeting across North Central Washington.",
     canonicalUrl: 'https://yakimabranding.com/google-ads/wenatchee-wa',
     hero: {
       eyebrow: 'GOOGLE ADS MANAGEMENT',
@@ -479,7 +479,7 @@ export const googleAdsLocations = [
       body: "Wenatchee businesses draw customers from across the valley. Google Ads should target the towns that send you revenue, not just city limits. We build regional campaigns with seasonal adjustments for tourism and ag peaks.",
     },
     googleAdsIntro: {
-      heading: 'Managed by Experts Since 2005',
+      heading: 'Google Ads Managed Every Week',
       intro: "NCW search patterns shift with harvest, tourism, and weather. Campaigns that never change miss those swings. We manage Google Ads with seasonal calendars and geographic targeting that matches your real service area.",
       localParagraph: "Customers in East Wenatchee, Leavenworth, and Chelan search for Wenatchee providers when local options are limited. We build campaigns that capture that regional intent, plus steady local service keywords year round. Conversion tracking shows which towns and keywords produce calls.",
     },
@@ -528,7 +528,7 @@ export const googleAdsLocations = [
     state: "WA",
     region: "Wine Country",
     titleTag: "Google Ads Management Walla Walla WA | YB Marketing",
-    metaDescription: "Google Ads management for Walla Walla wine country and local businesses. Expert PPC since 2005 for tourism peaks and year-round local leads.",
+    metaDescription: "Google Ads management for Walla Walla wine country and local businesses. Campaigns for tourism peaks and steady local leads all year.",
     canonicalUrl: 'https://yakimabranding.com/google-ads/walla-walla-wa',
     hero: {
       eyebrow: 'GOOGLE ADS MANAGEMENT',
@@ -537,7 +537,7 @@ export const googleAdsLocations = [
       body: "Walla Walla marketing runs on two clocks: weekend visitors and loyal locals. Google Ads should capture high-intent searches in both seasons. We manage campaigns that ramp for events and tourism without ignoring year-round service demand.",
     },
     googleAdsIntro: {
-      heading: 'Managed by Experts Since 2005',
+      heading: 'Google Ads Managed Every Week',
       intro: "Wine country advertisers compete for limited high-intent searches on busy weekends. Off-season, local service keywords matter more. We manage Google Ads with that calendar built in.",
       localParagraph: "Wineries, restaurants, hotels, and trades all need different keyword strategies in Walla Walla. Visitors search for experiences and reservations. Locals search for providers they can trust all year. We build campaigns and landing pages for both, track conversions, and shift budget as seasons change.",
     },
@@ -575,6 +575,64 @@ export const googleAdsLocations = [
     schema: {
       service: 'Google Ads',
       addressLocality: "Walla Walla",
+      addressRegion: "WA",
+      addressCountry: 'US',
+    },
+  },
+  {
+    slug: "seattle-wa",
+    service: 'google-ads',
+    city: "Seattle",
+    state: "WA",
+    region: "Puget Sound",
+    titleTag: "Google Ads Agency Seattle WA | PPC Management | YB Marketing",
+    metaDescription: "Google Ads management for Seattle and Puget Sound businesses. Tight geo targeting, call tracking, and reporting tied to leads so your budget goes further.",
+    canonicalUrl: 'https://yakimabranding.com/google-ads/seattle-wa',
+    hero: {
+      eyebrow: 'GOOGLE ADS MANAGEMENT',
+      headline: "Seattle Google Ads That Pay for Themselves",
+      subheadline: "PPC Management for Seattle and Puget Sound",
+      body: "Clicks in Seattle cost more than almost anywhere in Washington. We target the zip codes you serve, cut the searches that never turn into customers, and track every call so you know what your budget is buying.",
+    },
+    googleAdsIntro: {
+      heading: 'Google Ads Managed Every Week',
+      intro: "Google Ads accounts waste money when they are too broad, left alone, or missing conversion tracking. We check your campaigns every week and report on leads, not impressions.",
+      localParagraph: "Seattle area customers search with local intent, often by neighborhood or nearby city. We build campaigns around the parts of King, Snohomish, and Pierce County you serve, filter out traffic you cannot use, and send clicks to landing pages that make it easy to call or book.",
+    },
+    whyYb: {
+      heading: "Seattle PPC Without Wasted Clicks",
+      body: "In a market this expensive, every bad click hurts. We tighten targeting and negative keywords so your cost per lead improves month after month.",
+    },
+    localSignals: ["Seattle, WA", "Bellevue, WA", "Redmond, WA", "Kent, WA", "King County", "Puget Sound"],
+    faqs: [
+      {
+        q: "How much should a Seattle business spend on Google Ads?",
+        a: "It depends on your industry and how far you travel for work. We look at your market and goals first, then recommend a budget that can bring in steady leads.",
+      },
+      {
+        q: "Why are Google Ads so expensive in Seattle?",
+        a: "Lots of businesses compete for the same searches. Tight targeting, strong ads, and good landing pages lower what you pay per lead.",
+      },
+      {
+        q: "Can you target only the neighborhoods and cities I serve?",
+        a: "Yes. We target by zip code, city, or radius and exclude areas you do not cover.",
+      },
+      {
+        q: "How fast do Google Ads bring in leads?",
+        a: "Many campaigns bring in leads within the first few days. We keep improving results every month after launch.",
+      },
+      {
+        q: "What is included in Google Ads management?",
+        a: "Keyword research, ad copy, bidding, conversion and call tracking, landing page recommendations, and monthly reporting.",
+      },
+      {
+        q: "Can you fix an existing Seattle Google Ads account?",
+        a: "Yes. We audit the account, find where money is leaking, and rebuild what is not working.",
+      },
+    ],
+    schema: {
+      service: 'Google Ads',
+      addressLocality: "Seattle",
       addressRegion: "WA",
       addressCountry: 'US',
     },

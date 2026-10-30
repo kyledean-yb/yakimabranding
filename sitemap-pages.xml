@@ -251,6 +251,11 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://yakimabranding.com/google-ads/ellensburg-wa"/>
   </url>
   <url>
+    <loc>https://yakimabranding.com/google-ads/seattle-wa</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://yakimabranding.com/google-ads/spokane-wa</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -331,6 +336,11 @@
   </url>
   <url>
     <loc>https://yakimabranding.com/locations/aurora-il</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yakimabranding.com/locations/bellevue-wa</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -419,6 +429,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://yakimabranding.com/locations/everett-wa</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://yakimabranding.com/locations/fremont-ca</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -435,6 +450,11 @@
   </url>
   <url>
     <loc>https://yakimabranding.com/locations/joliet-il</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yakimabranding.com/locations/kent-wa</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -494,6 +514,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://yakimabranding.com/locations/redmond-wa</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://yakimabranding.com/locations/san-francisco-bay-area</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -515,6 +540,11 @@
   </url>
   <url>
     <loc>https://yakimabranding.com/locations/scottsdale-az</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yakimabranding.com/locations/seattle-wa</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -680,6 +710,11 @@
   </url>
   <url>
     <loc>https://yakimabranding.com/seo/local-seo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yakimabranding.com/seo/seattle-wa</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -210,6 +210,26 @@ REGIONS = [
         "channels": "Summer is the busiest season for most Phoenix home service companies. We usually pair local SEO with Google Ads that increase before summer starts, plus call tracking so you can see which campaigns booked jobs.",
         "local_faq": REMOTE_FAQ,
     },
+    {
+        "slug": "seattle-wa",
+        "name": "Seattle",
+        "short": "Seattle",
+        "state": "Washington",
+        "group": "Washington",
+        "accent": "var(--yb-blue)",
+        "title": "Digital Marketing Agency Seattle WA | SEO, Paid Ads & Web Design",
+        "h1": "Digital Marketing for <span>Seattle</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for companies in Seattle, Bellevue, Tacoma, and across Puget Sound.",
+        "intro": [
+            "Seattle is one of the most expensive places in the state to buy clicks, and customers here compare several companies before they call. A campaign aimed at all of King County wastes money on people you will never serve.",
+            "We build your SEO and ads around the neighborhoods and cities you actually work in, from Ballard to Bellevue to Kent.",
+        ],
+        "industries": ["Contractors & trades", "Professional services", "Healthcare & dental", "Tech & SaaS", "Restaurants & hospitality"],
+        "cities": ["Seattle", "Bellevue", "Tacoma", "Everett", "Redmond", "Kent", "Kirkland", "Renton"],
+        "cases": ["electrical", "refrig", "tire"],
+        "channels": "Seattle has some of the highest click prices in Washington, so most businesses here start with Google Business Profile and local SEO for the neighborhoods they serve. When we add Google Ads, we target by zip code and track every call before raising the budget.",
+        "local_faq": REMOTE_FAQ,
+    },
 ]
 
 
@@ -299,7 +319,7 @@ CITIES = [
         "local_faq": REMOTE_FAQ,
     },
     {
-        "slug": "tacoma-wa", "name": "Tacoma", "short": "Tacoma", "state": "Washington", "region": None,
+        "slug": "tacoma-wa", "name": "Tacoma", "short": "Tacoma", "state": "Washington", "region": "seattle-wa",
         "title": "Digital Marketing Agency Tacoma WA | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Tacoma</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Tacoma and across Pierce County.",
@@ -886,6 +906,66 @@ CITIES = [
         "channels": "Most Peoria businesses start with Google Business Profile, reviews, and local SEO. Home service companies add Google Ads that ramp up before summer, and restaurants add ads around spring training season.",
         "local_faq": REMOTE_FAQ,
     },
+    {
+        "slug": "bellevue-wa", "name": "Bellevue", "short": "Bellevue", "state": "Washington", "region": "seattle-wa",
+        "accent": "var(--yb-blue)",
+        "title": "Digital Marketing Agency Bellevue WA | SEO, Paid Ads & Web Design",
+        "h1": "Digital Marketing for <span>Bellevue</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for businesses in Bellevue and across the Eastside.",
+        "intro": [
+            "Bellevue customers do their research. They read reviews, compare websites, and expect a quick answer when they reach out.",
+            "We help you show up in Bellevue and the Eastside cities you serve, and give people a website that makes it easy to choose you.",
+        ],
+        "cities": ["Bellevue", "Redmond", "Kirkland", "Issaquah", "Sammamish", "Mercer Island"],
+        "cases": ["electrical", "refrig", "tire"],
+        "channels": "Most Bellevue businesses start with Google Business Profile and local SEO aimed at Eastside searches. Clicks cost a lot here, so we keep Google Ads tightly targeted and send them to pages built to turn visits into calls.",
+        "local_faq": REMOTE_FAQ,
+    },
+    {
+        "slug": "everett-wa", "name": "Everett", "short": "Everett", "state": "Washington", "region": "seattle-wa",
+        "accent": "var(--yb-blue)",
+        "title": "Digital Marketing Agency Everett WA | SEO, Paid Ads & Web Design",
+        "h1": "Digital Marketing for <span>Everett</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for businesses in Everett and across Snohomish County.",
+        "intro": [
+            "Everett businesses serve a wide area, from Mukilteo to Marysville and out to Snohomish. Customers search by town, so you need to show up in each one.",
+            "We help you rank in the towns you work in and make sure your website turns those searches into calls.",
+        ],
+        "cities": ["Everett", "Lynnwood", "Marysville", "Mukilteo", "Mill Creek", "Snohomish"],
+        "cases": ["electrical", "tire", "refrig"],
+        "channels": "Most Everett businesses get the best return from Google Business Profile and local SEO across Snohomish County. Google Ads usually cost less here than in Seattle, so a modest budget can bring in steady calls.",
+        "local_faq": REMOTE_FAQ,
+    },
+    {
+        "slug": "redmond-wa", "name": "Redmond", "short": "Redmond", "state": "Washington", "region": "seattle-wa",
+        "accent": "var(--yb-blue)",
+        "title": "Digital Marketing Agency Redmond WA | SEO, Paid Ads & Web Design",
+        "h1": "Digital Marketing for <span>Redmond</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for businesses in Redmond and the north Eastside.",
+        "intro": [
+            "Redmond has a mix of tech companies, growing families, and local service businesses. Each group searches differently, so one generic campaign rarely works for all of them.",
+            "We build your marketing around the customers you want, whether that's homeowners in Education Hill or other companies in Overlake.",
+        ],
+        "cities": ["Redmond", "Kirkland", "Woodinville", "Bothell", "Sammamish", "Bellevue"],
+        "cases": ["electrical", "refrig", "tire"],
+        "channels": "Redmond businesses usually start with local SEO and a website that answers questions quickly. B2B and tech companies often add LinkedIn and content marketing, while local service businesses lean on Google Ads with call tracking.",
+        "local_faq": REMOTE_FAQ,
+    },
+    {
+        "slug": "kent-wa", "name": "Kent", "short": "Kent", "state": "Washington", "region": "seattle-wa",
+        "accent": "var(--yb-blue)",
+        "title": "Digital Marketing Agency Kent WA | SEO, Paid Ads & Web Design",
+        "h1": "Digital Marketing for <span>Kent</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for businesses in Kent and South King County.",
+        "intro": [
+            "Kent is home to warehouses, manufacturers, and a lot of trades. Some businesses here sell to homeowners and others sell to other companies, and each needs a different plan.",
+            "We help you reach the right buyers in Kent, Auburn, Renton, and the rest of South King County.",
+        ],
+        "cities": ["Kent", "Auburn", "Renton", "Federal Way", "Covington", "Tukwila"],
+        "cases": ["tire", "electrical", "refrig"],
+        "channels": "Local service businesses in Kent usually start with Google Business Profile and local SEO. Manufacturers and suppliers add search ads aimed at the companies they sell to, plus LinkedIn when the buyers are easy to target there.",
+        "local_faq": REMOTE_FAQ,
+    },
 ]
 for _c in CITIES:
     _c.setdefault("accent", "var(--yb-blue)")
@@ -1000,8 +1080,8 @@ PAGE_CSS = """
 .lc-svc li a:hover{color:var(--ac)}
 .lc-svc li span{flex:none;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center}
 .lc-svc li span svg{width:10px;height:10px}
-.lc-svc-more{font-weight:700;font-size:14px;color:var(--ac);text-decoration:none;display:inline-flex;align-items:center;gap:6px}
-.lc-svc-more svg{width:15px;height:15px}
+.lc-svc-more{font-weight:700;font-size:14px;color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.lc-svc-more svg{width:15px;height:15px;color:var(--ac)}
 .lc-book{position:relative;overflow:hidden;background:var(--grad-navy);padding:88px 0}
 .lc-book::before{content:'';position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.75;pointer-events:none}
 .lc-book .container{position:relative;z-index:1}
@@ -1077,7 +1157,7 @@ def wave(top: str, bottom: str) -> str:
     return f'<div class="wave-div" style="background:{top}"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,40 C480,70 960,10 1440,35 L1440,70 L0,70 Z" fill="{bottom}"/></svg></div>'
 
 
-REGION_ORDER = ["central-washington", "eastern-washington", "phoenix-az", "denver-co", "chicago-il", "san-francisco-bay-area"]
+REGION_ORDER = ["central-washington", "eastern-washington", "seattle-wa", "phoenix-az", "denver-co", "chicago-il", "san-francisco-bay-area"]
 REGIONS.sort(key=lambda r: REGION_ORDER.index(r["slug"]))
 
 
@@ -1116,14 +1196,14 @@ def rating_block() -> str:
       <a class="lc-rating" href="{GOOGLE_REVIEWS_URL}" target="_blank" rel="noopener">
         <span class="lc-rating-num">5.0</span>
         <div>
-          <div class="lc-rating-stars" aria-label="5 out of 5 stars">{STAR * 5}</div>
+          <div role="img" class="lc-rating-stars" aria-label="5 out of 5 stars">{STAR * 5}</div>
           <div class="lc-rating-label">{GOOGLE_G} 48 Google reviews</div>
         </div>
       </a>
       <a class="lc-rating" href="{YELP_URL}" target="_blank" rel="noopener">
         <span class="lc-rating-num">5.0</span>
         <div>
-          <div class="lc-rating-stars yelp-stars" aria-label="5 out of 5 stars">{YELP_STARS}</div>
+          <div role="img" class="lc-rating-stars yelp-stars" aria-label="5 out of 5 stars">{YELP_STARS}</div>
           <div class="lc-rating-label"><span class="yelp-word">yelp</span> 5 star rating</div>
         </div>
       </a>
@@ -1137,7 +1217,7 @@ def review_cards(names: list[str]) -> str:
         if len(text) > 230:
             text = text[:text.rfind(" ", 0, 220)].rstrip(",.!") + " …"
         out.append(f"""      <article class="lc-review">
-        <div class="lc-review-top"><div class="rv-stars" aria-label="5 out of 5 stars">{STAR * 5}</div><span class="g">{GOOGLE_G}</span></div>
+        <div class="lc-review-top"><div role="img" class="rv-stars" aria-label="5 out of 5 stars">{STAR * 5}</div><span class="g">{GOOGLE_G}</span></div>
         <p>"{escape(text, quote=False)}"</p>
         <div class="lc-review-by"><span class="lc-avatar">{initials(n)}</span>{escape(n)}</div>
       </article>""")
@@ -1158,9 +1238,15 @@ def case_cards(keys: list[str]) -> str:
 LOCAL_SERVICE_ROOTS = ("/seo", "/google-ads")
 
 
+PARENT_REGION = {c["slug"]: c.get("region") for c in CITIES}
+
+
 def local_service_url(url: str, slug: str) -> str:
-    if url in LOCAL_SERVICE_ROOTS and (ROOT / url.lstrip("/") / f"{slug}.html").exists():
-        return f"{url}/{slug}"
+    if url not in LOCAL_SERVICE_ROOTS:
+        return url
+    for s in (slug, PARENT_REGION.get(slug)):
+        if s and (ROOT / url.lstrip("/") / f"{s}.html").exists():
+            return f"{url}/{s}"
     return url
 
 
@@ -1250,7 +1336,7 @@ def shell(*, title: str, meta: str, path: str, crumbs: list[tuple[str, str]], bo
 <meta property="og:description" content="{escape(meta)}">
 <link rel="stylesheet" href="/colors_and_type.css">
 <style>{BASE_CSS}{PAGE_CSS}</style>
-<link rel="stylesheet" href="/site.css">
+<link rel="stylesheet" href="/site.css?v=4">
 {form_tags}
 {render_schema_head(schemas)}
 {TRACKING_HEAD_BLOCK}
@@ -1550,7 +1636,7 @@ def hub_page() -> str:
         return f'<div><h3>{escape(title)}{small}</h3><ul>{lis}</ul></div>'
 
     directory = f"""    <p class="lc-dir-region">Pacific Northwest</p>
-    <div class="lc-dir">{region_col('central-washington', 'Central Washington')}{region_col('eastern-washington', 'Eastern Washington')}{plain_col('Western Washington', 'Washington', [("Tacoma", "/locations/tacoma-wa"), ("Vancouver", "/locations/vancouver-wa")])}{plain_col('Idaho', '', [("Boise", "/locations/boise-id"), ("Coeur d'Alene", "/locations/coeur-dalene-id")])}</div>
+    <div class="lc-dir">{region_col('central-washington', 'Central Washington')}{region_col('eastern-washington', 'Eastern Washington')}{region_col('seattle-wa', 'Seattle Area')}{plain_col('More Northwest Cities', '', [("Vancouver, WA", "/locations/vancouver-wa"), ("Boise, ID", "/locations/boise-id"), ("Coeur d'Alene, ID", "/locations/coeur-dalene-id")])}</div>
     <p class="lc-dir-region">West &amp; Southwest</p>
     <div class="lc-dir">{region_col('phoenix-az', 'Phoenix Area')}{region_col('denver-co', 'Denver Area')}{region_col('san-francisco-bay-area', 'Bay Area')}</div>
     <p class="lc-dir-region">Midwest</p>

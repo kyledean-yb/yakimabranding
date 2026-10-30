@@ -530,7 +530,7 @@ export const seoLocations = [
       },
     ],
     whyYb: {
-      heading: "Tacoma SEO Without Seattle Pretense",
+      heading: "Tacoma SEO Measured in Leads",
       body: "Direct communication, realistic goals, and work tied to leads and revenue for Pierce County businesses.",
     },
     localSignals: ["Tacoma, WA", "Lakewood, WA", "Pierce County", "South Sound"],
@@ -548,8 +548,8 @@ export const seoLocations = [
         a: "Yes. We optimize for the cities and neighborhoods you actually serve.",
       },
       {
-        q: "Can SEO help me compete with Seattle companies?",
-        a: "Yes. Strong local relevance helps you win South Sound searches.",
+        q: "Can SEO help me compete with bigger companies?",
+        a: "Yes. Google favors businesses that are clearly local, which helps you win South Sound searches against larger competitors.",
       },
       {
         q: "What Tacoma industries do you work with?",
@@ -805,6 +805,87 @@ export const seoLocations = [
     ],
     schema: {
       addressLocality: "Walla Walla",
+      addressRegion: "WA",
+      addressCountry: 'US',
+    },
+  },
+  {
+    slug: "seattle-wa",
+    city: "Seattle",
+    state: "WA",
+    region: "Puget Sound",
+    titleTag: "SEO Company Seattle WA | Local SEO Services | YB Marketing",
+    metaDescription: "SEO for Seattle and Puget Sound businesses. Local SEO, Google Business Profile, and technical fixes that bring in calls from the neighborhoods you serve.",
+    canonicalUrl: 'https://yakimabranding.com/seo/seattle-wa',
+    hero: {
+      headline: "Seattle SEO That Brings In Local Customers",
+      subheadline: "Helping Seattle and Puget Sound Businesses Rank Higher",
+      body: "Seattle customers compare a handful of businesses before they call. You need to show up in the neighborhoods you serve and give people a reason to pick you. We build SEO around both.",
+    },
+    whatIsSeo: {
+      heading: 'What Is Search Engine Optimization?',
+      intro: "SEO earns rankings in Google without paying for each click. We handle the technical fixes, local signals, and content that help Seattle area businesses rank and stay there.",
+      localParagraph: "People search by neighborhood and city here: Ballard, Capitol Hill, West Seattle, Bellevue, Redmond, Kent. We build pages for the areas you work in, tune your Google Business Profile, and write content that matches how Puget Sound customers look for contractors, clinics, restaurants, and professional services.",
+    },
+    features: [
+      {
+        title: "Personalization",
+        body: "Keyword plans built around your industry and the Seattle neighborhoods that send you work.",
+      },
+      {
+        title: "Visibility",
+        body: "Rankings across Seattle, the Eastside, and South King County searches.",
+      },
+      {
+        title: "Spread the Word",
+        body: "Map pack work, reviews, and citations that help you show up in Google Maps.",
+      },
+      {
+        title: "Google's Friend",
+        body: "Technical SEO for speed, mobile, and the trust signals Google rewards.",
+      },
+      {
+        title: "Increase Keywords",
+        body: "Steady growth in the searches that lead to calls and booked jobs.",
+      },
+      {
+        title: "Increase Traffic",
+        body: "More visits from people ready to call, book, or fill out a form.",
+      },
+    ],
+    whyYb: {
+      heading: "Seattle SEO Measured in Leads",
+      body: "Clear reporting, realistic goals, and work tied to calls and revenue. You talk to the people doing the work, not an account manager reading a script.",
+    },
+    localSignals: ["Seattle, WA", "Bellevue, WA", "Redmond, WA", "Kent, WA", "King County", "Puget Sound"],
+    faqs: [
+      {
+        q: "Why does my Seattle business need SEO?",
+        a: "Most customers here start with a Google search. If you do not show up on the first page or in the map results, they call someone else.",
+      },
+      {
+        q: "How long does SEO take in Seattle?",
+        a: "Many businesses see early gains in 3 to 4 months, with stronger results over 6 to 12 months. Competitive industries can take longer.",
+      },
+      {
+        q: "Can you help me rank in specific neighborhoods?",
+        a: "Yes. We build pages and Google Business Profile signals for the neighborhoods and nearby cities you actually serve.",
+      },
+      {
+        q: "Do you work with businesses on the Eastside and in South King County?",
+        a: "Yes. We work with companies in Bellevue, Redmond, Kirkland, Kent, Renton, Tacoma, and across Puget Sound.",
+      },
+      {
+        q: "What Seattle industries do you work with?",
+        a: "Contractors and home services, healthcare and dental, restaurants, tech companies, and professional services.",
+      },
+      {
+        q: "Should I run Google Ads while SEO builds up?",
+        a: "Often, yes. Ads can bring in calls right away while SEO grows. We can manage both so they work together.",
+      },
+    ],
+    schema: {
+      addressLocality: "Seattle",
       addressRegion: "WA",
       addressCountry: 'US',
     },

@@ -235,7 +235,11 @@
   transition: box-shadow 0.25s var(--ease, ease);
   transform-origin: center center;
   will-change: transform;
+  transform: rotate(calc(var(--i, 0) * -360deg / var(--orbit-n, 6)));
 }
+
+.hero-orbit-spin:has(> .hero-orbit-node:nth-child(7)) { --orbit-n: 7; }
+.hero-orbit-spin:has(> .hero-orbit-node:nth-child(8)) { --orbit-n: 8; }
 
 .hero-orbit-pill-ic {
   width: 100%;

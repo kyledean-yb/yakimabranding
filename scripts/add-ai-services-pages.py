@@ -111,7 +111,7 @@ section{padding:88px 0}
 .footer-mesh{position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.5;pointer-events:none}
 .footer-grid{position:relative;display:grid;grid-template-columns:1.7fr 1fr 1fr 1.4fr;gap:40px;margin-bottom:42px}
 .footer-brand p{color:var(--fg2-on-dark);font-size:14px;max-width:280px;margin:14px 0 18px}
-.footer-col h4{font-family:var(--font-display);font-size:14px;font-weight:700;margin-bottom:14px;letter-spacing:.04em;color:#fff}
+.footer-col h3{line-height:1.3;font-family:var(--font-display);font-size:14px;font-weight:700;margin-bottom:14px;letter-spacing:.04em;color:#fff}
 .footer-col ul{list-style:none;display:grid;gap:10px}
 .footer-col a{color:var(--fg2-on-dark);font-size:14px;transition:color 240ms}
 .footer-col a:hover{color:#fff}
@@ -171,12 +171,12 @@ ORBIT = f"""    <div class="svc-hero-visual">
           </div>
         </div>
         <div class="hero-orbit-spin">
-          <div class="hero-orbit-node" style="--i:0"><div class="hero-orbit-icon" aria-label="Content"><span class="hero-orbit-pill"><span class="hero-orbit-pill-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></span></span></div></div>
-          <div class="hero-orbit-node" style="--i:1"><div class="hero-orbit-icon" aria-label="Voice"><span class="hero-orbit-pill"><span class="hero-orbit-pill-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></span></span></div></div>
-          <div class="hero-orbit-node" style="--i:2"><div class="hero-orbit-icon" aria-label="Automation"><span class="hero-orbit-pill"><span class="hero-orbit-pill-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span></span></div></div>
-          <div class="hero-orbit-node" style="--i:3"><div class="hero-orbit-icon" aria-label="Chat"><span class="hero-orbit-pill"><span class="hero-orbit-pill-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span></span></div></div>
-          <div class="hero-orbit-node" style="--i:4"><div class="hero-orbit-icon" aria-label="Data"><span class="hero-orbit-pill"><span class="hero-orbit-pill-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span></span></div></div>
-          <div class="hero-orbit-node" style="--i:5"><div class="hero-orbit-icon" aria-label="Training"><span class="hero-orbit-pill"><span class="hero-orbit-pill-ic">{ICON_SVG}</span></span></div></div>
+          <div class="hero-orbit-node" style="--i:0"><div role="img" class="hero-orbit-icon" aria-label="Content"><span class="hero-orbit-pill"><span class="hero-orbit-pill-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></span></span></div></div>
+          <div class="hero-orbit-node" style="--i:1"><div role="img" class="hero-orbit-icon" aria-label="Voice"><span class="hero-orbit-pill"><span class="hero-orbit-pill-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></span></span></div></div>
+          <div class="hero-orbit-node" style="--i:2"><div role="img" class="hero-orbit-icon" aria-label="Automation"><span class="hero-orbit-pill"><span class="hero-orbit-pill-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span></span></div></div>
+          <div class="hero-orbit-node" style="--i:3"><div role="img" class="hero-orbit-icon" aria-label="Chat"><span class="hero-orbit-pill"><span class="hero-orbit-pill-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span></span></div></div>
+          <div class="hero-orbit-node" style="--i:4"><div role="img" class="hero-orbit-icon" aria-label="Data"><span class="hero-orbit-pill"><span class="hero-orbit-pill-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span></span></div></div>
+          <div class="hero-orbit-node" style="--i:5"><div role="img" class="hero-orbit-icon" aria-label="Training"><span class="hero-orbit-pill"><span class="hero-orbit-pill-ic">{ICON_SVG}</span></span></div></div>
         </div>
       </div>
     </div>"""
@@ -231,7 +231,7 @@ def build_page(
 <link rel="stylesheet" href="../insights.css">
 <link rel="stylesheet" href="../lead-form.css">
 <style>{PAGE_CSS}</style>
-<link rel="stylesheet" href="../site.css">
+<link rel="stylesheet" href="../site.css?v=4">
 {seo}
 {TRACKING_HEAD_BLOCK}
 </head>
@@ -290,7 +290,7 @@ def build_page(
 <div class="svc-cta">
   <div class="svc-cta-mesh"></div>
   <div class="container svc-cta-inner">
-    <span class="eyebrow" style="color:var(--yb-cyan)">Work with us</span>
+    <span class="eyebrow" style="color:#0a7ea4">Work with us</span>
     <h2 style="margin:14px 0 14px;color:#fff;font-size:clamp(1.8rem,2.6vw,2.4rem)">Ready to put AI to work in your marketing?</h2>
     <p style="color:var(--fg2-on-dark);font-size:16px;margin-bottom:32px">Connect with us and we will map out practical next steps for your team.</p>
     <div class="svc-cta-btns">
@@ -305,7 +305,7 @@ def build_page(
 
 <script src="../js/newsletter-popup.js" defer></script>
 <script src="../js/chat-widget.js" defer></script>
-<script src="../js/hero-orbit.js" defer></script>
+<script src="../js/hero-orbit.js?v=2" defer></script>
 <script src="../js/site.js?v=2" defer></script>
 <script src="../js/lead-form-config.js" defer></script>
 <script src="../js/lead-form.js" defer></script>

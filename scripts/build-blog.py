@@ -423,7 +423,7 @@ def page_shell(prefix, title, desc, body, active_blog=False, extra_head="", extr
 <title>{html.escape(title)}</title>
 <meta name="description" content="{html.escape(desc)}">
 <link rel="stylesheet" href="{prefix}colors_and_type.css">
-<link rel="stylesheet" href="{prefix}site.css">
+<link rel="stylesheet" href="{prefix}site.css?v=4">
 <link rel="stylesheet" href="{prefix}blog.css">
 <style>
 *{{box-sizing:border-box;margin:0;padding:0}}

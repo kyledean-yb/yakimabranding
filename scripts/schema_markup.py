@@ -139,6 +139,7 @@ CITY_META = {
     "boise-id": ("Boise", "ID", "Idaho"),
     "coeur-dalene-id": ("Coeur d'Alene", "ID", "Idaho"),
     "tacoma-wa": ("Tacoma", "WA", "Washington"),
+    "seattle-wa": ("Seattle", "WA", "Washington"),
     "vancouver-wa": ("Vancouver", "WA", "Washington"),
     "wenatchee-wa": ("Wenatchee", "WA", "Washington"),
     "walla-walla-wa": ("Walla Walla", "WA", "Washington"),

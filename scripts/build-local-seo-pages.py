@@ -60,7 +60,7 @@ def render_hero_orbit(prefix: str, city: str) -> str:
     for i, (label, icon) in enumerate(HERO_ORBIT_NODES):
         nodes.append(
             f"""          <div class="hero-orbit-node" style="--i:{i}">
-            <div class="hero-orbit-icon" aria-label="{esc(label)}">
+            <div role="img" class="hero-orbit-icon" aria-label="{esc(label)}">
               <span class="hero-orbit-pill">
                 <span class="hero-orbit-pill-ic">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{icon}</svg>
@@ -243,7 +243,7 @@ def render_page(loc: dict) -> str:
 <link rel="canonical" href="{esc(loc["canonicalUrl"])}">
 <link rel="stylesheet" href="{p}colors_and_type.css">
 <link rel="stylesheet" href="{p}insights.css">
-<link rel="stylesheet" href="{p}site.css">
+<link rel="stylesheet" href="{p}site.css?v=4">
 <style>
 *{{box-sizing:border-box;margin:0;padding:0}}
 html{{scroll-behavior:smooth}}
@@ -310,7 +310,7 @@ section{{padding:88px 0}}
 .footer-mesh{{position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.5;pointer-events:none}}
 .footer-grid{{position:relative;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1.1fr;gap:40px;margin-bottom:42px}}
 .footer-brand p{{color:var(--fg2-on-dark);font-size:14px;max-width:280px;margin:14px 0 18px}}
-.footer-col h4{{font-family:var(--font-display);font-size:14px;font-weight:700;margin-bottom:14px;letter-spacing:.04em;color:#fff}}
+.footer-col h3{{line-height:1.3;font-family:var(--font-display);font-size:14px;font-weight:700;margin-bottom:14px;letter-spacing:.04em;color:#fff}}
 .footer-col ul{{list-style:none;display:grid;gap:10px}}
 .footer-col a{{color:var(--fg2-on-dark);font-size:14px;transition:color 240ms}}
 .footer-col a:hover{{color:#fff}}
@@ -363,7 +363,7 @@ section{{padding:88px 0}}
 <section style="background:#fff">
   <div class="container">
     <div style="text-align:center;max-width:760px;margin:0 auto 20px">
-      <span class="eyebrow" style="color:#2BC4F0">What We Do</span>
+      <span class="eyebrow" style="color:#0a7ea4">What We Do</span>
       <h2 style="margin:14px 0 16px">{esc(loc["whatIsSeo"]["heading"])}</h2>
       <p style="color:var(--fg2);font-size:16px;line-height:1.75">{esc(loc["whatIsSeo"]["intro"])}</p>
     </div>
@@ -397,7 +397,7 @@ section{{padding:88px 0}}
 <section style="background:var(--bg-soft)">
   <div class="container">
     <div style="text-align:center;max-width:640px;margin:0 auto 44px">
-      <span class="eyebrow" style="color:#2BC4F0">Our Process</span>
+      <span class="eyebrow" style="color:#0a7ea4">Our Process</span>
       <h2 style="margin:14px 0 12px">How We Get You Ranking</h2>
     </div>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px" class="why-tiles-grid">
@@ -436,7 +436,7 @@ section{{padding:88px 0}}
 <section style="background:#fff">
   <div class="container">
     <div style="text-align:center;max-width:700px;margin:0 auto 48px">
-      <span class="eyebrow" style="color:#2BC4F0">Common Questions</span>
+      <span class="eyebrow" style="color:#0a7ea4">Common Questions</span>
       <h2 style="margin:14px 0 14px">{esc(city)} SEO FAQs</h2>
       <p style="color:var(--fg2);font-size:16px;line-height:1.75">Answers to the questions we hear most often about SEO in {esc(city)}.</p>
     </div>
@@ -454,7 +454,7 @@ section{{padding:88px 0}}
 <div class="svc-cta">
   <div class="svc-cta-mesh"></div>
   <div class="container svc-cta-inner">
-    <span class="eyebrow" style="color:var(--yb-cyan)">Ready to Grow?</span>
+    <span class="eyebrow" style="color:#0a7ea4">Ready to Grow?</span>
     <h2 style="margin:14px 0 14px;color:#fff;font-size:clamp(1.8rem,2.6vw,2.4rem)">Let&rsquo;s Talk About Your Goals</h2>
     <p style="color:var(--fg2-on-dark);font-size:16px;margin-bottom:32px">Schedule a meeting and let our team build a custom strategy for your business.</p>
     <div class="svc-cta-btns">
@@ -504,6 +504,9 @@ def main() -> None:
         raise SystemExit(f"Missing {DATA_FILE}")
     OUT_DIR.mkdir(exist_ok=True)
     locations = load_locations()
+    if "--only" in sys.argv:
+        only = set(sys.argv[sys.argv.index("--only") + 1].split(","))
+        locations = [loc for loc in locations if loc["slug"] in only]
     for loc in locations:
         out = OUT_DIR / f"{loc['slug']}.html"
         out.write_text(render_page(loc), encoding="utf-8")

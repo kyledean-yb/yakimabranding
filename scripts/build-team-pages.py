@@ -67,7 +67,7 @@ def shell(title, desc, theme, body, hubspot=False):
 <title>{html.escape(title)}</title>
 <meta name="description" content="{html.escape(desc)}">
 <link rel="stylesheet" href="{PREFIX}colors_and_type.css">
-<link rel="stylesheet" href="{PREFIX}site.css">
+<link rel="stylesheet" href="{PREFIX}site.css?v=4">
 <link rel="stylesheet" href="{PREFIX}team-profile.css">
 <style>
 *{{box-sizing:border-box;margin:0;padding:0}}

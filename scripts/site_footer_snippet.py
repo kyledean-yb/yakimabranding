@@ -45,6 +45,7 @@ FOOTER_COLUMNS = [
         ("All Locations", "/locations"),
         ("Central Washington", "/locations/central-washington"),
         ("Eastern Washington", "/locations/eastern-washington"),
+        ("Seattle Area", "/locations/seattle-wa"),
         ("San Francisco Bay Area", "/locations/san-francisco-bay-area"),
         ("Denver Area", "/locations/denver-co"),
         ("Phoenix Area", "/locations/phoenix-az"),
@@ -61,6 +62,7 @@ FOOTER_ES = {
     "All Locations": "Todas las ubicaciones",
     "Central Washington": "Centro de Washington",
     "Eastern Washington": "Este de Washington",
+    "Seattle Area": "Área de Seattle",
     "San Francisco Bay Area": "Área de la Bahía de San Francisco",
     "Denver Area": "Área de Denver",
     "Phoenix Area": "Área de Phoenix",
@@ -100,7 +102,7 @@ def footer_link_columns(lang: str) -> str:
             f'          <li><a href="{nav_href(h, lang)}">{html.escape(ft(label, lang))}</a></li>' for label, h in links
         )
         cols.append(f"""      <div class="footer-col">
-        <h4>{html.escape(ft(title, lang))}</h4>
+        <h3>{html.escape(ft(title, lang))}</h3>
         <ul>
 {items}
         </ul>
@@ -138,7 +140,7 @@ def site_footer_html(prefix: str = "", lang: str = "en", current_path: str = "",
         </div>
       </div>
       <div class="footer-col footer-contact">
-        <h4>{ft("Get in Touch", lang)}</h4>
+        <h3>{ft("Get in Touch", lang)}</h3>
         <ul>
           <li><a href="tel:5099019735">{PHONE_SVG}(509) 901-9735</a></li>
           <li><a href="mailto:info@yakimabranding.com">{MAIL_SVG}info@yakimabranding.com</a></li>
@@ -146,7 +148,7 @@ def site_footer_html(prefix: str = "", lang: str = "en", current_path: str = "",
         </ul>
       </div>
       <div class="footer-col footer-contact">
-        <h4>{ft("Our Locations", lang)}</h4>
+        <h3>{ft("Our Locations", lang)}</h3>
         <ul>
 {footer_offices(lang)}
         </ul>

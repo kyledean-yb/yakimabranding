@@ -159,7 +159,7 @@ def card(i: int, name: str, text: str, lang: str = "en") -> str:
     lead = " rv-card--lead" if i < 3 else ""
     return (
         f'      <article class="rv-card{lead}">\n'
-        f'        <div class="rv-card-top"><div class="rv-stars" aria-label="{T[lang]["stars"]}">{stars}</div><span class="rv-g" title="{T[lang]["source"]}">{GOOGLE_G}</span></div>\n'
+        f'        <div class="rv-card-top"><div role="img" class="rv-stars" aria-label="{T[lang]["stars"]}">{stars}</div><span class="rv-g" title="{T[lang]["source"]}">{GOOGLE_G}</span></div>\n'
         f'        <p class="rv-text">"{escape(text, quote=False)}"</p>\n'
         f'        <div class="rv-author"><div class="rv-avatar" style="background:{AVATAR_BGS[i % len(AVATAR_BGS)]}">{initials(name)}</div>'
         f'<div><span class="rv-name">{escape(name)}</span><span class="rv-source">{T[lang]["source"]}</span></div></div>\n'
@@ -225,7 +225,7 @@ def build(lang: str = "en") -> str:
 <meta property="og:description" content="{escape(meta)}">
 <link rel="stylesheet" href="/colors_and_type.css">
 <style>{BASE_CSS}{PAGE_CSS}{CL.CSS}</style>
-<link rel="stylesheet" href="/site.css">
+<link rel="stylesheet" href="/site.css?v=4">
 {render_schema_head(schemas)}
 {TRACKING_HEAD_BLOCK}
 </head>
@@ -243,14 +243,14 @@ def build(lang: str = "en") -> str:
       <a class="rv-score" href="{GOOGLE_REVIEWS_URL}" target="_blank" rel="noopener">
         <span class="rv-score-num">5.0</span>
         <div class="rv-score-meta">
-          <div class="rv-score-stars" aria-label="{L["stars"]}">{STAR * 5}</div>
+          <div role="img" class="rv-score-stars" aria-label="{L["stars"]}">{STAR * 5}</div>
           <span class="rv-score-label">{GOOGLE_G} {L["count"]}</span>
         </div>
       </a>
       <a class="rv-score" href="{YELP_URL}" target="_blank" rel="noopener">
         <span class="rv-score-num">5.0</span>
         <div class="rv-score-meta">
-          <div class="rv-score-stars yelp-stars" aria-label="{L["stars"]}">{YELP_STARS}</div>
+          <div role="img" class="rv-score-stars yelp-stars" aria-label="{L["stars"]}">{YELP_STARS}</div>
           <span class="rv-score-label"><span class="yelp-word">yelp</span> {L["yelp"]}</span>
         </div>
       </a>

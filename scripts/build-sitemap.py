@@ -66,6 +66,7 @@ REGION_PAGES = [
     ("locations/index.html", "All Locations"),
     ("locations/central-washington.html", "Central Washington"),
     ("locations/eastern-washington.html", "Eastern Washington"),
+    ("locations/seattle-wa.html", "Seattle Area"),
     ("locations/san-francisco-bay-area.html", "San Francisco Bay Area"),
     ("locations/denver-co.html", "Denver Area"),
     ("locations/phoenix-az.html", "Phoenix Area"),
@@ -229,7 +230,7 @@ def collect_pages(lang: str = "en") -> tuple[
             continue
         region_href, _ = lang_link(f"locations/{region['slug']}.html", "", lang)
         title = sm_tr("Digital Marketing Agency in {place}", lang).format(place=region["name"] if region["name"].endswith(("Area", "Washington")) else f"{region['name']} Area")
-        local_groups.append((title, region_href, [
+        local_groups.append((title, region_href, location_group_links(region["slug"], region["name"], region["state"], lang) + [
             lang_link(f"locations/{c['slug']}.html", f"{c['name']}, {c['state']}", lang) for c in cities
         ]))
 
@@ -602,7 +603,7 @@ a{{color:inherit;text-decoration:none}}
 @media(max-width:900px){{.sitemap-compact{{grid-template-columns:1fr}}.sitemap-local-grid{{grid-template-columns:1fr}}.sitemap-insights-list{{columns:2}}}}
 @media(max-width:640px){{.sitemap-insights-list{{columns:1}}}}
 </style>
-<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="site.css?v=4">
 {TRACKING_HEAD_BLOCK}
 </head>
 <body>

@@ -162,7 +162,7 @@ RESULTS_CSS = """<style>
 .yb-result-second strong{font-family:var(--font-display);font-size:24px;font-weight:800;color:var(--ink)}
 .yb-result-second span{font-size:13.5px;color:var(--fg2)}
 .yb-result-desc{font-size:14.5px;line-height:1.6;color:var(--fg2);margin:0 0 20px;flex:1}
-.yb-result-link{font-size:14px;font-weight:700;color:var(--yb-coral);margin-top:auto}
+.yb-result-link{font-size:14px;font-weight:700;color:#c93d29;margin-top:auto}
 @media(max-width:980px){.yb-results-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.yb-results-grid{grid-template-columns:1fr}}
 </style>"""
@@ -476,7 +476,88 @@ def process_case(path: Path) -> bool:
     return new != html
 
 
+LOCAL_FOLDERS = {"seo": ("SEO", "#2BC4F0", "seoLocations"), "google-ads": ("Google Ads", "#FF6B57", "googleAdsLocations")}
+
+
+def load_js_array(module: str) -> list[dict]:
+    import subprocess
+    script = f"import {{ {module} }} from './{module}.js';process.stdout.write(JSON.stringify({module}));"
+    out = subprocess.run(["node", "--input-type=module", "-e", script], cwd=ROOT / "data",
+                         capture_output=True, text=True, check=True).stdout
+    return json.loads(out)
+
+
+def location_module():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("yb_locations", ROOT / "scripts" / "add-location-pages.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def local_links_html(city: str, links: list[tuple[str, str]], accent: str) -> str:
+    items = "".join(
+        f'<a href="{h}" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;'
+        f'border:1px solid var(--line);border-radius:14px;background:#fff;color:var(--ink);font-weight:700;font-size:15px;'
+        f'text-decoration:none">{escape(label)}<span style="width:16px;height:16px;flex:none;color:{accent}">{ARROW}</span></a>'
+        for h, label in links
+    )
+    return (
+        '\n<section style="background:#fff;padding:0 0 88px">\n  <div class="container">\n'
+        '    <div style="max-width:760px;margin:0 auto">\n'
+        f'      <h2 style="margin:0 0 20px;font-size:24px">More Marketing for {escape(city)} Businesses</h2>\n'
+        '      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px">'
+        f'{items}</div>\n    </div>\n  </div>\n</section>\n'
+    )
+
+
+def process_local_services() -> int:
+    mod = location_module()
+    places = {p["slug"]: p for p in mod.REGIONS + mod.CITIES}
+    exists = lambda rel: (ROOT / f"{rel.lstrip('/')}.html").exists()
+    count = 0
+    for folder, (label, accent, module) in LOCAL_FOLDERS.items():
+        other = next(f for f in LOCAL_FOLDERS if f != folder)
+        for loc in load_js_array(module):
+            slug, city = loc["slug"], loc["city"]
+            path = ROOT / folder / f"{slug}.html"
+            if not path.exists():
+                continue
+            links = []
+            if exists(f"/locations/{slug}"):
+                links.append((f"/locations/{slug}", f"Digital Marketing in {city}"))
+            if exists(f"/{other}/{slug}"):
+                links.append((f"/{other}/{slug}", f"{LOCAL_FOLDERS[other][0]} in {city}"))
+            region = places.get(places.get(slug, {}).get("region") or "")
+            if region:
+                area = region["name"] if region["name"].endswith(("Area", "Washington")) else f"{region['name']} Area"
+                links.append((f"/locations/{region['slug']}", f"{area} Marketing"))
+                if exists(f"/{folder}/{region['slug']}"):
+                    links.append((f"/{folder}/{region['slug']}", f"{label} in {region['name']}"))
+            for c in mod.CITIES:
+                if c.get("region") == slug and exists(f"/locations/{c['slug']}"):
+                    links.append((f"/locations/{c['slug']}", f"Marketing in {c['name']}"))
+            if not links:
+                continue
+            html = path.read_text(encoding="utf-8")
+            start, end = "<!-- local-links:start -->", "<!-- local-links:end -->"
+            block = local_links_html(city, links, accent)
+            new, done = replace_block(html, start, end, block)
+            if not done:
+                anchor = html.find('<section style="background:var(--bg-soft);padding:80px 0" id="contact">')
+                if anchor == -1:
+                    print(f"  no contact section: {path.relative_to(ROOT)}")
+                    continue
+                new = html[:anchor] + start + block + end + "\n" + html[anchor:]
+            if new != html:
+                path.write_text(new, encoding="utf-8")
+                count += 1
+    return count
+
+
 def main() -> None:
+    local = process_local_services()
+    print(f"local service pages {local}")
     svc = sum(process_service(k, lang) for k in SERVICES for lang in ("en", "es"))
     svc += sum(process_results(k, lang) for k in RESULTS for lang in ("en", "es"))
     home = sum(process_home(p) for p in (ROOT / "index.html", ROOT / "es" / "index.html") if p.exists())

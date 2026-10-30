@@ -205,7 +205,7 @@ def build_team_thank_you_html(member: dict) -> str:
 <title>Thank You — {name} | YB Marketing</title>
 <meta name="description" content="Thank you for contacting {name} at YB Marketing. {short} will be in touch within 1 business day.">
 <link rel="stylesheet" href="{p}colors_and_type.css">
-<link rel="stylesheet" href="{p}site.css">
+<link rel="stylesheet" href="{p}site.css?v=4">
 <link rel="stylesheet" href="{p}team-profile.css">
 <style>
 *{{box-sizing:border-box;margin:0;padding:0}}
@@ -311,7 +311,7 @@ a{{color:inherit;text-decoration:none}}
   <div class="container ty-hero-member-grid">
     <img src="{photo}" alt="{name}" class="ty-hero-photo" width="140" height="140" loading="eager">
     <div class="ty-hero-copy">
-      <span class="eyebrow" style="color:var(--yb-coral)">Message Received</span>
+      <span class="eyebrow" style="color:#c93d29">Message Received</span>
       <h1>Thank You for<br><span class="ty-hero-accent">Reaching Out to {short}!</span></h1>
       <p class="ty-hero-role">{role} · YB Marketing</p>
       <p class="ty-hero-lead">{hero_lead}</p>

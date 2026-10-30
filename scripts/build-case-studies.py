@@ -207,7 +207,7 @@ def render_hero_stats(stats: list[dict]) -> str:
       </div>"""
         for s in stats
     )
-    return f"""  <div class="cs-hero-stats" aria-label="Key results">
+    return f"""  <div role="group" class="cs-hero-stats" aria-label="Key results">
     <div class="container cs-hero-stats__grid">
 {items}
     </div>
@@ -292,7 +292,7 @@ def page_shell(
 <meta name="description" content="{esc(description)}">
 <link rel="canonical" href="https://yakimabranding.com{page_href(rel_path)}">
 <link rel="stylesheet" href="{p}colors_and_type.css">
-<link rel="stylesheet" href="{p}site.css">
+<link rel="stylesheet" href="{p}site.css?v=4">
 <link rel="stylesheet" href="{p}case-studies.css">
 {extra_stylesheet}
 <style>

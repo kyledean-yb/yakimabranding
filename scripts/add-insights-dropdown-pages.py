@@ -210,7 +210,7 @@ def page_shell(
 <title>{title}</title>
 <meta name="description" content="{meta}">
 <link rel="stylesheet" href="../colors_and_type.css">
-<link rel="stylesheet" href="../site.css">
+<link rel="stylesheet" href="../site.css?v=4">
 <style>
 *{{box-sizing:border-box;margin:0;padding:0}}
 html{{scroll-behavior:smooth}}

@@ -164,7 +164,7 @@ section{padding:88px 0}
 .footer-mesh{position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.5;pointer-events:none}
 .footer-grid{position:relative;display:grid;grid-template-columns:1.7fr 1fr 1fr 1.4fr;gap:40px;margin-bottom:42px}
 .footer-brand p{color:var(--fg2-on-dark);font-size:14px;max-width:280px;margin:14px 0 18px}
-.footer-col h4{font-family:var(--font-display);font-size:14px;font-weight:700;margin-bottom:14px;letter-spacing:.04em;color:#fff}
+.footer-col h3{line-height:1.3;font-family:var(--font-display);font-size:14px;font-weight:700;margin-bottom:14px;letter-spacing:.04em;color:#fff}
 .footer-col ul{list-style:none;display:grid;gap:10px}
 .footer-col a{color:var(--fg2-on-dark);font-size:14px;transition:color 240ms}
 .footer-col a:hover{color:#fff}
@@ -519,9 +519,9 @@ def page_shell(
 <meta name="description" content="{esc(description)}">
 <link rel="canonical" href="{esc(canonical)}">
 <link rel="stylesheet" href="{prefix}colors_and_type.css">
-<link rel="stylesheet" href="{prefix}site.css">
+<link rel="stylesheet" href="{prefix}site.css?v=4">
 <link rel="stylesheet" href="{prefix}insights.css">
-<link rel="stylesheet" href="{prefix}hero-orbit.css">
+<link rel="stylesheet" href="{prefix}hero-orbit.css?v=2">
 <style>{PAGE_CSS}</style>
 {schema_blocks}
 {TRACKING_HEAD_BLOCK}
@@ -538,7 +538,7 @@ def page_shell(
 <script src="{prefix}js/newsletter-popup.js" defer></script>
 <script src="{prefix}js/chat-widget.js" defer></script>
 <script src="{prefix}js/site.js?v=2"></script>
-<script src="{prefix}js/hero-orbit.js" defer></script>
+<script src="{prefix}js/hero-orbit.js?v=2" defer></script>
 <script>{STAT_JS}</script>
 <script>{FAQ_JS}</script>
 {extra_scripts}

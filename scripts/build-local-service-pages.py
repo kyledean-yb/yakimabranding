@@ -307,7 +307,7 @@ def render_page(loc: dict, config: dict) -> str:
 <meta name="description" content="{esc(loc["metaDescription"])}">
 <link rel="canonical" href="{esc(loc["canonicalUrl"])}">
 <link rel="stylesheet" href="{p}colors_and_type.css">
-<link rel="stylesheet" href="{p}site.css">
+<link rel="stylesheet" href="{p}site.css?v=4">
 <style>
 *{{box-sizing:border-box;margin:0;padding:0}}
 html{{scroll-behavior:smooth}}
@@ -368,7 +368,7 @@ section{{padding:88px 0}}
 .footer-mesh{{position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.5;pointer-events:none}}
 .footer-grid{{position:relative;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1.1fr;gap:40px;margin-bottom:42px}}
 .footer-brand p{{color:var(--fg2-on-dark);font-size:14px;max-width:280px;margin:14px 0 18px}}
-.footer-col h4{{font-family:var(--font-display);font-size:14px;font-weight:700;margin-bottom:14px;letter-spacing:.04em;color:#fff}}
+.footer-col h3{{line-height:1.3;font-family:var(--font-display);font-size:14px;font-weight:700;margin-bottom:14px;letter-spacing:.04em;color:#fff}}
 .footer-col ul{{list-style:none;display:grid;gap:10px}}
 .footer-col a{{color:var(--fg2-on-dark);font-size:14px;transition:color 240ms}}
 .footer-col a:hover{{color:#fff}}
@@ -488,7 +488,7 @@ section{{padding:88px 0}}
 <div class="svc-cta">
   <div class="svc-cta-mesh"></div>
   <div class="container svc-cta-inner">
-    <span class="eyebrow" style="color:var(--yb-cyan)">Ready to Grow?</span>
+    <span class="eyebrow" style="color:#0a7ea4">Ready to Grow?</span>
     <h2 style="margin:14px 0 14px;color:#fff;font-size:clamp(1.8rem,2.6vw,2.4rem)">{esc(config["cta_heading"])}</h2>
     <p style="color:var(--fg2-on-dark);font-size:16px;margin-bottom:32px">{esc(config["cta_sub"])}</p>
     <div class="svc-cta-btns">
@@ -538,6 +538,9 @@ def main() -> None:
         out_dir = ROOT / config["folder"]
         out_dir.mkdir(parents=True, exist_ok=True)
         locations = load_locations(config)
+        if "--only" in sys.argv:
+            only = set(sys.argv[sys.argv.index("--only") + 1].split(","))
+            locations = [loc for loc in locations if loc["slug"] in only]
         for loc in locations:
             path = out_dir / f"{loc['slug']}.html"
             path.write_text(render_page(loc, config), encoding="utf-8")

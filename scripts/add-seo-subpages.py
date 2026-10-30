@@ -352,7 +352,7 @@ def build_page(page: dict) -> str:
 <link rel="stylesheet" href="../insights.css">
 <link rel="stylesheet" href="../lead-form.css">
 <style>{BASE_CSS}{EXTRA_CSS}</style>
-<link rel="stylesheet" href="../site.css">
+<link rel="stylesheet" href="../site.css?v=4">
 <link rel="stylesheet" href="https://widget.advicelocal.com/bundle.css">
 <link rel="stylesheet" href="../visibility-widget.css">
 {render_schema_head(schemas)}
@@ -389,7 +389,7 @@ def build_page(page: dict) -> str:
 <section style="background:#fff" id="contact">
   <div class="container">
     <div style="text-align:center;max-width:720px;margin:0 auto 40px">
-      <span class="eyebrow" style="color:#2BC4F0">Get Started</span>
+      <span class="eyebrow" style="color:#0a7ea4">Get Started</span>
       <h2 style="margin:14px 0 12px">Book a Meeting or Send Us a Message</h2>
       <p style="color:var(--fg2);font-size:16px;line-height:1.75">Grab a 30 minute intro call, or send a note and we'll get back to you.</p>
     </div>
@@ -411,7 +411,7 @@ def build_page(page: dict) -> str:
 <div class="svc-cta">
   <div class="svc-cta-mesh"></div>
   <div class="container svc-cta-inner">
-    <span class="eyebrow" style="color:var(--yb-cyan)">{page["eyebrow"]}</span>
+    <span class="eyebrow" style="color:#0a7ea4">{page["eyebrow"]}</span>
     <h2 style="margin:14px 0 14px;color:#fff;font-size:clamp(1.8rem,2.6vw,2.4rem)">{page["cta_heading"]}</h2>
     <p style="color:var(--fg2-on-dark);font-size:16px;margin-bottom:32px">{page["cta_body"]}</p>
     <div class="svc-cta-btns">
@@ -426,7 +426,7 @@ def build_page(page: dict) -> str:
 
 <script src="../js/newsletter-popup.js" defer></script>
 <script src="../js/chat-widget.js" defer></script>
-<script src="../js/hero-orbit.js" defer></script>
+<script src="../js/hero-orbit.js?v=2" defer></script>
 <script src="../js/site.js?v=2" defer></script>
 <script src="../js/lead-form-config.js" defer></script>
 <script src="../js/lead-form.js" defer></script>

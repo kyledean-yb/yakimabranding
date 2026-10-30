@@ -89,7 +89,7 @@ section{padding:88px 0}
 .footer-mesh{position:absolute;inset:0;background-image:var(--grad-mesh);opacity:.5;pointer-events:none}
 .footer-grid{position:relative;display:grid;grid-template-columns:1.7fr 1fr 1fr 1.4fr;gap:40px;margin-bottom:42px}
 .footer-brand p{color:var(--fg2-on-dark);font-size:14px;max-width:280px;margin:14px 0 18px}
-.footer-col h4{font-family:var(--font-display);font-size:14px;font-weight:700;margin-bottom:14px;letter-spacing:.04em;color:#fff}
+.footer-col h3{line-height:1.3;font-family:var(--font-display);font-size:14px;font-weight:700;margin-bottom:14px;letter-spacing:.04em;color:#fff}
 .footer-col ul{list-style:none;display:grid;gap:10px}
 .footer-col a{color:var(--fg2-on-dark);font-size:14px;transition:color 240ms}
 .footer-col a:hover{color:#fff}
@@ -109,7 +109,7 @@ section{padding:88px 0}
 @media(max-width:900px){.svc-hero-inner{grid-template-columns:1fr}.svc-hero-visual{display:none}.feat-grid{grid-template-columns:1fr 1fr}.pain-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.feat-grid,.pain-grid,.footer-grid{grid-template-columns:1fr}section{padding:60px 0}}
 </style>
-<link rel="stylesheet" href="../site.css">
+<link rel="stylesheet" href="../site.css?v=4">
 <!-- yb-tracking-head-start -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -286,7 +286,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
         </div>
         <div class="hero-orbit-spin">
           <div class="hero-orbit-node" style="--i:0">
-            <div class="hero-orbit-icon" aria-label="Lead Management">
+            <div role="img" class="hero-orbit-icon" aria-label="Lead Management">
               <span class="hero-orbit-pill">
                 <span class="hero-orbit-pill-ic">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
@@ -295,7 +295,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
             </div>
           </div>
           <div class="hero-orbit-node" style="--i:1">
-            <div class="hero-orbit-icon" aria-label="Sales Pipeline">
+            <div role="img" class="hero-orbit-icon" aria-label="Sales Pipeline">
               <span class="hero-orbit-pill">
                 <span class="hero-orbit-pill-ic">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
@@ -304,7 +304,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
             </div>
           </div>
           <div class="hero-orbit-node" style="--i:2">
-            <div class="hero-orbit-icon" aria-label="Email &amp; SMS">
+            <div role="img" class="hero-orbit-icon" aria-label="Email &amp; SMS">
               <span class="hero-orbit-pill">
                 <span class="hero-orbit-pill-ic">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -313,7 +313,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
             </div>
           </div>
           <div class="hero-orbit-node" style="--i:3">
-            <div class="hero-orbit-icon" aria-label="Automation">
+            <div role="img" class="hero-orbit-icon" aria-label="Automation">
               <span class="hero-orbit-pill">
                 <span class="hero-orbit-pill-ic">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
@@ -322,7 +322,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
             </div>
           </div>
           <div class="hero-orbit-node" style="--i:4">
-            <div class="hero-orbit-icon" aria-label="Landing Pages">
+            <div role="img" class="hero-orbit-icon" aria-label="Landing Pages">
               <span class="hero-orbit-pill">
                 <span class="hero-orbit-pill-ic">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
@@ -331,7 +331,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
             </div>
           </div>
           <div class="hero-orbit-node" style="--i:5">
-            <div class="hero-orbit-icon" aria-label="Analytics">
+            <div role="img" class="hero-orbit-icon" aria-label="Analytics">
               <span class="hero-orbit-pill">
                 <span class="hero-orbit-pill-ic">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
@@ -749,7 +749,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
 <div class="svc-cta">
   <div class="svc-cta-mesh"></div>
   <div class="container svc-cta-inner">
-    <span class="eyebrow" style="color:var(--yb-cyan)">Get Started</span>
+    <span class="eyebrow" style="color:#0a7ea4">Get Started</span>
     <h2 style="margin:14px 0 14px;color:#fff;font-size:clamp(1.8rem,2.6vw,2.4rem)">Ask our team for a demo</h2>
     <p style="color:var(--fg2-on-dark);font-size:16px;margin-bottom:32px">See how YB Marketing’s Customer Growth &amp; Communication Tool can organize your leads, centralize communication, and automate the customer follow-up your business needs.</p>
     <div class="svc-cta-btns">
@@ -777,7 +777,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
         </div>
       </div>
       <div class="footer-col footer-contact">
-        <h4>Get in Touch</h4>
+        <h3>Get in Touch</h3>
         <ul>
           <li><a href="tel:5099019735"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.08-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(509) 901-9735</a></li>
           <li><a href="mailto:info@yakimabranding.com"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@yakimabranding.com</a></li>
@@ -785,7 +785,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
         </ul>
       </div>
       <div class="footer-col footer-contact">
-        <h4>Our Locations</h4>
+        <h3>Our Locations</h3>
         <ul>
           <li><a href="/locations/phoenix-az"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Scottsdale, AZ</a></li>
           <li><a href="/locations/yakima-wa"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--yb-cyan)" stroke-width="2.2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Yakima, WA</a></li>
@@ -796,7 +796,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
     </div>
     <div class="footer-links">
       <div class="footer-col">
-        <h4>Digital Marketing</h4>
+        <h3>Digital Marketing</h3>
         <ul>
           <li><a href="/seo">SEO Services</a></li>
           <li><a href="/seo/local-seo">Local SEO</a></li>
@@ -807,7 +807,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Web &amp; Brand</h4>
+        <h3>Web &amp; Brand</h3>
         <ul>
           <li><a href="/web-design">Web Design Services</a></li>
           <li><a href="/branding">Branding &amp; Design</a></li>
@@ -817,7 +817,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
         </ul>
       </div>
       <div class="footer-col">
-        <h4>AI</h4>
+        <h3>AI</h3>
         <ul>
           <li><a href="/ai-for-business">AI for Business</a></li>
           <li><a href="/ai-for-small-business">AI for Small Business</a></li>
@@ -826,7 +826,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Company</h4>
+        <h3>Company</h3>
         <ul>
           <li><a href="/about">About Us</a></li>
           <li><a href="/about/case-studies">Case Studies</a></li>
@@ -838,11 +838,12 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Locations</h4>
+        <h3>Locations</h3>
         <ul>
           <li><a href="/locations">All Locations</a></li>
           <li><a href="/locations/central-washington">Central Washington</a></li>
           <li><a href="/locations/eastern-washington">Eastern Washington</a></li>
+          <li><a href="/locations/seattle-wa">Seattle Area</a></li>
           <li><a href="/locations/san-francisco-bay-area">San Francisco Bay Area</a></li>
           <li><a href="/locations/denver-co">Denver Area</a></li>
           <li><a href="/locations/phoenix-az">Phoenix Area</a></li>
@@ -866,7 +867,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
 
 <script src="../js/newsletter-popup.js" defer></script>
 <script src="../js/chat-widget.js" defer></script>
-<script src="../js/hero-orbit.js" defer></script>
+<script src="../js/hero-orbit.js?v=2" defer></script>
 <script src="../js/site.js?v=2" defer></script>
 <script src="../js/lead-form-config.js" defer></script>
 <script src="../js/lead-form.js" defer></script>

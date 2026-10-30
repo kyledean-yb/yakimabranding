@@ -756,7 +756,7 @@ CITIES = [
         "accent": "var(--yb-cyan)",
         "title": "Digital Marketing Agency Fremont CA | YB Marketing",
         "h1": "Digital Marketing for <span>Fremont</span> Businesses",
-        "lead": "SEO, Google Ads, and websites for businesses in Fremont and the southern East Bay.",
+        "lead": "SEO, Google Ads, and websites for businesses in Fremont and the East Bay.",
         "intro": [
             "Fremont is one of the largest cities in the Bay Area and one of the most diverse. Many households speak a language other than English at home, and they search in the language they're most comfortable with.",
             "Fremont is also home to a lot of factories and suppliers. We help homeowners and businesses in Fremont, Newark, and Union City find you, whether you sell to families or other companies.",

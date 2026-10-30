@@ -632,7 +632,7 @@ a{{color:inherit;text-decoration:none}}
 
 <script src="js/newsletter-popup.js" defer></script>
 <script src="js/chat-widget.js" defer></script>
-<script src="js/site.js"></script>
+<script src="js/site.js?v=2"></script>
 {ATTRIBUTER_FOOTER_BLOCK}
 </body>
 </html>

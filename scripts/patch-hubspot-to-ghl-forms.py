@@ -57,9 +57,9 @@ def inject_lead_assets(text: str, prefix: str) -> str:
     if "lead-form.js" in text:
         return text
     text = HUBSPOT_SCRIPTS_RE.sub("", text)
-    if f'<script src="{prefix}js/site.js"' in text:
+    if f'<script src="{prefix}js/site.js?v=2"' in text:
         return text.replace(
-            f'<script src="{prefix}js/site.js"',
+            f'<script src="{prefix}js/site.js?v=2"',
             f"{assets}\n<script src=\"{prefix}js/site.js\"",
             1,
         )

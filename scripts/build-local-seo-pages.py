@@ -473,7 +473,7 @@ section{{padding:88px 0}}
 {hubspot_script_tags(p)}
 <script src="{p}js/newsletter-popup.js" defer></script>
 <script src="{p}js/chat-widget.js" defer></script>
-<script src="{p}js/site.js"></script>
+<script src="{p}js/site.js?v=2"></script>
 <script>
 function toggleFaq(id, accent) {{
   document.documentElement.style.setProperty('--faq-ac', accent || 'var(--yb-blue)');

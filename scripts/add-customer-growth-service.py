@@ -460,7 +460,7 @@ section{{padding:88px 0}}
 <script src="../js/newsletter-popup.js" defer></script>
 <script src="../js/chat-widget.js" defer></script>
 <script src="../js/hero-orbit.js" defer></script>
-<script src="../js/site.js" defer></script>
+<script src="../js/site.js?v=2" defer></script>
 <script src="../js/lead-form-config.js" defer></script>
 <script src="../js/lead-form.js" defer></script>
 <script>

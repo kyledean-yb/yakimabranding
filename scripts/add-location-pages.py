@@ -1068,6 +1068,10 @@ def wave(top: str, bottom: str) -> str:
     return f'<div class="wave-div" style="background:{top}"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,40 C480,70 960,10 1440,35 L1440,70 L0,70 Z" fill="{bottom}"/></svg></div>'
 
 
+REGION_ORDER = ["central-washington", "eastern-washington", "phoenix-az", "denver-co", "chicago-il", "san-francisco-bay-area"]
+REGIONS.sort(key=lambda r: REGION_ORDER.index(r["slug"]))
+
+
 IN_PERSON_AREAS = {
     "Yakima Valley": {
         "slugs": {"yakima-wa", "selah-wa", "union-gap-wa", "sunnyside-wa", "toppenish-wa"},
@@ -1253,7 +1257,7 @@ def shell(*, title: str, meta: str, path: str, crumbs: list[tuple[str, str]], bo
 
 <script src="/js/newsletter-popup.js" defer></script>
 <script src="/js/chat-widget.js" defer></script>
-<script src="/js/site.js" defer></script>
+<script src="/js/site.js?v=2" defer></script>
 <script>
 document.getElementById('hamburger')?.addEventListener('click', function () {{
   document.getElementById('mobileMenu')?.classList.toggle('open');
@@ -1500,7 +1504,7 @@ def hub_page() -> str:
     directory = f"""    <p class="lc-dir-region">Pacific Northwest</p>
     <div class="lc-dir">{region_col('central-washington', 'Central Washington')}{region_col('eastern-washington', 'Eastern Washington')}{plain_col('Western Washington', 'Washington', [("Tacoma", "/locations/tacoma-wa"), ("Vancouver", "/locations/vancouver-wa")])}{plain_col('Idaho', '', [("Boise", "/locations/boise-id"), ("Coeur d'Alene", "/locations/coeur-dalene-id")])}</div>
     <p class="lc-dir-region">West &amp; Southwest</p>
-    <div class="lc-dir">{region_col('san-francisco-bay-area', 'Bay Area')}{region_col('denver-co', 'Denver Area')}{region_col('phoenix-az', 'Phoenix Area')}</div>
+    <div class="lc-dir">{region_col('phoenix-az', 'Phoenix Area')}{region_col('denver-co', 'Denver Area')}{region_col('san-francisco-bay-area', 'Bay Area')}</div>
     <p class="lc-dir-region">Midwest</p>
     <div class="lc-dir">{region_col('chicago-il', 'Chicago Area')}</div>"""
 

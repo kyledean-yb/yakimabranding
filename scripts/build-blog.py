@@ -470,7 +470,7 @@ a{{color:inherit;text-decoration:none}}
 {site_footer_html(prefix)}
 <script src="{prefix}js/newsletter-popup.js" defer></script>
 <script src="{prefix}js/chat-widget.js" defer></script>
-<script src="{prefix}js/site.js" defer></script>
+<script src="{prefix}js/site.js?v=2" defer></script>
 <script>
 document.getElementById('hamburger')?.addEventListener('click', function () {{
   document.getElementById('mobileMenu')?.classList.toggle('open');

@@ -81,7 +81,7 @@ a{{color:inherit;text-decoration:none}}
 
 <script src="{PREFIX}js/newsletter-popup.js" defer></script>
 <script src="{PREFIX}js/chat-widget.js" defer></script>
-<script src="{PREFIX}js/site.js" defer></script>
+<script src="{PREFIX}js/site.js?v=2" defer></script>
 {ATTRIBUTER_FOOTER_BLOCK}
 </body>
 </html>

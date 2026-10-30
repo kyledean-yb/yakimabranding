@@ -322,7 +322,7 @@ a{{color:inherit;text-decoration:none}}
 {footer}
 <script src="../js/newsletter-popup.js" defer></script>
 <script src="../js/chat-widget.js" defer></script>
-<script src="../js/site.js" defer></script>
+<script src="../js/site.js?v=2" defer></script>
 <script>
 document.getElementById('hamburger')?.addEventListener('click', function () {{
   document.getElementById('mobileMenu')?.classList.toggle('open');

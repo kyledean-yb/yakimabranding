@@ -537,7 +537,7 @@ def page_shell(
 {hubspot_script_tags(prefix)}
 <script src="{prefix}js/newsletter-popup.js" defer></script>
 <script src="{prefix}js/chat-widget.js" defer></script>
-<script src="{prefix}js/site.js"></script>
+<script src="{prefix}js/site.js?v=2"></script>
 <script src="{prefix}js/hero-orbit.js" defer></script>
 <script>{STAT_JS}</script>
 <script>{FAQ_JS}</script>

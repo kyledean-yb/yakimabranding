@@ -82,28 +82,6 @@
     window.addEventListener('scroll', update, { passive: true });
   }
 
-  function markHeroEntrance() {
-    if (prefersReducedMotion) return;
-
-    document.querySelectorAll('.hero .eyebrow, .svc-hero .eyebrow, .blog-hero .eyebrow').forEach(function (el) {
-      el.classList.add('hero-reveal');
-    });
-    document.querySelectorAll('.hero h1, .svc-hero h1, .blog-hero h1').forEach(function (el) {
-      el.classList.add('hero-reveal', 'hero-reveal-d1');
-    });
-    document.querySelectorAll(
-      '.hero .hero-lead, .svc-hero .hero-lead, .hero p.hero-lead, .blog-hero p'
-    ).forEach(function (el) {
-      el.classList.add('hero-reveal', 'hero-reveal-d2');
-    });
-    document.querySelectorAll('.hero-actions, .svc-hero-actions').forEach(function (el) {
-      el.classList.add('hero-reveal', 'hero-reveal-d3');
-    });
-    document.querySelectorAll('.hero-visual, .svc-hero-visual').forEach(function (el) {
-      el.classList.add('hero-reveal', 'hero-reveal-d4');
-    });
-  }
-
   function applyRevealClasses() {
     if (prefersReducedMotion) return;
 
@@ -190,7 +168,6 @@
   function initScrollReveal() {
     if (prefersReducedMotion) return;
 
-    markHeroEntrance();
     applyRevealClasses();
 
     var observer = new IntersectionObserver(

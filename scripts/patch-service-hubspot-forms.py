@@ -47,9 +47,9 @@ def inject_hubspot_scripts(text: str, prefix: str) -> str:
             f"{hubspot_js}\n{embed_js}\n<script src=\"{prefix}js/contact-forms.js\"",
             1,
         )
-    if f'<script src="{prefix}js/site.js"' in text:
+    if f'<script src="{prefix}js/site.js?v=2"' in text:
         return text.replace(
-            f'<script src="{prefix}js/site.js"',
+            f'<script src="{prefix}js/site.js?v=2"',
             f"{hubspot_js}\n{embed_js}\n<script src=\"{prefix}js/site.js\"",
             1,
         )

@@ -28,7 +28,7 @@ def inject_script(text: str, prefix: str) -> str:
         return text
 
     tag = NEWSLETTER_POPUP_SCRIPT.format(prefix=prefix)
-    site_tag = f'<script src="{prefix}js/site.js"'
+    site_tag = f'<script src="{prefix}js/site.js?v=2"'
     if site_tag in text:
         return text.replace(site_tag, f"{tag}\n{site_tag}", 1)
     return text.replace("</body>", f"\n{tag}\n</body>", 1)

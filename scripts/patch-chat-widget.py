@@ -32,7 +32,7 @@ def inject_script(text: str, prefix: str) -> str:
     if newsletter_line in text:
         return text.replace(newsletter_line, f"{newsletter_line}\n{tag}", 1)
 
-    site_tag = f'<script src="{prefix}js/site.js"'
+    site_tag = f'<script src="{prefix}js/site.js?v=2"'
     if site_tag in text:
         return text.replace(site_tag, f"{tag}\n{site_tag}", 1)
 

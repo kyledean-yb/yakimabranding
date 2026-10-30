@@ -44,7 +44,7 @@ def inject_script(text: str, prefix: str) -> str:
         return text
     if '<script src="' in text and "site.js" in text:
         return text.replace(
-            f'<script src="{prefix}js/site.js"',
+            f'<script src="{prefix}js/site.js?v=2"',
             f"{tag}\n<script src=\"{prefix}js/site.js\"",
             1,
         )

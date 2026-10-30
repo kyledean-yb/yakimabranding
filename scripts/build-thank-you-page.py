@@ -257,7 +257,7 @@ if (typeof window !== 'undefined') {{
 </script>
 <script src="{prefix}js/newsletter-popup.js" defer></script>
 <script src="{prefix}js/chat-widget.js" defer></script>
-<script src="{prefix}js/site.js" defer></script>
+<script src="{prefix}js/site.js?v=2" defer></script>
 {thank_you_lead_script_html(prefix)}
 {ATTRIBUTER_FOOTER_BLOCK}
 </body>

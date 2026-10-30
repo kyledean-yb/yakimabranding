@@ -1136,13 +1136,9 @@ SEO = {
 
 
 def main():
-    write_web_design()
     write_google_ads()
-    write_social_media()
     write_seo()
-    print("Wrote data/webDesignLocations.js")
     print("Wrote data/googleAdsLocations.js")
-    print("Wrote data/socialMediaLocations.js")
     print("Wrote data/seoLocations.js")
 
 

@@ -163,9 +163,6 @@ def load_location_hubs() -> list[dict]:
 LOCAL_SERVICE_FOLDERS = [
     ("seo", "SEO"),
     ("google-ads", "Google Ads"),
-    ("web-design", "Web Design"),
-    ("social-media", "Social Media"),
-    ("branding", "Branding"),
 ]
 
 

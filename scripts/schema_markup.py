@@ -129,27 +129,6 @@ LOCAL_SERVICE_META = {
         "export": "googleAdsLocations",
         "file": "googleAdsLocations.js",
     },
-    "web-design": {
-        "folder": "web-design",
-        "name": "Web Design & Development",
-        "service_type": "Web Design",
-        "export": "webDesignLocations",
-        "file": "webDesignLocations.js",
-    },
-    "social-media": {
-        "folder": "social-media",
-        "name": "Social Media Management",
-        "service_type": "Social Media Marketing",
-        "export": "socialMediaLocations",
-        "file": "socialMediaLocations.js",
-    },
-    "branding": {
-        "folder": "branding",
-        "name": "Branding & Design",
-        "service_type": "Brand Identity Design",
-        "export": "brandingLocations",
-        "file": "brandingLocations.js",
-    },
 }
 
 CITY_META = {

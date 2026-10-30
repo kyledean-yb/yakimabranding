@@ -1146,7 +1146,7 @@ def case_cards(keys: list[str]) -> str:
     return "\n".join(out)
 
 
-LOCAL_SERVICE_ROOTS = ("/seo", "/google-ads", "/web-design", "/social-media", "/branding")
+LOCAL_SERVICE_ROOTS = ("/seo", "/google-ads")
 
 
 def local_service_url(url: str, slug: str) -> str:

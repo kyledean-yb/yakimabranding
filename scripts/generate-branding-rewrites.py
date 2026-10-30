@@ -881,10 +881,9 @@ def patch_faq_py():
 
 
 def main():
-    write_branding()
     write_hubs()
     patch_faq_py()
-    print("Wrote data/brandingLocations.js and data/locationHubs.js")
+    print("Wrote data/locationHubs.js")
 
 
 if __name__ == "__main__":

@@ -210,7 +210,7 @@ def block(service: str, lang: str, bg: str) -> str:
 {CSS}
 <section class="svr" style="background:{bg}" aria-label="{escape(c['eyebrow'])}">
   <div class="svr-head">
-    <span class="eyebrow" style="color:var(--yb-coral)">{escape(c['eyebrow'])}</span>
+    <span class="eyebrow" style="color:#c93d29">{escape(c['eyebrow'])}</span>
     <h2>{escape(c[service])}</h2>
     {badges(c)}
   </div>
@@ -249,7 +249,7 @@ def split_block(service: str, lang: str, bg: str, folder: str) -> str:
   <div class="container svr-split">
     <div class="svr-left">
       <div class="svr-head">
-        <span class="eyebrow" style="color:var(--yb-coral)">{escape(eyebrow)}</span>
+        <span class="eyebrow" style="color:#c93d29">{escape(eyebrow)}</span>
         <h2>{escape(heading)}</h2>
         {badges(c)}
       </div>

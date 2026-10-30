@@ -192,7 +192,7 @@ section{padding:88px 0}
 .blog-scroll-btn:hover{background:var(--wash-blue);border-color:var(--yb-blue);color:var(--yb-blue)}
 .blog-scroll-btn--prev{left:-14px}
 .blog-scroll-btn--next{right:-14px}
-.blog-grid.blog-grid--scroll{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 4px 18px;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--line-strong) transparent}
+.blog-grid.blog-grid--scroll{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 18px;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--line-strong) transparent}
 .blog-grid.blog-grid--scroll::-webkit-scrollbar{height:8px}
 .blog-grid.blog-grid--scroll::-webkit-scrollbar-thumb{background:var(--line-strong);border-radius:var(--r-pill)}
 .blog-grid.blog-grid--scroll .blog-card{flex:0 0 min(320px,calc(100vw - 120px));scroll-snap-align:start;height:auto}
@@ -341,9 +341,9 @@ section{padding:88px 0}
 .marquee-logo:hover{filter:grayscale(0) opacity(1)}
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.marquee-track{animation:none}}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 </style>
-<link href="/site.css" media="print" onload="this.media='all'" rel="stylesheet"/>
-<noscript><link href="/site.css" rel="stylesheet"/></noscript>
+<link href="/site.css" rel="stylesheet"/>
 <!-- yb-tracking-head-start -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -547,7 +547,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
 <section class="hero" id="top">
 <div class="hero-mesh"></div>
 <div aria-hidden="true" class="hero-logo-overlay hero-logo-overlay--light hero-logo-overlay--left">
-<img alt="" src="/assets/yb-logo-color.png"/>
+<img alt="" src="/assets/yb-logo-color.png" width="300" height="300">
 </div>
 <div class="container hero-inner">
 <div>
@@ -573,7 +573,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
 <div class="hero-orbit-ring hero-orbit-ring--track"></div>
 <div class="hero-orbit-hub">
 <div class="hero-orbit-hub-mesh"></div>
-<img alt="YB Marketing" class="hero-orbit-hub-logo" src="/assets/yb-logo-white.png"/>
+<img alt="YB Marketing" class="hero-orbit-hub-logo" src="/assets/yb-logo-white.png" width="300" height="300">
 </div>
 </div>
 <div class="hero-orbit-spin">
@@ -708,7 +708,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
   <div class="container svr-split">
     <div class="svr-left">
       <div class="svr-head">
-        <span class="eyebrow" style="color:var(--yb-coral)">Reseñas de clientes</span>
+        <span class="eyebrow" style="color:#c93d29">Reseñas de clientes</span>
         <h2>Lo que dicen nuestros clientes</h2>
         <div class="svr-badges"><a class="svr-badge" href="https://www.google.com/search?q=yakima+branding#lrd=0x808fcc994b2e85bd:0xf6698f50d2169f4d,1,,,," target="_blank" rel="noopener"><span class="svr-gicon"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span><span class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><b>5.0</b><span>en Google</span></a></div>
       </div>
@@ -805,7 +805,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
 <li><span class="feat-check" style="background:var(--wash-violet);color:var(--yb-violet)"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Sistema de diseño</li>
 <li><span class="feat-check" style="background:var(--wash-violet);color:var(--yb-violet)"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Diseño Web</li>
 </ul>
-<a class="svc-link" href="/es/branding" style="color:var(--yb-violet)">Más información <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+<a class="svc-link" href="/es/branding" style="color:var(--yb-violet)">Más información<span class="sr-only"> sobre Marca y diseño</span> <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
 </div>
 <div class="svc-card" style="--ac:var(--yb-cyan)">
 <div class="svc-img"><img alt="Optimización de motores de búsqueda" src="/assets/svc-seo.webp"/></div>
@@ -820,7 +820,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
 <li><span class="feat-check" style="background:var(--wash-cyan);color:var(--yb-cyan)"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Visibilidad local y AI</li>
 <li><span class="feat-check" style="background:var(--wash-cyan);color:var(--yb-cyan)"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Analítica</li>
 </ul>
-<a class="svc-link" href="/es/seo" style="color:var(--yb-cyan)">Más información <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+<a class="svc-link" href="/es/seo" style="color:var(--yb-cyan)">Más información<span class="sr-only"> sobre Optimización de motores de búsqueda</span> <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
 </div>
 <div class="svc-card" style="--ac:var(--yb-coral)">
 <div class="svc-img"><img alt="Publicidad en Google" src="/assets/svc-google-ads.webp"/></div>
@@ -835,7 +835,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
 <li><span class="feat-check" style="background:var(--wash-coral);color:var(--yb-coral)"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Páginas de destino</li>
 <li><span class="feat-check" style="background:var(--wash-coral);color:var(--yb-coral)"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Resultados mensurables</li>
 </ul>
-<a class="svc-link" href="/es/google-ads" style="color:var(--yb-coral)">Más información <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+<a class="svc-link" href="/es/google-ads" style="color:var(--yb-coral)">Más información<span class="sr-only"> sobre Publicidad en Google</span> <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
 </div>
 <div class="svc-card" style="--ac:#c77f12">
 <div class="svc-img"><img alt="Marketing de redes sociales" src="/assets/svc-social.webp"/></div>
@@ -850,7 +850,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
 <li><span class="feat-check" style="background:var(--wash-amber);color:#c77f12"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Sociales Pagadas</li>
 <li><span class="feat-check" style="background:var(--wash-amber);color:#c77f12"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Comunidad</li>
 </ul>
-<a class="svc-link" href="/es/social-media" style="color:#c77f12">Más información <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+<a class="svc-link" href="/es/social-media" style="color:#c77f12">Más información<span class="sr-only"> sobre Gestión de redes sociales</span> <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
 </div>
 <div class="svc-card" style="--ac:#159468">
 <div class="svc-img"><img alt="Diseño y desarrollo de sitios web" src="/assets/hero-img.webp"/></div>
@@ -865,7 +865,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
 <li><span class="feat-check" style="background:var(--wash-mint);color:#159468"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Impresión y gráficos</li>
 <li><span class="feat-check" style="background:var(--wash-mint);color:#159468"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Proyectos personalizados</li>
 </ul>
-<a class="svc-link" href="/es/web-design" style="color:#159468">Más información <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+<a class="svc-link" href="/es/web-design" style="color:#159468">Más información<span class="sr-only"> sobre Diseño y gráficos de sitios web</span> <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
 </div>
 <div class="svc-card" style="--ac:var(--yb-pink)">
 <div class="svc-img"><img alt="Creación de contenido y blogs" src="/assets/svc-content.webp"/></div>
@@ -880,7 +880,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
 <li><span class="feat-check" style="background:var(--wash-pink);color:var(--yb-pink)"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Campañas de correo electrónico</li>
 <li><span class="feat-check" style="background:var(--wash-pink);color:var(--yb-pink)"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Contenido de redes sociales</li>
 </ul>
-<a class="svc-link" href="/es/content-marketing" style="color:var(--yb-pink)">Más información <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+<a class="svc-link" href="/es/content-marketing" style="color:var(--yb-pink)">Más información<span class="sr-only"> sobre Creación de contenido y blogs</span> <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
 </div>
 </div>
 <div class="svc-cta">
@@ -965,7 +965,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
 </a>
 </div>
 <div class="video-announce-frame">
-<video controls playsinline preload="none" poster="/assets/video/yb-animation-poster.jpg" title="Anuncio de animación de YB Marketing">
+<video controls playsinline preload="none" poster="/assets/video/yb-animation-poster.webp" title="Anuncio de animación de YB Marketing">
         <source src="/assets/video/yb-animation-announcement.mp4" type="video/mp4">
       </video>
 </div>
@@ -1024,7 +1024,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
   <div class="container">
     <div class="blog-top">
       <div style="max-width:560px">
-        <span class="eyebrow" style="color:var(--yb-coral)">Casos de éxito</span>
+        <span class="eyebrow" style="color:#c93d29">Casos de éxito</span>
         <h2 style="margin:14px 0 12px">Resultados que hemos logrado para nuestros clientes</h2>
         <p class="yb-lead">Algunos logros recientes en SEO, Google Ads y proyectos web, con los números que los respaldan.</p>
       </div>
@@ -1040,7 +1040,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
         <h3>Un proveedor local de servicios de refrigeración contó con los técnicos. La visibilidad de búsqueda no se había puesto al día.</h3>
         <span class="hc-link">Leer caso de éxito <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
       </a>
-      <a class="hc-card" href="/es/about/case-studies/roofing-contractor-inbound-marketing" style="--hc-accent:#ff6b57">
+      <a class="hc-card" href="/es/about/case-studies/roofing-contractor-inbound-marketing" style="--hc-accent:#e0503b">
         <span class="hc-tag">SEO · Anuncios · Contenido</span>
         <span class="hc-stat">3×</span>
         <span class="hc-stat-label">Crecimiento de ingresos</span>
@@ -1197,24 +1197,24 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
 <div class="marquee-label">Herramientas y socios confiables</div>
 <div class="marquee-track">
 <div class="marquee-set">
-<img alt="Contacto constante" class="marquee-logo" src="/assets/logo-constant-contact.webp"/>
-<img alt="CallRail" class="marquee-logo" src="/assets/logo-callrail.webp"/>
-<img alt="Anuncios de Amazon" class="marquee-logo" src="/assets/logo-amazon-ads.webp"/>
-<img alt="Cámara de Comercio del Condado de Kittitas" class="marquee-logo" src="/assets/logo-partner5.webp"/>
-<img alt="Pareja" class="marquee-logo" src="/assets/logo-partner4.webp"/>
-<img alt="BNI" class="marquee-logo" src="/assets/logo-bni.webp"/>
-<img alt="WSI Marketing Digital" class="marquee-logo" src="/assets/logo-wsi.webp"/>
-<img alt="Asociación de Constructores de Viviendas del Centro de Washington." class="marquee-logo" src="/assets/logo-cwhba.webp"/>
+<img alt="Contacto constante" class="marquee-logo" src="/assets/logo-constant-contact.webp" width="384" height="66">
+<img alt="CallRail" class="marquee-logo" src="/assets/logo-callrail.webp" width="384" height="115">
+<img alt="Anuncios de Amazon" class="marquee-logo" src="/assets/logo-amazon-ads.webp" width="384" height="115">
+<img alt="Cámara de Comercio del Condado de Kittitas" class="marquee-logo" src="/assets/logo-partner5.webp" width="150" height="109">
+<img alt="Pareja" class="marquee-logo" src="/assets/logo-partner4.webp" width="100" height="100">
+<img alt="BNI" class="marquee-logo" src="/assets/logo-bni.webp" width="200" height="77">
+<img alt="WSI Marketing Digital" class="marquee-logo" src="/assets/logo-wsi.webp" width="450" height="117">
+<img alt="Asociación de Constructores de Viviendas del Centro de Washington." class="marquee-logo" src="/assets/logo-cwhba.webp" width="150" height="150">
 </div>
 <div aria-hidden="true" class="marquee-set">
-<img alt="Contacto constante" class="marquee-logo" src="/assets/logo-constant-contact.webp"/>
-<img alt="CallRail" class="marquee-logo" src="/assets/logo-callrail.webp"/>
-<img alt="Anuncios de Amazon" class="marquee-logo" src="/assets/logo-amazon-ads.webp"/>
-<img alt="Cámara de Comercio del Condado de Kittitas" class="marquee-logo" src="/assets/logo-partner5.webp"/>
-<img alt="Pareja" class="marquee-logo" src="/assets/logo-partner4.webp"/>
-<img alt="BNI" class="marquee-logo" src="/assets/logo-bni.webp"/>
-<img alt="WSI Marketing Digital" class="marquee-logo" src="/assets/logo-wsi.webp"/>
-<img alt="Asociación de Constructores de Viviendas del Centro de Washington." class="marquee-logo" src="/assets/logo-cwhba.webp"/>
+<img alt="Contacto constante" class="marquee-logo" src="/assets/logo-constant-contact.webp" width="384" height="66">
+<img alt="CallRail" class="marquee-logo" src="/assets/logo-callrail.webp" width="384" height="115">
+<img alt="Anuncios de Amazon" class="marquee-logo" src="/assets/logo-amazon-ads.webp" width="384" height="115">
+<img alt="Cámara de Comercio del Condado de Kittitas" class="marquee-logo" src="/assets/logo-partner5.webp" width="150" height="109">
+<img alt="Pareja" class="marquee-logo" src="/assets/logo-partner4.webp" width="100" height="100">
+<img alt="BNI" class="marquee-logo" src="/assets/logo-bni.webp" width="200" height="77">
+<img alt="WSI Marketing Digital" class="marquee-logo" src="/assets/logo-wsi.webp" width="450" height="117">
+<img alt="Asociación de Constructores de Viviendas del Centro de Washington." class="marquee-logo" src="/assets/logo-cwhba.webp" width="150" height="150">
 </div>
 </div>
 </div>

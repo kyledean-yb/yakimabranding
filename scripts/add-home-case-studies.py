@@ -83,7 +83,7 @@ def block(lang: str, es: dict[str, str]) -> str:
         s = studies[slug]
         stat = s["heroStats"][stat_i]
         cards.append(
-            f'      <a class="hc-card" href="{c["base"]}/{slug}" style="--hc-accent:{s["accent"]}">\n'
+            f'      <a class="hc-card" href="{c["base"]}/{slug}" style="--hc-accent:{"#e0503b" if s["accent"].lower() == "#ff6b57" else s["accent"]}">\n'
             f'        <span class="hc-tag">{escape(tr(s["hubTag"], lang, es))}</span>\n'
             f'        <span class="hc-stat">{escape(stat["value"])}</span>\n'
             f'        <span class="hc-stat-label">{escape(tr(stat["label"], lang, es))}</span>\n'
@@ -97,7 +97,7 @@ def block(lang: str, es: dict[str, str]) -> str:
   <div class="container">
     <div class="blog-top">
       <div style="max-width:560px">
-        <span class="eyebrow" style="color:var(--yb-coral)">{escape(c["eyebrow"])}</span>
+        <span class="eyebrow" style="color:#c93d29">{escape(c["eyebrow"])}</span>
         <h2 style="margin:14px 0 12px">{escape(c["heading"])}</h2>
         <p class="yb-lead">{escape(c["lead"])}</p>
       </div>

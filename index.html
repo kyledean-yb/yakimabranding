@@ -192,7 +192,7 @@ section{padding:88px 0}
 .blog-scroll-btn:hover{background:var(--wash-blue);border-color:var(--yb-blue);color:var(--yb-blue)}
 .blog-scroll-btn--prev{left:-14px}
 .blog-scroll-btn--next{right:-14px}
-.blog-grid.blog-grid--scroll{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 4px 18px;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--line-strong) transparent}
+.blog-grid.blog-grid--scroll{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 18px;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--line-strong) transparent}
 .blog-grid.blog-grid--scroll::-webkit-scrollbar{height:8px}
 .blog-grid.blog-grid--scroll::-webkit-scrollbar-thumb{background:var(--line-strong);border-radius:var(--r-pill)}
 .blog-grid.blog-grid--scroll .blog-card{flex:0 0 min(320px,calc(100vw - 120px));scroll-snap-align:start;height:auto}
@@ -341,9 +341,9 @@ section{padding:88px 0}
 .marquee-logo:hover{filter:grayscale(0) opacity(1)}
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.marquee-track{animation:none}}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 </style>
-<link rel="stylesheet" href="site.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="site.css"></noscript>
+<link rel="stylesheet" href="site.css">
 
 <!-- yb-tracking-head-start -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -552,7 +552,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
 <section class="hero" id="top">
   <div class="hero-mesh"></div>
   <div class="hero-logo-overlay hero-logo-overlay--light hero-logo-overlay--left" aria-hidden="true">
-    <img src="assets/yb-logo-color.png" alt="">
+    <img src="assets/yb-logo-color.png" alt="" width="300" height="300">
   </div>
   <div class="container hero-inner">
     <div>
@@ -579,7 +579,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
           <div class="hero-orbit-ring hero-orbit-ring--track"></div>
           <div class="hero-orbit-hub">
             <div class="hero-orbit-hub-mesh"></div>
-            <img class="hero-orbit-hub-logo" src="assets/yb-logo-white.png" alt="YB Marketing">
+            <img class="hero-orbit-hub-logo" src="assets/yb-logo-white-240.webp" alt="YB Marketing" width="240" height="240">
           </div>
         </div>
         <div class="hero-orbit-spin">
@@ -715,7 +715,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
   <div class="container svr-split">
     <div class="svr-left">
       <div class="svr-head">
-        <span class="eyebrow" style="color:var(--yb-coral)">Client Love</span>
+        <span class="eyebrow" style="color:#c93d29">Client Love</span>
         <h2>What Our Clients Say</h2>
         <div class="svr-badges"><a class="svr-badge" href="https://www.google.com/search?q=yakima+branding#lrd=0x808fcc994b2e85bd:0xf6698f50d2169f4d,1,,,," target="_blank" rel="noopener"><span class="svr-gicon"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span><span class="svr-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><b>5.0</b><span>on Google</span></a></div>
       </div>
@@ -813,7 +813,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
           <li><span class="feat-check" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Design System</li>
           <li><span class="feat-check" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Web Design</li>
         </ul>
-        <a href="/branding" class="svc-link" style="color:var(--yb-violet)">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="/branding" class="svc-link" style="color:var(--yb-violet)">Learn More<span class="sr-only"> about Branding &amp; Design</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
 
       <div class="svc-card" style="--ac:var(--yb-cyan)">
@@ -829,7 +829,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
           <li><span class="feat-check" style="background:var(--wash-cyan);color:var(--yb-cyan)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Local &amp; AI Visibility</li>
           <li><span class="feat-check" style="background:var(--wash-cyan);color:var(--yb-cyan)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Analytics</li>
         </ul>
-        <a href="/seo" class="svc-link" style="color:var(--yb-cyan)">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="/seo" class="svc-link" style="color:var(--yb-cyan)">Learn More<span class="sr-only"> about Search Engine Optimization</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
 
       <div class="svc-card" style="--ac:var(--yb-coral)">
@@ -845,7 +845,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
           <li><span class="feat-check" style="background:var(--wash-coral);color:var(--yb-coral)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Landing Pages</li>
           <li><span class="feat-check" style="background:var(--wash-coral);color:var(--yb-coral)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Measurable Results</li>
         </ul>
-        <a href="/google-ads" class="svc-link" style="color:var(--yb-coral)">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="/google-ads" class="svc-link" style="color:var(--yb-coral)">Learn More<span class="sr-only"> about Google Advertising</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
 
       <div class="svc-card" style="--ac:#c77f12">
@@ -861,7 +861,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
           <li><span class="feat-check" style="background:var(--wash-amber);color:#c77f12"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Paid Social</li>
           <li><span class="feat-check" style="background:var(--wash-amber);color:#c77f12"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Community</li>
         </ul>
-        <a href="/social-media" class="svc-link" style="color:#c77f12">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="/social-media" class="svc-link" style="color:#c77f12">Learn More<span class="sr-only"> about Social Media Management</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
 
       <div class="svc-card" style="--ac:#159468">
@@ -877,7 +877,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
           <li><span class="feat-check" style="background:var(--wash-mint);color:#159468"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Print &amp; Graphics</li>
           <li><span class="feat-check" style="background:var(--wash-mint);color:#159468"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Custom Projects</li>
         </ul>
-        <a href="/web-design" class="svc-link" style="color:#159468">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="/web-design" class="svc-link" style="color:#159468">Learn More<span class="sr-only"> about Website Design &amp; Graphics</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
 
       <div class="svc-card" style="--ac:var(--yb-pink)">
@@ -893,7 +893,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
           <li><span class="feat-check" style="background:var(--wash-pink);color:var(--yb-pink)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Email Campaigns</li>
           <li><span class="feat-check" style="background:var(--wash-pink);color:var(--yb-pink)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Social Media Content</li>
         </ul>
-        <a href="/content-marketing" class="svc-link" style="color:var(--yb-pink)">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="/content-marketing" class="svc-link" style="color:var(--yb-pink)">Learn More<span class="sr-only"> about Content Creation &amp; Blogging</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
 
       <div class="svc-card" style="--ac:var(--yb-blue)">
@@ -909,7 +909,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
           <li><span class="feat-check" style="background:var(--wash-blue);color:var(--yb-blue)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Automated Follow-Up</li>
           <li><span class="feat-check" style="background:var(--wash-blue);color:var(--yb-blue)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Reviews &amp; Scheduling</li>
         </ul>
-        <a href="/customer-growth" class="svc-link" style="color:var(--yb-blue)">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="/customer-growth" class="svc-link" style="color:var(--yb-blue)">Learn More<span class="sr-only"> about Customer Growth &amp; Communication Tool</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
 
       <div class="svc-card" style="--ac:var(--yb-violet)">
@@ -925,7 +925,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
           <li><span class="feat-check" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Chat &amp; Voice Agents</li>
           <li><span class="feat-check" style="background:var(--wash-violet);color:var(--yb-violet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Training &amp; Support</li>
         </ul>
-        <a href="/ai-for-business" class="svc-link" style="color:var(--yb-violet)">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="/ai-for-business" class="svc-link" style="color:var(--yb-violet)">Learn More<span class="sr-only"> about AI for Business</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
 
     </div>
@@ -1021,7 +1021,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
       </a>
     </div>
     <div class="video-announce-frame">
-      <video controls playsinline preload="none" poster="/assets/video/yb-animation-poster.jpg" title="YB Marketing animation announcement">
+      <video controls playsinline preload="none" poster="/assets/video/yb-animation-poster.webp" title="YB Marketing animation announcement">
         <source src="/assets/video/yb-animation-announcement.mp4" type="video/mp4">
       </video>
     </div>
@@ -1089,7 +1089,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
   <div class="container">
     <div class="blog-top">
       <div style="max-width:560px">
-        <span class="eyebrow" style="color:var(--yb-coral)">Case Studies</span>
+        <span class="eyebrow" style="color:#c93d29">Case Studies</span>
         <h2 style="margin:14px 0 12px">Results We&#x27;ve Delivered for Clients</h2>
         <p class="yb-lead">A few recent wins from SEO, Google Ads and website projects, with the numbers to back them up.</p>
       </div>
@@ -1105,7 +1105,7 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
         <h3>A Local Refrigeration Services Provider Had the Technicians. Search Visibility Hadn&#x27;t Caught Up.</h3>
         <span class="hc-link">Read case study <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
       </a>
-      <a class="hc-card" href="/about/case-studies/roofing-contractor-inbound-marketing" style="--hc-accent:#ff6b57">
+      <a class="hc-card" href="/about/case-studies/roofing-contractor-inbound-marketing" style="--hc-accent:#e0503b">
         <span class="hc-tag">SEO · Ads · Content</span>
         <span class="hc-stat">3×</span>
         <span class="hc-stat-label">Revenue growth</span>
@@ -1267,24 +1267,24 @@ window[(function(_YRK,_Le){var _pUnlL='';for(var _D6FvKd=0;_D6FvKd<_YRK.length;_
   <div class="marquee-label">Trusted Tools &amp; Partners</div>
   <div class="marquee-track">
     <div class="marquee-set">
-      <img class="marquee-logo" src="assets/logo-constant-contact.webp" alt="Constant Contact">
-          <img class="marquee-logo" src="assets/logo-callrail.webp" alt="CallRail">
-          <img class="marquee-logo" src="assets/logo-amazon-ads.webp" alt="Amazon Ads">
-          <img class="marquee-logo" src="assets/logo-partner5.webp" alt="Kittitas County Chamber of Commerce">
-          <img class="marquee-logo" src="assets/logo-partner4.webp" alt="Partner">
-          <img class="marquee-logo" src="assets/logo-bni.webp" alt="BNI">
-          <img class="marquee-logo" src="assets/logo-wsi.webp" alt="WSI Digital Marketing">
-          <img class="marquee-logo" src="assets/logo-cwhba.webp" alt="Central Washington Home Builders Assoc.">
+      <img class="marquee-logo" src="assets/logo-constant-contact.webp" alt="Constant Contact" width="384" height="66">
+          <img class="marquee-logo" src="assets/logo-callrail.webp" alt="CallRail" width="384" height="115">
+          <img class="marquee-logo" src="assets/logo-amazon-ads.webp" alt="Amazon Ads" width="384" height="115">
+          <img class="marquee-logo" src="assets/logo-partner5.webp" alt="Kittitas County Chamber of Commerce" width="150" height="109">
+          <img class="marquee-logo" src="assets/logo-partner4.webp" alt="Partner" width="100" height="100">
+          <img class="marquee-logo" src="assets/logo-bni.webp" alt="BNI" width="200" height="77">
+          <img class="marquee-logo" src="assets/logo-wsi.webp" alt="WSI Digital Marketing" width="450" height="117">
+          <img class="marquee-logo" src="assets/logo-cwhba.webp" alt="Central Washington Home Builders Assoc." width="150" height="150">
     </div>
     <div class="marquee-set" aria-hidden="true">
-      <img class="marquee-logo" src="assets/logo-constant-contact.webp" alt="Constant Contact">
-          <img class="marquee-logo" src="assets/logo-callrail.webp" alt="CallRail">
-          <img class="marquee-logo" src="assets/logo-amazon-ads.webp" alt="Amazon Ads">
-          <img class="marquee-logo" src="assets/logo-partner5.webp" alt="Kittitas County Chamber of Commerce">
-          <img class="marquee-logo" src="assets/logo-partner4.webp" alt="Partner">
-          <img class="marquee-logo" src="assets/logo-bni.webp" alt="BNI">
-          <img class="marquee-logo" src="assets/logo-wsi.webp" alt="WSI Digital Marketing">
-          <img class="marquee-logo" src="assets/logo-cwhba.webp" alt="Central Washington Home Builders Assoc.">
+      <img class="marquee-logo" src="assets/logo-constant-contact.webp" alt="Constant Contact" width="384" height="66">
+          <img class="marquee-logo" src="assets/logo-callrail.webp" alt="CallRail" width="384" height="115">
+          <img class="marquee-logo" src="assets/logo-amazon-ads.webp" alt="Amazon Ads" width="384" height="115">
+          <img class="marquee-logo" src="assets/logo-partner5.webp" alt="Kittitas County Chamber of Commerce" width="150" height="109">
+          <img class="marquee-logo" src="assets/logo-partner4.webp" alt="Partner" width="100" height="100">
+          <img class="marquee-logo" src="assets/logo-bni.webp" alt="BNI" width="200" height="77">
+          <img class="marquee-logo" src="assets/logo-wsi.webp" alt="WSI Digital Marketing" width="450" height="117">
+          <img class="marquee-logo" src="assets/logo-cwhba.webp" alt="Central Washington Home Builders Assoc." width="150" height="150">
     </div>
   </div>
 </div>

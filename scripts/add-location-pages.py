@@ -216,7 +216,7 @@ REGIONS = [
 CITIES = [
     {
         "slug": "yakima-wa", "name": "Yakima", "short": "Yakima", "state": "Washington", "region": "central-washington",
-        "title": "Digital Marketing Agency Yakima WA | YB Marketing",
+        "title": "Digital Marketing Agency Yakima WA | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Yakima</span> Businesses",
         "lead": "SEO, Google Ads, websites, and branding for Yakima businesses, with a sales rep here who can meet with you in person.",
         "intro": [
@@ -230,7 +230,7 @@ CITIES = [
     },
     {
         "slug": "ellensburg-wa", "name": "Ellensburg", "short": "Ellensburg", "state": "Washington", "region": "central-washington",
-        "title": "Digital Marketing Agency Ellensburg WA | YB Marketing",
+        "title": "Digital Marketing Agency Ellensburg WA | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Ellensburg</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Ellensburg and across Kittitas County.",
         "intro": [
@@ -244,7 +244,7 @@ CITIES = [
     },
     {
         "slug": "wenatchee-wa", "name": "Wenatchee", "short": "Wenatchee", "state": "Washington", "region": "central-washington",
-        "title": "Digital Marketing Agency Wenatchee WA | YB Marketing",
+        "title": "Digital Marketing Agency Wenatchee WA | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Wenatchee</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Wenatchee, East Wenatchee, and the surrounding towns.",
         "intro": [
@@ -258,7 +258,7 @@ CITIES = [
     },
     {
         "slug": "spokane-wa", "name": "Spokane", "short": "Spokane", "state": "Washington", "region": "eastern-washington",
-        "title": "Digital Marketing Agency Spokane WA | YB Marketing",
+        "title": "Digital Marketing Agency Spokane WA | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Spokane</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Spokane, Spokane Valley, and the surrounding area.",
         "intro": [
@@ -286,7 +286,7 @@ CITIES = [
     },
     {
         "slug": "walla-walla-wa", "name": "Walla Walla", "short": "Walla Walla", "state": "Washington", "region": "eastern-washington",
-        "title": "Digital Marketing Agency Walla Walla WA | YB Marketing",
+        "title": "Digital Marketing Agency Walla Walla WA | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Walla Walla</span> Businesses",
         "lead": "SEO, Google Ads, and websites for wineries, restaurants, and local businesses across Walla Walla County.",
         "intro": [
@@ -300,7 +300,7 @@ CITIES = [
     },
     {
         "slug": "tacoma-wa", "name": "Tacoma", "short": "Tacoma", "state": "Washington", "region": None,
-        "title": "Digital Marketing Agency Tacoma WA | YB Marketing",
+        "title": "Digital Marketing Agency Tacoma WA | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Tacoma</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Tacoma and across Pierce County.",
         "intro": [
@@ -314,7 +314,7 @@ CITIES = [
     },
     {
         "slug": "vancouver-wa", "name": "Vancouver", "short": "Vancouver", "state": "Washington", "region": None,
-        "title": "Digital Marketing Agency Vancouver WA | YB Marketing",
+        "title": "Digital Marketing Agency Vancouver WA | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Vancouver, WA</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Vancouver, Camas, and across Clark County.",
         "intro": [
@@ -328,7 +328,7 @@ CITIES = [
     },
     {
         "slug": "boise-id", "name": "Boise", "short": "Boise", "state": "Idaho", "region": None,
-        "title": "Digital Marketing Agency Boise ID | YB Marketing",
+        "title": "Digital Marketing Agency Boise ID | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Boise</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Boise, Meridian, Nampa, and the surrounding area.",
         "intro": [
@@ -342,7 +342,7 @@ CITIES = [
     },
     {
         "slug": "coeur-dalene-id", "name": "Coeur d'Alene", "short": "Coeur d'Alene", "state": "Idaho", "region": None,
-        "title": "Digital Marketing Agency Coeur d'Alene ID | YB Marketing",
+        "title": "Digital Marketing Agency Coeur d'Alene ID | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Coeur d'Alene</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Coeur d'Alene, Post Falls, and across Kootenai County.",
         "intro": [
@@ -357,7 +357,7 @@ CITIES = [
     {
         "slug": "aurora-co", "name": "Aurora", "short": "Aurora", "state": "Colorado", "region": "denver-co",
         "accent": "var(--yb-violet)",
-        "title": "Digital Marketing Agency Aurora CO | YB Marketing",
+        "title": "Digital Marketing Agency Aurora CO | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Aurora</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Aurora and across the east side of the Denver metro.",
         "intro": [
@@ -372,7 +372,7 @@ CITIES = [
     {
         "slug": "lakewood-co", "name": "Lakewood", "short": "Lakewood", "state": "Colorado", "region": "denver-co",
         "accent": "var(--yb-violet)",
-        "title": "Digital Marketing Agency Lakewood CO | YB Marketing",
+        "title": "Digital Marketing Agency Lakewood CO | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Lakewood</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Lakewood and across Jefferson County.",
         "intro": [
@@ -387,7 +387,7 @@ CITIES = [
     {
         "slug": "boulder-co", "name": "Boulder", "short": "Boulder", "state": "Colorado", "region": "denver-co",
         "accent": "var(--yb-violet)",
-        "title": "Digital Marketing Agency Boulder CO | YB Marketing",
+        "title": "Digital Marketing Agency Boulder CO | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Boulder</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Boulder and across Boulder County.",
         "intro": [
@@ -402,7 +402,7 @@ CITIES = [
     {
         "slug": "littleton-co", "name": "Littleton", "short": "Littleton", "state": "Colorado", "region": "denver-co",
         "accent": "var(--yb-violet)",
-        "title": "Digital Marketing Agency Littleton CO | YB Marketing",
+        "title": "Digital Marketing Agency Littleton CO | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Littleton</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Littleton and the south Denver suburbs.",
         "intro": [
@@ -417,7 +417,7 @@ CITIES = [
     {
         "slug": "arvada-co", "name": "Arvada", "short": "Arvada", "state": "Colorado", "region": "denver-co",
         "accent": "var(--yb-violet)",
-        "title": "Digital Marketing Agency Arvada CO | YB Marketing",
+        "title": "Digital Marketing Agency Arvada CO | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Arvada</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Arvada and the northwest Denver suburbs.",
         "intro": [
@@ -432,7 +432,7 @@ CITIES = [
     {
         "slug": "centennial-co", "name": "Centennial", "short": "Centennial", "state": "Colorado", "region": "denver-co",
         "accent": "var(--yb-violet)",
-        "title": "Digital Marketing Agency Centennial CO | YB Marketing",
+        "title": "Digital Marketing Agency Centennial CO | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Centennial</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Centennial and around the Denver Tech Center.",
         "intro": [
@@ -447,7 +447,7 @@ CITIES = [
     {
         "slug": "englewood-co", "name": "Englewood", "short": "Englewood", "state": "Colorado", "region": "denver-co",
         "accent": "var(--yb-violet)",
-        "title": "Digital Marketing Agency Englewood CO | YB Marketing",
+        "title": "Digital Marketing Agency Englewood CO | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Englewood</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Englewood and the south Denver metro.",
         "intro": [
@@ -462,7 +462,7 @@ CITIES = [
     {
         "slug": "naperville-il", "name": "Naperville", "short": "Naperville", "state": "Illinois", "region": "chicago-il",
         "accent": "var(--yb-blue)",
-        "title": "Digital Marketing Agency Naperville IL | YB Marketing",
+        "title": "Digital Marketing Agency Naperville IL | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Naperville</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Naperville and the western suburbs.",
         "intro": [
@@ -477,7 +477,7 @@ CITIES = [
     {
         "slug": "evanston-il", "name": "Evanston", "short": "Evanston", "state": "Illinois", "region": "chicago-il",
         "accent": "var(--yb-blue)",
-        "title": "Digital Marketing Agency Evanston IL | YB Marketing",
+        "title": "Digital Marketing Agency Evanston IL | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Evanston</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Evanston and the North Shore.",
         "intro": [
@@ -492,7 +492,7 @@ CITIES = [
     {
         "slug": "schaumburg-il", "name": "Schaumburg", "short": "Schaumburg", "state": "Illinois", "region": "chicago-il",
         "accent": "var(--yb-blue)",
-        "title": "Digital Marketing Agency Schaumburg IL | YB Marketing",
+        "title": "Digital Marketing Agency Schaumburg IL | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Schaumburg</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Schaumburg and the northwest suburbs.",
         "intro": [
@@ -507,7 +507,7 @@ CITIES = [
     {
         "slug": "oak-park-il", "name": "Oak Park", "short": "Oak Park", "state": "Illinois", "region": "chicago-il",
         "accent": "var(--yb-blue)",
-        "title": "Digital Marketing Agency Oak Park IL | YB Marketing",
+        "title": "Digital Marketing Agency Oak Park IL | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Oak Park</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Oak Park and the near west suburbs.",
         "intro": [
@@ -522,7 +522,7 @@ CITIES = [
     {
         "slug": "aurora-il", "name": "Aurora", "short": "Aurora", "state": "Illinois", "region": "chicago-il",
         "accent": "var(--yb-blue)",
-        "title": "Digital Marketing Agency Aurora IL | YB Marketing",
+        "title": "Digital Marketing Agency Aurora IL | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Aurora</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Aurora and the Fox Valley.",
         "intro": [
@@ -537,7 +537,7 @@ CITIES = [
     {
         "slug": "joliet-il", "name": "Joliet", "short": "Joliet", "state": "Illinois", "region": "chicago-il",
         "accent": "var(--yb-blue)",
-        "title": "Digital Marketing Agency Joliet IL | YB Marketing",
+        "title": "Digital Marketing Agency Joliet IL | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Joliet</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Joliet and across Will County.",
         "intro": [
@@ -552,7 +552,7 @@ CITIES = [
     {
         "slug": "elgin-il", "name": "Elgin", "short": "Elgin", "state": "Illinois", "region": "chicago-il",
         "accent": "var(--yb-blue)",
-        "title": "Digital Marketing Agency Elgin IL | YB Marketing",
+        "title": "Digital Marketing Agency Elgin IL | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Elgin</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Elgin and the northern Fox Valley.",
         "intro": [
@@ -566,7 +566,7 @@ CITIES = [
     },
     {
         "slug": "selah-wa", "name": "Selah", "short": "Selah", "state": "Washington", "region": "central-washington",
-        "title": "Digital Marketing Agency Selah WA | YB Marketing",
+        "title": "Digital Marketing Agency Selah WA | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Selah</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Selah and the Upper Valley.",
         "intro": [
@@ -580,7 +580,7 @@ CITIES = [
     },
     {
         "slug": "sunnyside-wa", "name": "Sunnyside", "short": "Sunnyside", "state": "Washington", "region": "central-washington",
-        "title": "Digital Marketing Agency Sunnyside WA | YB Marketing",
+        "title": "Digital Marketing Agency Sunnyside WA | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Sunnyside</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Sunnyside and the Lower Yakima Valley.",
         "intro": [
@@ -594,7 +594,7 @@ CITIES = [
     },
     {
         "slug": "union-gap-wa", "name": "Union Gap", "short": "Union Gap", "state": "Washington", "region": "central-washington",
-        "title": "Digital Marketing Agency Union Gap WA | YB Marketing",
+        "title": "Digital Marketing Agency Union Gap WA | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Union Gap</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Union Gap and the south end of Yakima.",
         "intro": [
@@ -608,7 +608,7 @@ CITIES = [
     },
     {
         "slug": "moses-lake-wa", "name": "Moses Lake", "short": "Moses Lake", "state": "Washington", "region": "central-washington",
-        "title": "Digital Marketing Agency Moses Lake WA | YB Marketing",
+        "title": "Digital Marketing Agency Moses Lake WA | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Moses Lake</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Moses Lake and across the Columbia Basin.",
         "intro": [
@@ -622,7 +622,7 @@ CITIES = [
     },
     {
         "slug": "toppenish-wa", "name": "Toppenish", "short": "Toppenish", "state": "Washington", "region": "central-washington",
-        "title": "Digital Marketing Agency Toppenish WA | YB Marketing",
+        "title": "Digital Marketing Agency Toppenish WA | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Toppenish</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Toppenish and the Yakama Nation.",
         "intro": [
@@ -636,7 +636,7 @@ CITIES = [
     },
     {
         "slug": "spokane-valley-wa", "name": "Spokane Valley", "short": "Spokane Valley", "state": "Washington", "region": "eastern-washington",
-        "title": "Digital Marketing Agency Spokane Valley WA | YB Marketing",
+        "title": "Digital Marketing Agency Spokane Valley WA | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Spokane Valley</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Spokane Valley, Liberty Lake, and the east side of Spokane County.",
         "intro": [
@@ -650,7 +650,7 @@ CITIES = [
     },
     {
         "slug": "pullman-wa", "name": "Pullman", "short": "Pullman", "state": "Washington", "region": "eastern-washington",
-        "title": "Digital Marketing Agency Pullman WA | YB Marketing",
+        "title": "Digital Marketing Agency Pullman WA | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Pullman</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Pullman and across the Palouse.",
         "intro": [
@@ -664,7 +664,7 @@ CITIES = [
     },
     {
         "slug": "cheney-wa", "name": "Cheney", "short": "Cheney", "state": "Washington", "region": "eastern-washington",
-        "title": "Digital Marketing Agency Cheney WA | YB Marketing",
+        "title": "Digital Marketing Agency Cheney WA | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Cheney</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Cheney and the West Plains.",
         "intro": [
@@ -679,7 +679,7 @@ CITIES = [
     {
         "slug": "oakland-ca", "name": "Oakland", "short": "Oakland", "state": "California", "region": "san-francisco-bay-area",
         "accent": "var(--yb-cyan)",
-        "title": "Digital Marketing Agency Oakland CA | YB Marketing",
+        "title": "Digital Marketing Agency Oakland CA | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Oakland</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Oakland and the East Bay.",
         "intro": [
@@ -694,7 +694,7 @@ CITIES = [
     {
         "slug": "san-jose-ca", "name": "San Jose", "short": "San Jose", "state": "California", "region": "san-francisco-bay-area",
         "accent": "var(--yb-cyan)",
-        "title": "Digital Marketing Agency San Jose CA | YB Marketing",
+        "title": "Digital Marketing Agency San Jose CA | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>San Jose</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in San Jose and across Silicon Valley.",
         "intro": [
@@ -709,7 +709,7 @@ CITIES = [
     {
         "slug": "berkeley-ca", "name": "Berkeley", "short": "Berkeley", "state": "California", "region": "san-francisco-bay-area",
         "accent": "var(--yb-cyan)",
-        "title": "Digital Marketing Agency Berkeley CA | YB Marketing",
+        "title": "Digital Marketing Agency Berkeley CA | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Berkeley</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Berkeley and the inner East Bay.",
         "intro": [
@@ -724,7 +724,7 @@ CITIES = [
     {
         "slug": "san-mateo-ca", "name": "San Mateo", "short": "San Mateo", "state": "California", "region": "san-francisco-bay-area",
         "accent": "var(--yb-cyan)",
-        "title": "Digital Marketing Agency San Mateo CA | YB Marketing",
+        "title": "Digital Marketing Agency San Mateo CA | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>San Mateo</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in San Mateo and along the Peninsula.",
         "intro": [
@@ -739,7 +739,7 @@ CITIES = [
     {
         "slug": "palo-alto-ca", "name": "Palo Alto", "short": "Palo Alto", "state": "California", "region": "san-francisco-bay-area",
         "accent": "var(--yb-cyan)",
-        "title": "Digital Marketing Agency Palo Alto CA | YB Marketing",
+        "title": "Digital Marketing Agency Palo Alto CA | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Palo Alto</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Palo Alto and the surrounding Peninsula cities.",
         "intro": [
@@ -754,7 +754,7 @@ CITIES = [
     {
         "slug": "fremont-ca", "name": "Fremont", "short": "Fremont", "state": "California", "region": "san-francisco-bay-area",
         "accent": "var(--yb-cyan)",
-        "title": "Digital Marketing Agency Fremont CA | YB Marketing",
+        "title": "Digital Marketing Agency Fremont CA | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Fremont</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Fremont and the East Bay.",
         "intro": [
@@ -769,7 +769,7 @@ CITIES = [
     {
         "slug": "walnut-creek-ca", "name": "Walnut Creek", "short": "Walnut Creek", "state": "California", "region": "san-francisco-bay-area",
         "accent": "var(--yb-cyan)",
-        "title": "Digital Marketing Agency Walnut Creek CA | YB Marketing",
+        "title": "Digital Marketing Agency Walnut Creek CA | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Walnut Creek</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Walnut Creek and central Contra Costa County.",
         "intro": [
@@ -784,7 +784,7 @@ CITIES = [
     {
         "slug": "scottsdale-az", "name": "Scottsdale", "short": "Scottsdale", "state": "Arizona", "region": "phoenix-az",
         "accent": "#c77f12",
-        "title": "Digital Marketing Agency Scottsdale AZ | YB Marketing",
+        "title": "Digital Marketing Agency Scottsdale AZ | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Scottsdale</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Scottsdale, Paradise Valley, and the north valley.",
         "intro": [
@@ -799,7 +799,7 @@ CITIES = [
     {
         "slug": "mesa-az", "name": "Mesa", "short": "Mesa", "state": "Arizona", "region": "phoenix-az",
         "accent": "#c77f12",
-        "title": "Digital Marketing Agency Mesa AZ | YB Marketing",
+        "title": "Digital Marketing Agency Mesa AZ | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Mesa</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Mesa and across the East Valley.",
         "intro": [
@@ -814,7 +814,7 @@ CITIES = [
     {
         "slug": "tempe-az", "name": "Tempe", "short": "Tempe", "state": "Arizona", "region": "phoenix-az",
         "accent": "#c77f12",
-        "title": "Digital Marketing Agency Tempe AZ | YB Marketing",
+        "title": "Digital Marketing Agency Tempe AZ | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Tempe</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Tempe and the central East Valley.",
         "intro": [
@@ -829,7 +829,7 @@ CITIES = [
     {
         "slug": "chandler-az", "name": "Chandler", "short": "Chandler", "state": "Arizona", "region": "phoenix-az",
         "accent": "#c77f12",
-        "title": "Digital Marketing Agency Chandler AZ | YB Marketing",
+        "title": "Digital Marketing Agency Chandler AZ | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Chandler</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Chandler and the southeast valley.",
         "intro": [
@@ -844,7 +844,7 @@ CITIES = [
     {
         "slug": "gilbert-az", "name": "Gilbert", "short": "Gilbert", "state": "Arizona", "region": "phoenix-az",
         "accent": "#c77f12",
-        "title": "Digital Marketing Agency Gilbert AZ | YB Marketing",
+        "title": "Digital Marketing Agency Gilbert AZ | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Gilbert</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Gilbert and the southeast valley.",
         "intro": [
@@ -859,7 +859,7 @@ CITIES = [
     {
         "slug": "glendale-az", "name": "Glendale", "short": "Glendale", "state": "Arizona", "region": "phoenix-az",
         "accent": "#c77f12",
-        "title": "Digital Marketing Agency Glendale AZ | YB Marketing",
+        "title": "Digital Marketing Agency Glendale AZ | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Glendale</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Glendale and the West Valley.",
         "intro": [
@@ -874,7 +874,7 @@ CITIES = [
     {
         "slug": "peoria-az", "name": "Peoria", "short": "Peoria", "state": "Arizona", "region": "phoenix-az",
         "accent": "#c77f12",
-        "title": "Digital Marketing Agency Peoria AZ | YB Marketing",
+        "title": "Digital Marketing Agency Peoria AZ | SEO, Paid Ads & Web Design",
         "h1": "Digital Marketing for <span>Peoria</span> Businesses",
         "lead": "SEO, Google Ads, and websites for businesses in Peoria and the northwest valley.",
         "intro": [
@@ -939,9 +939,17 @@ PAGE_CSS = """
 .lc-intro{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:start}
 .lc-intro h2{margin:12px 0 18px}
 .lc-intro p{font-size:16.5px;line-height:1.75;color:var(--fg2);margin:0 0 16px}
+.lc-intro p a{color:var(--yb-blue);font-weight:600;text-decoration:underline;text-decoration-color:rgba(43,108,240,.3);text-underline-offset:3px}
+.lc-intro p a:hover{text-decoration-color:currentColor}
 .lc-panel{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:28px;box-shadow:var(--sh-sm)}
 .lc-panel h3{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--fg3);margin:0 0 12px}
 .lc-panel h3 + .lc-chips{margin-bottom:24px}
+.lc-starts{display:grid;gap:8px;margin-bottom:26px}
+.lc-starts a{display:grid;grid-template-columns:1fr auto;align-items:center;gap:2px 12px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--bg-soft);text-decoration:none;transition:border-color .2s,background .2s}
+.lc-starts a:hover{border-color:rgba(43,108,240,.35);background:var(--wash-blue)}
+.lc-starts strong{font-size:15px;color:var(--ink)}
+.lc-starts span{grid-column:1;font-size:13.5px;color:var(--fg2)}
+.lc-starts svg{grid-column:2;grid-row:1/span 2;width:16px;height:16px;color:var(--yb-blue)}
 .lc-panel .lc-chips:last-child{margin-bottom:0}
 .lc-chips{display:flex;flex-wrap:wrap;gap:8px}
 .lc-chips span,.lc-chips a{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:var(--r-pill);background:var(--bg-soft);border:1px solid var(--line);font-size:13.5px;font-weight:600;color:var(--ink);text-decoration:none}
@@ -1303,6 +1311,36 @@ def city_chips(r: dict) -> str:
     )
 
 
+START_LINKS = [
+    ("Local SEO", "/seo/local-seo", "Rank in Google Maps and local results"),
+    ("Google Ads", "/google-ads", "Calls and leads while rankings build"),
+    ("Web Design", "/web-design", "Fast sites that turn visits into calls"),
+    ("AI Search", "/seo/ai-search", "Get named in ChatGPT and AI Overviews"),
+    ("AI Follow Up", "/ai-for-business", "Reply to every lead automatically"),
+]
+
+
+def start_links(slug: str) -> str:
+    return "".join(
+        f'<a href="{local_service_url(u, slug) if u == "/google-ads" else u}"><strong>{escape(n)}</strong><span>{escape(d)}</span>{ARROW}</a>'
+        for n, u, d in START_LINKS
+    )
+
+
+def intro_html(r: dict) -> str:
+    s = r["slug"]
+    seo, ads = local_service_url("/seo", s), local_service_url("/google-ads", s)
+    paras = [
+        f'We run <a href="{seo}">SEO</a>, <a href="{ads}">Google Ads</a>, and <a href="/web-design">web design</a> for {escape(r["short"])} businesses, and we plan them together so each one makes the others work better.',
+        '<a href="/seo/local-seo">Local SEO</a> and a well kept Google Business Profile usually bring in the steadiest calls. Ads cover the gap while rankings build, and your website is what turns those visits into calls and form fills.',
+        'Once leads start coming in, <a href="/ai-for-business">automated follow up</a> makes sure none of them slip through, and a monthly report shows where every customer came from.',
+    ]
+    area = in_person_area(s)
+    if area:
+        paras.append(escape(area["intro"]))
+    return "\n".join(f"        <p>{p}</p>" for p in paras)
+
+
 def region_page(r: dict) -> str:
     name, short = r["name"], r["short"]
     where = r.get("where", short)
@@ -1352,11 +1390,13 @@ def region_page(r: dict) -> str:
 
     <div class="lc-intro" style="margin-top:72px">
       <div>
-        <span class="eyebrow">Digital Marketing in {escape(where)}</span>
-        <h2>What it takes to win in {escape(where)}</h2>
-        {''.join(f'<p>{escape(p)}</p>' for p in r['intro'] + ([in_person_area(r['slug'])['intro']] if in_person_area(r['slug']) else []))}
+        <span class="eyebrow">What We Do</span>
+        <h2>SEO, ads, and websites that bring in customers</h2>
+{intro_html(r)}
       </div>
       <div class="lc-panel">
+        <h3>Start here</h3>
+        <div class="lc-starts">{start_links(r["slug"])}</div>
         <h3>Service area</h3>
         <div class="lc-chips">{city_chips(r)}</div>
       </div>

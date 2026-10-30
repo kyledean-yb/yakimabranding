@@ -53,13 +53,11 @@ SERVICES = {
     "content-marketing/index.html": "Content Marketing",
     "press-releases/index.html": "Press Release Writing and Distribution",
     "customer-growth/index.html": "Customer Relationship Management Software",
-    "growth-marketing/index.html": "Marketing Analytics and Strategy",
     "ai-for-business/index.html": "Artificial Intelligence Consulting",
     "ai-for-small-business/index.html": "Artificial Intelligence Consulting",
     "phx-hvac/index.html": "HVAC Marketing",
 }
 CATALOG = [
-    ("Growth Marketing", "/growth-marketing"),
     ("SEO Services", "/seo"), ("Local SEO", "/seo/local-seo"), ("AI Search Optimization", "/seo/ai-search"),
     ("Technical SEO", "/seo/technical-seo"), ("Website Migrations", "/seo/website-migration"),
     ("Google Ads Management", "/google-ads"), ("Web Design", "/web-design"), ("Branding & Design", "/branding"),

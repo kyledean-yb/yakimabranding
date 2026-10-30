@@ -12,7 +12,6 @@ ROOT = Path(__file__).resolve().parents[1]
 
 FOOTER_COLUMNS = [
     ("Digital Marketing", [
-        ("Growth Marketing", "/growth-marketing"),
         ("SEO Services", "/seo"),
         ("Local SEO", "/seo/local-seo"),
         ("Technical SEO", "/seo/technical-seo"),

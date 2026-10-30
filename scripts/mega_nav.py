@@ -26,8 +26,6 @@ CASE_REFRIG = ("+2,900%", "Page one keywords for a Central Washington refrigerat
 CASE_TIRE = ("+613%", "Page one keywords for a regional tire and auto shop", "/about/case-studies/regional-tire-auto-seo-growth")
 CASE_WP = ("130", "WordPress websites cleaned and secured in 15 days", "/about/case-studies/wordpress-portfolio-malware-remediation")
 
-TOP_LINKS = [("Growth Marketing", "/growth-marketing")]
-
 MENUS: list[dict] = [
     {
         "label": "Digital Marketing",
@@ -143,7 +141,6 @@ MENUS: list[dict] = [
 ]
 
 ES = {
-    "Growth Marketing": "Marketing de crecimiento",
     "Digital Marketing": "Marketing digital",
     "AI": "IA",
     "Web Design": "Diseño web",
@@ -269,9 +266,7 @@ CHEVRON = (
 
 
 def desktop_nav_html(lang: str = "en") -> str:
-    items = [
-        f'<a href="{href(h, lang)}" class="nav-a">{escape(tr(label, lang))}</a>' for label, h in TOP_LINKS
-    ]
+    items = []
     for menu in MENUS:
         cols = "".join(_col_html(c, lang) for c in menu["cols"])
         if menu.get("feature"):
@@ -288,7 +283,7 @@ def desktop_nav_html(lang: str = "en") -> str:
 
 
 def mobile_menu_items_html(lang: str = "en") -> str:
-    parts = [f'    <a href="{href(h, lang)}">{escape(tr(label, lang))}</a>' for label, h in TOP_LINKS]
+    parts = []
     for i, menu in enumerate(MENUS):
         list_id = f"mobileNav{i}"
         rows = []

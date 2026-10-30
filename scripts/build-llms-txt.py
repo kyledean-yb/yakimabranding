@@ -20,7 +20,7 @@ from seo_graph import SITE, extract_faqs, location_data, short_title  # noqa: E4
 
 SECTIONS = [
     ("Services", [
-        "growth-marketing/index.html", "seo/index.html", "seo/local-seo.html", "seo/ai-search.html", "seo/technical-seo.html",
+        "seo/index.html", "seo/local-seo.html", "seo/ai-search.html", "seo/technical-seo.html",
         "seo/website-migration.html", "google-ads/index.html", "web-design/index.html", "branding/index.html",
         "social-media/index.html", "content-marketing/index.html", "press-releases/index.html",
         "customer-growth/index.html",

@@ -100,12 +100,6 @@ SERVICE_PAGES = {
         "service_type": "Customer Relationship Management",
         "description": "Lead management, centralized messaging, automation, and customer follow-up for growing businesses.",
     },
-    "growth-marketing/index.html": {
-        "slug": "growth-marketing",
-        "name": "Growth Marketing",
-        "service_type": "Marketing Analytics and Strategy",
-        "description": "SEO, AI search, ads and social measured side by side in one live dashboard, with a monthly review that moves budget toward what's working.",
-    },
     "ai-for-business/index.html": {
         "slug": "ai-for-business",
         "name": "AI for Business",

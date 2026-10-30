@@ -31,7 +31,7 @@ GROUPS = {
 SERVICE_DIRS = {
     "seo": "seo", "web-design": "web-design", "branding": "branding",
     "google-ads": "generic", "social-media": "generic", "content-marketing": "generic",
-    "press-releases": "generic", "customer-growth": "generic", "growth-marketing": "generic",
+    "press-releases": "generic", "customer-growth": "generic",
     "ai-for-business": "generic", "ai-for-small-business": "generic",
 }
 

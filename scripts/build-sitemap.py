@@ -39,7 +39,6 @@ MAIN_PAGES = [
 ]
 
 SERVICE_INDEX_PAGES = [
-    ("growth-marketing/index.html", "Growth Marketing"),
     ("seo/index.html", "SEO Services"),
     ("seo/local-seo.html", "Local SEO"),
     ("seo/ai-search.html", "AI Search (GEO)"),

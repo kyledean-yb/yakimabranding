@@ -80,10 +80,6 @@ We show your team how to use AI to write faster, answer customers, and stop miss
 - Chat & Voice Agents
 - Training & Support
 
-#### Stop guessing which marketing is working
-
-SEO, AI search, ads and social measured side by side in one live dashboard. Every month we show you what's working and move your budget toward it.
-
 #### Not sure where to start?
 
 Tell us what you're working on and we'll tell you where we'd start.
@@ -164,105 +160,6 @@ One of our experts will reach out within 2 business hours.
 
 ---
 
-# Growth Marketing for Service Businesses
-
-URL: https://yakimabranding.com/growth-marketing
-
-> SEO, AI search, ads and social measured side by side in one live dashboard. Every month we show you what's working and move your budget toward it.
-
-## Stop guessing which marketing is working
-
-Most agencies manage each channel in its own lane, with its own report. We pull SEO, AI search, ads and social into one live dashboard, measure all of it against the goals you set, and move your budget to where the results are.
-
-### Every channel says it's working
-
-Your ads report says ads are working. Your SEO report says SEO is working. Social says the same. Each one is measured on its own terms, by the people running it, and nobody lines them up next to each other.
-So you end up deciding where to spend based on whichever report was most convincing that month, not on which channel actually brought in customers.
-
-### All your marketing in one place
-
-We connect every channel we run for you to one live dashboard. You can log in any time and see the same numbers we see.
-
-### Unify. Measure. Shift.
-
-#### Unify
-
-We connect your website, SEO, AI search, ads and social data into one dashboard, so every channel is measured the same way and shown side by side.
-
-#### Measure against your goals
-
-Before we look at a single number, we agree on what counts. For most businesses that's calls, booked jobs or revenue, not clicks or likes. Every channel gets judged against that.
-
-#### Shift to what's working
-
-When one channel is producing and another isn't, we say so, and we move budget and effort toward the one that is.
-
-### Every month, a report that ends in decisions
-
-Once a month you get a report built from the dashboard. It doesn't stop at what happened. It covers:
-
-#### What changed
-
-How each channel performed against your goals compared to last month
-
-#### What we did about it
-
-The changes we've already made, like a paused ad campaign, a new service page, or budget moved from one channel to another
-
-#### What we recommend next
-
-Where we think the next dollar or hour should go, and why
-You'll always know what we changed and why, without having to ask.
-
-### Your numbers, not a PDF
-
-Live data from every channel. Log in whenever you want, not just when the report arrives.
-
-#### Ask your data a question
-
-Type a question in plain English, like "How did organic traffic compare to last month?" or "What did we spend on Google Ads in October?", and get the answer straight from your own numbers.
-
-### What happens when you can see everything at once
-
-A Bay Area electrical contractor grew organic traffic 112% year over year and page one keywords 204%, and started showing up in AI search results for the first time.
-
-### Questions we get a lot
-
-### Book a Meeting or Send Us a Message
-
-Pick a time with one of us below, or send a note and we'll get back to you.
-Choose who you'd like to meet with
-
-#### Send Us a Message
-
-We respond by the next business day. Your information is never shared.
-
-### See all your marketing in one place
-
-Book a 30-minute walkthrough. We'll show you the dashboard, talk through your goals, and point out what we'd look at first in your channels.
-
-### Frequently Asked Questions
-
-**What do you mean by growth marketing?**
-Running your marketing channels as one system instead of separate projects. We measure everything against the same goals and keep moving time and money toward what's producing results. The dashboard is how we see it; the monthly review is where the decisions happen.
-
-**How is this different from the reports I get now?**
-Most reports cover one channel and describe what happened. Ours puts every channel side by side, measures them against your goals, and lists the changes we made and what we recommend next.
-
-**Which channels does it cover?**
-SEO, AI search, Google Ads, Meta ads and organic social, plus your website traffic.
-
-**Can I see the dashboard whenever I want?**
-Yes. You get your own login, so you don't have to wait for the monthly report.
-
-**What if a channel isn't working?**
-We'll tell you, even when it's one we run. If the numbers say your budget does more somewhere else, that's our recommendation.
-
-**Who sees my data?**
-You and our team. Your dashboard shows only your accounts.
-
----
-
 # Search Engine Optimization Services
 
 URL: https://yakimabranding.com/seo
@@ -315,7 +212,7 @@ A new website or a new domain is the fastest way to lose rankings you spent year
 SEO has a reputation for being a black box. Here's exactly what we do, in order, and what you'll see along the way.
 - 1 Month 1 Audit, Tracking and Fixes Audit. We look at your rankings, your website's technical health, your Google Business Profile and your top competitors. You get our findings in plain English. Tracking. Before we change anything, we make sure conversions and rankings are being measured. Otherwise there's no way to prove what worked. Fixes. The technical problems, profile cleanup and directory listings come first. They're the quickest wins and everything else depends on them.
 - 2 Month 2 onward Content We build or rewrite the pages that match what your customers search for: service pages, location pages, and clear answers to the questions they ask before they call.
-- 3 Every month Reporting A report showing rankings, traffic, and conversions with recommendations and observations each month. If we run your ads or social too, all of it shows up side by side in one dashboard. See how growth marketing works .
+- 3 Every month Reporting A report showing rankings, traffic, and conversions with recommendations and observations each month.
 
 ### Which Is Right for Your Business?
 

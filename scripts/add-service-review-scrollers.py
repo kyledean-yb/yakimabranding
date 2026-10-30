@@ -167,7 +167,7 @@ def section_bg(html: str, pos: int) -> str:
 
 def process(path: Path, service: str) -> bool:
     html = path.read_text(encoding="utf-8")
-    html = re.sub(re.escape(START) + r".*?" + re.escape(END) + r"\n?", "", html, flags=re.S)
+    html = re.sub(r"\n?" + re.escape(START) + r".*?" + re.escape(END) + r"\n?", "", html, flags=re.S)
     if 'class="reviews-bg"' in html:
         return False
     lang = "es" if path.relative_to(ROOT).parts[0] == "es" else "en"

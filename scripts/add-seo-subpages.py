@@ -514,13 +514,13 @@ def local_seo() -> dict:
         eyebrow="Local SEO",
         h1="Get found by customers in your service area",
         lead="When someone searches for an electrician, plumber, or roofing company nearby, you want your business to be one of the options they see. We help service businesses improve their visibility on Google Maps and in local search results.",
-        hero_primary="Request a Local SEO Audit",
-        hero_secondary=("#visibility-score", "Check Your Visibility"),
+        hero_primary="Get in Touch",
+        hero_secondary=("tel:5099019735", "509-901-9735"),
         body=body,
         faqs=faqs,
-        cta_heading="How visible is your business in local search?",
-        cta_body="We'll review your local search presence and identify opportunities to help more customers find you.",
-        cta_primary="Request My Local SEO Audit",
+        cta_heading="Ready to show up in more local searches?",
+        cta_body="Tell us about your business and the areas you serve. We'll talk through where you stand and what we'd focus on first.",
+        cta_primary="Schedule a Meeting",
     )
 
 
@@ -547,11 +547,6 @@ def ai_search() -> dict:
             "A customer who once compared several Google results may now start by asking an AI tool for an explanation or recommendation. Your business needs to be easy to understand wherever that research takes place.",
             "AI answers vary by platform, wording, and available sources. That's why we look at both traditional search performance and how your business appears in relevant AI responses. The goal is to understand where you're visible, where competitors are being mentioned, and what information could be improved.",
         ]),
-        results_section("navy", "Building on measurable SEO improvements", [
-            "Our work for a Bay Area electrical contractor included improvements to service and location content, local listings, and the overall search presence of the business.",
-        ], [
-            ("+204%", "keywords ranking on page one during that campaign"),
-        ], ("Read the Case Study", "/about/case-studies/local-electrical-contractor-seo-growth")),
         cards_section("#fff", "What's Included", "What we focus on", [
             ("Accurate business information", "We review how your services, locations, and company details appear across your website and relevant third party profiles. Consistency helps people and search systems understand what your business does."),
             ("Content that answers real questions", "We improve key pages so they address the questions customers ask before making a purchase or contacting a business. The writing should be useful to people first, while making important information easy for search tools to identify."),
@@ -578,13 +573,13 @@ def ai_search() -> dict:
         eyebrow="AI Search Optimization",
         h1="Help customers find your business through AI search",
         lead="Customers are starting to use tools like ChatGPT and Google's AI search features to research services and compare businesses. We help make sure your website and business information are clear, accurate, and easier for these tools to find and reference.",
-        hero_primary="Request an AI Visibility Check",
+        hero_primary="Get in Touch",
         hero_secondary=("tel:5099019735", "509-901-9735"),
         body=body,
         faqs=faqs,
-        cta_heading="See how your business appears in AI search",
-        cta_body="We'll review relevant AI search responses and help you understand where your business stands today.",
-        cta_primary="Request My AI Visibility Check",
+        cta_heading="Want your business to show up in AI search?",
+        cta_body="Tell us about your business and we'll talk through how your customers are searching and where we'd start.",
+        cta_primary="Schedule a Meeting",
     )
 
 
@@ -634,13 +629,13 @@ def technical_seo() -> dict:
         eyebrow="Technical SEO",
         h1="Make sure your website can be found and indexed",
         lead="Even strong website content can struggle in search results when pages aren't being indexed, the site is difficult to navigate, or technical issues interfere with how search engines access it. We identify those problems and help get them resolved.",
-        hero_primary="Request a Technical SEO Audit",
+        hero_primary="Get in Touch",
         hero_secondary=("tel:5099019735", "509-901-9735"),
         body=body,
         faqs=faqs,
-        cta_heading="Find out what's affecting your website's search performance",
-        cta_body="We'll review the technical health of your site and help you prioritize the issues worth addressing.",
-        cta_primary="Request My Technical SEO Audit",
+        cta_heading="Think something on your site is holding back your rankings?",
+        cta_body="Tell us what you're seeing and we'll talk through what could be causing it and what we'd look at first.",
+        cta_primary="Schedule a Meeting",
     )
 
 
@@ -690,13 +685,13 @@ def website_migration() -> dict:
         eyebrow="Website Migration SEO",
         h1="Protect your search traffic when you launch a new website",
         lead="A new website should be an improvement, not a reason to lose the search visibility you've already built. We help businesses plan redesigns, domain changes, and platform moves with SEO in mind from the beginning.",
-        hero_primary="Discuss Your Website Migration",
+        hero_primary="Get in Touch",
         hero_secondary=("tel:5099019735", "509-901-9735"),
         body=body,
         faqs=faqs,
         cta_heading="Redesigning or moving your website?",
         cta_body="Bring us into the planning process early. We'll help identify the pages and search visibility that need to be protected during the move.",
-        cta_primary="Discuss My Website Migration",
+        cta_primary="Schedule a Meeting",
     )
 
 

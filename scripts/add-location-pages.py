@@ -75,16 +75,16 @@ SERVICES = [
 CASES = {
     "electrical": ("+204%", "page one keywords in two years", "Bay Area Electrical Contractor",
                    "Organic traffic up 112% year over year and search impressions up 366% at peak.",
-                   "/about/case-studies/local-electrical-contractor-seo-growth", "var(--grad-brand)"),
+                   "/about/case-studies/local-electrical-contractor-seo-growth", "#3F6FD6"),
     "refrig": ("+2,900%", "page one keywords", "Central Washington Refrigeration",
                "Organic traffic doubled in seven months and top three rankings grew 57% in a year.",
-               "/about/case-studies/local-refrigeration-services-seo-growth", "linear-gradient(135deg,#16b38a,#2bc4f0)"),
+               "/about/case-studies/local-refrigeration-services-seo-growth", "#12946F"),
     "tire": ("+613%", "page one keywords over three years", "Regional Tire & Auto Shop",
              "Organic traffic up 46% year over year and search impressions up 243% at peak.",
-             "/about/case-studies/regional-tire-auto-seo-growth", "var(--grad-sunset)"),
+             "/about/case-studies/regional-tire-auto-seo-growth", "#D9532F"),
     "wp": ("130", "websites cleaned in 15 days", "WordPress Portfolio Cleanup",
            "Hidden malware got Google Ads accounts suspended. We found it, removed it, and locked the sites down.",
-           "/about/case-studies/wordpress-portfolio-malware-remediation", "linear-gradient(135deg,#7c5cff,#2bc4f0)"),
+           "/about/case-studies/wordpress-portfolio-malware-remediation", "#5B45C9"),
 }
 
 REMOTE_FAQ = ("Do we need to be local to work with you?",
@@ -564,6 +564,328 @@ CITIES = [
         "channels": "Most Elgin businesses start with Google Business Profile and local SEO. Google Ads targeted to the towns you serve bring in calls while rankings build, and Spanish pages and ads are worth adding if many of your customers speak Spanish.",
         "local_faq": REMOTE_FAQ,
     },
+    {
+        "slug": "selah-wa", "name": "Selah", "short": "Selah", "state": "Washington", "region": "central-washington",
+        "title": "Digital Marketing Agency Selah WA | YB Marketing",
+        "h1": "Digital Marketing for <span>Selah</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for businesses in Selah and the Upper Valley.",
+        "intro": [
+            "Selah sits just north of Yakima through the Selah Gap, and a lot of people here drive into Yakima for work and shopping. When they search for a service, Google often shows Yakima companies first unless your listing makes it clear you're right here in town.",
+            "We help Selah businesses show up for the people who live nearby, from Naches to East Selah, and build websites that make it easy to call. Our office is about ten minutes away.",
+        ],
+        "cities": ["Selah", "Yakima", "Naches", "Gleed", "Moxee", "Terrace Heights"],
+        "cases": ["refrig", "tire", "electrical"],
+        "channels": "Most Selah businesses get the best return from Google Business Profile, reviews, and local SEO. Google Ads targeted to Selah and the Upper Valley cost little here and can bring in steady calls.",
+        "local_faq": ("Can we meet in person?", "Yes. Our office is in Yakima, about ten minutes away, and we're happy to come to you."),
+    },
+    {
+        "slug": "sunnyside-wa", "name": "Sunnyside", "short": "Sunnyside", "state": "Washington", "region": "central-washington",
+        "title": "Digital Marketing Agency Sunnyside WA | YB Marketing",
+        "h1": "Digital Marketing for <span>Sunnyside</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for businesses in Sunnyside and the Lower Yakima Valley.",
+        "intro": [
+            "Sunnyside is the center of the Lower Valley, and people come in from Grandview, Granger, Mabton, and Outlook to shop and get things done. Your customers are searching from all of those towns, not just Sunnyside.",
+            "Most of the families here speak Spanish at home. If that describes your customers, a Spanish website, a Spanish Google listing description, and Spanish ads can reach people your competitors miss.",
+        ],
+        "cities": ["Sunnyside", "Grandview", "Granger", "Mabton", "Outlook", "Zillah"],
+        "cases": ["refrig", "tire", "electrical"],
+        "channels": "We usually start with Google Business Profile and local SEO in English and Spanish. Google Ads and Facebook ads targeted to the Lower Valley towns are inexpensive here and bring in calls quickly.",
+        "local_faq": ("Can we meet in person?", "Yes. Our office is in Yakima, about 40 minutes up the valley, and we're happy to meet at your business."),
+    },
+    {
+        "slug": "union-gap-wa", "name": "Union Gap", "short": "Union Gap", "state": "Washington", "region": "central-washington",
+        "title": "Digital Marketing Agency Union Gap WA | YB Marketing",
+        "h1": "Digital Marketing for <span>Union Gap</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for businesses in Union Gap and the south end of Yakima.",
+        "intro": [
+            "Union Gap is home to the Valley Mall and a long stretch of auto dealers, retailers, and service shops near I-82. Shoppers come from across the Yakima Valley, so your customers are searching from Wapato, Moxee, and Yakima as much as Union Gap.",
+            "Because Union Gap and Yakima run together, Google can mix up where you are. We make sure your listing and website say clearly where you're located and which towns you serve.",
+        ],
+        "cities": ["Union Gap", "Yakima", "Moxee", "Parker", "Wapato", "Selah"],
+        "cases": ["tire", "refrig", "electrical"],
+        "channels": "Retail and auto businesses usually start with Google Business Profile, reviews, and local SEO. Google Ads and Facebook ads targeted to the whole valley help bring in shoppers who make the drive.",
+        "local_faq": ("Can we meet in person?", "Yes. Our office is in Yakima, just a few minutes away, and we're happy to come to you."),
+    },
+    {
+        "slug": "moses-lake-wa", "name": "Moses Lake", "short": "Moses Lake", "state": "Washington", "region": "central-washington",
+        "title": "Digital Marketing Agency Moses Lake WA | YB Marketing",
+        "h1": "Digital Marketing for <span>Moses Lake</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for businesses in Moses Lake and across the Columbia Basin.",
+        "intro": [
+            "Moses Lake is the hub of the Columbia Basin. Farm families, plant workers, and people from Othello, Ephrata, and Warden all come here to shop and hire local services, so your customers are spread over a big area.",
+            "New manufacturing jobs have brought a lot of new residents who don't know the local businesses yet. They find you on Google, so your listing and website need to look as good as the companies they knew back home.",
+        ],
+        "cities": ["Moses Lake", "Ephrata", "Othello", "Quincy", "Soap Lake", "Warden"],
+        "cases": ["refrig", "tire", "electrical"],
+        "channels": "Most Moses Lake businesses start with Google Business Profile and local SEO, plus location pages for the Basin towns they serve. Google Ads cost much less here than in Seattle or Spokane, so a small budget goes a long way.",
+        "local_faq": ("Can we meet in person?", "Yes. Our office is in Yakima, about an hour and a half away, and we're happy to come to you for kickoff and planning meetings."),
+    },
+    {
+        "slug": "toppenish-wa", "name": "Toppenish", "short": "Toppenish", "state": "Washington", "region": "central-washington",
+        "title": "Digital Marketing Agency Toppenish WA | YB Marketing",
+        "h1": "Digital Marketing for <span>Toppenish</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for businesses in Toppenish and the Yakama Nation.",
+        "intro": [
+            "Toppenish is known for its murals and sits within the Yakama Nation, with customers coming in from Wapato, Harrah, White Swan, and Zillah. Visitors also stop through for the murals and the rodeo, and most of them find you on their phone.",
+            "Many families here speak Spanish at home. We help you show up for both local customers and visitors, in English and Spanish when it makes sense.",
+        ],
+        "cities": ["Toppenish", "Wapato", "Zillah", "Harrah", "White Swan", "Granger"],
+        "cases": ["refrig", "tire", "electrical"],
+        "channels": "We usually start with Google Business Profile and local SEO, then add Spanish pages and Facebook ads if many of your customers speak Spanish. Google Ads here are inexpensive and easy to target to the towns you serve.",
+        "local_faq": ("Can we meet in person?", "Yes. Our office is in Yakima, about 25 minutes away, and we're happy to meet at your business."),
+    },
+    {
+        "slug": "spokane-valley-wa", "name": "Spokane Valley", "short": "Spokane Valley", "state": "Washington", "region": "eastern-washington",
+        "title": "Digital Marketing Agency Spokane Valley WA | YB Marketing",
+        "h1": "Digital Marketing for <span>Spokane Valley</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for businesses in Spokane Valley, Liberty Lake, and the east side of Spokane County.",
+        "intro": [
+            "Spokane Valley became its own city in 2003, but Google still lumps a lot of searches in with Spokane. If your listing and website don't say Spokane Valley clearly, you can end up competing with every company downtown.",
+            "Customers here search from along Sprague and I-90 out to Liberty Lake and Otis Orchards. We help you show up in the parts of the Valley you serve and turn those searches into calls.",
+        ],
+        "cities": ["Spokane Valley", "Spokane", "Liberty Lake", "Millwood", "Otis Orchards", "Newman Lake"],
+        "cases": ["electrical", "tire", "refrig"],
+        "channels": "Most Spokane Valley businesses start with Google Business Profile, reviews, and local SEO. Google Ads targeted to the Valley zip codes keep you from paying for clicks across the county.",
+        "local_faq": IN_PERSON_FAQ,
+    },
+    {
+        "slug": "pullman-wa", "name": "Pullman", "short": "Pullman", "state": "Washington", "region": "eastern-washington",
+        "title": "Digital Marketing Agency Pullman WA | YB Marketing",
+        "h1": "Digital Marketing for <span>Pullman</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for businesses in Pullman and across the Palouse.",
+        "intro": [
+            "Pullman is home to Washington State University, and the town's population swings with the school year. A big share of your customers turns over every fall, and new students and staff find businesses almost entirely through Google.",
+            "Moscow, Idaho is only eight miles away, so customers compare you with businesses across the state line. We help you show up on both sides and give people a clear reason to pick you.",
+        ],
+        "cities": ["Pullman", "Moscow", "Colfax", "Palouse", "Albion", "Uniontown"],
+        "cases": ["tire", "refrig", "electrical"],
+        "channels": "Most Pullman businesses get the best return from Google Business Profile and local SEO. Restaurants and shops add social media around the WSU calendar, and service businesses add Google Ads targeted to Pullman and Moscow.",
+        "local_faq": IN_PERSON_FAQ,
+    },
+    {
+        "slug": "cheney-wa", "name": "Cheney", "short": "Cheney", "state": "Washington", "region": "eastern-washington",
+        "title": "Digital Marketing Agency Cheney WA | YB Marketing",
+        "h1": "Digital Marketing for <span>Cheney</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for businesses in Cheney and the West Plains.",
+        "intro": [
+            "Cheney is home to Eastern Washington University and sits about 20 minutes southwest of Spokane. Students, staff, and families in Medical Lake and Airway Heights all search for local options before driving into Spokane.",
+            "If you don't show up in those searches, Google sends them to a Spokane company. We help you rank in Cheney and the West Plains towns you serve, so the local choice is the one they see first.",
+        ],
+        "cities": ["Cheney", "Spokane", "Airway Heights", "Medical Lake", "Four Lakes", "Spangle"],
+        "cases": ["tire", "refrig", "electrical"],
+        "channels": "Most Cheney businesses start with Google Business Profile and local SEO. Shops and restaurants add social media around the EWU school year, and service businesses add Google Ads targeted to the West Plains.",
+        "local_faq": IN_PERSON_FAQ,
+    },
+    {
+        "slug": "oakland-ca", "name": "Oakland", "short": "Oakland", "state": "California", "region": "san-francisco-bay-area",
+        "accent": "var(--yb-cyan)",
+        "title": "Digital Marketing Agency Oakland CA | YB Marketing",
+        "h1": "Digital Marketing for <span>Oakland</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for businesses in Oakland and the East Bay.",
+        "intro": [
+            "Oakland customers like to support local businesses, but San Francisco companies show up in the same search results and bid on the same ads. Your listing and website need to make it obvious you're right here in the East Bay.",
+            "Oakland is also a city of neighborhoods. Someone in Rockridge and someone in Fruitvale see different map results, so we build your SEO and ads around the parts of town you actually serve.",
+        ],
+        "cities": ["Oakland", "Berkeley", "Alameda", "Emeryville", "San Leandro", "Piedmont"],
+        "cases": ["electrical", "refrig", "tire"],
+        "channels": "Most Oakland businesses start with Google Business Profile, reviews, and local SEO. Click prices are high across the Bay Area, so we set up call tracking and tight targeting before increasing Google Ads budgets.",
+        "local_faq": REMOTE_FAQ,
+    },
+    {
+        "slug": "san-jose-ca", "name": "San Jose", "short": "San Jose", "state": "California", "region": "san-francisco-bay-area",
+        "accent": "var(--yb-cyan)",
+        "title": "Digital Marketing Agency San Jose CA | YB Marketing",
+        "h1": "Digital Marketing for <span>San Jose</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for businesses in San Jose and across Silicon Valley.",
+        "intro": [
+            "San Jose is the biggest city in the Bay Area and it's spread out. A homeowner in Willow Glen and one in Evergreen or Berryessa see different businesses in Google Maps, so ranking for \"San Jose\" alone misses a lot of calls.",
+            "Customers here are used to good websites and fast replies. We help you show up across the parts of San Jose you serve and make sure every lead gets a quick follow up.",
+        ],
+        "cities": ["San Jose", "Santa Clara", "Campbell", "Milpitas", "Los Gatos", "Cupertino"],
+        "cases": ["electrical", "refrig", "tire"],
+        "channels": "We usually pair Google Business Profile and local SEO with location pages for the neighborhoods and nearby cities you serve. Google Ads here are expensive, so we start with tight targeting, negative keywords, and call tracking.",
+        "local_faq": REMOTE_FAQ,
+    },
+    {
+        "slug": "berkeley-ca", "name": "Berkeley", "short": "Berkeley", "state": "California", "region": "san-francisco-bay-area",
+        "accent": "var(--yb-cyan)",
+        "title": "Digital Marketing Agency Berkeley CA | YB Marketing",
+        "h1": "Digital Marketing for <span>Berkeley</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for businesses in Berkeley and the inner East Bay.",
+        "intro": [
+            "Berkeley customers do their homework. They read reviews, check your website, and often care about how you run your business as much as what you charge. A thin website or a listing with a few old reviews loses them quickly.",
+            "UC Berkeley also brings in students, staff, and visiting families all year. We help you show up for both the people who live here and the ones only in town for a while, from Telegraph to Fourth Street.",
+        ],
+        "cities": ["Berkeley", "Oakland", "Albany", "El Cerrito", "Emeryville", "Richmond"],
+        "cases": ["electrical", "refrig", "tire"],
+        "channels": "Most Berkeley businesses get the most from Google Business Profile, reviews, and a website that tells your story clearly. Restaurants and shops add social media, and service businesses add Google Ads targeted to Berkeley and nearby cities.",
+        "local_faq": REMOTE_FAQ,
+    },
+    {
+        "slug": "san-mateo-ca", "name": "San Mateo", "short": "San Mateo", "state": "California", "region": "san-francisco-bay-area",
+        "accent": "var(--yb-cyan)",
+        "title": "Digital Marketing Agency San Mateo CA | YB Marketing",
+        "h1": "Digital Marketing for <span>San Mateo</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for businesses in San Mateo and along the Peninsula.",
+        "intro": [
+            "San Mateo sits in the middle of the Peninsula, between San Francisco and Silicon Valley. Customers here can just as easily hire someone from Burlingame, Foster City, or Redwood City, and Google shows them whoever is closest and best reviewed.",
+            "We help you show up across the Peninsula towns you serve and build a website that earns trust with customers who expect a polished experience.",
+        ],
+        "cities": ["San Mateo", "Burlingame", "Foster City", "Belmont", "Redwood City", "Hillsborough"],
+        "cases": ["electrical", "refrig", "tire"],
+        "channels": "Most San Mateo businesses start with Google Business Profile, reviews, and local SEO. Google Ads work well when they're limited to the Peninsula towns you serve, with call tracking so you can see which clicks turn into jobs.",
+        "local_faq": REMOTE_FAQ,
+    },
+    {
+        "slug": "palo-alto-ca", "name": "Palo Alto", "short": "Palo Alto", "state": "California", "region": "san-francisco-bay-area",
+        "accent": "var(--yb-cyan)",
+        "title": "Digital Marketing Agency Palo Alto CA | YB Marketing",
+        "h1": "Digital Marketing for <span>Palo Alto</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for businesses in Palo Alto and the surrounding Peninsula cities.",
+        "intro": [
+            "Palo Alto has some of the most expensive advertising in the country. Clicks for common services can cost more than a meal downtown, so a campaign that isn't set up carefully burns through budget fast.",
+            "Customers here, from Stanford staff to families in Old Palo Alto, expect a good website and quick answers. We help you show up in Palo Alto, Menlo Park, and Mountain View and make every click count.",
+        ],
+        "cities": ["Palo Alto", "Menlo Park", "Mountain View", "Los Altos", "Stanford", "East Palo Alto"],
+        "cases": ["electrical", "refrig", "tire"],
+        "channels": "We usually lean on local SEO, Google Business Profile, and reviews here, because they keep bringing in calls without paying per click. When we run Google Ads, we start small with tight targeting and call tracking.",
+        "local_faq": REMOTE_FAQ,
+    },
+    {
+        "slug": "fremont-ca", "name": "Fremont", "short": "Fremont", "state": "California", "region": "san-francisco-bay-area",
+        "accent": "var(--yb-cyan)",
+        "title": "Digital Marketing Agency Fremont CA | YB Marketing",
+        "h1": "Digital Marketing for <span>Fremont</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for businesses in Fremont and the southern East Bay.",
+        "intro": [
+            "Fremont is one of the largest cities in the Bay Area and one of the most diverse. Many households speak a language other than English at home, and they search in the language they're most comfortable with.",
+            "Fremont is also home to a lot of factories and suppliers. We help homeowners and businesses in Fremont, Newark, and Union City find you, whether you sell to families or other companies.",
+        ],
+        "cities": ["Fremont", "Newark", "Union City", "Hayward", "Milpitas", "Pleasanton"],
+        "cases": ["electrical", "refrig", "tire"],
+        "channels": "Most Fremont businesses start with Google Business Profile and local SEO. B2B suppliers add LinkedIn and search ads aimed at the companies they sell to, and we can add pages in other languages if your customers need them.",
+        "local_faq": REMOTE_FAQ,
+    },
+    {
+        "slug": "walnut-creek-ca", "name": "Walnut Creek", "short": "Walnut Creek", "state": "California", "region": "san-francisco-bay-area",
+        "accent": "var(--yb-cyan)",
+        "title": "Digital Marketing Agency Walnut Creek CA | YB Marketing",
+        "h1": "Digital Marketing for <span>Walnut Creek</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for businesses in Walnut Creek and central Contra Costa County.",
+        "intro": [
+            "Walnut Creek is the shopping and dining center of central Contra Costa County. People drive in from Lafayette, Pleasant Hill, Concord, and Danville, so your customers are searching from all over the 680 corridor.",
+            "Homeowners here compare a few options and read reviews before they call. We help you show up in the towns you serve and give them a website that makes the decision easy.",
+        ],
+        "cities": ["Walnut Creek", "Concord", "Lafayette", "Pleasant Hill", "Danville", "Martinez"],
+        "cases": ["electrical", "refrig", "tire"],
+        "channels": "Most Walnut Creek businesses start with Google Business Profile, reviews, and local SEO. Service businesses add Google Ads targeted to the 680 corridor, with call tracking so the budget goes to what books jobs.",
+        "local_faq": REMOTE_FAQ,
+    },
+    {
+        "slug": "scottsdale-az", "name": "Scottsdale", "short": "Scottsdale", "state": "Arizona", "region": "phoenix-az",
+        "accent": "#c77f12",
+        "title": "Digital Marketing Agency Scottsdale AZ | YB Marketing",
+        "h1": "Digital Marketing for <span>Scottsdale</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for businesses in Scottsdale, Paradise Valley, and the north valley.",
+        "intro": [
+            "Scottsdale customers expect a lot. Whether they're booking a med spa, a pool builder, or a table in Old Town, they judge you by your website and reviews before they ever call.",
+            "The city also fills up with winter visitors and resort guests from fall through spring. We help you reach year round residents and seasonal visitors, and plan ad budgets around the busy months.",
+        ],
+        "cities": ["Scottsdale", "Paradise Valley", "Fountain Hills", "Cave Creek", "Phoenix", "Tempe"],
+        "cases": ["electrical", "tire", "refrig"],
+        "channels": "Most Scottsdale businesses start with Google Business Profile, reviews, and a website that looks the part. Google Ads and social media ads work well when they're timed around the winter season and targeted to the neighborhoods you serve.",
+        "local_faq": REMOTE_FAQ,
+    },
+    {
+        "slug": "mesa-az", "name": "Mesa", "short": "Mesa", "state": "Arizona", "region": "phoenix-az",
+        "accent": "#c77f12",
+        "title": "Digital Marketing Agency Mesa AZ | YB Marketing",
+        "h1": "Digital Marketing for <span>Mesa</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for businesses in Mesa and across the East Valley.",
+        "intro": [
+            "Mesa is the third largest city in Arizona and covers a lot of ground, from the Tempe border out past the 202. A customer in west Mesa and one near Eastmark see different map results, so one listing downtown won't cover the whole city.",
+            "Mesa also has a big winter population living in RV parks and retirement communities. We help you reach year round families and seasonal residents, each when they're most likely to call.",
+        ],
+        "cities": ["Mesa", "Gilbert", "Tempe", "Chandler", "Apache Junction", "Queen Creek"],
+        "cases": ["electrical", "tire", "refrig"],
+        "channels": "Most Mesa businesses start with Google Business Profile and local SEO, plus location pages for the parts of the East Valley they serve. Home service companies add Google Ads that ramp up before summer.",
+        "local_faq": REMOTE_FAQ,
+    },
+    {
+        "slug": "tempe-az", "name": "Tempe", "short": "Tempe", "state": "Arizona", "region": "phoenix-az",
+        "accent": "#c77f12",
+        "title": "Digital Marketing Agency Tempe AZ | YB Marketing",
+        "h1": "Digital Marketing for <span>Tempe</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for businesses in Tempe and the central East Valley.",
+        "intro": [
+            "Tempe is home to Arizona State University, and a big part of the city turns over every school year. New students and staff don't know the local businesses yet, so they find them on Google.",
+            "Tempe also has a lot of offices and longtime homeowners south of the US 60. We help you show up for the customers you want, whether that's students near Mill Avenue or families in south Tempe.",
+        ],
+        "cities": ["Tempe", "Mesa", "Chandler", "Scottsdale", "Phoenix", "Guadalupe"],
+        "cases": ["electrical", "tire", "refrig"],
+        "channels": "Restaurants and shops usually start with Google Business Profile and social media timed around the ASU calendar. Service businesses do best with local SEO and Google Ads targeted to the parts of Tempe they serve.",
+        "local_faq": REMOTE_FAQ,
+    },
+    {
+        "slug": "chandler-az", "name": "Chandler", "short": "Chandler", "state": "Arizona", "region": "phoenix-az",
+        "accent": "#c77f12",
+        "title": "Digital Marketing Agency Chandler AZ | YB Marketing",
+        "h1": "Digital Marketing for <span>Chandler</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for businesses in Chandler and the southeast valley.",
+        "intro": [
+            "Chandler has grown into one of the East Valley's biggest job centers, with Intel and a long list of tech companies along the Price Road corridor. A lot of residents are newer to the area and pick businesses based on what they find online.",
+            "Customers here compare you with companies in Gilbert, Tempe, and Mesa. We help you show up in the parts of Chandler and the nearby cities you serve, and turn those searches into calls.",
+        ],
+        "cities": ["Chandler", "Gilbert", "Tempe", "Mesa", "Sun Lakes", "Queen Creek"],
+        "cases": ["electrical", "tire", "refrig"],
+        "channels": "Most Chandler businesses start with Google Business Profile, reviews, and local SEO. Home service companies add Google Ads before summer, and B2B companies serving the tech corridor add LinkedIn and search ads.",
+        "local_faq": REMOTE_FAQ,
+    },
+    {
+        "slug": "gilbert-az", "name": "Gilbert", "short": "Gilbert", "state": "Arizona", "region": "phoenix-az",
+        "accent": "#c77f12",
+        "title": "Digital Marketing Agency Gilbert AZ | YB Marketing",
+        "h1": "Digital Marketing for <span>Gilbert</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for businesses in Gilbert and the southeast valley.",
+        "intro": [
+            "Gilbert has grown fast, and a lot of the families here moved in during the last twenty years. They don't have a go to plumber, dentist, or landscaper yet, so they search Google and ask in neighborhood Facebook groups.",
+            "Being visible in both places matters here. We help you show up in Google Maps across Gilbert and earn the reviews that get you recommended, from the Heritage District to the south end of town.",
+        ],
+        "cities": ["Gilbert", "Mesa", "Chandler", "Queen Creek", "San Tan Valley", "Tempe"],
+        "cases": ["electrical", "tire", "refrig"],
+        "channels": "Most Gilbert businesses start with Google Business Profile, reviews, and local SEO. Facebook ads work well for reaching families here, and home service companies add Google Ads that ramp up before summer.",
+        "local_faq": REMOTE_FAQ,
+    },
+    {
+        "slug": "glendale-az", "name": "Glendale", "short": "Glendale", "state": "Arizona", "region": "phoenix-az",
+        "accent": "#c77f12",
+        "title": "Digital Marketing Agency Glendale AZ | YB Marketing",
+        "h1": "Digital Marketing for <span>Glendale</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for businesses in Glendale and the West Valley.",
+        "intro": [
+            "Glendale is home to State Farm Stadium and Westgate, which bring in big crowds on game and event days. Restaurants, hotels, and shops nearby can win a lot of that traffic if they show up when visitors search.",
+            "There's also a Glendale in California. Your listing, website, and ads need to say Glendale, Arizona clearly so you're not losing searches or paying for clicks meant for someone else.",
+        ],
+        "cities": ["Glendale", "Peoria", "Phoenix", "Surprise", "Sun City", "El Mirage"],
+        "cases": ["electrical", "tire", "refrig"],
+        "channels": "Most Glendale businesses start with Google Business Profile and local SEO. Restaurants and hotels add ads timed around the event calendar, and home service companies add Google Ads targeted to the West Valley.",
+        "local_faq": REMOTE_FAQ,
+    },
+    {
+        "slug": "peoria-az", "name": "Peoria", "short": "Peoria", "state": "Arizona", "region": "phoenix-az",
+        "accent": "#c77f12",
+        "title": "Digital Marketing Agency Peoria AZ | YB Marketing",
+        "h1": "Digital Marketing for <span>Peoria</span> Businesses",
+        "lead": "SEO, Google Ads, and websites for businesses in Peoria and the northwest valley.",
+        "intro": [
+            "Peoria stretches from the older neighborhoods near Glendale all the way north to Lake Pleasant. Customers at each end see different businesses in Google Maps, so we build your marketing around the parts of town you actually serve.",
+            "Spring training brings crowds to the Peoria Sports Complex every year, and winter visitors fill the nearby retirement communities. We help you plan for the busy months and keep calls coming the rest of the year.",
+        ],
+        "cities": ["Peoria", "Glendale", "Surprise", "Sun City", "Sun City West", "Phoenix"],
+        "cases": ["electrical", "tire", "refrig"],
+        "channels": "Most Peoria businesses start with Google Business Profile, reviews, and local SEO. Home service companies add Google Ads that ramp up before summer, and restaurants add ads around spring training season.",
+        "local_faq": REMOTE_FAQ,
+    },
 ]
 for _c in CITIES:
     _c.setdefault("accent", "var(--yb-blue)")
@@ -650,11 +972,10 @@ PAGE_CSS = """
 .lc-cases{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .lc-case{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;text-decoration:none;color:inherit;box-shadow:var(--sh-sm);transition:transform .25s ease,box-shadow .25s ease}
 .lc-case:hover{transform:translateY(-5px);box-shadow:var(--sh-md)}
-.lc-case-top{padding:28px 26px 24px;color:#fff;position:relative;overflow:hidden}
-.lc-case-top::after{content:'';position:absolute;right:-40px;bottom:-60px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.14)}
-.lc-case-top strong{display:block;font-family:var(--font-display);font-size:46px;line-height:1;margin-bottom:6px}
-.lc-case-top span{font-size:14px;font-weight:600;opacity:.92}
-.lc-case-body{padding:22px 26px 24px;display:flex;flex-direction:column;flex:1}
+.lc-case-top{padding:26px 26px 20px;border-top:4px solid var(--ac);border-bottom:1px solid var(--line);margin:0 0 0}
+.lc-case-top strong{display:block;font-family:var(--font-display);font-size:44px;line-height:1;margin-bottom:8px;color:var(--ac)}
+.lc-case-top span{font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--fg3,#6B7591)}
+.lc-case-body{padding:20px 26px 24px;display:flex;flex-direction:column;flex:1}
 .lc-case-body h3{font-size:17.5px;margin:0 0 8px}
 .lc-case-body p{font-size:14.5px;line-height:1.6;color:var(--fg2);margin:0 0 16px;flex:1}
 .lc-case-more{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:14px;color:var(--yb-blue)}
@@ -733,7 +1054,7 @@ PAGE_CSS = """
 .lc-dir-region{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--fg3);margin:0 0 22px;padding-bottom:12px;border-bottom:1px solid var(--line)}
 .lc-dir-region + .lc-dir{margin-bottom:56px}
 .lc-hub-hero{text-align:center;padding-bottom:130px}
-.lc-hub-hero .lc-hero-lead{margin-left:auto;margin-right:auto;max-width:620px}
+.lc-hub-hero .lc-hero-lead{margin:22px auto 28px;max-width:640px;font-size:20px}
 .lc-hub-hero .lc-proof{justify-content:center}
 .lc-hub-regions{margin-top:-80px;position:relative;z-index:2}
 @media(max-width:1080px){.lc-svcs{grid-template-columns:repeat(2,1fr)}.lc-stats{grid-template-columns:repeat(2,1fr)}}
@@ -791,15 +1112,26 @@ def case_cards(keys: list[str]) -> str:
     for k in keys:
         num, label, title, body, url, bg = CASES[k]
         out.append(f"""      <a class="lc-case" href="{url}">
-        <div class="lc-case-top" style="background:{bg}"><strong>{num}</strong><span>{escape(label)}</span></div>
+        <div class="lc-case-top" style="--ac:{bg}"><strong>{num}</strong><span>{escape(label)}</span></div>
         <div class="lc-case-body"><h3>{escape(title)}</h3><p>{escape(body)}</p><span class="lc-case-more">Read the case study {ARROW}</span></div>
       </a>""")
     return "\n".join(out)
 
 
-def service_cards(region_short: str) -> str:
+LOCAL_SERVICE_ROOTS = ("/seo", "/google-ads", "/web-design", "/social-media", "/branding")
+
+
+def local_service_url(url: str, slug: str) -> str:
+    if url in LOCAL_SERVICE_ROOTS and (ROOT / url.lstrip("/") / f"{slug}.html").exists():
+        return f"{url}/{slug}"
+    return url
+
+
+def service_cards(region_short: str, slug: str = "") -> str:
     out = []
     for name, url, ic, ac, wash, blurb, links in SERVICES:
+        url = local_service_url(url, slug)
+        links = [(t, local_service_url(u, slug)) for t, u in links]
         lis = "".join(f'<li><a href="{u}"><span style="background:{wash};color:{ac}">{CHECK}</span>{escape(t)}</a></li>' for t, u in links)
         out.append(f"""      <div class="lc-svc" style="--ac:{ac}">
         <div class="lc-svc-chip" style="background:{wash};color:{ac}">{icon(ic)}</div>
@@ -955,7 +1287,7 @@ def region_page(r: dict) -> str:
     else:
         others = [o for o in REGIONS if o is not r]
     other_links = "".join(f'<a href="/locations/{o["slug"]}">{PIN}{escape(o["name"])}</a>' for o in others)
-    svc_links = "".join(f'<a href="{u}">{escape(n)}</a>' for n, u, *_ in SERVICES)
+    svc_links = "".join(f'<a href="{local_service_url(u, r["slug"])}">{escape(n)}</a>' for n, u, *_ in SERVICES)
     form = lead_form_html(f"Location - {name}", submit_label="Send Message")
     body = f"""<section class="lc-hero">
   <div class="container lc-hero-grid">
@@ -1043,7 +1375,7 @@ def region_page(r: dict) -> str:
       <p>Pick one or put them together. Most clients start with one thing and add more once they see it working.</p>
     </div>
     <div class="lc-svcs">
-{service_cards(short)}
+{service_cards(short, r["slug"])}
     </div>
   </div>
 </section>
@@ -1151,8 +1483,8 @@ def hub_page() -> str:
     body = f"""<section class="lc-hero lc-hub-hero">
   <div class="container">
     <span class="lc-pin">{PIN}Locations We Serve</span>
-    <h1>Based in Yakima. <span>Working Everywhere.</span></h1>
-    <p class="lc-hero-lead">We've helped businesses grow online since 2004, starting in Central Washington. Today we work with companies across the West and Midwest, with the same people you can actually reach.</p>
+    <h1 class="visually-hidden">Locations We Serve</h1>
+    <p class="lc-hero-lead">We've helped businesses grow online since 2004. You work with the same small team the whole way through, and you can always reach the people doing the work.</p>
     {proof_pills()}
   </div>
 </section>
@@ -1195,9 +1527,9 @@ def hub_page() -> str:
   <div class="container">
     <span class="eyebrow" style="color:var(--yb-cyan)">Let's Talk</span>
     <h2>Wherever you are, let's see what's possible</h2>
-    <p>Book a free 30 minute call. We'll look at your market and tell you where we'd start.</p>
+    <p>Tell us about your business and we'll talk through where we'd start.</p>
     <div class="lc-cta-btns">
-      <a href="/contact" class="btn btn-grad btn-lg">Get Started {ARROW}</a>
+      <a href="/contact" class="btn btn-grad btn-lg">Schedule a Meeting {ARROW}</a>
       <a href="tel:5099019735" class="btn btn-ghost-white btn-lg">{PHONE}</a>
     </div>
   </div>

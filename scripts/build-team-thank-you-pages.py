@@ -256,7 +256,7 @@ a{{color:inherit;text-decoration:none}}
 .ty-member-about-side{{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--r-xl);padding:28px}}
 .ty-member-interests{{display:flex;flex-wrap:wrap;gap:10px}}
 .ty-member-interest{{display:inline-flex;padding:8px 14px;border-radius:var(--r-pill);background:var(--wash-coral);color:var(--yb-coral);font-size:13px;font-weight:700}}
-.ty-services{{background:var(--bg-soft);padding:88px 0}}
+.ty-services{{background:#fff;padding:88px 0}}
 .ty-svc-grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}}
 .ty-svc-card{{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:24px;box-shadow:var(--sh-xs);transition:transform 240ms,box-shadow 240ms;text-decoration:none;color:inherit;display:flex;flex-direction:column;height:100%}}
 .ty-svc-card:hover{{transform:translateY(-4px);box-shadow:var(--sh-md)}}
@@ -370,7 +370,7 @@ a{{color:inherit;text-decoration:none}}
       <h2 style="margin:14px 0 0;font-size:clamp(1.8rem,2.6vw,2.4rem)">While You Wait, Explore What YB Can Do For You</h2>
     </div>
     <div class="ty-svc-grid">
-{chr(10).join(service_cards_html(p))}
+{service_cards_html(p)}
     </div>
   </div>
 </section>

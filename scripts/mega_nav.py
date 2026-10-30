@@ -124,17 +124,11 @@ MENUS: list[dict] = [
         "cols": [
             {"title": "Company", "icon": "building", "links": [
                 ("About Us", "/about"),
+                ("Our Team", "/about#team"),
                 ("Case Studies", "/about/case-studies"),
                 ("Client Reviews", "/reviews"),
                 ("Locations We Serve", "/locations"),
                 ("WA Sales Tax Notice", "/washington-state-sales-tax-notice"),
-            ]},
-            {"title": "Our Team", "icon": "users", "links": [
-                ("Kevin Dean, Owner", "/about/kevin"),
-                ("Jacob Ross, Account Executive", "/about/jacob"),
-                ("Sophie Mann, Account Executive", "/about/sophie"),
-                ("Kirsten Gonzalez, Marketing Administrator", "/about/kirsten"),
-                ("Kayelyn Aggett, Social Media Manager", "/about/kayelyn"),
             ]},
         ],
     },
@@ -232,17 +226,49 @@ def _icon(name: str) -> str:
     )
 
 
+COLUMN_ACCENTS = {
+    "SEO": "var(--yb-cyan)",
+    "SEO Services": "var(--yb-cyan)",
+    "Paid Advertising": "var(--yb-coral)",
+    "Web Design": "#159468",
+    "AI Services": "var(--yb-violet)",
+}
+
+SERVICE_ACCENTS = [
+    ("/seo", "var(--yb-cyan)"),
+    ("/google-ads", "var(--yb-coral)"),
+    ("/social-media", "#c77f12"),
+    ("/web-design", "#159468"),
+    ("/content-marketing", "var(--yb-pink)"),
+    ("/press-releases", "var(--yb-pink)"),
+    ("/branding", "var(--yb-violet)"),
+    ("/customer-growth", "var(--yb-blue)"),
+    ("/ai-for-", "var(--yb-violet)"),
+]
+
+
+def _link_accent(path: str, col_accent: str | None) -> str | None:
+    for prefix, color in SERVICE_ACCENTS:
+        if path == prefix or path.startswith(prefix + "/") or (prefix.endswith("-") and path.startswith(prefix)):
+            return color
+    return col_accent
+
+
 def _col_html(col: dict, lang: str) -> str:
     title = tr(col["title"], lang)
+    col_accent = COLUMN_ACCENTS.get(col["title"])
+    style = f' style="--col-ac:{col_accent}"' if col_accent else ""
     head = (
         f'<div class="mega-col-title">{_icon(col["icon"])}<span>{escape(title)}</span></div>'
         if title
         else '<div class="mega-col-title mega-col-title--blank" aria-hidden="true"></div>'
     )
-    links = "".join(
-        f'<li><a href="{href(h, lang)}">{escape(tr(label, lang))}</a></li>' for label, h in col["links"]
-    )
-    return f'<div class="mega-col">{head}<ul>{links}</ul></div>'
+    items = []
+    for label, h in col["links"]:
+        ac = _link_accent(h, col_accent)
+        attr = f' class="mega-svc" style="--ac:{ac}"' if ac else ""
+        items.append(f'<li><a href="{href(h, lang)}"{attr}>{escape(tr(label, lang))}</a></li>')
+    return f'<div class="mega-col"{style}>{head}<ul>{"".join(items)}</ul></div>'
 
 
 def _feature_html(feature: dict, lang: str) -> str:

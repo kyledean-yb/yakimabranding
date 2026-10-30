@@ -231,7 +231,7 @@ def collect_pages(lang: str = "en") -> tuple[
         if not cities:
             continue
         region_href, _ = lang_link(f"locations/{region['slug']}.html", "", lang)
-        title = sm_tr("Digital Marketing Agency in {place}", lang).format(place=f"{region['name']} Area")
+        title = sm_tr("Digital Marketing Agency in {place}", lang).format(place=region["name"] if region["name"].endswith(("Area", "Washington")) else f"{region['name']} Area")
         local_groups.append((title, region_href, [
             lang_link(f"locations/{c['slug']}.html", f"{c['name']}, {c['state']}", lang) for c in cities
         ]))
@@ -376,13 +376,12 @@ def render_url_entry(
     changefreq: str,
     priority: str,
     lastmod: Optional[str] = None,
-    alternate_es: Optional[str] = None,
+    alternates: Optional[tuple[str, str]] = None,
 ) -> str:
     lastmod_line = f"\n    <lastmod>{lastmod}</lastmod>" if lastmod else ""
     hreflang = ""
-    if alternate_es:
-        en = url
-        es = alternate_es
+    if alternates:
+        en, es = alternates
         hreflang = f"""
     <xhtml:link rel="alternate" hreflang="en" href="{escape(en)}"/>
     <xhtml:link rel="alternate" hreflang="es" href="{escape(es)}"/>
@@ -398,8 +397,8 @@ def build_urlset_xml(entries: list[tuple]) -> str:
     body_parts = []
     for entry in entries:
         url, changefreq, priority, lastmod = entry[:4]
-        alternate_es = entry[4] if len(entry) > 4 else None
-        body_parts.append(render_url_entry(url, changefreq, priority, lastmod, alternate_es))
+        alternates = entry[4] if len(entry) > 4 else None
+        body_parts.append(render_url_entry(url, changefreq, priority, lastmod, alternates))
     body = "\n".join(body_parts)
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
@@ -419,23 +418,24 @@ def es_page_exists(en_url: str) -> bool:
     return (ROOT / "es" / f"{path}.html").exists() or (ROOT / "es" / path / "index.html").exists()
 
 
-def expand_with_spanish(
+def split_by_language(
     entries: list[tuple[str, str, str, Optional[str]]],
-) -> list[tuple]:
-    expanded: list[tuple] = []
+) -> tuple[list[tuple], list[tuple]]:
+    """English entries and their Spanish counterparts, each pointing at the other with hreflang."""
+    en_entries: list[tuple] = []
+    es_entries: list[tuple] = []
     for url, changefreq, priority, lastmod in entries:
         if not es_page_exists(url):
-            expanded.append((url, changefreq, priority, lastmod, None))
+            en_entries.append((url, changefreq, priority, lastmod, None))
             continue
         es = spanish_url_for(url)
-        expanded.append((url, changefreq, priority, lastmod, es))
+        en_entries.append((url, changefreq, priority, lastmod, (url, es)))
         try:
-            p = max(0.1, float(priority) - 0.1)
-            es_priority = f"{p:.1f}"
+            es_priority = f"{max(0.1, float(priority) - 0.1):.1f}"
         except ValueError:
             es_priority = priority
-        expanded.append((es, changefreq, es_priority, lastmod, None))
-    return expanded
+        es_entries.append((es, changefreq, es_priority, lastmod, (url, es)))
+    return en_entries, es_entries
 
 
 def build_sitemap_index(lastmods: dict[str, str]) -> str:
@@ -444,7 +444,7 @@ def build_sitemap_index(lastmods: dict[str, str]) -> str:
     <loc>{escape(f"{SITE}/{name}")}</loc>
     <lastmod>{lastmod}</lastmod>
   </sitemap>"""
-        for name, lastmod in sorted(lastmods.items())
+        for name, lastmod in lastmods.items()
     )
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
@@ -455,31 +455,29 @@ def build_sitemap_index(lastmods: dict[str, str]) -> str:
 
 
 def write_xml_sitemaps() -> None:
-    page_entries = expand_with_spanish(collect_page_urls())
-    post_entries = expand_with_spanish(collect_post_urls())
-
-    pages_path = ROOT / "sitemap-pages.xml"
-    posts_path = ROOT / "sitemap-posts.xml"
-    index_path = ROOT / "sitemap.xml"
-
-    pages_path.write_text(build_urlset_xml(page_entries), encoding="utf-8")
-    posts_path.write_text(build_urlset_xml(post_entries), encoding="utf-8")
+    pages_en, pages_es = split_by_language(collect_page_urls())
+    posts_en, posts_es = split_by_language(collect_post_urls())
 
     today = date.today().isoformat()
-    post_lastmods = [entry[3] for entry in post_entries if entry[3]]
-    index_path.write_text(
-        build_sitemap_index(
-            {
-                "sitemap-pages.xml": today,
-                "sitemap-posts.xml": max(post_lastmods) if post_lastmods else today,
-            }
-        ),
-        encoding="utf-8",
-    )
+    post_lastmods = [entry[3] for entry in posts_en if entry[3]]
+    es_post_lastmods = [entry[3] for entry in posts_es if entry[3]]
+    files = {
+        "sitemap-pages.xml": (pages_en, today),
+        "sitemap-posts.xml": (posts_en, max(post_lastmods) if post_lastmods else today),
+        "sitemap-es-pages.xml": (pages_es, today),
+        "sitemap-es-posts.xml": (posts_es, max(es_post_lastmods) if es_post_lastmods else today),
+    }
+    lastmods = {}
+    for name, (entries, lastmod) in files.items():
+        if not entries:
+            (ROOT / name).unlink(missing_ok=True)
+            continue
+        (ROOT / name).write_text(build_urlset_xml(entries), encoding="utf-8")
+        lastmods[name] = lastmod
+        print(f"wrote {name} ({len(entries)} URLs)")
 
-    print(f"wrote {pages_path.relative_to(ROOT)} ({len(page_entries)} URLs)")
-    print(f"wrote {posts_path.relative_to(ROOT)} ({len(post_entries)} URLs)")
-    print(f"wrote {index_path.relative_to(ROOT)}")
+    (ROOT / "sitemap.xml").write_text(build_sitemap_index(lastmods), encoding="utf-8")
+    print("wrote sitemap.xml")
 
 
 def render_link_list(links: list[tuple[str, str]], list_class: str = "") -> str:

@@ -7,6 +7,7 @@ import importlib.util
 import sys
 from html import escape
 from pathlib import Path
+from typing import Optional
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -88,7 +89,7 @@ CASES = {
 }
 
 REMOTE_FAQ = ("Do we need to be local to work with you?",
-              "No. Our office is in Yakima, Washington, and we work with clients all over the country by phone, Zoom, and email. You'll have a direct line to the people doing the work, and we keep the same hours you do.")
+              "No. We're a fully remote team and work with clients all over the country by phone, Zoom, and email. You'll have a direct line to the people doing the work, and we keep the same hours you do.")
 
 REGIONS = [
     {
@@ -138,7 +139,7 @@ REGIONS = [
         "group": "Washington",
         "accent": "#159468",
         "h1": "Digital Marketing for <span>Central Washington</span>",
-        "lead": "Our office is in Yakima, and we've worked with businesses in Yakima, Ellensburg, Wenatchee, and nearby towns since 2004.",
+        "lead": "We've worked with businesses in Yakima, Ellensburg, Wenatchee, and nearby towns since 2004.",
         "intro": [
             "In Central Washington, word of mouth still matters, and most people look you up on their phone before they call. We focus on what brings in calls here: showing up in Google Maps, a website that works well on a phone, and ads aimed only at the towns you serve.",
             "We work with everyone from family run shops to industrial companies that sell across the whole state. Many of our clients have been with us for years, and a lot of new ones come from their referrals.",
@@ -148,7 +149,7 @@ REGIONS = [
         "city_links": {"Yakima": "/locations/yakima-wa", "Ellensburg": "/locations/ellensburg-wa", "Wenatchee": "/locations/wenatchee-wa"},
         "cases": ["refrig", "tire", "electrical"],
         "channels": "For most Central Washington businesses we start with Google Business Profile and local SEO, because that's where people look first. Google Ads work well here too, and clicks cost far less than in Seattle, so a modest budget goes a long way.",
-        "local_faq": ("Can we meet in person?", "Yes. Our office is in Yakima, and we're happy to meet at your place of business anywhere in Central Washington."),
+        "local_faq": REMOTE_FAQ,
     },
     {
         "slug": "eastern-washington",
@@ -161,14 +162,14 @@ REGIONS = [
         "lead": "SEO, Google Ads, and websites for businesses in Spokane, the Tri-Cities, Walla Walla, and everywhere in between.",
         "intro": [
             "Eastern Washington businesses often serve a big area with a lot of driving in between. Your customers search by town, so your marketing has to show up town by town, not just in the city you're based in.",
-            "We're just down the road in Yakima. We know the region, we can be in your office when it matters, and we've been doing this for local businesses since 2004.",
+            "We started in Yakima and know the region well, and we've been doing this for local businesses since 2004.",
         ],
         "industries": ["Contractors & trades", "Healthcare", "Agriculture", "Wineries & tourism", "Professional services"],
         "cities": ["Spokane", "Spokane Valley", "Kennewick", "Pasco", "Richland", "Walla Walla", "Pullman", "Cheney"],
         "city_links": {"Spokane": "/locations/spokane-wa", "Kennewick": "/locations/tri-cities-wa", "Pasco": "/locations/tri-cities-wa", "Richland": "/locations/tri-cities-wa", "Walla Walla": "/locations/walla-walla-wa"},
         "cases": ["tire", "refrig", "electrical"],
         "channels": "If you serve more than one town, we usually start with your Google Business Profile and a set of location pages so you can rank in each place you work. Google Ads fill in while that builds, targeted only to the towns you actually serve.",
-        "local_faq": ("Can we meet in person?", "Yes. We're based in Yakima, a short drive from the Tri-Cities and a few hours from Spokane. We're happy to come to you for kickoff meetings and planning sessions."),
+        "local_faq": REMOTE_FAQ,
     },
     {
         "slug": "chicago-il",
@@ -210,8 +211,6 @@ REGIONS = [
     },
 ]
 
-IN_PERSON_FAQ = ("Can we meet in person?",
-                 "Yes. Our office is in Yakima, and we're happy to come to you for kickoff and planning meetings. Day to day, most of our work happens by phone, Zoom, and email.")
 
 CITIES = [
     {
@@ -220,13 +219,13 @@ CITIES = [
         "h1": "Digital Marketing for <span>Yakima</span> Businesses",
         "lead": "SEO, Google Ads, websites, and branding from a team based right here in Yakima since 2004.",
         "intro": [
-            "Yakima is our home office, and a lot of our longest running clients are just down the road. People here still ask friends for recommendations, but they check Google before they call. If you don't show up there, the referral often goes to someone else.",
-            "We help Yakima businesses show up in Google Maps and search, build websites that work well on a phone, and run ads that only reach the towns you serve. You can stop by the office or we'll come to you.",
+            "Yakima is where we started, and a lot of our longest running clients are here. People here still ask friends for recommendations, but they check Google before they call. If you don't show up there, the referral often goes to someone else.",
+            "We help Yakima businesses show up in Google Maps and search, build websites that work well on a phone, and run ads that only reach the towns you serve.",
         ],
         "cities": ["Yakima", "Selah", "Union Gap", "Moxee", "Terrace Heights", "Wapato", "Toppenish", "Sunnyside"],
         "cases": ["refrig", "tire", "electrical"],
         "channels": "Most Yakima businesses get the best return from Google Business Profile and local SEO. Google Ads cost much less here than in Seattle, so a modest budget can bring in steady calls. Seasonal businesses tied to harvest or tourism can raise ad budgets during their busy months.",
-        "local_faq": ("Can we meet in person?", "Yes. Our office is in Yakima, and you're welcome to stop by or have us come to you."),
+        "local_faq": REMOTE_FAQ,
     },
     {
         "slug": "ellensburg-wa", "name": "Ellensburg", "short": "Ellensburg", "state": "Washington", "region": "central-washington",
@@ -235,12 +234,12 @@ CITIES = [
         "lead": "SEO, Google Ads, and websites for businesses in Ellensburg and across Kittitas County.",
         "intro": [
             "Ellensburg businesses serve a mix of longtime locals, Central Washington University students, and people passing through on I-90. Each group searches differently, and your website and Google listing need to work for all of them.",
-            "We help you show up when people nearby search for what you do, and we make sure your website gives them a clear reason to call. We're about 35 minutes away in Yakima, so meeting in person is easy.",
+            "We help you show up when people nearby search for what you do, and we make sure your website gives them a clear reason to call.",
         ],
         "cities": ["Ellensburg", "Cle Elum", "Kittitas", "Roslyn", "Thorp", "Easton"],
         "cases": ["refrig", "tire", "electrical"],
         "channels": "For most Ellensburg businesses we start with Google Business Profile and local SEO. If you rely on students or travelers, Google Ads and social media ads timed around the school year and travel seasons can fill the gaps.",
-        "local_faq": IN_PERSON_FAQ,
+        "local_faq": REMOTE_FAQ,
     },
     {
         "slug": "wenatchee-wa", "name": "Wenatchee", "short": "Wenatchee", "state": "Washington", "region": "central-washington",
@@ -254,7 +253,7 @@ CITIES = [
         "cities": ["Wenatchee", "East Wenatchee", "Cashmere", "Leavenworth", "Chelan", "Quincy"],
         "cases": ["refrig", "electrical", "tire"],
         "channels": "If you serve customers from several towns, we usually start with your Google Business Profile and a set of location pages. Google Ads targeted to those towns bring in calls while SEO builds.",
-        "local_faq": IN_PERSON_FAQ,
+        "local_faq": REMOTE_FAQ,
     },
     {
         "slug": "spokane-wa", "name": "Spokane", "short": "Spokane", "state": "Washington", "region": "eastern-washington",
@@ -268,7 +267,7 @@ CITIES = [
         "cities": ["Spokane", "Spokane Valley", "Liberty Lake", "Cheney", "Airway Heights", "Mead", "Deer Park"],
         "cases": ["electrical", "tire", "refrig"],
         "channels": "In a market Spokane's size, we usually pair local SEO with Google Ads targeted to the parts of town you serve. Call tracking shows which campaigns turn into booked jobs so the budget goes where it works.",
-        "local_faq": IN_PERSON_FAQ,
+        "local_faq": REMOTE_FAQ,
     },
     {
         "slug": "tri-cities-wa", "name": "Tri-Cities", "short": "Tri-Cities", "where": "the Tri-Cities", "state": "Washington", "region": "eastern-washington",
@@ -282,7 +281,7 @@ CITIES = [
         "cities": ["Kennewick", "Pasco", "Richland", "West Richland", "Benton City", "Burbank"],
         "cases": ["tire", "refrig", "electrical"],
         "channels": "Most Tri-Cities businesses start with Google Business Profile and a page for each city they serve. Google Ads can target each city separately, so you can put more budget where your best customers are.",
-        "local_faq": IN_PERSON_FAQ,
+        "local_faq": REMOTE_FAQ,
     },
     {
         "slug": "walla-walla-wa", "name": "Walla Walla", "short": "Walla Walla", "state": "Washington", "region": "eastern-washington",
@@ -296,7 +295,7 @@ CITIES = [
         "cities": ["Walla Walla", "College Place", "Milton-Freewater", "Waitsburg", "Dayton"],
         "cases": ["refrig", "tire", "electrical"],
         "channels": "Wineries, hotels, and restaurants usually get the most from Google Business Profile, a strong website, and ads aimed at people planning a trip. Local service businesses do best with local SEO and Google Ads focused on Walla Walla and College Place.",
-        "local_faq": IN_PERSON_FAQ,
+        "local_faq": REMOTE_FAQ,
     },
     {
         "slug": "tacoma-wa", "name": "Tacoma", "short": "Tacoma", "state": "Washington", "region": None,
@@ -571,12 +570,12 @@ CITIES = [
         "lead": "SEO, Google Ads, and websites for businesses in Selah and the Upper Valley.",
         "intro": [
             "Selah sits just north of Yakima through the Selah Gap, and a lot of people here drive into Yakima for work and shopping. When they search for a service, Google often shows Yakima companies first unless your listing makes it clear you're right here in town.",
-            "We help Selah businesses show up for the people who live nearby, from Naches to East Selah, and build websites that make it easy to call. Our office is about ten minutes away.",
+            "We help Selah businesses show up for the people who live nearby, from Naches to East Selah, and build websites that make it easy to call.",
         ],
         "cities": ["Selah", "Yakima", "Naches", "Gleed", "Moxee", "Terrace Heights"],
         "cases": ["refrig", "tire", "electrical"],
         "channels": "Most Selah businesses get the best return from Google Business Profile, reviews, and local SEO. Google Ads targeted to Selah and the Upper Valley cost little here and can bring in steady calls.",
-        "local_faq": ("Can we meet in person?", "Yes. Our office is in Yakima, about ten minutes away, and we're happy to come to you."),
+        "local_faq": REMOTE_FAQ,
     },
     {
         "slug": "sunnyside-wa", "name": "Sunnyside", "short": "Sunnyside", "state": "Washington", "region": "central-washington",
@@ -590,7 +589,7 @@ CITIES = [
         "cities": ["Sunnyside", "Grandview", "Granger", "Mabton", "Outlook", "Zillah"],
         "cases": ["refrig", "tire", "electrical"],
         "channels": "We usually start with Google Business Profile and local SEO in English and Spanish. Google Ads and Facebook ads targeted to the Lower Valley towns are inexpensive here and bring in calls quickly.",
-        "local_faq": ("Can we meet in person?", "Yes. Our office is in Yakima, about 40 minutes up the valley, and we're happy to meet at your business."),
+        "local_faq": REMOTE_FAQ,
     },
     {
         "slug": "union-gap-wa", "name": "Union Gap", "short": "Union Gap", "state": "Washington", "region": "central-washington",
@@ -604,7 +603,7 @@ CITIES = [
         "cities": ["Union Gap", "Yakima", "Moxee", "Parker", "Wapato", "Selah"],
         "cases": ["tire", "refrig", "electrical"],
         "channels": "Retail and auto businesses usually start with Google Business Profile, reviews, and local SEO. Google Ads and Facebook ads targeted to the whole valley help bring in shoppers who make the drive.",
-        "local_faq": ("Can we meet in person?", "Yes. Our office is in Yakima, just a few minutes away, and we're happy to come to you."),
+        "local_faq": REMOTE_FAQ,
     },
     {
         "slug": "moses-lake-wa", "name": "Moses Lake", "short": "Moses Lake", "state": "Washington", "region": "central-washington",
@@ -618,7 +617,7 @@ CITIES = [
         "cities": ["Moses Lake", "Ephrata", "Othello", "Quincy", "Soap Lake", "Warden"],
         "cases": ["refrig", "tire", "electrical"],
         "channels": "Most Moses Lake businesses start with Google Business Profile and local SEO, plus location pages for the Basin towns they serve. Google Ads cost much less here than in Seattle or Spokane, so a small budget goes a long way.",
-        "local_faq": ("Can we meet in person?", "Yes. Our office is in Yakima, about an hour and a half away, and we're happy to come to you for kickoff and planning meetings."),
+        "local_faq": REMOTE_FAQ,
     },
     {
         "slug": "toppenish-wa", "name": "Toppenish", "short": "Toppenish", "state": "Washington", "region": "central-washington",
@@ -632,7 +631,7 @@ CITIES = [
         "cities": ["Toppenish", "Wapato", "Zillah", "Harrah", "White Swan", "Granger"],
         "cases": ["refrig", "tire", "electrical"],
         "channels": "We usually start with Google Business Profile and local SEO, then add Spanish pages and Facebook ads if many of your customers speak Spanish. Google Ads here are inexpensive and easy to target to the towns you serve.",
-        "local_faq": ("Can we meet in person?", "Yes. Our office is in Yakima, about 25 minutes away, and we're happy to meet at your business."),
+        "local_faq": REMOTE_FAQ,
     },
     {
         "slug": "spokane-valley-wa", "name": "Spokane Valley", "short": "Spokane Valley", "state": "Washington", "region": "eastern-washington",
@@ -646,7 +645,7 @@ CITIES = [
         "cities": ["Spokane Valley", "Spokane", "Liberty Lake", "Millwood", "Otis Orchards", "Newman Lake"],
         "cases": ["electrical", "tire", "refrig"],
         "channels": "Most Spokane Valley businesses start with Google Business Profile, reviews, and local SEO. Google Ads targeted to the Valley zip codes keep you from paying for clicks across the county.",
-        "local_faq": IN_PERSON_FAQ,
+        "local_faq": REMOTE_FAQ,
     },
     {
         "slug": "pullman-wa", "name": "Pullman", "short": "Pullman", "state": "Washington", "region": "eastern-washington",
@@ -660,7 +659,7 @@ CITIES = [
         "cities": ["Pullman", "Moscow", "Colfax", "Palouse", "Albion", "Uniontown"],
         "cases": ["tire", "refrig", "electrical"],
         "channels": "Most Pullman businesses get the best return from Google Business Profile and local SEO. Restaurants and shops add social media around the WSU calendar, and service businesses add Google Ads targeted to Pullman and Moscow.",
-        "local_faq": IN_PERSON_FAQ,
+        "local_faq": REMOTE_FAQ,
     },
     {
         "slug": "cheney-wa", "name": "Cheney", "short": "Cheney", "state": "Washington", "region": "eastern-washington",
@@ -674,7 +673,7 @@ CITIES = [
         "cities": ["Cheney", "Spokane", "Airway Heights", "Medical Lake", "Four Lakes", "Spangle"],
         "cases": ["tire", "refrig", "electrical"],
         "channels": "Most Cheney businesses start with Google Business Profile and local SEO. Shops and restaurants add social media around the EWU school year, and service businesses add Google Ads targeted to the West Plains.",
-        "local_faq": IN_PERSON_FAQ,
+        "local_faq": REMOTE_FAQ,
     },
     {
         "slug": "oakland-ca", "name": "Oakland", "short": "Oakland", "state": "California", "region": "san-francisco-bay-area",
@@ -1069,8 +1068,33 @@ def wave(top: str, bottom: str) -> str:
     return f'<div class="wave-div" style="background:{top}"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,40 C480,70 960,10 1440,35 L1440,70 L0,70 Z" fill="{bottom}"/></svg></div>'
 
 
-def proof_pills() -> str:
+IN_PERSON_AREAS = {
+    "Yakima Valley": {
+        "slugs": {"yakima-wa", "selah-wa", "union-gap-wa", "sunnyside-wa", "toppenish-wa"},
+        "intro": "Our sales team lives in the Yakima Valley, so we can sit down with you at your business whenever you'd like.",
+        "faq": "Yes. Our sales team lives in the Yakima Valley and is happy to meet you at your business. Day to day, most of the work happens by phone, Zoom, and email.",
+    },
+    "Chicago area": {
+        "slugs": {"chicago-il", "naperville-il", "evanston-il", "schaumburg-il", "oak-park-il", "aurora-il", "joliet-il", "elgin-il"},
+        "intro": "We have a sales rep in the Chicago area who can meet with you in person at your business.",
+        "faq": "Yes. We have a sales rep in the Chicago area who is happy to meet you at your business. Day to day, most of the work happens by phone, Zoom, and email.",
+    },
+    "Phoenix area": {
+        "slugs": {"phoenix-az", "scottsdale-az", "mesa-az", "tempe-az", "chandler-az", "gilbert-az", "glendale-az", "peoria-az"},
+        "intro": "We have a sales rep in Scottsdale who can meet with you in person anywhere in the Phoenix area.",
+        "faq": "Yes. We have a sales rep in Scottsdale who is happy to meet you at your business anywhere in the Phoenix area. Day to day, most of the work happens by phone, Zoom, and email.",
+    },
+}
+
+
+def in_person_area(slug: str) -> Optional[dict]:
+    return next((a for a in IN_PERSON_AREAS.values() if slug in a["slugs"]), None)
+
+
+def proof_pills(slug: str = "") -> str:
     items = ["Since 2004", "No long sales pitch", "Talk to the people doing the work"]
+    if in_person_area(slug):
+        items[1] = "Meet with us in person"
     return '<div class="lc-proof">' + "".join(f"<span>{CHECK}{escape(i)}</span>" for i in items) + "</div>"
 
 
@@ -1165,7 +1189,7 @@ def faqs_for(r: dict) -> list[tuple[str, str]]:
         ("How long does it take to see results?",
          f"Ads can bring in calls within the first couple of weeks, because you're paying for placement. SEO takes longer. Most businesses see real movement in three to six months, and competitive searches in {where} can take closer to a year. A lot of our clients run both so the phone rings while SEO builds."),
         (f"Which channels make sense for {'an' if short[0] in 'AEIOU' else 'a'} {short} business?", r["channels"]),
-        r["local_faq"],
+        ("Can we meet in person?", in_person_area(r["slug"])["faq"]) if in_person_area(r["slug"]) else r["local_faq"],
         ("How do you report on results?",
          "You get a monthly report in plain English: calls, form fills, rankings, ad spend, and what each lead cost. If you'd rather talk it through, we'll walk you through it on a call."),
         ("Can you work with our in house marketing person?",
@@ -1295,7 +1319,7 @@ def region_page(r: dict) -> str:
       <span class="lc-pin">{PIN}{escape(name if r['state'] in name else f"{name}, {r['state']}")}</span>
       <h1>{r['h1']}</h1>
       <p class="lc-hero-lead">{escape(r['lead'])}</p>
-      {proof_pills()}
+      {proof_pills(r["slug"])}
       {rating_block()}
     </div>
     <div class="lc-form-card" id="get-in-touch">
@@ -1318,7 +1342,7 @@ def region_page(r: dict) -> str:
       <div>
         <span class="eyebrow">Digital Marketing in {escape(where)}</span>
         <h2>What it takes to win in {escape(where)}</h2>
-        {''.join(f'<p>{escape(p)}</p>' for p in r['intro'])}
+        {''.join(f'<p>{escape(p)}</p>' for p in r['intro'] + ([in_person_area(r['slug'])['intro']] if in_person_area(r['slug']) else []))}
       </div>
       <div class="lc-panel">
         <h3>Service area</h3>

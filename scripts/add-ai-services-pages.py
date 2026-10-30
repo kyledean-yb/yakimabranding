@@ -530,8 +530,8 @@ def smb_body() -> str:
             "Yes, for practical jobs like answering FAQs, booking requests, and drafting replies, connected to tools you already use.",
         ),
         faq_item(
-            "Do you only work with Pacific Northwest businesses?",
-            "We are based in Yakima and work across the region, but remote setups work fine if you want the same practical approach from elsewhere.",
+            "Do you only work with local businesses?",
+            "No. We're a fully remote team and work with businesses all over the country by phone, Zoom, and email.",
         ),
     ]
     return f"""

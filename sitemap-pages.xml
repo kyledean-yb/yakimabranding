@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
@@ -654,6 +655,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://yakimabranding.com/locations/aurora-il</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://yakimabranding.com/locations/boise-id</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -710,6 +716,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://yakimabranding.com/locations/elgin-il</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://yakimabranding.com/locations/ellensburg-wa</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -728,6 +739,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://yakimabranding.com/locations/evanston-il</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yakimabranding.com/locations/joliet-il</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://yakimabranding.com/locations/lakewood-co</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -738,12 +759,27 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://yakimabranding.com/locations/naperville-il</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yakimabranding.com/locations/oak-park-il</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://yakimabranding.com/locations/phoenix-az</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yakimabranding.com/locations/san-francisco-bay-area</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yakimabranding.com/locations/schaumburg-il</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

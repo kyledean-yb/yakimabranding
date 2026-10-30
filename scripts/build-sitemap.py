@@ -402,6 +402,7 @@ def build_urlset_xml(entries: list[tuple]) -> str:
         body_parts.append(render_url_entry(url, changefreq, priority, lastmod, alternate_es))
     body = "\n".join(body_parts)
     return f"""<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 {body}
@@ -446,6 +447,7 @@ def build_sitemap_index(lastmods: dict[str, str]) -> str:
         for name, lastmod in sorted(lastmods.items())
     )
     return f"""<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {sitemaps}
 </sitemapindex>

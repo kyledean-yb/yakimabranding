@@ -78,7 +78,7 @@ CASES = {
     "electrical": ("+204%", "page one keywords in two years", "Bay Area Electrical Contractor",
                    "Organic traffic up 112% year over year and search impressions up 366% at peak.",
                    "/about/case-studies/local-electrical-contractor-seo-growth", "#3F6FD6"),
-    "refrig": ("+2,900%", "page one keywords", "Central Washington Refrigeration",
+    "refrig": ("+2,900%", "page one keywords", "Commercial Refrigeration Contractor",
                "Organic traffic doubled in seven months and top three rankings grew 57% in a year.",
                "/about/case-studies/local-refrigeration-services-seo-growth", "#12946F"),
     "tire": ("+613%", "page one keywords over three years", "Regional Tire & Auto Shop",

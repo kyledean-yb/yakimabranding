@@ -118,6 +118,14 @@ CASE_SERVICES = {
     "wordpress-portfolio-malware-remediation": ["/google-ads", "/seo/technical-seo", "/web-design"],
 }
 
+CASE_INDUSTRIES = {
+    "local-electrical-contractor-seo-growth": ["electrical"],
+    "local-refrigeration-services-seo-growth": ["hvac"],
+    "regional-tire-auto-seo-growth": ["auto-repair", "auto-body"],
+    "roofing-contractor-inbound-marketing": ["roofing"],
+    "tree-services-local-seo": ["tree-service", "landscaping"],
+}
+
 # service page key -> {lang: (eyebrow, h2, lead, link label, [(case slug, tag, name, big, big label, second, second label, desc)])}
 RESULTS = {
     "google-ads": {
@@ -454,6 +462,14 @@ def process_case(path: Path) -> bool:
         f'<div class="cs-meta-item"><span class="cs-meta-item__label">{T[lang]["rel_services"]}</span>'
         f'<span class="cs-meta-item__value"><span class="cs-meta-tags">{links}</span></span></div>'
     )
+    names = industry_names()
+    ind = [s for s in CASE_INDUSTRIES.get(slug, []) if lang == "en" and s in names]
+    if ind:
+        ind_links = "".join(
+            f'<a class="cs-meta-tag" href="/industries/{s}" style="text-decoration:none;color:#fff;border-color:rgba(43,196,240,.7)">'
+            f'Marketing for {escape(names[s])}</a>' for s in ind)
+        item += (f'<div class="cs-meta-item"><span class="cs-meta-item__label">Industry</span>'
+                 f'<span class="cs-meta-item__value"><span class="cs-meta-tags">{ind_links}</span></span></div>')
     start, end = "<!-- case-services:start -->", "<!-- case-services:end -->"
     new, done = replace_block(html, start, end, item)
     if not done:
@@ -495,6 +511,23 @@ def location_module():
     return mod
 
 
+_INDUSTRY_NAMES: dict[str, str] = {}
+
+
+def industry_names() -> dict[str, str]:
+    if not _INDUSTRY_NAMES:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("yb_industries", ROOT / "scripts" / "add-industry-pages.py")
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        _INDUSTRY_NAMES.update({i["slug"]: unescape(i["h1"]) for i in mod.INDUSTRIES})
+    return _INDUSTRY_NAMES
+
+
+def industry_chips_html(style: str) -> str:
+    return "".join(f'<a href="/industries/{s}" style="{style}">{escape(n)}</a>' for s, n in industry_names().items())
+
+
 def local_links_html(city: str, links: list[tuple[str, str]], accent: str) -> str:
     items = "".join(
         f'<a href="{h}" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;'
@@ -507,7 +540,13 @@ def local_links_html(city: str, links: list[tuple[str, str]], accent: str) -> st
         '    <div style="max-width:760px;margin:0 auto">\n'
         f'      <h2 style="margin:0 0 20px;font-size:24px">More Marketing for {escape(city)} Businesses</h2>\n'
         '      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px">'
-        f'{items}</div>\n    </div>\n  </div>\n</section>\n'
+        f'{items}</div>\n'
+        f'      <h3 style="margin:36px 0 14px;font-size:18px">Industries We Work With</h3>\n'
+        '      <div style="display:flex;flex-wrap:wrap;gap:8px">'
+        + industry_chips_html("padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);"
+                              "font-weight:600;font-size:14px;text-decoration:none")
+        + '<a href="/industries" style="padding:7px 14px;border-radius:999px;color:var(--yb-blue);font-weight:700;font-size:14px;'
+        'text-decoration:none">All industries</a></div>\n    </div>\n  </div>\n</section>\n'
     )
 
 
@@ -555,7 +594,42 @@ def process_local_services() -> int:
     return count
 
 
+def process_location_industries() -> int:
+    mod = location_module()
+    count = 0
+    for place in mod.REGIONS + mod.CITIES:
+        path = ROOT / "locations" / f"{place['slug']}.html"
+        if not path.exists():
+            continue
+        html = path.read_text(encoding="utf-8")
+        g = html.find('<div class="lc-more"')
+        if g == -1:
+            continue
+        where = place.get("where", place["short"])
+        chips = industry_chips_html("") + '<a href="/industries">All industries</a>'
+        block = (f'\n    <div class="lc-more-box" style="margin-top:20px"><h3>Industries we serve in {escape(where)}</h3>'
+                 f'<div class="lc-chips">{chips}</div></div>')
+        start, end = "<!-- loc-industries:start -->", "<!-- loc-industries:end -->"
+        new, done = replace_block(html, start, end, block)
+        if not done:
+            depth, i = 0, html.index(">", g) + 1
+            for m in re.finditer(r"<div\b|</div>", html[i:]):
+                if m.group(0) == "<div":
+                    depth += 1
+                elif depth == 0:
+                    i += m.end()
+                    break
+                else:
+                    depth -= 1
+            new = html[:i] + start + block + end + html[i:]
+        if new != html:
+            path.write_text(new, encoding="utf-8")
+            count += 1
+    return count
+
+
 def main() -> None:
+    print(f"location pages {process_location_industries()}")
     local = process_local_services()
     print(f"local service pages {local}")
     svc = sum(process_service(k, lang) for k in SERVICES for lang in ("en", "es"))

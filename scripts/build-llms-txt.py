@@ -31,9 +31,11 @@ SECTIONS = [
                  "about/kayelyn.html"]),
     ("Case Studies", "about/case-studies/*.html"),
     ("Locations", "locations"),
+    ("Industries", ["industries/index.html"]),
+    ("Industry Pages", "industries/*.html"),
     ("Resources", ["insights.html", "client-corner/index.html", "crm-tutorials/index.html"]),
 ]
-FULL_TEXT_SECTIONS = {"Services", "AI Services", "Company", "Case Studies", "Locations"}
+FULL_TEXT_SECTIONS = {"Services", "AI Services", "Company", "Case Studies", "Locations", "Industries", "Industry Pages"}
 STRIP_SELECTORS = ["script", "style", "noscript", "svg", "header", "nav", "footer", "form", "iframe",
                    ".svr", ".mega-menu", ".mobile-menu", ".footer", ".chat-widget", "[aria-hidden=true]",
                    ".faq-list", ".faq-item", ".lc-faq", ".team-faq-item", ".cta-band", ".booking"]

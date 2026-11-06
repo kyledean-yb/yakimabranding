@@ -36,6 +36,7 @@ FOOTER_COLUMNS = [
         ("About Us", "/about"),
         ("Case Studies", "/about/case-studies"),
         ("Client Reviews", "/reviews"),
+        ("Industries We Serve", "/industries"),
         ("Blog", "/insights"),
         ("Client Corner", "/client-corner"),
         ("CRM Tutorials", "/crm-tutorials"),

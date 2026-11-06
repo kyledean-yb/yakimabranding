@@ -22,7 +22,7 @@ ICONS = {
 }
 
 CASE_ELECTRICAL = ("+204%", "Page one keywords for a Bay Area electrical contractor", "/about/case-studies/local-electrical-contractor-seo-growth")
-CASE_REFRIG = ("+2,900%", "Page one keywords for a Central Washington refrigeration company", "/about/case-studies/local-refrigeration-services-seo-growth")
+CASE_REFRIG = ("+2,900%", "Page one keywords for a commercial refrigeration company", "/about/case-studies/local-refrigeration-services-seo-growth")
 CASE_TIRE = ("+613%", "Page one keywords for a regional tire and auto shop", "/about/case-studies/regional-tire-auto-seo-growth")
 CASE_WP = ("130", "WordPress websites cleaned and secured in 15 days", "/about/case-studies/wordpress-portfolio-malware-remediation")
 
@@ -128,6 +128,7 @@ MENUS: list[dict] = [
                 ("Case Studies", "/about/case-studies"),
                 ("Client Reviews", "/reviews"),
                 ("Locations We Serve", "/locations"),
+                ("Industries We Serve", "/industries"),
                 ("WA Sales Tax Notice", "/washington-state-sales-tax-notice"),
             ]},
         ],
@@ -187,6 +188,7 @@ ES = {
     "WA Sales Tax Notice": "Aviso de impuesto de WA",
     "Client Reviews": "Reseñas de clientes",
     "Locations We Serve": "Dónde trabajamos",
+    "Industries We Serve": "Industrias que atendemos",
     "Our Team": "Nuestro equipo",
     "Kevin Dean, Owner": "Kevin Dean, Propietario",
     "Jacob Ross, Account Executive": "Jacob Ross, Ejecutivo de cuentas",
@@ -194,7 +196,7 @@ ES = {
     "Kirsten Gonzalez, Marketing Administrator": "Kirsten Gonzalez, Administradora de marketing",
     "Kayelyn Aggett, Social Media Manager": "Kayelyn Aggett, Gerente de redes sociales",
     "Page one keywords for a Bay Area electrical contractor": "Palabras clave en la primera página para un contratista eléctrico",
-    "Page one keywords for a Central Washington refrigeration company": "Palabras clave en la primera página para una empresa de refrigeración",
+    "Page one keywords for a commercial refrigeration company": "Palabras clave en la primera página para una empresa de refrigeración",
     "Page one keywords for a regional tire and auto shop": "Palabras clave en la primera página para un taller de llantas",
     "WordPress websites cleaned and secured in 15 days": "Sitios WordPress limpiados y protegidos en 15 días",
 }

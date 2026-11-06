@@ -81,7 +81,7 @@ TEAM = {
 }
 SECTION_NAMES = {
     "about": ("About", "Nosotros"), "about/case-studies": ("Case Studies", "Casos de éxito"),
-    "locations": ("Locations", "Ubicaciones"), "insights": ("Insights", "Perspectivas"),
+    "locations": ("Locations", "Ubicaciones"), "industries": ("Industries", "Industrias"), "insights": ("Insights", "Perspectivas"),
     "seo": ("SEO Services", "Servicios de SEO"), "google-ads": ("Google Ads", "Google Ads"),
     "web-design": ("Web Design", "Diseño web"), "branding": ("Branding & Design", "Marca y diseño"),
     "social-media": ("Social Media", "Redes sociales"),
@@ -499,6 +499,34 @@ def build_page(rel: str, raw: str) -> dict | None:
         area = {"@type": "City", "name": m.group(1).split(" in ")[-1].strip(), "containedInPlace": {"@type": "State", "name": STATES[m.group(2)]}} if m else {"@type": "Country", "name": "United States"}
         extra.append({"@type": "Service", "@id": f"{url}#service", "name": name, "serviceType": "Digital Marketing",
                       "description": desc, "provider": {"@id": ORG_ID}, "areaServed": area, "url": url})
+        page_extra["about"] = {"@id": f"{url}#service"}
+    elif base_rel == "industries/index.html":
+        page_types = ["CollectionPage"]
+        items = []
+        for f in sorted((ROOT / "industries").glob("*.html")):
+            if f.name == "index.html":
+                continue
+            h = BeautifulSoup(f.read_text(encoding="utf-8"), "html.parser").find("h1")
+            items.append({"@type": "ListItem", "position": len(items) + 1, "url": url_for(f"industries/{f.stem}", "en"),
+                          "name": text_of(h) if h else f.stem})
+        extra.append({"@type": "ItemList", "@id": f"{url}#list", "itemListElement": items, "numberOfItems": len(items)})
+        page_extra["mainEntity"] = {"@id": f"{url}#list"}
+    elif base_rel.startswith("industries/") and "thank-you" not in stem:
+        industry = re.sub(r"^Digital Marketing for\s+", "", h1 or name)
+        crumb_name = industry
+        if (ROOT / "assets" / "industries" / f"{stem}.webp").exists():
+            image_url, image_size = abs_url(f"/assets/industries/{stem}.webp", rel), (960, 720)
+        extra.append({
+            "@type": "Service",
+            "@id": f"{url}#service",
+            "name": name,
+            "serviceType": "Digital Marketing",
+            "description": desc,
+            "provider": {"@id": ORG_ID},
+            "areaServed": {"@type": "Country", "name": "United States"},
+            "audience": {"@type": "BusinessAudience", "name": industry},
+            "url": url,
+        })
         page_extra["about"] = {"@id": f"{url}#service"}
     elif base_rel in SERVICES:
         area = {"@type": "Country", "name": "United States"}

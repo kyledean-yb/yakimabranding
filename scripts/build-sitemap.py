@@ -32,6 +32,7 @@ MAIN_PAGES = [
     ("reviews.html", "Client Reviews"),
     ("about/case-studies/index.html", "Case Studies"),
     ("locations/index.html", "Locations We Serve"),
+    ("industries/index.html", "Industries We Serve"),
     ("insights.html", "Insights"),
     ("contact.html", "Contact"),
     ("washington-state-sales-tax-notice.html", "Washington State Sales Tax Notice"),
@@ -86,6 +87,8 @@ SITEMAP_ES = {
     "About Us": "Sobre nosotros",
     "Client Reviews": "Reseñas de clientes",
     "Locations We Serve": "Dónde trabajamos",
+    "Industries We Serve": "Industrias que atendemos",
+    "Industries": "Industrias",
     "Contact": "Contacto",
     "Washington State Sales Tax Notice": "Aviso de impuesto sobre las ventas del estado de Washington",
     "Privacy Policy": "Política de privacidad",
@@ -205,6 +208,11 @@ def collect_pages(lang: str = "en") -> tuple[
             lang_link(f"about/case-studies/{p.name}", page_title_lang(f"about/case-studies/{p.name}", lang), lang)
             for p in sorted((ROOT / "about" / "case-studies").glob("*.html"))
             if p.name != "index.html" and "thank-you" not in p.name
+        ],
+        sm_tr("Industries", lang): [
+            lang_link(f"industries/{p.name}", page_title_lang(f"industries/{p.name}", lang), lang)
+            for p in sorted((ROOT / "industries").glob("*.html"))
+            if p.name != "index.html"
         ],
         sm_tr("Team", lang): [
             lang_link(f"about/{p.name}", page_title_lang(f"about/{p.name}", lang), lang)

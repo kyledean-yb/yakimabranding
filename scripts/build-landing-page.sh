@@ -38,6 +38,8 @@ fi
 rm -rf "$ROOT/${SLUG}" "$ROOT/landing-page"
 mkdir -p "$ROOT/${SLUG}"
 cp -R "$LANDING_SRC/." "$ROOT/${SLUG}/"
+# The site serves URLs without trailing slashes; Next's trailingSlash export adds one to the canonical.
+perl -pi -e "s#(rel=\"canonical\" href=\"[^\"]*/${SLUG})/\"#\$1\"#g" "$ROOT/${SLUG}/index.html"
 
 echo "==> Copying Next.js assets"
 rm -rf "$ROOT/_next"

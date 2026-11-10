@@ -327,6 +327,451 @@
       "permanent": true
     },
     {
+      "source": "/:slug(3-ways-to-close-more-internet-leads|5-creative-ways-to-enhance-your-website-using-video|5-major-myths|5-paid-search-tactics-to-help-you-generate-leads|7-ways-to-convert-social-media-followers-into-paying-customers|an-introverts-guide-to-using-social-media|best-business-entity-for-franchisees|digital-marketing-is-an-investment-not-an-expense|does-seo-still-matter-with-ai-search|effects-of-rain-on-asphalt|everything-businesses-need-to-know-about-seo|evolution-social-media|five-social-media-post-ideas-for-when-youre-in-a-rut|how-did-this-restaurants-pay-per-click-campaign-improve-so-drastically|how-long-does-seo-take|how-often-should-you-run-content-audits-and-update-your-site|how-to-create-a-portfolio-website-for-your-small-business|how-to-create-content-for-every-stage-in-the-buyers-journey|how-to-show-up-chatgpt-ai-search|in-house-marketing-vs-agency-marketing|local-business-marketing-budget|local-seo-washington-city-pages|local-service-page-seo-washington|pcba-design-for-manufacturability|recap-common-social-media-mistakes-every-business-should-avoid|resolving-employee-disputes-before-you-are-sued|selecting-a-commercial-landscape-maintenance-company|seo-audit-what-actually-matters|seo-vs-google-ads-pacific-northwest|should-you-rebuild-your-website|signs-your-car-may-need-transmission-repair|so-youre-thinking-about-social-media-management|social-media-management-vs-growth|social-media-platforms|the-thermal-press-difference|types-of-facebook-ads|ways-to-increase-followers|what-business-website-needs-2026|what-drives-consumer-spending|what-is-a-hashtag|what-is-a-landing-page-why-is-it-important|what-to-look-for-in-a-moving-company|what-you-should-consider-when-installing-a-concrete-patio|why-choose-gasoline-box-trucks-vs-diesel|why-local-businesses-need-seo-how-you-can-help-them|why-should-you-send-your-child-to-camp-mowglis-give-them-a-chance-to-unplug|why-yb-builds-marketing-tools|why-you-should-be-using-customer-satisfaction-surveys|yb-marketing-announces-strategic-acquisition-of-encite-branding-marketing-creative|zero-click-local-marketing-washington)",
+      "destination": "/insights/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/blog/page/:p*",
+      "destination": "/insights",
+      "permanent": true
+    },
+    {
+      "source": "/articles",
+      "destination": "/insights",
+      "permanent": true
+    },
+    {
+      "source": "/articles/:p*",
+      "destination": "/insights",
+      "permanent": true
+    },
+    {
+      "source": "/author/:p*",
+      "destination": "/insights",
+      "permanent": true
+    },
+    {
+      "source": "/tag/:p*",
+      "destination": "/insights",
+      "permanent": true
+    },
+    {
+      "source": "/comments/feed",
+      "destination": "/insights",
+      "permanent": true
+    },
+    {
+      "source": "/feed",
+      "destination": "/insights",
+      "permanent": true
+    },
+    {
+      "source": "/:p*/feed",
+      "destination": "/insights",
+      "permanent": true
+    },
+    {
+      "source": "/about-us",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/about/about-kirsten",
+      "destination": "/about/kirsten",
+      "permanent": true
+    },
+    {
+      "source": "/about/kristin",
+      "destination": "/about/kirsten",
+      "permanent": true
+    },
+    {
+      "source": "/ada-accessibility-in-kennewick",
+      "destination": "/web-design",
+      "permanent": true
+    },
+    {
+      "source": "/ada-accessibility-in-san-jose",
+      "destination": "/web-design",
+      "permanent": true
+    },
+    {
+      "source": "/ada-compliance",
+      "destination": "/web-design",
+      "permanent": true
+    },
+    {
+      "source": "/attorney",
+      "destination": "/industries/attorneys",
+      "permanent": true
+    },
+    {
+      "source": "/attorneys-bay-area",
+      "destination": "/industries/attorneys",
+      "permanent": true
+    },
+    {
+      "source": "/attorneys-wa",
+      "destination": "/industries/attorneys",
+      "permanent": true
+    },
+    {
+      "source": "/branding-and-design",
+      "destination": "/branding",
+      "permanent": true
+    },
+    {
+      "source": "/branding/web-design",
+      "destination": "/web-design",
+      "permanent": true
+    },
+    {
+      "source": "/careers",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies",
+      "destination": "/about/case-studies",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-print-design-services-kennewick",
+      "destination": "/branding",
+      "permanent": true
+    },
+    {
+      "source": "/contact-request-thank-you",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/content-creation-and-blogging",
+      "destination": "/content-marketing",
+      "permanent": true
+    },
+    {
+      "source": "/custom-website-development",
+      "destination": "/web-design",
+      "permanent": true
+    },
+    {
+      "source": "/customer-survey-summer-2026",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/es/branding/web-design",
+      "destination": "/es/web-design",
+      "permanent": true
+    },
+    {
+      "source": "/google-ads-agency-in-boston",
+      "destination": "/google-ads",
+      "permanent": true
+    },
+    {
+      "source": "/google-ads-agency-in-san-jose",
+      "destination": "/locations/san-jose-ca",
+      "permanent": true
+    },
+    {
+      "source": "/google-ads-agency-in-tacoma-seattle",
+      "destination": "/google-ads/seattle-wa",
+      "permanent": true
+    },
+    {
+      "source": "/google-ads-agency-in-yakima",
+      "destination": "/google-ads/yakima-wa",
+      "permanent": true
+    },
+    {
+      "source": "/google-advertising",
+      "destination": "/google-ads",
+      "permanent": true
+    },
+    {
+      "source": "/google-advertising/google-ads-sizes",
+      "destination": "/google-ads",
+      "permanent": true
+    },
+    {
+      "source": "/graphic-design-and-logos",
+      "destination": "/branding",
+      "permanent": true
+    },
+    {
+      "source": "/kennewick-ppc",
+      "destination": "/google-ads/tri-cities-wa",
+      "permanent": true
+    },
+    {
+      "source": "/logo-design-kennewick",
+      "destination": "/branding",
+      "permanent": true
+    },
+    {
+      "source": "/logo-request-thank-you",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/partners",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio",
+      "destination": "/about/case-studies",
+      "permanent": true
+    },
+    {
+      "source": "/ppc",
+      "destination": "/google-ads",
+      "permanent": true
+    },
+    {
+      "source": "/pricing",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/sales-account-manager",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/search-engine-optimization-seo",
+      "destination": "/seo",
+      "permanent": true
+    },
+    {
+      "source": "/seo-agency-ellensburg-washington",
+      "destination": "/seo/ellensburg-wa",
+      "permanent": true
+    },
+    {
+      "source": "/seo-agency-in-cupertino",
+      "destination": "/locations/san-francisco-bay-area",
+      "permanent": true
+    },
+    {
+      "source": "/seo-agency-in-fremont",
+      "destination": "/locations/fremont-ca",
+      "permanent": true
+    },
+    {
+      "source": "/seo-agency-in-livermore",
+      "destination": "/locations/san-francisco-bay-area",
+      "permanent": true
+    },
+    {
+      "source": "/seo-agency-in-morgan-hill",
+      "destination": "/locations/san-francisco-bay-area",
+      "permanent": true
+    },
+    {
+      "source": "/seo-agency-in-pleasanton",
+      "destination": "/locations/san-francisco-bay-area",
+      "permanent": true
+    },
+    {
+      "source": "/seo-agency-in-seattle",
+      "destination": "/seo/seattle-wa",
+      "permanent": true
+    },
+    {
+      "source": "/seo-agency-in-sunnyside",
+      "destination": "/locations/sunnyside-wa",
+      "permanent": true
+    },
+    {
+      "source": "/seo-agency-in-walla-walla",
+      "destination": "/seo/walla-walla-wa",
+      "permanent": true
+    },
+    {
+      "source": "/seo-agency-tri-cities",
+      "destination": "/seo/tri-cities-wa",
+      "permanent": true
+    },
+    {
+      "source": "/seo-agency-yakima-washington",
+      "destination": "/seo/yakima-wa",
+      "permanent": true
+    },
+    {
+      "source": "/seo-kennewick",
+      "destination": "/seo/tri-cities-wa",
+      "permanent": true
+    },
+    {
+      "source": "/seo-marketing-specialist-palo-alto",
+      "destination": "/locations/palo-alto-ca",
+      "permanent": true
+    },
+    {
+      "source": "/seo-services-in-campbell",
+      "destination": "/locations/san-francisco-bay-area",
+      "permanent": true
+    },
+    {
+      "source": "/seo-services-in-ocean-shores",
+      "destination": "/seo",
+      "permanent": true
+    },
+    {
+      "source": "/seo-services-in-walnut-creek",
+      "destination": "/locations/walnut-creek-ca",
+      "permanent": true
+    },
+    {
+      "source": "/services",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/sms-texting",
+      "destination": "/customer-growth",
+      "permanent": true
+    },
+    {
+      "source": "/social-media-management-and-growth",
+      "destination": "/social-media",
+      "permanent": true
+    },
+    {
+      "source": "/social-media-management-pleasanton",
+      "destination": "/social-media",
+      "permanent": true
+    },
+    {
+      "source": "/social-media-marketing-campbell",
+      "destination": "/social-media",
+      "permanent": true
+    },
+    {
+      "source": "/social-media-marketing-cupertino",
+      "destination": "/social-media",
+      "permanent": true
+    },
+    {
+      "source": "/social-media-marketing-ellensburg",
+      "destination": "/social-media",
+      "permanent": true
+    },
+    {
+      "source": "/social-media-marketing-fremont",
+      "destination": "/social-media",
+      "permanent": true
+    },
+    {
+      "source": "/social-media-marketing-in-pasco",
+      "destination": "/social-media",
+      "permanent": true
+    },
+    {
+      "source": "/social-media-marketing-kennewick-2",
+      "destination": "/social-media",
+      "permanent": true
+    },
+    {
+      "source": "/social-media-marketing-livermore",
+      "destination": "/social-media",
+      "permanent": true
+    },
+    {
+      "source": "/social-media-marketing-mountain-view",
+      "destination": "/social-media",
+      "permanent": true
+    },
+    {
+      "source": "/social-media-marketing-ocean-shores",
+      "destination": "/social-media",
+      "permanent": true
+    },
+    {
+      "source": "/social-media-marketing-richland",
+      "destination": "/social-media",
+      "permanent": true
+    },
+    {
+      "source": "/social-media-marketing-san-jose",
+      "destination": "/social-media",
+      "permanent": true
+    },
+    {
+      "source": "/social-media-marketing-seattle",
+      "destination": "/social-media",
+      "permanent": true
+    },
+    {
+      "source": "/social-media-marketing-spokane",
+      "destination": "/social-media",
+      "permanent": true
+    },
+    {
+      "source": "/social-media-marketing-sunnyvale",
+      "destination": "/social-media",
+      "permanent": true
+    },
+    {
+      "source": "/social-media-marketing-toppenish",
+      "destination": "/social-media",
+      "permanent": true
+    },
+    {
+      "source": "/social-media-marketing-tri-cities",
+      "destination": "/social-media",
+      "permanent": true
+    },
+    {
+      "source": "/social-media-marketing-walla-walla",
+      "destination": "/social-media",
+      "permanent": true
+    },
+    {
+      "source": "/social-media-marketing-walnut-creek",
+      "destination": "/social-media",
+      "permanent": true
+    },
+    {
+      "source": "/social-media-marketing-yakima",
+      "destination": "/social-media",
+      "permanent": true
+    },
+    {
+      "source": "/team",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/testimonials",
+      "destination": "/reviews",
+      "permanent": true
+    },
+    {
+      "source": "/thank-you-attorney-ca",
+      "destination": "/industries/attorneys",
+      "permanent": true
+    },
+    {
+      "source": "/web-design-services-kennewick",
+      "destination": "/web-design",
+      "permanent": true
+    },
+    {
+      "source": "/work",
+      "destination": "/about/case-studies",
+      "permanent": true
+    },
+    {
+      "source": "/yb-hours-reporting",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/:path*.html",
       "destination": "/:path*",
       "permanent": true

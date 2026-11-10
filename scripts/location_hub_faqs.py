@@ -123,7 +123,7 @@ def location_service_faqs(city: str, state: str, slug: str) -> list[dict]:
         items.append(
             {
                 "q": svc["question"].format(place=place, city=city),
-                "a": f"{answer_plain} Learn more about {link_label}: https://yakimabranding.com{href}",
+                "a": f"{answer_plain} Learn more about {link_label}: https://www.yakimabranding.com{href}",
                 "a_html": answer_html,
                 "href": href,
                 "label": link_label,

@@ -25,5 +25,5 @@ Disallow: /ui_kits/
 Disallow: /partials/
 Disallow: /scraps/
 
-# Site guide for AI assistants: https://yakimabranding.com/llms.txt
-Sitemap: https://yakimabranding.com/sitemap.xml
+# Site guide for AI assistants: https://www.yakimabranding.com/llms.txt
+Sitemap: https://www.yakimabranding.com/sitemap.xml

@@ -1,10 +1,10 @@
 # YB Marketing (Yakima Branding): full site text
 
-> Plain text of the main pages on https://yakimabranding.com for AI assistants. See https://yakimabranding.com/llms.txt for the index.
+> Plain text of the main pages on https://www.yakimabranding.com for AI assistants. See https://www.yakimabranding.com/llms.txt for the index.
 
 # Yakima Branding
 
-URL: https://yakimabranding.com/
+URL: https://www.yakimabranding.com/
 
 > YB Marketing is a full-service digital marketing agency offering Google Ads, web design, SEO, social media, and branding for businesses across the country. Call 509-901-9735 to schedule a meeting.
 
@@ -195,7 +195,7 @@ One of our experts will reach out within 2 business hours.
 
 # Search Engine Optimization Services
 
-URL: https://yakimabranding.com/seo
+URL: https://www.yakimabranding.com/seo
 
 > YB Marketing provides expert SEO services for businesses in Yakima and across the country, helping businesses rank higher and get found online. Call 509-901-9735 for a free site review.
 
@@ -344,7 +344,7 @@ SEO and Google Ads work differently. SEO builds long-term organic visibility, wh
 
 # Local SEO Services for Contractors & Service Businesses
 
-URL: https://yakimabranding.com/seo/local-seo
+URL: https://www.yakimabranding.com/seo/local-seo
 
 > Help customers in your service area find your business on Google Maps and in local search. Local SEO services with clear reporting on rankings and leads.
 
@@ -458,7 +458,7 @@ Yes. We can help you build a process for asking customers to leave honest review
 
 # AI Search Optimization Services (GEO)
 
-URL: https://yakimabranding.com/seo/ai-search
+URL: https://www.yakimabranding.com/seo/ai-search
 
 > Improve how your business appears in ChatGPT, Google AI Overviews, Gemini, and other AI search experiences with a strategy built on strong SEO fundamentals.
 
@@ -568,7 +568,7 @@ We can review a set of questions your potential customers are likely to ask and 
 
 # Technical SEO Services & Website Audits
 
-URL: https://yakimabranding.com/seo/technical-seo
+URL: https://www.yakimabranding.com/seo/technical-seo
 
 > Find and fix technical website issues affecting search visibility, including indexing errors, slow pages, redirects, duplicate content, and site structure.
 
@@ -680,7 +680,7 @@ It can. If important content is inaccessible to a crawler, that limits the infor
 
 # Website Migration SEO Services
 
-URL: https://yakimabranding.com/seo/website-migration
+URL: https://www.yakimabranding.com/seo/website-migration
 
 > Redesigning your website, changing domains, or moving platforms? Protect existing search visibility with URL mapping, redirects, launch checks, and post launch monitoring.
 
@@ -786,7 +786,7 @@ We can review what changed, compare old and new URLs, check indexing and redirec
 
 # Google Ads Management Services
 
-URL: https://yakimabranding.com/google-ads
+URL: https://www.yakimabranding.com/google-ads
 
 > YB Marketing creates and manages Google Ads campaigns that drive real results for businesses across the country. Ready to stop wasting ad spend? Call 509-901-9735.
 
@@ -903,7 +903,7 @@ Yes. Google Ads can generate immediate visibility while SEO builds long-term org
 
 # Website Design & Development
 
-URL: https://yakimabranding.com/web-design
+URL: https://www.yakimabranding.com/web-design
 
 > YB Marketing builds custom WordPress sites and Wix websites tailored to your aesthetic, features, and budget. Ready for a website that converts? Call 509-901-9735 to get started.
 
@@ -1010,7 +1010,7 @@ A good website clearly explains what you do, who you serve, why someone should c
 
 # Branding & Logo Design Services
 
-URL: https://yakimabranding.com/branding
+URL: https://www.yakimabranding.com/branding
 
 > YB Marketing designs complete branding and graphics packages, including logos, brand identity, and visual systems, for businesses across the country. Ready for a brand that stands out? Call 509-901-9735.
 
@@ -1127,7 +1127,7 @@ A rebrand may make sense if your business has changed, your audience has shifted
 
 # Social Media Management Services
 
-URL: https://yakimabranding.com/social-media
+URL: https://www.yakimabranding.com/social-media
 
 > YB Marketing grows your Facebook, Instagram, and LinkedIn following with planned, on-brand content and measurable results. Ready to grow your audience? Call 509-901-9735.
 
@@ -1224,7 +1224,7 @@ Good content includes project photos, team updates, service education, customer 
 
 # Content Creation & Blogging
 
-URL: https://yakimabranding.com/content-marketing
+URL: https://www.yakimabranding.com/content-marketing
 
 > YB Marketing crafts SEO-friendly, high-quality content that captivates readers and ranks well in search results. Want content that works harder for your business? Call 509-901-9735.
 
@@ -1326,7 +1326,7 @@ We look at your services, audience, keywords, competitors, search intent, locati
 
 # Press Release Writing & Distribution
 
-URL: https://yakimabranding.com/press-releases
+URL: https://www.yakimabranding.com/press-releases
 
 > YB Marketing writes and distributes press releases for new hires, expansions, and product launches, keeping your business in the news. Ready to announce your next milestone? Call 509-901-9735.
 
@@ -1428,7 +1428,7 @@ No. Small and local businesses can use press releases to announce meaningful upd
 
 # Customer Growth & Communication Tool
 
-URL: https://yakimabranding.com/customer-growth
+URL: https://www.yakimabranding.com/customer-growth
 
 > Organize every lead, centralize every conversation, and automate follow-up with YB Marketing's Customer Growth & Communication Tool: CRM, messaging, and automation for growing businesses.
 
@@ -1516,7 +1516,7 @@ Yes. Monthly support is included in each plan so your team has help when questio
 
 # AI for Business Services
 
-URL: https://yakimabranding.com/ai-for-business
+URL: https://www.yakimabranding.com/ai-for-business
 
 > YB Marketing provides practical AI guidance, training, and support for businesses across the country, including content, follow up, chatbots, and voice tools. Call 509-901-9735 to get started.
 
@@ -1606,7 +1606,7 @@ Yes. We can train your team, refine automations, and adjust as tools and needs c
 
 # AI for Small Business Services
 
-URL: https://yakimabranding.com/ai-for-small-business
+URL: https://www.yakimabranding.com/ai-for-small-business
 
 > YB Marketing helps small businesses across the country use AI for content, follow up, chat, and voice tools that save time and catch more leads. Call 509-901-9735 to get started.
 
@@ -1696,7 +1696,7 @@ No. We're a fully remote team and work with businesses all over the country by p
 
 # Meet the YB Marketing Team
 
-URL: https://yakimabranding.com/about
+URL: https://www.yakimabranding.com/about
 
 > Meet the experienced digital marketing consultants behind YB Marketing, serving small businesses since 2003 with SEO, Google Ads, social media, and web design. Call 509-901-9735 to discuss your goals.
 
@@ -1748,7 +1748,7 @@ Tell us about your project and we'll be in touch within one business day.
 
 # Client Reviews
 
-URL: https://yakimabranding.com/reviews
+URL: https://www.yakimabranding.com/reviews
 
 > Read what clients say about working with YB Marketing (Yakima Branding). 5.0 stars across 48 Google reviews, plus verified Clutch reviews from Denver and across the country.
 
@@ -1787,7 +1787,7 @@ Book a 30 minute intro call. We'll talk through your goals and where we'd start.
 
 # Case Studies
 
-URL: https://yakimabranding.com/about/case-studies
+URL: https://www.yakimabranding.com/about/case-studies
 
 > YB Marketing case studies: local SEO growth, website redesigns, Google Ads, content marketing, accessibility and WordPress security for real clients.
 
@@ -1843,7 +1843,7 @@ California environmental engineering firm. A redesigned site and a steady flow o
 
 # Contact YB Marketing
 
-URL: https://yakimabranding.com/contact
+URL: https://www.yakimabranding.com/contact
 
 > Ready to grow your business with more leads and more profit? Contact YB Marketing to talk about SEO, Google Ads, web design, social media, or branding. Call 509-901-9735 today.
 
@@ -1873,7 +1873,7 @@ We respond by the next business day. Your information is never shared.
 
 # Kevin Dean, Owner
 
-URL: https://yakimabranding.com/about/kevin
+URL: https://www.yakimabranding.com/about/kevin
 
 > Meet Kevin Dean, owner of YB Marketing, leading digital marketing, SEO, and advertising strategy for growing businesses across the country. Call 509-901-9735 to get started.
 
@@ -1918,7 +1918,7 @@ We are different in that we do not try to be the cheapest agency. We trust our s
 
 # Jacob Ross, Account Executive
 
-URL: https://yakimabranding.com/about/jacob
+URL: https://www.yakimabranding.com/about/jacob
 
 > Meet Jacob Ross, account executive at YB Marketing, specializing in SEO, Google Ads, and web strategy for growing businesses. Ready to talk strategy? Call 509-901-9735.
 
@@ -1960,7 +1960,7 @@ We respond by the next business day. Your information is never shared.
 
 # Sophie Mann, Account Executive
 
-URL: https://yakimabranding.com/about/sophie
+URL: https://www.yakimabranding.com/about/sophie
 
 > Meet Sophie Mann, account executive at YB Marketing based in Chicago, helping businesses grow with SEO, Google Ads, and web strategy. Ready to talk strategy? Call 509-901-9735.
 
@@ -1990,7 +1990,7 @@ We respond by the next business day. Your information is never shared.
 
 # Kirsten Gonzalez, Marketing Administrator
 
-URL: https://yakimabranding.com/about/kirsten
+URL: https://www.yakimabranding.com/about/kirsten
 
 > Meet Kirsten Gonzalez, marketing administrator at YB Marketing, keeping client campaigns and projects running smoothly. Have a question about your account? Call 509-901-9735.
 
@@ -2019,7 +2019,7 @@ Contact us to talk through your goals and how YB Marketing can help you grow.
 
 # Kayelyn Aggett, Social Media Manager
 
-URL: https://yakimabranding.com/about/kayelyn
+URL: https://www.yakimabranding.com/about/kayelyn
 
 > Meet Kayelyn Aggett, social media manager at YB Marketing, building growth-focused Facebook, Instagram, and LinkedIn strategies for clients. Want to grow your following? Call 509-901-9735.
 
@@ -2043,7 +2043,7 @@ Contact us to talk through your goals and how YB Marketing can help you grow.
 
 # Custom Home Builder Website & SEO Case Study
 
-URL: https://yakimabranding.com/about/case-studies/custom-home-builder-website-seo
+URL: https://www.yakimabranding.com/about/case-studies/custom-home-builder-website-seo
 
 > How YB Marketing rebuilt the website and SEO for a Northern California custom home builder, growing traffic 75% and search visibility 108% in one year.
 
@@ -2077,7 +2077,7 @@ Is your website doing justice to your work? YB Marketing builds sites and SEO pr
 
 # EMS Contract Manufacturer Google Ads & SEO Case Study
 
-URL: https://yakimabranding.com/about/case-studies/ems-contract-manufacturer-google-ads-seo
+URL: https://www.yakimabranding.com/about/case-studies/ems-contract-manufacturer-google-ads-seo
 
 > How YB Marketing grew a Silicon Valley EMS contract manufacturer from a small ad budget to nationwide reach, with traffic up 75% and visibility up 108% in one year.
 
@@ -2109,7 +2109,7 @@ Working with a small budget and big goals? YB Marketing can build a plan that gr
 
 # Environmental Engineering Content Marketing Case Study: +93% Visibility
 
-URL: https://yakimabranding.com/about/case-studies/environmental-engineering-content-marketing
+URL: https://www.yakimabranding.com/about/case-studies/environmental-engineering-content-marketing
 
 > How YB Marketing grew traffic 57% and search visibility 93% in one year for a California environmental engineering firm with a website redesign and content marketing.
 
@@ -2139,7 +2139,7 @@ Know your expertise should be online but never find time to write it? YB Marketi
 
 # Equipment Manufacturer Website Redesign & SEO Case Study
 
-URL: https://yakimabranding.com/about/case-studies/equipment-manufacturer-website-redesign
+URL: https://www.yakimabranding.com/about/case-studies/equipment-manufacturer-website-redesign
 
 > How YB Marketing redesigned the website and SEO for a California automated assembly equipment manufacturer, growing traffic 75% and visibility 108% in one year.
 
@@ -2167,7 +2167,7 @@ Does your website undersell your engineering? YB Marketing builds sites and cont
 
 # Fortune 500 Multilingual Accessibility Remediation
 
-URL: https://yakimabranding.com/about/case-studies/fortune-500-multilingual-accessibility
+URL: https://www.yakimabranding.com/about/case-studies/fortune-500-multilingual-accessibility
 
 > How YB Marketing turned a Fortune 500 accessibility audit into shipped fixes across three domains and six languages, including React, brand tokens, and the translation pipeline.
 
@@ -2307,7 +2307,7 @@ Sitting on an accessibility audit you have not yet implemented? YB Marketing rem
 
 # Local Electrical Contractor SEO Case Study, +112% Organic Traffic
 
-URL: https://yakimabranding.com/about/case-studies/local-electrical-contractor-seo-growth
+URL: https://www.yakimabranding.com/about/case-studies/local-electrical-contractor-seo-growth
 
 > How YB Marketing grew organic search traffic 112% year over year, search impressions 366% at peak, and page-one keyword rankings 204% for a Greater Bay Area electrical contractor.
 
@@ -2362,7 +2362,7 @@ Need local SEO that turns search visibility into service calls? YB Marketing bui
 
 # Local Refrigeration SEO Case Study, +2,900% Page 1 Growth
 
-URL: https://yakimabranding.com/about/case-studies/local-refrigeration-services-seo-growth
+URL: https://www.yakimabranding.com/about/case-studies/local-refrigeration-services-seo-growth
 
 > How YB Marketing grew page-one keyword rankings 2,900%, doubled organic traffic in seven months, and lifted top-three rankings 57% for a Central Washington industrial refrigeration contractor.
 
@@ -2413,7 +2413,7 @@ Need local SEO across a multi-market service territory? YB Marketing builds long
 
 # Local Tire & Auto SEO Case Study, +613% Page 1 Growth
 
-URL: https://yakimabranding.com/about/case-studies/regional-tire-auto-seo-growth
+URL: https://www.yakimabranding.com/about/case-studies/regional-tire-auto-seo-growth
 
 > How YB Marketing grew organic search traffic 46% year over year, search impressions 243% at peak, and page-one keyword rankings 613% for a Central Washington tire and auto service provider.
 
@@ -2468,7 +2468,7 @@ Need local SEO that compounds instead of resetting every quarter? YB Marketing b
 
 # Roofing Contractor Marketing Case Study: +271% Organic Traffic
 
-URL: https://yakimabranding.com/about/case-studies/roofing-contractor-inbound-marketing
+URL: https://www.yakimabranding.com/about/case-studies/roofing-contractor-inbound-marketing
 
 > How YB Marketing helped a local roofing contractor grow form submissions 120%, calls 160% and organic traffic 271% over three years with SEO, ads, content and social.
 
@@ -2513,7 +2513,7 @@ Want leads that keep coming after the busy season ends? Talk to YB Marketing abo
 
 # Tree Services Local SEO Case Study
 
-URL: https://yakimabranding.com/about/case-studies/tree-services-local-seo
+URL: https://www.yakimabranding.com/about/case-studies/tree-services-local-seo
 
 > How YB Marketing used local SEO to grow traffic 75% and visibility 108% in a year for a Southern California tree services company that had given up on doing ads alone.
 
@@ -2546,7 +2546,7 @@ Not showing up when locals search for what you do? YB Marketing can fix that wit
 
 # 130-Site WordPress Malware Remediation
 
-URL: https://yakimabranding.com/about/case-studies/wordpress-portfolio-malware-remediation
+URL: https://www.yakimabranding.com/about/case-studies/wordpress-portfolio-malware-remediation
 
 > How YB Marketing cleaned a 130-site WordPress portfolio infected with ad-click-only malware, got Google Ads reinstated, and achieved zero reinfections in three months.
 
@@ -2642,7 +2642,7 @@ Managing a WordPress portfolio with paid traffic behind it? YB Marketing helps a
 
 # Locations We Serve
 
-URL: https://yakimabranding.com/locations
+URL: https://www.yakimabranding.com/locations
 
 > YB Marketing works with businesses across Washington, Idaho, California, Colorado, Arizona, and Illinois. SEO, Google Ads, web design, and AI automation.
 
@@ -2797,7 +2797,7 @@ Tell us about your business and we'll talk through where we'd start.
 
 # Central Washington Digital Marketing Agency
 
-URL: https://yakimabranding.com/locations/central-washington
+URL: https://www.yakimabranding.com/locations/central-washington
 
 > Digital marketing for Central Washington businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -2949,7 +2949,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Eastern Washington Digital Marketing Agency
 
-URL: https://yakimabranding.com/locations/eastern-washington
+URL: https://www.yakimabranding.com/locations/eastern-washington
 
 > Digital marketing for Eastern Washington businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -3101,7 +3101,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Seattle WA
 
-URL: https://yakimabranding.com/locations/seattle-wa
+URL: https://www.yakimabranding.com/locations/seattle-wa
 
 > Digital marketing for Seattle businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -3253,7 +3253,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Phoenix Digital Marketing Agency
 
-URL: https://yakimabranding.com/locations/phoenix-az
+URL: https://www.yakimabranding.com/locations/phoenix-az
 
 > Digital marketing for Phoenix businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -3406,7 +3406,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Denver Digital Marketing Agency
 
-URL: https://yakimabranding.com/locations/denver-co
+URL: https://www.yakimabranding.com/locations/denver-co
 
 > Digital marketing for Denver businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -3555,7 +3555,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Chicago Digital Marketing Agency
 
-URL: https://yakimabranding.com/locations/chicago-il
+URL: https://www.yakimabranding.com/locations/chicago-il
 
 > Digital marketing for Chicago businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -3708,7 +3708,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # San Francisco Bay Area Digital Marketing Agency
 
-URL: https://yakimabranding.com/locations/san-francisco-bay-area
+URL: https://www.yakimabranding.com/locations/san-francisco-bay-area
 
 > Digital marketing for San Francisco Bay Area businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -3860,7 +3860,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Yakima WA
 
-URL: https://yakimabranding.com/locations/yakima-wa
+URL: https://www.yakimabranding.com/locations/yakima-wa
 
 > Digital marketing for Yakima businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -4013,7 +4013,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Ellensburg WA
 
-URL: https://yakimabranding.com/locations/ellensburg-wa
+URL: https://www.yakimabranding.com/locations/ellensburg-wa
 
 > Digital marketing for Ellensburg businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -4165,7 +4165,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Wenatchee WA
 
-URL: https://yakimabranding.com/locations/wenatchee-wa
+URL: https://www.yakimabranding.com/locations/wenatchee-wa
 
 > Digital marketing for Wenatchee businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -4317,7 +4317,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Spokane WA
 
-URL: https://yakimabranding.com/locations/spokane-wa
+URL: https://www.yakimabranding.com/locations/spokane-wa
 
 > Digital marketing for Spokane businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -4469,7 +4469,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Tri-Cities WA
 
-URL: https://yakimabranding.com/locations/tri-cities-wa
+URL: https://www.yakimabranding.com/locations/tri-cities-wa
 
 > Digital marketing for Tri-Cities businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -4621,7 +4621,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Walla Walla WA
 
-URL: https://yakimabranding.com/locations/walla-walla-wa
+URL: https://www.yakimabranding.com/locations/walla-walla-wa
 
 > Digital marketing for Walla Walla businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -4773,7 +4773,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Tacoma WA
 
-URL: https://yakimabranding.com/locations/tacoma-wa
+URL: https://www.yakimabranding.com/locations/tacoma-wa
 
 > Digital marketing for Tacoma businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -4925,7 +4925,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Vancouver WA
 
-URL: https://yakimabranding.com/locations/vancouver-wa
+URL: https://www.yakimabranding.com/locations/vancouver-wa
 
 > Digital marketing for Vancouver businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -5077,7 +5077,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Boise ID
 
-URL: https://yakimabranding.com/locations/boise-id
+URL: https://www.yakimabranding.com/locations/boise-id
 
 > Digital marketing for Boise businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -5229,7 +5229,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Coeur d'Alene ID
 
-URL: https://yakimabranding.com/locations/coeur-dalene-id
+URL: https://www.yakimabranding.com/locations/coeur-dalene-id
 
 > Digital marketing for Coeur d'Alene businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -5381,7 +5381,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Aurora CO
 
-URL: https://yakimabranding.com/locations/aurora-co
+URL: https://www.yakimabranding.com/locations/aurora-co
 
 > Digital marketing for Aurora businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -5530,7 +5530,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Lakewood CO
 
-URL: https://yakimabranding.com/locations/lakewood-co
+URL: https://www.yakimabranding.com/locations/lakewood-co
 
 > Digital marketing for Lakewood businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -5679,7 +5679,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Boulder CO
 
-URL: https://yakimabranding.com/locations/boulder-co
+URL: https://www.yakimabranding.com/locations/boulder-co
 
 > Digital marketing for Boulder businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -5828,7 +5828,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Littleton CO
 
-URL: https://yakimabranding.com/locations/littleton-co
+URL: https://www.yakimabranding.com/locations/littleton-co
 
 > Digital marketing for Littleton businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -5977,7 +5977,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Arvada CO
 
-URL: https://yakimabranding.com/locations/arvada-co
+URL: https://www.yakimabranding.com/locations/arvada-co
 
 > Digital marketing for Arvada businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -6126,7 +6126,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Centennial CO
 
-URL: https://yakimabranding.com/locations/centennial-co
+URL: https://www.yakimabranding.com/locations/centennial-co
 
 > Digital marketing for Centennial businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -6275,7 +6275,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Englewood CO
 
-URL: https://yakimabranding.com/locations/englewood-co
+URL: https://www.yakimabranding.com/locations/englewood-co
 
 > Digital marketing for Englewood businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -6424,7 +6424,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Naperville IL
 
-URL: https://yakimabranding.com/locations/naperville-il
+URL: https://www.yakimabranding.com/locations/naperville-il
 
 > Digital marketing for Naperville businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -6577,7 +6577,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Evanston IL
 
-URL: https://yakimabranding.com/locations/evanston-il
+URL: https://www.yakimabranding.com/locations/evanston-il
 
 > Digital marketing for Evanston businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -6730,7 +6730,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Schaumburg IL
 
-URL: https://yakimabranding.com/locations/schaumburg-il
+URL: https://www.yakimabranding.com/locations/schaumburg-il
 
 > Digital marketing for Schaumburg businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -6883,7 +6883,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Oak Park IL
 
-URL: https://yakimabranding.com/locations/oak-park-il
+URL: https://www.yakimabranding.com/locations/oak-park-il
 
 > Digital marketing for Oak Park businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -7036,7 +7036,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Aurora IL
 
-URL: https://yakimabranding.com/locations/aurora-il
+URL: https://www.yakimabranding.com/locations/aurora-il
 
 > Digital marketing for Aurora businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -7189,7 +7189,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Joliet IL
 
-URL: https://yakimabranding.com/locations/joliet-il
+URL: https://www.yakimabranding.com/locations/joliet-il
 
 > Digital marketing for Joliet businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -7342,7 +7342,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Elgin IL
 
-URL: https://yakimabranding.com/locations/elgin-il
+URL: https://www.yakimabranding.com/locations/elgin-il
 
 > Digital marketing for Elgin businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -7495,7 +7495,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Selah WA
 
-URL: https://yakimabranding.com/locations/selah-wa
+URL: https://www.yakimabranding.com/locations/selah-wa
 
 > Digital marketing for Selah businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -7648,7 +7648,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Sunnyside WA
 
-URL: https://yakimabranding.com/locations/sunnyside-wa
+URL: https://www.yakimabranding.com/locations/sunnyside-wa
 
 > Digital marketing for Sunnyside businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -7801,7 +7801,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Union Gap WA
 
-URL: https://yakimabranding.com/locations/union-gap-wa
+URL: https://www.yakimabranding.com/locations/union-gap-wa
 
 > Digital marketing for Union Gap businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -7954,7 +7954,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Moses Lake WA
 
-URL: https://yakimabranding.com/locations/moses-lake-wa
+URL: https://www.yakimabranding.com/locations/moses-lake-wa
 
 > Digital marketing for Moses Lake businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -8106,7 +8106,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Toppenish WA
 
-URL: https://yakimabranding.com/locations/toppenish-wa
+URL: https://www.yakimabranding.com/locations/toppenish-wa
 
 > Digital marketing for Toppenish businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -8259,7 +8259,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Spokane Valley WA
 
-URL: https://yakimabranding.com/locations/spokane-valley-wa
+URL: https://www.yakimabranding.com/locations/spokane-valley-wa
 
 > Digital marketing for Spokane Valley businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -8411,7 +8411,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Pullman WA
 
-URL: https://yakimabranding.com/locations/pullman-wa
+URL: https://www.yakimabranding.com/locations/pullman-wa
 
 > Digital marketing for Pullman businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -8563,7 +8563,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Cheney WA
 
-URL: https://yakimabranding.com/locations/cheney-wa
+URL: https://www.yakimabranding.com/locations/cheney-wa
 
 > Digital marketing for Cheney businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -8715,7 +8715,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Oakland CA
 
-URL: https://yakimabranding.com/locations/oakland-ca
+URL: https://www.yakimabranding.com/locations/oakland-ca
 
 > Digital marketing for Oakland businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -8867,7 +8867,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency San Jose CA
 
-URL: https://yakimabranding.com/locations/san-jose-ca
+URL: https://www.yakimabranding.com/locations/san-jose-ca
 
 > Digital marketing for San Jose businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -9019,7 +9019,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Berkeley CA
 
-URL: https://yakimabranding.com/locations/berkeley-ca
+URL: https://www.yakimabranding.com/locations/berkeley-ca
 
 > Digital marketing for Berkeley businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -9171,7 +9171,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency San Mateo CA
 
-URL: https://yakimabranding.com/locations/san-mateo-ca
+URL: https://www.yakimabranding.com/locations/san-mateo-ca
 
 > Digital marketing for San Mateo businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -9323,7 +9323,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Palo Alto CA
 
-URL: https://yakimabranding.com/locations/palo-alto-ca
+URL: https://www.yakimabranding.com/locations/palo-alto-ca
 
 > Digital marketing for Palo Alto businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -9475,7 +9475,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Fremont CA
 
-URL: https://yakimabranding.com/locations/fremont-ca
+URL: https://www.yakimabranding.com/locations/fremont-ca
 
 > Digital marketing for Fremont businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -9627,7 +9627,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Walnut Creek CA
 
-URL: https://yakimabranding.com/locations/walnut-creek-ca
+URL: https://www.yakimabranding.com/locations/walnut-creek-ca
 
 > Digital marketing for Walnut Creek businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -9779,7 +9779,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Scottsdale AZ
 
-URL: https://yakimabranding.com/locations/scottsdale-az
+URL: https://www.yakimabranding.com/locations/scottsdale-az
 
 > Digital marketing for Scottsdale businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -9932,7 +9932,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Mesa AZ
 
-URL: https://yakimabranding.com/locations/mesa-az
+URL: https://www.yakimabranding.com/locations/mesa-az
 
 > Digital marketing for Mesa businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -10085,7 +10085,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Tempe AZ
 
-URL: https://yakimabranding.com/locations/tempe-az
+URL: https://www.yakimabranding.com/locations/tempe-az
 
 > Digital marketing for Tempe businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -10238,7 +10238,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Chandler AZ
 
-URL: https://yakimabranding.com/locations/chandler-az
+URL: https://www.yakimabranding.com/locations/chandler-az
 
 > Digital marketing for Chandler businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -10391,7 +10391,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Gilbert AZ
 
-URL: https://yakimabranding.com/locations/gilbert-az
+URL: https://www.yakimabranding.com/locations/gilbert-az
 
 > Digital marketing for Gilbert businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -10544,7 +10544,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Glendale AZ
 
-URL: https://yakimabranding.com/locations/glendale-az
+URL: https://www.yakimabranding.com/locations/glendale-az
 
 > Digital marketing for Glendale businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -10697,7 +10697,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Peoria AZ
 
-URL: https://yakimabranding.com/locations/peoria-az
+URL: https://www.yakimabranding.com/locations/peoria-az
 
 > Digital marketing for Peoria businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -10850,7 +10850,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Bellevue WA
 
-URL: https://yakimabranding.com/locations/bellevue-wa
+URL: https://www.yakimabranding.com/locations/bellevue-wa
 
 > Digital marketing for Bellevue businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -11002,7 +11002,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Everett WA
 
-URL: https://yakimabranding.com/locations/everett-wa
+URL: https://www.yakimabranding.com/locations/everett-wa
 
 > Digital marketing for Everett businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -11154,7 +11154,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Redmond WA
 
-URL: https://yakimabranding.com/locations/redmond-wa
+URL: https://www.yakimabranding.com/locations/redmond-wa
 
 > Digital marketing for Redmond businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -11306,7 +11306,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Digital Marketing Agency Kent WA
 
-URL: https://yakimabranding.com/locations/kent-wa
+URL: https://www.yakimabranding.com/locations/kent-wa
 
 > Digital marketing for Kent businesses: SEO, Google Ads, web design, and AI automation. 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -11458,7 +11458,7 @@ Yes. We design and build websites on WordPress and Wix, and we can move your cur
 
 # Industries We Serve
 
-URL: https://yakimabranding.com/industries
+URL: https://www.yakimabranding.com/industries
 
 > YB Marketing does SEO, Google Ads, and web design for HVAC, plumbing, roofing, electrical, dental, legal, accounting, auto repair, and other industries nationwide.
 
@@ -11564,7 +11564,7 @@ Tell us about your business and we'll talk through where we'd start.
 
 # Law Firm Marketing Agency
 
-URL: https://yakimabranding.com/industries/attorneys
+URL: https://www.yakimabranding.com/industries/attorneys
 
 > Digital marketing for law firms: SEO, Google Ads, websites, and AI search. Real case studies, 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -11713,7 +11713,7 @@ You get a monthly report in plain English: calls, form fills, rankings, ad spend
 
 # Auto Body Shop Marketing
 
-URL: https://yakimabranding.com/industries/auto-body
+URL: https://www.yakimabranding.com/industries/auto-body
 
 > Digital marketing for auto body shops: SEO, Google Ads, websites, and AI search. Real case studies, 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -11866,7 +11866,7 @@ You get a monthly report in plain English: calls, form fills, rankings, ad spend
 
 # Auto Repair Marketing Agency
 
-URL: https://yakimabranding.com/industries/auto-repair
+URL: https://www.yakimabranding.com/industries/auto-repair
 
 > Digital marketing for auto repair shops: SEO, Google Ads, websites, and AI search. Real case studies, 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -12019,7 +12019,7 @@ You get a monthly report in plain English: calls, form fills, rankings, ad spend
 
 # Bookkeeping Marketing Agency
 
-URL: https://yakimabranding.com/industries/bookkeeping
+URL: https://www.yakimabranding.com/industries/bookkeeping
 
 > Digital marketing for bookkeeping firms: SEO, Google Ads, websites, and AI search. Real case studies, 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -12172,7 +12172,7 @@ You get a monthly report in plain English: calls, form fills, rankings, ad spend
 
 # CPA Marketing Agency
 
-URL: https://yakimabranding.com/industries/cpa
+URL: https://www.yakimabranding.com/industries/cpa
 
 > Digital marketing for CPA firms: SEO, Google Ads, websites, and AI search. Real case studies, 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -12325,7 +12325,7 @@ You get a monthly report in plain English: calls, form fills, rankings, ad spend
 
 # Dental Marketing Agency
 
-URL: https://yakimabranding.com/industries/dental
+URL: https://www.yakimabranding.com/industries/dental
 
 > Digital marketing for dental practices: SEO, Google Ads, websites, and AI search. Real case studies, 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -12474,7 +12474,7 @@ You get a monthly report in plain English: calls, form fills, rankings, ad spend
 
 # Electrician Marketing Agency
 
-URL: https://yakimabranding.com/industries/electrical
+URL: https://www.yakimabranding.com/industries/electrical
 
 > Digital marketing for electricians: SEO, Google Ads, websites, and AI search. Real case studies, 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -12627,7 +12627,7 @@ You get a monthly report in plain English: calls, form fills, rankings, ad spend
 
 # Garage Door Marketing Agency
 
-URL: https://yakimabranding.com/industries/garage-door
+URL: https://www.yakimabranding.com/industries/garage-door
 
 > Digital marketing for garage door companies: SEO, Google Ads, websites, and AI search. Real case studies, 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -12780,7 +12780,7 @@ You get a monthly report in plain English: calls, form fills, rankings, ad spend
 
 # HVAC Marketing Agency
 
-URL: https://yakimabranding.com/industries/hvac
+URL: https://www.yakimabranding.com/industries/hvac
 
 > Digital marketing for HVAC companies: SEO, Google Ads, websites, and AI search. Real case studies, 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -12933,7 +12933,7 @@ You get a monthly report in plain English: calls, form fills, rankings, ad spend
 
 # Landscaping Marketing Agency
 
-URL: https://yakimabranding.com/industries/landscaping
+URL: https://www.yakimabranding.com/industries/landscaping
 
 > Digital marketing for landscaping companies: SEO, Google Ads, websites, and AI search. Real case studies, 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -13086,7 +13086,7 @@ You get a monthly report in plain English: calls, form fills, rankings, ad spend
 
 # Pest Control Marketing Agency
 
-URL: https://yakimabranding.com/industries/pest-control
+URL: https://www.yakimabranding.com/industries/pest-control
 
 > Digital marketing for pest control companies: SEO, Google Ads, websites, and AI search. Real case studies, 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -13239,7 +13239,7 @@ You get a monthly report in plain English: calls, form fills, rankings, ad spend
 
 # Physical Therapy Marketing
 
-URL: https://yakimabranding.com/industries/physical-therapy
+URL: https://www.yakimabranding.com/industries/physical-therapy
 
 > Digital marketing for physical therapy clinics: SEO, Google Ads, websites, and AI search. Real case studies, 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -13388,7 +13388,7 @@ You get a monthly report in plain English: calls, form fills, rankings, ad spend
 
 # Plumbing Marketing Agency
 
-URL: https://yakimabranding.com/industries/plumbing
+URL: https://www.yakimabranding.com/industries/plumbing
 
 > Digital marketing for plumbing companies: SEO, Google Ads, websites, and AI search. Real case studies, 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -13541,7 +13541,7 @@ You get a monthly report in plain English: calls, form fills, rankings, ad spend
 
 # Roofing Marketing Agency
 
-URL: https://yakimabranding.com/industries/roofing
+URL: https://www.yakimabranding.com/industries/roofing
 
 > Digital marketing for roofing contractors: SEO, Google Ads, websites, and AI search. Real case studies, 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -13694,7 +13694,7 @@ You get a monthly report in plain English: calls, form fills, rankings, ad spend
 
 # Tree Service Marketing Agency
 
-URL: https://yakimabranding.com/industries/tree-service
+URL: https://www.yakimabranding.com/industries/tree-service
 
 > Digital marketing for tree service companies: SEO, Google Ads, websites, and AI search. Real case studies, 5.0 stars on Google. Talk with YB Marketing about growing your business.
 
@@ -13847,7 +13847,7 @@ You get a monthly report in plain English: calls, form fills, rankings, ad spend
 
 # Window Company Marketing Agency
 
-URL: https://yakimabranding.com/industries/window-installation
+URL: https://www.yakimabranding.com/industries/window-installation
 
 > Digital marketing for window installers: SEO, Google Ads, websites, and AI search. Real case studies, 5.0 stars on Google. Talk with YB Marketing about growing your business.
 

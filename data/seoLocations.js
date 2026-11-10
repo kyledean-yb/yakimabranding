@@ -6,7 +6,7 @@ export const seoLocations = [
     region: "Yakima Valley",
     titleTag: "Yakima SEO Services | YB Marketing",
     metaDescription: "Local SEO for Yakima Valley businesses. Rank higher on Google, improve Maps visibility, and turn searches into calls with a team that knows this market.",
-    canonicalUrl: 'https://yakimabranding.com/seo/yakima-wa',
+    canonicalUrl: 'https://www.yakimabranding.com/seo/yakima-wa',
     hero: {
       headline: "Yakima SEO That Puts You in Front of Valley Customers",
       subheadline: "Helping Yakima Businesses Rank Higher and Grow Faster",
@@ -87,7 +87,7 @@ export const seoLocations = [
     region: "Kittitas County",
     titleTag: "Ellensburg SEO Services | YB Marketing",
     metaDescription: "SEO for Ellensburg and Kittitas County businesses. Custom search strategies for CWU traffic, locals, and Central Washington customers.",
-    canonicalUrl: 'https://yakimabranding.com/seo/ellensburg-wa',
+    canonicalUrl: 'https://www.yakimabranding.com/seo/ellensburg-wa',
     hero: {
       headline: "Ellensburg SEO for Kittitas County Growth",
       subheadline: "Helping Ellensburg Businesses Get Found Online",
@@ -168,7 +168,7 @@ export const seoLocations = [
     region: "Columbia Basin",
     titleTag: "Tri-Cities SEO Services | Kennewick, Pasco & Richland | YB Marketing",
     metaDescription: "SEO for Kennewick, Pasco, and Richland businesses. Multi-city local search strategies that grow visibility across the Columbia Basin.",
-    canonicalUrl: 'https://yakimabranding.com/seo/tri-cities-wa',
+    canonicalUrl: 'https://www.yakimabranding.com/seo/tri-cities-wa',
     hero: {
       headline: "Tri-Cities SEO for Kennewick, Pasco, and Richland",
       subheadline: "Helping Columbia Basin Businesses Rank Higher",
@@ -249,7 +249,7 @@ export const seoLocations = [
     region: "Inland Northwest",
     titleTag: "Spokane SEO Services | YB Marketing",
     metaDescription: "SEO for Spokane and Inland Northwest businesses. Competitive local search strategies for Eastern Washington's largest market.",
-    canonicalUrl: 'https://yakimabranding.com/seo/spokane-wa',
+    canonicalUrl: 'https://www.yakimabranding.com/seo/spokane-wa',
     hero: {
       headline: "Spokane SEO That Competes in a Tough Market",
       subheadline: "Helping Spokane Businesses Rank Higher and Win More Leads",
@@ -330,7 +330,7 @@ export const seoLocations = [
     region: "Treasure Valley",
     titleTag: "Boise SEO Services | YB Marketing",
     metaDescription: "SEO for Boise and Treasure Valley businesses. Local search strategies for Idaho's fastest-growing, most competitive market.",
-    canonicalUrl: 'https://yakimabranding.com/seo/boise-id',
+    canonicalUrl: 'https://www.yakimabranding.com/seo/boise-id',
     hero: {
       headline: "Boise SEO for a Noisy Search Market",
       subheadline: "Helping Treasure Valley Businesses Rank Higher",
@@ -411,7 +411,7 @@ export const seoLocations = [
     region: "North Idaho",
     titleTag: "Coeur d'Alene SEO Services | YB Marketing",
     metaDescription: "SEO for Coeur d'Alene and North Idaho businesses. Local search for tourism season and year-round Kootenai County customers.",
-    canonicalUrl: 'https://yakimabranding.com/seo/coeur-dalene-id',
+    canonicalUrl: 'https://www.yakimabranding.com/seo/coeur-dalene-id',
     hero: {
       headline: "Coeur d'Alene SEO for Lake Country Businesses",
       subheadline: "Helping North Idaho Businesses Get Found Online",
@@ -492,7 +492,7 @@ export const seoLocations = [
     region: "South Sound",
     titleTag: "Tacoma SEO Services | YB Marketing",
     metaDescription: "SEO for Tacoma and Pierce County businesses. Local search strategies for South Sound companies competing regionally.",
-    canonicalUrl: 'https://yakimabranding.com/seo/tacoma-wa',
+    canonicalUrl: 'https://www.yakimabranding.com/seo/tacoma-wa',
     hero: {
       headline: "Tacoma SEO for South Sound Visibility",
       subheadline: "Helping Tacoma Businesses Rank Higher Online",
@@ -573,7 +573,7 @@ export const seoLocations = [
     region: "Clark County",
     titleTag: "Vancouver SEO Services | YB Marketing",
     metaDescription: "SEO for Vancouver, WA and Clark County businesses. Washington-side local search that competes with Portland dominance.",
-    canonicalUrl: 'https://yakimabranding.com/seo/vancouver-wa',
+    canonicalUrl: 'https://www.yakimabranding.com/seo/vancouver-wa',
     hero: {
       headline: "Vancouver SEO for Clark County Customers",
       subheadline: "Helping Washington-Side Businesses Rank Higher",
@@ -654,7 +654,7 @@ export const seoLocations = [
     region: "North Central Washington",
     titleTag: "Wenatchee SEO Services | YB Marketing",
     metaDescription: "SEO for Wenatchee and North Central Washington businesses. Regional local search for the Apple Capital and surrounding valley towns.",
-    canonicalUrl: 'https://yakimabranding.com/seo/wenatchee-wa',
+    canonicalUrl: 'https://www.yakimabranding.com/seo/wenatchee-wa',
     hero: {
       headline: "Wenatchee SEO for NCW's Regional Hub",
       subheadline: "Helping North Central Washington Businesses Rank Higher",
@@ -735,7 +735,7 @@ export const seoLocations = [
     region: "Wine Country",
     titleTag: "Walla Walla SEO Services | YB Marketing",
     metaDescription: "SEO for Walla Walla wine country and local businesses. Search strategies for tourism peaks and year-round community customers.",
-    canonicalUrl: 'https://yakimabranding.com/seo/walla-walla-wa',
+    canonicalUrl: 'https://www.yakimabranding.com/seo/walla-walla-wa',
     hero: {
       headline: "Walla Walla SEO for Wine Country and Local Search",
       subheadline: "Helping Walla Walla Businesses Rank Higher Online",
@@ -816,7 +816,7 @@ export const seoLocations = [
     region: "Puget Sound",
     titleTag: "SEO Company Seattle WA | Local SEO Services | YB Marketing",
     metaDescription: "SEO for Seattle and Puget Sound businesses. Local SEO, Google Business Profile, and technical fixes that bring in calls from the neighborhoods you serve.",
-    canonicalUrl: 'https://yakimabranding.com/seo/seattle-wa',
+    canonicalUrl: 'https://www.yakimabranding.com/seo/seattle-wa',
     hero: {
       headline: "Seattle SEO That Brings In Local Customers",
       subheadline: "Helping Seattle and Puget Sound Businesses Rank Higher",

@@ -7,7 +7,7 @@ export const googleAdsLocations = [
     region: "Yakima Valley",
     titleTag: "Google Ads Management Yakima WA | YB Marketing",
     metaDescription: "Google Ads management for Yakima Valley businesses. Local targeting, conversion tracking, and budgets planned around your busy seasons.",
-    canonicalUrl: 'https://yakimabranding.com/google-ads/yakima-wa',
+    canonicalUrl: 'https://www.yakimabranding.com/google-ads/yakima-wa',
     hero: {
       eyebrow: 'GOOGLE ADS MANAGEMENT',
       headline: "Yakima Google Ads That Stop Burning Budget on Bad Clicks",
@@ -65,7 +65,7 @@ export const googleAdsLocations = [
     region: "Kittitas County",
     titleTag: "Google Ads Management Ellensburg WA | YB Marketing",
     metaDescription: "Google Ads management for Ellensburg and Kittitas County businesses. Targeting built for students, locals, and I-90 traffic.",
-    canonicalUrl: 'https://yakimabranding.com/google-ads/ellensburg-wa',
+    canonicalUrl: 'https://www.yakimabranding.com/google-ads/ellensburg-wa',
     hero: {
       eyebrow: 'GOOGLE ADS MANAGEMENT',
       headline: "Ellensburg Google Ads With Smarter Local Targeting",
@@ -123,7 +123,7 @@ export const googleAdsLocations = [
     region: "Columbia Basin",
     titleTag: "Google Ads Management Tri-Cities WA | Kennewick, Pasco & Richland | YB Marketing",
     metaDescription: "Google Ads management for Kennewick, Pasco, and Richland businesses. City by city targeting across the Columbia Basin.",
-    canonicalUrl: 'https://yakimabranding.com/google-ads/tri-cities-wa',
+    canonicalUrl: 'https://www.yakimabranding.com/google-ads/tri-cities-wa',
     hero: {
       eyebrow: 'GOOGLE ADS MANAGEMENT',
       headline: "Tri-Cities Google Ads for Kennewick, Pasco, and Richland",
@@ -181,7 +181,7 @@ export const googleAdsLocations = [
     region: "Inland Northwest",
     titleTag: "Google Ads Management Spokane WA | YB Marketing",
     metaDescription: "Google Ads management for Spokane and Inland Northwest businesses. Conversion tracking and a keyword plan built to compete.",
-    canonicalUrl: 'https://yakimabranding.com/google-ads/spokane-wa',
+    canonicalUrl: 'https://www.yakimabranding.com/google-ads/spokane-wa',
     hero: {
       eyebrow: 'GOOGLE ADS MANAGEMENT',
       headline: "Spokane Google Ads That Compete in a Crowded Auction",
@@ -239,7 +239,7 @@ export const googleAdsLocations = [
     region: "Treasure Valley",
     titleTag: "Google Ads Management Boise ID | YB Marketing",
     metaDescription: "Google Ads management for Boise and Treasure Valley businesses. Campaigns built for a fast growing, competitive Idaho market.",
-    canonicalUrl: 'https://yakimabranding.com/google-ads/boise-id',
+    canonicalUrl: 'https://www.yakimabranding.com/google-ads/boise-id',
     hero: {
       eyebrow: 'GOOGLE ADS MANAGEMENT',
       headline: "Boise Google Ads for a Market With Rising CPCs",
@@ -297,7 +297,7 @@ export const googleAdsLocations = [
     region: "North Idaho",
     titleTag: "Google Ads Management Coeur d'Alene ID | YB Marketing",
     metaDescription: "Google Ads management for Coeur d'Alene and North Idaho businesses. Seasonal campaigns for tourism plus steady local leads all year.",
-    canonicalUrl: 'https://yakimabranding.com/google-ads/coeur-dalene-id',
+    canonicalUrl: 'https://www.yakimabranding.com/google-ads/coeur-dalene-id',
     hero: {
       eyebrow: 'GOOGLE ADS MANAGEMENT',
       headline: "Coeur d'Alene Google Ads for Seasonal and Local Demand",
@@ -355,7 +355,7 @@ export const googleAdsLocations = [
     region: "South Sound",
     titleTag: "Google Ads Management Tacoma WA | YB Marketing",
     metaDescription: "Google Ads management for Tacoma and Pierce County businesses. Local targeting that puts your budget toward South Sound customers.",
-    canonicalUrl: 'https://yakimabranding.com/google-ads/tacoma-wa',
+    canonicalUrl: 'https://www.yakimabranding.com/google-ads/tacoma-wa',
     hero: {
       eyebrow: 'GOOGLE ADS MANAGEMENT',
       headline: "Tacoma Google Ads That Win South Sound Searches",
@@ -413,7 +413,7 @@ export const googleAdsLocations = [
     region: "Clark County",
     titleTag: "Google Ads Management Vancouver WA | YB Marketing",
     metaDescription: "Google Ads management for Vancouver, WA and Clark County businesses. Targeting that keeps your budget on the Washington side of the river.",
-    canonicalUrl: 'https://yakimabranding.com/google-ads/vancouver-wa',
+    canonicalUrl: 'https://www.yakimabranding.com/google-ads/vancouver-wa',
     hero: {
       eyebrow: 'GOOGLE ADS MANAGEMENT',
       headline: "Vancouver Google Ads for Clark County Customers",
@@ -471,7 +471,7 @@ export const googleAdsLocations = [
     region: "North Central Washington",
     titleTag: "Google Ads Management Wenatchee WA | YB Marketing",
     metaDescription: "Google Ads management for Wenatchee and North Central Washington businesses. Seasonal and regional targeting across North Central Washington.",
-    canonicalUrl: 'https://yakimabranding.com/google-ads/wenatchee-wa',
+    canonicalUrl: 'https://www.yakimabranding.com/google-ads/wenatchee-wa',
     hero: {
       eyebrow: 'GOOGLE ADS MANAGEMENT',
       headline: "Wenatchee Google Ads for NCW's Regional Draw",
@@ -529,7 +529,7 @@ export const googleAdsLocations = [
     region: "Wine Country",
     titleTag: "Google Ads Management Walla Walla WA | YB Marketing",
     metaDescription: "Google Ads management for Walla Walla wine country and local businesses. Campaigns for tourism peaks and steady local leads all year.",
-    canonicalUrl: 'https://yakimabranding.com/google-ads/walla-walla-wa',
+    canonicalUrl: 'https://www.yakimabranding.com/google-ads/walla-walla-wa',
     hero: {
       eyebrow: 'GOOGLE ADS MANAGEMENT',
       headline: "Walla Walla Google Ads for Wine Country and Local Service",
@@ -587,7 +587,7 @@ export const googleAdsLocations = [
     region: "Puget Sound",
     titleTag: "Google Ads Agency Seattle WA | PPC Management | YB Marketing",
     metaDescription: "Google Ads management for Seattle and Puget Sound businesses. Tight geo targeting, call tracking, and reporting tied to leads so your budget goes further.",
-    canonicalUrl: 'https://yakimabranding.com/google-ads/seattle-wa',
+    canonicalUrl: 'https://www.yakimabranding.com/google-ads/seattle-wa',
     hero: {
       eyebrow: 'GOOGLE ADS MANAGEMENT',
       headline: "Seattle Google Ads That Pay for Themselves",

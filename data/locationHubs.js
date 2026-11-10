@@ -5,7 +5,7 @@ export const locationHubs = [
     "state": "WA",
     "titleTag": "Digital Marketing Agency Yakima WA | YB Marketing",
     "metaDescription": "YB Marketing is a full-service digital marketing agency for Yakima Valley businesses. SEO, Google Ads, web design, social media, and branding for Yakima businesses.",
-    "canonicalUrl": "https://yakimabranding.com/locations/yakima-wa",
+    "canonicalUrl": "https://www.yakimabranding.com/locations/yakima-wa",
     "hero": {
       "eyebrow": "YB MARKETING · YAKIMA, WA",
       "headline": "Digital Marketing for the Yakima Valley",
@@ -85,7 +85,7 @@ export const locationHubs = [
     "state": "WA",
     "titleTag": "Digital Marketing Agency Ellensburg WA | YB Marketing",
     "metaDescription": "Digital marketing for Ellensburg and Kittitas County. SEO, Google Ads, web design, social media, and branding for Central Washington businesses.",
-    "canonicalUrl": "https://yakimabranding.com/locations/ellensburg-wa",
+    "canonicalUrl": "https://www.yakimabranding.com/locations/ellensburg-wa",
     "hero": {
       "eyebrow": "YB MARKETING · ELLENSBURG & KITTITAS COUNTY",
       "headline": "Marketing for Ellensburg",
@@ -165,7 +165,7 @@ export const locationHubs = [
     "state": "WA",
     "titleTag": "Digital Marketing Agency Tri-Cities WA | Kennewick, Pasco & Richland | YB Marketing",
     "metaDescription": "Digital marketing for Kennewick, Pasco, and Richland. SEO, Google Ads, web design, social, and branding for Tri-Cities businesses.",
-    "canonicalUrl": "https://yakimabranding.com/locations/tri-cities-wa",
+    "canonicalUrl": "https://www.yakimabranding.com/locations/tri-cities-wa",
     "hero": {
       "eyebrow": "YB MARKETING · TRI-CITIES, WA",
       "headline": "Tri-Cities Digital Marketing",
@@ -245,7 +245,7 @@ export const locationHubs = [
     "state": "WA",
     "titleTag": "Digital Marketing Agency Spokane WA | YB Marketing",
     "metaDescription": "Digital marketing for Spokane and the Inland Northwest. SEO, Google Ads, web design, social media, and branding for Eastern Washington businesses.",
-    "canonicalUrl": "https://yakimabranding.com/locations/spokane-wa",
+    "canonicalUrl": "https://www.yakimabranding.com/locations/spokane-wa",
     "hero": {
       "eyebrow": "YB MARKETING · SPOKANE, WA",
       "headline": "Spokane Digital Marketing",
@@ -325,7 +325,7 @@ export const locationHubs = [
     "state": "ID",
     "titleTag": "Digital Marketing Agency Boise ID | YB Marketing",
     "metaDescription": "Digital marketing for Boise and the Treasure Valley. SEO, Google Ads, web design, social media, and branding for Idaho's fastest-growing market.",
-    "canonicalUrl": "https://yakimabranding.com/locations/boise-id",
+    "canonicalUrl": "https://www.yakimabranding.com/locations/boise-id",
     "hero": {
       "eyebrow": "YB MARKETING · BOISE & TREASURE VALLEY",
       "headline": "Boise Digital Marketing",
@@ -404,7 +404,7 @@ export const locationHubs = [
     "state": "ID",
     "titleTag": "Digital Marketing Agency Coeur d'Alene ID | YB Marketing",
     "metaDescription": "Digital marketing for Coeur d'Alene and North Idaho. SEO, Google Ads, web design, social, and branding for lake country businesses.",
-    "canonicalUrl": "https://yakimabranding.com/locations/coeur-dalene-id",
+    "canonicalUrl": "https://www.yakimabranding.com/locations/coeur-dalene-id",
     "hero": {
       "eyebrow": "YB MARKETING · COEUR D'ALENE, ID",
       "headline": "Coeur d'Alene Digital Marketing",
@@ -483,7 +483,7 @@ export const locationHubs = [
     "state": "WA",
     "titleTag": "Digital Marketing Agency Tacoma WA | YB Marketing",
     "metaDescription": "Digital marketing for Tacoma and Pierce County. SEO, Google Ads, web design, social media, and branding for South Sound businesses.",
-    "canonicalUrl": "https://yakimabranding.com/locations/tacoma-wa",
+    "canonicalUrl": "https://www.yakimabranding.com/locations/tacoma-wa",
     "hero": {
       "eyebrow": "YB MARKETING · TACOMA & PIERCE COUNTY",
       "headline": "Tacoma Digital Marketing",
@@ -562,7 +562,7 @@ export const locationHubs = [
     "state": "WA",
     "titleTag": "Digital Marketing Agency Vancouver WA | YB Marketing",
     "metaDescription": "Digital marketing for Vancouver, WA and Clark County. SEO, Google Ads, web design, social, and branding on the Washington side of the river.",
-    "canonicalUrl": "https://yakimabranding.com/locations/vancouver-wa",
+    "canonicalUrl": "https://www.yakimabranding.com/locations/vancouver-wa",
     "hero": {
       "eyebrow": "YB MARKETING · VANCOUVER, WA",
       "headline": "Vancouver Digital Marketing",
@@ -641,7 +641,7 @@ export const locationHubs = [
     "state": "WA",
     "titleTag": "Digital Marketing Agency Wenatchee WA | YB Marketing",
     "metaDescription": "Digital marketing for Wenatchee and North Central Washington. SEO, Google Ads, web design, social, and branding for the Apple Capital region.",
-    "canonicalUrl": "https://yakimabranding.com/locations/wenatchee-wa",
+    "canonicalUrl": "https://www.yakimabranding.com/locations/wenatchee-wa",
     "hero": {
       "eyebrow": "YB MARKETING · WENATCHEE & NCW",
       "headline": "Wenatchee Digital Marketing",
@@ -720,7 +720,7 @@ export const locationHubs = [
     "state": "WA",
     "titleTag": "Digital Marketing Agency Walla Walla WA | YB Marketing",
     "metaDescription": "Digital marketing for Walla Walla wine country and local businesses. SEO, Google Ads, web design, social, and branding for a high-expectation market.",
-    "canonicalUrl": "https://yakimabranding.com/locations/walla-walla-wa",
+    "canonicalUrl": "https://www.yakimabranding.com/locations/walla-walla-wa",
     "hero": {
       "eyebrow": "YB MARKETING · WALLA WALLA, WA",
       "headline": "Walla Walla Digital Marketing",
@@ -798,7 +798,7 @@ export const locationHubs = [
 export const locationHubsMaster = {
   "titleTag": "Digital Marketing Agency Pacific Northwest | YB Marketing Locations",
   "metaDescription": "YB Marketing serves businesses across the Pacific Northwest and Mountain West. Find your local digital marketing team in Yakima, Spokane, Boise, Tri-Cities, Tacoma, and more.",
-  "canonicalUrl": "https://yakimabranding.com/locations",
+  "canonicalUrl": "https://www.yakimabranding.com/locations",
   "hero": {
     "eyebrow": "YB MARKETING — PACIFIC NORTHWEST & MOUNTAIN WEST",
     "headline": "Invisible Online?",

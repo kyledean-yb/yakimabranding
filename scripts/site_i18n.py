@@ -9,7 +9,7 @@ from urllib.parse import urlsplit, urlunsplit
 
 from site_urls import ROOT, absolute_clean_url, clean_segment, page_href
 
-SITE = "https://yakimabranding.com"
+SITE = "https://www.yakimabranding.com"
 SUPPORTED_LANGS = ("en", "es")
 
 # Curated chrome strings (nav/footer). Page body uses machine translation.

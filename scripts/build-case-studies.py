@@ -290,7 +290,7 @@ def page_shell(
 <link rel="apple-touch-icon" href="{p}favicon.png">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(description)}">
-<link rel="canonical" href="https://yakimabranding.com{page_href(rel_path)}">
+<link rel="canonical" href="https://www.yakimabranding.com{page_href(rel_path)}">
 <link rel="stylesheet" href="{p}colors_and_type.css">
 <link rel="stylesheet" href="{p}site.css?v=4">
 <link rel="stylesheet" href="{p}case-studies.css">

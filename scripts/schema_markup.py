@@ -9,7 +9,7 @@ from functools import lru_cache
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SITE = "https://yakimabranding.com"
+SITE = "https://www.yakimabranding.com"
 LOGO_URL = f"{SITE}/assets/yb-logo-color.png"
 HOME_HERO_IMAGE = f"{SITE}/assets/team-photo.webp"
 

@@ -2,19 +2,19 @@
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://yakimabranding.com/sitemap-pages.xml</loc>
-    <lastmod>2026-11-06</lastmod>
+    <loc>https://www.yakimabranding.com/sitemap-pages.xml</loc>
+    <lastmod>2026-11-10</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://yakimabranding.com/sitemap-posts.xml</loc>
+    <loc>https://www.yakimabranding.com/sitemap-posts.xml</loc>
     <lastmod>2026-09-03</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://yakimabranding.com/sitemap-es-pages.xml</loc>
-    <lastmod>2026-11-06</lastmod>
+    <loc>https://www.yakimabranding.com/sitemap-es-pages.xml</loc>
+    <lastmod>2026-11-10</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://yakimabranding.com/sitemap-es-posts.xml</loc>
+    <loc>https://www.yakimabranding.com/sitemap-es-posts.xml</loc>
     <lastmod>2025-02-12</lastmod>
   </sitemap>
 </sitemapindex>

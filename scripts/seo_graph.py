@@ -17,7 +17,7 @@ from zoneinfo import ZoneInfo
 from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
-SITE = "https://yakimabranding.com"
+SITE = "https://www.yakimabranding.com"
 ORG_ID = f"{SITE}/#organization"
 WEBSITE_ID = f"{SITE}/#website"
 LOGO_ID = f"{SITE}/#logo"

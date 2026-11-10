@@ -115,7 +115,7 @@ def schema_json(loc: dict) -> tuple[str, str]:
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "YB Marketing",
-        "url": "https://yakimabranding.com",
+        "url": "https://www.yakimabranding.com",
         "telephone": "+15099019735",
         "email": "info@yakimabranding.com",
         "address": {
@@ -135,13 +135,13 @@ def schema_json(loc: dict) -> tuple[str, str]:
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://yakimabranding.com",
+                "item": "https://www.yakimabranding.com",
             },
             {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "SEO",
-                "item": "https://yakimabranding.com/services/seo.html",
+                "item": "https://www.yakimabranding.com/services/seo.html",
             },
             {
                 "@type": "ListItem",

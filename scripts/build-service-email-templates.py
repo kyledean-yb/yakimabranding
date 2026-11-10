@@ -14,7 +14,7 @@ SERVICES = [
         "slug": "seo",
         "label": "SEO",
         "source": "SEO Service Page",
-        "service_url": "https://yakimabranding.com/seo/",
+        "service_url": "https://www.yakimabranding.com/seo/",
         "preheader": "We've received your SEO inquiry. A YB specialist will be in touch within 1 business day.",
         "headline": "Thank You for Your<br>Interest in SEO!",
         "hero_lead": (
@@ -43,7 +43,7 @@ SERVICES = [
         "slug": "google-ads",
         "label": "Google Ads",
         "source": "Google Ads Service Page",
-        "service_url": "https://yakimabranding.com/google-ads/",
+        "service_url": "https://www.yakimabranding.com/google-ads/",
         "preheader": "We've received your Google Ads inquiry. A YB PPC specialist will be in touch within 1 business day.",
         "headline": "Thank You for Your<br>Interest in Google Ads!",
         "hero_lead": (
@@ -72,7 +72,7 @@ SERVICES = [
         "slug": "web-design",
         "label": "Web Design",
         "source": "Web Design Service Page",
-        "service_url": "https://yakimabranding.com/web-design/",
+        "service_url": "https://www.yakimabranding.com/web-design/",
         "preheader": "We've received your web design inquiry. A YB specialist will be in touch within 1 business day.",
         "headline": "Thank You for Your<br>Interest in Web Design!",
         "hero_lead": (
@@ -101,7 +101,7 @@ SERVICES = [
         "slug": "social-media",
         "label": "Social Media",
         "source": "Social Media Service Page",
-        "service_url": "https://yakimabranding.com/social-media/",
+        "service_url": "https://www.yakimabranding.com/social-media/",
         "preheader": "We've received your social media inquiry. A YB specialist will be in touch within 1 business day.",
         "headline": "Thank You for Your<br>Interest in Social Media!",
         "hero_lead": (
@@ -130,7 +130,7 @@ SERVICES = [
         "slug": "branding",
         "label": "Branding",
         "source": "Branding Service Page",
-        "service_url": "https://yakimabranding.com/branding/",
+        "service_url": "https://www.yakimabranding.com/branding/",
         "preheader": "We've received your branding inquiry. A YB designer will be in touch within 1 business day.",
         "headline": "Thank You for Your<br>Interest in Branding!",
         "hero_lead": (
@@ -159,7 +159,7 @@ SERVICES = [
         "slug": "content-creation",
         "label": "Content Marketing",
         "source": "Content Creation Service Page",
-        "service_url": "https://yakimabranding.com/content-marketing/",
+        "service_url": "https://www.yakimabranding.com/content-marketing/",
         "preheader": "We've received your content marketing inquiry. A YB specialist will be in touch within 1 business day.",
         "headline": "Thank You for Your<br>Interest in Content Marketing!",
         "hero_lead": (
@@ -188,7 +188,7 @@ SERVICES = [
         "slug": "press-releases",
         "label": "Press Releases",
         "source": "Press Releases Service Page",
-        "service_url": "https://yakimabranding.com/press-releases/",
+        "service_url": "https://www.yakimabranding.com/press-releases/",
         "preheader": "We've received your press release inquiry. A YB specialist will be in touch within 1 business day.",
         "headline": "Thank You for Your<br>Interest in Press Releases!",
         "hero_lead": (
@@ -219,7 +219,7 @@ SERVICES = [
 def template(service: dict) -> str:
     label = html.escape(service["label"])
     service_url = html.escape(service["service_url"])
-    booking = "https://yakimabranding.com/contact#book"
+    booking = "https://www.yakimabranding.com/contact#book"
 
     return f"""<!--
   GoHighLevel email template — thank you / {label} service form
@@ -268,7 +268,7 @@ def template(service: dict) -> str:
 
           <tr>
             <td style="background-color:#1B2A4A;border-radius:16px 16px 0 0;padding:36px 40px 40px;text-align:center;" class="mobile-pad">
-              <a href="https://yakimabranding.com" target="_blank" style="text-decoration:none;display:inline-block;margin:0 auto 14px;">
+              <a href="https://www.yakimabranding.com" target="_blank" style="text-decoration:none;display:inline-block;margin:0 auto 14px;">
                 <span style="display:inline-block;background-color:#ffffff;border-radius:12px;padding:10px;line-height:0;">
                   <img src="https://www.yakimabranding.com/assets/yb-logo-color.png" alt="YB Marketing" width="52" height="52" style="display:block;border:0;">
                 </span>
@@ -406,7 +406,7 @@ def template(service: dict) -> str:
               <p style="margin:0 0 12px;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:12px;color:#7C879E;">
                 <a href="{{{{unsubscribe_url}}}}" style="color:#7C879E;text-decoration:underline;">Unsubscribe</a>
                 &nbsp;&middot;&nbsp;
-                <a href="https://yakimabranding.com/privacy-policy" style="color:#7C879E;text-decoration:underline;">Privacy Policy</a>
+                <a href="https://www.yakimabranding.com/privacy-policy" style="color:#7C879E;text-decoration:underline;">Privacy Policy</a>
               </p>
               <p style="margin:0;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:12px;color:#7C879E;">
                 &copy; 2026 YB Marketing. All rights reserved.

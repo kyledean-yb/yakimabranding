@@ -20,7 +20,7 @@ MEMBERS = [
         "email": "jacob@yakimabranding.com",
         "phone_display": "(509) 203-1007",
         "phone_href": "tel:5092031007",
-        "profile_url": "https://yakimabranding.com/about/jacob",
+        "profile_url": "https://www.yakimabranding.com/about/jacob",
         "preheader": "Jacob Ross received your message and will be in touch within 1 business day.",
         "hero_lead": (
             "we've received your message and Jacob will be in touch within "
@@ -51,7 +51,7 @@ MEMBERS = [
         "email": "kevin@yakimabranding.com",
         "phone_display": "(509) 901-9735",
         "phone_href": "tel:5099019735",
-        "profile_url": "https://yakimabranding.com/about/kevin",
+        "profile_url": "https://www.yakimabranding.com/about/kevin",
         "preheader": "Kevin Dean received your message and will be in touch within 1 business day.",
         "hero_lead": (
             "we've received your message and Kevin will be in touch within "
@@ -82,7 +82,7 @@ MEMBERS = [
         "email": "sophie@yakimabranding.com",
         "phone_display": "(303) 955-6979",
         "phone_href": "tel:3039556979",
-        "profile_url": "https://yakimabranding.com/about/sophie",
+        "profile_url": "https://www.yakimabranding.com/about/sophie",
         "preheader": "Sophie Mann received your message and will be in touch within 1 business day.",
         "hero_lead": (
             "we've received your message and Sophie will be in touch within "
@@ -163,7 +163,7 @@ def template(member: dict) -> str:
 
           <tr>
             <td style="background-color:#1B2A4A;border-radius:16px 16px 0 0;padding:36px 40px 40px;text-align:center;" class="mobile-pad">
-              <a href="https://yakimabranding.com" target="_blank" style="text-decoration:none;display:inline-block;margin:0 auto 14px;">
+              <a href="https://www.yakimabranding.com" target="_blank" style="text-decoration:none;display:inline-block;margin:0 auto 14px;">
                 <span style="display:inline-block;background-color:#ffffff;border-radius:12px;padding:10px;line-height:0;">
                   <img src="https://www.yakimabranding.com/assets/yb-logo-color.png" alt="YB Marketing" width="52" height="52" style="display:block;border:0;">
                 </span>
@@ -315,7 +315,7 @@ def template(member: dict) -> str:
               <p style="margin:0 0 12px;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:12px;color:#7C879E;">
                 <a href="{{{{unsubscribe_url}}}}" style="color:#7C879E;text-decoration:underline;">Unsubscribe</a>
                 &nbsp;&middot;&nbsp;
-                <a href="https://yakimabranding.com/privacy-policy" style="color:#7C879E;text-decoration:underline;">Privacy Policy</a>
+                <a href="https://www.yakimabranding.com/privacy-policy" style="color:#7C879E;text-decoration:underline;">Privacy Policy</a>
               </p>
               <p style="margin:0;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:12px;color:#7C879E;">
                 &copy; 2026 YB Marketing. All rights reserved.

@@ -427,7 +427,7 @@ def schema_json_city(loc: dict) -> tuple[str, str]:
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "YB Marketing",
-        "url": "https://yakimabranding.com",
+        "url": "https://www.yakimabranding.com",
         "telephone": "+15099019735",
         "email": "info@yakimabranding.com",
         "address": {
@@ -443,8 +443,8 @@ def schema_json_city(loc: dict) -> tuple[str, str]:
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://yakimabranding.com"},
-            {"@type": "ListItem", "position": 2, "name": "Locations", "item": "https://yakimabranding.com/locations"},
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.yakimabranding.com"},
+            {"@type": "ListItem", "position": 2, "name": "Locations", "item": "https://www.yakimabranding.com/locations"},
             {
                 "@type": "ListItem",
                 "position": 3,

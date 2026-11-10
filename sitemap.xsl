@@ -31,7 +31,7 @@
       <body>
         <div class="wrap">
           <h1>XML Sitemap</h1>
-          <p>This is an XML sitemap for <a href="https://yakimabranding.com/">yakimabranding.com</a>. Search engines like Google and Bing use it to find every page on the site.</p>
+          <p>This is an XML sitemap for <a href="https://www.yakimabranding.com/">yakimabranding.com</a>. Search engines like Google and Bing use it to find every page on the site.</p>
           <p>You can find more about XML sitemaps at <a href="https://www.sitemaps.org/" rel="noopener">sitemaps.org</a>.</p>
           <xsl:apply-templates/>
         </div>

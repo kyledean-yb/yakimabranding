@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "HVAC Marketing for Phoenix & Scottsdale | YB Marketing | 509-901-9735",
   description:
     "YB Marketing delivers full-service marketing for HVAC companies with >$1M in sales across Greater Phoenix and Scottsdale — SEO, ads, social, and more under one plan. Call 509-901-9735.",
+  alternates: {
+    canonical: "https://www.yakimabranding.com/phx-hvac",
+  },
   icons: {
     icon: "/favicon.png",
     apple: "/favicon.png",

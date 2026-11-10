@@ -30,7 +30,7 @@ html = f"""<!DOCTYPE html>
 <link rel="apple-touch-icon" href="{PREFIX}favicon.png">
 <title>Privacy Policy — YB Marketing</title>
 <meta name="description" content="YB Marketing privacy policy — how we collect, use, and protect your information when you visit our website or contact us.">
-<link rel="canonical" href="https://yakimabranding.com/privacy-policy">
+<link rel="canonical" href="https://www.yakimabranding.com/privacy-policy">
 <link rel="stylesheet" href="{PREFIX}colors_and_type.css">
 <link rel="stylesheet" href="{PREFIX}site.css?v=4">
 <link rel="stylesheet" href="{PREFIX}news-page.css">

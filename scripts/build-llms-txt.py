@@ -120,8 +120,8 @@ def build_index() -> str:
         "- Office: Yakima, Washington, USA. Fully remote team working with clients nationwide by phone, Zoom, and email.",
         "- Rating: 5.0 from 48 Google reviews",
         "- Founded: 2004",
-        "- Languages: English site, with a Spanish version at https://yakimabranding.com/es",
-        "- Full page text for AI assistants: https://yakimabranding.com/llms-full.txt",
+        "- Languages: English site, with a Spanish version at https://www.yakimabranding.com/es",
+        "- Full page text for AI assistants: https://www.yakimabranding.com/llms-full.txt",
         "",
     ]
     for name, spec in SECTIONS:
@@ -147,8 +147,8 @@ def build_full() -> str:
     parts = [
         "# YB Marketing (Yakima Branding): full site text",
         "",
-        "> Plain text of the main pages on https://yakimabranding.com for AI assistants. "
-        "See https://yakimabranding.com/llms.txt for the index.",
+        "> Plain text of the main pages on https://www.yakimabranding.com for AI assistants. "
+        "See https://www.yakimabranding.com/llms.txt for the index.",
         "",
         page_markdown("index.html"),
     ]

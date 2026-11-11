@@ -53,7 +53,7 @@ for asset in yb-logo-color.png yb-logo-white.png; do
 done
 
 mkdir -p "$ROOT/js"
-for asset in hero-orbit.js hubspot-form.js; do
+for asset in hero-orbit.js; do
   if [ -f "public/js/$asset" ]; then
     cp "public/js/$asset" "$ROOT/js/$asset"
   fi

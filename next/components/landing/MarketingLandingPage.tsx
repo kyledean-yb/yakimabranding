@@ -4,11 +4,7 @@ import { useMemo, useState } from "react";
 import { BenefitsSection } from "@/components/landing/BenefitsSection";
 import { ElevateBrandCta } from "@/components/landing/ElevateBrandCta";
 import { HeroConvergeVisual } from "@/components/landing/HeroConvergeVisual";
-import {
-  HOME_HS_FORM_ID,
-  HubSpotLeadForm,
-  LANDING_THANK_YOU_PATH,
-} from "@/components/landing/HubSpotLeadForm";
+import { GhlLeadForm, LANDING_THANK_YOU_PATH } from "@/components/landing/GhlLeadForm";
 import { PackageSummaryCard } from "@/components/landing/PackageSummaryCard";
 import { ReviewsSection } from "@/components/landing/ReviewsSection";
 import { ServiceCategoryIcon } from "@/components/landing/ServiceCategoryIcon";
@@ -241,13 +237,7 @@ export function MarketingLandingPage({ config }: MarketingLandingPageProps) {
               <p className="mx-auto mb-8 max-w-2xl text-fg2-on-dark">{config.finalCta.subheadline}</p>
             </div>
             <div className="mx-auto max-w-xl rounded-xl border border-[var(--line)] bg-white p-6 text-left text-[var(--ink)] shadow-[var(--sh-sm)] md:p-8">
-              <HubSpotLeadForm
-                formId={HOME_HS_FORM_ID}
-                source="HVAC Landing Page"
-                redirect={LANDING_THANK_YOU_PATH}
-                theme="default"
-                className="landing-hs-form-bottom"
-              />
+              <GhlLeadForm source="HVAC Landing Page" redirect={LANDING_THANK_YOU_PATH} />
               <p className="mt-4 text-center text-[12.5px] leading-normal text-[var(--fg3)]">
                 We respond by the next business day. Your information is never shared.
               </p>

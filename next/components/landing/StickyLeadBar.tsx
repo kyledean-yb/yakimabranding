@@ -1,5 +1,5 @@
 import { HorizontalLandingForm } from "@/components/landing/HorizontalLandingForm";
-import { LANDING_THANK_YOU_PATH } from "@/components/landing/HubSpotLeadForm";
+import { LANDING_THANK_YOU_PATH } from "@/components/landing/GhlLeadForm";
 import { Container } from "@/components/ui/Container";
 
 type StickyLeadBarProps = {

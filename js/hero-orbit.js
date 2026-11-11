@@ -39,17 +39,10 @@
     var running = true;
     var pauseOnHover = orbit.classList.contains('hero-orbit--pause-hover');
 
-    var orbitDurMs = parseDurationMs(orbit.getAttribute('data-orbit-dur'));
+    var orbitDurMs = parseDurationMs(
+      getComputedStyle(orbit).getPropertyValue('--orbit-dur')
+    );
     var startTime = performance.now();
-    var spinAnim = spin.getAnimations ? spin.getAnimations()[0] : null;
-    if (spinAnim && typeof spinAnim.currentTime === 'number') {
-      startTime -= spinAnim.currentTime;
-    }
-    var parts = Array.prototype.map.call(icons, function (icon, idx) {
-      var node = icon.closest('.hero-orbit-node');
-      var i = parseInt(node && node.style.getPropertyValue('--i'), 10);
-      return { icon: icon, pill: icon.querySelector('.hero-orbit-pill'), i: isNaN(i) ? idx : i };
-    });
     var pausedElapsed = 0;
     var pauseStartedAt = 0;
     var isPaused = false;
@@ -92,10 +85,10 @@
       var frontIcon = null;
       var frontT = -1;
 
-      parts.forEach(function (p) {
-        var icon = p.icon;
-        var pill = p.pill;
-        var i = p.i;
+      icons.forEach(function (icon) {
+        var node = icon.closest('.hero-orbit-node');
+        var pill = icon.querySelector('.hero-orbit-pill');
+        var i = parseInt(node && node.style.getPropertyValue('--i'), 10) || 0;
         var armDeg = (i * stepDeg + spinDeg) % 360;
         var delta = ((armDeg - focusAngle + 540) % 360) - 180;
         var t = (Math.cos((delta * Math.PI) / 180) + 1) / 2;
@@ -178,18 +171,9 @@
     document.querySelectorAll('.hero-orbit').forEach(initOrbit);
   }
 
-  // Wait until the page has loaded so the per-frame work stays out of the critical load window.
-  function schedule() {
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(init, { timeout: 1500 });
-    } else {
-      setTimeout(init, 200);
-    }
-  }
-
-  if (document.readyState === 'complete') {
-    schedule();
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
   } else {
-    window.addEventListener('load', schedule);
+    init();
   }
 })();

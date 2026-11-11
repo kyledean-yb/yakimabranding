@@ -10,7 +10,7 @@
  * - Minimum time-to-submit
  * - Interaction required (focus/input before submit)
  * - Gibberish name heuristics
- * - Phone digit count check
+ * - US-only phone check (10 digits, valid area code, no Canada/Caribbean +1 codes)
  * - Message must include letters (blocks phone-only comments)
  */
 (function () {
@@ -114,8 +114,32 @@
     return false;
   }
 
-  function phoneDigitCount(phone) {
-    return (phone.match(/\d/g) || []).length;
+  // +1 area codes that belong to Canada and the Caribbean, not the US.
+  var NON_US_AREA_CODES =
+    '204 226 236 249 250 257 263 289 306 343 354 365 367 368 382 387 403 416 418 428 431 437 438 450 460 468 474 ' +
+    '506 514 519 548 579 581 584 587 604 613 639 647 672 683 705 709 742 753 778 780 782 807 819 825 867 873 879 ' +
+    '902 905 942 242 246 264 268 284 345 441 473 649 658 664 721 758 767 784 809 829 849 868 869 876';
+  var NON_US = {};
+  NON_US_AREA_CODES.split(' ').forEach(function (c) {
+    NON_US[c] = true;
+  });
+
+  function isUsPhone(phone) {
+    var raw = String(phone || '').trim();
+    if (!raw || /[a-z]/i.test(raw)) return false;
+    if (raw.charAt(0) === '+' && !/^\+\s*1(\D|$)/.test(raw)) return false;
+    var digits = raw.replace(/\D/g, '');
+    if (/^(011|00)/.test(digits)) return false;
+    if (digits.length === 11 && digits.charAt(0) === '1') digits = digits.slice(1);
+    if (digits.length !== 10) return false;
+    var area = digits.slice(0, 3);
+    var exchange = digits.slice(3, 6);
+    if (!/^[2-9]\d\d$/.test(area) || /^[2-9]11$/.test(area)) return false;
+    if (!/^[2-9]\d\d$/.test(exchange) || /^[2-9]11$/.test(exchange)) return false;
+    if (NON_US[area]) return false;
+    if (/^(\d)\1{9}$/.test(digits) || digits === '1234567890') return false;
+    if (exchange === '555' && /^01\d\d$/.test(digits.slice(6))) return false;
+    return true;
   }
 
   function messageHasLetters(message) {
@@ -149,7 +173,7 @@
       return 'gibberish_name';
     }
 
-    if (phoneDigitCount(data.phone) < 10) {
+    if (!isUsPhone(data.phone)) {
       return 'bad_phone';
     }
 
@@ -269,7 +293,7 @@
         return;
       }
       if (reason === 'bad_phone') {
-        finishErr('Please enter a valid phone number.');
+        finishErr('Please enter a valid US phone number. We are not able to accept international numbers.');
         return;
       }
       if (reason === 'message_no_letters') {

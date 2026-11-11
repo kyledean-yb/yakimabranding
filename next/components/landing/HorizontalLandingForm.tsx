@@ -1,13 +1,11 @@
 "use client";
 
 import type { FormEvent } from "react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/Button";
-import {
-  LANDING_HEADER_HS_FORM_ID,
-  LANDING_HS_PORTAL_ID,
-  LANDING_THANK_YOU_PATH,
-} from "@/components/landing/HubSpotLeadForm";
+import { HONEYPOT_NAME, checkLead } from "@/lib/lead-guard";
+import { LANDING_THANK_YOU_PATH } from "@/components/landing/GhlLeadForm";
+import { submitToGhl } from "@/lib/ghl";
 
 type HorizontalLandingFormProps = {
   ctaLabel: string;
@@ -15,55 +13,6 @@ type HorizontalLandingFormProps = {
   source?: string;
   redirect?: string;
 };
-
-function getCookie(name: string): string | undefined {
-  if (typeof document === "undefined") return undefined;
-  const match = document.cookie.match(new RegExp(`(?:^|; )${name}=([^;]*)`));
-  return match ? decodeURIComponent(match[1]) : undefined;
-}
-
-async function submitToHubSpot(fields: { name: string; value: string }[], source: string) {
-  const hutk = getCookie("hubspotutk");
-  const allFields = [...fields];
-  if (source) {
-    allFields.push({
-      name: "form_submission_page",
-      value: `${typeof window !== "undefined" ? window.location.pathname : ""} (${source})`,
-    });
-  }
-
-  const payload: Record<string, unknown> = {
-    fields: allFields,
-    context: {
-      pageUri: typeof window !== "undefined" ? window.location.href : "",
-      pageName: typeof document !== "undefined" ? document.title : "",
-      ...(hutk ? { hutk } : {}),
-    },
-  };
-
-  const url = `https://api.hsforms.com/submissions/v3/integration/submit/${LANDING_HS_PORTAL_ID}/${LANDING_HEADER_HS_FORM_ID}`;
-  const res = await fetch(url, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload),
-  });
-
-  if (!res.ok) {
-    // Retry without optional tracking field if HubSpot rejects unknown properties
-    if (allFields.length > fields.length) {
-      const retry = await fetch(url, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...payload, fields }),
-      });
-      if (retry.ok) return;
-      const err = await retry.json().catch(() => null);
-      throw new Error(err?.message || `HubSpot submit failed (${retry.status})`);
-    }
-    const err = await res.json().catch(() => null);
-    throw new Error(err?.message || `HubSpot submit failed (${res.status})`);
-  }
-}
 
 export function HorizontalLandingForm({
   ctaLabel,
@@ -73,6 +22,16 @@ export function HorizontalLandingForm({
 }: HorizontalLandingFormProps) {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const startedAt = useRef(0);
+  const interacted = useRef(false);
+
+  useEffect(() => {
+    startedAt.current = Date.now();
+  }, []);
+
+  function markInteracted() {
+    interacted.current = true;
+  }
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -83,26 +42,51 @@ export function HorizontalLandingForm({
     }
 
     const data = new FormData(form);
-    const fields = [
-      { name: "firstname", value: String(data.get("firstname") || "").trim() },
-      { name: "lastname", value: String(data.get("lastname") || "").trim() },
-      { name: "email", value: String(data.get("email") || "").trim() },
-      { name: "phone", value: String(data.get("phone") || "").trim() },
-    ].filter((f) => f.value);
+    const verdict = checkLead({
+      honeypot: String(data.get(HONEYPOT_NAME) || ""),
+      startedAt: startedAt.current,
+      interacted: interacted.current,
+      name: `${data.get("firstname") || ""} ${data.get("lastname") || ""}`,
+      email: String(data.get("email") || ""),
+      phone: String(data.get("phone") || ""),
+    });
+    if (verdict === "bot") {
+      window.location.href = redirect;
+      return;
+    }
+    if (verdict) {
+      setError(verdict);
+      return;
+    }
+
+    const firstName = String(data.get("firstname") || "").trim();
+    const lastName = String(data.get("lastname") || "").trim();
 
     setSubmitting(true);
     setError(null);
-    try {
-      await submitToHubSpot(fields, source);
-      window.location.href = redirect;
-    } catch (err) {
-      setSubmitting(false);
-      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
-    }
+    await submitToGhl({
+      name: `${firstName} ${lastName}`.trim(),
+      email: String(data.get("email") || "").trim(),
+      phone: String(data.get("phone") || "").trim(),
+      source,
+    });
+    window.location.href = redirect;
   }
 
   return (
-    <form className="landing-form-compact" onSubmit={onSubmit} noValidate={false}>
+    <form
+      className="landing-form-compact"
+      onSubmit={onSubmit}
+      onFocus={markInteracted}
+      onInput={markInteracted}
+      noValidate={false}
+    >
+      <div aria-hidden="true" style={{ position: "absolute", left: "-10000px", width: 1, height: 1, overflow: "hidden" }}>
+        <label>
+          Company website
+          <input type="text" name={HONEYPOT_NAME} defaultValue="" tabIndex={-1} autoComplete="off" />
+        </label>
+      </div>
       <label className="landing-form-compact-field">
         <span className="text-xs font-semibold uppercase tracking-wide text-fg3">First Name</span>
         <input
